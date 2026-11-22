@@ -25,6 +25,9 @@ const USAGE = `levni: hand-inked illustrations from JSON scenes
       Import props written elsewhere (one prop, an array, or a chat answer with \`\`\`json blocks).
       Checks each one, writes new props, adds new variants to existing ones, skips broken ones.
       Default folder: the library in this checkout. --sheet draws the imported props for a look.
+  levni mcp
+      Run Levni as an MCP server over stdio (tools: scene_guide, list_props, render_scene,
+      critique_scene, show_props). Add it to an MCP client as: npx levni mcp
   levni check [prop ...]
       Measure props without looking at them (for agents that cannot see images): how much of the
       box each variant fills, its centre, colours, and what to fix. All props when none named.
@@ -111,6 +114,9 @@ async function main() {
       console.log(`look at: ${opt('sheet')} (${n} variants)`);
     }
     if (skipped) process.exitCode = 1;
+  } else if (cmd === 'mcp') {
+    const { serve } = await import('../src/mcp.mjs');
+    serve();
   } else {
     console.log(USAGE);
     if (cmd && cmd !== 'help' && cmd !== '--help') process.exitCode = 1;

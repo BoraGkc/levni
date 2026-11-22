@@ -29,12 +29,12 @@ The `soft` finish:
 - **A critic built in.** Every render returns layout notes (off-canvas, accidental crops, lopsided weight, no focal point) an agent can act on before a human looks.
 - **Style packs.** The same scene printed with other inks and paper: `riso` (Ortak Alan's house look, default) and `miniature`, inspired by Tulip Era Ottoman painting, with its own tulips, carnations, cypresses and gilded medallion. Levni does not have to invent every look itself: it can take a tradition as its reference and then draw in it consistently. Set `"style": "miniature"` on a scene; a pack is a colour map in `src/styles.mjs`.
 - **A soft 3D finish.** `"finish": "soft"` swaps the crayon for clean edges and film grain, with twisting gradient `ribbon`s, shaded `tube`s and an `image` badge for a logo you own. Good for tech and guide covers. Examples: [`ribbon-loop`](examples/ribbon-loop.json), [`ribbon-s`](examples/ribbon-s.json), [`ribbon-rings`](examples/ribbon-rings.json).
-- **MCP-ready.** The API is three calls (`compose`, `critique`, `render`) over JSON in, image out, so it maps directly onto MCP tools. An MCP server is planned.
+- **An MCP server.** `npx levni mcp` gives assistants five tools: read the scene guide, search the Folio, see props, render a scene and read the critic. See [Use it from an agent](#use-it-from-an-agent-mcp).
 
 ## Install and use
 
 ```bash
-npm install levni
+npm install github:BoraGkc/levni   # not on npm yet; `npm install levni` once it is
 ```
 
 ```bash
@@ -55,6 +55,32 @@ const { svg, used } = await compose(scene);            // or just the SVG string
 Requires Node 20+. The only dependency is [sharp](https://sharp.pixelplumbing.com) for rasterizing. The `icon` and `ascii` elements use [Tabler Icons](https://tabler.io/icons) (MIT, ~5,500 icons) when installed: `npm install @tabler/icons`, or point `LEVNI_ICONS` at a folder holding `outline/` and `filled/`.
 
 Your own prop folders: set `LEVNI_PROPS=/path/to/props` (several, separated by `:`), or call `addPropDir()`.
+
+## Use it from an agent (MCP)
+
+`levni mcp` runs an MCP server over stdio. Tools:
+
+| tool | what it does |
+| --- | --- |
+| `scene_guide` | the scene format (this repo's `docs/scene.md`); read it once |
+| `list_props` | search the Folio by word or tag (English and Turkish) |
+| `show_props` | a contact image of chosen props, every variant numbered |
+| `render_scene` | draw a scene: critic notes, a 560 px preview, and with `out` the full file (.png/.webp/.svg) |
+| `critique_scene` | only the critic's notes, for quick iterations |
+
+Claude Code:
+
+```bash
+claude mcp add levni -- npx -y github:BoraGkc/levni mcp
+```
+
+Claude Desktop, Cursor and other clients (`claude_desktop_config.json`, `.cursor/mcp.json`, …):
+
+```json
+{ "mcpServers": { "levni": { "command": "npx", "args": ["-y", "github:BoraGkc/levni", "mcp"] } } }
+```
+
+From a checkout, use `"command": "node", "args": ["/path/to/levni/bin/levni.mjs", "mcp"]`. Files from `render_scene` are written relative to the client's working directory. Agents without MCP can call the CLI the same way.
 
 ## Scene format
 
