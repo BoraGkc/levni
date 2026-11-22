@@ -5,14 +5,26 @@ import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => +b.data.date - +a.data.date);
 
-const scene = `{ "seed": 5, "style": "riso", "elements": [
-  { "type": "panel", "x": 60, "y": 52, "w": 1080, "h": 569, "color": "blue" },
-  { "type": "prop", "name": "rocket", "x": 780, "y": 300, "size": 380 },
-  { "type": "crowd", "x": 90, "y": 560, "w": 520, "rows": 2, "size": 130 }
-] }`;
-const critic = `$ npx levni render scene.json cover.png
+const scene = `{
+  "seed": 5,
+  "elements": [
+    { "type": "panel",
+      "color": "blue",
+      "x": 60, "y": 52,
+      "w": 1080, "h": 569 },
+    { "type": "prop",
+      "name": "rocket",
+      "x": 780, "y": 300,
+      "size": 380 },
+    { "type": "crowd",
+      "x": 90, "y": 560 }
+  ]
+}`;
+const critic = `$ npx levni render \\
+    scene.json cover.png
 cover.png
-- critic: no layout problems found`;
+- critic: no layout problems
+  found`;
 
 const uses = [
   { img: 'newspaper', title: 'Covers', text: 'Article and newsletter covers at 1200 × 673, ready for the CMS as WebP under a size budget.' },
@@ -301,6 +313,7 @@ const jsonld = [
     background: var(--accent); color: #fff; font-family: var(--display); font-size: 1.1rem; margin-right: 6px; vertical-align: 3px;
   }
   .steps p { color: var(--ink-soft); font-size: 1.04rem; }
+  .steps pre { font-size: 0.8rem; }
   .step-img { padding: 6px; }
 
   .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 28px 0 12px; }
