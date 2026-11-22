@@ -1,0 +1,61 @@
+{
+ "name": "ball-volleyball",
+ "category": "sport",
+ "tags": [
+  "ball volleyball"
+ ],
+ "variants": [
+  {
+   "note": "ball volleyball, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 53 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 1 0 -75.6 0",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 50 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 1 0 -75.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 50 a33.6 33.6 0 0 0 33.6 16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M31.1 56.3 a50.4 50.4 0 0 0 35.7 27.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 50 a33.6 33.6 0 0 0 -31.3 20.7",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M54 30.5 a50.4 50.4 0 0 0 -41.5 17.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 50 a33.6 33.6 0 0 0 -2.3 -37.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M64.9 63.2 a50.4 50.4 0 0 0 5.8 -44.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

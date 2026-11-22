@@ -1,0 +1,43 @@
+{
+ "name": "pizza",
+ "category": "food",
+ "tags": [
+  "pizza"
+ ],
+ "variants": [
+  {
+   "note": "pizza, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M53 92.9 c-12.8 0 -25 -3 -35.7 -8.3 l35.7 -69.4 l35.7 69.4 a80.2 80.2 0 0 1 -35.7 8.3",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 89.9 c-12.8 0 -25 -3 -35.7 -8.3 l35.7 -69.4 l35.7 69.4 a80.2 80.2 0 0 1 -35.7 8.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M22.2 66.2 a62.7 62.7 0 0 0 28.6 6.9 a62.8 62.8 0 0 0 27.3 -6.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M54.2 45.8 v0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M45.8 58.4 v0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

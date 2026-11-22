@@ -1,0 +1,31 @@
+{
+ "name": "umbrella-2",
+ "category": "home",
+ "tags": [
+  "umbrella 2"
+ ],
+ "variants": [
+  {
+   "note": "umbrella 2, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M25 33.4 a33.6 33.6 0 1 1 47.5 47.5 l-47.5 -47.5",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 30.4 a33.6 33.6 0 1 1 47.5 47.5 l-47.5 -47.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M45.1 55.6 l-17.8 17.8 a8.4 8.4 0 1 0 11.9 11.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "name": "world-pin",
+ "category": "places",
+ "tags": [
+  "world pin"
+ ],
+ "variants": [
+  {
+   "note": "world pin, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M91.3 87.1 a12.6 12.6 0 1 0 -17.8 0 c1.8 1.8 4.7 4.4 8.9 7.9 c4.4 -3.7 7.4 -6.4 8.9 -7.9",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M87.7 47 a37.8 37.8 0 1 0 -35 40.7",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M14.7 37.4 h70.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M14.7 62.6 h37.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M47.9 12.2 a71.4 71.4 0 0 0 0 75.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M52.1 12.2 a71.3 71.3 0 0 1 10.8 37.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M88.3 84.1 a12.6 12.6 0 1 0 -17.8 0 c1.8 1.8 4.7 4.4 8.9 7.9 c4.4 -3.7 7.4 -6.4 8.9 -7.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M79.4 75.2 v0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

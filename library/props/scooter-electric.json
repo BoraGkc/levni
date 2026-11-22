@@ -1,0 +1,48 @@
+{
+ "name": "scooter-electric",
+ "category": "places",
+ "tags": [
+  "scooter electric"
+ ],
+ "variants": [
+  {
+   "note": "scooter electric, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M69.8 74 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M19.4 74 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M66.8 71 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 71 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 71 h21 a25.2 25.2 0 0 1 21 -21 v-21 a8.4 8.4 0 0 0 -8.4 -8.4 h-4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 16.4 l-8.4 16.8 h12.6 l-8.4 16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

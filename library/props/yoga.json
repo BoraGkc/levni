@@ -1,0 +1,43 @@
+{
+ "name": "yoga",
+ "category": "health",
+ "tags": [
+  "yoga"
+ ],
+ "variants": [
+  {
+   "note": "yoga, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M44.6 23.6 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M16.4 83.6 h16.8 l6.3 -12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M71 83.6 l-4.2 -21 h-21 l4.2 -29.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 41.6 l16.8 -4.2 l16.8 -4.2 l16.8 6.3 l16.8 6.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 20.6 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

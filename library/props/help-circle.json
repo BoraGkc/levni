@@ -1,0 +1,37 @@
+{
+ "name": "help-circle",
+ "category": "symbols",
+ "tags": [
+  "help circle"
+ ],
+ "variants": [
+  {
+   "note": "help circle, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 53 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 0 0 -75.6 0",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 50 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 0 0 -75.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 66.8 v0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 54.2 a8.4 8.4 0 0 0 3.8 -15.9 a8.3 8.3 0 0 0 -10.1 2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

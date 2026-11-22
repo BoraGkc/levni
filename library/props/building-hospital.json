@@ -1,0 +1,44 @@
+{
+ "name": "building-hospital",
+ "category": "places",
+ "tags": [
+  "building hospital"
+ ],
+ "variants": [
+  {
+   "note": "building hospital, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M12.2 87.8 l75.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20.6 87.8 v-67.2 a8.4 8.4 0 0 1 8.4 -8.4 h42 a8.4 8.4 0 0 1 8.4 8.4 v67.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 87.8 v-16.8 a8.4 8.4 0 0 1 8.4 -8.4 h8.4 a8.4 8.4 0 0 1 8.4 8.4 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 37.4 l16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 29 l0 16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

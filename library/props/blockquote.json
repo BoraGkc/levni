@@ -1,0 +1,50 @@
+{
+ "name": "blockquote",
+ "category": "books",
+ "tags": [
+  "blockquote"
+ ],
+ "variants": [
+  {
+   "note": "blockquote, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M24.8 62.6 h63",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.8 79.4 h-63",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62.6 45.8 h25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.8 29 h-25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 37.4 h4.2 a4.2 4.2 0 1 1 -4.2 4.2 v-10.5 a8.4 8.4 0 0 1 8.4 -8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 37.4 h4.2 a4.2 4.2 0 1 1 -4.2 4.2 v-10.5 a8.4 8.4 0 0 1 8.4 -8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

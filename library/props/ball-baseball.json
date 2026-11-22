@@ -1,0 +1,73 @@
+{
+ "name": "ball-baseball",
+ "category": "sport",
+ "tags": [
+  "ball baseball"
+ ],
+ "variants": [
+  {
+   "note": "ball baseball, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M26.3 79.7 a37.8 37.8 0 1 0 53.5 -53.5 a37.8 37.8 0 0 0 -53.5 53.5",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M23.3 76.7 a37.8 37.8 0 1 0 53.5 -53.5 a37.8 37.8 0 0 0 -53.5 53.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M52.1 12.3 a37.8 37.8 0 0 1 -39.8 39.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.7 47.9 a37.8 37.8 0 0 0 -39.8 39.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 37.4 l8.4 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M54.2 54.2 l8.4 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M45.8 29 l8.4 4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 45.8 l4.2 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 45.8 l4.2 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M45.8 66.8 l8.4 4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

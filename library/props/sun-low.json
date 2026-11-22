@@ -1,0 +1,93 @@
+{
+ "name": "sun-low",
+ "category": "nature",
+ "tags": [
+  "sun low"
+ ],
+ "variants": [
+  {
+   "note": "sun low, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M36.2 53 a16.8 16.8 0 1 0 33.6 0 a16.8 16.8 0 1 0 -33.6 0",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M29.1 29.1 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M77 29.1 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M76.9 76.9 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M29.1 76.9 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M33.2 50 a16.8 16.8 0 1 0 33.6 0 a16.8 16.8 0 1 0 -33.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 50 h0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 16.4 v0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M83.6 50 h0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 83.6 v0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M26.1 26.1 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M74 26.1 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M73.9 73.9 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M26.1 73.9 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

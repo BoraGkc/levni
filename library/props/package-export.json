@@ -1,0 +1,50 @@
+{
+ "name": "package-export",
+ "category": "money",
+ "tags": [
+  "package export"
+ ],
+ "variants": [
+  {
+   "note": "package export, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M50 87.8 l-33.6 -18.9 v-37.8 l33.6 -18.9 l33.6 18.9 v18.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 50 l33.6 -18.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 50 v37.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 50 l-33.6 -18.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62.6 75.2 h29.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M79.4 62.6 l12.6 12.6 l-12.6 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

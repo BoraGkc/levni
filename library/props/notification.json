@@ -1,0 +1,31 @@
+{
+ "name": "notification",
+ "category": "tech",
+ "tags": [
+  "notification"
+ ],
+ "variants": [
+  {
+   "note": "notification, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M61.4 32 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 1 0 -25.2 0",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M41.6 24.8 h-12.6 a8.4 8.4 0 0 0 -8.4 8.4 v37.8 a8.4 8.4 0 0 0 8.4 8.4 h37.8 a8.4 8.4 0 0 0 8.4 -8.4 v-12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 29 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 1 0 -25.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

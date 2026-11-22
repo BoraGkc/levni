@@ -1,0 +1,38 @@
+{
+ "name": "walk",
+ "category": "health",
+ "tags": [
+  "walk"
+ ],
+ "variants": [
+  {
+   "note": "walk, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M50 16.4 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 87.8 l12.6 -16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 87.8 l-8.4 -16.8 l-12.6 -12.6 l4.2 -25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 50 l8.4 -12.6 l16.8 -4.2 l12.6 12.6 l12.6 4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

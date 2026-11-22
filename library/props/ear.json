@@ -1,0 +1,26 @@
+{
+ "name": "ear",
+ "category": "health",
+ "tags": [
+  "ear"
+ ],
+ "variants": [
+  {
+   "note": "ear, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M24.8 41.6 a29.4 29.4 0 1 1 54.6 15.1 a42 42 0 0 1 -8.4 8.4 a33.6 33.6 0 0 0 -8.4 12.6 a18.9 18.9 0 0 1 -28.6 5.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 41.6 a12.6 12.6 0 1 1 21 9.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

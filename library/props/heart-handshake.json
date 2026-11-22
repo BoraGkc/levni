@@ -1,0 +1,43 @@
+{
+ "name": "heart-handshake",
+ "category": "symbols",
+ "tags": [
+  "heart handshake"
+ ],
+ "variants": [
+  {
+   "note": "heart handshake, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M84.5 55.4 l-31.5 31.2 l-31.5 -31.2 a21 21 0 1 1 31.5 -27.6 a21 21 0 1 1 31.5 27.6",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M81.5 52.4 l-31.5 31.2 l-31.5 -31.2 a21 21 0 1 1 31.5 -27.6 a21 21 0 1 1 31.5 27.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 24.8 l-13.8 13.8 a4.2 4.2 0 0 0 0 5.9 l2.3 2.3 c2.9 2.9 7.6 2.9 10.5 0 l4.2 -4.2 a13.4 13.4 0 0 1 18.9 0 l9.5 9.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M52.1 64.7 l8.4 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62.6 54.2 l8.4 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

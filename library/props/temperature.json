@@ -1,0 +1,31 @@
+{
+ "name": "temperature",
+ "category": "nature",
+ "tags": [
+  "temperature"
+ ],
+ "variants": [
+  {
+   "note": "temperature, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M44.6 59.3 a16.8 16.8 0 1 0 16.8 0 v-35.7 a8.4 8.4 0 0 0 -16.8 0 v35.7",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M41.6 56.3 a16.8 16.8 0 1 0 16.8 0 v-35.7 a8.4 8.4 0 0 0 -16.8 0 v35.7",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 37.4 l16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

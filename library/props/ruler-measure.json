@@ -1,0 +1,73 @@
+{
+ "name": "ruler-measure",
+ "category": "books",
+ "tags": [
+  "ruler measure"
+ ],
+ "variants": [
+  {
+   "note": "ruler measure, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M86.1 53 c2.6 0 4.7 2.2 4.7 4.8 v24 c0 2.7 -2.1 4.8 -4.7 4.8 h-66.7 a4.2 4.2 0 0 1 -4.2 -4.2 v-24.6 c0 -2.7 2.1 -4.8 4.7 -4.8 h66.2",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M83.1 50 c2.6 0 4.7 2.2 4.7 4.8 v24 c0 2.7 -2.1 4.8 -4.7 4.8 h-66.7 a4.2 4.2 0 0 1 -4.2 -4.2 v-24.6 c0 -2.7 2.1 -4.8 4.7 -4.8 h66.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 50 v8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 50 v12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 50 v12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M75.2 50 v12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62.6 50 v8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 12.2 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 20.6 h75.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.8 12.2 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

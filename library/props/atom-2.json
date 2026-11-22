@@ -1,0 +1,71 @@
+{
+ "name": "atom-2",
+ "category": "symbols",
+ "tags": [
+  "atom 2"
+ ],
+ "variants": [
+  {
+   "note": "atom 2, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M40.4 53 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 1 0 -25.2 0",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M53 90.8 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M90.8 40.4 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M37.4 50 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 1 0 -25.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 87.8 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 37.4 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.8 37.4 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 84 a37.8 37.8 0 0 1 -21 -29.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 84 a37.8 37.8 0 0 0 21 -29.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M25.6 20.6 a37.8 37.8 0 0 1 47.9 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

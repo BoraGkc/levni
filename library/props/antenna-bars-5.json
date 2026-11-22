@@ -1,0 +1,38 @@
+{
+ "name": "antenna-bars-5",
+ "category": "tech",
+ "tags": [
+  "antenna bars 5"
+ ],
+ "variants": [
+  {
+   "note": "antenna bars 5, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M24.8 75.2 l0 -12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 75.2 l0 -25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 75.2 l0 -37.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M75.2 75.2 l0 -50.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

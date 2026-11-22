@@ -1,0 +1,37 @@
+{
+ "name": "alert-triangle",
+ "category": "symbols",
+ "tags": [
+  "alert triangle"
+ ],
+ "variants": [
+  {
+   "note": "alert triangle, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M46.1 17.7 l-34 56.8 a8 8 0 0 0 6.9 12.1 h68.1 a8 8 0 0 0 6.9 -12.1 l-34 -56.9 a8 8 0 0 0 -13.8 0",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 37.4 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M43.1 14.7 l-34 56.8 a8 8 0 0 0 6.9 12.1 h68.1 a8 8 0 0 0 6.9 -12.1 l-34 -56.9 a8 8 0 0 0 -13.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 66.8 h0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

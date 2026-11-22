@@ -1,0 +1,54 @@
+{
+ "name": "target-arrow",
+ "category": "money",
+ "tags": [
+  "target arrow"
+ ],
+ "variants": [
+  {
+   "note": "target arrow, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M48.8 53 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M65.6 27.8 v12.6 h12.6 l12.6 -12.6 h-12.6 v-12.6 l-12.6 12.6",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M45.8 50 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 29 a21 21 0 1 0 21 21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M54.2 12.4 a37.8 37.8 0 1 0 33.4 33.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62.6 24.8 v12.6 h12.6 l12.6 -12.6 h-12.6 v-12.6 l-12.6 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62.6 37.4 l-12.6 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

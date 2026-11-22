@@ -1,0 +1,37 @@
+{
+ "name": "swimming",
+ "category": "health",
+ "tags": [
+  "swimming"
+ ],
+ "variants": [
+  {
+   "note": "swimming, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M65.6 40.4 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M62.6 37.4 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 45.8 l16.8 -8.4 l14.7 12.6 l-6.3 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 70 a10.1 10.1 0 0 0 4.2 1.1 a10.1 10.1 0 0 0 8.4 -4.2 a10.1 10.1 0 0 1 8.4 -4.2 a10.1 10.1 0 0 1 8.4 4.2 a10.1 10.1 0 0 0 8.4 4.2 a10.1 10.1 0 0 0 8.4 -4.2 a10.1 10.1 0 0 1 8.4 -4.2 a10.1 10.1 0 0 1 8.4 4.2 a10.1 10.1 0 0 0 8.4 4.2 a10.1 10.1 0 0 0 4.2 -1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

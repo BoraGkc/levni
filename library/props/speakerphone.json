@@ -1,0 +1,37 @@
+{
+ "name": "speakerphone",
+ "category": "tech",
+ "tags": [
+  "speakerphone"
+ ],
+ "variants": [
+  {
+   "note": "speakerphone, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M53 36.2 l19 -15.8 a3.8 3.8 0 0 1 6.2 2.9 v51.1 a3.8 3.8 0 0 1 -6.2 2.9 l-19 -15.8 h-33.6 a4.2 4.2 0 0 1 -4.2 -4.2 v-16.8 a4.2 4.2 0 0 1 4.2 -4.2 h33.6",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M75.2 33.2 a12.6 12.6 0 0 1 0 25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 33.2 v46.2 a4.2 4.2 0 0 1 -4.2 4.2 h-4.2 a4.2 4.2 0 0 1 -4.2 -4.2 v-21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 33.2 l19 -15.8 a3.8 3.8 0 0 1 6.2 2.9 v51.1 a3.8 3.8 0 0 1 -6.2 2.9 l-19 -15.8 h-33.6 a4.2 4.2 0 0 1 -4.2 -4.2 v-16.8 a4.2 4.2 0 0 1 4.2 -4.2 h33.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

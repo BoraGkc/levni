@@ -1,0 +1,25 @@
+{
+ "name": "player-play",
+ "category": "tech",
+ "tags": [
+  "player play"
+ ],
+ "variants": [
+  {
+   "note": "player play, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M32 19.4 v67.2 l54.6 -33.6 l-54.6 -33.6",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M29 16.4 v67.2 l54.6 -33.6 l-54.6 -33.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

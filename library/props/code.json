@@ -1,0 +1,32 @@
+{
+ "name": "code",
+ "category": "tech",
+ "tags": [
+  "code"
+ ],
+ "variants": [
+  {
+   "note": "code, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M29 33.2 l-16.8 16.8 l16.8 16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M71 33.2 l16.8 16.8 l-16.8 16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 16.4 l-16.8 67.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

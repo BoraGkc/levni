@@ -1,0 +1,78 @@
+{
+ "name": "building-mosque",
+ "category": "places",
+ "tags": [
+  "building mosque"
+ ],
+ "variants": [
+  {
+   "note": "building mosque, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M90.8 46.7 c0 -1.4 -0.3 -2.7 -0.9 -4 l-3.3 -6.5 l-3.3 6.5 a8.9 8.9 0 0 0 -0.9 4 a2.1 2.1 0 0 0 2.1 2.1 h4.2 a2.1 2.1 0 0 0 2.1 -2.1",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M23.6 46.7 c0 -1.4 -0.3 -2.7 -0.9 -4 l-3.3 -6.5 l-3.3 6.5 a8.9 8.9 0 0 0 -0.9 4 a2.1 2.1 0 0 0 2.1 2.1 h4.2 a2.1 2.1 0 0 0 2.1 -2.1",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 87.8 h29.4 v-8.4 a8.4 8.4 0 1 1 16.8 0 v8.4 h29.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 87.8 v-42",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M83.6 87.8 v-42",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 66.8 h12.6 v-12.6 h42 v12.6 h12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M71 54.2 a21 21 0 0 0 -42 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.8 43.7 c0 -1.4 -0.3 -2.7 -0.9 -4 l-3.3 -6.5 l-3.3 6.5 a8.9 8.9 0 0 0 -0.9 4 a2.1 2.1 0 0 0 2.1 2.1 h4.2 a2.1 2.1 0 0 0 2.1 -2.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20.6 43.7 c0 -1.4 -0.3 -2.7 -0.9 -4 l-3.3 -6.5 l-3.3 6.5 a8.9 8.9 0 0 0 -0.9 4 a2.1 2.1 0 0 0 2.1 2.1 h4.2 a2.1 2.1 0 0 0 2.1 -2.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 8 a8.4 8.4 0 1 0 8.4 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 24.8 v8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,44 @@
+{
+ "name": "building-church",
+ "category": "places",
+ "tags": [
+  "building church"
+ ],
+ "variants": [
+  {
+   "note": "building church, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M12.2 87.8 l75.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 87.8 v-16.8 a8.4 8.4 0 0 1 16.8 0 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 20.6 l16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 12.2 l0 21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 87.8 v-29.4 m-8.4 8.4 l33.6 -33.6 l33.6 33.6 m-8.4 -8.4 v29.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

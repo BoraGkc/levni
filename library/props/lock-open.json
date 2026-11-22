@@ -1,0 +1,42 @@
+{
+ "name": "lock-open",
+ "category": "tech",
+ "tags": [
+  "lock open"
+ ],
+ "variants": [
+  {
+   "note": "lock open, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M23.6 57.2 a8.4 8.4 0 0 1 8.4 -8.4 h42 a8.4 8.4 0 0 1 8.4 8.4 v25.2 a8.4 8.4 0 0 1 -8.4 8.4 h-42 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -25.2",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M48.8 69.8 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M20.6 54.2 a8.4 8.4 0 0 1 8.4 -8.4 h42 a8.4 8.4 0 0 1 8.4 8.4 v25.2 a8.4 8.4 0 0 1 -8.4 8.4 h-42 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M45.8 66.8 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 45.8 v-21 a16.8 16.8 0 0 1 33.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}
