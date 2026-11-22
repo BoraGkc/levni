@@ -23,6 +23,9 @@ A machine-readable outline is in [`scene.schema.json`](scene.schema.json).
 | `boil` | integer | `seed` | seed of the crayon filter only (animate it for a hand-drawn shimmer) |
 | `t` | 0..1 | `0` | animation time; trees sway, clouds drift, flags wave |
 | `locale` | string | `en` | locale used to upper-case `label` text (`tr` gives dotted İ) |
+| `style` | string | `riso` | style pack: `riso` or `miniature` (recolours inks and paper, see `src/styles.mjs`) |
+| `finish` | string | `crayon` | `crayon`: hand-inked lines, riso plates, paper grain. `soft`: clean edges and a fine film grain, for the ribbon look |
+| `grain` | number | `0.16` | strength of the film grain in the `soft` finish |
 
 ## Canvas and colours
 
@@ -99,6 +102,14 @@ House rule: at most **two main inks plus paper** per scene; a third colour only 
 | `line` / `shape` | `points` [[x, y] …], `color` / `fill`, `stroke`, `weight`, `closed`? | free line or shape |
 | `brush` | `points` [[x, y] …], `width`?, `taper`?, `color` | brush stroke that swells in the middle |
 | `label` | `text`, `x`, `y`, `size`?, `color`?, `anchor`?, `upper`? | small mono label (section / topic). Not for headlines. |
+
+### Soft 3D look (use with `"finish": "soft"`)
+
+| type | fields | notes |
+| --- | --- | --- |
+| `ribbon` | `points` [[x, y] …] or `circle` [cx, cy, r], `width`, `colors` [a, b, …] (gradient along the length), `back`?, `twists`?, `phase`?, `closed`?, `highlight`? | a wide band swept along a smooth line; where it twists it narrows and shows its `back` side. 5–7 points that run off the canvas read best |
+| `tube` | `points` or `circle` [cx, cy, r] (or [cx, cy, rx, ry, rotation]), `width`, `color`, `light`? | a round tube shaded from a dark rim to a light core; three circles make interlocking rings |
+| `image` | `src` (local png, jpg, svg or webp), `x`, `y` (centre), `size`, `card`?, `cardColor`?, `radius`? | a picture on a rounded card, e.g. a product logo you have the right to show. Logos never go into the Folio |
 
 ## The critic
 

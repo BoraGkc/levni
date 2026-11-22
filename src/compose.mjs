@@ -28,11 +28,12 @@ const DENSITY = {
 export async function compose(spec) {
   const seed = spec.seed ?? 1;
   const r = rng(seed);
-  const hand = spec.hand !== false; // hand-inked lines for the pen and for drawn objects
+  const soft = spec.finish === 'soft'; // soft finish: clean edges and film grain instead of crayon and riso plates
+  const hand = spec.hand ?? !soft; // hand-inked lines for the pen and for drawn objects
   const pen = makePen(r, { hand });
   const noise = makeNoise(rng(seed + 3));
   const time = spec.t ?? 0; // 0..1, set by the animation renderer
-  const plates = plateOffsets(rng(seed + 77), spec.plateShift ?? 3.2); // one misregistration per ink colour
+  const plates = plateOffsets(rng(seed + 77), spec.plateShift ?? (soft ? 0 : 3.2)); // one misregistration per ink colour
   const out = [];
   const used = []; // bounding boxes for the critic
   // dark areas (blue/ink panels, dark background): line-only drawings inside them switch to paper so they stay visible
@@ -239,7 +240,7 @@ export async function compose(spec) {
   }
   // boil: the crayon filter's own seed; the animator steps it a few times a second for a hand-drawn shimmer
   // spec.style picks a style pack (styles.mjs): the same drawing printed with other inks
-  return { svg: applyStyle(frame(body, { seed: spec.boil ?? seed, background: c(spec.background, P.paper) }), spec.style), used };
+  return { svg: applyStyle(frame(body, { seed: spec.boil ?? seed, background: c(spec.background, P.paper), finish: soft ? 'soft' : 'crayon', grain: spec.grain }), spec.style), used };
 }
 
 // dash: [on, off] in 0..100 box units; cuts each polyline into short hand-inked strokes (marking lines, seams, paths)

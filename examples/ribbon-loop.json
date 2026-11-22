@@ -1,0 +1,51 @@
+{
+ "seed": 3,
+ "finish": "soft",
+ "background": "#DCE6FA",
+ "elements": [
+  {
+   "type": "ribbon",
+   "points": [
+    [
+     -200,
+     640
+    ],
+    [
+     160,
+     330
+    ],
+    [
+     560,
+     110
+    ],
+    [
+     930,
+     170
+    ],
+    [
+     1080,
+     470
+    ],
+    [
+     1000,
+     800
+    ]
+   ],
+   "width": 240,
+   "colors": [
+    "#2ED3B7",
+    "#1F7BFF",
+    "#3A33D6"
+   ],
+   "twists": 1.2,
+   "phase": 0.0
+  },
+  {
+   "type": "image",
+   "src": "examples/badge-tulip.svg",
+   "x": 1030,
+   "y": 130,
+   "size": 110
+  }
+ ]
+}

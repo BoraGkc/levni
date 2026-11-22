@@ -1,0 +1,44 @@
+{
+ "seed": 8,
+ "finish": "soft",
+ "background": "#23104F",
+ "elements": [
+  {
+   "type": "tube",
+   "circle": [
+    300,
+    210,
+    165
+   ],
+   "width": 120,
+   "color": "#3FDDB0"
+  },
+  {
+   "type": "tube",
+   "circle": [
+    600,
+    430,
+    165
+   ],
+   "width": 120,
+   "color": "#3FDDB0"
+  },
+  {
+   "type": "tube",
+   "circle": [
+    900,
+    650,
+    165
+   ],
+   "width": 120,
+   "color": "#3FDDB0"
+  },
+  {
+   "type": "image",
+   "src": "examples/badge-tulip.svg",
+   "x": 1030,
+   "y": 130,
+   "size": 110
+  }
+ ]
+}

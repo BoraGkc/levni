@@ -15,6 +15,12 @@ The same room in the `miniature` style pack:
 
 ![The isometric room in miniature colours](examples/room-miniature.png)
 
+The `soft` finish:
+
+| | | |
+| --- | --- | --- |
+| ![A blue-teal gradient ribbon arching across a pale background](examples/ribbon-loop.png) | ![An orange ribbon folding into an S, violet on its back side](examples/ribbon-s.png) | ![Three mint tube rings on deep purple](examples/ribbon-rings.png) |
+
 ## Why
 
 - **Agents can draw.** A scene is plain JSON: an agent (or a person) places props, panels and textures; Levni does the hand. Same seed, same picture.
@@ -22,6 +28,7 @@ The same room in the `miniature` style pack:
 - **A shared library: the Levni Folio.** 474 drawn props (708 variants), CC BY 4.0, open to contributions.
 - **A critic built in.** Every render returns layout notes (off-canvas, accidental crops, lopsided weight, no focal point) an agent can act on before a human looks.
 - **Style packs.** The same scene printed with other inks and paper: `riso` (Ortak Alan's house look, default) and `miniature`, inspired by Tulip Era Ottoman painting, with its own tulips, carnations, cypresses and gilded medallion. Levni does not have to invent every look itself: it can take a tradition as its reference and then draw in it consistently. Set `"style": "miniature"` on a scene; a pack is a colour map in `src/styles.mjs`.
+- **A soft 3D finish.** `"finish": "soft"` swaps the crayon for clean edges and film grain, with twisting gradient `ribbon`s, shaded `tube`s and an `image` badge for a logo you own. Good for tech and guide covers. Examples: [`ribbon-loop`](examples/ribbon-loop.json), [`ribbon-s`](examples/ribbon-s.json), [`ribbon-rings`](examples/ribbon-rings.json).
 - **MCP-ready.** The API is three calls (`compose`, `critique`, `render`) over JSON in, image out, so it maps directly onto MCP tools. An MCP server is planned.
 
 ## Install and use
@@ -59,7 +66,7 @@ Your own prop folders: set `LEVNI_PROPS=/path/to/props` (several, separated by `
 ] }
 ```
 
-Canvas 1200 × 673. 36 element types: library props and your own path drawings (with extrusion, hatch shading and cast shadows), small isometric worlds, panels, glyph fields, halftones, flow fields, faceless crowds and isotype grids, bubbles, trees, flags, arrows, labels. Full reference: [`docs/scene.md`](docs/scene.md); JSON Schema: [`docs/scene.schema.json`](docs/scene.schema.json).
+Canvas 1200 × 673. 39 element types: library props and your own path drawings (with extrusion, hatch shading and cast shadows), small isometric worlds, panels, glyph fields, halftones, flow fields, faceless crowds and isotype grids, bubbles, trees, flags, arrows, labels. Full reference: [`docs/scene.md`](docs/scene.md); JSON Schema: [`docs/scene.schema.json`](docs/scene.schema.json).
 
 ## Licensing
 

@@ -60,6 +60,17 @@ for (let i = 0; i < list.length; i += 24) {
   tiles++;
 }
 
+// 4. Every example scene renders (small, fast)
+const { readdirSync, readFileSync } = await import('node:fs');
+const exDir = new URL('../examples/', import.meta.url);
+for (const f of readdirSync(exDir).filter((n) => n.endsWith('.json'))) {
+  try {
+    const { svg } = await compose(JSON.parse(readFileSync(new URL(f, exDir), 'utf8')));
+    if (/NaN|undefined|Infinity/.test(svg)) fail(`examples/${f}`, 'SVG contains NaN/undefined/Infinity');
+    await sharp(Buffer.from(svg), { density: 24 }).png().toBuffer();
+  } catch (err) { fail(`examples/${f}`, err.message); }
+}
+
 console.log(`${Object.keys(props).length} props, ${list.length} variants, ${tiles} tiles rasterized in ${((Date.now() - t0) / 1000).toFixed(1)} s`);
 if (errors.length) {
   console.error(`${errors.length} problem(s):\n` + errors.map((e) => `- ${e}`).join('\n'));
