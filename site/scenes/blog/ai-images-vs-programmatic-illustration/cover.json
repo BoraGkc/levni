@@ -1,0 +1,10 @@
+{ "seed": 9, "clip": [60, 52, 1080, 569], "elements": [
+ {"type":"panel","x":60,"y":52,"w":1080,"h":569,"color":"blue"},
+ {"type":"glyphs","x":60,"y":52,"w":1080,"h":569,"color":"tone","mode":"radial","level":0.6,"cx":600,"cy":330},
+ {"type":"disc","x":600,"y":340,"r":235,"color":"mustard"},
+ {"type":"prop","name":"palette","variant":1,"x":600,"y":345,"size":440,"shadow":true},
+ {"type":"prop","name":"dice","variant":1,"x":930,"y":440,"size":170,"rot":14,"shadow":true},
+ {"type":"prop","name":"robot","variant":1,"x":270,"y":410,"size":300},
+ {"type":"prop","name":"sparkle","x":330,"y":170,"size":90},
+ {"type":"ticks","x":840,"y":380,"angle":-30,"size":40}
+]}

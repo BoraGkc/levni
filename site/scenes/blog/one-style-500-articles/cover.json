@@ -1,0 +1,12 @@
+{ "seed": 12, "elements": [
+ {"type":"panel","x":30,"y":70,"w":250,"h":330,"color":"coral","rot":-6},
+ {"type":"prop","name":"scales","x":155,"y":235,"size":170,"rot":-6},
+ {"type":"panel","x":920,"y":70,"w":250,"h":330,"color":"green","rot":6},
+ {"type":"prop","name":"camera","x":1045,"y":235,"size":170,"rot":6},
+ {"type":"panel","x":290,"y":40,"w":620,"h":593,"color":"blue","rot":-1},
+ {"type":"glyphs","x":290,"y":40,"w":620,"h":560,"color":"tone","mode":"radial","level":0.6,"cx":600,"cy":340},
+ {"type":"disc","x":600,"y":340,"r":210,"color":"mustard"},
+ {"type":"prop","name":"book-stack","x":600,"y":345,"size":420,"shadow":true},
+ {"type":"prop","name":"sparkle","x":770,"y":150,"size":80},
+ {"type":"prop","name":"pencil","x":440,"y":520,"size":170,"rot":-30}
+]}

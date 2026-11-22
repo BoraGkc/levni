@@ -1,0 +1,11 @@
+{ "seed": 31, "clip": [60,52,1080,569], "elements": [
+ {"type":"panel","x":60,"y":52,"w":1080,"h":569,"color":"blue"},
+ {"type":"glyphs","x":60,"y":52,"w":1080,"h":569,"color":"tone","mode":"radial","level":0.7,"cx":600,"cy":320},
+ {"type":"sunburst","x":600,"y":320,"size":440,"color":"mustard","rayColor":"tone-mustard"},
+ {"type":"prop","name":"megaphone","variant":0,"x":590,"y":330,"size":400,"rot":-10,"shadow":true},
+ {"type":"panel","x":160,"y":330,"w":240,"h":170,"color":"coral","rot":-6},
+ {"type":"prop","name":"camera","variant":0,"x":280,"y":415,"size":150,"rot":-6},
+ {"type":"prop","name":"sparkle","x":900,"y":180,"size":90},
+ {"type":"prop","name":"flag","variant":0,"x":930,"y":430,"size":210},
+ {"type":"ticks","x":720,"y":170,"angle":-40,"size":36}
+]}

@@ -1,0 +1,7 @@
+{ "seed": 4, "clip": [60,52,1080,569], "elements": [
+ {"type":"panel","x":60,"y":52,"w":1080,"h":569,"color":"blue"},
+ {"type":"sunburst","x":700,"y":320,"size":420,"color":"mustard","rayColor":"tone-mustard"},
+ {"type":"prop","name":"rocket","variant":1,"x":700,"y":320,"size":380,"rot":15,"shadow":true},
+ {"type":"prop","name":"globe","x":250,"y":400,"size":300},
+ {"type":"prop","name":"sparkle","x":470,"y":160,"size":90}
+]}

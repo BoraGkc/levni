@@ -1,0 +1,18 @@
+{ "seed": 21, "elements": [
+ {"type":"panel","x":15,"y":60,"w":270,"h":553,"color":"blue","rot":-1},
+ {"type":"disc","x":150,"y":300,"r":105,"color":"mustard"},
+ {"type":"prop","name":"piggy-bank","x":150,"y":310,"size":220,"shadow":true},
+ {"type":"prop","name":"coins","x":85,"y":500,"size":80},
+ {"type":"panel","x":315,"y":60,"w":270,"h":553,"color":"coral","rot":1},
+ {"type":"disc","x":450,"y":300,"r":105,"color":"mustard"},
+ {"type":"prop","name":"tent","x":450,"y":310,"size":220,"shadow":true},
+ {"type":"prop","name":"sun","x":520,"y":170,"size":80},
+ {"type":"panel","x":615,"y":60,"w":270,"h":553,"color":"green","rot":-1},
+ {"type":"disc","x":750,"y":300,"r":105,"color":"mustard"},
+ {"type":"prop","name":"stethoscope","x":750,"y":310,"size":220,"shadow":true},
+ {"type":"prop","name":"heart","x":815,"y":490,"size":80},
+ {"type":"panel","x":915,"y":60,"w":270,"h":553,"color":"blue","rot":1},
+ {"type":"disc","x":1050,"y":300,"r":105,"color":"coral"},
+ {"type":"prop","name":"lightbulb","x":1050,"y":310,"size":220,"shadow":true},
+ {"type":"prop","name":"sparkle","x":1120,"y":170,"size":80}
+]}

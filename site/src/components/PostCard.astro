@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { CATEGORIES, readMinutes, fmtDate } from '../blog';
+
+interface Props { post: CollectionEntry<'blog'>; big?: boolean }
+const { post, big = false } = Astro.props;
+const d = post.data;
+const cover = d.cover ?? `/blog/${post.id}/cover.webp`;
+---
+<a class:list={['card', { big }]} href={`/blog/${post.id}/`}>
+  <img src={cover} width="1200" height="673" alt="" loading="lazy" />
+  <div class="body">
+    <p class="meta"><span>{CATEGORIES[d.category].label}</span><span class="kind">{d.kind}</span></p>
+    <p class="title">{d.title}</p>
+    {big && <p class="dek">{d.description}</p>}
+    <p class="date">{fmtDate(d.date)} · {readMinutes(post.body || '')} min read</p>
+  </div>
+</a>
+
+<style>
+  .card { display: flex; flex-direction: column; text-decoration: none; color: var(--ink); background: var(--paper-2); border: 1.5px solid var(--rule); padding: 10px; transition: border-color 0.15s, transform 0.15s; height: 100%; }
+  .card:hover { border-color: var(--ink); transform: translateY(-3px); }
+  .card img { width: 100%; aspect-ratio: 1200 / 673; object-fit: cover; border: 1px solid var(--rule); }
+  .body { padding: 16px 8px 8px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .meta { display: flex; justify-content: space-between; gap: 10px; margin: 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink-soft); }
+  .kind { color: var(--accent-text); text-transform: uppercase; letter-spacing: 0.08em; }
+  .kind::before { content: ''; display: inline-block; width: 7px; height: 7px; background: var(--coral); margin-right: 6px; vertical-align: 1px; }
+  .title { font-family: var(--display); font-size: 1.35rem; line-height: 1.2; margin: 0; }
+  .big .title { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+  .dek { margin: 0; color: var(--ink-soft); }
+  .date { margin: auto 0 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink-soft); }
+</style>

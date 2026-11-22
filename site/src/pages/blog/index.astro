@@ -1,32 +1,79 @@
 ---
 import Base from '../../layouts/Base.astro';
+import PostCard from '../../components/PostCard.astro';
 import { getCollection } from 'astro:content';
+import { CATEGORIES, type Category } from '../../blog';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => +b.data.date - +a.data.date);
-const fmt = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+const featured = posts.find((p) => p.data.featured) ?? posts[0];
+const rest = posts.filter((p) => p !== featured);
+const shelves = (Object.keys(CATEGORIES) as Category[])
+  .map((key) => ({ key, ...CATEGORIES[key], posts: posts.filter((p) => p.data.category === key) }))
+  .filter((s) => s.posts.length > 0);
 ---
-<Base title="Blog" description="Notes on Levni: drawing illustrations from JSON scenes, style packs, the Levni Folio and illustration for AI agents.">
-  <section class="wrap blog-index">
-    <h1>Blog</h1>
-    <ul>
-      {posts.map((p) => (
-        <li>
-          <time datetime={p.data.date.toISOString()}>{fmt(p.data.date)}</time>
-          <h2><a href={`/blog/${p.id}/`}>{p.data.title}</a></h2>
-          <p>{p.data.description}</p>
-        </li>
-      ))}
-    </ul>
+<Base title="Blog" description="Guides on illustrating articles with AI agents: covers, social cards, icons and brand-coloured art drawn from JSON scenes with Levni and its MCP server.">
+  <section class="wrap head">
+    <p class="eyebrow">Levni blog</p>
+    <h1>Illustration for agents and publishers</h1>
+    <p class="lede">Guides for drawing covers, icons and social images from JSON, with Claude, Codex or by hand. Every image on these pages was drawn by Levni.</p>
+    <nav class="shelves" aria-label="Categories">
+      {shelves.map((s) => <a href={`/blog/category/${s.key}/`}>{s.label} <small>{s.posts.length}</small></a>)}
+    </nav>
   </section>
+
+  {featured && (
+    <section class="wrap featured" aria-label="Featured">
+      <PostCard post={featured} big />
+    </section>
+  )}
+
+  <section class="wrap latest" aria-labelledby="latest-title">
+    <h2 id="latest-title">Latest</h2>
+    <div class="cards">{rest.slice(0, 6).map((p) => <PostCard post={p} />)}</div>
+  </section>
+
+  {shelves.map((s) => (
+    <section class="wrap shelf" aria-labelledby={`shelf-${s.key}`}>
+      <div class="shelf-head">
+        <div>
+          <h2 id={`shelf-${s.key}`}>{s.label}</h2>
+          <p>{s.blurb}</p>
+        </div>
+        <a href={`/blog/category/${s.key}/`}>All →</a>
+      </div>
+      <ul>
+        {s.posts.slice(0, 4).map((p) => (
+          <li><a href={`/blog/${p.id}/`}><span class="k">{p.data.kind}</span>{p.data.title}</a></li>
+        ))}
+      </ul>
+    </section>
+  ))}
 </Base>
 
 <style>
-  .blog-index { max-width: 780px; margin-top: 48px; }
-  ul { list-style: none; padding: 0; }
-  li { padding: 18px 0; border-bottom: 1px solid var(--gold); }
-  h2 { font-size: 1.8rem; margin: 4px 0; }
-  h2 a { color: var(--ink); text-decoration: none; }
-  h2 a:hover { color: var(--vermilion); }
-  time { font-family: var(--mono); font-size: 0.8rem; color: var(--turquoise-text); }
-  p { margin: 0; color: var(--ink-soft); }
+  .head { margin-top: 48px; }
+  .eyebrow { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-text); margin: 0 0 12px; }
+  h1 { max-width: 18ch; }
+  .lede { font-size: 1.2rem; color: var(--ink-soft); max-width: 680px; }
+  .shelves { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .shelves a { text-decoration: none; color: var(--ink); border: 1.5px solid var(--rule); background: var(--paper-2); padding: 6px 14px; border-radius: 999px; font-size: 0.95rem; }
+  .shelves a:hover { border-color: var(--ink); }
+  .shelves small { font-family: var(--mono); color: var(--ink-soft); margin-left: 4px; }
+  .featured { margin-top: 36px; }
+  .featured :global(.card) { display: grid; grid-template-columns: 1.4fr 1fr; gap: 10px; }
+  .latest { margin-top: 64px; }
+  .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 20px; }
+  .shelf { margin-top: 64px; }
+  .shelf-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; border-bottom: 2px solid var(--ink); padding-bottom: 10px; }
+  .shelf-head h2 { margin: 0; }
+  .shelf-head p { margin: 4px 0 0; color: var(--ink-soft); }
+  .shelf ul { list-style: none; padding: 0; margin: 0; }
+  .shelf li { border-bottom: 1px solid var(--rule); }
+  .shelf li a { display: block; padding: 14px 0; color: var(--ink); text-decoration: none; font-family: var(--display); font-size: 1.3rem; }
+  .shelf li a:hover { color: var(--accent-text); }
+  .k { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-text); margin-right: 12px; vertical-align: 3px; }
+  @media (max-width: 900px) {
+    .featured :global(.card) { display: flex; }
+    .cards { grid-template-columns: minmax(0, 1fr); }
+  }
 </style>

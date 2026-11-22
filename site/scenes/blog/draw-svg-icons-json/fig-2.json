@@ -1,0 +1,12 @@
+{ "seed": 5, "clip": [60,52,1080,569], "elements": [
+ {"type":"panel","x":60,"y":52,"w":1080,"h":569,"color":"blue"},
+ {"type":"disc","x":330,"y":340,"r":215,"color":"mustard"},
+ {"type":"prop","name":"battery","variant":5,"x":330,"y":340,"size":420,"shadow":true},
+ {"type":"panel","x":600,"y":120,"w":480,"h":430,"color":"paper","rot":-2},
+ {"type":"prop","name":"battery","variant":5,"x":740,"y":240,"size":200},
+ {"type":"prop","name":"battery","variant":5,"x":910,"y":240,"size":120},
+ {"type":"prop","name":"battery","variant":5,"x":1010,"y":240,"size":70},
+ {"type":"prop","name":"battery","variant":4,"x":740,"y":430,"size":200},
+ {"type":"prop","name":"battery","variant":4,"x":910,"y":430,"size":120},
+ {"type":"prop","name":"battery","variant":4,"x":1010,"y":430,"size":70}
+]}

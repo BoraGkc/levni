@@ -1,0 +1,13 @@
+{ "seed": 7, "clip": [60,52,1080,569], "elements": [
+ {"type":"panel","x":60,"y":52,"w":1080,"h":569,"color":"tone"},
+ {"type":"window","x":170,"y":90,"w":860,"h":500,"title":"article"},
+ {"type":"panel","x":210,"y":150,"w":330,"h":220,"color":"mustard"},
+ {"type":"prop","name":"rocket","variant":1,"x":375,"y":260,"size":190},
+ {"type":"waves","x":590,"y":170,"w":380,"h":40,"gap":14,"color":"ink"},
+ {"type":"waves","x":590,"y":250,"w":380,"h":40,"gap":14,"color":"ink"},
+ {"type":"waves","x":590,"y":330,"w":380,"h":40,"gap":14,"color":"ink"},
+ {"type":"waves","x":210,"y":410,"w":760,"h":40,"gap":14,"color":"ink"},
+ {"type":"panel","x":210,"y":500,"w":300,"h":50,"color":"tone-coral"},
+ {"type":"label","text":"CREDIT","x":230,"y":530,"size":16,"color":"ink"},
+ {"type":"arrow","from":[640,560],"to":[530,535],"bend":20,"color":"coral"}
+]}
