@@ -1,0 +1,44 @@
+{
+ "name": "old",
+ "category": "home",
+ "tags": [
+  "old"
+ ],
+ "variants": [
+  {
+   "note": "old, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M45.8 87.8 l-4.2 -16.8 l-8.4 -12.6 v-25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20.6 58.4 l-4.2 -12.6 l16.8 -12.6 l12.6 8.4 l12.6 2.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 16.4 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 71 l-8.4 16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 87.8 v-35.7 a6.3 6.3 0 0 1 12.6 0 v2.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,44 @@
+{
+ "name": "tornado",
+ "category": "nature",
+ "tags": [
+  "tornado"
+ ],
+ "variants": [
+  {
+   "note": "tornado, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M87.8 16.4 l-75.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M54.2 66.8 l-25.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M45.8 83.6 l16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 33.2 l58.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 50 l50.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "name": "ball-american-football",
+ "category": "sport",
+ "tags": [
+  "ball american football"
+ ],
+ "variants": [
+  {
+   "note": "ball american football, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M69.8 15.2 c-30.2 0 -54.6 24.4 -54.6 54.6 a21 21 0 0 0 21 21 c30.2 0 54.6 -24.4 54.6 -54.6 a21 21 0 0 0 -21 -21",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M62.6 37.4 l-25.2 25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 50 l8.4 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 41.6 l8.4 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 87.8 a21 21 0 0 0 -21 -21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 12.2 c-30.2 0 -54.6 24.4 -54.6 54.6 a21 21 0 0 0 21 21 c30.2 0 54.6 -24.4 54.6 -54.6 a21 21 0 0 0 -21 -21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 12.2 a21 21 0 0 0 21 21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

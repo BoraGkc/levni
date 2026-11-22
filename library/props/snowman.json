@@ -1,0 +1,49 @@
+{
+ "name": "snowman",
+ "category": "nature",
+ "tags": [
+  "snowman"
+ ],
+ "variants": [
+  {
+   "note": "snowman, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M53 15.2 a16.8 16.8 0 0 1 12.2 28.4 a25.2 25.2 0 1 1 -24.4 0 a16.8 16.8 0 0 1 12.2 -28.3",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 12.2 a16.8 16.8 0 0 1 12.2 28.4 a25.2 25.2 0 1 1 -24.4 0 a16.8 16.8 0 0 1 12.2 -28.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M73.1 47.9 l10.5 -6.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M26.9 47.9 l-10.5 -6.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 54.2 h0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 66.8 h0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

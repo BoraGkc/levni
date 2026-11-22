@@ -1,0 +1,38 @@
+{
+ "name": "home-move",
+ "category": "home",
+ "tags": [
+  "home move"
+ ],
+ "variants": [
+  {
+   "note": "home move, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M37.4 87.8 v-25.2 a8.4 8.4 0 0 1 8.4 -8.4 h8.4 a8.4 8.4 0 0 1 8.4 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M79.4 50 h8.4 l-37.8 -37.8 l-37.8 37.8 h8.4 v29.4 a8.4 8.4 0 0 0 8.4 8.4 h23.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 79.4 h25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M79.4 66.8 l12.6 12.6 l-12.6 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

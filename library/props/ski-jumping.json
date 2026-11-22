@@ -1,0 +1,50 @@
+{
+ "name": "ski-jumping",
+ "category": "sport",
+ "tags": [
+  "ski jumping"
+ ],
+ "variants": [
+  {
+   "note": "ski jumping, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M71 73.1 l-21 -18.9 v-25.2 l21 16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 73.1 l21 -18.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M63 90.2 l28.4 -60.9 a8.4 8.4 0 0 0 -4.1 -11.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37 90.2 l-28.4 -60.9 a8.4 8.4 0 0 1 4.1 -11.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 45.8 l21 -16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 16.4 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,44 @@
+{
+ "name": "building-bridge",
+ "category": "places",
+ "tags": [
+  "building bridge"
+ ],
+ "variants": [
+  {
+   "note": "building bridge, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M24.8 20.6 l0 58.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M75.2 20.6 l0 58.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M8 62.6 l84 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 33.2 a31.5 31.5 0 0 0 12.6 -8.4 a27.3 27.3 0 0 0 50.4 0 a31.5 31.5 0 0 0 12.6 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 41.6 l0 21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

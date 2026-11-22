@@ -1,0 +1,49 @@
+{
+ "name": "salt",
+ "category": "food",
+ "tags": [
+  "salt"
+ ],
+ "variants": [
+  {
+   "note": "salt, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M34.1 36.2 h37.8 l-1.2 -9.4 a8.4 8.4 0 0 0 -8.3 -7.4 h-18.8 a8.4 8.4 0 0 0 -8.3 7.4 l-1.2 9.4",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 54.2 v0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 66.8 v0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 66.8 v0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M31.1 33.2 h37.8 l-1.2 -9.4 a8.4 8.4 0 0 0 -8.3 -7.4 h-18.8 a8.4 8.4 0 0 0 -8.3 7.4 l-1.2 9.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M31.1 33.2 l-6.8 40.6 a8.4 8.4 0 0 0 8.3 9.8 h34.8 a8.4 8.4 0 0 0 8.3 -9.8 l-6.8 -40.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

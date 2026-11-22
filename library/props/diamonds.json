@@ -1,0 +1,25 @@
+{
+ "name": "diamonds",
+ "category": "symbols",
+ "tags": [
+  "diamonds"
+ ],
+ "variants": [
+  {
+   "note": "diamonds, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M48.1 88.3 l-22.6 -29 c-2.6 -3.3 -2.6 -9.3 0 -12.6 l22.6 -29 a6.1 6.1 0 0 1 9.8 0 l22.6 29 c2.6 3.3 2.6 9.3 0 12.6 l-22.6 29 a6.1 6.1 0 0 1 -9.8 0",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M45.1 85.3 l-22.6 -29 c-2.6 -3.3 -2.6 -9.3 0 -12.6 l22.6 -29 a6.1 6.1 0 0 1 9.8 0 l22.6 29 c2.6 3.3 2.6 9.3 0 12.6 l-22.6 29 a6.1 6.1 0 0 1 -9.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

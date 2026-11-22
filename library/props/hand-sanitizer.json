@@ -1,0 +1,49 @@
+{
+ "name": "hand-sanitizer",
+ "category": "home",
+ "tags": [
+  "hand sanitizer"
+ ],
+ "variants": [
+  {
+   "note": "hand sanitizer, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M32 90.8 h42 v-42 a12.6 12.6 0 0 0 -12.6 -12.6 h-16.8 a12.6 12.6 0 0 0 -12.6 12.6 v42",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M29 87.8 h42 v-42 a12.6 12.6 0 0 0 -12.6 -12.6 h-16.8 a12.6 12.6 0 0 0 -12.6 12.6 v42",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62.6 12.2 h-25.2 a8.4 8.4 0 0 0 -8.4 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 12.2 v21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 45.8 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 54.2 h16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

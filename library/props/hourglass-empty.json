@@ -1,0 +1,36 @@
+{
+ "name": "hourglass-empty",
+ "category": "symbols",
+ "tags": [
+  "hourglass empty"
+ ],
+ "variants": [
+  {
+   "note": "hourglass empty, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M27.8 86.6 v-8.4 a25.2 25.2 0 1 1 50.4 0 v8.4 a4.2 4.2 0 0 1 -4.2 4.2 h-42 a4.2 4.2 0 0 1 -4.2 -4.2",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M27.8 19.4 v8.4 a25.2 25.2 0 1 0 50.4 0 v-8.4 a4.2 4.2 0 0 0 -4.2 -4.2 h-42 a4.2 4.2 0 0 0 -4.2 4.2",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M24.8 83.6 v-8.4 a25.2 25.2 0 1 1 50.4 0 v8.4 a4.2 4.2 0 0 1 -4.2 4.2 h-42 a4.2 4.2 0 0 1 -4.2 -4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 16.4 v8.4 a25.2 25.2 0 1 0 50.4 0 v-8.4 a4.2 4.2 0 0 0 -4.2 -4.2 h-42 a4.2 4.2 0 0 0 -4.2 4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

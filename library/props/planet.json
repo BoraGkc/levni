@@ -1,0 +1,31 @@
+{
+ "name": "planet",
+ "category": "nature",
+ "tags": [
+  "planet"
+ ],
+ "variants": [
+  {
+   "note": "planet, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M23.6 53 a29.4 29.4 0 1 0 58.8 0 a29.4 29.4 0 1 0 -58.8 0",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M78.6 56.6 c9.6 9 14.9 16.8 13 20.6 c-3.1 6.1 -24.3 -1.1 -47.3 -16.1 c-23 -15 -39.1 -32.2 -36 -38.3 c1.9 -3.8 12.3 -1.9 24.4 3.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20.6 50 a29.4 29.4 0 1 0 58.8 0 a29.4 29.4 0 1 0 -58.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

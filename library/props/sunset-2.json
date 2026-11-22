@@ -1,0 +1,68 @@
+{
+ "name": "sunset-2",
+ "category": "nature",
+ "tags": [
+  "sunset 2"
+ ],
+ "variants": [
+  {
+   "note": "sunset 2, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M12.2 54.2 h4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M83.6 54.2 h4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M23.1 27.3 l2.9 2.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M76.9 27.3 l-2.9 2.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 54.2 a16.8 16.8 0 1 1 33.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 71 h75.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 83.6 h21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 83.6 h4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 20.6 v-4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

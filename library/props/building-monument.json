@@ -1,0 +1,32 @@
+{
+ "name": "building-monument",
+ "category": "places",
+ "tags": [
+  "building monument"
+ ],
+ "variants": [
+  {
+   "note": "building monument, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M33.2 75.2 l8.4 -54.6 l8.4 -8.4 l8.4 8.4 l8.4 54.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20.6 87.8 v-12.6 h58.8 v12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 87.8 l75.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

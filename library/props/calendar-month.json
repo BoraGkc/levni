@@ -1,0 +1,61 @@
+{
+ "name": "calendar-month",
+ "category": "symbols",
+ "tags": [
+  "calendar month"
+ ],
+ "variants": [
+  {
+   "note": "calendar month, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M19.4 32 a8.4 8.4 0 0 1 8.4 -8.4 h50.4 a8.4 8.4 0 0 1 8.4 8.4 v50.4 a8.4 8.4 0 0 1 -8.4 8.4 h-50.4 a8.4 8.4 0 0 1 -8.4 -8.4 v-50.4",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M16.4 29 a8.4 8.4 0 0 1 8.4 -8.4 h50.4 a8.4 8.4 0 0 1 8.4 8.4 v50.4 a8.4 8.4 0 0 1 -8.4 8.4 h-50.4 a8.4 8.4 0 0 1 -8.4 -8.4 v-50.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 12.2 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 12.2 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 45.8 h67.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 58.4 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 58.4 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 58.4 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

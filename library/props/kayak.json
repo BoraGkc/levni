@@ -1,0 +1,65 @@
+{
+ "name": "kayak",
+ "category": "sport",
+ "tags": [
+  "kayak"
+ ],
+ "variants": [
+  {
+   "note": "kayak, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M29.5 29.5 a8.4 8.4 0 0 0 0 -11.9 l-5.9 -5.9 l-11.9 11.9 l5.9 5.9 a8.4 8.4 0 0 0 11.9 0",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M76.5 76.5 a8.4 8.4 0 0 0 0 11.9 l5.9 5.9 l11.9 -11.9 l-5.9 -5.9 a8.4 8.4 0 0 0 -11.9 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M95 13.1 c-41.9 10.9 -74 33.4 -84 81.9 c41.9 -10.9 74 -33.4 84 -81.9",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M26.5 26.5 a8.4 8.4 0 0 0 0 -11.9 l-5.9 -5.9 l-11.9 11.9 l5.9 5.9 a8.4 8.4 0 0 0 11.9 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M73.5 73.5 a8.4 8.4 0 0 0 0 11.9 l5.9 5.9 l11.9 -11.9 l-5.9 -5.9 a8.4 8.4 0 0 0 -11.9 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M26.9 26.9 l46.2 46.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M92 10.1 c-41.9 10.9 -74 33.4 -84 81.9 c41.9 -10.9 74 -33.4 84 -81.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M26.9 52.1 l21 21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M52.1 26.9 l21 21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

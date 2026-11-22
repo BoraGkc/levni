@@ -1,0 +1,44 @@
+{
+ "name": "windsock",
+ "category": "nature",
+ "tags": [
+  "windsock"
+ ],
+ "variants": [
+  {
+   "note": "windsock, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M24.8 12.2 v75.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 45.8 l50.4 -4.2 v-16.8 l-50.4 -4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 22.7 v21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 24.8 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 87.8 h16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

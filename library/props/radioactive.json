@@ -1,0 +1,47 @@
+{
+ "name": "radioactive",
+ "category": "symbols",
+ "tags": [
+  "radioactive"
+ ],
+ "variants": [
+  {
+   "note": "radioactive, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M59.3 63.9 l12.6 21.8 a37.8 37.8 0 0 0 18.9 -32.7 h-25.2 a12.6 12.6 0 0 1 -6.3 10.9",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M59.3 42.1 l12.6 -21.8 a37.8 37.8 0 0 0 -37.8 0 l12.6 21.8 a12.6 12.6 0 0 1 12.6 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M46.7 63.9 l-12.6 21.8 a37.8 37.8 0 0 1 -18.9 -32.7 h25.2 a12.6 12.6 0 0 0 6.3 10.9",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M56.3 60.9 l12.6 21.8 a37.8 37.8 0 0 0 18.9 -32.7 h-25.2 a12.6 12.6 0 0 1 -6.3 10.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M56.3 39.1 l12.6 -21.8 a37.8 37.8 0 0 0 -37.8 0 l12.6 21.8 a12.6 12.6 0 0 1 12.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M43.7 60.9 l-12.6 21.8 a37.8 37.8 0 0 1 -18.9 -32.7 h25.2 a12.6 12.6 0 0 0 6.3 10.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

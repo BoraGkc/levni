@@ -1,0 +1,43 @@
+{
+ "name": "users",
+ "category": "home",
+ "tags": [
+  "users"
+ ],
+ "variants": [
+  {
+   "note": "users, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M23.6 32 a16.8 16.8 0 1 0 33.6 0 a16.8 16.8 0 1 0 -33.6 0",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M20.6 29 a16.8 16.8 0 1 0 33.6 0 a16.8 16.8 0 1 0 -33.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 87.8 v-8.4 a16.8 16.8 0 0 1 16.8 -16.8 h16.8 a16.8 16.8 0 0 1 16.8 16.8 v8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 12.7 a16.8 16.8 0 0 1 0 32.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.8 87.8 v-8.4 a16.8 16.8 0 0 0 -12.6 -16.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

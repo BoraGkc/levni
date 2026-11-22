@@ -1,0 +1,25 @@
+{
+ "name": "building-bridge-2",
+ "category": "places",
+ "tags": [
+  "building bridge 2"
+ ],
+ "variants": [
+  {
+   "note": "building bridge 2, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M27.8 32 h50.4 a8.4 8.4 0 0 1 8.4 8.4 v37.8 a4.2 4.2 0 0 1 -4.2 4.2 h-8.4 a4.2 4.2 0 0 1 -4.2 -4.2 v-8.4 a16.8 16.8 0 0 0 -33.6 0 v8.4 a4.2 4.2 0 0 1 -4.2 4.2 h-8.4 a4.2 4.2 0 0 1 -4.2 -4.2 v-37.8 a8.4 8.4 0 0 1 8.4 -8.4",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M24.8 29 h50.4 a8.4 8.4 0 0 1 8.4 8.4 v37.8 a4.2 4.2 0 0 1 -4.2 4.2 h-8.4 a4.2 4.2 0 0 1 -4.2 -4.2 v-8.4 a16.8 16.8 0 0 0 -33.6 0 v8.4 a4.2 4.2 0 0 1 -4.2 4.2 h-8.4 a4.2 4.2 0 0 1 -4.2 -4.2 v-37.8 a8.4 8.4 0 0 1 8.4 -8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

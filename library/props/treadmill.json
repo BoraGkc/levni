@@ -1,0 +1,50 @@
+{
+ "name": "treadmill",
+ "category": "sport",
+ "tags": [
+  "treadmill"
+ ],
+ "variants": [
+  {
+   "note": "treadmill, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M41.6 12.2 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 0 0 -8.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 58.4 l16.8 4.2 l2.1 -2.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 75.2 v-12.6 l-12.6 -12.3 l3.2 -21.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 41.6 v-8.4 l16.8 -4.2 l10.5 10.5 l10.5 2.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.8 92 a4.2 4.2 0 0 0 -4.2 -4.2 h-67.2 a4.2 4.2 0 0 0 -4.2 4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M75.2 87.8 l4.2 -46.2 l8.4 -4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

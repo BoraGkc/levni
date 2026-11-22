@@ -1,0 +1,50 @@
+{
+ "name": "building-circus",
+ "category": "places",
+ "tags": [
+  "building circus"
+ ],
+ "variants": [
+  {
+   "note": "building circus, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M16.4 45.8 h67.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 26.9 c0 4.2 -21 18.9 -33.6 18.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 26.9 c0 4.2 21 18.9 33.6 18.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 45.8 c-1.4 22.4 -4.2 36.4 -8.4 42 h16.8 c4.2 0 16.8 -16.8 16.8 -37.8 v-4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M75.2 45.8 c1.4 22.4 4.2 36.4 8.4 42 h-16.8 c-4.2 0 -16.8 -16.8 -16.8 -37.8 v-4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 29 v-16.8 l8.4 4.2 h-8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "name": "building-arch",
+ "category": "places",
+ "tags": [
+  "building arch"
+ ],
+ "variants": [
+  {
+   "note": "building arch, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M12.2 87.8 l75.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 87.8 v-63 a8.4 8.4 0 0 1 8.4 -8.4 h50.4 a8.4 8.4 0 0 1 8.4 8.4 v63",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 87.8 v-33.6 a12.6 12.6 0 0 1 25.2 0 v33.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}
