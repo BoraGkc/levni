@@ -1,5 +1,6 @@
 // Checks one prop object (the JSON format of library/props/*.json). Returns a list of problems, empty when fine.
 import { COLORS } from './compose.mjs';
+import { flattenPath } from './ink.mjs';
 
 export function validateProp(p) {
   const errs = [];
@@ -26,4 +27,26 @@ export function parseProps(text) {
   const fenced = [...String(text).matchAll(/```(?:json)?\s*([\s\S]*?)```/g)].map((m) => m[1]);
   const chunks = fenced.length ? fenced : [text];
   return chunks.flatMap((c) => [].concat(JSON.parse(c)));
+}
+
+// Numbers a model that cannot see images can act on: how much of the 0..100 box the ink fills,
+// how far it sits from the centre, and which colours it uses. Returns { size, cx, cy, box, colors, warnings }.
+
+export function measureVariant(v) {
+  const pts = (v.paths || []).flatMap((p) => flattenPath(p.d, 3).flat());
+  if (!pts.length) return { warnings: ['draws nothing'] };
+  const xs = pts.map((q) => q[0]), ys = pts.map((q) => q[1]);
+  const x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
+  const size = Math.round(Math.max(x1 - x0, y1 - y0)), cx = Math.round((x0 + x1) / 2), cy = Math.round((y0 + y1) / 2);
+  const colors = [...new Set(v.paths.flatMap((p) => [p.fill, p.stroke]).filter((c) => c && c !== 'none'))];
+  const warnings = [];
+  if (size < 64) warnings.push(`too small: fills ${size} of 100, scale it up to 75-85`);
+  if (size > 94) warnings.push(`too big: fills ${size} of 100, keep it inside 8..92`);
+  if (Math.abs(cx - 50) > 10 || Math.abs(cy - 50) > 10) warnings.push(`off centre: centre is (${cx},${cy}), move it to about (50,50)`);
+  if (x0 < 2 || y0 < 2 || x1 > 98 || y1 > 98) warnings.push('touches the edge of the box');
+  if (v.paths.length < 2) warnings.push('only one path: add an inner detail or a second shape');
+  if (v.paths.length > 24) warnings.push(`${v.paths.length} paths: simplify, the house style is bold and simple`);
+  const accents = colors.filter((c) => !['ink', 'paper', 'white', 'tone', 'none'].includes(c));
+  if (accents.length > 3) warnings.push(`${accents.length} accent colours (${accents.join(', ')}): use at most two`);
+  return { size, cx, cy, box: [Math.round(x0), Math.round(y0), Math.round(x1), Math.round(y1)], colors, warnings };
 }

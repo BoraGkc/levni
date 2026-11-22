@@ -6,7 +6,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import sharp from 'sharp';
-import { render, compose, loadProps, findProp, addPropDir, LIBRARY_DIR, validateProp, parseProps } from '../src/index.mjs';
+import { render, compose, loadProps, findProp, addPropDir, LIBRARY_DIR, validateProp, parseProps, measureVariant } from '../src/index.mjs';
 
 const [cmd, ...rest] = process.argv.slice(2);
 const flag = (name) => rest.includes(`--${name}`);
@@ -25,6 +25,9 @@ const USAGE = `levni: hand-inked illustrations from JSON scenes
       Import props written elsewhere (one prop, an array, or a chat answer with \`\`\`json blocks).
       Checks each one, writes new props, adds new variants to existing ones, skips broken ones.
       Default folder: the library in this checkout. --sheet draws the imported props for a look.
+  levni check [prop ...]
+      Measure props without looking at them (for agents that cannot see images): how much of the
+      box each variant fills, its centre, colours, and what to fix. All props when none named.
 
 Scene format: docs/scene.md`;
 
@@ -48,6 +51,21 @@ async function main() {
     const hits = q ? all.filter((p) => p.name.includes(q) || (p.tags || []).some((t) => t.toLowerCase().includes(q))) : all;
     for (const p of hits) console.log(`${p.name}  (${p.variants.length})  ${(p.tags || []).join(', ')}`);
     console.log(`${hits.length} props`);
+  } else if (cmd === 'check') {
+    const all = loadProps();
+    const names = positional.length ? positional : Object.keys(all).sort();
+    let bad = 0;
+    for (const n of names) {
+      const p = findProp(n);
+      if (!p) { console.log(`${n}: unknown prop`); bad++; continue; }
+      for (const e of validateProp(p)) { console.log(`${p.name}: ${e}`); bad++; }
+      p.variants.forEach((v, i) => {
+        const m = measureVariant(v);
+        const head = `${p.name}#${i}  size ${m.size ?? '-'}  centre (${m.cx ?? '-'},${m.cy ?? '-'})  colours ${(m.colors || []).join(',')}`;
+        if (m.warnings.length) { bad++; console.log(`${head}\n   fix: ${m.warnings.join('; ')}`); } else if (positional.length) console.log(`${head}  ok`);
+      });
+    }
+    console.log(bad ? `${bad} thing(s) to fix` : 'all ok');
   } else if (cmd === 'add') {
     const [file] = positional;
     if (!file) throw new Error('usage: levni add <file> [--dir <props folder>] [--sheet out.png]');
@@ -83,6 +101,7 @@ async function main() {
         writeFileSync(target, JSON.stringify(clean, null, 1) + '\n');
         console.log(`new  ${p.name}: ${clean.variants.length} variant(s)`);
       }
+      clean.variants.forEach((v, i) => { const w = measureVariant(v).warnings; if (w.length) console.log(`   warn ${p.name}#${i}: ${w.join('; ')}`); });
       done.push(p.name);
     }
     console.log(`${done.length} added, ${skipped} skipped -> ${dir}`);
