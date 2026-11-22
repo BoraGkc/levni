@@ -26,7 +26,7 @@ You draw objects for Levni, an illustration engine. Each object is a JSON "prop"
 
 OUTPUT: one ```json code block holding a JSON array of props, nothing else. One prop per object I list. Format:
 
-{ "name": "kebab-case-english", "tags": ["english tag", "türkçe etiket", ...],
+{ "name": "kebab-case-english", "category": "one of: film tv stage music books tech money law sport home food nature places health symbols", "tags": ["english tag", "türkçe etiket", ...],
   "variants": [ { "note": "short description of the view", "paths": [ { "d": "...", "fill": "...", "stroke": "...", "weight": 8 } ] } ] }
 
 RULES

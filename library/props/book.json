@@ -1,5 +1,6 @@
 {
  "name": "book",
+ "category": "books",
  "tags": [
   "kitap",
   "roman",

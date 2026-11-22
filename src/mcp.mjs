@@ -10,6 +10,7 @@ import { compose } from './compose.mjs';
 import { critique } from './critic.mjs';
 import { loadProps, findProp } from './props.mjs';
 import { toPng, toWebp } from './export.mjs';
+import { CATEGORIES } from './validate.mjs';
 
 const PROTOCOLS = ['2025-06-18', '2025-03-26', '2024-11-05'];
 const VERSION = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8')).version;
@@ -29,6 +30,7 @@ export const TOOLS = [
       type: 'object',
       properties: {
         query: { type: 'string', description: 'One or more words, e.g. "cat", "money", "film camera". Empty lists everything.' },
+        category: { type: 'string', enum: Object.keys(CATEGORIES), description: 'Only one shelf of the library.' },
         limit: { type: 'integer', description: 'Maximum results (default 40).' },
       },
     },
@@ -74,13 +76,13 @@ async function call(name, args = {}) {
   if (name === 'list_props') {
     const words = String(args.query || '').toLowerCase().split(/\s+/).filter(Boolean);
     const all = Object.values(loadProps()).sort((a, b) => a.name.localeCompare(b.name));
-    const hits = all.filter((p) => {
+    const hits = all.filter((p) => !args.category || p.category === args.category).filter((p) => {
       const hay = [p.name, ...(p.tags || []), ...p.variants.map((v) => v.note || '')].join(' ').toLowerCase();
       return words.every((w) => hay.includes(w));
     });
     const limit = Math.max(1, Math.min(Number(args.limit) || 40, 500));
     const lines = hits.slice(0, limit).map((p) =>
-      `${p.name} (${p.variants.length} variant${p.variants.length > 1 ? 's' : ''}) tags: ${(p.tags || []).join(', ')}\n` +
+      `${p.name} (${p.variants.length} variant${p.variants.length > 1 ? 's' : ''}) [${p.category || 'other'}] tags: ${(p.tags || []).join(', ')}\n` +
       p.variants.map((v, i) => `   ${i}: ${v.note || ''}`).join('\n'));
     const more = hits.length > limit ? `\n…and ${hits.length - limit} more; narrow the query.` : '';
     return [text(`${hits.length} of ${all.length} props match.\n${lines.join('\n')}${more}\nPlace one with { "type": "prop", "name": "<name>", "variant": <n>, "x": 600, "y": 336, "size": 300 }.`)];

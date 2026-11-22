@@ -2,6 +2,15 @@
 import Base from '../../layouts/Base.astro';
 import { SITE } from '../../site';
 import props from '../../data/props.json';
+// labels come from src/validate.mjs via render-library (the Pages build has no engine deps)
+import CATEGORIES from '../../data/categories.json';
+
+// one drawing stands for each shelf on its chip
+const icons = { film: 'film-reel', tv: 'monitor', stage: 'theater-curtain', music: 'headphones', books: 'book', tech: 'laptop', money: 'piggy-bank', law: 'scales', sport: 'soccer-ball', home: 'armchair', food: 'coffee-cup', nature: 'cat', places: 'bicycle', health: 'capsule', symbols: 'star' };
+const shelves = Object.entries(CATEGORIES as Record<string, string>)
+  .map(([key, label]) => ({ key, label, n: props.filter((p) => p.category === key).length }))
+  .filter((c) => c.n > 0)
+  .sort((a, b) => b.n - a.n);
 
 const total = props.reduce((n, p) => n + p.variants.length, 0);
 const title = 'Library';
@@ -22,13 +31,22 @@ const description = `Browse all ${props.length} drawings in the Levni Folio: ico
       </label>
       <p class="count" aria-live="polite"><span id="shown">{props.length}</span> of {props.length}</p>
     </div>
+    <div class="shelves" role="group" aria-label="Categories">
+      <button type="button" class="shelf" data-c="" aria-pressed="true"><span>All</span><small>{props.length}</small></button>
+      {shelves.map((c) => (
+        <button type="button" class="shelf" data-c={c.key} aria-pressed="false">
+          <img src={`/props/${icons[c.key as keyof typeof icons]}-0.webp`} width="28" height="28" alt="" />
+          <span>{c.label}</span><small>{c.n}</small>
+        </button>
+      ))}
+    </div>
   </section>
 
   <section class="wrap">
     <ul class="lib" id="lib">
       {props.map((p) => (
-        <li data-q={[p.name, ...p.tags, ...p.variants].join(' ').toLowerCase()}>
-          <button type="button" class="tile" data-name={p.name} data-n={p.variants.length} data-notes={JSON.stringify(p.variants)}>
+        <li data-c={p.category} data-q={[p.name, ...p.tags, ...p.variants].join(' ').toLowerCase()}>
+          <button type="button" class="tile" data-name={p.name} data-cat={(CATEGORIES as Record<string, string>)[p.category] || ''} data-n={p.variants.length} data-notes={JSON.stringify(p.variants)}>
             <img src={`/props/${p.name}-0.webp`} width="240" height="240" alt="" loading="lazy" decoding="async" />
             <span class="name">{p.name}</span>
             {p.variants.length > 1 && <span class="vars">{p.variants.length} variants</span>}
@@ -42,6 +60,7 @@ const description = `Browse all ${props.length} drawings in the Levni Folio: ico
   <dialog id="detail" aria-labelledby="d-title">
     <form method="dialog"><button class="close" aria-label="Close">×</button></form>
     <h2 id="d-title"></h2>
+    <p class="d-cat" id="d-cat"></p>
     <ul class="variants" id="d-vars"></ul>
     <p class="use-label">Use it in a scene</p>
     <pre><code id="d-code"></code></pre>
@@ -59,20 +78,32 @@ const description = `Browse all ${props.length} drawings in the Levni Folio: ico
   const items = [...document.querySelectorAll<HTMLLIElement>('#lib li')];
   const shown = document.getElementById('shown')!;
   const empty = document.getElementById('empty')!;
+  const chips = [...document.querySelectorAll<HTMLButtonElement>('.shelf')];
+  let cat = '';
   const filter = () => {
     const words = q.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
     let n = 0;
     for (const li of items) {
-      const hit = words.every((w) => li.dataset.q!.includes(w));
+      const hit = (!cat || li.dataset.c === cat) && words.every((w) => li.dataset.q!.includes(w));
       li.hidden = !hit;
       if (hit) n++;
     }
     shown.textContent = String(n);
     empty.hidden = n > 0;
   };
+  const setCat = (c: string) => {
+    cat = c;
+    chips.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.c === c)));
+    const url = new URL(location.href);
+    if (c) url.searchParams.set('c', c); else url.searchParams.delete('c');
+    history.replaceState(null, '', url);
+    filter();
+  };
+  chips.forEach((b) => b.addEventListener('click', () => setCat(b.dataset.c!)));
   q.addEventListener('input', filter);
-  const start = new URLSearchParams(location.search).get('q');
-  if (start) { q.value = start; filter(); }
+  const params = new URLSearchParams(location.search);
+  if (params.get('q')) q.value = params.get('q')!;
+  if (params.get('c')) setCat(params.get('c')!); else if (params.get('q')) filter();
 
   const dlg = document.getElementById('detail') as HTMLDialogElement;
   const vars = document.getElementById('d-vars')!;
@@ -85,6 +116,7 @@ const description = `Browse all ${props.length} drawings in the Levni Folio: ico
     const name = b.dataset.name!;
     const notes: string[] = JSON.parse(b.dataset.notes!);
     document.getElementById('d-title')!.textContent = name;
+    document.getElementById('d-cat')!.textContent = b.dataset.cat || '';
     vars.replaceChildren(...notes.map((note, i) => {
       const li = document.createElement('li');
       const btn = document.createElement('button');
@@ -120,6 +152,18 @@ const description = `Browse all ${props.length} drawings in the Levni Folio: ico
   .count { margin: 0; color: var(--ink-soft); font-family: var(--mono); font-size: 0.9rem; }
   .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
+  .shelves { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+  .shelf {
+    display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px 5px 8px; cursor: pointer;
+    font: inherit; font-size: 0.92rem; color: var(--ink); background: var(--paper-2); border: 1.5px solid var(--rule); border-radius: 999px;
+  }
+  .shelf:first-child { padding-left: 14px; }
+  .shelf img { width: 28px; height: 28px; border-radius: 50%; }
+  .shelf small { font-family: var(--mono); font-size: 0.75rem; color: var(--ink-soft); }
+  .shelf:hover { border-color: var(--ink); }
+  .shelf[aria-pressed='true'] { background: var(--ink); border-color: var(--ink); color: var(--paper-2); }
+  .shelf[aria-pressed='true'] small { color: var(--rule); }
+  .d-cat { margin: -6px 0 10px; color: var(--ink-soft); font-size: 0.95rem; }
   .lib { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
   .lib li[hidden] { display: none; }
   .tile {

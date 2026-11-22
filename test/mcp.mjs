@@ -31,6 +31,9 @@ assert.deepEqual(names, ['scene_guide', 'list_props', 'render_scene', 'critique_
 
 assert.match((await tool('scene_guide')).content[0].text, /# Scene format/);
 assert.match((await tool('list_props', { query: 'cat' })).content[0].text, /^cat \(/m);
+const food = (await tool('list_props', { category: 'food' })).content[0].text;
+assert.match(food, /^bread \(.*\[food\]/m);
+assert.doesNotMatch(food, /^cat \(/m);
 
 const dir = mkdtempSync(join(tmpdir(), 'levni-mcp-'));
 const scene = { seed: 5, elements: [{ type: 'prop', name: 'rocket', x: 600, y: 336, size: 360 }] };

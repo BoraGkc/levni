@@ -2,11 +2,20 @@
 import { COLORS } from './compose.mjs';
 import { flattenPath } from './ink.mjs';
 
+// Library shelves. A prop names one in `category`; props without one still load and show under "other".
+export const CATEGORIES = {
+  film: 'Film & cinema', tv: 'TV & broadcast', stage: 'Stage & theatre', music: 'Music & audio',
+  books: 'Books, writing & school', tech: 'Tech & internet', money: 'Money & work', law: 'Law & politics',
+  sport: 'Sport & games', home: 'Home & everyday', food: 'Food & drink', nature: 'Nature & animals',
+  places: 'Places & transport', health: 'Health & body', symbols: 'Signs, symbols & time',
+};
+
 export function validateProp(p) {
   const errs = [];
   const name = p?.name;
   if (typeof name !== 'string' || !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(name)) errs.push(`name "${name}" must be lowercase a-z0-9 and hyphens`);
   if (!Array.isArray(p?.tags)) errs.push('tags must be an array');
+  if (p?.category != null && !(p.category in CATEGORIES)) errs.push(`category "${p.category}" must be one of: ${Object.keys(CATEGORIES).join(', ')}`);
   if (!Array.isArray(p?.variants) || !p.variants.length) return [...errs, 'needs at least one variant'];
   p.variants.forEach((v, i) => {
     const at = `variant ${i}`;

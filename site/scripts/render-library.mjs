@@ -5,7 +5,7 @@
 // Output is committed (public/props/*.webp, src/data/props.json), so the Pages build needs no sharp.
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import sharp from 'sharp';
-import { compose, loadProps } from '../../src/index.mjs';
+import { compose, loadProps, CATEGORIES } from '../../src/index.mjs';
 
 const here = (p) => new URL(`../${p}`, import.meta.url).pathname;
 const force = process.argv.includes('--force');
@@ -15,10 +15,12 @@ mkdirSync(here('src/data'), { recursive: true });
 const props = Object.values(loadProps()).sort((a, b) => a.name.localeCompare(b.name));
 const index = props.map((p) => ({
   name: p.name,
+  category: p.category || 'other',
   tags: p.tags || [],
   variants: p.variants.map((v) => v.note || ''),
 }));
 writeFileSync(here('src/data/props.json'), JSON.stringify(index));
+writeFileSync(here('src/data/categories.json'), JSON.stringify(CATEGORIES));
 
 const tiles = props.flatMap((p) => p.variants.map((_, i) => ({ name: p.name, i, out: `public/props/${p.name}-${i}.webp` })));
 const todo = force ? tiles : tiles.filter((t) => !existsSync(here(t.out)));

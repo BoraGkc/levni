@@ -1,5 +1,6 @@
 {
   "name": "phone",
+  "category": "tech",
   "tags": ["telefon", "smartphone", "mobile", "cep telefonu"],
   "variants": [
     { "note": "front, screen with two text bars", "paths": [
