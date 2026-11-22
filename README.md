@@ -28,6 +28,7 @@ npm install levni
 npx levni render scene.json out.png        # or out.webp / out.svg; --preview also writes a 560 px JPEG
 npx levni sheet props.png rocket phone     # contact sheet of props (all variants, on paper and on blue)
 npx levni list coffee                      # find props by name or tag
+npx levni add batch.txt --sheet batch.png  # import props a chat model wrote, check them, draw them
 ```
 
 ```js
@@ -63,7 +64,7 @@ Canvas 1200 × 673. 36 element types: library props and your own path drawings (
 
 ## Submit to the Folio
 
-The Levni Folio grows by contribution. A prop is one JSON file in `library/props/`:
+The Levni Folio grows by contribution. A prop is one JSON file in `library/props/` (to write many at once with any chat model, see [`docs/prop-prompt.md`](docs/prop-prompt.md) and `levni add`):
 
 ```json
 {

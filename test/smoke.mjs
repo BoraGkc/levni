@@ -4,7 +4,8 @@
 import { mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import sharp from 'sharp';
-import { compose, loadProps, COLORS } from '../src/index.mjs';
+import { compose, loadProps } from '../src/index.mjs';
+import { validateProp } from '../src/validate.mjs';
 
 const oi = process.argv.indexOf('--out');
 const outDir = oi > -1 ? process.argv[oi + 1] : null;
@@ -17,19 +18,8 @@ const list = [];
 
 // 1. Shape of every prop file
 for (const [name, p] of Object.entries(props)) {
-  if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(name)) fail(name, 'name must be lowercase a-z0-9 and hyphens');
-  if (!Array.isArray(p.tags)) fail(name, 'tags must be an array');
-  if (!Array.isArray(p.variants) || !p.variants.length) { fail(name, 'needs at least one variant'); continue; }
-  p.variants.forEach((v, i) => {
-    const at = `${name}#${i}`;
-    if (!Array.isArray(v.paths) || !v.paths.length) return fail(at, 'variant has no paths');
-    for (const path of v.paths) {
-      if (typeof path.d !== 'string' || !/^\s*[Mm]/.test(path.d)) fail(at, `path d must start with M: ${String(path.d).slice(0, 30)}`);
-      for (const k of ['fill', 'stroke']) if (path[k] != null && !(path[k] in COLORS) && !/^#[0-9a-f]{6}$/i.test(path[k])) fail(at, `unknown ${k} colour "${path[k]}"`);
-      if (path.weight != null && !(path.weight >= 0)) fail(at, 'weight must be a number >= 0');
-    }
-    list.push([name, i]);
-  });
+  for (const e of validateProp(p)) fail(name, e);
+  (p.variants || []).forEach((v, i) => { if (v.paths?.length) list.push([name, i]); });
 }
 
 // 2. Each variant on its own: the SVG must be clean and the ink box finite and non-empty

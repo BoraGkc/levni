@@ -3,14 +3,15 @@
 //   levni render <scene.json> <out.png|out.webp|out.svg> [--preview]
 //   levni sheet <out.png> [prop ...] [--recolor coral=blue,mustard=tone]
 //   levni list [query]
-import { readFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { join, resolve } from 'node:path';
 import sharp from 'sharp';
-import { render, compose, loadProps, findProp } from '../src/index.mjs';
+import { render, compose, loadProps, findProp, addPropDir, LIBRARY_DIR, validateProp, parseProps } from '../src/index.mjs';
 
 const [cmd, ...rest] = process.argv.slice(2);
 const flag = (name) => rest.includes(`--${name}`);
 const opt = (name) => { const i = rest.indexOf(`--${name}`); return i >= 0 ? rest[i + 1] : undefined; };
-const positional = rest.filter((a, i) => !a.startsWith('--') && !(i > 0 && rest[i - 1] === '--recolor'));
+const positional = rest.filter((a, i) => !a.startsWith('--') && !(i > 0 && ['--recolor', '--dir', '--sheet'].includes(rest[i - 1])));
 
 const USAGE = `levni: hand-inked illustrations from JSON scenes
 
@@ -20,6 +21,10 @@ const USAGE = `levni: hand-inked illustrations from JSON scenes
       Contact sheet of props (all when none named): every variant on paper and on blue.
   levni list [query]
       List props (name, variants, tags); with a query, only names or tags that contain it.
+  levni add <file> [--dir <props folder>] [--sheet out.png]
+      Import props written elsewhere (one prop, an array, or a chat answer with \`\`\`json blocks).
+      Checks each one, writes new props, adds new variants to existing ones, skips broken ones.
+      Default folder: the library in this checkout. --sheet draws the imported props for a look.
 
 Scene format: docs/scene.md`;
 
@@ -43,6 +48,50 @@ async function main() {
     const hits = q ? all.filter((p) => p.name.includes(q) || (p.tags || []).some((t) => t.toLowerCase().includes(q))) : all;
     for (const p of hits) console.log(`${p.name}  (${p.variants.length})  ${(p.tags || []).join(', ')}`);
     console.log(`${hits.length} props`);
+  } else if (cmd === 'add') {
+    const [file] = positional;
+    if (!file) throw new Error('usage: levni add <file> [--dir <props folder>] [--sheet out.png]');
+    const dir = resolve(opt('dir') || LIBRARY_DIR);
+    mkdirSync(dir, { recursive: true });
+    const done = [];
+    let skipped = 0;
+    for (const p of parseProps(readFileSync(file, 'utf8'))) {
+      const errs = validateProp(p);
+      if (!errs.length) {
+        // every variant must also draw: a finite, non-empty ink box
+        for (const [i, v] of p.variants.entries()) {
+          try {
+            const { svg, used } = await compose({ elements: [{ type: 'draw', paths: v.paths, x: 600, y: 336, size: 300 }] });
+            const b = used[0];
+            if (/NaN|undefined|Infinity/.test(svg) || !b || !(b.w > 0 && b.h > 0)) errs.push(`variant ${i}: draws nothing usable`);
+          } catch (err) { errs.push(`variant ${i}: ${err.message}`); }
+        }
+      }
+      if (errs.length) { skipped++; console.log(`skip ${p?.name ?? '(no name)'}: ${errs.join('; ')}`); continue; }
+      const target = join(dir, `${p.name}.json`);
+      const clean = { name: p.name, tags: p.tags.map(String), ...(p.author ? { author: p.author } : {}), variants: p.variants.map((v) => ({ ...(v.note ? { note: v.note } : {}), paths: v.paths })) };
+      if (existsSync(target)) {
+        const cur = JSON.parse(readFileSync(target, 'utf8'));
+        const seen = new Set(cur.variants.map((v) => JSON.stringify(v.paths)));
+        const fresh = clean.variants.filter((v) => !seen.has(JSON.stringify(v.paths)));
+        if (!fresh.length) { console.log(`same ${p.name}: already in the library`); continue; }
+        cur.tags = [...new Set([...(cur.tags || []), ...clean.tags])];
+        cur.variants.push(...fresh);
+        writeFileSync(target, JSON.stringify(cur, null, 1) + '\n');
+        console.log(`more ${p.name}: +${fresh.length} variant(s)`);
+      } else {
+        writeFileSync(target, JSON.stringify(clean, null, 1) + '\n');
+        console.log(`new  ${p.name}: ${clean.variants.length} variant(s)`);
+      }
+      done.push(p.name);
+    }
+    console.log(`${done.length} added, ${skipped} skipped -> ${dir}`);
+    if (opt('sheet') && done.length) {
+      if (dir !== resolve(LIBRARY_DIR)) addPropDir(dir);
+      const n = await sheet(opt('sheet'), [...new Set(done)]);
+      console.log(`look at: ${opt('sheet')} (${n} variants)`);
+    }
+    if (skipped) process.exitCode = 1;
   } else {
     console.log(USAGE);
     if (cmd && cmd !== 'help' && cmd !== '--help') process.exitCode = 1;

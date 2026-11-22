@@ -9,6 +9,7 @@ export { expandIso } from './iso.mjs';
 export { ASSETS } from './assets.mjs';
 export { toWebp, toPng } from './export.mjs';
 export { STYLES, applyStyle } from './styles.mjs';
+export { validateProp, parseProps } from './validate.mjs';
 export { iconsAvailable, resolveIcon } from './icon.mjs';
 
 import { writeFileSync } from 'node:fs';
