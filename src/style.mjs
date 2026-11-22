@@ -98,8 +98,20 @@ export function toAscii(body) {
   return out;
 }
 
-export function frame(body, { seed = 1, background = PALETTE.paper, ascii = false } = {}) {
+export function frame(body, { seed = 1, background = PALETTE.paper, ascii = false, finish = 'crayon', grain = 0.16 } = {}) {
   if (ascii) body = toAscii(body);
+  if (finish === 'soft') {
+    // soft finish: clean shapes, only a fine film grain over the whole picture (no wobble, no crayon edge)
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+<defs><filter id="grain" filterUnits="userSpaceOnUse" x="0" y="0" width="${W}" height="${H}" color-interpolation-filters="sRGB">
+  <feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="2" seed="${seed}" result="n"/>
+  <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.6 1.05"/>
+</filter></defs>
+<rect width="${W}" height="${H}" fill="${background}"/>
+${body}
+<rect width="${W}" height="${H}" filter="url(#grain)" opacity="${grain}"/>
+</svg>`;
+  }
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
 <defs>${filterDefs(seed)}${ascii ? asciiPatterns(seed) : ''}</defs>
 <rect width="${W}" height="${H}" fill="${background}"/>

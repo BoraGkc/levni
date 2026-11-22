@@ -20,18 +20,18 @@ async function og(spec, title, out) {
   const base = await sharp(await png(spec)).resize(1200, 630, { fit: 'cover', position: 'top' }).png().toBuffer();
   const esc = (t) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;');
   const band = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
-    <rect x="80" y="438" width="1040" height="128" fill="#F1E4C8" stroke="#C9962B" stroke-width="6"/>
-    <rect x="92" y="450" width="1016" height="104" fill="none" stroke="#C8402E" stroke-width="2"/>
-    <text x="600" y="518" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="46" fill="#3B2415">${esc(title)}</text></svg>`);
+    <rect x="80" y="438" width="1040" height="128" fill="#FBFAF6" stroke="#14181F" stroke-width="4"/>
+    <text x="600" y="518" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="46" fill="#14181F">${esc(title)}</text></svg>`);
   await sharp(base).composite([{ input: band }]).png({ compressionLevel: 9, palette: true, quality: 90 }).toFile(here(out));
   console.log(out);
 }
 
-// 1. Hero (miniature style pack) and the default OG card
+// 1. Site hero (riso, a mix of Folio props) and the default OG card; the miniature hero stays for the README
 const hero = scene('scenes/hero.json');
-await webp(await png(hero), 'public/img/hero.webp', 1200);
-await webp(await png(hero), 'public/img/hero-640.webp', 640);
-await og(hero, 'Levni · illustrations from a JSON scene', 'public/og/default.png');
+const heroRiso = scene('scenes/hero-riso.json');
+await webp(await png(heroRiso), 'public/img/hero.webp', 1200);
+await webp(await png(heroRiso), 'public/img/hero-640.webp', 640);
+await og(heroRiso, 'Levni · an open illustration library', 'public/og/default.png');
 
 // 2. Same scene, two style packs
 const spot = scene('../examples/spot.json');

@@ -1,0 +1,156 @@
+---
+import Base from '../../layouts/Base.astro';
+import { SITE } from '../../site';
+import props from '../../data/props.json';
+
+const total = props.reduce((n, p) => n + p.variants.length, 0);
+const title = 'Library';
+const description = `Browse all ${props.length} drawings in the Levni Folio: icons, objects and spot illustrations in one hand-inked style, free under CC BY 4.0.`;
+---
+<Base title={title} description={description}>
+  <section class="wrap lib-head">
+    <p class="eyebrow">The Levni Folio · CC BY 4.0</p>
+    <h1>Library</h1>
+    <p class="lede">
+      {props.length} drawn objects, {total} variants. Every one can be placed in a scene by name, recoloured by a style pack,
+      and used anywhere with credit “drawings by Ortak Alan”.
+    </p>
+    <div class="tools">
+      <label class="search">
+        <span class="visually-hidden">Search the library</span>
+        <input id="q" type="search" placeholder="Search: cat, money, phone, kedi…" autocomplete="off" />
+      </label>
+      <p class="count" aria-live="polite"><span id="shown">{props.length}</span> of {props.length}</p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <ul class="lib" id="lib">
+      {props.map((p) => (
+        <li data-q={[p.name, ...p.tags, ...p.variants].join(' ').toLowerCase()}>
+          <button type="button" class="tile" data-name={p.name} data-n={p.variants.length} data-notes={JSON.stringify(p.variants)}>
+            <img src={`/props/${p.name}-0.webp`} width="240" height="240" alt="" loading="lazy" decoding="async" />
+            <span class="name">{p.name}</span>
+            {p.variants.length > 1 && <span class="vars">{p.variants.length} variants</span>}
+          </button>
+        </li>
+      ))}
+    </ul>
+    <p class="empty" id="empty" hidden>Nothing yet. <a href={`${SITE.github}/blob/main/CONTRIBUTING.md`}>Draw it for the Folio</a>.</p>
+  </section>
+
+  <dialog id="detail" aria-labelledby="d-title">
+    <form method="dialog"><button class="close" aria-label="Close">×</button></form>
+    <h2 id="d-title"></h2>
+    <ul class="variants" id="d-vars"></ul>
+    <p class="use-label">Use it in a scene</p>
+    <pre><code id="d-code"></code></pre>
+  </dialog>
+
+  <section class="wrap cta">
+    <h2>Missing something?</h2>
+    <p>The Folio grows with every pull request. Draw one object as SVG paths, check it with <code>npx levni check</code>, and send it.</p>
+    <a class="btn" href={`${SITE.github}/blob/main/CONTRIBUTING.md`}>Submit to the Folio</a>
+  </section>
+</Base>
+
+<script>
+  const q = document.getElementById('q') as HTMLInputElement;
+  const items = [...document.querySelectorAll<HTMLLIElement>('#lib li')];
+  const shown = document.getElementById('shown')!;
+  const empty = document.getElementById('empty')!;
+  const filter = () => {
+    const words = q.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+    let n = 0;
+    for (const li of items) {
+      const hit = words.every((w) => li.dataset.q!.includes(w));
+      li.hidden = !hit;
+      if (hit) n++;
+    }
+    shown.textContent = String(n);
+    empty.hidden = n > 0;
+  };
+  q.addEventListener('input', filter);
+  const start = new URLSearchParams(location.search).get('q');
+  if (start) { q.value = start; filter(); }
+
+  const dlg = document.getElementById('detail') as HTMLDialogElement;
+  const vars = document.getElementById('d-vars')!;
+  const code = document.getElementById('d-code')!;
+  const snippet = (name: string, v: number) =>
+    `{ "type": "prop", "name": "${name}",${v ? ` "variant": ${v},` : ''} "x": 600, "y": 336, "size": 320 }`;
+  document.getElementById('lib')!.addEventListener('click', (e) => {
+    const b = (e.target as HTMLElement).closest<HTMLButtonElement>('.tile');
+    if (!b) return;
+    const name = b.dataset.name!;
+    const notes: string[] = JSON.parse(b.dataset.notes!);
+    document.getElementById('d-title')!.textContent = name;
+    vars.replaceChildren(...notes.map((note, i) => {
+      const li = document.createElement('li');
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.innerHTML = `<img src="/props/${name}-${i}.webp" width="240" height="240" alt=""><span>variant ${i}</span>`;
+      btn.title = note;
+      btn.setAttribute('aria-label', `variant ${i}${note ? `: ${note}` : ''}`);
+      btn.addEventListener('click', () => {
+        vars.querySelectorAll('button').forEach((x) => x.removeAttribute('aria-pressed'));
+        btn.setAttribute('aria-pressed', 'true');
+        code.textContent = snippet(name, i);
+      });
+      if (i === 0) btn.setAttribute('aria-pressed', 'true');
+      li.append(btn);
+      return li;
+    }));
+    code.textContent = snippet(name, 0);
+    dlg.showModal();
+  });
+  dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+</script>
+
+<style>
+  .lib-head { margin-top: 48px; }
+  .eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-text); margin: 0 0 14px; }
+  .lede { font-size: 1.2rem; color: var(--ink-soft); max-width: 720px; }
+  .tools { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin: 24px 0 20px; }
+  .search { flex: 1 1 320px; }
+  .search input {
+    width: 100%; font: inherit; font-size: 1.05rem; padding: 12px 14px; color: var(--ink);
+    background: var(--paper-2); border: 2px solid var(--ink); border-radius: 0;
+  }
+  .count { margin: 0; color: var(--ink-soft); font-family: var(--mono); font-size: 0.9rem; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  .lib { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+  .lib li[hidden] { display: none; }
+  .tile {
+    width: 100%; display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer;
+    background: #f4f2ec; border: 1px solid var(--rule); padding: 6px 6px 10px; font: inherit; color: var(--ink);
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .tile:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .tile img { width: 100%; aspect-ratio: 1; }
+  .name { font-family: var(--mono); font-size: 0.8rem; overflow-wrap: anywhere; text-align: center; }
+  .vars { font-size: 0.82rem; color: var(--ink-soft); }
+  .empty { text-align: center; color: var(--ink-soft); margin: 40px 0; }
+
+  dialog {
+    width: min(760px, calc(100vw - 32px)); max-height: calc(100vh - 48px); border: 2px solid var(--ink); border-radius: 0;
+    background: var(--paper); color: var(--ink); padding: 24px;
+  }
+  dialog::backdrop { background: rgba(20, 24, 31, 0.5); }
+  .close { position: absolute; top: 8px; right: 12px; font-size: 1.8rem; line-height: 1; background: none; border: 0; cursor: pointer; color: var(--ink); padding: 6px 10px; }
+  .variants { list-style: none; padding: 0; margin: 8px 0 18px; display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+  .variants button {
+    width: 100%; background: #f4f2ec; border: 2px solid var(--rule); padding: 4px 4px 8px; cursor: pointer;
+    font-family: var(--mono); font-size: 0.78rem; color: var(--ink-soft); display: flex; flex-direction: column; align-items: center;
+  }
+  .variants button[aria-pressed='true'] { border-color: var(--accent); color: var(--ink); }
+  .variants img { width: 100%; aspect-ratio: 1; }
+  .use-label { margin: 0 0 6px; font-size: 0.95rem; color: var(--ink-soft); }
+
+  .cta { margin-top: 72px; text-align: center; }
+  .cta p { color: var(--ink-soft); }
+  .btn { display: inline-block; padding: 11px 20px; border: 2px solid var(--ink); color: var(--ink); text-decoration: none; font-size: 1.05rem; }
+  .btn:hover { color: var(--accent); border-color: var(--accent); }
+  @media (max-width: 520px) { .lib { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; } }
+</style>

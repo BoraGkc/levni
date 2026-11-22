@@ -15,11 +15,29 @@ cover.png
 - critic: no layout problems found`;
 
 const uses = [
-  { img: 'rosette', title: 'Covers', text: 'Article and newsletter covers at 1200 × 673, ready for the CMS as WebP under a size budget.' },
-  { img: 'tulip', title: 'Spot illustrations', text: 'Small drawings inside the text: a tulip, a server rack, a ballot box, in the same hand as the cover.' },
-  { img: 'carnation', title: 'Icons and props', text: `${SITE.props} drawn objects in the Levni Folio, plus the Tabler icon set redrawn in the house line.` },
-  { img: 'blossom-sprig', title: 'Social images', text: 'Open Graph and social cards from the same scene. This page’s preview image was drawn by Levni.' },
+  { img: 'newspaper', title: 'Covers', text: 'Article and newsletter covers at 1200 × 673, ready for the CMS as WebP under a size budget.' },
+  { img: 'coffee-cup', title: 'Spot illustrations', text: 'Small drawings inside the text: a coffee cup, a server rack, a ballot box, in the same hand as the cover.' },
+  { img: 'lightbulb', title: 'Icons and objects', text: `${SITE.props} drawn objects in the Levni Folio, plus the Tabler icon set redrawn in the house line.` },
+  { img: 'megaphone', title: 'Social images', text: 'Open Graph and social cards from the same scene. This page’s preview image was drawn by Levni.' },
 ];
+
+// a cross-section of the Folio for the home page; the full set is on /library/
+const sample = ['cat', 'rocket', 'bicycle', 'camera', 'headphones', 'laptop', 'server-rack', 'piggy-bank', 'umbrella', 'globe', 'guitar', 'trophy', 'sailboat', 'robot', 'house', 'tulip'];
+const repo = SITE.github.replace('https://', '');
+const agentPrompt = `Illustrate this article with Levni.
+Find drawings with "npx levni list <word>",
+write a scene JSON, render it with
+"npx levni render scene.json cover.png",
+fix what the critic reports, then use cover.png.`;
+const pkg = `github:${repo.replace('github.com/', '')}`;
+const mcpAdd = `claude mcp add levni -- npx -y ${pkg} mcp`;
+const mcpJson = `{ "mcpServers": { "levni": {
+  "command": "npx",
+  "args": ["-y", "${pkg}", "mcp"]
+} } }`;
+const install = `npm install github:${repo.replace('github.com/', '')}
+npx levni list cat
+npx levni render scene.json cover.png`;
 
 const gallery = [
   { src: 'oa-orman', alt: 'A cut tree stump on a blue panel full of glyphs, small trees on both sides', cap: 'Environment story, Ortak Alan' },
@@ -30,13 +48,18 @@ const gallery = [
   { src: 'oa-venezuela', alt: 'A blue oil barrel beside a coral panel with a sun and a drop of oil', cap: 'Energy story, Ortak Alan' },
   { src: 'oa-delpy', alt: 'A white jacket with a coral overprint shadow on a blue panel', cap: 'Cinema and fashion story, Ortak Alan' },
   { src: 'cover-riso', alt: 'A rocket in front of a sun on a blue panel, an audience below', cap: 'Example cover scene' },
+  { src: 'room-riso', alt: 'A small isometric room with a desk, a lamp and a plant', cap: 'Isometric room, example scene' },
+  { src: 'spot-riso', alt: 'Books, a coffee cup and a light bulb on a mustard disc', cap: 'Spot illustration, example scene' },
+  { src: 'room-miniature', alt: 'The same isometric room printed in miniature colours', cap: 'The room again, miniature style pack' },
 ];
 
 const faq = [
-  { q: 'What is Levni?', a: 'An open-source engine that draws illustrations from a JSON scene: covers, spot illustrations, icons and social images, in one consistent hand-inked style. It runs on Node with sharp; there is no image model and no API key.' },
+  { q: 'What is Levni?', a: `An open illustration library (${SITE.props} hand-inked drawings and growing) and the open-source engine that composes them into covers, spot illustrations, icons and social images, in one consistent style. It runs on Node with sharp; there is no image model and no API key.` },
+  { q: 'Can I use the drawings on their own?', a: 'Yes. Browse the Library, pick a drawing and place it in a scene by name. The drawings are CC BY 4.0: free for commercial work with credit “drawings by Ortak Alan”.' },
   { q: 'How do AI agents use it?', a: 'An agent writes the scene JSON, renders it, and reads the layout critic’s notes (off-canvas elements, accidental crops, lopsided weight, no focal point) before a person looks. Because it is JSON in and image out, it maps directly onto an MCP tool.' },
   { q: 'What does it cost?', a: 'Nothing per image. Levni is MIT-licensed code that runs on your own machine or in CI. The Levni Folio drawings are CC BY 4.0: credit “drawings by Ortak Alan”.' },
-  { q: 'Can it draw in other styles?', a: 'Yes, through style packs. The riso pack is Ortak Alan’s house look; the miniature pack is inspired by Tulip Era Ottoman painting. A pack recolours inks and paper, and new motifs can be drawn for it.' },
+  { q: 'Can it draw in other styles?', a: 'Yes, through style packs. Riso is the house look; miniature, inspired by the painter Levni, is the first alternative. A pack recolours inks and paper, so the whole library follows it.' },
+  { q: 'Is there an MCP server?', a: 'Yes: run npx levni mcp. It gives assistants five tools: the scene guide, library search, a contact sheet of props, render with preview, and the critic. Agents without MCP use the same engine through the CLI.' },
 ];
 
 const jsonld = [
@@ -60,39 +83,51 @@ const jsonld = [
 <Base title="Levni" description={SITE.description} jsonld={jsonld}>
   <section class="hero wrap">
     <div class="hero-text">
-      <p class="eyebrow">Open source · MCP-ready · zero cost per image</p>
-      <h1>Illustrations from a <em class="accent">JSON scene</em>.</h1>
+      <p class="eyebrow">Open illustration library · {SITE.props} drawings · free for agents</p>
+      <h1>An open library of <em class="accent">hand-inked</em> illustrations.</h1>
       <p class="lede">
-        Levni draws covers, icons, spot illustrations and social images in one consistent hand.
-        Built for agents and publishers: write a scene, render it, ship it.
+        Cats, rockets, server racks, coffee cups: {SITE.props} drawings in one consistent hand, and an engine that
+        composes them into covers, icons and social images from a JSON scene. Built for agents and publishers.
       </p>
       <div class="ctas">
-        <a class="btn btn-primary" href={SITE.github}>{SITE.githubReady ? 'View on GitHub' : 'GitHub (coming soon)'}</a>
-        <a class="btn" href="#how">See how it works</a>
+        <a class="btn btn-primary" href="/library/">Browse the library</a>
+        <a class="btn" href={SITE.github}>★ Star on GitHub</a>
       </div>
-      <p class="install"><code>npx levni render scene.json cover.png</code></p>
     </div>
     <figure class="hero-figure tezhip">
       <picture>
         <source media="(max-width: 700px)" srcset="/img/hero-640.webp" />
-        <img src="/img/hero.webp" width="1200" height="673" alt="A garden in miniature colours: cypresses, tulips and carnations before a golden arched gate, a gilded medallion as the sun" fetchpriority="high" />
+        <img src="/img/hero.webp" width="1200" height="673" alt="A rocket on a coral sun, surrounded by a cat, a light bulb, headphones, a camera, a bicycle and a coffee cup on a blue riso panel" fetchpriority="high" />
       </picture>
-      <figcaption>Drawn by Levni, miniature style pack.</figcaption>
+      <figcaption>Ten drawings from the library, composed by Levni.</figcaption>
     </figure>
   </section>
 
   <section class="uses wrap" aria-labelledby="uses-title">
-    <div class="ornament"><img src="/img/motif-rosette.webp" alt="" width="44" height="44" loading="lazy" /></div>
     <h2 id="uses-title" class="center">Design assets for agents and publishers</h2>
     <div class="cards">
       {uses.map((u) => (
         <article class="card">
-          <img src={`/img/motif-${u.img}.webp`} alt="" width="96" height="96" loading="lazy" />
+          <img src={`/props/${u.img}-0.webp`} alt="" width="96" height="96" loading="lazy" />
           <h3>{u.title}</h3>
           <p>{u.text}</p>
         </article>
       ))}
     </div>
+  </section>
+
+  <section id="library" class="library wrap" aria-labelledby="library-title">
+    <h2 id="library-title" class="center">The library</h2>
+    <p class="center narrow">
+      {SITE.props} objects and {SITE.variants} variants, from everyday things to ideas: money, music, film, sport, tech, nature.
+      Search them, pick a variant, copy the line that places it in a scene.
+    </p>
+    <ul class="sample">
+      {sample.map((name) => (
+        <li><a href={`/library/?q=${name}`}><img src={`/props/${name}-0.webp`} width="240" height="240" alt={name.replace('-', ' ')} loading="lazy" /></a></li>
+      ))}
+    </ul>
+    <p class="center"><a class="btn" href="/library/">Browse all {SITE.props} drawings</a></p>
   </section>
 
   <section id="how" class="how wrap" aria-labelledby="how-title">
@@ -110,7 +145,7 @@ const jsonld = [
       </li>
       <li>
         <h3><span class="num">3</span> Ship it</h3>
-        <p>PNG, SVG or WebP under a size budget. Use the CLI, the Node API, or (soon) the MCP server, so an agent can illustrate an article end to end.</p>
+        <p>PNG, SVG or WebP under a size budget. Use the CLI or the Node API, so an agent can illustrate an article end to end.</p>
         <img class="tezhip step-img" src="/gallery/cover-riso.webp" width="800" height="449" alt="The rendered cover: a rocket on a blue panel with an audience below" loading="lazy" />
       </li>
     </ol>
@@ -119,9 +154,9 @@ const jsonld = [
   <section class="packs wrap" aria-labelledby="packs-title">
     <h2 id="packs-title" class="center">One scene, many inks</h2>
     <p class="center narrow">
-      Style packs change how a scene is printed. <strong>Riso</strong> is Ortak Alan’s house look. <strong>Miniature</strong> is
-      inspired by the Tulip Era painter Levni: aged paper, gold, vermilion, turquoise and lapis. Levni can learn from a tradition
-      and then draw in it consistently, image after image.
+      Style packs change how a scene is printed, and the whole library follows. <strong>Riso</strong> is the house look:
+      blue, coral and mustard on off-white paper. <strong>Miniature</strong>, inspired by the painter the project is named after,
+      is the first alternative. More packs can be drawn for any tradition or brand.
     </p>
     <div class="pair">
       <figure><img class="tezhip" src="/gallery/spot-riso.webp" width="800" height="449" alt="Books, a coffee cup and a light bulb on a mustard disc, riso colours" loading="lazy" /><figcaption>Riso</figcaption></figure>
@@ -132,7 +167,7 @@ const jsonld = [
 
   <section id="gallery" class="gallery wrap" aria-labelledby="gallery-title">
     <h2 id="gallery-title" class="center">Drawn by Levni</h2>
-    <p class="center narrow">Real covers made for <a href={SITE.ortakAlan}>Ortak Alan</a> articles, about 500 so far, and example scenes from the repository.</p>
+    <p class="center narrow">Real covers made for <a href={SITE.ortakAlan}>Ortak Alan</a> articles (about 500 so far) and example scenes from the repository: environment, film, markets, culture, energy, fashion.</p>
     <div class="grid">
       {gallery.map((g) => (
         <figure>
@@ -143,24 +178,54 @@ const jsonld = [
     </div>
   </section>
 
+  <section id="agents" class="agents wrap" aria-labelledby="agents-title">
+    <h2 id="agents-title" class="center">Use it from your agent</h2>
+    <p class="center narrow">Levni is JSON in, image out, with a critic that reports layout problems in words. An agent can draw, check and fix a cover without seeing it.</p>
+    <div class="agent-cols">
+      <div>
+        <h3>CLI</h3>
+        <p>Any agent that can run a command (Claude Code, Codex, Cursor) can use Levni now. Install it in the project:</p>
+        <pre><code>{install}</code></pre>
+        <p>Then ask, for example:</p>
+        <pre><code>{agentPrompt}</code></pre>
+      </div>
+      <div>
+        <h3>MCP server</h3>
+        <p>Claude Desktop, Claude Code, Cursor and other MCP clients can call Levni as tools. Claude Code:</p>
+        <pre><code>{mcpAdd}</code></pre>
+        <p>Other clients, in their MCP config:</p>
+        <pre><code>{mcpJson}</code></pre>
+        <ul class="tools-list">
+          <li><code>list_props</code> search the library by word or tag</li>
+          <li><code>show_props</code> see drawings and their variants</li>
+          <li><code>render_scene</code> draw, preview, read the critic</li>
+          <li><code>scene_guide</code> and <code>critique_scene</code></li>
+        </ul>
+        <a class="btn" href={SITE.github}>★ Star {repo.replace('github.com/', '')}</a>
+      </div>
+    </div>
+  </section>
+
   <section id="folio" class="folio wrap" aria-labelledby="folio-title">
     <div class="folio-box tezhip">
       <div class="folio-text">
-        <h2 id="folio-title">The Levni Folio</h2>
+        <h2 id="folio-title">Draw for the Folio</h2>
         <p>
-          A shared library of drawn objects: <strong>{SITE.props} props, {SITE.variants} variants</strong>, from tulips to server racks.
-          Each is SVG path data in a 0–100 box, released under <strong>CC BY 4.0</strong>.
+          The library is open: <strong>{SITE.props} props, {SITE.variants} variants</strong> so far, each SVG path data in a 0–100 box,
+          released under <strong>CC BY 4.0</strong>. Add the objects your stories need.
         </p>
-        <h3>Submit to the Folio</h3>
         <ol>
-          <li>Draw one object as a JSON file of paths, using Levni’s colour names.</li>
-          <li>Check it with <code>npx levni sheet check.png your-prop</code>.</li>
-          <li>Open a pull request. Rules: your own drawing, no faces, no logos, one object per file.</li>
+          <li>Draw one object as a JSON file of paths, using Levni’s colour names (<a href={`${SITE.github}/blob/main/docs/prop-prompt.md`}>prompt for AI-drawn props</a>).</li>
+          <li>Check it: <code>npx levni check your-prop</code> and <code>npx levni sheet check.png your-prop</code>.</li>
+          <li>Open a pull request on <a href={SITE.github}>{repo}</a>. Your own drawing, no faces, no logos, one object per file.</li>
         </ol>
-        <a class="btn btn-primary" href={`${SITE.github}/blob/main/CONTRIBUTING.md`}>Submit to the Folio</a>
+        <div class="ctas">
+          <a class="btn btn-primary" href={`${SITE.github}/blob/main/CONTRIBUTING.md`}>Submit to the Folio</a>
+          <a class="btn" href={SITE.github}>★ Star on GitHub</a>
+        </div>
       </div>
       <div class="folio-motifs" aria-hidden="true">
-        {['tulip', 'carnation', 'cypress', 'rosette'].map((m) => <img src={`/img/motif-${m}.webp`} alt="" width="120" height="120" loading="lazy" />)}
+        {['bicycle', 'cat', 'camera', 'rocket'].map((m) => <img src={`/props/${m}-0.webp`} alt="" width="120" height="120" loading="lazy" />)}
       </div>
     </div>
   </section>
@@ -178,7 +243,7 @@ const jsonld = [
       </div>
       <div>
         <h3>Powered by Ortak Alan</h3>
-        <p>Levni is made and used every day by <a href={SITE.ortakAlan}>Ortak Alan</a>, which drew its article images with it.</p>
+        <p>Levni is made and used every day by <a href={SITE.ortakAlan}>Ortak Alan</a>, which draws its article images with it.</p>
       </div>
     </div>
   </section>
@@ -226,14 +291,14 @@ const jsonld = [
   figcaption { font-size: 0.92rem; font-style: italic; color: var(--ink-soft); margin-top: 8px; text-align: center; }
 
   .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 28px; }
-  .card { text-align: center; padding: 18px 14px; border-top: 3px double var(--gold); }
-  .card img { width: 96px; height: 96px; margin: 0 auto 6px; }
+  .card { text-align: center; padding: 18px 14px; border-top: 2px solid var(--ink); }
+  .card img { width: 110px; height: 110px; margin: 0 auto 6px; }
   .card p { font-size: 1.02rem; color: var(--ink-soft); margin: 0; }
 
   .steps { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
   .num {
     display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%;
-    background: var(--gold); color: var(--paper-2); font-family: var(--display); font-size: 1.2rem; margin-right: 6px; vertical-align: 3px;
+    background: var(--accent); color: #fff; font-family: var(--display); font-size: 1.1rem; margin-right: 6px; vertical-align: 3px;
   }
   .steps p { color: var(--ink-soft); font-size: 1.04rem; }
   .step-img { padding: 6px; }
@@ -244,7 +309,7 @@ const jsonld = [
 
   .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 28px; }
   .grid figure { margin: 0; }
-  .grid img { border: 1px solid var(--gold); }
+  .grid img { border: 2px solid var(--ink); }
 
   .folio-box { background: var(--paper); display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; align-items: center; padding: 36px; }
   .folio-text ol { padding-left: 1.3em; }
@@ -252,11 +317,19 @@ const jsonld = [
   .folio-motifs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; justify-items: center; }
   .folio-motifs img { width: 120px; height: 120px; }
 
+  .sample { list-style: none; padding: 0; margin: 28px 0 24px; display: grid; grid-template-columns: repeat(8, 1fr); gap: 10px; }
+  .sample a { display: block; border: 1px solid var(--rule); transition: border-color 0.15s, transform 0.15s; }
+  .sample a:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .agent-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin-top: 28px; }
+  .agent-cols p { color: var(--ink-soft); }
+  .tools-list { padding-left: 1.1em; color: var(--ink-soft); }
+  .tools-list li { margin-bottom: 6px; }
+  .tools-list code { color: var(--accent-text); margin-right: 6px; }
   .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 24px; }
   .cols p { color: var(--ink-soft); font-size: 1.04rem; }
 
-  .faq details { max-width: 760px; margin: 0 auto; border-bottom: 1px solid var(--gold); padding: 14px 4px; }
-  .faq summary { font-family: var(--display); font-size: 1.4rem; font-weight: 600; cursor: pointer; }
+  .faq details { max-width: 760px; margin: 0 auto; border-bottom: 1px solid var(--rule); padding: 14px 4px; }
+  .faq summary { font-family: var(--display); font-size: 1.3rem; font-weight: 600; cursor: pointer; }
   .faq details p { margin: 10px 0 0; color: var(--ink-soft); }
 
   .post-list { list-style: none; padding: 0; max-width: 760px; margin: 0 auto; }
@@ -267,7 +340,8 @@ const jsonld = [
   @media (max-width: 900px) {
     .hero { grid-template-columns: 1fr; gap: 28px; }
     .cards, .grid { grid-template-columns: repeat(2, 1fr); }
-    .steps, .cols { grid-template-columns: minmax(0, 1fr); }
+    .steps, .cols, .agent-cols { grid-template-columns: minmax(0, 1fr); }
+    .sample { grid-template-columns: repeat(4, 1fr); }
     .folio-box { grid-template-columns: 1fr; padding: 22px; }
     .folio-motifs { grid-template-columns: repeat(4, 1fr); }
     .folio-motifs img { width: 72px; height: 72px; }

@@ -4,55 +4,233 @@
   "description": "A scene is an ordered list of elements drawn on a 1200x673 canvas. Full field reference: docs/scene.md",
   "type": "object",
   "properties": {
-    "seed": { "type": "integer", "default": 1 },
-    "background": { "$ref": "#/$defs/color", "default": "paper" },
-    "clip": { "$ref": "#/$defs/rect" },
-    "hand": { "type": "boolean", "default": true },
-    "plateShift": { "type": "number", "default": 3.2 },
-    "boil": { "type": "integer" },
-    "t": { "type": "number", "minimum": 0, "maximum": 1 },
-    "locale": { "type": "string", "default": "en" },
-    "elements": { "type": "array", "items": { "$ref": "#/$defs/element" } }
+    "seed": {
+      "type": "integer",
+      "default": 1
+    },
+    "background": {
+      "$ref": "#/$defs/color",
+      "default": "paper"
+    },
+    "clip": {
+      "$ref": "#/$defs/rect"
+    },
+    "hand": {
+      "type": "boolean",
+      "default": true
+    },
+    "plateShift": {
+      "type": "number",
+      "default": 3.2
+    },
+    "boil": {
+      "type": "integer"
+    },
+    "t": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "locale": {
+      "type": "string",
+      "default": "en"
+    },
+    "elements": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/element"
+      }
+    },
+    "style": {
+      "enum": [
+        "riso",
+        "miniature"
+      ],
+      "default": "riso"
+    },
+    "finish": {
+      "enum": [
+        "crayon",
+        "soft"
+      ],
+      "default": "crayon"
+    },
+    "grain": {
+      "type": "number",
+      "default": 0.16
+    }
   },
-  "required": ["elements"],
+  "required": [
+    "elements"
+  ],
   "$defs": {
     "color": {
       "anyOf": [
-        { "enum": ["blue", "ink", "coral", "mustard", "green", "paper", "white", "dark", "tone", "tone-coral", "tone-green", "tone-mustard", "none"] },
-        { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" }
+        {
+          "enum": [
+            "blue",
+            "ink",
+            "coral",
+            "mustard",
+            "green",
+            "paper",
+            "white",
+            "dark",
+            "tone",
+            "tone-coral",
+            "tone-green",
+            "tone-mustard",
+            "none"
+          ]
+        },
+        {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        }
       ]
     },
-    "rect": { "type": "array", "items": { "type": "number" }, "minItems": 4, "maxItems": 4 },
-    "point": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 },
+    "rect": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "point": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
     "path": {
       "type": "object",
       "properties": {
-        "d": { "type": "string", "description": "SVG path data in a 0..100 box" },
-        "fill": { "$ref": "#/$defs/color" },
-        "stroke": { "$ref": "#/$defs/color" },
-        "weight": { "type": "number", "minimum": 0, "description": "line width in output pixels" },
-        "dash": { "anyOf": [{ "type": "number" }, { "$ref": "#/$defs/point" }] },
-        "taper": { "anyOf": [{ "type": "boolean" }, { "type": "number" }] },
-        "rule": { "enum": ["evenodd", "nonzero"] }
+        "d": {
+          "type": "string",
+          "description": "SVG path data in a 0..100 box"
+        },
+        "fill": {
+          "$ref": "#/$defs/color"
+        },
+        "stroke": {
+          "$ref": "#/$defs/color"
+        },
+        "weight": {
+          "type": "number",
+          "minimum": 0,
+          "description": "line width in output pixels"
+        },
+        "dash": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/point"
+            }
+          ]
+        },
+        "taper": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        },
+        "rule": {
+          "enum": [
+            "evenodd",
+            "nonzero"
+          ]
+        }
       },
-      "required": ["d"]
+      "required": [
+        "d"
+      ]
     },
     "element": {
       "type": "object",
       "properties": {
         "type": {
-          "enum": ["prop", "draw", "icon", "ascii", "iso", "panel", "disc", "glyphs", "waves", "hills", "skyline", "halftone", "flowfield", "hatch", "confetti", "marks", "crowd", "isotype", "sheet", "window", "bubble", "stack", "tree", "plant", "cloud", "sunburst", "rose", "spiro", "flag", "badge", "ticks", "arrow", "line", "shape", "brush", "label"]
+          "enum": [
+            "prop",
+            "draw",
+            "icon",
+            "ascii",
+            "iso",
+            "panel",
+            "disc",
+            "glyphs",
+            "waves",
+            "hills",
+            "skyline",
+            "halftone",
+            "flowfield",
+            "hatch",
+            "confetti",
+            "marks",
+            "crowd",
+            "isotype",
+            "sheet",
+            "window",
+            "bubble",
+            "stack",
+            "tree",
+            "plant",
+            "cloud",
+            "sunburst",
+            "rose",
+            "spiro",
+            "flag",
+            "badge",
+            "ticks",
+            "arrow",
+            "line",
+            "shape",
+            "brush",
+            "label",
+            "ribbon",
+            "tube",
+            "image"
+          ]
         },
-        "x": { "type": "number" },
-        "y": { "type": "number" },
-        "size": { "type": "number" },
-        "color": { "$ref": "#/$defs/color" },
-        "rot": { "type": "number" },
-        "crop": { "type": "boolean" },
-        "name": { "type": "string" },
-        "paths": { "type": "array", "items": { "$ref": "#/$defs/path" } }
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "size": {
+          "type": "number"
+        },
+        "color": {
+          "$ref": "#/$defs/color"
+        },
+        "rot": {
+          "type": "number"
+        },
+        "crop": {
+          "type": "boolean"
+        },
+        "name": {
+          "type": "string"
+        },
+        "paths": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/path"
+          }
+        }
       },
-      "required": ["type"],
+      "required": [
+        "type"
+      ],
       "additionalProperties": true
     }
   }

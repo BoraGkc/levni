@@ -2,6 +2,7 @@
 // then finished by the same crayon filter as the rest of the engine. Each asset is a compose element type.
 // Every asset takes `t` (0..1, default 0) so the animation renderer can move it deterministically.
 import { box, ellipse } from './pen.mjs';
+import { SOFT_ASSETS } from './ribbon.mjs';
 
 const f = (n) => Math.round(n * 10) / 10;
 
@@ -332,3 +333,6 @@ Object.assign(ASSETS, {
     return { svg: pen.shape(ellipse(e.x, e.y, rr, rr * (e.squash ?? 0.98), 22), { fill: e.fill ? c(e.fill) : null, stroke: c(e.color, '#0A3FB0'), w: e.weight ?? 9, offset: 0, amp: 1.2 }), bbox: [e.x - rr, e.y - rr, rr * 2, rr * 2] };
   },
 });
+
+// Soft 3D-feel elements (ribbon, tube, image): see ribbon.mjs
+Object.assign(ASSETS, SOFT_ASSETS);
