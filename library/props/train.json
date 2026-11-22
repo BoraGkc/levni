@@ -1,0 +1,106 @@
+{
+ "name": "train",
+ "category": "places",
+ "tags": [
+  "tren",
+  "train",
+  "railway",
+  "demiryolu",
+  "travel",
+  "seyahat",
+  "metro",
+  "hızlı tren"
+ ],
+ "variants": [
+  {
+   "note": "front view of a modern train, wide windscreen, coral stripe",
+   "paths": [
+    {
+     "d": "M24 14 Q24 10 28 10 L72 10 Q76 10 76 14 L76 74 Q76 78 72 78 L28 78 Q24 78 24 74 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 20 L70 20 L70 44 L30 44 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M24 52 L76 52 L76 58 L24 58 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M38 66 C38 68.2 36.2 70 34 70 C31.8 70 30 68.2 30 66 C30 63.8 31.8 62 34 62 C36.2 62 38 63.8 38 66 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M70 66 C70 68.2 68.2 70 66 70 C63.8 70 62 68.2 62 66 C62 63.8 63.8 62 66 62 C68.2 62 70 63.8 70 66 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M28 78 L72 78 L72 84 L28 84 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M30 84 L22 92 M70 84 L78 92",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "bullet-nose high-speed train front, tinted body",
+   "paths": [
+    {
+     "d": "M26 78 L26 38 Q26 12 50 12 Q74 12 74 38 L74 78 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M32 42 L32 34 Q34 24 50 24 Q66 24 68 34 L68 42 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M26 52 L74 52 L74 58 L26 58 Z",
+     "fill": "blue",
+     "stroke": "none"
+    },
+    {
+     "d": "M38 66 C38 68.2 36.2 70 34 70 C31.8 70 30 68.2 30 66 C30 63.8 31.8 62 34 62 C36.2 62 38 63.8 38 66 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M70 66 C70 68.2 68.2 70 66 70 C63.8 70 62 68.2 62 66 C62 63.8 63.8 62 66 62 C68.2 62 70 63.8 70 66 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M26 78 L74 78 L74 84 L26 84 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M32 84 L24 92 M68 84 L76 92",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

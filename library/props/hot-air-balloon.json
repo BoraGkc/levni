@@ -1,0 +1,77 @@
+{
+ "name": "hot-air-balloon",
+ "category": "places",
+ "tags": [
+  "sıcak hava balonu",
+  "balon",
+  "hot air balloon",
+  "balloon",
+  "kapadokya",
+  "cappadocia",
+  "travel",
+  "gökyüzü"
+ ],
+ "variants": [
+  {
+   "note": "coral envelope with a mustard centre panel and basket",
+   "paths": [
+    {
+     "d": "M40 82 L60 82 L58 92 L42 92 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M42 72 L40 82 M58 72 L60 82",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 10 C20 10 12 36 20 52 C26 62 38 68 42 72 L58 72 C62 68 74 62 80 52 C88 36 80 10 50 10 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 10 C36 18 34 50 42 72 L58 72 C66 50 64 18 50 10 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "blue balloon with a paper stripe and a coral band",
+   "paths": [
+    {
+     "d": "M40 82 L60 82 L58 92 L42 92 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M42 72 L40 82 M58 72 L60 82",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 10 C20 10 12 36 20 52 C26 62 38 68 42 72 L58 72 C62 68 74 62 80 52 C88 36 80 10 50 10 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 10 C36 18 34 50 42 72 L58 72 C66 50 64 18 50 10 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M18 46 Q50 58 82 46",
+     "stroke": "coral",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

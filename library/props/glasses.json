@@ -1,0 +1,85 @@
+{
+ "name": "glasses",
+ "category": "health",
+ "tags": [
+  "gözlük",
+  "glasses",
+  "eyeglasses",
+  "optik",
+  "vision",
+  "görme",
+  "spectacles",
+  "güneş gözlüğü"
+ ],
+ "variants": [
+  {
+   "note": "round glasses, light tone lenses, shine marks",
+   "paths": [
+    {
+     "d": "M12 48 L8 40 M88 48 L92 40",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M48 54 C48 63.9 39.9 72 30 72 C20.1 72 12 63.9 12 54 C12 44.1 20.1 36 30 36 C39.9 36 48 44.1 48 54 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M88 54 C88 63.9 79.9 72 70 72 C60.1 72 52 63.9 52 54 C52 44.1 60.1 36 70 36 C79.9 36 88 44.1 88 54 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M48 50 Q50 46 52 50",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M22 48 Q24 44 28 44",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M62 48 Q64 44 68 44",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  },
+  {
+   "note": "dark sunglasses with a coral bridge",
+   "paths": [
+    {
+     "d": "M10 44 L8 38 M90 44 L92 38",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M10 44 L46 44 L44 66 Q40 74 28 74 Q14 74 12 62 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M90 44 L54 44 L56 66 Q60 74 72 74 Q86 74 88 62 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M46 48 Q50 44 54 48",
+     "stroke": "coral",
+     "weight": 7
+    },
+    {
+     "d": "M18 52 L26 50 M62 52 L70 50",
+     "stroke": "paper",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

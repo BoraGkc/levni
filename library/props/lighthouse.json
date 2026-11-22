@@ -1,0 +1,122 @@
+{
+ "name": "lighthouse",
+ "category": "places",
+ "tags": [
+  "deniz feneri",
+  "fener",
+  "lighthouse",
+  "beacon",
+  "coast",
+  "kıyı",
+  "sea",
+  "deniz"
+ ],
+ "variants": [
+  {
+   "note": "tapered tower, two coral bands, mustard lamp, light beams",
+   "paths": [
+    {
+     "d": "M68 28 L90 20 M68 33 L92 33 M32 28 L10 20 M32 33 L8 33",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M24 92 Q30 84 40 86 L60 86 Q70 84 76 92 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M36 90 L40 38 L60 38 L64 90 Z",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M39.2 48 L60.8 48 L61.7 60 L38.3 60 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M37.4 72 L62.6 72 L63.5 84 L36.5 84 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 90 L40 38 L60 38 L64 90 Z",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M40 24 L60 24 L60 38 L40 38 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M38 24 L50 10 L62 24 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M34 38 L66 38",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  },
+  {
+   "note": "blue-banded tower with a warm lamp, one-sided beam",
+   "paths": [
+    {
+     "d": "M68 28 L90 20 M68 33 L92 33",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M24 92 Q30 84 40 86 L60 86 Q70 84 76 92 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M36 90 L40 38 L60 38 L64 90 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M39.2 48 L60.8 48 L61.7 60 L38.3 60 Z",
+     "fill": "blue",
+     "stroke": "none"
+    },
+    {
+     "d": "M37.4 72 L62.6 72 L63.5 84 L36.5 84 Z",
+     "fill": "blue",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 90 L40 38 L60 38 L64 90 Z",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M40 24 L60 24 L60 38 L40 38 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M38 24 L50 10 L62 24 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M34 38 L66 38",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

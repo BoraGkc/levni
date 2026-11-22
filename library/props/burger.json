@@ -1,0 +1,132 @@
+{
+ "name": "burger",
+ "category": "food",
+ "tags": [
+  "burger",
+  "hamburger",
+  "sandviç",
+  "fast food",
+  "köfte",
+  "ekmek"
+ ],
+ "variants": [
+  {
+   "note": "classic burger: seeded bun, lettuce, patty, cheese",
+   "paths": [
+    {
+     "d": "M14 82 L86 82 Q86 90 78 90 L22 90 Q14 90 14 82 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12 56 L88 56 L88 68 Q88 72 84 72 L16 72 Q12 72 12 68 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M14 72 L86 72 L78 80 L64 74 L50 82 L36 74 L22 80 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M10 50 Q20 44 30 50 Q40 56 50 50 Q60 44 70 50 Q80 56 90 50 L90 57 L10 57 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M14 44 Q14 14 50 14 Q86 14 86 44 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M36 28 h.1",
+     "stroke": "paper",
+     "weight": 6
+    },
+    {
+     "d": "M52 24 h.1",
+     "stroke": "paper",
+     "weight": 6
+    },
+    {
+     "d": "M66 30 h.1",
+     "stroke": "paper",
+     "weight": 6
+    },
+    {
+     "d": "M44 38 h.1",
+     "stroke": "paper",
+     "weight": 6
+    },
+    {
+     "d": "M60 40 h.1",
+     "stroke": "paper",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "pale-bun burger with tomato, pickles and a coral-topped toothpick",
+   "paths": [
+    {
+     "d": "M14 82 L86 82 Q86 90 78 90 L22 90 Q14 90 14 82 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12 58 L88 58 L88 70 Q88 74 84 74 L16 74 Q12 74 12 70 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12 48 L88 48 L88 58 L12 58 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M34 53 C34 55.2 32.2 57 30 57 C27.8 57 26 55.2 26 53 C26 50.8 27.8 49 30 49 C32.2 49 34 50.8 34 53 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M54 53 C54 55.2 52.2 57 50 57 C47.8 57 46 55.2 46 53 C46 50.8 47.8 49 50 49 C52.2 49 54 50.8 54 53 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M74 53 C74 55.2 72.2 57 70 57 C67.8 57 66 55.2 66 53 C66 50.8 67.8 49 70 49 C72.2 49 74 50.8 74 53 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M14 44 Q14 18 50 18 Q86 18 86 44 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 8 L50 36",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M54 10 C54 12.2 52.2 14 50 14 C47.8 14 46 12.2 46 10 C46 7.8 47.8 6 50 6 C52.2 6 54 7.8 54 10 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

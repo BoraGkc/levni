@@ -1,0 +1,56 @@
+{
+ "name": "dna",
+ "category": "health",
+ "tags": [
+  "dna",
+  "genetik",
+  "genetics",
+  "helix",
+  "sarmal",
+  "biyoloji",
+  "biology",
+  "bilim"
+ ],
+ "variants": [
+  {
+   "note": "vertical double helix, coral and mustard strands, ink rungs",
+   "paths": [
+    {
+     "d": "M37 20 L63 20 M63 40 L37 40 M63 60 L37 60 M37 80 L63 80",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M30 10 C30 30 70 30 70 50 C70 70 30 70 30 90",
+     "stroke": "coral",
+     "weight": 9
+    },
+    {
+     "d": "M70 10 C70 30 30 30 30 50 C30 70 70 70 70 90",
+     "stroke": "mustard",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "horizontal helix, green and coral strands",
+   "paths": [
+    {
+     "d": "M20 37 L20 63 M40 63 L40 37 M60 63 L60 37 M80 37 L80 63",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M10 30 C30 30 30 70 50 70 C70 70 70 30 90 30",
+     "stroke": "green",
+     "weight": 9
+    },
+    {
+     "d": "M10 70 C30 70 30 30 50 30 C70 30 70 70 90 70",
+     "stroke": "coral",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

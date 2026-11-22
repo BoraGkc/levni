@@ -1,0 +1,115 @@
+{
+ "name": "syringe",
+ "category": "health",
+ "tags": [
+  "şırınga",
+  "iğne",
+  "syringe",
+  "needle",
+  "aşı",
+  "vaccine",
+  "injection",
+  "doktor"
+ ],
+ "variants": [
+  {
+   "note": "horizontal syringe, coral liquid, needle to the left",
+   "paths": [
+    {
+     "d": "M8 48 L24 48",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M24 43 L30 43 L30 53 L24 53 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M30 38 L74 38 L74 58 L30 58 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M32 41 L58 41 L58 55 L32 55 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M62 38 L62 44 M68 38 L68 44",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M74 48 L88 48",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M72 30 L72 66",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M90 38 L90 58",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "green liquid, plunger half pressed, a drop at the needle tip",
+   "paths": [
+    {
+     "d": "M8 48 L24 48",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M24 43 L30 43 L30 53 L24 53 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M30 38 L74 38 L74 58 L30 58 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M32 41 L46 41 L46 55 L32 55 Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 38 L50 44 M56 38 L56 44",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M46 48 L80 48",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M72 30 L72 66",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M86 38 L86 58",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M10 58 h.1",
+     "stroke": "tone-green",
+     "weight": 7
+    }
+   ]
+  }
+ ]
+}
