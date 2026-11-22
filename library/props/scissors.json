@@ -1,0 +1,48 @@
+{
+ "name": "scissors",
+ "category": "home",
+ "tags": [
+  "scissors"
+ ],
+ "variants": [
+  {
+   "note": "scissors, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 32 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 1 0 -25.2 0",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M15.2 74 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 1 0 -25.2 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 29 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 1 0 -25.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 71 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 1 0 -25.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M35.7 35.7 l43.7 43.7",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M35.7 64.3 l43.7 -43.7",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

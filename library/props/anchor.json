@@ -1,0 +1,31 @@
+{
+ "name": "anchor",
+ "category": "places",
+ "tags": [
+  "anchor"
+ ],
+ "variants": [
+  {
+   "note": "anchor, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M40.4 27.8 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 1 0 -25.2 0",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 37.4 v50.4 m-33.6 -33.6 a33.6 33.6 0 0 0 67.2 0 m4.2 0 h-8.4 m-58.8 0 h-8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 24.8 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 1 0 -25.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

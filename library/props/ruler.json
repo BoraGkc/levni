@@ -1,0 +1,61 @@
+{
+ "name": "ruler",
+ "category": "books",
+ "tags": [
+  "ruler"
+ ],
+ "variants": [
+  {
+   "note": "ruler, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M23.6 19.4 h58.8 a4.2 4.2 0 0 1 4.2 4.2 v21 a4.2 4.2 0 0 1 -4.2 4.2 h-29.4 a4.2 4.2 0 0 0 -4.2 4.2 v29.4 a4.2 4.2 0 0 1 -4.2 4.2 h-21 a4.2 4.2 0 0 1 -4.2 -4.2 v-58.8 a4.2 4.2 0 0 1 4.2 -4.2",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M20.6 16.4 h58.8 a4.2 4.2 0 0 1 4.2 4.2 v21 a4.2 4.2 0 0 1 -4.2 4.2 h-29.4 a4.2 4.2 0 0 0 -4.2 4.2 v29.4 a4.2 4.2 0 0 1 -4.2 4.2 h-21 a4.2 4.2 0 0 1 -4.2 -4.2 v-58.8 a4.2 4.2 0 0 1 4.2 -4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 33.2 l8.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 50 l12.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 66.8 l8.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 16.4 l0 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 16.4 l0 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 16.4 l0 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

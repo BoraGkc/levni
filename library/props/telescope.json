@@ -1,0 +1,43 @@
+{
+ "name": "telescope",
+ "category": "books",
+ "tags": [
+  "telescope"
+ ],
+ "variants": [
+  {
+   "note": "telescope, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M16.4 60 l0.7 1.2 c2.2 3.7 6.8 5.3 10.9 3.8 l59.8 -21.7 a4.3 4.3 0 0 0 2.4 -6.1 l-11 -19.8 a4.6 4.6 0 0 0 -6.1 -1.8 l-0.2 0.1 l-53.3 32 c-4.3 2.6 -5.7 8 -3.2 12.2 l0 0",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M24.8 87.8 l25.2 -21 l25.2 21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 54.2 v33.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M13.4 57 l0.7 1.2 c2.2 3.7 6.8 5.3 10.9 3.8 l59.8 -21.7 a4.3 4.3 0 0 0 2.4 -6.1 l-11 -19.8 a4.6 4.6 0 0 0 -6.1 -1.8 l-0.2 0.1 l-53.3 32 c-4.3 2.6 -5.7 8 -3.2 12.2 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 20.6 l12.6 23.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "name": "hammer",
+ "category": "home",
+ "tags": [
+  "hammer"
+ ],
+ "variants": [
+  {
+   "note": "hammer, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M78.7 66.8 l10.9 -10.9 a4.2 4.2 0 0 0 0 -5.9 l-31.9 -31.9 a4.2 4.2 0 0 0 -5.9 0 l-10.9 10.9 a4.2 4.2 0 0 0 0 5.9 l31.9 31.9 a4.2 4.2 0 0 0 5.9 0",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M47.5 41.6 l-31 31.2 a8.8 8.8 0 0 0 0 12.5 a8.9 8.9 0 0 0 12.5 0 l31.1 -31",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M75.7 63.8 l10.9 -10.9 a4.2 4.2 0 0 0 0 -5.9 l-31.9 -31.9 a4.2 4.2 0 0 0 -5.9 0 l-10.9 10.9 a4.2 4.2 0 0 0 0 5.9 l31.9 31.9 a4.2 4.2 0 0 0 5.9 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

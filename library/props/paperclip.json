@@ -1,0 +1,20 @@
+{
+ "name": "paperclip",
+ "category": "books",
+ "tags": [
+  "paperclip"
+ ],
+ "variants": [
+  {
+   "note": "paperclip, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M62.6 29 l-27.3 27.3 a6.3 6.3 0 0 0 12.6 12.6 l27.3 -27.3 a12.6 12.6 0 0 0 -25.2 -25.2 l-27.3 27.3 a18.9 18.9 0 0 0 37.8 37.8 l27.3 -27.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}
