@@ -1,0 +1,34 @@
+{
+  "name": "lens-pocket",
+  "tags": [
+    "cep",
+    "kamera merceği",
+    "gözetim",
+    "pocket camera lens"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/john-turturro-yeni/kapak.json",
+      "paths": [
+        {
+          "d": "M50 50 m-46 0 a46 46 0 1 0 92 0 a46 46 0 1 0 -92 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M50 50 m-26 0 a26 26 0 1 0 52 0 a26 26 0 1 0 -52 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M50 50 m-10 0 a10 10 0 1 0 20 0 a10 10 0 1 0 -20 0",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        }
+      ]
+    }
+  ]
+}

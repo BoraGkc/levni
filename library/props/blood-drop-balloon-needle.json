@@ -1,0 +1,51 @@
+{
+  "name": "blood-drop-balloon-needle",
+  "tags": [
+    "damla",
+    "balon",
+    "iğne",
+    "kan",
+    "balon patlıyor",
+    "drop",
+    "balloon",
+    "needle",
+    "blood"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/nathan-fielder-elizabeth-2/ici-1.json",
+      "paths": [
+        {
+          "d": "M50 6 Q86 52 80 70 Q74 94 50 94 Q26 94 20 70 Q14 52 50 6Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M34 62 Q32 74 40 82",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 3
+        },
+        {
+          "d": "M50 94 Q44 100 52 106 Q60 112 50 118",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M112 6 L74 34",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 3.6
+        },
+        {
+          "d": "M112,6 m-2.6,0 a2.6,2.6 0 1,0 5.2,0 a2.6,2.6 0 1,0 -5.2,0",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 1.6
+        }
+      ]
+    }
+  ]
+}

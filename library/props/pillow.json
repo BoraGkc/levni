@@ -1,0 +1,30 @@
+{
+  "name": "pillow",
+  "tags": [
+    "yastık",
+    "pillow"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/chris-rock-affetme/ici-2-r0.json",
+      "paths": [
+        {
+          "d": "M6 24 Q50 8 94 24 Q100 50 94 76 Q50 92 6 76 Q0 50 6 24Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M18 36 Q50 26 82 36",
+          "stroke": "paper",
+          "weight": 2.6
+        },
+        {
+          "d": "M6 24 L12 18 M94 24 L88 18 M6 76 L12 82 M94 76 L88 82",
+          "stroke": "ink",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

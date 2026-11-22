@@ -1,0 +1,160 @@
+{
+ "name": "vinyl",
+ "tags": [
+  "plak",
+  "vinyl",
+  "muzik",
+  "record",
+  "albüm",
+  "album"
+ ],
+ "variants": [
+  {
+   "note": "record sliding out of a sleeve",
+   "paths": [
+    {
+     "d": "M16 50 Q16 13.14 54 13.14 Q92 13.14 92 50 Q92 86.86 54 86.86 Q16 86.86 16 50 Z",
+     "fill": "ink",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M30 40 Q36 26 52 22 M84 56 Q78 74 60 80",
+     "fill": "none",
+     "stroke": "paper",
+     "weight": 3
+    },
+    {
+     "d": "M42 50 Q42 38.96 54 38.96 Q66 38.96 66 50 Q66 61.04 54 61.04 Q42 61.04 42 50 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M54 50 L54.2 50.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M8 22 L64 20 L66 88 L10 90 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M 20 34 L 54 33 L 55 64 L 21 65 Z",
+     "fill": "tone-mustard",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M18 32 L52 31 L53 62 L19 63 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "bold record alone, coral label",
+   "paths": [
+    {
+     "d": "M16 50 Q16 13.14 54 13.14 Q92 13.14 92 50 Q92 86.86 54 86.86 Q16 86.86 16 50 Z",
+     "fill": "ink",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M25 50 Q25 23.32 54 23.32 Q83 23.32 83 50 Q83 76.68 54 76.68 Q25 76.68 25 50 Z",
+     "fill": "none",
+     "stroke": "paper",
+     "weight": 2
+    },
+    {
+     "d": "M33 50 Q33 30.68 54 30.68 Q75 30.68 75 50 Q75 69.32 54 69.32 Q33 69.32 33 50 Z",
+     "fill": "none",
+     "stroke": "paper",
+     "weight": 2
+    },
+    {
+     "d": "M30 32 Q38 22 50 20 M80 62 Q74 74 62 78",
+     "fill": "none",
+     "stroke": "paper",
+     "weight": 3
+    },
+    {
+     "d": "M 45 52 Q 45 41 57 41 Q 69 41 69 52 Q 69 63 57 63 Q 45 63 45 52 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M42 50 Q42 38.96 54 38.96 Q66 38.96 66 50 Q66 61.04 54 61.04 Q42 61.04 42 50 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M54 50 L54.2 50.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "record in sleeve with round window",
+   "paths": [
+    {
+     "d": "M14 12 L86 10 L88 88 L16 90 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M 16 13 L 88 11 L 88 25 L 16 27 Z",
+     "fill": "tone-coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M28 56 Q28 33.92 52 33.92 Q76 33.92 76 56 Q76 78.08 52 78.08 Q28 78.08 28 56 Z",
+     "fill": "ink",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M28 56 Q28 33.92 52 33.92 Q76 33.92 76 56 Q76 78.08 52 78.08 Q28 78.08 28 56 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M 45 58 Q 45 49.7 54 49.7 Q 63 49.7 63 58 Q 63 66.3 54 66.3 Q 45 66.3 45 58 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M43 56 Q43 47.72 52 47.72 Q61 47.72 61 56 Q61 64.28 52 64.28 Q43 64.28 43 56 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M36 42 Q42 34 52 32",
+     "fill": "none",
+     "stroke": "paper",
+     "weight": 3
+    },
+    {
+     "d": "M64 20 L78 20",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

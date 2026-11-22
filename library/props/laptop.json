@@ -1,0 +1,74 @@
+{
+ "name": "laptop",
+ "tags": [
+  "dizüstü",
+  "bilgisayar",
+  "laptop",
+  "computer",
+  "notebook"
+ ],
+ "variants": [
+  {
+   "note": "open laptop, glowing blue screen",
+   "paths": [
+    {
+     "d": "M27 20L79 20L81 64L25 64Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M24 18 L76 18 L78 62 L22 62 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M12 62 L88 62 L94 78 Q94 82 90 82 L10 82 Q6 82 6 78 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M42 72 L58 72",
+     "stroke": "ink",
+     "weight": 6,
+     "fill": "none"
+    },
+    {
+     "d": "M32 32 L60 32 M32 42 L50 42",
+     "stroke": "ink",
+     "weight": 5,
+     "fill": "none"
+    }
+   ]
+  },
+  {
+   "note": "side view, tilted screen, mustard key light",
+   "paths": [
+    {
+     "d": "M30 16 L82 24 L74 66 L24 58 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M39 26L77 32L72 60L34 54Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M14 62 L76 70 L92 80 L28 80 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M44 70 L62 73",
+     "stroke": "ink",
+     "weight": 5,
+     "fill": "none"
+    }
+   ]
+  }
+ ]
+}

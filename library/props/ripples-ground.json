@@ -1,0 +1,50 @@
+{
+  "name": "ripples-ground",
+  "tags": [
+    "dalga halkalari",
+    "viral yayilim"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/sosyal-medya-isbirliklerinde/ici-1.json",
+      "paths": [
+        {
+          "d": "M28 58 a22 8.36 0 1,0 44 0 a22 8.36 0 1,0 -44 0",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 3.2,
+          "dash": [
+            16,
+            12
+          ]
+        },
+        {
+          "d": "M14 58 a36 13.68 0 1,0 72 0 a36 13.68 0 1,0 -72 0",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 3.2,
+          "dash": [
+            16,
+            12
+          ]
+        },
+        {
+          "d": "M0 58 a50 19.0 0 1,0 100 0 a50 19.0 0 1,0 -100 0",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 3.2,
+          "dash": [
+            16,
+            12
+          ]
+        },
+        {
+          "d": "M38 58 a12 4.5600000000000005 0 1,0 24 0 a12 4.5600000000000005 0 1,0 -24 0",
+          "fill": "none",
+          "stroke": "tone",
+          "weight": 4
+        }
+      ]
+    }
+  ]
+}

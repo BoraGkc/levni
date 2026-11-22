@@ -1,0 +1,25 @@
+{
+  "name": "mahkeme-yuzu",
+  "tags": [
+    "mahkeme",
+    "sütun"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/russell-brand-tecavuz/kapak-3d.json",
+      "paths": [
+        {
+          "d": "M0 30 L100 30",
+          "stroke": "blue",
+          "weight": 4
+        },
+        {
+          "d": "M10 36 L10 74 M26 36 L26 74 M42 36 L42 74 M58 36 L58 74 M74 36 L74 74 M90 36 L90 74",
+          "stroke": "blue",
+          "weight": 9,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

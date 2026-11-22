@@ -1,0 +1,39 @@
+{
+  "name": "spotlight-lamp",
+  "tags": [
+    "spot ışığı",
+    "sahne",
+    "lamba"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/tom-hanks-broadway/ici-1.json",
+      "paths": [
+        {
+          "d": "M50 74 L50 92 M32 92 L68 92",
+          "stroke": "paper",
+          "weight": 4,
+          "taper": false
+        },
+        {
+          "d": "M18 28 L66 28 L66 70 L18 70 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M66 24 L80 24 L80 74 L66 74 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M26 38 L58 38 M26 50 L58 50 M26 62 L58 62",
+          "stroke": "ink",
+          "weight": 2,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

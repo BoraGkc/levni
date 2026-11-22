@@ -1,0 +1,80 @@
+{
+  "name": "chip-flower",
+  "tags": [
+    "çip ezilen çiçek",
+    "chip crushed flower"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/patti-harrison-teknoloji/ici-2.json",
+      "paths": [
+        {
+          "d": "M50 70 V98",
+          "stroke": "green",
+          "weight": 9,
+          "fill": "none"
+        },
+        {
+          "d": "M50 84 Q34 78 26 90 Q40 98 50 88 M50 86 Q66 80 74 91 Q60 99 50 90",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M30 68 Q50 62 70 68 Q74 78 50 80 Q26 78 30 68Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M14.0 52 h6 v14 h-6Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M30.5 52 h6 v14 h-6Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M47.0 52 h6 v14 h-6Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M63.5 52 h6 v14 h-6Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M80.0 52 h6 v14 h-6Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M8 16 H92 V54 H8Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M20 24 H80 V46 H20Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M28 32 H40 V38 M48 31 H70 M48 40 H62",
+          "stroke": "ink",
+          "weight": 2.2,
+          "fill": "none"
+        }
+      ]
+    }
+  ]
+}

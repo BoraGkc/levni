@@ -1,0 +1,60 @@
+{
+  "name": "theatre-seat-headphones",
+  "tags": [
+    "tiyatro koltuğu",
+    "kulaklık",
+    "koltuk",
+    "theatre seat",
+    "headphones",
+    "audience"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/off-broadway-hayalet/ici-2.json",
+      "paths": [
+        {
+          "d": "M26 6 Q50 0 74 6 L78 62 L22 62 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M24 64 L76 64 L80 82 L20 82 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M12 52 Q12 44 20 44 L22 44 L22 84 L14 84 Q12 84 12 80 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M88 52 Q88 44 80 44 L78 44 L78 84 L86 84 Q88 84 88 80 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M30 82 L30 98 M70 82 L70 98",
+          "stroke": "ink",
+          "weight": 4,
+          "taper": false
+        },
+        {
+          "d": "M32 14 Q32 -4 50 -4 Q68 -4 68 14",
+          "stroke": "paper",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M26 10 L34 10 L34 30 L26 30 Z M66 10 L74 10 L74 30 L66 30 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.5
+        }
+      ]
+    }
+  ]
+}

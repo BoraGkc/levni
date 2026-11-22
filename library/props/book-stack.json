@@ -1,0 +1,45 @@
+{
+  "name": "book-stack",
+  "tags": [
+    "kitap yığını",
+    "kitaplar",
+    "books",
+    "library"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/charioteer-oyunu-antikapital/ici-2.json",
+      "paths": [
+        {
+          "d": "M12 92 H88 V76 H12 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M18 76 H84 V60 H18 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M10 60 H80 V44 H10 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M20 44 H78 V30 H20 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M16 84 H80 M24 68 H76 M18 52 H72 M26 37 H70",
+          "stroke": "paper",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

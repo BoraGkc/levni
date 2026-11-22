@@ -1,0 +1,54 @@
+{
+  "name": "book-protest-sign",
+  "tags": [
+    "kitap",
+    "pankart",
+    "protesto",
+    "isyan",
+    "book",
+    "picket sign",
+    "protest",
+    "strike"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kitap-yayinciligi-yapay/ici-2.json",
+      "paths": [
+        {
+          "d": "M46,50 L54,50 L54,120 L46,120 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M6,14 Q26,6 50,16 L50,66 Q26,56 6,64 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M94,14 Q74,6 50,16 L50,66 Q74,56 94,64 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M12,26 Q26,22 42,28 M12,34 Q26,30 42,36 M12,42 Q26,38 42,44 M58,28 Q74,22 88,26",
+          "stroke": "blue",
+          "weight": 3.4
+        },
+        {
+          "d": "M60,38 L90,56 M90,32 L60,56",
+          "stroke": "coral",
+          "weight": 13
+        },
+        {
+          "d": "M4,66 Q26,58 50,68 Q74,58 96,66 L96,70 Q74,62 50,72 Q26,62 4,70 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.6
+        }
+      ]
+    }
+  ]
+}

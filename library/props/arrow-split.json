@@ -1,0 +1,141 @@
+{
+ "name": "arrow-split",
+ "tags": [
+  "karıştır",
+  "shuffle",
+  "çatallan",
+  "crossing arrows",
+  "seçenek",
+  "yol ayrımı"
+ ],
+ "variants": [
+  {
+   "note": "crossing shuffle arrows, fat, coral and paper",
+   "paths": [
+    {
+     "d": "M8 32 Q40 32 52 50 Q64 68 82 68",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 20
+    },
+    {
+     "d": "M9.5 33.5Q41.5 33.5 53.5 51.5Q65.5 69.5 83.5 69.5",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 9
+    },
+    {
+     "d": "M70 56 L88 68 L70 80",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 20
+    },
+    {
+     "d": "M71.5 57.5L89.5 69.5L71.5 81.5",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 9
+    },
+    {
+     "d": "M8 68 Q40 68 52 50 Q64 32 82 32",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 20
+    },
+    {
+     "d": "M8 68Q40 68 52 50Q64 32 82 32",
+     "fill": "none",
+     "stroke": "paper",
+     "weight": 9
+    },
+    {
+     "d": "M70 20 L88 32 L70 44",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 20
+    },
+    {
+     "d": "M70 20L88 32L70 44",
+     "fill": "none",
+     "stroke": "paper",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "thin ink shuffle arrows over coral blob",
+   "paths": [
+    {
+     "d": "M37 53Q37 33 55 33Q73 33 73 53Q73 73 55 73Q37 73 37 53Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M8 32 Q40 32 52 50 Q64 68 82 68",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M70 56 L88 68 L70 80",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M8 68 Q40 68 52 50 Q64 32 82 32",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M70 20 L88 32 L70 44",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "fork: one road splitting in two",
+   "paths": [
+    {
+     "d": "M13 55L41 55Q57 55 65 37L83 27",
+     "fill": "none",
+     "stroke": "green",
+     "weight": 9
+    },
+    {
+     "d": "M41 55Q57 55 65 73L83 83",
+     "fill": "none",
+     "stroke": "green",
+     "weight": 9
+    },
+    {
+     "d": "M10 52 L38 52 Q54 52 62 34 L80 24",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M38 52 Q54 52 62 70 L80 80",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M66 14 L82 24 L70 40",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M66 90 L82 80 L70 64",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

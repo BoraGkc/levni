@@ -1,0 +1,78 @@
+{
+  "name": "maple-film-frame",
+  "tags": [
+    "akçaağaç",
+    "toronto",
+    "film karesi",
+    "festival"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/toronto-film-festivali/ici-2.json",
+      "paths": [
+        {
+          "d": "M50 2 L57 18 L66 13 L64 32 L80 26 L76 40 L96 46 L82 60 L87 70 L60 66 L60 84 L53 84 L53 98 L47 98 L47 84 L40 84 L40 66 L13 70 L18 60 L4 46 L24 40 L20 26 L36 32 L34 13 L43 18 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M33 38 h34 v26 h-34 z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M37 40 h3.2 v3.2 h-3.2 z",
+          "fill": "paper"
+        },
+        {
+          "d": "M37 59 h3.2 v3.2 h-3.2 z",
+          "fill": "paper"
+        },
+        {
+          "d": "M42.4 40 h3.2 v3.2 h-3.2 z",
+          "fill": "paper"
+        },
+        {
+          "d": "M42.4 59 h3.2 v3.2 h-3.2 z",
+          "fill": "paper"
+        },
+        {
+          "d": "M47.8 40 h3.2 v3.2 h-3.2 z",
+          "fill": "paper"
+        },
+        {
+          "d": "M47.8 59 h3.2 v3.2 h-3.2 z",
+          "fill": "paper"
+        },
+        {
+          "d": "M53.2 40 h3.2 v3.2 h-3.2 z",
+          "fill": "paper"
+        },
+        {
+          "d": "M53.2 59 h3.2 v3.2 h-3.2 z",
+          "fill": "paper"
+        },
+        {
+          "d": "M58.6 40 h3.2 v3.2 h-3.2 z",
+          "fill": "paper"
+        },
+        {
+          "d": "M58.6 59 h3.2 v3.2 h-3.2 z",
+          "fill": "paper"
+        },
+        {
+          "d": "M40 47 L60 47 L60 56 L40 56 Z",
+          "fill": "paper"
+        },
+        {
+          "d": "M43 56 L50 49 L55 54 L57 52 L60 56",
+          "stroke": "blue",
+          "weight": 1.8,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

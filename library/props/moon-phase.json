@@ -1,0 +1,109 @@
+{
+  "name": "moon-phase",
+  "tags": [
+    "ay evresi",
+    "dolunay",
+    "hilal",
+    "moon phase",
+    "cycle"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json",
+      "paths": [
+        {
+          "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3.6
+        }
+      ]
+    },
+    {
+      "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json",
+      "paths": [
+        {
+          "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M50 10 A40 40 0 0 0 50 90 A22 40 0 0 0 50 10 Z",
+          "fill": "blue"
+        },
+        {
+          "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3.6
+        }
+      ]
+    },
+    {
+      "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json",
+      "paths": [
+        {
+          "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M50 10 A40 40 0 0 0 50 90 Z",
+          "fill": "blue"
+        },
+        {
+          "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3.6
+        }
+      ]
+    },
+    {
+      "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json",
+      "paths": [
+        {
+          "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M50 10 A40 40 0 0 0 50 90 A22 40 0 0 1 50 10 Z",
+          "fill": "blue"
+        },
+        {
+          "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3.6
+        }
+      ]
+    },
+    {
+      "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json",
+      "paths": [
+        {
+          "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3.6
+        }
+      ]
+    }
+  ]
+}

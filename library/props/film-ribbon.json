@@ -1,0 +1,55 @@
+{
+  "name": "film-ribbon",
+  "tags": [
+    "film seridi makaradan acilan"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/wildwood-stop-motion/ici-2.json",
+      "paths": [
+        {
+          "d": "M2 40 Q30 10 50 40 T98 40 L98 62 Q70 90 50 62 T2 62 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M12 48 L20 48",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M27 48 L35 48",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M42 48 L50 48",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M57 48 L65 48",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M72 48 L80 48",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M87 48 L95 48",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

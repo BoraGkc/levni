@@ -1,0 +1,74 @@
+{
+ "name": "clock",
+ "tags": [
+  "saat",
+  "zaman",
+  "süre",
+  "clock",
+  "time"
+ ],
+ "variants": [
+  {
+   "note": "round wall clock with hands, coral face offset",
+   "paths": [
+    {
+     "d": "M53 12A40 38 0 1 0 53.1 12Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 10 A40 38 0 1 0 50.1 10 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M50 48 L50 26 M50 48 L68 56",
+     "stroke": "ink",
+     "weight": 8,
+     "fill": "none"
+    },
+    {
+     "d": "M50 17 L50 20 M83 49 L80 49 M50 82 L50 79 M17 49 L20 49",
+     "stroke": "ink",
+     "weight": 5,
+     "fill": "none"
+    }
+   ]
+  },
+  {
+   "note": "alarm clock with two bells and feet",
+   "paths": [
+    {
+     "d": "M20 22 Q26 10 38 16 M80 22 Q74 10 62 16",
+     "stroke": "ink",
+     "weight": 8,
+     "fill": "none"
+    },
+    {
+     "d": "M26 82 L20 92 M74 82 L80 92",
+     "stroke": "ink",
+     "weight": 8,
+     "fill": "none"
+    },
+    {
+     "d": "M50 20 A34 33 0 1 0 50.1 20 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M52 34A21 20 0 1 0 52.1 34Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 52 L50 38 M50 52 L62 58",
+     "stroke": "ink",
+     "weight": 7,
+     "fill": "none"
+    }
+   ]
+  }
+ ]
+}

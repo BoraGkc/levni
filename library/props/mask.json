@@ -1,0 +1,39 @@
+{
+  "name": "mask",
+  "tags": [
+    "maske",
+    "yüz maskesi",
+    "mask"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/minotaur-putin-rusyasinda/ici-1.json",
+      "paths": [
+        {
+          "d": "M50 60 V104",
+          "stroke": "ink",
+          "weight": 3,
+          "fill": "none"
+        },
+        {
+          "d": "M50 6 C74 6 84 28 80 50 C76 74 62 86 50 86 C38 86 24 74 20 50 C16 28 26 6 50 6 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M30 40 Q38 34 46 42 M70 40 Q62 34 54 42",
+          "stroke": "ink",
+          "weight": 4,
+          "fill": "none"
+        },
+        {
+          "d": "M44 58 Q50 62 56 58",
+          "stroke": "ink",
+          "weight": 2.5,
+          "fill": "none"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "name": "film-can-trilogy",
+  "tags": [
+    "film cans",
+    "trilogy",
+    "archive"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/patricio-guzman-silin/ici-1.json",
+      "paths": [
+        {
+          "d": "M14,18 h72 v20 h-72 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M14,28 h72",
+          "stroke": "blue",
+          "weight": 2.5
+        },
+        {
+          "d": "M14,18 a36,5 0 1,0 72,0 a36,5 0 1,0 -72,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M14,42 h72 v20 h-72 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M14,52 h72",
+          "stroke": "blue",
+          "weight": 2.5
+        },
+        {
+          "d": "M14,42 a36,5 0 1,0 72,0 a36,5 0 1,0 -72,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M14,66 h72 v20 h-72 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M14,76 h72",
+          "stroke": "blue",
+          "weight": 2.5
+        },
+        {
+          "d": "M14,66 a36,5 0 1,0 72,0 a36,5 0 1,0 -72,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M10,40 H90 M10,64 H90",
+          "stroke": "ink",
+          "weight": 2,
+          "dash": [
+            6,
+            6
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "name": "snake-question-mark",
+  "tags": [
+    "yılan",
+    "soru işareti",
+    "elma",
+    "kötülük",
+    "snake",
+    "question mark",
+    "apple"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/netflix-east-of/ici-1.json",
+      "paths": [
+        {
+          "d": "M32 40 Q28 12 54 10 Q82 10 80 34 Q78 52 56 60 Q50 64 50 72",
+          "stroke": "ink",
+          "weight": 50,
+          "taper": false
+        },
+        {
+          "d": "M32 40 Q28 12 54 10 Q82 10 80 34 Q78 52 56 60 Q50 64 50 72",
+          "stroke": "paper",
+          "weight": 40,
+          "taper": false
+        },
+        {
+          "d": "M32 40 Q28 12 54 10 Q82 10 80 34 Q78 52 56 60 Q50 64 50 72",
+          "stroke": "blue",
+          "weight": 8,
+          "taper": false,
+          "dash": [
+            2,
+            7
+          ]
+        },
+        {
+          "d": "M18 44 Q18 34 32 34 Q46 34 46 46 Q46 56 32 56 Q18 56 18 44 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M26 42 L28 42 M38 42 L40 42",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M20 52 L8 56 L12 60 L6 66",
+          "stroke": "coral",
+          "weight": 3,
+          "taper": false
+        },
+        {
+          "d": "M50 82 C42 76 34 82 35 90 C36 98 44 102 50 98 C56 102 64 98 65 90 C66 82 58 76 50 82 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M50 82 Q50 76 54 72",
+          "stroke": "ink",
+          "weight": 3,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

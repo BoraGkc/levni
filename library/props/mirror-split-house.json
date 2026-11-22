@@ -1,0 +1,69 @@
+{
+  "name": "mirror-split-house",
+  "tags": [
+    "house",
+    "split",
+    "double",
+    "mirror",
+    "horror"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/other-mommy-jessica/kapak.json",
+      "paths": [
+        {
+          "d": "M16,46 L50,12 V46 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M50,12 L84,46 H50 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M20,46 H50 V92 H20 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M50,46 H80 V92 H50 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M26,56 H42 V70 H26 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M58,56 H74 V70 H58 Z",
+          "fill": "ink",
+          "stroke": "paper",
+          "weight": 3
+        },
+        {
+          "d": "M43,92 V74 H57 V92",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M50,74 V92",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M54,50 L78,88 M62,50 L80,76 M70,50 L80,64",
+          "stroke": "paper",
+          "weight": 1.8
+        }
+      ]
+    }
+  ]
+}

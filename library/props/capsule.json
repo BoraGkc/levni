@@ -1,0 +1,29 @@
+{
+  "name": "capsule",
+  "tags": [
+    "kapsül",
+    "hap",
+    "ilaç",
+    "pill",
+    "capsule",
+    "medicine"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/bill-irwin-uyarlamasi/ici-1.json",
+      "paths": [
+        {
+          "d": "M20 50 Q20 30 40 30 L60 30 Q80 30 80 50 Q80 70 60 70 L40 70 Q20 70 20 50 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M50 30 L50 70",
+          "stroke": "ink",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

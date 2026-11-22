@@ -1,0 +1,112 @@
+{
+  "name": "camera-drone",
+  "tags": [
+    "drone kamera",
+    "film",
+    "camera drone"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/bu-haftanin-yeni/ici-2.json",
+      "paths": [
+        {
+          "d": "M50 52 L10 14",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M50 52 L10 66",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M50 52 L90 14",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M50 52 L90 66",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M-7 14 a17 5 0 1 0 34 0 a17 5 0 1 0 -34 0Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M10 11.8 a2.2 2.2 0 1 0 0.1 0Z",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M-7 66 a17 5 0 1 0 34 0 a17 5 0 1 0 -34 0Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M10 63.8 a2.2 2.2 0 1 0 0.1 0Z",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M73 14 a17 5 0 1 0 34 0 a17 5 0 1 0 -34 0Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M90 11.8 a2.2 2.2 0 1 0 0.1 0Z",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M73 66 a17 5 0 1 0 34 0 a17 5 0 1 0 -34 0Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M90 63.8 a2.2 2.2 0 1 0 0.1 0Z",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M30 40 H70 V68 H30 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M70 46 L86 40 V68 L70 62 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M40 28 a8 8 0 1 0 0.1 0Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M58 28 a8 8 0 1 0 0.1 0Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M36 54 H56",
+          "stroke": "ink",
+          "weight": 2.2
+        }
+      ]
+    }
+  ]
+}

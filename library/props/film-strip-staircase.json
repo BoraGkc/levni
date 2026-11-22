@@ -1,0 +1,35 @@
+{
+  "name": "film-strip-staircase",
+  "tags": [
+    "merdiven",
+    "film seridi",
+    "korku filmi",
+    "exorcist",
+    "staircase",
+    "film strip",
+    "horror"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/korku-filmleri-halloween/kapak-stairs.json",
+      "paths": [
+        {
+          "d": "M4,94 L4,81 L19,81 L19,68 L34,68 L34,55 L49,55 L49,42 L64,42 L64,29 L79,29 L79,16 L94,16 L94,94 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M4,81 L19,81 L19,84 L4,84 Z M19,68 L34,68 L34,71 L19,71 Z M34,55 L49,55 L49,58 L34,58 Z M49,42 L64,42 L64,45 L49,45 Z M64,29 L79,29 L79,32 L64,32 Z M79,16 L94,16 L94,19 L79,19 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M7,96 L11,96 L11,100 L7,100 Z M14,96 L18,96 L18,100 L14,100 Z M22,83 L26,83 L26,87 L22,87 Z M29,83 L33,83 L33,87 L29,87 Z M37,70 L41,70 L41,74 L37,74 Z M44,70 L48,70 L48,74 L44,74 Z M52,57 L56,57 L56,61 L52,61 Z M59,57 L63,57 L63,61 L59,61 Z M67,44 L71,44 L71,48 L67,48 Z M74,44 L78,44 L78,48 L74,48 Z M82,31 L86,31 L86,35 L82,35 Z M89,31 L93,31 L93,35 L89,35 Z",
+          "fill": "paper"
+        }
+      ]
+    }
+  ]
+}

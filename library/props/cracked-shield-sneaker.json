@@ -1,0 +1,63 @@
+{
+  "name": "cracked-shield-sneaker",
+  "tags": [
+    "catlak kalkan ayakkabi",
+    "itibar riski",
+    "marka krizi"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/sosyal-medya-isbirliklerinde/ici-2.json",
+      "paths": [
+        {
+          "d": "M12 10 L88 10 L88 52 Q88 80 50 98 Q12 80 12 52 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4.2
+        },
+        {
+          "d": "M20 17 L80 17 L80 52 Q80 74 50 90 Q20 74 20 52 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M 28.8 49.9 L 71.2 49.9 Q 73.0 49.9 73.0 52.6 Q 73.0 56.3 69.3 56.3 L 31.6 56.3 Q 27.9 56.3 27.9 52.6 Q 27.9 49.9 28.8 49.9 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M 31.1 49.9 L 31.1 40.7 Q 31.1 37.0 34.4 36.1 L 40.8 34.2 L 45.4 37.0 Q 50.9 39.8 57.4 41.6 Q 68.4 43.4 71.6 48.0 L 71.6 49.9 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M 40.8 34.2 L 42.2 27.8 Q 44.9 25.5 47.7 28.3 L 46.3 37.0",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M 46.3 37.0 L 51.8 40.7 M 48.6 35.2 L 54.1 39.3 M 50.9 37.9 L 56.0 41.6",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2.4
+        },
+        {
+          "d": "M62 10 L54 30 L64 38 L50 58 L60 66 L44 98",
+          "fill": "none",
+          "stroke": "coral",
+          "weight": 5
+        },
+        {
+          "d": "M62 10 L54 30 L64 38 L50 58 L60 66 L44 98",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.6
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "hanging-spotlight",
+  "tags": [
+    "spot ışığı",
+    "sahne",
+    "lamba"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/tom-hanks-broadway/kapak.json",
+      "paths": [
+        {
+          "d": "M50 6 L50 20",
+          "stroke": "ink",
+          "weight": 4,
+          "taper": false
+        },
+        {
+          "d": "M24 22 L76 22 L84 62 L16 62 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M16 62 a34 7 0 1 0 68 0 a34 7 0 1 0 -68 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M32 34 L68 34 M30 46 L70 46",
+          "stroke": "ink",
+          "weight": 2,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

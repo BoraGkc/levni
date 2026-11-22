@@ -1,0 +1,56 @@
+{
+  "name": "book-to-waves",
+  "tags": [
+    "kitap sayfaları dalga",
+    "open book waves"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/moonlight-10-yili/ici-1-alt.json",
+      "paths": [
+        {
+          "d": "M50 40 Q30 30 4 38 V84 Q30 76 50 88Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M50 40 Q70 30 96 38 V84 Q70 76 50 88Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M12 50 Q30 46 44 52 M12 58 Q30 54 44 60 M12 66 Q30 62 44 68",
+          "stroke": "blue",
+          "weight": 1.6,
+          "fill": "none"
+        },
+        {
+          "d": "M56 52 Q70 46 88 50 M56 60 Q70 54 88 58 M56 68 Q70 62 88 66",
+          "stroke": "blue",
+          "weight": 1.6,
+          "fill": "none"
+        },
+        {
+          "d": "M50 40 V88",
+          "stroke": "ink",
+          "weight": 2.4,
+          "fill": "none"
+        },
+        {
+          "d": "M60 36 Q70 20 82 28 Q92 14 100 22",
+          "stroke": "blue",
+          "weight": 3,
+          "fill": "none"
+        },
+        {
+          "d": "M20 36 Q30 18 42 28 Q52 10 62 24",
+          "stroke": "blue",
+          "weight": 3,
+          "fill": "none"
+        }
+      ]
+    }
+  ]
+}

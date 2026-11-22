@@ -1,0 +1,26 @@
+{
+  "name": "tiny-figure",
+  "tags": [
+    "minik figur",
+    "yuzsuz"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/silikon-vadisi-hala/kapak.json",
+      "paths": [
+        {
+          "d": "M50 12 a11 11 0 1,0 0.1 0 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.5
+        },
+        {
+          "d": "M36 96 L40 36 L60 36 L64 96 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.5
+        }
+      ]
+    }
+  ]
+}

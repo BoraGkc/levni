@@ -1,0 +1,65 @@
+{
+  "name": "chip-pin-book",
+  "tags": [
+    "kitap",
+    "cip",
+    "yapay zeka",
+    "yayincilik",
+    "book",
+    "microchip",
+    "ai",
+    "publishing"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kitap-yayinciligi-yapay/kapak.json",
+      "paths": [
+        {
+          "d": "M4,20 L16,20 M4,34 L16,34 M4,48 L16,48 M4,62 L16,62 M4,76 L16,76 M84,20 L96,20 M84,34 L96,34 M84,48 L96,48 M84,62 L96,62 M84,76 L96,76",
+          "stroke": "ink",
+          "weight": 9
+        },
+        {
+          "d": "M16,6 L84,6 L84,92 L16,92 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M16,6 L30,6 L30,92 L16,92 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M16,92 L84,92 L84,97 L19,97 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M42,6 a8,8 0 0,0 16,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M40,34 L76,34 L76,64 L40,64 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M45,42 L70,42 M45,49 L70,49 M45,56 L62,56",
+          "stroke": "blue",
+          "weight": 3.4
+        },
+        {
+          "d": "M22,16 L24,16 M22,22 L24,22",
+          "stroke": "paper",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

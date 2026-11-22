@@ -1,0 +1,50 @@
+{
+  "name": "candle-speech-flame",
+  "tags": [
+    "mum",
+    "alev",
+    "konuşma balonu",
+    "yalan",
+    "candle",
+    "speech bubble",
+    "flame",
+    "lie"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/nathan-fielder-elizabeth-2/ici-2.json",
+      "paths": [
+        {
+          "d": "M34 52 H66 V98 H34Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M34 52 Q40 66 46 56 Q52 70 58 56 Q64 64 66 52Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M50 46 V52",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M26 2 H74 Q80 2 80 8 V30 Q80 36 74 36 H58 L50 46 L45 36 H26 Q20 36 20 30 V8 Q20 2 26 2Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M34,19 a2.4,2.4 0 1,0 4.8,0 a2.4,2.4 0 1,0 -4.8,0 M47.6,19 a2.4,2.4 0 1,0 4.8,0 a2.4,2.4 0 1,0 -4.8,0 M61.2,19 a2.4,2.4 0 1,0 4.8,0 a2.4,2.4 0 1,0 -4.8,0",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        }
+      ]
+    }
+  ]
+}

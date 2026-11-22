@@ -1,0 +1,44 @@
+{
+  "name": "ripple-rings",
+  "tags": [
+    "dalga",
+    "halkalar",
+    "yayılma",
+    "ripple rings",
+    "spread",
+    "waves"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/naza-belgeseli-gazze/kapak.json",
+      "paths": [
+        {
+          "d": "M30,50 a20,20 0 1,0 40,0 a20,20 0 1,0 -40,0",
+          "fill": "none",
+          "stroke": "tone",
+          "weight": 3
+        },
+        {
+          "d": "M22,50 a28,28 0 1,0 56,0 a28,28 0 1,0 -56,0",
+          "fill": "none",
+          "stroke": "tone",
+          "weight": 3,
+          "dash": [
+            8,
+            6
+          ]
+        },
+        {
+          "d": "M14,50 a36,36 0 1,0 72,0 a36,36 0 1,0 -72,0",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2.4,
+          "dash": [
+            3,
+            6
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "name": "book-stairs-bandana",
+  "tags": [
+    "kitap merdiven bandana",
+    "book stairs bandana Rocky"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/michael-douglas-ve/ici-2-alt.json",
+      "paths": [
+        {
+          "d": "M2 79 H100 V96 H2Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M8 84 H42 M8 90 H32",
+          "stroke": "paper",
+          "weight": 1.6,
+          "fill": "none"
+        },
+        {
+          "d": "M2 96 H100",
+          "stroke": "ink",
+          "weight": 1,
+          "fill": "none"
+        },
+        {
+          "d": "M18 62 H100 V79 H18Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M24 67 H58 M24 73 H48",
+          "stroke": "paper",
+          "weight": 1.6,
+          "fill": "none"
+        },
+        {
+          "d": "M18 79 H100",
+          "stroke": "ink",
+          "weight": 1,
+          "fill": "none"
+        },
+        {
+          "d": "M34 45 H100 V62 H34Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M40 50 H74 M40 56 H64",
+          "stroke": "ink",
+          "weight": 1.6,
+          "fill": "none"
+        },
+        {
+          "d": "M34 62 H100",
+          "stroke": "ink",
+          "weight": 1,
+          "fill": "none"
+        },
+        {
+          "d": "M50 28 H100 V45 H50Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M56 33 H90 M56 39 H80",
+          "stroke": "paper",
+          "weight": 1.6,
+          "fill": "none"
+        },
+        {
+          "d": "M50 45 H100",
+          "stroke": "ink",
+          "weight": 1,
+          "fill": "none"
+        },
+        {
+          "d": "M66 11 H100 V28 H66Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M72 16 H106 M72 22 H96",
+          "stroke": "paper",
+          "weight": 1.6,
+          "fill": "none"
+        },
+        {
+          "d": "M66 28 H100",
+          "stroke": "ink",
+          "weight": 1,
+          "fill": "none"
+        },
+        {
+          "d": "M70 -4 Q84 -16 98 -4 L94 6 Q84 10 74 6Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M94 0 L108 -4 L106 8Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "note": "harvested from .cache/cizim-drafts/michael-douglas-ve/ici-2.json",
+      "paths": [
+        {
+          "d": "M2 79 H100 V96 H2Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M8 84 H42 M8 90 H32",
+          "stroke": "paper",
+          "weight": 1.6,
+          "fill": "none"
+        },
+        {
+          "d": "M2 96 H100",
+          "stroke": "ink",
+          "weight": 1,
+          "fill": "none"
+        },
+        {
+          "d": "M18 62 H100 V79 H18Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M24 67 H58 M24 73 H48",
+          "stroke": "paper",
+          "weight": 1.6,
+          "fill": "none"
+        },
+        {
+          "d": "M18 79 H100",
+          "stroke": "ink",
+          "weight": 1,
+          "fill": "none"
+        },
+        {
+          "d": "M34 45 H100 V62 H34Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M40 50 H74 M40 56 H64",
+          "stroke": "ink",
+          "weight": 1.6,
+          "fill": "none"
+        },
+        {
+          "d": "M34 62 H100",
+          "stroke": "ink",
+          "weight": 1,
+          "fill": "none"
+        },
+        {
+          "d": "M50 28 H100 V45 H50Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M56 33 H90 M56 39 H80",
+          "stroke": "paper",
+          "weight": 1.6,
+          "fill": "none"
+        },
+        {
+          "d": "M50 45 H100",
+          "stroke": "ink",
+          "weight": 1,
+          "fill": "none"
+        },
+        {
+          "d": "M66 11 H100 V28 H66Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M72 16 H106 M72 22 H96",
+          "stroke": "paper",
+          "weight": 1.6,
+          "fill": "none"
+        },
+        {
+          "d": "M66 28 H100",
+          "stroke": "ink",
+          "weight": 1,
+          "fill": "none"
+        },
+        {
+          "d": "M70 -4 Q84 -16 98 -4 L94 6 Q84 10 74 6Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M94 0 L108 -4 L106 8Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

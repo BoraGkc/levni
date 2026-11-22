@@ -1,0 +1,80 @@
+{
+  "name": "chip-clubhouse-ladder",
+  "tags": [
+    "cip kulup evi",
+    "merdiven yetmiyor",
+    "silikon vadisi"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/silikon-vadisi-hala/kapak.json",
+      "paths": [
+        {
+          "d": "M27 58 L27 98 M73 58 L73 98",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 9,
+          "taper": false
+        },
+        {
+          "d": "M27 80 L73 80",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 4,
+          "taper": false
+        },
+        {
+          "d": "M24 12 L24 3 M36 12 L36 3 M48 12 L48 3 M60 12 L60 3 M72 12 L72 3 M16 22 L7 22 M16 34 L7 34 M16 46 L7 46 M84 22 L93 22 M84 34 L93 34 M84 46 L93 46",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M16 12 L84 12 L84 58 L16 58 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M26 20 L74 20 L74 50 L26 50 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M30 24 L30 46 M34 28 L40 28 L40 34 M70 24 L70 46 M66 28 L60 28 L60 34 M34 44 L40 44 M66 44 L60 44",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 2.4
+        },
+        {
+          "d": "M43 36 L57 36 L57 58 L43 58 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M54 48 L54 49",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 5
+        },
+        {
+          "d": "M45 58 L43 84 M55 58 L57 84",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 4,
+          "taper": false
+        },
+        {
+          "d": "M44.4 66 L55.6 66 M43.8 73 L56.2 73 M43.2 80 L56.8 80",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 3,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

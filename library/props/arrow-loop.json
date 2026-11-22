@@ -1,0 +1,123 @@
+{
+ "name": "arrow-loop",
+ "tags": [
+  "yenile",
+  "döngü",
+  "refresh",
+  "loop",
+  "sync",
+  "tekrar"
+ ],
+ "variants": [
+  {
+   "note": "two fat green refresh arrows",
+   "paths": [
+    {
+     "d": "M20 46 Q24 18 52 16 Q70 16 80 30",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 20
+    },
+    {
+     "d": "M21.5 47.5Q25.5 19.5 53.5 17.5Q71.5 17.5 81.5 31.5",
+     "fill": "none",
+     "stroke": "green",
+     "weight": 9
+    },
+    {
+     "d": "M86 12 L82 34 L62 28",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 20
+    },
+    {
+     "d": "M87.5 13.5L83.5 35.5L63.5 29.5",
+     "fill": "none",
+     "stroke": "green",
+     "weight": 9
+    },
+    {
+     "d": "M80 56 Q76 82 48 84 Q30 84 20 70",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 20
+    },
+    {
+     "d": "M81.5 57.5Q77.5 83.5 49.5 85.5Q31.5 85.5 21.5 71.5",
+     "fill": "none",
+     "stroke": "green",
+     "weight": 9
+    },
+    {
+     "d": "M14 88 L18 66 L38 72",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 20
+    },
+    {
+     "d": "M15.5 89.5L19.5 67.5L39.5 73.5",
+     "fill": "none",
+     "stroke": "green",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "thin ink refresh arrows on tone disc",
+   "paths": [
+    {
+     "d": "M23 53Q23 25 53 25Q83 25 83 53Q83 81 53 81Q23 81 23 53Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M20 46 Q24 18 52 16 Q70 16 80 30",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M86 12 L82 34 L62 28",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M80 56 Q76 82 48 84 Q30 84 20 70",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M14 88 L18 66 L38 72",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "single three-quarter loop arrow, mustard shift",
+   "paths": [
+    {
+     "d": "M73 23Q53 11 31 25Q11 43 23 69Q39 93 69 83Q89 75 91 57",
+     "fill": "none",
+     "stroke": "mustard",
+     "weight": 9
+    },
+    {
+     "d": "M70 20 Q50 8 28 22 Q8 40 20 66 Q36 90 66 80 Q86 72 88 54",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M90 40 L88 54 L74 50",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "film-crescent-moon",
+  "tags": [
+    "film şeridi hilal ay",
+    "film strip crescent moon"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/moonlight-10-yili/kapak.json",
+      "paths": [
+        {
+          "d": "M62 4 A46 46 0 1 0 94 66 A38 38 0 1 1 62 4Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M60 12 A38 38 0 1 0 86 62",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 6,
+          "dash": [
+            5,
+            7
+          ]
+        },
+        {
+          "d": "M57 20 A32 32 0 1 0 79 60",
+          "fill": "none",
+          "stroke": "tone",
+          "weight": 1.6
+        }
+      ]
+    }
+  ]
+}

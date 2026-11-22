@@ -1,0 +1,65 @@
+{
+  "name": "stage-pick",
+  "tags": [
+    "pena",
+    "gitar penası",
+    "sahne",
+    "perde",
+    "pick",
+    "plectrum",
+    "stage",
+    "curtain"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/duncan-sheik-pop/kapak.json",
+      "paths": [
+        {
+          "d": "M50 6 Q88 6 92 40 Q94 68 50 96 Q6 68 8 40 Q12 6 50 6Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M28 66 V42 Q28 24 50 24 Q72 24 72 42 V66Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M42 66 L50 34 L58 66Z",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M28 66 V42 Q28 28 38 25 Q44 46 40 66Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M72 66 V42 Q72 28 62 25 Q56 46 60 66Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M32 32 V62 M35 28 V64",
+          "stroke": "paper",
+          "weight": 1.2
+        },
+        {
+          "d": "M68 32 V62 M65 28 V64",
+          "stroke": "paper",
+          "weight": 1.2
+        },
+        {
+          "d": "M26 66 H74",
+          "stroke": "ink",
+          "weight": 3.4
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "name": "needle",
+  "tags": [
+    "iğne",
+    "dikiş",
+    "needle",
+    "sewing",
+    "igne iplik"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/askeri-sir-yapay/ici-2.json",
+      "paths": [
+        {
+          "d": "M50 2 L58 14 L56 92 L50 100 L44 92 L42 14 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M50 20 Q54 8 50 8 Q46 8 50 20 Q54 28 50 20",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M50 14 Q85 14 80 40 Q75 60 90 78",
+          "stroke": "paper",
+          "weight": 3.5
+        }
+      ]
+    },
+    {
+      "note": "harvested from .cache/cizim-drafts/wildwood-stop-motion/ici-1.json",
+      "paths": [
+        {
+          "d": "M50 2 L50 98",
+          "stroke": "ink",
+          "weight": 7,
+          "taper": false
+        },
+        {
+          "d": "M50 4 a3 8 0 1,0 0.01 0",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M50 14 Q20 40 38 70 Q50 84 40 98",
+          "stroke": "coral",
+          "weight": 3.4
+        }
+      ]
+    }
+  ]
+}

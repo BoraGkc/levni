@@ -1,0 +1,115 @@
+{
+ "name": "briefcase",
+ "tags": [
+  "evrak çantası",
+  "iş",
+  "çanta",
+  "briefcase",
+  "business"
+ ],
+ "variants": [
+  {
+   "note": "front, handle, band and mustard clasp",
+   "paths": [
+    {
+     "d": "M36 28 L36 18 Q36 14 40 14 L60 14 Q64 14 64 18 L64 28",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M13 36 Q13 30 19 30 L87 30 Q93 30 93 36 L93 82 Q93 88 87 88 L19 88 Q13 88 13 82 Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M10 34 Q10 28 16 28 L84 28 Q90 28 90 34 L90 80 Q90 86 84 86 L16 86 Q10 86 10 80 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M10 54 L90 54",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M43 48 L58 48 L58 62 L43 62 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "bold plain, tone fill, round clasp",
+   "paths": [
+    {
+     "d": "M34 30 L34 16 L66 16 L66 30",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M10 34 Q10 28 16 28 L84 28 Q90 28 90 34 L90 80 Q90 86 84 86 L16 86 Q10 86 10 80 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M10 56 L90 56",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 56 L50.4 56.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 11
+    }
+   ]
+  },
+  {
+   "note": "tilted, tone body, vertical coral strap, two clasps",
+   "paths": [
+    {
+     "d": "M34 31.6 L32.7 19.6 Q32.3 15.7 36.3 15.2 L56.2 13.2 Q60.2 12.7 60.6 16.7 L61.8 28.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M8.5 38.3 Q7.9 32.3 13.9 31.7 L81.5 24.6 Q87.5 23.9 88.1 29.9 L92.9 75.7 Q93.5 81.6 87.6 82.2 L19.9 89.4 Q14 90 13.4 84 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M42.7 29 L58.7 27.3 L64.7 85 L48.8 86.6 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M39.7 29 L45.8 86.6 M55.7 27.3 L61.7 85",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M20.4 55.1 L30.3 54.1 L31.4 64 L21.4 65.1 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M70.1 49.9 L80 48.9 L81.1 58.8 L71.1 59.8 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+  "name": "gitar-yangin-merdiveni",
+  "tags": [
+    "gitar",
+    "yangın merdiveni",
+    "sokak",
+    "guitar",
+    "fire escape"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/rent-broadway-efsanesinin/ici-1.json",
+      "paths": [
+        {
+          "d": "M44 2 L56 2 L56 8 L44 8 Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M46 8 L46 46 M54 8 L54 46",
+          "stroke": "ink",
+          "weight": 4,
+          "taper": false
+        },
+        {
+          "d": "M45 8 L55 8 M45 15 L55 15 M45 22 L55 22 M45 29 L55 29 M45 36 L55 36 ",
+          "stroke": "coral",
+          "weight": 3.5,
+          "taper": false
+        },
+        {
+          "d": "M50 40 C30 36 26 52 36 58 C20 62 14 82 26 92 C38 100 62 100 74 92 C86 82 80 62 64 58 C74 52 70 36 50 40 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M40 76 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M44 76 L56 76 M50 69 L50 83",
+          "stroke": "mustard",
+          "weight": 3
+        },
+        {
+          "d": "M38 90 L62 90",
+          "stroke": "paper",
+          "weight": 4
+        }
+      ]
+    }
+  ]
+}

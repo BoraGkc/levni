@@ -1,0 +1,74 @@
+{
+  "name": "curtain-back-sofa",
+  "tags": [
+    "kanepe",
+    "perde",
+    "sahne",
+    "sitcom",
+    "tiyatro",
+    "sofa",
+    "curtain",
+    "stage"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/other-desert-cities/ici-2.json",
+      "paths": [
+        {
+          "d": "M18 10 L82 10 L82 56 L18 56 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M18 10 Q40 30 38 56 L18 56 Z M82 10 Q60 30 62 56 L82 56 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M38 56 L38 12 L62 12 L62 56 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M50 12 L40 56 L60 56 Z",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M22 14 Q30 30 30 54 M28 12 Q34 28 34 54 M78 14 Q70 30 70 54 M72 12 Q66 28 66 54",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M6 52 Q6 44 14 44 L22 44 L22 78 L6 78 Z M94 52 Q94 44 86 44 L78 44 L78 78 L94 78 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M18 58 L82 58 Q86 58 86 64 L86 78 L14 78 L14 64 Q14 58 18 58 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M50 60 L50 76",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M12 78 L12 90 M88 78 L88 90",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 4
+        }
+      ]
+    }
+  ]
+}

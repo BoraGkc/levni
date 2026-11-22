@@ -1,0 +1,45 @@
+{
+  "name": "corridor-mirror",
+  "tags": [
+    "mirror",
+    "corridor",
+    "horror",
+    "double"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/other-mommy-jessica/kapak-3d.json",
+      "paths": [
+        {
+          "d": "M44,70 H56 L58,97 H42 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M19,38 a31,35 0 1,0 62,0 a31,35 0 1,0 -62,0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M25,38 a25,29 0 1,0 50,0 a25,29 0 1,0 -50,0",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M32,22 H68 V54 H32 Z M40,28 H60 V48 H40 Z M45,33 H55 V43 H45 Z M32,22 L45,33 M68,22 L55,33 M32,54 L45,43 M68,54 L55,43",
+          "stroke": "paper",
+          "weight": 2.2
+        },
+        {
+          "d": "M46,35 H54 V43 H46 Z",
+          "fill": "coral",
+          "stroke": "paper",
+          "weight": 1.5
+        }
+      ]
+    }
+  ]
+}

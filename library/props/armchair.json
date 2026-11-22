@@ -1,0 +1,84 @@
+{
+ "name": "armchair",
+ "tags": [
+  "koltuk",
+  "sandalye",
+  "armchair",
+  "mobilya",
+  "chair"
+ ],
+ "variants": [
+  {
+   "note": "front view armchair, green seat cushion",
+   "paths": [
+    {
+     "d": "M20 78 L18 91 M80 78 L82 91",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M26 24 C26 12 74 12 74 24 L77 58 L23 58 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M6 44 C6 36 22 36 22 44 L22 76 L8 78 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M78 44 C78 36 94 36 94 44 L92 78 L78 76 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M25 58 L81 58 L83 76 L23 76 Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 56 L78 56 L80 74 L20 74 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "side view armchair, coral cushion",
+   "paths": [
+    {
+     "d": "M26 78 L24 91 M82 78 L84 91",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M14 22 C16 10 34 10 38 20 L46 56 L86 56 L88 78 L18 78 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M46 40 C46 32 80 32 80 40 L80 56 L46 56 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M47 64 L89 64 L90 76 L48 76 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M44 62 L86 62 L87 74 L45 74 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

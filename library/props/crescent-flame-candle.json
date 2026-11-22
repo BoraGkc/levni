@@ -1,0 +1,50 @@
+{
+  "name": "crescent-flame-candle",
+  "tags": [
+    "mum",
+    "alev",
+    "hilal",
+    "ay",
+    "regl dongusu",
+    "isi",
+    "candle",
+    "flame",
+    "crescent moon",
+    "cycle"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1-v4.json",
+      "paths": [
+        {
+          "d": "M32,46 L68,46 L68,92 Q50,98 32,92 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M32,52 L68,52 L68,60 Q64,66 62,60 Q60,72 55,62 Q50,56 44,64 Q40,70 38,60 Q34,62 32,60 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M50,46 L52,36",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M58,-2 C10,6 12,40 56,42 C28,32 32,10 58,-2 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M26,92 Q50,102 74,92",
+          "stroke": "ink",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

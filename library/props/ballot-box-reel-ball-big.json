@@ -1,0 +1,94 @@
+{
+  "name": "ballot-box-reel-ball-big",
+  "tags": [
+    "oy sandigi film makarasi top",
+    "ballot box reel ball crop"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/la-bola-negra/kapak.json",
+      "paths": [
+        {
+          "d": "M23,22 a27,27 0 1,0 54,0 a27,27 0 1,0 -54,0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M44.6,6.3 a5.4,5.4 0 1,0 10.8,0 a5.4,5.4 0 1,0 -10.8,0",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M59.50000000000001,17.2 a5.4,5.4 0 1,0 10.8,0 a5.4,5.4 0 1,0 -10.8,0",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M53.800000000000004,34.7 a5.4,5.4 0 1,0 10.8,0 a5.4,5.4 0 1,0 -10.8,0",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M35.4,34.7 a5.4,5.4 0 1,0 10.8,0 a5.4,5.4 0 1,0 -10.8,0",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M29.700000000000003,17.2 a5.4,5.4 0 1,0 10.8,0 a5.4,5.4 0 1,0 -10.8,0",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M45.95,22 a4.05,4.05 0 1,0 8.1,0 a4.05,4.05 0 1,0 -8.1,0",
+          "fill": "coral",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M14 54 L86 54 L84 110 L16 110 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M24 70 L76 70 M24 78 L76 78",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 2.4,
+          "dash": [
+            7,
+            5
+          ]
+        },
+        {
+          "d": "M8 44 L92 44 L96 56 L4 56 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M30 50 L70 50",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 5.5
+        },
+        {
+          "d": "M10 12 L2 8 M8 24 L-2 24 M90 12 L98 8 M92 24 L102 24",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2.4,
+          "dash": [
+            6,
+            5
+          ]
+        }
+      ]
+    }
+  ]
+}

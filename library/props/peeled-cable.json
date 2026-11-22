@@ -1,0 +1,59 @@
+{
+  "name": "peeled-cable",
+  "tags": [
+    "soyulmuş kablo",
+    "bakır",
+    "tel",
+    "cable",
+    "copper"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/bakir-tel-soyarak/kapak.json",
+      "paths": [
+        {
+          "d": "M44 50 Q64 30 96 28",
+          "stroke": "coral",
+          "weight": 6
+        },
+        {
+          "d": "M44 50 Q68 42 98 42",
+          "stroke": "coral",
+          "weight": 6
+        },
+        {
+          "d": "M44 52 Q70 58 98 58",
+          "stroke": "coral",
+          "weight": 6
+        },
+        {
+          "d": "M44 54 Q64 72 94 74",
+          "stroke": "coral",
+          "weight": 6
+        },
+        {
+          "d": "M44 51 Q70 50 96 50",
+          "stroke": "mustard",
+          "weight": 0
+        },
+        {
+          "d": "M2 38 Q2 34 8 34 L38 34 Q46 34 46 40 L46 60 Q46 66 38 66 L8 66 Q2 66 2 62 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M46 36 Q38 50 46 64",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M10 42 L34 42 M10 50 L34 50 M10 58 L34 58",
+          "stroke": "blue",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "name": "sound-sand-hourglass",
+  "tags": [
+    "saat",
+    "12 saat",
+    "ses dalgası",
+    "kum saati"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/tim-heidecker-joe/ici-1-r0.json",
+      "paths": [
+        {
+          "d": "M24 6 L76 6 L76 13 L24 13 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M24 87 L76 87 L76 94 L24 94 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M30 13 L30 24 Q30 38 50 50 Q30 62 30 76 L30 87 L70 87 L70 76 Q70 62 50 50 Q70 38 70 24 L70 13 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M33 27 L38 22 L42 30 L46 20 L50 32 L54 22 L58 30 L62 22 L67 27",
+          "stroke": "coral",
+          "weight": 3,
+          "taper": false
+        },
+        {
+          "d": "M36 36 L41 32 L45 39 L50 32 L55 39 L59 32 L64 36",
+          "stroke": "coral",
+          "weight": 3,
+          "taper": false
+        },
+        {
+          "d": "M50 44 L50 70",
+          "stroke": "coral",
+          "weight": 3,
+          "taper": false,
+          "dash": [
+            3,
+            4
+          ]
+        },
+        {
+          "d": "M36 86 L36 80 M41 86 L41 74 M46 86 L46 70 M50 86 L50 66 M54 86 L54 71 M59 86 L59 76 M64 86 L64 82",
+          "stroke": "coral",
+          "weight": 4,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

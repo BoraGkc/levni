@@ -1,0 +1,87 @@
+{
+  "name": "wavy-tower-ivy",
+  "tags": [
+    "dalgali kule sarmasik agac",
+    "wavy tower ivy trees",
+    "organik cephe"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/ma-yansong-lucas/ici-1.json",
+      "paths": [
+        {
+          "d": "M24 98 Q14 82 26 68 Q38 54 26 40 Q16 26 28 14 L72 14 Q84 26 74 40 Q62 54 74 68 Q86 82 76 98 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.8
+        },
+        {
+          "d": "M22 30 Q50 40 78 30 M20 52 Q50 62 80 52 M20 74 Q50 84 80 74",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 3.2
+        },
+        {
+          "d": "M36 18 L36 26 M46 18 L46 27 M56 18 L56 27 M66 18 L66 26 M36 40 L36 48 M46 41 L46 50 M56 41 L56 50 M66 40 L66 48 M36 62 L36 70 M46 63 L46 72 M56 63 L56 72 M66 62 L66 70 M36 84 L36 92 M46 85 L46 94 M56 85 L56 94 M66 84 L66 92",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 4.4
+        },
+        {
+          "d": "M40 98 L40 90 Q50 84 60 90 L60 98 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M28 14 Q26 40 30 60 Q34 80 28 96",
+          "fill": "none",
+          "stroke": "green",
+          "weight": 4.4
+        },
+        {
+          "d": "M22,34 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M26,56 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M23.6,78 a4.4,4.4 0 1,0 8.8,0 a4.4,4.4 0 1,0 -8.8,0",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M38 14 L38 8 M50 14 L50 4 M62 14 L62 8",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M27,2 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M39,-4 a11,11 0 1,0 22,0 a11,11 0 1,0 -22,0",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M55,2 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

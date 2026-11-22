@@ -1,0 +1,96 @@
+{
+ "name": "quote-marks",
+ "tags": [
+  "tırnak",
+  "alıntı",
+  "quote",
+  "quotation",
+  "söz",
+  "quote marks"
+ ],
+ "variants": [
+  {
+   "note": "two big curly opening marks, coral shift",
+   "paths": [
+    {
+     "d": "M33 21Q13 27 11 55Q9 75 25 77Q39 77 39 63Q39 51 27 51Q23 51 21 53Q23 39 35 33Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M79 21Q59 27 57 55Q55 75 71 77Q85 77 85 63Q85 51 73 51Q69 51 67 53Q69 39 81 33Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M30 18Q10 24 8 52Q6 72 22 74Q36 74 36 60Q36 48 24 48Q20 48 18 50Q20 36 32 30Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M76 18Q56 24 54 52Q52 72 68 74Q82 74 82 60Q82 48 70 48Q66 48 64 50Q66 36 78 30Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "paper curly marks with light coral shadow",
+   "paths": [
+    {
+     "d": "M34 21Q14 27 12 55Q10 75 26 77Q40 77 40 63Q40 51 28 51Q24 51 22 53Q24 39 36 33Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M80 21Q60 27 58 55Q56 75 72 77Q86 77 86 63Q86 51 74 51Q70 51 68 53Q70 39 82 33Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M30 18Q10 24 8 52Q6 72 22 74Q36 74 36 60Q36 48 24 48Q20 48 18 50Q20 36 32 30Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M76 18Q56 24 54 52Q52 72 68 74Q82 74 82 60Q82 48 70 48Q66 48 64 50Q66 36 78 30Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "straight slanted tick quotes, fat",
+   "paths": [
+    {
+     "d": "M32 22 L24 58",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 24
+    },
+    {
+     "d": "M33.5 23.5L25.5 59.5",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 12
+    },
+    {
+     "d": "M64 22 L56 58",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 24
+    },
+    {
+     "d": "M65.5 23.5L57.5 59.5",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 12
+    }
+   ]
+  }
+ ]
+}

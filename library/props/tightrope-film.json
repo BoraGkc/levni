@@ -1,0 +1,122 @@
+{
+  "name": "tightrope-film",
+  "tags": [
+    "film şeridi ip cambaz",
+    "film strip tightrope"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/paramount-warner-bros/ici-1.json",
+      "paths": [
+        {
+          "d": "M4 100 V30 H26 V100Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M74 100 V14 H96 V100Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M9 40 h4 v5 h-4Z M17 40 h4 v5 h-4Z",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M79 26 h4 v5 h-4Z M87 26 h4 v5 h-4Z",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M9 52 h4 v5 h-4Z M17 52 h4 v5 h-4Z",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M79 38 h4 v5 h-4Z M87 38 h4 v5 h-4Z",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M9 64 h4 v5 h-4Z M17 64 h4 v5 h-4Z",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M79 50 h4 v5 h-4Z M87 50 h4 v5 h-4Z",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M9 76 h4 v5 h-4Z M17 76 h4 v5 h-4Z",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M79 62 h4 v5 h-4Z M87 62 h4 v5 h-4Z",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M9 88 h4 v5 h-4Z M17 88 h4 v5 h-4Z",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M79 74 h4 v5 h-4Z M87 74 h4 v5 h-4Z",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M26 34 Q50 44 74 24",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 22
+        },
+        {
+          "d": "M26 34 Q50 44 74 24",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 3,
+          "dash": [
+            1.6,
+            1.6
+          ]
+        },
+        {
+          "d": "M51 12.2 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M54 16 V28 M54 28 L50 35 M54 28 L58 35",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 5,
+          "taper": false
+        },
+        {
+          "d": "M36 21 L72 17",
+          "stroke": "coral",
+          "weight": 5,
+          "fill": "none",
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

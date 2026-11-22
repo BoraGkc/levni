@@ -1,0 +1,59 @@
+{
+  "name": "clock-mic",
+  "tags": [
+    "mikrofon",
+    "saat",
+    "canlı",
+    "mic",
+    "clock"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/saturday-night-live/kapak.json",
+      "paths": [
+        {
+          "d": "M46 62 V96 M30 96 H70",
+          "fill": null,
+          "stroke": "paper",
+          "weight": 5
+        },
+        {
+          "d": "M50 4 a30 30 0 1 0 0.1 0 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M50 12 V34 L64 44",
+          "fill": null,
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M50 8 v4 M50 56 v4 M22 34 h4 M74 34 h4",
+          "fill": null,
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M50 34 L64 44 M50 12 V34",
+          "fill": "coral",
+          "stroke": "coral",
+          "weight": 0.1
+        },
+        {
+          "d": "M50 34 L38 24",
+          "fill": null,
+          "stroke": "coral",
+          "weight": 5
+        },
+        {
+          "d": "M36 62 H64 V70 H36 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "name": "tape-strap-watch",
+  "tags": [
+    "akilli saat",
+    "mezura",
+    "surekli olcum",
+    "smartwatch",
+    "tape measure",
+    "wearable"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-2-alt.json",
+      "paths": [
+        {
+          "d": "M36,-6 L64,-6 L62,30 L38,30 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M38,76 L62,76 L64,108 L36,108 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M36,2 L46,2 M36,10 L43,10 M36,18 L46,18 M36,26 L43,26 M56,2 L64,2 M57,10 L64,10 M56,18 L64,18 M57,26 L64,26 M36,80 L46,80 M36,88 L43,88 M36,96 L46,96 M56,80 L64,80 M57,88 L64,88 M56,96 L64,96",
+          "stroke": "blue",
+          "weight": 2.4
+        },
+        {
+          "d": "M26,30 L74,30 L78,50 L74,76 L26,76 L22,50 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M32,36 L68,36 L70,50 L68,70 L32,70 L30,50 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M34,54 L42,54 L46,44 L52,64 L57,50 L60,54 L66,54",
+          "stroke": "paper",
+          "weight": 4
+        }
+      ]
+    }
+  ]
+}

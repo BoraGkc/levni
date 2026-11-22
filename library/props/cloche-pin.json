@@ -1,0 +1,54 @@
+{
+  "name": "cloche-pin",
+  "tags": [
+    "cloche",
+    "servis kapağı",
+    "restoran",
+    "harita iğnesi",
+    "map pin",
+    "sahte restoran"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/oobah-butler-zengin/ici-1.json",
+      "paths": [
+        {
+          "d": "M4 80 L96 80 Q96 90 86 90 L14 90 Q4 90 4 80 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M10 78 Q10 24 50 24 Q90 24 90 78 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M20 70 Q20 40 38 32",
+          "fill": "none",
+          "stroke": "tone",
+          "weight": 2.4
+        },
+        {
+          "d": "M50 25 L50 20",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M50 24 Q36 12 40 6 Q45 -2 52 -1 Q62 0 62 8 Q62 14 50 24 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M50 5 m-3 0 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+ "name": "soccer-ball",
+ "tags": [
+  "futbol",
+  "top",
+  "soccer ball",
+  "football",
+  "spor"
+ ],
+ "variants": [
+  {
+   "note": "classic ball, ink pentagon and seams",
+   "paths": [
+    {
+     "d": "M12 52 Q10 24 36 14 Q64 6 82 26 Q92 44 84 66 Q72 90 46 88 Q16 84 12 52 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 38 L49 15 M61 46 L84 38 M57 59 L72 80 M43 59 L28 80 M39 46 L15 38",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 38 L61 46 L57 59 L43 59 L39 46 Z",
+     "fill": "ink",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M50 38 L61 46 L57 59 L43 59 L39 46 Z",
+     "fill": "ink",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M70 22 L79 28 L76 37 L67 34 Z",
+     "fill": "ink",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M18 62 L28 66 L27 77 L16 72 Z",
+     "fill": "ink",
+     "stroke": "none",
+     "weight": 0
+    }
+   ]
+  },
+  {
+   "note": "bold simple ball, coral patches offset",
+   "paths": [
+    {
+     "d": "M12 52 Q10 24 36 14 Q64 6 82 26 Q92 44 84 66 Q72 90 46 88 Q16 84 12 52 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M 53 40 L 64 48 L 60 61 L 46 61 L 42 48 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M50 38 L61 46 L57 59 L43 59 L39 46 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 38 L50 16 M61 46 L82 40 M57 59 L70 78 M43 59 L30 78 M39 46 L18 40",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  },
+  {
+   "note": "ball resting on a grass tuft, tilted",
+   "paths": [
+    {
+     "d": "M 17 84 Q 43 78 89 84 L 89 92 L 17 92 Z",
+     "fill": "green",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M12 88 Q50 82 90 88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M 21.4 54.7 Q 12.7 33.4 30.5 19 Q 50.3 5.7 69.4 16.7 Q 81.7 28.2 81.1 47.4 Q 77.8 69.2 57 74.2 Q 32.6 78.7 21.4 54.7 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M 47.5 34.2 L 58.1 37.7 L 58.2 48.8 L 47.3 52.4 L 40.9 43.2 Z",
+     "fill": "ink",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M 47.5 34.2 L 42.6 22 M 58.1 37.7 L 71.4 28.2 M 58.2 48.8 L 72.2 57.2 M 47.3 52.4 L 41 67.3 M 40.9 43.2 L 24.6 43.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M20 80 L18 70 M26 82 L28 72",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

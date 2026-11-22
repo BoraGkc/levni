@@ -1,0 +1,42 @@
+{
+  "name": "court-columns",
+  "tags": [
+    "adliye",
+    "sütun",
+    "mahkeme",
+    "courthouse",
+    "columns",
+    "court"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/nick-reiner-davasi/ici-1.json",
+      "paths": [
+        {
+          "d": "M4 28 L50 4 L96 28 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M10 32 L90 32 L90 40 L10 40 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M16 40 L16 84 M34 40 L34 84 M50 40 L50 84 M66 40 L66 84 M84 40 L84 84",
+          "stroke": "paper",
+          "weight": 9,
+          "taper": false
+        },
+        {
+          "d": "M6 84 L94 84 L94 94 L6 94 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

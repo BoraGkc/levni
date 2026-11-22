@@ -1,0 +1,91 @@
+{
+  "name": "reel-wifi",
+  "tags": [
+    "film makarası",
+    "wifi",
+    "streaming",
+    "reel"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/bu-haftanin-yeni/ici-1.json",
+      "paths": [
+        {
+          "d": "M50 4 a46 46 0 1 0 0.1 0Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M50 10 a40 40 0 1 0 0.1 0Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M75.98076211353316 58.0 a7 7 0 1 0 0.1 0Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M50.0 73.0 a7 7 0 1 0 0.1 0Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M24.01923788646684 58.0 a7 7 0 1 0 0.1 0Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M24.019237886466843 28.0 a7 7 0 1 0 0.1 0Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M49.99999999999999 13.0 a7 7 0 1 0 0.1 0Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M75.98076211353316 27.999999999999986 a7 7 0 1 0 0.1 0Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M44.34314575050762 53.34314575050762 A8 8 0 0 1 55.65685424949238 53.34314575050762",
+          "stroke": "coral",
+          "weight": 5
+        },
+        {
+          "d": "M39.39339828220179 48.39339828220179 A15 15 0 0 1 60.60660171779821 48.39339828220179",
+          "stroke": "coral",
+          "weight": 5
+        },
+        {
+          "d": "M34.44365081389596 43.44365081389596 A22 22 0 0 1 65.55634918610404 43.44365081389596",
+          "stroke": "coral",
+          "weight": 5
+        },
+        {
+          "d": "M50 55.5 a3.5 3.5 0 1 0 0.1 0Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M70 90 Q92 96 104 82 L110 90 Q96 106 70 100 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        }
+      ]
+    }
+  ]
+}

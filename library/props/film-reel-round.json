@@ -1,0 +1,34 @@
+{
+  "name": "film-reel-round",
+  "tags": [
+    "film makarası",
+    "belgesel",
+    "film reel",
+    "documentary"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/naza-belgeseli-gazze/kapak.json",
+      "paths": [
+        {
+          "d": "M4,50 a46,46 0 1,0 92,0 a46,46 0 1,0 -92,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M44,50 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M44,26 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0 M62,38 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0 M62,60 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0 M44,74 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0 M26,60 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0 M26,38 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 1.8
+        }
+      ]
+    }
+  ]
+}

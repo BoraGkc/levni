@@ -1,0 +1,201 @@
+{
+ "name": "popcorn",
+ "tags": [
+  "misir",
+  "patlak misir",
+  "popcorn",
+  "sinema",
+  "atistirmalik"
+ ],
+ "variants": [
+  {
+   "note": "striped bucket with popcorn puffs",
+   "paths": [
+    {
+     "d": "M19 36 Q19 25.88 30 25.88 Q41 25.88 41 36 Q41 46.120000000000005 30 46.120000000000005 Q19 46.120000000000005 19 36 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M36 28 Q36 16.96 48 16.96 Q60 16.96 60 28 Q60 39.04 48 39.04 Q36 39.04 36 28 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M55 34 Q55 23.88 66 23.88 Q77 23.88 77 34 Q77 44.120000000000005 66 44.120000000000005 Q55 44.120000000000005 55 34 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M31 44 Q31 35.72 40 35.72 Q49 35.72 49 44 Q49 52.28 40 52.28 Q31 52.28 31 44 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M49 44 Q49 35.72 58 35.72 Q67 35.72 67 44 Q67 52.28 58 52.28 Q49 52.28 49 44 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M22 46 L78 44 L70 92 L30 92 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M 33 46 L 43 46 L 41 92 L 34 92 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M 53 45 L 63 45 L 59 92 L 51 92 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M22 46 L78 44 L70 92 L30 92 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 46 Q50 52 72 46",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "bold bucket, mustard kernels pop",
+   "paths": [
+    {
+     "d": "M 21 38 Q 21 27.9 32 27.9 Q 43 27.9 43 38 Q 43 48.1 32 48.1 Q 21 48.1 21 38 Z",
+     "fill": "tone-mustard",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M 38 30 Q 38 19 50 19 Q 62 19 62 30 Q 62 41 50 41 Q 38 41 38 30 Z",
+     "fill": "tone-mustard",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M 57 36 Q 57 25.9 68 25.9 Q 79 25.9 79 36 Q 79 46.1 68 46.1 Q 57 46.1 57 36 Z",
+     "fill": "tone-mustard",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M19 36 Q19 25.88 30 25.88 Q41 25.88 41 36 Q41 46.120000000000005 30 46.120000000000005 Q19 46.120000000000005 19 36 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M36 28 Q36 16.96 48 16.96 Q60 16.96 60 28 Q60 39.04 48 39.04 Q36 39.04 36 28 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M55 34 Q55 23.88 66 23.88 Q77 23.88 77 34 Q77 44.120000000000005 66 44.120000000000005 Q55 44.120000000000005 55 34 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M 25 48 L 81 46 L 73 94 L 33 94 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M22 46 L78 44 L70 92 L30 92 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M34 60 L64 60",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "box with falling kernels",
+   "paths": [
+    {
+     "d": "M20 44 L80 44 L74 92 L26 92 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M 23 46 L 83 46 L 82 60 L 24 60 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M20 44 L80 44 L79 58 L21 58",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M26 36 Q26 26.799999999999997 36 26.799999999999997 Q46 26.799999999999997 46 36 Q46 45.2 36 45.2 Q26 45.2 26 36 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M44 30 Q44 18.96 56 18.96 Q68 18.96 68 30 Q68 41.04 56 41.04 Q44 41.04 44 30 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M64 38 Q64 30.64 72 30.64 Q80 30.64 80 38 Q80 45.36 72 45.36 Q64 45.36 64 38 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M5 66 Q5 61.4 10 61.4 Q15 61.4 15 66 Q15 70.6 10 70.6 Q5 70.6 5 66 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M85 72 Q85 67.4 90 67.4 Q95 67.4 95 72 Q95 76.6 90 76.6 Q85 76.6 85 72 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M84 54 Q84 50.32 88 50.32 Q92 50.32 92 54 Q92 57.68 88 57.68 Q84 57.68 84 54 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M40 70 L60 70",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "yarasa-papyon-3d",
+  "tags": [
+    "papyon",
+    "yarasa",
+    "bond"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/robert-pattinson-james/kapak-3d.json",
+      "paths": [
+        {
+          "d": "M44 50 Q22 20 4 28 L12 40 L4 52 L12 64 L4 74 Q24 80 44 54 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M56 50 Q78 20 96 28 L88 40 L96 52 L88 64 L96 74 Q76 80 56 54 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M42 40 L58 40 L60 66 L40 66 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M30 50 Q18 44 10 40 M70 50 Q82 44 90 40",
+          "stroke": "paper",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

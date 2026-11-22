@@ -1,0 +1,138 @@
+{
+  "name": "hat-tree",
+  "tags": [
+    "şapka askısı ağaç",
+    "hat stand tree"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/sarah-jones-america/ici-2.json",
+      "paths": [
+        {
+          "d": "M50 100 V34",
+          "stroke": "ink",
+          "weight": 16,
+          "fill": "none"
+        },
+        {
+          "d": "M50 100 V34",
+          "stroke": "coral",
+          "weight": 10,
+          "fill": "none"
+        },
+        {
+          "d": "M50 68 L20 50",
+          "stroke": "ink",
+          "weight": 10,
+          "fill": "none",
+          "taper": false
+        },
+        {
+          "d": "M50 68 L20 50",
+          "stroke": "coral",
+          "weight": 5,
+          "fill": "none",
+          "taper": false
+        },
+        {
+          "d": "M50 64 L80 46",
+          "stroke": "ink",
+          "weight": 10,
+          "fill": "none",
+          "taper": false
+        },
+        {
+          "d": "M50 64 L80 46",
+          "stroke": "coral",
+          "weight": 5,
+          "fill": "none",
+          "taper": false
+        },
+        {
+          "d": "M50 46 L28 28",
+          "stroke": "ink",
+          "weight": 10,
+          "fill": "none",
+          "taper": false
+        },
+        {
+          "d": "M50 46 L28 28",
+          "stroke": "coral",
+          "weight": 5,
+          "fill": "none",
+          "taper": false
+        },
+        {
+          "d": "M50 42 L72 24",
+          "stroke": "ink",
+          "weight": 10,
+          "fill": "none",
+          "taper": false
+        },
+        {
+          "d": "M50 42 L72 24",
+          "stroke": "coral",
+          "weight": 5,
+          "fill": "none",
+          "taper": false
+        },
+        {
+          "d": "M30 100 H70",
+          "stroke": "ink",
+          "weight": 10,
+          "fill": "none",
+          "taper": false
+        },
+        {
+          "d": "M7 50 H33 V46 H7Z M12 46 V30 H28 V46Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M12 43 H28",
+          "stroke": "coral",
+          "weight": 3,
+          "fill": "none"
+        },
+        {
+          "d": "M66 46 Q66 30 80 30 Q92 30 92 42Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M90 42 H102",
+          "stroke": "ink",
+          "weight": 3,
+          "fill": "none",
+          "taper": false
+        },
+        {
+          "d": "M13 28 Q16 14 28 14 Q42 14 43 28 Q28 32 13 28Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M28 14 v-4",
+          "stroke": "ink",
+          "weight": 2.4,
+          "fill": "none"
+        },
+        {
+          "d": "M62 24 H82 L79 8 H65Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M72 8 Q80 12 82 20",
+          "stroke": "mustard",
+          "weight": 2.4,
+          "fill": "none"
+        }
+      ]
+    }
+  ]
+}

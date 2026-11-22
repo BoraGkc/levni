@@ -1,0 +1,126 @@
+{
+ "name": "shopping-bag",
+ "tags": [
+  "alışveriş çantası",
+  "poşet",
+  "shopping bag",
+  "çanta",
+  "market"
+ ],
+ "variants": [
+  {
+   "note": "paper bag with handles",
+   "paths": [
+    {
+     "d": "M36 26 Q36 8 50 8 Q64 8 64 26",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M23 28 L83 28 L87 92 L19 92Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M20 26 L80 26 L84 90 L16 90Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 26 L80 26 L84 90 L16 90Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 36 L80 36",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "plastic bag with leek and bread",
+   "paths": [
+    {
+     "d": "M34 36 Q34 20 42 22 M66 36 Q66 20 58 22",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24 34 L76 34 Q88 60 80 90 L20 90 Q12 60 24 34Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M47 36 L47 10 L53 8 L55 36Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M44 34 L44 8 L50 6 L52 34Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M60 34 Q64 18 72 14 L74 18 Q70 28 66 34",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M30 56 Q28 72 32 82",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "tote bag with a coral stripe",
+   "paths": [
+    {
+     "d": "M34 28 Q32 6 50 6 Q68 6 66 28",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M18 28 L82 28 L78 90 L22 90Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M23 54 L83 54 L82 68 L24 68Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M20 52 L80 52 L79 66 L21 66Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M20 52 L80 52 L79 66 L21 66Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M18 28 L82 28",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

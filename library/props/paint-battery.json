@@ -1,0 +1,53 @@
+{
+  "name": "paint-battery",
+  "tags": [
+    "pil",
+    "boya",
+    "üretim enerjisi",
+    "battery",
+    "paint"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/camille-henrot-sanat/ici-2.json",
+      "paths": [
+        {
+          "d": "M6 24 H88 V76 H6Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.8
+        },
+        {
+          "d": "M88 40 H98 V60 H88Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M12 32 Q16 28 26 31 L25 69 Q18 72 13 68Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M31 32 Q35 28 45 31 L44 69 Q37 72 32 68Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M50 32 Q54 28 64 31 L63 69 Q56 72 51 68Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M69 32 Q73 28 83 31 L82 69 Q75 72 70 68Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "name": "clock-lens",
+  "tags": [
+    "saat",
+    "spot ışığı",
+    "zaman"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/tom-hanks-broadway/kapak-3d.json",
+      "paths": [
+        {
+          "d": "M3 50 a47 47 0 1 0 94 0 a47 47 0 1 0 -94 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M46.8 12 a3.2 3.2 0 1 0 6.4 0 a3.2 3.2 0 1 0 -6.4 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M65.8 17.091034656191326 a3.2 3.2 0 1 0 6.4 0 a3.2 3.2 0 1 0 -6.4 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M79.70896534380866 30.999999999999996 a3.2 3.2 0 1 0 6.4 0 a3.2 3.2 0 1 0 -6.4 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M84.8 50 a3.2 3.2 0 1 0 6.4 0 a3.2 3.2 0 1 0 -6.4 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M79.70896534380867 69 a3.2 3.2 0 1 0 6.4 0 a3.2 3.2 0 1 0 -6.4 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M65.8 82.90896534380867 a3.2 3.2 0 1 0 6.4 0 a3.2 3.2 0 1 0 -6.4 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M46.800000000000004 88 a3.2 3.2 0 1 0 6.4 0 a3.2 3.2 0 1 0 -6.4 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M27.80000000000001 82.90896534380867 a3.2 3.2 0 1 0 6.4 0 a3.2 3.2 0 1 0 -6.4 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M13.89103465619134 69.00000000000001 a3.2 3.2 0 1 0 6.4 0 a3.2 3.2 0 1 0 -6.4 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M8.8 50.00000000000001 a3.2 3.2 0 1 0 6.4 0 a3.2 3.2 0 1 0 -6.4 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M13.891034656191334 30.999999999999996 a3.2 3.2 0 1 0 6.4 0 a3.2 3.2 0 1 0 -6.4 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M27.799999999999983 17.09103465619134 a3.2 3.2 0 1 0 6.4 0 a3.2 3.2 0 1 0 -6.4 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M20 50 a30 30 0 1 0 60 0 a30 30 0 1 0 -60 0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M50 50 L50 28",
+          "stroke": "ink",
+          "weight": 4,
+          "taper": false
+        },
+        {
+          "d": "M50 50 L64 60",
+          "stroke": "ink",
+          "weight": 5,
+          "taper": false
+        },
+        {
+          "d": "M46.5 50 a3.5 3.5 0 1 0 7 0 a3.5 3.5 0 1 0 -7 0",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1.6
+        }
+      ]
+    }
+  ]
+}

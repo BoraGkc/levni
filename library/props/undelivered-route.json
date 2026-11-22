@@ -1,0 +1,34 @@
+{
+  "name": "undelivered-route",
+  "tags": [
+    "rota",
+    "teslimat",
+    "dashed route",
+    "delivery"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/bud-light-boykotculari/ici-1.json",
+      "paths": [
+        {
+          "d": "M98.7 7.5 C83 7.5 87 29.4 71.7 25 H53.3",
+          "stroke": "paper",
+          "weight": 6,
+          "dash": [
+            3,
+            2.6
+          ]
+        },
+        {
+          "d": "M53.3 25 H41",
+          "stroke": "blue",
+          "weight": 6,
+          "dash": [
+            3,
+            2.6
+          ]
+        }
+      ]
+    }
+  ]
+}

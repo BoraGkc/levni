@@ -1,0 +1,57 @@
+{
+  "name": "pulcinella-question",
+  "tags": [
+    "pulcinella maske",
+    "soru işareti",
+    "commedia dell'arte",
+    "mask",
+    "question"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/camille-henrot-sanat/ici-1.json",
+      "paths": [
+        {
+          "d": "M50 6 Q86 6 86 44 Q86 72 66 84 Q50 92 34 84 Q14 72 14 44 Q14 6 50 6Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M14 36 Q50 20 86 36 L84 20 Q50 0 16 20Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M26 42 Q34 34 44 42 Q34 50 26 42Z M56 42 Q66 34 74 42 Q66 50 56 42Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M24 30 Q34 24 44 31 M56 31 Q66 24 76 30",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M50 46 Q64 46 66 58 Q68 70 56 74 Q50 77 50 86",
+          "stroke": "coral",
+          "weight": 8
+        },
+        {
+          "d": "M50 91.4 a3.6 3.6 0 1 0 0.1 0Z",
+          "fill": "coral",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M30 70 Q40 82 50 82 Q38 74 30 70Z",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

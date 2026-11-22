@@ -1,0 +1,50 @@
+{
+  "name": "phone-ball",
+  "tags": [
+    "telefon futbol topu",
+    "phone soccer ball"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/maddie-kowalski-burnerverse/kapak-alt.json",
+      "paths": [
+        {
+          "d": "M20 4 H80 Q92 4 92 16 V84 Q92 96 80 96 H20 Q8 96 8 84 V16 Q8 4 20 4Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M15 12 H85 V84 H15Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M50 22 a24 24 0 1 0 0.1 0Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M50 36 L61 44 L57 57 L43 57 L39 44Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M50 36 V22 M61 44 L72 40 M57 57 L65 67 M43 57 L35 67 M39 44 L28 40",
+          "stroke": "ink",
+          "weight": 2,
+          "fill": "none"
+        },
+        {
+          "d": "M44 90 H56",
+          "stroke": "ink",
+          "weight": 2.5,
+          "fill": "none"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "name": "can-truck",
+  "tags": [
+    "kamyon",
+    "bira kutusu",
+    "teslimat",
+    "truck",
+    "beer can"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/bud-light-boykotculari/ici-1-alt.json",
+      "paths": [
+        {
+          "d": "M4 28 H66 V70 H4 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M4 28 Q-2 49 4 70",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M66 28 Q72 49 66 70",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M18 28 V70 M54 28 V70",
+          "stroke": "blue",
+          "weight": 4
+        },
+        {
+          "d": "M24 36 H48 V62 H24 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M30 49 H42",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M70 42 H88 L98 56 V72 H70 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M76 46 H86 L93 56 H76 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M66 66 H72",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M22 67 a9 9 0 1 0 0.1 0Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M22 72.5 a3.5 3.5 0 1 0 0.1 0Z",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M52 67 a9 9 0 1 0 0.1 0Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M52 72.5 a3.5 3.5 0 1 0 0.1 0Z",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M84 67 a9 9 0 1 0 0.1 0Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M84 72.5 a3.5 3.5 0 1 0 0.1 0Z",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        }
+      ]
+    }
+  ]
+}

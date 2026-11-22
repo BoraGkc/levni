@@ -1,0 +1,74 @@
+{
+ "name": "newspaper",
+ "tags": [
+  "gazete",
+  "haber",
+  "basın",
+  "newspaper",
+  "news"
+ ],
+ "variants": [
+  {
+   "note": "folded open newspaper, tone headline block",
+   "paths": [
+    {
+     "d": "M10 28 L50 24 L90 28 L88 80 L50 76 L12 80 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 24 L50 76",
+     "stroke": "ink",
+     "weight": 6,
+     "fill": "none"
+    },
+    {
+     "d": "M19 36L45 34L45 48L19 50Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M17 54 L43 52 M17 62 L42 60 M57 34 L83 36 M57 43 L82 45 M57 52 L83 54 M57 61 L80 63",
+     "stroke": "ink",
+     "weight": 5,
+     "fill": "none"
+    }
+   ]
+  },
+  {
+   "note": "rolled newspaper with coral band",
+   "paths": [
+    {
+     "d": "M16 66 L68 30 Q78 24 86 32 Q92 40 84 48 L34 82 Q22 88 16 66 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M70 29 Q76 38 84 48",
+     "stroke": "ink",
+     "weight": 6,
+     "fill": "none"
+    },
+    {
+     "d": "M26 60 L36 70 M38 52 L46 62",
+     "stroke": "ink",
+     "weight": 5,
+     "fill": "none"
+    },
+    {
+     "d": "M55 42L65 54L59 58L49 48Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M52 40 L62 52 L56 56 L46 46 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

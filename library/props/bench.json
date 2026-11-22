@@ -1,0 +1,132 @@
+{
+ "name": "bench",
+ "tags": [
+  "bank",
+  "bench",
+  "park",
+  "oturak",
+  "kamusal alan"
+ ],
+ "variants": [
+  {
+   "note": "front view, slatted back",
+   "paths": [
+    {
+     "d": "M16 28 L84 28 M16 40 L84 40",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M12 56 L88 56 L88 64 L12 64Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 28 L20 56 M80 28 L80 56 M22 64 L22 88 M78 64 L78 88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "side view, with armrest",
+   "paths": [
+    {
+     "d": "M24 12 L30 52 L72 52 L72 62 L24 62 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M24 12 L30 52 L72 52 L72 62 L24 62Z",
+     "fill": "tone-green",
+     "stroke": "none"
+    },
+    {
+     "d": "M26 28 L36 28 M28 40 L40 40",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M72 52 L72 36 L84 36",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 62 L30 88 M68 62 L68 88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 88 L40 88 M58 88 L80 88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  },
+  {
+   "note": "bench with a newspaper and a bag",
+   "paths": [
+    {
+     "d": "M14 54 L86 54 L86 62 L14 62Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M18 24 L82 24 M18 38 L82 38",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M22 24 L22 54 M78 24 L78 54 M22 62 L22 88 M78 62 L78 88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33 40 L51 38 L53 54 L35 56Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M30 38 L48 36 L50 52 L32 54Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M30 38 L48 36 L50 52 L32 54Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M63 42 L79 42 L77 56 L65 56Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M60 40 L76 40 L74 54 L62 54Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M64 40 Q68 32 72 40",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "crab-front",
+  "tags": [
+    "yengeç",
+    "tuz"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/tim-heidecker-joe/kapak-3d.json",
+      "paths": [
+        {
+          "d": "M10 55 a40 28 0 1 0 80 0 a40 28 0 1 0 -80 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M16 44 Q-2 24 14 10 Q26 16 28 32",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M84 44 Q102 24 86 10 Q74 16 72 32",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M20 72 L4 88 M32 80 L22 98 M80 72 L96 88 M68 80 L78 98",
+          "stroke": "ink",
+          "weight": 3,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

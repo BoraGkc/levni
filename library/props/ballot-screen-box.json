@@ -1,0 +1,50 @@
+{
+  "name": "ballot-screen-box",
+  "tags": [
+    "oy kutusu",
+    "oy pusulasi",
+    "sahte video",
+    "derin sahte",
+    "ekran",
+    "ballot box",
+    "deepfake",
+    "play button"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/jimmy-kimmel-trump/ici-2.json",
+      "paths": [
+        {
+          "d": "M14 38 L86 38 L92 108 L8 108 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M20 48 L80 48 L84 98 L16 98 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M44 60 L44 86 L66 73 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M8 108 L8 112 L92 112 L92 108",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M24 36 L76 36 L76 41 L24 41 Z",
+          "fill": "dark",
+          "stroke": "ink",
+          "weight": 2.2
+        }
+      ]
+    }
+  ]
+}

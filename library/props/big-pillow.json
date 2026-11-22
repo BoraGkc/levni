@@ -1,0 +1,32 @@
+{
+  "name": "big-pillow",
+  "tags": [
+    "yastık",
+    "pillow",
+    "uykusuz",
+    "insomnia"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/chris-rock-affetme/ici-2.json",
+      "paths": [
+        {
+          "d": "M2 30 Q50 12 98 30 Q104 52 98 78 Q50 94 2 78 Q-4 52 2 30Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M2 30 L8 24 M98 30 L92 24",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M16 44 Q30 40 44 46",
+          "stroke": "tone",
+          "weight": 2.2
+        }
+      ]
+    }
+  ]
+}

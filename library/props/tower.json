@@ -1,0 +1,144 @@
+{
+ "name": "tower",
+ "tags": [
+  "kule",
+  "taş kule",
+  "tower",
+  "watchtower",
+  "galata"
+ ],
+ "variants": [
+  {
+   "note": "stone tower, conical roof",
+   "paths": [
+    {
+     "d": "M39 32 L67 32 L67 90 L39 90Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 30 L64 30 L64 88 L36 88Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M36 30 L64 30 L64 88 L36 88Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 30 L50 4 L72 30 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 30 L72 30 L72 36 L30 36Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M46 48 L46 56 M54 66 L54 74",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M36 82 L64 82",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "tower with balcony band and arched windows",
+   "paths": [
+    {
+     "d": "M38 32 L62 32 L66 88 L34 88 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M26 44 L74 44 L74 52 L26 52Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M30 32 L50 6 L70 32Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M33 34 L53 8 L73 34Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M30 32 L50 6 L70 32Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M45 64 L45 74 M55 64 L55 74",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 6 L50 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "bold simple tower with flag",
+   "paths": [
+    {
+     "d": "M34 26 L66 26 L68 90 L32 90Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M31 28 L53 6 L75 28Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M28 26 L50 4 L72 26Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M28 26 L50 4 L72 26Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M34 26 L66 26",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M46 50 L54 50 L54 62 L46 62Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

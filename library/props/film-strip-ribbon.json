@@ -1,0 +1,36 @@
+{
+  "name": "film-strip-ribbon",
+  "tags": [
+    "film şeridi",
+    "kurdele",
+    "uyarlama",
+    "film strip",
+    "ribbon",
+    "unspooling"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/netflix-east-of/ici-2-r0.json",
+      "paths": [
+        {
+          "d": "M0 36 L100 36 L100 64 L0 64 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M14 42 L30 42 L30 58 L14 58 Z M36 42 L52 42 L52 58 L36 58 Z M58 42 L74 42 L74 58 L58 58 Z M80 42 L96 42 L96 58 L80 58 Z ",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M12.0 38.5 h2.6 v2 h-2.6 Z M12.0 59.5 h2.6 v2 h-2.6 Z M17.5 38.5 h2.6 v2 h-2.6 Z M17.5 59.5 h2.6 v2 h-2.6 Z M23.0 38.5 h2.6 v2 h-2.6 Z M23.0 59.5 h2.6 v2 h-2.6 Z M28.5 38.5 h2.6 v2 h-2.6 Z M28.5 59.5 h2.6 v2 h-2.6 Z M34.0 38.5 h2.6 v2 h-2.6 Z M34.0 59.5 h2.6 v2 h-2.6 Z M39.5 38.5 h2.6 v2 h-2.6 Z M39.5 59.5 h2.6 v2 h-2.6 Z M45.0 38.5 h2.6 v2 h-2.6 Z M45.0 59.5 h2.6 v2 h-2.6 Z M50.5 38.5 h2.6 v2 h-2.6 Z M50.5 59.5 h2.6 v2 h-2.6 Z M56.0 38.5 h2.6 v2 h-2.6 Z M56.0 59.5 h2.6 v2 h-2.6 Z M61.5 38.5 h2.6 v2 h-2.6 Z M61.5 59.5 h2.6 v2 h-2.6 Z M67.0 38.5 h2.6 v2 h-2.6 Z M67.0 59.5 h2.6 v2 h-2.6 Z M72.5 38.5 h2.6 v2 h-2.6 Z M72.5 59.5 h2.6 v2 h-2.6 Z M78.0 38.5 h2.6 v2 h-2.6 Z M78.0 59.5 h2.6 v2 h-2.6 Z M83.5 38.5 h2.6 v2 h-2.6 Z M83.5 59.5 h2.6 v2 h-2.6 Z M89.0 38.5 h2.6 v2 h-2.6 Z M89.0 59.5 h2.6 v2 h-2.6 Z M94.5 38.5 h2.6 v2 h-2.6 Z M94.5 59.5 h2.6 v2 h-2.6 Z ",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        }
+      ]
+    }
+  ]
+}

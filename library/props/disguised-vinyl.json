@@ -1,0 +1,67 @@
+{
+  "name": "disguised-vinyl",
+  "tags": [
+    "plak",
+    "parodi",
+    "groucho gozluk",
+    "biyik",
+    "vinyl",
+    "parody",
+    "disguise glasses mustache"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kyle-gordon-parodi/kapak.json",
+      "paths": [
+        {
+          "d": "M4.0,50.0 a46,46 0 1,0 92,0 a46,46 0 1,0 -92,0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M10.0,50.0 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0 M16.0,50.0 a34,34 0 1,0 68,0 a34,34 0 1,0 -68,0 M22.0,50.0 a28,28 0 1,0 56,0 a28,28 0 1,0 -56,0",
+          "stroke": "tone",
+          "weight": 1.8
+        },
+        {
+          "d": "M18,30 Q30,16 46,14",
+          "stroke": "tone",
+          "weight": 3
+        },
+        {
+          "d": "M35.0,50.0 a15,15 0 1,0 30,0 a15,15 0 1,0 -30,0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M47.6,50.0 a2.4,2.4 0 1,0 4.8,0 a2.4,2.4 0 1,0 -4.8,0",
+          "fill": "paper"
+        },
+        {
+          "d": "M22.0,34.0 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 M58.0,34.0 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0",
+          "stroke": "paper",
+          "weight": 6
+        },
+        {
+          "d": "M42,34 Q50,28 58,34",
+          "stroke": "paper",
+          "weight": 5
+        },
+        {
+          "d": "M50,38 L43,60 Q50,64 57,60 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M24,72 Q37,63 50,70 Q63,63 76,72 Q63,86 50,77 Q37,86 24,72 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.6
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "name": "witch-hat-mirror",
+  "tags": [
+    "ayna",
+    "cadı şapkası",
+    "el aynası",
+    "yansıma",
+    "mirror",
+    "witch hat",
+    "reflection"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/off-broadway-hayalet/ici-1.json",
+      "paths": [
+        {
+          "d": "M44 66 L56 66 L58 98 L42 98 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M50 3 Q80 3 80 36 Q80 66 50 66 Q20 66 20 36 Q20 3 50 3 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M50 9 Q74 9 74 36 Q74 60 50 60 Q26 60 26 36 Q26 9 50 9 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.5
+        },
+        {
+          "d": "M36 54 L64 54 L58 48 Q54 28 52 14 Q48 28 42 48 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.5
+        },
+        {
+          "d": "M30 54 Q50 62 70 54 Q50 50 30 54 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.5
+        },
+        {
+          "d": "M34 22 Q40 14 48 12",
+          "stroke": "paper",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

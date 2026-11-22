@@ -1,0 +1,48 @@
+{
+  "name": "dashed-ballot",
+  "tags": [
+    "oy pusulasi",
+    "sahte",
+    "kesik cizgi",
+    "ballot"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/jimmy-kimmel-trump/ici-2.json",
+      "paths": [
+        {
+          "d": "M16 4 L84 4 L84 78 L16 78 Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 2.8
+        },
+        {
+          "d": "M26 22 L60 22 M26 36 L66 36",
+          "stroke": "blue",
+          "weight": 4
+        },
+        {
+          "d": "M26 54 L38 54 L38 66 L26 66 Z",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 3
+        },
+        {
+          "d": "M28 60 L33 65 L44 50",
+          "stroke": "coral",
+          "weight": 4
+        },
+        {
+          "d": "M10 1 L90 1 L90 84 L10 84 Z",
+          "fill": "none",
+          "stroke": "coral",
+          "weight": 2.2,
+          "dash": [
+            3,
+            3
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "film-strip",
+  "tags": [
+    "film şeridi",
+    "sinema",
+    "film strip"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-compose/hadeln/ici-1.json",
+      "paths": [
+        {
+          "d": "M0 28 H100 V72 H0 Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M6 38 H27 V62 H6 Z M30 38 H51 V62 H30 Z M54 38 H75 V62 H54 Z M78 38 H99 V62 H78 Z",
+          "fill": "paper",
+          "stroke": "paper",
+          "weight": 1
+        },
+        {
+          "d": "M54 38 H75 V62 H54 Z",
+          "fill": "coral",
+          "stroke": "coral",
+          "weight": 1
+        },
+        {
+          "d": "M3 31 h3 M10 31 h3 M17 31 h3 M24 31 h3 M31 31 h3 M38 31 h3 M45 31 h3 M52 31 h3 M59 31 h3 M66 31 h3 M73 31 h3 M80 31 h3 M87 31 h3 M94 31 h3 M3 69 h3 M10 69 h3 M17 69 h3 M24 69 h3 M31 69 h3 M38 69 h3 M45 69 h3 M52 69 h3 M59 69 h3 M66 69 h3 M73 69 h3 M80 69 h3 M87 69 h3 M94 69 h3",
+          "stroke": "paper",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

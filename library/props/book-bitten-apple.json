@@ -1,0 +1,49 @@
+{
+  "name": "book-bitten-apple",
+  "tags": [
+    "elma",
+    "ısırık",
+    "kitap sayfası",
+    "cennet",
+    "apple",
+    "bitten",
+    "book pages",
+    "eden"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/netflix-east-of/kapak.json",
+      "paths": [
+        {
+          "d": "M50 32 C30 20 6 32 8 58 C10 84 30 100 50 92 C70 100 90 84 92 58 C94 32 70 20 50 32 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M72 44 a17 17 0 1 0 34 0 a17 17 0 1 0 -34 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M80 36 Q92 32 102 36 M78 43 Q92 39 104 43 M78 50 Q92 46 104 50 M80 57 Q92 53 102 57",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M50 32 Q48 18 56 8",
+          "stroke": "ink",
+          "weight": 3.5,
+          "taper": false
+        },
+        {
+          "d": "M54 18 Q70 6 80 16 Q68 28 54 18 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+ "name": "paper",
+ "tags": [
+  "kağıt",
+  "belge",
+  "doküman",
+  "paper",
+  "document"
+ ],
+ "variants": [
+  {
+   "note": "document sheet with text lines and coral stamp",
+   "paths": [
+    {
+     "d": "M24 10 L62 10 L76 24 L75 90 L25 91 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M62 10 L62 25 L76 24",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M32 40 L66 40 M32 51 L62 51 M32 62 L67 62",
+     "stroke": "ink",
+     "weight": 6,
+     "fill": "none"
+    },
+    {
+     "d": "M36 74L53 74L53 84L36 84Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M33 72 L50 72 L50 82 L33 82 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "tilted sheet, curled corner, bare lines",
+   "paths": [
+    {
+     "d": "M30 12 L72 18 L66 88 L24 84 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M38 32 L62 35 M37 45 L60 48 M36 58 Q47 59 58 61 M35 71 L48 73",
+     "stroke": "ink",
+     "weight": 6,
+     "fill": "none"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "boxing-glove",
+  "tags": [
+    "boks eldiveni",
+    "boks",
+    "boxing glove"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/rocky-nin-gercek/kapak.json",
+      "paths": [
+        {
+          "d": "M24 42 Q20 14 48 10 Q80 6 88 36 Q94 60 76 69 L72 76 L32 76 Q26 62 24 42 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 6
+        },
+        {
+          "d": "M28 44 Q46 34 58 46 Q58 60 42 60 Q28 60 28 44 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M32 76 L72 76 L70 94 L34 94 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 6
+        },
+        {
+          "d": "M37 83 L67 83 M38 89 L66 89",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M40 24 Q52 16 66 20",
+          "stroke": "paper",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}

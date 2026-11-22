@@ -1,0 +1,55 @@
+{
+  "name": "door-rocket-keyhole",
+  "tags": [
+    "kapı",
+    "anahtar deliği",
+    "roket",
+    "kapalı kapı",
+    "door",
+    "keyhole",
+    "rocket"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/musk-belgeseli-dort/ici-1.json",
+      "paths": [
+        {
+          "d": "M22 100 L22 32 Q22 2 50 2 Q78 2 78 32 L78 100 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M30 100 L30 34 Q30 11 50 11 Q70 11 70 34 L70 100",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M30 52 H70 M30 78 H70",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M38,60 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M50 49 Q45 56 45 62 L42 67 L46 66 V70 H54 V66 L58 67 L55 62 Q55 56 50 49 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M68,86 a2.4,2.4 0 1,0 4.8,0 a2.4,2.4 0 1,0 -4.8,0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.4
+        }
+      ]
+    }
+  ]
+}

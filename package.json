@@ -1,0 +1,32 @@
+{
+  "name": "levni",
+  "version": "0.1.0",
+  "description": "Hand-inked, riso-printed illustrations from JSON scenes. Design assets for agents and publishers. Powered by Ortak Alan.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Ortak Alan (https://ortakalan.io)",
+  "homepage": "https://ortakalan.io",
+  "keywords": ["illustration", "svg", "generative", "riso", "agents", "mcp", "cover-image", "design-assets"],
+  "main": "./src/index.mjs",
+  "exports": {
+    ".": "./src/index.mjs",
+    "./props": "./src/props.mjs",
+    "./critic": "./src/critic.mjs"
+  },
+  "bin": { "levni": "./bin/levni.mjs" },
+  "files": ["src/", "bin/", "library/", "docs/", "LICENSE", "README.md"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node test/smoke.mjs",
+    "examples": "node examples/render-all.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.35.5"
+  },
+  "peerDependencies": {
+    "@tabler/icons": ">=3"
+  },
+  "peerDependenciesMeta": {
+    "@tabler/icons": { "optional": true }
+  }
+}

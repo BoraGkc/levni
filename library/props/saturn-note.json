@@ -1,0 +1,52 @@
+{
+  "name": "saturn-note",
+  "tags": [
+    "nota",
+    "gezegen",
+    "satürn",
+    "müzik",
+    "uzay",
+    "note",
+    "planet",
+    "ring",
+    "stardust"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/off-broadway-kacirilmayacak/ici-2-alt.json",
+      "paths": [
+        {
+          "d": "M60 58 L60 4",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 15,
+          "taper": false
+        },
+        {
+          "d": "M60 4 Q80 12 86 30 Q88 42 80 50 Q78 32 60 26 Z",
+          "fill": "paper",
+          "stroke": "paper",
+          "weight": 3
+        },
+        {
+          "d": "M38 62 m-22 0 a22 22 0 1 0 44 0 a22 22 0 1 0 -44 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M22 54 Q28 46 40 44",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2.4
+        },
+        {
+          "d": "M-2 74 Q38 52 80 54 Q66 80 14 82 Q-6 82 -2 74 Z",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 4.5
+        }
+      ]
+    }
+  ]
+}

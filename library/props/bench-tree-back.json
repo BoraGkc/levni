@@ -1,0 +1,87 @@
+{
+  "name": "bench-tree-back",
+  "tags": [
+    "sirtligi agac olan bank",
+    "bench with tree backrest",
+    "dinlenme"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/ma-yansong-lucas/ici-2-alt.json",
+      "paths": [
+        {
+          "d": "M6 66 L94 66 L94 74 L6 74 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M14 74 L14 94 M86 74 L86 94",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M46 66 L46 36 Q44 28 36 20 M54 66 L54 36 Q56 28 64 20",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M46 66 L46 38 L54 38 L54 66 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M50 50 L50 64",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 2
+        },
+        {
+          "d": "M46 44 Q24 44 10 36 M54 44 Q76 44 90 36",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M22,20 a14,14 0 1,0 28,0 a14,14 0 1,0 -28,0",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M50,20 a14,14 0 1,0 28,0 a14,14 0 1,0 -28,0",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M34,12 a16,16 0 1,0 32,0 a16,16 0 1,0 -32,0",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M1,36 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M81,36 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M28 14 Q34 6 42 8 M58 6 Q64 2 70 8",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

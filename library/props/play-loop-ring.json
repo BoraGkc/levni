@@ -1,0 +1,31 @@
+{
+  "name": "play-loop-ring",
+  "tags": [
+    "döngü",
+    "oynat üçgeni",
+    "algoritma",
+    "öneri",
+    "loop",
+    "play button",
+    "algorithm"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/musluman-manosfer-kadinlari/ici-1.json",
+      "paths": [
+        {
+          "d": "M70,22 A34,34 0 1,0 84,62",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 34
+        },
+        {
+          "d": "M66 66 L92 66 L79 40 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3.2
+        }
+      ]
+    }
+  ]
+}

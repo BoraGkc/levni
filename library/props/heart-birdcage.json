@@ -1,0 +1,61 @@
+{
+  "name": "heart-birdcage",
+  "tags": [
+    "kalp kus kafesi",
+    "heart birdcage",
+    "ask ozgurluk"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/la-bola-negra-2/ici-1.json",
+      "paths": [
+        {
+          "d": "M50 92 C6 62 0 28 24 20 C38 16 48 24 50 32 C52 24 62 16 76 20 C100 28 94 62 50 92 Z",
+          "fill": "tone",
+          "stroke": "paper",
+          "weight": 4.4
+        },
+        {
+          "d": "M50 32 L50 92 M36 20 Q22 52 50 90 M64 20 Q78 52 50 90 M20 24 Q10 52 44 88 M80 24 Q90 52 56 88",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2.2
+        },
+        {
+          "d": "M50 4 L50 24 M44 8 Q50 -2 56 8",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 3.2
+        },
+        {
+          "d": "M46 80 Q50 72 54 80 L56 92 L44 92Z",
+          "fill": "blue",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M92 6 Q104 -4 114 6 Q108 6 104 12 Q112 10 118 16 Q106 18 98 14 Q92 12 92 6Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M92 6 Q96 -4 104 -6 Q102 2 100 6",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M86 22 Q74 26 70 34",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2.4,
+          "dash": [
+            5,
+            5
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "name": "equals-ladder",
+  "tags": [
+    "merdiven",
+    "eşittir",
+    "adım",
+    "matematik",
+    "ladder",
+    "equals",
+    "steps",
+    "math"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/openai-matematik-atilimi/ici-1.json",
+      "paths": [
+        {
+          "d": "M24 100 L40 0",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 13,
+          "taper": false
+        },
+        {
+          "d": "M76 100 L60 0",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 13,
+          "taper": false
+        },
+        {
+          "d": "M28.7 89.6 L71.3 89.6",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 9,
+          "taper": false
+        },
+        {
+          "d": "M27.9 94.4 L72.1 94.4",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 9,
+          "taper": false
+        },
+        {
+          "d": "M31.2 73.6 L68.8 73.6",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 9,
+          "taper": false
+        },
+        {
+          "d": "M30.5 78.4 L69.5 78.4",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 9,
+          "taper": false
+        },
+        {
+          "d": "M33.8 57.6 L66.2 57.6",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 9,
+          "taper": false
+        },
+        {
+          "d": "M33.0 62.4 L67.0 62.4",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 9,
+          "taper": false
+        },
+        {
+          "d": "M36.3 41.6 L63.7 41.6",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 9,
+          "taper": false
+        },
+        {
+          "d": "M35.6 46.4 L64.4 46.4",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 9,
+          "taper": false
+        },
+        {
+          "d": "M38.9 25.6 L61.1 25.6",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 9,
+          "taper": false
+        },
+        {
+          "d": "M38.1 30.4 L61.9 30.4",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 9,
+          "taper": false
+        },
+        {
+          "d": "M41.5 9.6 L58.5 9.6",
+          "fill": "none",
+          "stroke": "coral",
+          "weight": 9,
+          "taper": false
+        },
+        {
+          "d": "M40.7 14.4 L59.3 14.4",
+          "fill": "none",
+          "stroke": "coral",
+          "weight": 9,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

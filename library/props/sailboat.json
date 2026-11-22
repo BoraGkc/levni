@@ -1,0 +1,86 @@
+{
+ "name": "sailboat",
+ "tags": [
+  "yelkenli",
+  "tekne",
+  "sailboat",
+  "yelken",
+  "deniz"
+ ],
+ "variants": [
+  {
+   "note": "two sails, coral big sail",
+   "paths": [
+    {
+     "d": "M52 14 L52 66 L82 66 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M48 12 L48 64 L78 64 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M42 26 L42 64 L22 64 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M14 68 L86 68 L74 82 L26 82 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M48 12 L48 68",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M2 90 Q12 86 22 90 Q32 94 42 90 Q52 86 62 90 Q72 94 82 90 Q92 86 100 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "single bold sail with flag, simple hull",
+   "paths": [
+    {
+     "d": "M32 28 L32 72 L74 72 Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M26 22 L24 68 L66 68 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M48 10 L48 68",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M48 10 L60 14 L48 18 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M14 70 L82 70 L70 84 L24 84 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+  "name": "witness-stand-mic",
+  "tags": [
+    "kürsü",
+    "mikrofon",
+    "tanık",
+    "podyum",
+    "witness stand",
+    "microphone",
+    "podium"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/netflix-belgeseli-the/ici-1.json",
+      "paths": [
+        {
+          "d": "M20 48 L80 48 L84 96 L16 96 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M12 42 L88 42 L88 50 L12 50 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M28 58 L72 58 L72 88 L28 88 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.5
+        },
+        {
+          "d": "M50 42 L50 22",
+          "stroke": "ink",
+          "weight": 3.5,
+          "taper": false
+        },
+        {
+          "d": "M43 8 Q50 0 57 8 L57 19 Q50 27 43 19 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M44 11 H56 M44 15 H56",
+          "stroke": "ink",
+          "weight": 1.6
+        }
+      ]
+    }
+  ]
+}

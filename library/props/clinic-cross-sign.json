@@ -1,0 +1,30 @@
+{
+  "name": "clinic-cross-sign",
+  "tags": [
+    "haç",
+    "hastane",
+    "tedavi",
+    "medical cross",
+    "clinic",
+    "hospital"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/nick-reiner-davasi/ici-1.json",
+      "paths": [
+        {
+          "d": "M34 4 L66 4 L66 34 L96 34 L96 66 L66 66 L66 96 L34 96 L34 66 L4 66 L4 34 L34 34 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M40 12 L40 40 L12 40",
+          "stroke": "paper",
+          "weight": 2,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

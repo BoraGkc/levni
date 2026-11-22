@@ -1,0 +1,92 @@
+{
+ "name": "film-camera",
+ "tags": [
+  "sinema kamerası",
+  "film kamerası",
+  "kamera",
+  "film camera",
+  "tripod"
+ ],
+ "variants": [
+  {
+   "note": "cinema camera on tripod, two reels, coral lens",
+   "paths": [
+    {
+     "d": "M50 62 L30 92 M50 62 L70 92 M50 62 L50 92",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M22 20 Q22 6 34 6 Q46 6 46 20 Q46 30 34 30 Q22 30 22 20 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M46 24 Q46 10 58 10 Q70 10 70 24 Q70 34 58 34 Q46 34 46 24 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20 34 L74 34 L74 62 L20 62 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M77 40 L95 34 L95 66 L77 60 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M74 38 L92 32 L92 64 L74 58 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  },
+  {
+   "note": "simple side view, one big reel, mustard lens",
+   "paths": [
+    {
+     "d": "M40 60 L28 92 M40 60 L56 92",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20 12 Q20 4 32 4 Q48 4 48 16 Q48 26 34 26 Q20 26 20 12 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M18 28 L66 28 L66 60 L18 60 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M69 34 L91 26 L91 68 L69 58 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M66 32 L88 24 L88 66 L66 56 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M26 40 L40 40",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

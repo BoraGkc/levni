@@ -1,0 +1,75 @@
+{
+ "name": "coins",
+ "tags": [
+  "bozuk para",
+  "para",
+  "madeni para",
+  "coins",
+  "finans",
+  "altın"
+ ],
+ "variants": [
+  {
+   "note": "stack of 4 coins, mustard faces",
+   "paths": [
+    {
+     "d": "M18 76 L18 86 Q18 92 50 92 Q82 92 82 86 L82 76 Q82 70 50 70 Q18 70 18 76 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M18 62 L18 72 Q18 78 50 78 Q82 78 82 72 L82 62 Q82 56 50 56 Q18 56 18 62 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M18 48 L18 58 Q18 64 50 64 Q82 64 82 58 L82 48 Q82 42 50 42 Q18 42 18 48 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M21 32 L21 46 Q21 52 53 52 Q85 52 85 46 L85 32 Q85 26 53 26 Q21 26 21 32 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M18 30 L18 44 Q18 50 50 50 Q82 50 82 44 L82 30 Q82 24 50 24 Q18 24 18 30 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "flat coin face-on beside coin, coral",
+   "paths": [
+    {
+     "d": "M11 42 Q11 16 37 16 Q63 16 63 42 Q63 68 37 68 Q11 68 11 42 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M6 38 Q6 12 32 12 Q58 12 58 38 Q58 64 32 64 Q6 64 6 38 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M32 28 L32 48",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M52 70 Q52 58 68 58 Q90 58 90 74 Q90 90 70 90 Q52 88 52 70 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+  "name": "jacket",
+  "tags": [
+    "ceket",
+    "moda",
+    "jacket",
+    "blazer"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-compose/delpy/ici-2.json",
+      "paths": [
+        {
+          "d": "M34 8 L50 20 L66 8 L86 18 L97 84 L83 88 L76 44 L78 96 L22 96 L24 44 L17 88 L3 84 L14 18 Z",
+          "fill": "tone",
+          "stroke": "blue",
+          "weight": 5
+        },
+        {
+          "d": "M34 8 L50 44 L66 8 M50 44 L50 96",
+          "stroke": "blue",
+          "weight": 4
+        }
+      ]
+    },
+    {
+      "note": "harvested from .cache/cizim-compose/delpy/kapak.json",
+      "paths": [
+        {
+          "d": "M34 8 L50 20 L66 8 L86 18 L97 84 L83 88 L76 44 L78 96 L22 96 L24 44 L17 88 L3 84 L14 18 Z",
+          "fill": "paper",
+          "stroke": "paper",
+          "weight": 6
+        },
+        {
+          "d": "M34 8 L50 44 L66 8",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M34 8 L26 30 L40 36 L44 30",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M66 8 L74 30 L60 36 L56 30",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M50 44 L50 96",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M24 44 L14 18 M76 44 L86 18",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M30 76 L42 76 M58 76 L70 76",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M45 58 L45 59 M55 58 L55 59 M45 70 L45 71 M55 70 L55 71",
+          "stroke": "ink",
+          "weight": 7
+        }
+      ]
+    }
+  ]
+}

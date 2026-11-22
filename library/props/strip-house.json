@@ -1,0 +1,122 @@
+{
+  "name": "strip-house",
+  "tags": [
+    "viktorya evi film şeridi",
+    "victorian house film strip"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/san-francisco-sinemasi/ici-1.json",
+      "paths": [
+        {
+          "d": "M20 36 H80 V98 H20Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M23 40 h4 v5 h-4Z M73 40 h4 v5 h-4Z",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M23 48 h4 v5 h-4Z M73 48 h4 v5 h-4Z",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M23 56 h4 v5 h-4Z M73 56 h4 v5 h-4Z",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M23 64 h4 v5 h-4Z M73 64 h4 v5 h-4Z",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M23 72 h4 v5 h-4Z M73 72 h4 v5 h-4Z",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M23 80 h4 v5 h-4Z M73 80 h4 v5 h-4Z",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M23 88 h4 v5 h-4Z M73 88 h4 v5 h-4Z",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M31 40 H69 V56 H31Z",
+          "fill": "mustard",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M31 60 H69 V76 H31Z",
+          "fill": "coral",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M31 80 H69 V96 H31Z",
+          "fill": "tone",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M50 42 V54 M38 48 H62",
+          "stroke": "ink",
+          "weight": 1.6,
+          "fill": "none"
+        },
+        {
+          "d": "M40 70 H60 V76 H40Z",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M44 90 Q50 82 56 90 V96 H44Z",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M14 38 L50 6 L86 38Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M44 28 a6 6 0 1 0 12 0 a6 6 0 1 0 -12 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M72 24 V10 H80 V30",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M0 98 H100",
+          "stroke": "paper",
+          "weight": 3,
+          "fill": "none"
+        }
+      ]
+    }
+  ]
+}

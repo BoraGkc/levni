@@ -1,0 +1,102 @@
+{
+ "name": "receipt",
+ "tags": [
+  "makbuz",
+  "fiş",
+  "fatura",
+  "receipt",
+  "invoice"
+ ],
+ "variants": [
+  {
+   "note": "long paper, zigzag bottom, coral total bar",
+   "paths": [
+    {
+     "d": "M26 8 L74 8 L74 90 L68 84 L62 90 L56 84 L50 90 L44 84 L38 90 L32 84 L26 90 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M34 20 L66 20 M34 30 L58 30 M34 40 L64 40 M34 50 L54 50",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M36 62 L68 62 L68 72 L36 72 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M34 65 L66 65",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "tilted, rolled top and mustard stripe",
+   "paths": [
+    {
+     "d": "M32.1 5.1 L79.6 11.7 L68.2 93 L63.1 86.2 L56.3 91.3 L51.2 84.5 L44.4 89.6 L39.3 82.8 L32.5 87.9 L27.4 81.2 L20.7 86.3 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M36.5 25.5 L76.1 31 L74.8 40.9 L35.1 35.4 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M34.8 28.7 L70.5 33.7",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M34.7 43.8 L66.4 48.3 M33.3 53.7 L55.1 56.8 M31.9 63.6 L59.7 67.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M35.2 11.6 L74.8 17.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  },
+  {
+   "note": "simple bold with green tick",
+   "paths": [
+    {
+     "d": "M26 8 L74 8 L74 90 L68 84 L62 90 L56 84 L50 90 L44 84 L38 90 L32 84 L26 90 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M34 24 L66 24 M34 36 L56 36",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M45 56 L51 66 L65 48",
+     "fill": "none",
+     "stroke": "none"
+    },
+    {
+     "d": "M40 56 L47 64 L62 46",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 10
+    }
+   ]
+  }
+ ]
+}

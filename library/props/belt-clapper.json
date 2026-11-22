@@ -1,0 +1,76 @@
+{
+  "name": "belt-clapper",
+  "tags": [
+    "sampiyonluk kemeri klaket guresci hollywood"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/wwe-hollywood-gecis/kapak.json",
+      "paths": [
+        {
+          "d": "M0 38 L100 38 L100 62 L0 62 Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M2 44 L98 44",
+          "stroke": "mustard",
+          "weight": 2,
+          "dash": [
+            4,
+            3
+          ]
+        },
+        {
+          "d": "M2 56 L98 56",
+          "stroke": "mustard",
+          "weight": 2,
+          "dash": [
+            4,
+            3
+          ]
+        },
+        {
+          "d": "M26 50 a24 24 0 1,0 48 0 a24 24 0 1,0 -48 0",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M32 50 a18 18 0 1,0 36 0 a18 18 0 1,0 -36 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M38 46 L62 46 L62 62 L38 62 Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M38 46 L62 46 L62 40 L38 40 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M42 40 L46 46 M50 40 L54 46 M58 40 L62 46",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M42 54 L58 54",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M10 50 L10 50 M90 50 L90 50",
+          "stroke": "mustard",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}

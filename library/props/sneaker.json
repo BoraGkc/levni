@@ -1,0 +1,123 @@
+{
+ "name": "sneaker",
+ "tags": [
+  "ayakkabi",
+  "spor ayakkabi",
+  "sneaker",
+  "running shoe",
+  "kosu"
+ ],
+ "variants": [
+  {
+   "note": "side view, coral toe cap and laces",
+   "paths": [
+    {
+     "d": "M11 72 L12 38 Q12 31 20 33 L33 37 Q38 47 50 49 L74 55 Q92 59 92 71 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M 73 57 Q 95 61 95 73 L 63 73 Q 67 62 73 57 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M8 72 L92 70 Q95 79 86 83 L16 83 Q6 82 8 72 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M34 38 L42 32 M40 43 L49 37 M47 48 L56 43",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M62 56 Q58 66 60 71",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M12 62 L26 62",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "bold simple: mustard upper, white sole",
+   "paths": [
+    {
+     "d": "M 14 74 L 15 40 Q 15 33 23 35 L 36 39 Q 41 49 53 51 L 77 57 Q 95 61 95 73 Z",
+     "fill": "mustard",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M11 72 L12 38 Q12 31 20 33 L33 37 Q38 47 50 49 L74 55 Q92 59 92 71 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M8 72 L92 70 Q95 79 86 83 L16 83 Q6 82 8 72 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M16 60 Q40 64 78 62",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "high-top, laces and sole stripe",
+   "paths": [
+    {
+     "d": "M16 74 L14 14 Q14 8 22 8 L38 8 L40 30 Q44 44 56 48 L76 54 Q92 58 92 72 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M 17 16 Q 17 10 25 10 L 41 10 L 42 24 L 17 24 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M8 72 L92 70 Q95 79 86 83 L16 83 Q6 82 8 72 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M24 28 L38 24 M24 38 L40 34 M26 48 L44 44",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M24 14 L36 14",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M20 66 L84 64",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

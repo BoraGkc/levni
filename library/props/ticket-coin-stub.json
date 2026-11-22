@@ -1,0 +1,122 @@
+{
+  "name": "ticket-coin-stub",
+  "tags": [
+    "bilet",
+    "gelir",
+    "madeni para",
+    "pazar"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/toronto-international-film/ici-2.json",
+      "paths": [
+        {
+          "d": "M6 22 L94 22 L94 78 L6 78 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M66 22 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M66 78 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M70 27 L70 73",
+          "stroke": "ink",
+          "weight": 2,
+          "taper": false,
+          "dash": [
+            3,
+            4
+          ]
+        },
+        {
+          "d": "M14 36 L56 36",
+          "stroke": "paper",
+          "weight": 4.5,
+          "taper": false
+        },
+        {
+          "d": "M14 48 L48 48",
+          "stroke": "paper",
+          "weight": 4.5,
+          "taper": false
+        },
+        {
+          "d": "M14 60 L40 60",
+          "stroke": "paper",
+          "weight": 4.5,
+          "taper": false
+        },
+        {
+          "d": "M74 70 L74 64 a10 3.5 0 0 1 20 0 L94 70 a10 3.5 0 0 1 -20 0 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M74 64 a10 3.5 0 1 0 20 0 a10 3.5 0 1 0 -20 0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M74 62 L74 56 a10 3.5 0 0 1 20 0 L94 62 a10 3.5 0 0 1 -20 0 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M74 56 a10 3.5 0 1 0 20 0 a10 3.5 0 1 0 -20 0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M74 54 L74 48 a10 3.5 0 0 1 20 0 L94 54 a10 3.5 0 0 1 -20 0 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M74 48 a10 3.5 0 1 0 20 0 a10 3.5 0 1 0 -20 0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M74 46 L74 40 a10 3.5 0 0 1 20 0 L94 46 a10 3.5 0 0 1 -20 0 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M74 40 a10 3.5 0 1 0 20 0 a10 3.5 0 1 0 -20 0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M74 38 L74 32 a10 3.5 0 0 1 20 0 L94 38 a10 3.5 0 0 1 -20 0 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M74 32 a10 3.5 0 1 0 20 0 a10 3.5 0 1 0 -20 0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 1.6
+        }
+      ]
+    }
+  ]
+}

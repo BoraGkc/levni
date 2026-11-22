@@ -1,0 +1,62 @@
+{
+ "name": "star",
+ "tags": [
+  "yıldız",
+  "star",
+  "favori",
+  "puan",
+  "başarı",
+  "rating"
+ ],
+ "variants": [
+  {
+   "note": "hand-drawn five-point star, mustard shift",
+   "paths": [
+    {
+     "d": "M55.2 12.2L65.5 41.4L94.2 45.9L72.1 64.3L77.8 95L52 76.6L25.9 90.6L33.3 62.3L11.1 41L42.4 40.8Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M52.2 9.2 L62.5 38.4 L91.2 42.9 L69.1 61.3 L74.8 92 L49 73.6 L22.9 87.6 L30.3 59.3 L8.1 38 L39.4 37.8 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "paper star with small mustard star inside",
+   "paths": [
+    {
+     "d": "M52.2 9.2 L62.5 38.4 L91.2 42.9 L69.1 61.3 L74.8 92 L49 73.6 L22.9 87.6 L30.3 59.3 L8.1 38 L39.4 37.8 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M51 33.6 L55.6 47 L68.7 48.9 L58.6 57.3 L61.3 71.3 L49.6 62.8 L37.7 69.3 L41.1 56.4 L30.9 46.7 L45.2 46.7 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "fat rounded star, light mustard shadow",
+   "paths": [
+    {
+     "d": "M50.6 14.3L67 35.7L91.6 41.4L78.8 62.9L82.1 89.9L56 81.4L32.5 92.1L30.5 66.8L12.3 47.1L38.2 38.6Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M46.6 11.3 L63 32.7 L87.6 38.4 L74.8 59.9 L78.1 86.9 L52 78.4 L28.5 89.1 L26.5 63.8 L8.3 44.1 L34.2 35.6 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

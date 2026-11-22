@@ -1,0 +1,60 @@
+{
+ "name": "flame",
+ "tags": [
+  "alev",
+  "ateş",
+  "flame",
+  "fire",
+  "yangın"
+ ],
+ "variants": [
+  {
+   "note": "flame with mustard inner tongue",
+   "paths": [
+    {
+     "d": "M53 11 C59 33 82 43 81 66 C81 83 69 94 53 94 C37 94 25 83 25 66 C25 51 35 45 39 33 C45 41 47 45 50 47 C53 33 49 23 53 11 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 8 C56 30 79 40 78 63 C78 80 66 91 50 91 C34 91 22 80 22 63 C22 48 32 42 36 30 C42 38 44 42 47 44 C50 30 46 20 50 8 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M52 90 C44 90 39 80 45 70 C50 64 54 60 54 54 C62 64 65 72 62 81 C60 88 56 90 52 90 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 88 C42 88 37 78 43 68 C48 62 52 58 52 52 C60 62 63 70 60 79 C58 86 54 88 50 88 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "simple single teardrop flame",
+   "paths": [
+    {
+     "d": "M53 13 C63 37 81 51 79 69 C78 85 67 93 53 93 C39 93 28 85 27 69 C26 53 43 43 53 13 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 10 C60 34 78 48 76 66 C75 82 64 90 50 90 C36 90 25 82 24 66 C23 50 40 40 50 10 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 80 C42 78 40 68 46 60",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,128 @@
+{
+  "name": "ringlight-whistle",
+  "tags": [
+    "halka isik duduk",
+    "ring light whistle",
+    "selfie beden egitimi"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/lanterns-1-sezon/ici-1-alt.json",
+      "paths": [
+        {
+          "d": "M14,50 a36,36 0 1,0 72,0 a36,36 0 1,0 -72,0",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 36
+        },
+        {
+          "d": "M14,50 a36,36 0 1,0 72,0 a36,36 0 1,0 -72,0",
+          "fill": "none",
+          "stroke": "tone",
+          "weight": 10
+        },
+        {
+          "d": "M24,50 a26,26 0 1,0 52,0 a26,26 0 1,0 -52,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M46 24 Q50 14 54 24 M50 14 L50 -2",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M50 24 Q44 34 48 44",
+          "fill": "none",
+          "stroke": "coral",
+          "weight": 3.4
+        },
+        {
+          "d": "M30 44 L58 44 Q72 44 72 56 Q72 68 58 68 L40 68 Q30 68 30 58 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M30 44 L12 40 L12 54 L30 54",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M54,56 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M42 46 L42 52",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2.4
+        }
+      ]
+    },
+    {
+      "note": "harvested from .cache/cizim-drafts/lanterns-1-sezon/ici-1.json",
+      "paths": [
+        {
+          "d": "M12,50 a38,38 0 1,0 76,0 a38,38 0 1,0 -76,0",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 40
+        },
+        {
+          "d": "M12,50 a38,38 0 1,0 76,0 a38,38 0 1,0 -76,0",
+          "fill": "none",
+          "stroke": "tone",
+          "weight": 12
+        },
+        {
+          "d": "M22,50 a28,28 0 1,0 56,0 a28,28 0 1,0 -56,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M50 30 Q44 20 50 12 M44 10 L56 10",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M50 30 Q56 38 52 44",
+          "fill": "none",
+          "stroke": "coral",
+          "weight": 3.4
+        },
+        {
+          "d": "M42 47 L56 47 Q66 47 66 57 Q66 67 56 67 L46 67 Q38 67 38 57 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M42 47 L28 44 L28 56 L40 56",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M51.8,56 a3.2,3.2 0 1,0 6.4,0 a3.2,3.2 0 1,0 -6.4,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M46 50 L46 55",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2.4
+        }
+      ]
+    }
+  ]
+}

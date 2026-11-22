@@ -1,0 +1,42 @@
+{
+  "name": "dog-ear-chat-bubble",
+  "tags": [
+    "konusma balonu",
+    "kopek kulagi",
+    "wifi",
+    "topluluk",
+    "chat bubble",
+    "dog ears",
+    "wifi tail",
+    "online community"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kopegi-zor-sahiplenmek/ici-1-alt.json",
+      "paths": [
+        {
+          "d": "M18,26 Q-10,22 -6,58 Q0,76 18,56 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M82,26 Q110,22 106,58 Q100,76 82,56 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M12,24 Q12,16 20,16 L80,16 Q88,16 88,24 L88,62 Q88,70 80,70 L46,70 L28,90 L30,70 L20,70 Q12,70 12,62 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M34,44 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0 M47,44 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0 M60,44 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "blue"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "beanie",
+  "tags": [
+    "bere",
+    "örgü şapka",
+    "beanie",
+    "knit hat"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/fiona/kapak-v2.json",
+      "paths": [
+        {
+          "d": "M20 74 Q16 26 50 22 Q84 26 80 74 Z",
+          "fill": "paper",
+          "stroke": "blue",
+          "weight": 2.6
+        },
+        {
+          "d": "M32 66 Q29 40 38 31 M44 68 Q43 40 47 25 M56 68 Q57 40 53 25 M68 66 Q71 40 62 31",
+          "stroke": "tone",
+          "weight": 2.4
+        },
+        {
+          "d": "M14 74 L86 74 L86 90 L14 90 Z",
+          "fill": "tone",
+          "stroke": "blue",
+          "weight": 2.6
+        },
+        {
+          "d": "M26 76 L26 88 M38 76 L38 88 M50 76 L50 88 M62 76 L62 88 M74 76 L74 88",
+          "stroke": "blue",
+          "weight": 1.2
+        },
+        {
+          "d": "M42 23 Q50 5 58 23 Z",
+          "fill": "paper",
+          "stroke": "blue",
+          "weight": 2.6
+        }
+      ]
+    }
+  ]
+}

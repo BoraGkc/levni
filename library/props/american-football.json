@@ -1,0 +1,49 @@
+{
+  "name": "american-football",
+  "tags": [
+    "amerikan futbolu",
+    "top",
+    "american football",
+    "nfl"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/madden-filmi-nicolas/kapak-v2.json",
+      "paths": [
+        {
+          "d": "M4 50 C22 10 78 10 96 50 C78 90 22 90 4 50 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M25 34 Q21 50 25 66 M75 34 Q79 50 75 66",
+          "stroke": "paper",
+          "weight": 6
+        },
+        {
+          "d": "M32 50 L68 50",
+          "stroke": "paper",
+          "weight": 4
+        },
+        {
+          "d": "M38 41 L38 59 M29 50 L47 50",
+          "stroke": "paper",
+          "weight": 6
+        },
+        {
+          "d": "M60 50 a4.2 4.2 0 1 0 0.01 0 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M71 50 a4.2 4.2 0 1 0 0.01 0 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 4
+        }
+      ]
+    }
+  ]
+}

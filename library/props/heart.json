@@ -1,0 +1,62 @@
+{
+ "name": "heart",
+ "tags": [
+  "kalp",
+  "sevgi",
+  "heart",
+  "love",
+  "beğeni",
+  "like"
+ ],
+ "variants": [
+  {
+   "note": "coral heart, shifted fill",
+   "paths": [
+    {
+     "d": "M53 89Q15 61 15 37Q15 17 35 17Q49 17 53 33Q59 15 75 17Q93 19 91 41Q89 63 53 89Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 86 Q12 58 12 34 Q12 14 32 14 Q46 14 50 30 Q56 12 72 14 Q90 16 88 38 Q86 60 50 86 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "light coral heart with highlight curve",
+   "paths": [
+    {
+     "d": "M50 86 Q12 58 12 34 Q12 14 32 14 Q46 14 50 30 Q56 12 72 14 Q90 16 88 38 Q86 60 50 86 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M23 36 Q23 25 33 25",
+     "fill": "none",
+     "stroke": "white",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "outline heart with offset coral heart",
+   "paths": [
+    {
+     "d": "M55 90Q17 62 17 38Q17 18 37 18Q51 18 55 34Q61 16 77 18Q95 20 93 42Q91 64 55 90Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 86 Q12 58 12 34 Q12 14 32 14 Q46 14 50 30 Q56 12 72 14 Q90 16 88 38 Q86 60 50 86 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

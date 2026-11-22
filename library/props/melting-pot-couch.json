@@ -1,0 +1,81 @@
+{
+  "name": "melting-pot-couch",
+  "tags": [
+    "terapi",
+    "erime potası",
+    "pot",
+    "couch"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/sarah-jones-america/ici-2-r0.json",
+      "paths": [
+        {
+          "d": "M12 40 H88 V46 H12 Z",
+          "fill": "paper",
+          "stroke": "paper",
+          "weight": 3
+        },
+        {
+          "d": "M18 46 Q14 90 50 90 Q86 90 82 46 Z",
+          "fill": "blue",
+          "stroke": "paper",
+          "weight": 4
+        },
+        {
+          "d": "M6 50 Q-2 50 4 62 Q8 68 14 62 M94 50 Q102 50 96 62 Q92 68 86 62",
+          "fill": null,
+          "stroke": "paper",
+          "weight": 4
+        },
+        {
+          "d": "M28 90 L22 98 M72 90 L78 98",
+          "fill": null,
+          "stroke": "paper",
+          "weight": 5
+        },
+        {
+          "d": "M26 64 Q50 74 74 64",
+          "fill": null,
+          "stroke": "paper",
+          "weight": 3
+        }
+      ]
+    },
+    {
+      "note": "harvested from .cache/cizim-drafts/sarah-jones-america/kapak-flat.json",
+      "paths": [
+        {
+          "d": "M12 40 H88 V46 H12 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M18 46 Q14 90 50 90 Q86 90 82 46 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M6 50 Q-2 50 4 62 Q8 68 14 62 M94 50 Q102 50 96 62 Q92 68 86 62",
+          "fill": null,
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M28 90 L22 98 M72 90 L78 98",
+          "fill": null,
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M26 64 Q50 74 74 64",
+          "fill": null,
+          "stroke": "paper",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

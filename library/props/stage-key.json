@@ -1,0 +1,70 @@
+{
+  "name": "stage-key",
+  "tags": [
+    "anahtar",
+    "sahne",
+    "yeni yuva",
+    "key",
+    "stage",
+    "curtain",
+    "letonya"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/chulpan-khamatova-ionesco/ici-1.json",
+      "paths": [
+        {
+          "d": "M40 47 H98 V53 H88 V61 H82 V53 H74 V58 H68 V53 H40Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M6 50 a22,22 0 1,0 44,0 a22,22 0 1,0 -44,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M16 64 V47 Q16 34 28 34 Q40 34 40 47 V64Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M20 64 L28 50 L36 64Z",
+          "fill": "tone",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M16 64 V47 Q16 36 22 35 Q25 50 22 64Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M40 64 V47 Q40 36 34 35 Q31 50 34 64Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M18.5 40 V62 M20.5 37 V63",
+          "stroke": "paper",
+          "weight": 1.2
+        },
+        {
+          "d": "M37.5 40 V62 M35.5 37 V63",
+          "stroke": "paper",
+          "weight": 1.2
+        },
+        {
+          "d": "M15 64 H41",
+          "stroke": "ink",
+          "weight": 3.4
+        }
+      ]
+    }
+  ]
+}

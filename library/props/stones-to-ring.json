@@ -1,0 +1,76 @@
+{
+  "name": "stones-to-ring",
+  "tags": [
+    "taş",
+    "yol",
+    "yüzük",
+    "evlilik"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/upward-flortte-chivalry/ici-1-r0.json",
+      "paths": [
+        {
+          "d": "M-4 72.4 a8 4.4 0 1 0 16 0 a8 4.4 0 1 0 -16 0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M12 66.4 a7 3.9 0 1 0 14 0 a7 3.9 0 1 0 -14 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M27 59.4 a6 3.3 0 1 0 12 0 a6 3.3 0 1 0 -12 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M41 53.4 a5 2.8 0 1 0 10 0 a5 2.8 0 1 0 -10 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M52 46.4 a4 2.2 0 1 0 8 0 a4 2.2 0 1 0 -8 0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M0 72 L3 75 L8 69",
+          "stroke": "ink",
+          "weight": 3,
+          "taper": false
+        },
+        {
+          "d": "M15 66 L18 69 L23 63",
+          "stroke": "ink",
+          "weight": 3,
+          "taper": false
+        },
+        {
+          "d": "M80 41 m-10 0 a10 10 0 1 0 20 0 a10 10 0 1 0 -20 0",
+          "stroke": "ink",
+          "weight": 26,
+          "taper": false
+        },
+        {
+          "d": "M80 41 m-10 0 a10 10 0 1 0 20 0 a10 10 0 1 0 -20 0",
+          "stroke": "coral",
+          "weight": 19,
+          "taper": false
+        },
+        {
+          "d": "M80 18 L87 26 L80 34 L73 26 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

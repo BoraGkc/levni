@@ -1,0 +1,81 @@
+{
+ "name": "map",
+ "tags": [
+  "harita",
+  "konum",
+  "map",
+  "pin",
+  "navigasyon"
+ ],
+ "variants": [
+  {
+   "note": "folded map with coral pin",
+   "paths": [
+    {
+     "d": "M8 30 L34 22 L62 32 L88 22 L88 76 L62 86 L34 76 L8 84 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M10 28 L36 20 L64 30 L90 20 L90 74 L64 84 L36 74 L10 82 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M36 20 L36 74 M64 30 L64 84",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M65 62 C53 48 51 42 55 35 C60 28 71 30 74 37 C76 44 72 50 65 62 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M62 60 C50 46 48 40 52 33 C57 26 68 28 71 35 C73 42 69 48 62 60 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M61 40 L61.4 40.2",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  },
+  {
+   "note": "flat map with dashed route and big mustard pin",
+   "paths": [
+    {
+     "d": "M10 36 L90 30 L88 82 L12 86 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M18 74 C30 60 40 80 52 70 C62 62 70 70 78 56",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M53 54 C39 38 37 30 43 22 C49 14 63 16 65 24 C68 32 63 38 53 54 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 52 C36 36 34 28 40 20 C46 12 60 14 62 22 C65 30 60 36 50 52 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 26 L50.4 26.2",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

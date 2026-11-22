@@ -1,0 +1,37 @@
+{
+  "name": "slanted-thermometer",
+  "tags": [
+    "termometre",
+    "thermometer",
+    "ates",
+    "sicaklik"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1-v3.json",
+      "paths": [
+        {
+          "d": "M40,4 Q50,-1 60,4 L60,66 a20,20 0 1,1 -20,0 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M31,82 a19,19 0 1,0 38,0 a19,19 0 1,0 -38,0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M46,70 L46,26 Q50,20 54,26 L54,70 Z",
+          "fill": "coral"
+        },
+        {
+          "d": "M60,14 L68,14 M60,26 L66,26 M60,38 L68,38 M60,50 L66,50",
+          "stroke": "ink",
+          "weight": 2.6
+        }
+      ]
+    }
+  ]
+}

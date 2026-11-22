@@ -1,0 +1,80 @@
+{
+ "name": "solar-panel",
+ "tags": [
+  "güneş paneli",
+  "solar",
+  "panel",
+  "enerji",
+  "yenilenebilir"
+ ],
+ "variants": [
+  {
+   "note": "tilted panel on stand, grid, sun",
+   "paths": [
+    {
+     "d": "M71 18 A9 8.370000000000001 0 1 0 89 18 A9 8.370000000000001 0 1 0 71 18 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M17 40 L83 36 L88 66 L22 70 Z",
+     "fill": "tone-green",
+     "stroke": "none"
+    },
+    {
+     "d": "M14 36 L80 32 L85 62 L19 66 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M36 34 L41 64 M58 33 L63 63 M16 49 L82 46",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 66 L50 90 M30 90 L72 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "two panels side by side, front, coral frame hint",
+   "paths": [
+    {
+     "d": "M10 30 L45 30 L46 62 L12 64 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M8 26 L44 24 L44 58 L8 60 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M52 26 L90 24 L91 58 L53 60 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 25 L20 59 M32 25 L32 59 M8 42 L44 41 M65 25 L65 59 M78 25 L78 58 M52 42 L90 41",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M26 60 L26 88 M70 60 L70 88 M16 88 L38 88 M60 88 L82 88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "name": "question",
+ "tags": [
+  "soru işareti",
+  "soru",
+  "question",
+  "help",
+  "merak"
+ ],
+ "variants": [
+  {
+   "note": "fat outlined mustard question mark",
+   "paths": [
+    {
+     "d": "M33 34 Q33 14 51 14 Q71 14 71 32 Q71 46 56 53 Q50 57 50 66",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 22
+    },
+    {
+     "d": "M35 36Q35 16 53 16Q73 16 73 34Q73 48 58 55Q52 59 52 68",
+     "fill": "none",
+     "stroke": "mustard",
+     "weight": 11
+    },
+    {
+     "d": "M50 82 L50 83",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 22
+    },
+    {
+     "d": "M52 84L52 85",
+     "fill": "none",
+     "stroke": "mustard",
+     "weight": 11
+    }
+   ]
+  },
+  {
+   "note": "thin ink question mark on mustard blob dot",
+   "paths": [
+    {
+     "d": "M45 84Q45 76 53 76Q61 76 61 84Q61 92 53 92Q45 92 45 84Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M33 34 Q33 14 51 14 Q71 14 71 32 Q71 46 56 53 Q50 57 50 66",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 80 L50 84",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 10
+    }
+   ]
+  },
+  {
+   "note": "leaning big hook with mustard shifted copy",
+   "paths": [
+    {
+     "d": "M31 41Q29 15 55 15Q79 15 77 37Q75 53 59 59Q53 63 55 71",
+     "fill": "none",
+     "stroke": "mustard",
+     "weight": 9
+    },
+    {
+     "d": "M28 38 Q26 12 52 12 Q76 12 74 34 Q72 50 56 56 Q50 60 52 68",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M46 83 Q46 77 52 77 Q58 77 58 83 Q58 89 52 89 Q46 89 46 83 Z",
+     "fill": "ink",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

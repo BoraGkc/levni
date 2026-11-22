@@ -1,0 +1,165 @@
+{
+ "name": "pencil",
+ "tags": [
+  "kalem",
+  "yazi",
+  "pencil",
+  "yazmak",
+  "kursun kalem"
+ ],
+ "variants": [
+  {
+   "note": "diagonal pencil, mustard body, coral eraser",
+   "paths": [
+    {
+     "d": "M 28.7 55.9 L 71.9 23.5 L 85.2 40.6 L 43.3 74.7 Z",
+     "fill": "mustard",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M 25.7 53.9 L 68.9 21.5 L 82.2 38.6 L 40.3 72.7 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M 25.7 53.9 L 15.1 77.3 L 40.3 72.7 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M 19.1 70.1 L 15.1 77.3 L 23.1 75.2 Z",
+     "fill": "ink",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M 71.9 23.5 L 81.9 17.1 Q 92.1 21.4 93.9 32.4 L 85.2 40.6 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M 68.9 21.5 L 78.9 15.1 Q 89.1 19.4 90.9 30.4 L 82.2 38.6 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M 63.8 25.5 L 77.1 42.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M 38.8 53.2 L 62.7 34.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  },
+  {
+   "note": "flat horizontal bold pencil",
+   "paths": [
+    {
+     "d": "M26 38 L78 38 L78 62 L26 62 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M 29 40 L 81 40 L 81 64 L 29 64 Z",
+     "fill": "tone-mustard",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M26 38 L78 38 L78 62 L26 62 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M26 38 L8 50 L26 62 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M15 46 L8 50 L15 54 Z",
+     "fill": "ink",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M 81 40 L 95 40 L 95 64 L 81 64 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M78 38 L92 40 Q96 50 92 60 L78 62 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M44 50 L66 50",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "pencil with scribble line and shavings",
+   "paths": [
+    {
+     "d": "M8 88 Q20 80 30 88 Q40 96 54 86 Q66 78 78 86",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M 38 56.9 L 67.6 23 L 81.4 34.6 L 53.2 69.6 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M 35 54.9 L 64.6 21 L 78.4 32.6 L 50.2 67.6 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M 35 54.9 L 30.4 75.7 L 50.2 67.6 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M 32.4 69.2 L 30.4 75.7 L 36.5 72.6 Z",
+     "fill": "ink",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M 61.1 25.1 L 74.9 36.7",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M70 74 Q74 70 78 74 Q80 78 76 78",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

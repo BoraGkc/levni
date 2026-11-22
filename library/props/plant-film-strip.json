@@ -1,0 +1,222 @@
+{
+  "name": "plant-film-strip",
+  "tags": [
+    "film strip frames growing seedling stop motion kare kare filiz"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/wildwood-stop-motion/kapak-r0.json",
+      "paths": [
+        {
+          "d": "M2 22 L98 22 L98 78 L2 78 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M6 29 L25 29 L25 71 L6 71 Z",
+          "fill": "tone-green",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M29.5 29 L48.5 29 L48.5 71 L29.5 71 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M53 29 L72 29 L72 71 L53 71 Z",
+          "fill": "tone-green",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M76.5 29 L95.5 29 L95.5 71 L76.5 71 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M3 25 L6 25",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M14 25 L17 25",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M25 25 L28 25",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M36 25 L39 25",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M47 25 L50 25",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M58 25 L61 25",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M69 25 L72 25",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M80 25 L83 25",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M91 25 L94 25",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M3 75 L6 75",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M14 75 L17 75",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M25 75 L28 75",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M36 75 L39 75",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M47 75 L50 75",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M58 75 L61 75",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M69 75 L72 75",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M80 75 L83 75",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M91 75 L94 75",
+          "stroke": "ink",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M15.5 66 L15.5 62",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M12 62 a3.5 3.5 0 1,0 7 0",
+          "stroke": "green",
+          "weight": 3
+        },
+        {
+          "d": "M39 68 L39 54",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M39 56 q-8 -2 -9 -8 q8 0 9 8",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M39 53 q8 -1 9 -8 q-8 0 -9 8",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M62.5 68 L62.5 46",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M62.5 58 q-9 -2 -10 -9 q9 0 10 9",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M62.5 52 q9 -2 10 -9 q-9 0 -10 9",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M62.5 46 q-6 -8 0 -13 q6 5 0 13",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M86 68 L86 46",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M86 54 L78 44",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M86 50 L94 41",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M86 46 a11 11 0 1,0 0.01 0",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 2.4
+        }
+      ]
+    }
+  ]
+}

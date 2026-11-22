@@ -1,0 +1,135 @@
+{
+  "name": "popcorn-bucket-black-balls",
+  "tags": [
+    "misir kovasi siyah toplar",
+    "popcorn bucket black balls",
+    "seyirci oyu"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/la-bola-negra/ici-1-alt.json",
+      "paths": [
+        {
+          "d": "M20 44 L80 44 L73 98 L27 98 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M30 44 L34 98 L42 98 L39 44Z M48 44 L50 98 L58 98 L57 44Z M66 44 L66 98 L72 98 L74 44Z",
+          "fill": "blue",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M16 44 Q50 52 84 44",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M18,34 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M34,28 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M50,32 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M64,38 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M26,18 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M42,14 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M57,22 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M40,38 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M22,32 Q24,27 29,26.5",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M38,26 Q40,21 45,20.5",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M54,30 Q56,25 61,24.5",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M68,36 Q70,31 75,30.5",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M30,16 Q32,11 37,10.5",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M46,12 Q48,7 53,6.5",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M61,20 Q63,15 68,14.5",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M44,36 Q46,31 51,30.5",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M92 20 L100 14 M90 28 L100 24",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2.4
+        }
+      ]
+    }
+  ]
+}

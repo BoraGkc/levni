@@ -1,0 +1,117 @@
+{
+ "name": "wind-turbine",
+ "tags": [
+  "rüzgar türbini",
+  "rüzgar enerjisi",
+  "wind turbine",
+  "enerji",
+  "türbin"
+ ],
+ "variants": [
+  {
+   "note": "single tall turbine, three blades",
+   "paths": [
+    {
+     "d": "M47 40 L44 90 L56 90 L53 40 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 38 Q34 20 26 8 Q42 16 52 36 Z",
+     "fill": "tone-green",
+     "stroke": "none"
+    },
+    {
+     "d": "M49 36 Q32 22 22 6 Q42 14 53 34 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M52 38 Q70 38 88 46 Q70 50 54 43 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M48 42 Q42 60 38 76 Q50 64 52 44 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M45.5 39 A4.5 4.1850000000000005 0 1 0 54.5 39 A4.5 4.1850000000000005 0 1 0 45.5 39 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "two turbines, big and small",
+   "paths": [
+    {
+     "d": "M34 36 L31 90 L41 90 L39 36 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M74 56 L72 90 L79 90 L78 56 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M37 34 Q22 22 14 8 Q32 14 40 32 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M38 36 Q58 30 66 40 Q50 44 40 40 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M35 38 Q32 52 28 62 Q40 54 38 40 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M33 36 A4 3.72 0 1 0 41 36 A4 3.72 0 1 0 33 36 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M76 54 Q68 46 66 36 Q76 40 78 52 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M77 55 Q88 52 94 58 Q86 62 78 58 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M75 57 Q72 66 68 70 Q76 66 77 58 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M73.2 55 A2.8 2.604 0 1 0 78.8 55 A2.8 2.604 0 1 0 73.2 55 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

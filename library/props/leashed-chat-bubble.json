@@ -1,0 +1,51 @@
+{
+  "name": "leashed-chat-bubble",
+  "tags": [
+    "tasma",
+    "konusma balonu",
+    "topluluk",
+    "kopek",
+    "leash",
+    "chat bubble",
+    "walking",
+    "community"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kopegi-zor-sahiplenmek/ici-1.json",
+      "paths": [
+        {
+          "d": "M52,38 Q36,56 22,48 Q8,40 12,70 Q16,84 24,74",
+          "stroke": "ink",
+          "weight": 17
+        },
+        {
+          "d": "M52,38 Q36,56 22,48 Q8,40 12,70 Q16,84 24,74",
+          "stroke": "coral",
+          "weight": 11
+        },
+        {
+          "d": "M10,76 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0",
+          "stroke": "coral",
+          "weight": 11
+        },
+        {
+          "d": "M48,6 Q48,0 54,0 L90,0 Q96,0 96,6 L96,34 Q96,40 90,40 L72,40 L76,52 L60,40 L54,40 Q48,40 48,34 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M56,20 a3.2,3.2 0 1,0 6.4,0 a3.2,3.2 0 1,0 -6.4,0 M68,20 a3.2,3.2 0 1,0 6.4,0 a3.2,3.2 0 1,0 -6.4,0 M80,20 a3.2,3.2 0 1,0 6.4,0 a3.2,3.2 0 1,0 -6.4,0",
+          "fill": "blue"
+        },
+        {
+          "d": "M58,38 L72,38 L72,46 L58,46 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.6
+        }
+      ]
+    }
+  ]
+}

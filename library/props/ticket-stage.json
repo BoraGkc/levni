@@ -1,0 +1,89 @@
+{
+  "name": "ticket-stage",
+  "tags": [
+    "bilet",
+    "sahne",
+    "perde",
+    "ticket",
+    "stage",
+    "curtain",
+    "tiyatro"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/off-broadway-kacirilmayacak/kapak-alt.json",
+      "paths": [
+        {
+          "d": "M5 20 L95 20 L95 44 Q86 50 95 56 L95 80 L5 80 L5 56 Q14 50 5 44 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M76 22 L76 78",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2,
+          "dash": [
+            3,
+            3
+          ]
+        },
+        {
+          "d": "M76 22 L94 22 L94 44 Q86 50 94 56 L94 78 L76 78 Z",
+          "fill": "coral",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M10 26 L70 26 L70 74 L10 74 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M40 26 L24 74 L56 74 Z",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M10 74 L70 74 L70 68 L10 68 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M10 26 L33 26 Q31 40 27 52 Q24 62 25 74 L10 74 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M70 26 L47 26 Q49 40 53 52 Q56 62 55 74 L70 74 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M10 26 L70 26 L70 31 Q60 35 50 31 Q40 35 30 31 Q20 35 10 31 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M15 34 Q14 52 15 72 M20 34 Q19 52 20 72 M65 34 Q66 52 65 72 M60 34 Q61 52 60 72",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 0.9
+        },
+        {
+          "d": "M82 36 L90 36 M82 42 L90 42 M82 62 L90 62 M82 68 L90 68",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2.4
+        }
+      ]
+    }
+  ]
+}

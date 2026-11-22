@@ -1,0 +1,54 @@
+{
+  "name": "play-tab-folder",
+  "tags": [
+    "dosya",
+    "klasör",
+    "oynat",
+    "dava dosyası",
+    "case file",
+    "folder",
+    "play button"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/netflix-belgeseli-the/ici-2.json",
+      "paths": [
+        {
+          "d": "M8 30 L94 30 L94 92 L8 92 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M8 14 L50 14 L58 30 L8 30 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M20 18 L20 28 L32 23 Z",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M8 38 L92 38 L92 94 L8 94 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M20 54 H70 M20 64 H80 M20 74 H58",
+          "stroke": "ink",
+          "weight": 2.5
+        },
+        {
+          "d": "M20 84 H36",
+          "stroke": "blue",
+          "weight": 4,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

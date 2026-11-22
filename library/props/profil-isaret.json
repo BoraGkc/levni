@@ -1,0 +1,25 @@
+{
+  "name": "profil-isaret",
+  "tags": [
+    "profil",
+    "avatar",
+    "karalama"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/randevu-uygulamasi-profillerin/kapak-flat.json",
+      "paths": [
+        {
+          "d": "M30 30 a14,14 0 1,0 28,0 a14,14 0 1,0 -28,0 M20 70 Q44 40 68 70",
+          "stroke": "blue",
+          "weight": 7
+        },
+        {
+          "d": "M62 30 L88 30 M62 42 L82 42 M20 84 L88 84",
+          "stroke": "blue",
+          "weight": 6
+        }
+      ]
+    }
+  ]
+}

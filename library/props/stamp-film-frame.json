@@ -1,0 +1,65 @@
+{
+  "name": "stamp-film-frame",
+  "tags": [
+    "mühür",
+    "kaşe",
+    "film karesi",
+    "iptal",
+    "stamp",
+    "film frame",
+    "cancel"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/naza-belgeseli-gazze/ici-1.json",
+      "paths": [
+        {
+          "d": "M36,16 a14,14 0 1,0 28,0 a14,14 0 1,0 -28,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M43 28 H57 V50 H43Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M24 50 H76 V64 H24Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M20 64 H80 V72 H20Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M20 80 H80 V98 H20Z",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 3
+        },
+        {
+          "d": "M24 83 H76 M24 95 H76",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 2,
+          "dash": [
+            2,
+            4
+          ]
+        },
+        {
+          "d": "M50 86 V92",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+ "name": "lightbulb",
+ "tags": [
+  "ampul",
+  "fikir",
+  "lamba",
+  "lightbulb",
+  "idea"
+ ],
+ "variants": [
+  {
+   "note": "bulb with mustard glow and rays",
+   "paths": [
+    {
+     "d": "M53 12Q79 12 79 40Q79 54 67 64L67 70L39 70L39 64Q27 54 27 40Q27 12 53 12Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 10 Q76 10 76 38 Q76 52 64 62 L64 68 L36 68 L36 62 Q24 52 24 38 Q24 10 50 10 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M38 68 L62 68 L61 84 Q50 90 39 84 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M40 76 L61 76",
+     "stroke": "ink",
+     "weight": 5,
+     "fill": "none"
+    },
+    {
+     "d": "M44 58 L44 46 Q50 38 56 46 L56 58",
+     "stroke": "ink",
+     "weight": 5,
+     "fill": "none"
+    },
+    {
+     "d": "M10 14 L18 20 M90 14 L82 20 M6 40 L14 40 M94 40 L86 40",
+     "stroke": "ink",
+     "weight": 6,
+     "fill": "none"
+    }
+   ]
+  },
+  {
+   "note": "simple bold bulb, paper, no rays",
+   "paths": [
+    {
+     "d": "M50 8 Q80 8 78 38 Q77 52 64 60 L64 66 L36 66 L36 60 Q22 52 22 38 Q20 8 50 8 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M37 66 L63 66 L62 80 Q50 86 38 80 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M38 74 L62 74 M44 90 L57 90",
+     "stroke": "ink",
+     "weight": 6,
+     "fill": "none"
+    },
+    {
+     "d": "M36 26 Q40 18 48 16",
+     "stroke": "ink",
+     "weight": 5,
+     "fill": "none"
+    }
+   ]
+  }
+ ]
+}

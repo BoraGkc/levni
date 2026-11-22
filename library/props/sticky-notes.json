@@ -1,0 +1,111 @@
+{
+ "name": "sticky-notes",
+ "tags": [
+  "yapışkan not",
+  "not",
+  "hatırlatma",
+  "sticky notes",
+  "post-it",
+  "brainstorm"
+ ],
+ "variants": [
+  {
+   "note": "three overlapping notes, mustard front, curled corner",
+   "paths": [
+    {
+     "d": "M7.7 25 L47 17.4 L54.3 54.8 L15 62.3 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M44.4 12 L88.2 16.6 L85.8 58.6 L41.8 56 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24 40 L72 38 L76 80 L68 88 L26 88 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M68 88 L68 80 L76 80",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M34 54 L64 53 M34 66 L56 65",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "single pinned note with two lines",
+   "paths": [
+    {
+     "d": "M18 18 L82 16 L84 70 L74 82 L20 84 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M74 82 L74 70 L84 70",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M30 38 L68 36 M30 52 L60 51",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M44 16 C44 12.7 46.7 10 50 10 C53.3 10 56 12.7 56 16 C56 19.3 53.3 22 50 22 C46.7 22 44 19.3 44 16 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "stack of notes, tone and green",
+   "paths": [
+    {
+     "d": "M16 46 L84 46 L84 84 L16 84 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M14 40 L82 38 L84 78 L16 80 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12 28 L78 26 L80 70 L14 72 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M14 30 L80 28 L82 38 L16 40 Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M24 52 L64 50 M24 62 L52 61",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

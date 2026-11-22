@@ -1,0 +1,53 @@
+{
+  "name": "heart-eye-mask",
+  "tags": [
+    "maske",
+    "kalp",
+    "göz",
+    "don juan",
+    "domino mask",
+    "heart eyes",
+    "aşk"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/off-broadway-kacirilmayacak/ici-1-r0.json",
+      "paths": [
+        {
+          "d": "M3 44 Q2 24 28 30 Q50 40 72 30 Q98 24 97 44 Q98 70 72 66 Q56 63 50 54 Q44 63 28 66 Q2 70 3 44 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M26 58 C10 46 14 34 22 36 Q27 38 27 43 Q27 38 32 36 C40 34 42 46 26 58 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M74 58 C58 46 62 34 70 36 Q75 38 75 43 Q75 38 80 36 C88 34 90 46 74 58 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M50 34 L46 42 L53 48 L48 56",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2,
+          "dash": [
+            4,
+            3
+          ]
+        },
+        {
+          "d": "M3 44 L-12 40 M97 44 L112 40",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2.4
+        }
+      ]
+    }
+  ]
+}

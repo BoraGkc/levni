@@ -1,0 +1,67 @@
+{
+  "name": "pitchfork-bat",
+  "tags": [
+    "beyzbol sopası",
+    "yarasa",
+    "şeytan çatalı",
+    "heykel",
+    "baseball bat",
+    "pitchfork",
+    "trident"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/neil-patrick-harris/ici-2.json",
+      "paths": [
+        {
+          "d": "M6 46 L10 44 L10 56 L6 54 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M10 47 L42 45 Q56 42 66 41 Q72 50 66 59 Q56 58 42 55 L10 53 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M16 47.5 L16 52.5 M22 47.5 L22 52.5",
+          "stroke": "coral",
+          "weight": 3,
+          "taper": false
+        },
+        {
+          "d": "M66 46 L76 46.5 L76 53.5 L66 54 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M76 34 L81 34 L81 66 L76 66 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M81 33 L96 33 L100 36 L96 39 L81 39 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.5
+        },
+        {
+          "d": "M81 47 L98 47 L102 50 L98 53 L81 53 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.5
+        },
+        {
+          "d": "M81 61 L96 61 L100 64 L96 67 L81 67 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.5
+        }
+      ]
+    }
+  ]
+}

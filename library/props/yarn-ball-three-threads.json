@@ -1,0 +1,63 @@
+{
+  "name": "yarn-ball-three-threads",
+  "tags": [
+    "yun yumagi uc ip",
+    "yarn ball three threads",
+    "kalp tuy anahtar"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/la-bola-negra-2/kapak.json",
+      "paths": [
+        {
+          "d": "M2,50 a26,26 0 1,0 52,0 a26,26 0 1,0 -52,0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M6 40 Q28 28 50 42 M4 52 Q28 40 52 54 M8 64 Q28 54 48 66 M16 30 Q30 52 20 72 M34 25 Q44 50 36 76 M44 30 Q38 50 46 70",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 1.6
+        },
+        {
+          "d": "M50 40 Q66 30 84 28",
+          "fill": "none",
+          "stroke": "coral",
+          "weight": 4.2
+        },
+        {
+          "d": "M52 50 Q72 60 88 48",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 4.2
+        },
+        {
+          "d": "M50 62 Q66 76 84 72",
+          "fill": "none",
+          "stroke": "tone",
+          "weight": 4.2
+        },
+        {
+          "d": "M84 28 C78 20 86 14 90 20 C94 14 102 20 96 28 L90 36 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M88 48 Q100 36 104 48 Q100 60 88 48Z M88 48 L106 48",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M84 72 m-5 0 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0 M89 72 L106 72 M100 72 L100 78 M105 72 L105 77",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 3.2
+        }
+      ]
+    }
+  ]
+}

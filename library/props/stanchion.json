@@ -1,0 +1,46 @@
+{
+  "name": "stanchion",
+  "tags": [
+    "kadife ip direği",
+    "sınır",
+    "stanchion",
+    "velvet rope"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/jennifer-lopez-kisisel/kapak-v2.json",
+      "paths": [
+        {
+          "d": "M18 90 Q50 82 82 90 L82 94 Q50 102 18 94 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M46 22 L54 22 L54 90 L46 90 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M50 4 a10 10 0 1 0 0.01 0 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M46 40 L54 40 M46 70 L54 70",
+          "stroke": "ink",
+          "weight": 3,
+          "fill": "none"
+        },
+        {
+          "d": "M45 8 Q47 5 50 5",
+          "stroke": "paper",
+          "weight": 3,
+          "fill": "none"
+        }
+      ]
+    }
+  ]
+}

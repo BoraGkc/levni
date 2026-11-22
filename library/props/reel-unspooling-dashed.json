@@ -1,0 +1,234 @@
+{
+  "name": "reel-unspooling-dashed",
+  "tags": [
+    "film makarasi acilan serit kesik cizgi",
+    "film reel unspooling dashed ending"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/la-bola-negra-2/ici-2-alt.json",
+      "paths": [
+        {
+          "d": "M-4,40 a26,26 0 1,0 52,0 a26,26 0 1,0 -52,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M16,40 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M17,22 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M35,40 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M17,58 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M-1,40 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M22 66 Q34 94 60 82 Q84 70 94 90",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 40
+        },
+        {
+          "d": "M22 66 Q34 94 60 82 Q84 70 94 90",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 28,
+          "dash": [
+            22,
+            10
+          ]
+        },
+        {
+          "d": "M94 90 Q100 98 112 90 M114 88 L124 80",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 4,
+          "dash": [
+            8,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "note": "harvested from .cache/cizim-drafts/la-bola-negra-2/ici-2-alt2.json",
+      "paths": [
+        {
+          "d": "M-5,34 a25,25 0 1,0 50,0 a25,25 0 1,0 -50,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M-1,34 a21,21 0 1,0 42,0 a21,21 0 1,0 -42,0",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M15,20 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M28.299999999999997,29.7 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M23.2,45.3 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M6.800000000000001,45.3 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M1.7000000000000002,29.7 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M15,34 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M20 59 Q20 86 52 84 Q80 82 88 70",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 62
+        },
+        {
+          "d": "M20 59 Q20 86 52 84 Q80 82 88 70",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 42,
+          "dash": [
+            30,
+            14
+          ]
+        },
+        {
+          "d": "M92 62 Q100 54 112 58",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 4,
+          "dash": [
+            9,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "note": "harvested from .cache/cizim-drafts/la-bola-negra-2/ici-2.json",
+      "paths": [
+        {
+          "d": "M-5,34 a25,25 0 1,0 50,0 a25,25 0 1,0 -50,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M-1,34 a21,21 0 1,0 42,0 a21,21 0 1,0 -42,0",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M15,20 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M28.299999999999997,29.7 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M23.2,45.3 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M6.800000000000001,45.3 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M1.7000000000000002,29.7 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M15,34 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M20 59 Q20 86 52 84 Q80 82 88 70",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 62
+        },
+        {
+          "d": "M20 59 Q20 86 52 84 Q80 82 88 70",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 42,
+          "dash": [
+            30,
+            14
+          ]
+        },
+        {
+          "d": "M90 66 Q98 58 108 60 Q116 62 122 56",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 8,
+          "dash": [
+            18,
+            14
+          ]
+        }
+      ]
+    }
+  ]
+}

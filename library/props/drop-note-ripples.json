@@ -1,0 +1,64 @@
+{
+  "name": "drop-note-ripples",
+  "tags": [
+    "nota",
+    "damla",
+    "halka",
+    "viral",
+    "damlaya damlaya gol",
+    "music note",
+    "water drop",
+    "ripples"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kyle-gordon-parodi/ici-2-alt.json",
+      "paths": [
+        {
+          "d": "M10,96 a40,9 0 1,0 80,0 a40,9 0 1,0 -80,0",
+          "stroke": "paper",
+          "weight": 4
+        },
+        {
+          "d": "M22,96 a28,6 0 1,0 56,0 a28,6 0 1,0 -56,0",
+          "stroke": "paper",
+          "weight": 4
+        },
+        {
+          "d": "M34,96 a16,3.5 0 1,0 32,0 a16,3.5 0 1,0 -32,0",
+          "stroke": "paper",
+          "weight": 4
+        },
+        {
+          "d": "M46,36 Q26,60 28,76 Q30,92 48,92 Q66,90 66,74 Q66,58 46,36 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M36,70 Q36,80 44,84",
+          "stroke": "paper",
+          "weight": 4
+        },
+        {
+          "d": "M59,28 L65,28 L65,62 L59,62 Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M62,2 L66,2 L66,36 L60,36 L60,2 Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M64,2 Q92,10 86,38 Q84,22 64,16 Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2.4
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "broom",
+  "tags": [
+    "süpürge",
+    "temizlik",
+    "broom",
+    "cleanup"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/instagram-karsiliksiz-takipc/kapak-v2.json",
+      "paths": [
+        {
+          "d": "M94 2 L56 68",
+          "stroke": "ink",
+          "weight": 4.5
+        },
+        {
+          "d": "M46 66 L66 60 L78 94 L30 98 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M42 80 L38 96 M50 78 L48 97 M58 76 L58 97 M66 75 L69 96",
+          "stroke": "ink",
+          "weight": 1.4
+        }
+      ]
+    }
+  ]
+}

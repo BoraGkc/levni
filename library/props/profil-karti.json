@@ -1,0 +1,25 @@
+{
+  "name": "profil-karti",
+  "tags": [
+    "profil",
+    "avatar",
+    "kart"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/randevu-uygulamasi-profillerin/ici-1-r0.json",
+      "paths": [
+        {
+          "d": "M30 28 a14,14 0 1,0 28,0 a14,14 0 1,0 -28,0 M20 66 Q44 40 68 66",
+          "stroke": "blue",
+          "weight": 7
+        },
+        {
+          "d": "M62 28 L88 28 M62 40 L82 40 M20 80 L88 80 M20 90 L70 90",
+          "stroke": "blue",
+          "weight": 6
+        }
+      ]
+    }
+  ]
+}

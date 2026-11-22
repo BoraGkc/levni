@@ -1,0 +1,185 @@
+{
+ "name": "tram",
+ "tags": [
+  "tramvay",
+  "nostaljik tramvay",
+  "tram",
+  "kadıköy",
+  "istiklal"
+ ],
+ "variants": [
+  {
+   "note": "side view, pole and wire",
+   "paths": [
+    {
+     "d": "M4 8 L96 8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 8 L50 22 M44 22 L56 22",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M12 28 Q12 22 18 22 L82 22 Q88 22 88 28 L88 72 L12 72 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M15 58 L91 58 L91 74 L15 74Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M12 56 L88 56 L88 72 L12 72Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12 56 L88 56",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M18 30 L36 30 L36 48 L18 48Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M44 30 L62 30 L62 48 L44 48Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M70 30 L82 30 L82 48 L70 48Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M24 76 C24 72.7 26.6 70.2 30 70.2 C33.4 70.2 36 72.7 36 76 C36 79.3 33.4 81.8 30 81.8 C26.6 81.8 24 79.3 24 76 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M64 76 C64 72.7 66.6 70.2 70 70.2 C73.4 70.2 76 72.7 76 76 C76 79.3 73.4 81.8 70 81.8 C66.6 81.8 64 79.3 64 76 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  },
+  {
+   "note": "front view, round headlamp",
+   "paths": [
+    {
+     "d": "M30 8 L70 8 M50 8 L50 20",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M22 22 Q22 18 28 18 L72 18 Q78 18 78 22 L80 78 L20 78 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M31 28 L75 28 L75 52 L31 52Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M28 26 L72 26 L72 50 L28 50Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M28 26 L72 26 L72 50 L28 50Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M44 62 C44 58.6 46.6 56 50 56 C53.4 56 56 58.6 56 62 C56 65.4 53.4 68 50 68 C46.6 68 44 65.4 44 62 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M20 70 L80 70",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M8 90 L92 90 M30 78 L30 90 M70 78 L70 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  },
+  {
+   "note": "retro tram, two windows and bell, rails",
+   "paths": [
+    {
+     "d": "M10 30 Q10 20 22 20 L78 20 Q90 20 90 30 L90 70 L10 70Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M13 56 L93 56 L93 72 L13 72Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M10 54 L90 54 L90 70 L10 70Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M10 54 L90 54",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M20 30 L46 30 L46 46 L20 46Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M54 30 L80 30 L80 46 L54 46Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 20 L50 10 M38 10 L62 10",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M4 86 L96 86 M18 72 L18 86 M82 72 L82 86",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  }
+ ]
+}

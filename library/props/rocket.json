@@ -1,0 +1,92 @@
+{
+ "name": "rocket",
+ "tags": [
+  "roket",
+  "uzay",
+  "rocket",
+  "fırlatma",
+  "uzay aracı"
+ ],
+ "variants": [
+  {
+   "note": "diagonal launch, coral nose and fins, flame",
+   "paths": [
+    {
+     "d": "M66 14 Q82 10 86 16 Q84 28 76 40 Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M28 70 Q22 40 52 20 Q74 8 86 12 Q88 28 74 52 Q52 76 28 70 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M53.5 36 A6.5 6.045 0 1 0 66.5 36 A6.5 6.045 0 1 0 53.5 36 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M30 54 L14 56 L24 70 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M46 74 L44 90 L58 80 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M24 74 Q8 80 6 94 Q20 90 30 80",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "upright rocket, round window, flame below",
+   "paths": [
+    {
+     "d": "M50 6 Q70 24 66 56 L66 70 L34 70 L34 56 Q30 24 50 6 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M52 8 Q72 26 68 56 L68 70 L60 70 L60 52 Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M43 38 A7 6.510000000000001 0 1 0 57 38 A7 6.510000000000001 0 1 0 43 38 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M34 54 L20 74 L34 70 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M66 54 L81 76 L66 70 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M42 70 Q50 96 58 70",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  }
+ ]
+}

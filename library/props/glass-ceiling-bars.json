@@ -1,0 +1,87 @@
+{
+  "name": "glass-ceiling-bars",
+  "tags": [
+    "cam tavan çubuk grafik merdiven",
+    "glass ceiling bar ladder"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/silikon-vadisi-hala/ici-1.json",
+      "paths": [
+        {
+          "d": "M8 98 V78 H22 V98Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M25 98 V64 H39 V98Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M42 98 V50 H56 V98Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M59 98 V36 H73 V98Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M76 98 V22 H90 V98Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M4 14 H96 V22 H4Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M4 14 H96",
+          "stroke": "paper",
+          "weight": 2,
+          "fill": "none"
+        },
+        {
+          "d": "M44 14 L50 22 L58 14 M50 22 L48 30",
+          "stroke": "ink",
+          "weight": 1.8,
+          "fill": "none"
+        },
+        {
+          "d": "M10 6 L18 14 M24 4 L30 14 M70 6 L78 14",
+          "stroke": "paper",
+          "weight": 2,
+          "fill": "none"
+        },
+        {
+          "d": "M73.2 24 a2.8 2.8 0 1 0 5.6 0 a2.8 2.8 0 1 0 -5.6 0",
+          "fill": "none",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M76.6 30 a3.4 3.4 0 1 0 6.8 0 a3.4 3.4 0 1 0 -6.8 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M80 40 V52 M80 52 L76 62 M80 52 L84 62 M80 44 L74 30",
+          "stroke": "coral",
+          "weight": 3.6,
+          "fill": "none",
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

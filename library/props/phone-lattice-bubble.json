@@ -1,0 +1,55 @@
+{
+  "name": "phone-lattice-bubble",
+  "tags": [
+    "telefon",
+    "kafes",
+    "konuşma balonu",
+    "söz hakkı",
+    "phone",
+    "lattice",
+    "speech bubble"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/musluman-manosfer-kadinlari/kapak.json",
+      "paths": [
+        {
+          "d": "M30 2 H70 Q76 2 76 8 V92 Q76 98 70 98 H30 Q24 98 24 92 V8 Q24 2 30 2Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M30 10 H70 V88 H30Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M37 30 H63 Q68 30 68 35 V50 Q68 55 63 55 H50 L42 64 V55 H37 Q32 55 32 50 V35 Q32 30 37 30Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M40,42 a1.6,1.6 0 1,0 3.2,0 a1.6,1.6 0 1,0 -3.2,0 M48.4,42 a1.6,1.6 0 1,0 3.2,0 a1.6,1.6 0 1,0 -3.2,0 M56.8,42 a1.6,1.6 0 1,0 3.2,0 a1.6,1.6 0 1,0 -3.2,0",
+          "fill": "blue",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M32 10 h3.2 v78 h-3.2z M40 10 h3.2 v78 h-3.2z M48 10 h3.2 v78 h-3.2z M56 10 h3.2 v78 h-3.2z M64 10 h3.2 v78 h-3.2z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1.2
+        },
+        {
+          "d": "M46 93 H54",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

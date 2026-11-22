@@ -1,0 +1,31 @@
+{
+  "name": "mini-papyon",
+  "tags": [
+    "papyon"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/robert-pattinson-james/ici-2-r0.json",
+      "paths": [
+        {
+          "d": "M44 50 L8 30 L8 70 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M56 50 L92 30 L92 70 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M42 40 L58 40 L58 62 L42 62 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

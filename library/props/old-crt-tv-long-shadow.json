@@ -1,0 +1,65 @@
+{
+  "name": "old-crt-tv-long-shadow",
+  "tags": [
+    "eski tup televizyon",
+    "uzun golge",
+    "sopranos"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/sopranosun-etkisi-21/kapak.json",
+      "paths": [
+        {
+          "d": "M40 24 L24 4 M62 24 L78 6",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 4,
+          "taper": false
+        },
+        {
+          "d": "M22 88 L18 99 M82 88 L86 99",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M6 28 Q6 24 10 24 L92 24 Q96 24 96 28 L96 86 Q96 90 92 90 L10 90 Q6 90 6 86 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M14 32 L68 32 Q72 32 72 36 L72 78 Q72 82 68 82 L14 82 Q10 82 10 78 L10 36 Q10 32 14 32 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M17 38 L40 38 M17 43 L28 43",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 3
+        },
+        {
+          "d": "M78 40 a7 7 0 1,0 14 0 a7 7 0 1,0 -14 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M78 60 a7 7 0 1,0 14 0 a7 7 0 1,0 -14 0",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M77 76 L93 76 M77 80 L93 80 M77 84 L93 84",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.6
+        }
+      ]
+    }
+  ]
+}

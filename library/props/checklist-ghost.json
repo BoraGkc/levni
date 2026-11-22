@@ -1,0 +1,50 @@
+{
+  "name": "checklist-ghost",
+  "tags": [
+    "yapılacaklar listesi hayalet",
+    "checklist paper ghost"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/mfoniso-udofia-creation/kapak-r0.json",
+      "paths": [
+        {
+          "d": "M22 6 H78 Q84 6 84 14 V88 Q78 80 72 90 Q64 80 56 92 Q48 82 40 92 Q32 80 26 90 Q20 82 16 88 V14 Q16 6 22 6Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M30 20 a6 8 0 1 0 0.1 0Z M60 20 a6 8 0 1 0 0.1 0Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M26 42 h6 v6 h-6Z M26 56 h6 v6 h-6Z M26 70 h6 v6 h-6Z",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M27 45 l2 3 l4 -6 M27 59 l2 3 l4 -6",
+          "stroke": "blue",
+          "weight": 2.2,
+          "fill": "none"
+        },
+        {
+          "d": "M38 46 H72 M38 60 H66 M38 74 H58",
+          "stroke": "ink",
+          "weight": 1.6,
+          "fill": "none"
+        },
+        {
+          "d": "M52 6 L48 24 L58 34 L50 48 L60 62 L54 80",
+          "stroke": "blue",
+          "weight": 2.4,
+          "fill": "none"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "name": "question-hand",
+  "tags": [
+    "el kaldıran soru işareti",
+    "raised hand question mark"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/silikon-vadisi-hala/ici-1-r1.json",
+      "paths": [
+        {
+          "d": "M26 60 V23.5 a5.5 5.5 0 0 1 11 0 V60Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M38.5 60 V13.5 a5.5 5.5 0 0 1 11 0 V60Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M51 60 V11.5 a5.5 5.5 0 0 1 11 0 V60Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M63.5 60 V21.5 a5.5 5.5 0 0 1 11 0 V60Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M28 70 L8 52 Q4 46 10 42 Q16 40 30 54Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M26 52 H75 V82 Q75 98 50 98 Q26 98 26 82Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M38 64 Q38 54 50 54 Q62 54 62 64 Q62 72 50 76 V80",
+          "fill": "none",
+          "stroke": "coral",
+          "weight": 8
+        },
+        {
+          "d": "M47.4 88 a2.6 2.6 0 1 0 5.2 0 a2.6 2.6 0 1 0 -5.2 0",
+          "fill": "coral",
+          "stroke": "none",
+          "weight": 0
+        }
+      ]
+    }
+  ]
+}

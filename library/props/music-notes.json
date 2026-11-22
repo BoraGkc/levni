@@ -1,0 +1,73 @@
+{
+ "name": "music-notes",
+ "tags": [
+  "nota",
+  "müzik",
+  "notalar",
+  "music",
+  "melodi"
+ ],
+ "variants": [
+  {
+   "note": "beamed pair of eighth notes, coral heads",
+   "paths": [
+    {
+     "d": "M17 76 Q17 66 29 66 Q41 68 41 78 Q39 88 27 88 Q15 86 17 76 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M61 68 Q61 58 73 58 Q85 60 85 70 Q83 80 71 80 Q59 78 61 68 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 74 L36 22 M80 66 L80 14",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M36 22 L80 14 L80 30 L36 38 Z",
+     "fill": "ink",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M14 74 Q14 64 26 64 Q38 66 38 76 Q36 86 24 86 Q12 84 14 74 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58 66 Q58 56 70 56 Q82 58 82 68 Q80 78 68 78 Q56 76 58 66 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  },
+  {
+   "note": "single eighth note with flag, mustard head",
+   "paths": [
+    {
+     "d": "M27 72 Q27 60 41 60 Q55 62 55 74 Q53 86 39 86 Q25 84 27 72 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 70 L50 14 Q54 30 74 34 Q76 46 60 50",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M24 70 Q24 58 38 58 Q52 60 52 72 Q50 84 36 84 Q22 82 24 70 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

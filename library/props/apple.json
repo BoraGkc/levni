@@ -1,0 +1,64 @@
+{
+ "name": "apple",
+ "tags": [
+  "elma",
+  "meyve",
+  "apple",
+  "fruit"
+ ],
+ "variants": [
+  {
+   "note": "apple with stem and green leaf",
+   "paths": [
+    {
+     "d": "M53 33 C43 23 22 27 23 53 C24 75 37 91 49 89 Q53 87 57 89 C69 91 83 75 83 53 C84 27 63 23 53 33 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 30 C40 20 19 24 20 50 C21 72 34 88 46 86 Q50 84 54 86 C66 88 80 72 80 50 C81 24 60 20 50 30 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 30 Q47 19 54 11",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M56 22 C62 10 76 12 78 12 C76 24 66 28 56 22 Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M54 20 C60 8 74 10 76 10 C74 22 64 26 54 20 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "bitten green apple",
+   "paths": [
+    {
+     "d": "M53 33 C43 23 22 27 23 53 C24 75 37 91 49 89 Q53 87 57 89 C69 91 83 75 83 59 C73 57 71 47 81 41 C75 29 63 25 53 33 Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 30 C40 20 19 24 20 50 C21 72 34 88 46 86 Q50 84 54 86 C66 88 80 72 80 56 C70 54 68 44 78 38 C72 26 60 22 50 30 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 30 Q48 20 42 12",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

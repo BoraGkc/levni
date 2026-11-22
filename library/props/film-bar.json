@@ -1,0 +1,28 @@
+{
+  "name": "film-bar",
+  "tags": [
+    "film şeridi",
+    "halter",
+    "çubuk",
+    "film strip barbell bar"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/john-turturro-yeni/ici-2-alt.json",
+      "paths": [
+        {
+          "d": "M10 44 L90 44 L90 56 L10 56 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M14 47 L18 47 L18 53 L14 53 Z M24 47 L28 47 L28 53 L24 53 Z M34 47 L38 47 L38 53 L34 53 Z M44 47 L48 47 L48 53 L44 53 Z M54 47 L58 47 L58 53 L54 53 Z M64 47 L68 47 L68 53 L64 53 Z M74 47 L78 47 L78 53 L74 53 Z",
+          "fill": "blue",
+          "stroke": "none",
+          "weight": 0
+        }
+      ]
+    }
+  ]
+}

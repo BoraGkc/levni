@@ -1,0 +1,84 @@
+{
+  "name": "cassette-to-phone",
+  "tags": [
+    "kaset",
+    "telefon",
+    "tiktok",
+    "dijital evrim",
+    "cassette tape",
+    "phone",
+    "short video",
+    "streaming"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kyle-gordon-parodi/ici-1-alt.json",
+      "paths": [
+        {
+          "d": "M4,14 Q4,10 8,10 L62,10 Q66,10 66,14 L66,54 Q66,58 62,58 L8,58 Q4,58 4,54 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M10,14 L60,14 L60,30 L10,30 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M16,36 L54,36 L58,54 L12,54 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M18.0,45.0 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0 M40.0,45.0 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M22.0,45.0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0 M44.0,45.0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0",
+          "fill": "ink"
+        },
+        {
+          "d": "M16,22 L52,22",
+          "stroke": "paper",
+          "weight": 4
+        },
+        {
+          "d": "M66,6 Q66,0 72,0 L90,0 Q96,0 96,6 L96,70 Q96,76 90,76 L72,76 Q66,76 66,70 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M70,8 L92,8 L92,64 L70,64 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M76,26 L88,36 L76,46 Z",
+          "fill": "paper"
+        },
+        {
+          "d": "M80,70 L82,70",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M30,50 Q28,86 56,84 Q70,82 74,70",
+          "stroke": "ink",
+          "weight": 26
+        },
+        {
+          "d": "M30,50 Q28,86 56,84 Q70,82 74,70",
+          "stroke": "coral",
+          "weight": 17
+        }
+      ]
+    }
+  ]
+}

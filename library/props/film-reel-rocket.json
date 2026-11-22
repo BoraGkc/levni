@@ -1,0 +1,66 @@
+{
+  "name": "film-reel-rocket",
+  "tags": [
+    "roket",
+    "film makarası",
+    "belgesel",
+    "rocket",
+    "film reel",
+    "documentary"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/musk-belgeseli-dort/kapak.json",
+      "paths": [
+        {
+          "d": "M42 68 L58 68 L58 100 L42 100 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M44 72 h12 v6 h-12z M44 82 h12 v6 h-12z M44 92 h12 v5 h-12z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M28 56 L8 84 L36 70 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M72 56 L92 84 L64 70 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M29 28 Q50 -10 71 28 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M25,46 a25,25 0 1,0 50,0 a25,25 0 1,0 -50,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M46,46 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.5
+        },
+        {
+          "d": "M45.5,32 a4.5,4.5 0 1,0 9,0 a4.5,4.5 0 1,0 -9,0 M58.5,41 a4.5,4.5 0 1,0 9,0 a4.5,4.5 0 1,0 -9,0 M53.5,58 a4.5,4.5 0 1,0 9,0 a4.5,4.5 0 1,0 -9,0 M37.5,58 a4.5,4.5 0 1,0 9,0 a4.5,4.5 0 1,0 -9,0 M32.5,41 a4.5,4.5 0 1,0 9,0 a4.5,4.5 0 1,0 -9,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 1.6
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+ "name": "envelope",
+ "tags": [
+  "zarf",
+  "mektup",
+  "posta",
+  "envelope",
+  "mail",
+  "letter"
+ ],
+ "variants": [
+  {
+   "note": "closed envelope with flap and coral seal",
+   "paths": [
+    {
+     "d": "M10 28 L90 27 L91 76 L9 77 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M10 28 Q50 62 90 27",
+     "stroke": "ink",
+     "weight": 7,
+     "fill": "none"
+    },
+    {
+     "d": "M47 54A7 6 0 1 0 47.1 54Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M44 52 A7 6 0 1 0 44.1 52 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "open envelope, letter peeking out",
+   "paths": [
+    {
+     "d": "M16 42 L50 14 L84 42 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M26 38 L72 36 L72 62 L26 64 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M33 46 L64 45 M33 54 L58 53",
+     "stroke": "ink",
+     "weight": 5,
+     "fill": "none"
+    },
+    {
+     "d": "M10 42 L90 41 L91 84 L9 85 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M10 42 L50 68 L90 41",
+     "stroke": "ink",
+     "weight": 7,
+     "fill": "none"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+  "name": "teacup-banjo",
+  "tags": [
+    "çay fincanı",
+    "banjo",
+    "kaşık",
+    "hipnoz",
+    "bahçe partisi",
+    "teacup",
+    "spoon",
+    "get out"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/get-out-filminin/ici-2.json",
+      "paths": [
+        {
+          "d": "M1,50 a31,31 0 1,0 62,0 a31,31 0 1,0 -62,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M7,50 a25,25 0 1,0 50,0 a25,25 0 1,0 -50,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M12,50 a20,20 0 1,0 40,0 a20,20 0 1,0 -40,0",
+          "fill": "tone-mustard",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M32 50 L32.22 50.12 L32.27 50.42 L32.05 50.75 L31.58 50.91 L31.0 50.75 L30.52 50.21 L30.36 49.39 L30.69 48.49 L31.53 47.8 L32.71 47.6 L33.95 48.06 L34.88 49.16 L35.17 50.7 L34.64 52.3 L33.3 53.52 L31.42 53.96 L29.44 53.39 L27.9 51.85 L27.26 49.64 L27.8 47.28 L29.5 45.38 L32.02 44.5 L34.78 44.97 L37.06 46.78 L38.24 49.59 L37.9 52.73 L36.02 55.43 L32.96 56.93 L29.43 56.78 L26.3 54.88 L24.42 51.6 L24.34 47.7 L26.21 44.13 L29.66 41.83 L33.92 41.46 L37.94 43.24 L40.69 46.83 L41.39 51.42 L39.76 55.9 L36.08 59.13 L31.18 60.22",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M52 45 H90 V55 H52Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M60 45 V55 M68 45 V55 M76 45 V55 M84 45 V55 ",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M90 43 L100 40 V60 L90 57Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M93 42 v-6 M97 41 v-6 M93 58 v6 M97 59 v6",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M24 50 Q32 44 40 50 Q32 56 24 50Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M32 50 H52",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M0 50 Q-8 50 -6 58 Q-4 64 4 62",
+          "stroke": "ink",
+          "weight": 3.4
+        }
+      ]
+    }
+  ]
+}

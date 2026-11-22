@@ -1,0 +1,136 @@
+{
+ "name": "street-lamp",
+ "tags": [
+  "sokak lambası",
+  "lamba",
+  "street lamp",
+  "lantern",
+  "aydınlatma"
+ ],
+ "variants": [
+  {
+   "note": "classic post with lantern",
+   "paths": [
+    {
+     "d": "M38 28 L62 28 L58 10 L42 10 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M45 16 L61 16 L63 30 L43 30Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M42 14 L58 14 L60 28 L40 28Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M42 14 L58 14 L60 28 L40 28Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 28 L50 84 M42 88 L58 88 M44 84 L56 84",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M42 10 L50 4 L58 10",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  },
+  {
+   "note": "curved arm lamp, light cone",
+   "paths": [
+    {
+     "d": "M36 90 L36 24 Q36 12 52 12 L68 12",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M60 12 L82 12 L78 24 L64 24Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M67 26 L81 26 L85 36 L63 36Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M64 24 L78 24 L88 52 L54 52Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M28 90 L46 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "double lantern, with glow dashes",
+   "paths": [
+    {
+     "d": "M20 30 L38 30 L36 16 L22 16Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M62 30 L80 30 L78 16 L64 16Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 30 L30 40 L50 40 M70 30 L70 40 L50 40 M50 40 L50 86 M42 90 L58 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M27 20 L37 20 L38 30 L26 30Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M24 18 L34 18 L35 28 L23 28Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M69 20 L79 20 L80 30 L68 30Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M66 18 L76 18 L77 28 L65 28Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M12 12 L8 8 M30 8 L30 4 M48 12 L52 8 M70 8 L70 4 M88 12 L92 8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "pliers",
+  "tags": [
+    "pense",
+    "alet",
+    "tamir",
+    "pliers",
+    "tool"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/bakir-tel-soyarak/ici-2.json",
+      "paths": [
+        {
+          "d": "M44 4 L48 4 L50 30 L52 4 L56 4 L58 34 L52 44 L48 44 L42 34 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M48 44 L30 98 L20 96 L44 40 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M52 44 L70 98 L80 96 L56 40 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M50 42 Q54 42 54 46 Q54 50 50 50 Q46 50 46 46 Q46 42 50 42 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.2
+        }
+      ]
+    }
+  ]
+}

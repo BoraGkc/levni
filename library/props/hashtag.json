@@ -1,0 +1,153 @@
+{
+ "name": "hashtag",
+ "tags": [
+  "hashtag",
+  "diyez",
+  "etiket",
+  "konu",
+  "hash",
+  "#"
+ ],
+ "variants": [
+  {
+   "note": "fat outlined hashtag, coral",
+   "paths": [
+    {
+     "d": "M38 14 Q36 50 32 86",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 20
+    },
+    {
+     "d": "M39.5 15.5Q37.5 51.5 33.5 87.5",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 9
+    },
+    {
+     "d": "M68 14 Q66 50 62 86",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 20
+    },
+    {
+     "d": "M69.5 15.5Q67.5 51.5 63.5 87.5",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 9
+    },
+    {
+     "d": "M14 38 Q50 36 88 34",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 20
+    },
+    {
+     "d": "M15.5 39.5Q51.5 37.5 89.5 35.5",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 9
+    },
+    {
+     "d": "M12 66 Q50 64 86 62",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 20
+    },
+    {
+     "d": "M13.5 67.5Q51.5 65.5 87.5 63.5",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "thin ink hashtag with shifted mustard copy",
+   "paths": [
+    {
+     "d": "M41 17Q39 53 35 89",
+     "fill": "none",
+     "stroke": "mustard",
+     "weight": 9
+    },
+    {
+     "d": "M71 17Q69 53 65 89",
+     "fill": "none",
+     "stroke": "mustard",
+     "weight": 9
+    },
+    {
+     "d": "M17 41Q53 39 91 37",
+     "fill": "none",
+     "stroke": "mustard",
+     "weight": 9
+    },
+    {
+     "d": "M15 69Q53 67 89 65",
+     "fill": "none",
+     "stroke": "mustard",
+     "weight": 9
+    },
+    {
+     "d": "M38 14 Q36 50 32 86",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M68 14 Q66 50 62 86",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M14 38 Q50 36 88 34",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M12 66 Q50 64 86 62",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "slanted hashtag on green blob",
+   "paths": [
+    {
+     "d": "M15 53Q15 17 53 17Q91 17 91 53Q91 89 53 89Q15 89 15 53Z",
+     "fill": "tone-green",
+     "stroke": "none"
+    },
+    {
+     "d": "M44 12 L32 88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M70 12 L58 88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16 36 L88 36",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12 64 L84 64",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+  "name": "faucet",
+  "tags": [
+    "musluk",
+    "damla",
+    "su",
+    "faucet",
+    "tap",
+    "drip"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/openai-matematik-atilimi/ici-2.json",
+      "paths": [
+        {
+          "d": "M22 -30 L42 -30 L42 22 L78 22 L78 36 L72 36 L72 42 L64 42 L64 36 L42 36 L22 36 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M60 18 L60 6",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M48 6 L72 6",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M48 6 m-4 0 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M72 6 m-4 0 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M30 -10 L30 30",
+          "fill": "none",
+          "stroke": "tone",
+          "weight": 2.4
+        }
+      ]
+    }
+  ]
+}

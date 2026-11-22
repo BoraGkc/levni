@@ -1,0 +1,55 @@
+{
+  "name": "gavel-cross-block",
+  "tags": [
+    "tokmak",
+    "haç",
+    "tedavi",
+    "ceza",
+    "gavel",
+    "medical cross",
+    "treatment",
+    "sound block"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/nick-reiner-davasi/kapak.json",
+      "paths": [
+        {
+          "d": "M26 74 L26 92 Q50 102 74 92 L74 74 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M26 74 Q26 64 50 64 Q74 64 74 74 Q74 84 50 84 Q26 84 26 74 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M46 68 L54 68 L54 72 L58 72 L58 78 L54 78 L54 82 L46 82 L46 78 L42 78 L42 72 L46 72 Z",
+          "fill": "blue",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M46 17 L88 -6 L92 2 L50 26 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M18 24 L48 4 L62 28 L32 48 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M22 26 L36 17 M58 28 L46 36",
+          "stroke": "paper",
+          "weight": 2.5
+        }
+      ]
+    }
+  ]
+}

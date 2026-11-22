@@ -1,0 +1,24 @@
+{
+  "name": "mahkeme-alnlik",
+  "tags": [
+    "alınlık"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/russell-brand-tecavuz/kapak-3d.json",
+      "paths": [
+        {
+          "d": "M0 62 L50 36 L100 62 Z",
+          "fill": "paper",
+          "stroke": "blue",
+          "weight": 4
+        },
+        {
+          "d": "M20 58 L50 42 L80 58",
+          "stroke": "tone",
+          "weight": 4
+        }
+      ]
+    }
+  ]
+}

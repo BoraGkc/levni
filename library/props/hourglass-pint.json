@@ -1,0 +1,62 @@
+{
+  "name": "hourglass-pint",
+  "tags": [
+    "bira bardağı",
+    "kum saati",
+    "bekleme",
+    "pint",
+    "hourglass"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/bud-light-boykotculari/kapak.json",
+      "paths": [
+        {
+          "d": "M22 10 H78 Q72 38 56 50 Q72 62 78 92 H22 Q28 62 44 50 Q28 38 22 10Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M25 18 H75 Q70 38 56 49 H44 Q30 38 25 18Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M22 10 Q26 2 34 6 Q40 -1 48 5 Q56 -2 62 5 Q72 0 78 10 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M44 51 Q50 56 56 51",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M50 52 V62",
+          "stroke": "mustard",
+          "weight": 3
+        },
+        {
+          "d": "M50 66 q-3 5 0 7 q3 -2 0 -7Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M30 88 H70 Q68 80 50 80 Q32 80 30 88Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M32 22 Q36 34 44 44",
+          "stroke": "paper",
+          "weight": 2.2
+        }
+      ]
+    }
+  ]
+}

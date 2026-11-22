@@ -1,0 +1,70 @@
+{
+ "name": "padlock",
+ "tags": [
+  "kilit",
+  "asma kilit",
+  "güvenlik",
+  "padlock",
+  "lock",
+  "security"
+ ],
+ "variants": [
+  {
+   "note": "closed padlock, coral body offset",
+   "paths": [
+    {
+     "d": "M32 46 L32 30 Q32 12 50 12 Q68 12 68 30 L68 46",
+     "stroke": "ink",
+     "weight": 10,
+     "fill": "none"
+    },
+    {
+     "d": "M23 46L83 46L85 90L21 90Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M20 44 L80 44 L82 88 L18 88 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 60 L50 72",
+     "stroke": "ink",
+     "weight": 9,
+     "fill": "none"
+    }
+   ]
+  },
+  {
+   "note": "open padlock, paper body, shackle lifted",
+   "paths": [
+    {
+     "d": "M30 44 L30 28 Q30 10 48 10 Q64 10 64 24 L64 30",
+     "stroke": "ink",
+     "weight": 10,
+     "fill": "none"
+    },
+    {
+     "d": "M20 46 L80 46 L82 90 L18 90 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 62 A4 4 0 1 0 50.1 62 Z",
+     "fill": "ink",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 66 L50 76",
+     "stroke": "ink",
+     "weight": 7,
+     "fill": "none"
+    }
+   ]
+  }
+ ]
+}

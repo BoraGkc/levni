@@ -1,0 +1,70 @@
+{
+  "name": "half-erased-bubble",
+  "tags": [
+    "konuşma balonu",
+    "silgi",
+    "dil",
+    "silmek",
+    "speech bubble",
+    "eraser",
+    "erase",
+    "language"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/openai-arastirmacisi-llm/kapak.json",
+      "paths": [
+        {
+          "d": "M12 20 Q12 12 20 12 L80 12 Q88 12 88 20 L88 60 Q88 68 80 68 L48 68 L30 86 L34 68 L20 68 Q12 68 12 60 Z",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 2.4,
+          "dash": [
+            3,
+            3
+          ]
+        },
+        {
+          "d": "M56 12 L20 12 Q12 12 12 20 L12 60 Q12 68 20 68 L34 68 L30 86 L48 68 L56 68 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M20 26 L44 26 M20 37 L50 37 M20 48 L40 48",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M64 26 L80 26 M60 37 L82 37 M64 48 L76 48",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 2,
+          "dash": [
+            2,
+            4
+          ]
+        },
+        {
+          "d": "M52 30 L70 22 L80 46 L62 54 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M52 30 L61 26 L71 50 L62 54 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M84 56 L86 58 M88 52 L90 53 M80 60 L82 62",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

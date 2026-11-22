@@ -1,0 +1,78 @@
+{
+  "name": "frozen-todo-cube",
+  "tags": [
+    "buz kupu",
+    "yapilacaklar listesi",
+    "catlak",
+    "ice cube to-do cracked"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/mfoniso-udofia-creation/kapak.json",
+      "paths": [
+        {
+          "d": "M14 14 L86 14 L86 86 L14 86 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M22 22 L40 22 L22 40 Z",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M26 40 L30 44 L38 34",
+          "stroke": "paper",
+          "weight": 3.2,
+          "fill": "none"
+        },
+        {
+          "d": "M44 38 L72 38",
+          "stroke": "paper",
+          "weight": 3,
+          "fill": "none"
+        },
+        {
+          "d": "M26 56 L30 60 L38 50",
+          "stroke": "paper",
+          "weight": 3.2,
+          "fill": "none"
+        },
+        {
+          "d": "M44 54 L66 54",
+          "stroke": "paper",
+          "weight": 3,
+          "fill": "none"
+        },
+        {
+          "d": "M26 72 L30 76 L38 66",
+          "stroke": "paper",
+          "weight": 3.2,
+          "fill": "none"
+        },
+        {
+          "d": "M44 70 L58 70",
+          "stroke": "paper",
+          "weight": 3,
+          "fill": "none"
+        },
+        {
+          "d": "M62 14 L56 32 L68 44 L54 58 L64 70 L56 86",
+          "stroke": "coral",
+          "weight": 5,
+          "fill": "none",
+          "taper": false
+        },
+        {
+          "d": "M62 14 L56 32 L68 44 L54 58 L64 70 L56 86",
+          "stroke": "ink",
+          "weight": 1.6,
+          "fill": "none",
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

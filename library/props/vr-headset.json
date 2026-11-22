@@ -1,0 +1,159 @@
+{
+ "name": "vr-headset",
+ "tags": [
+  "sanal gerçeklik",
+  "vr",
+  "başlık",
+  "headset",
+  "metaverse"
+ ],
+ "variants": [
+  {
+   "note": "front, visor with two lenses and a head strap over the top, coral",
+   "paths": [
+    {
+     "d": "M26 30 Q50 8 74 30",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12 36 Q12 28 20 28 L80 28 Q88 28 88 36 L88 62 Q88 68 82 68 L66 68 Q60 68 57 62 Q50 56 43 62 Q40 68 34 68 L18 68 Q12 68 12 62 Z",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 38 Q15 30 23 30 L83 30 Q91 30 91 38 L91 64 Q91 70 85 70 L69 70 Q63 70 60 64 Q53 58 46 64 Q43 70 37 70 L21 70 Q15 70 15 64 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M12 36 Q12 28 20 28 L80 28 Q88 28 88 36 L88 62 Q88 68 82 68 L66 68 Q60 68 57 62 Q50 56 43 62 Q40 68 34 68 L18 68 Q12 68 12 62 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M21 48 C21 43 25.5 39 31 39 C36.5 39 41 43 41 48 C41 53 36.5 57 31 57 C25.5 57 21 53 21 48 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M59 48 C59 43 63.5 39 69 39 C74.5 39 79 43 79 48 C79 53 74.5 57 69 57 C63.5 57 59 53 59 48 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M25 44 Q27 41 31 40",
+     "fill": "none",
+     "stroke": "white",
+     "weight": 4
+    },
+    {
+     "d": "M63 44 Q65 41 69 40",
+     "fill": "none",
+     "stroke": "white",
+     "weight": 4
+    }
+   ]
+  },
+  {
+   "note": "side three-quarter, box with a wrap-around strap, mustard band",
+   "paths": [
+    {
+     "d": "M70 40 Q98 34 94 58 Q90 84 58 82",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 11
+    },
+    {
+     "d": "M70 40 Q98 34 94 58 Q90 84 58 82",
+     "fill": "none",
+     "stroke": "mustard",
+     "weight": 4
+    },
+    {
+     "d": "M14 32 Q14 26 22 26 L68 26 Q78 26 78 36 L78 62 Q78 70 68 70 L22 70 Q14 70 14 62 Z",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M17 34 Q17 28 25 28 L71 28 Q81 28 81 38 L81 64 Q81 72 71 72 L25 72 Q17 72 17 64 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M14 32 Q14 26 22 26 L68 26 Q78 26 78 36 L78 62 Q78 70 68 70 L22 70 Q14 70 14 62 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M24 38 L24 58",
+     "fill": "none",
+     "stroke": "white",
+     "weight": 5
+    },
+    {
+     "d": "M78 44 L86 44",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "bold goggles, mustard body with round lenses and side straps",
+   "paths": [
+    {
+     "d": "M16 50 L4 50 M84 50 L96 50",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M28 30 L72 31 Q86 31 86 45 L86 56 Q86 70 72 70 L28 70 Q14 70 14 56 L14 44 Q14 30 28 30 Z",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M31 32 L75 33 Q89 33 89 47 L89 58 Q89 72 75 72 L31 72 Q17 72 17 58 L17 46 Q17 32 31 32 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M28 30 L72 31 Q86 31 86 45 L86 56 Q86 70 72 70 L28 70 Q14 70 14 56 L14 44 Q14 30 28 30 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M22.5 50 C22.5 43.6 28.1 38.5 35 38.5 C41.9 38.5 47.5 43.6 47.5 50 C47.5 56.4 41.9 61.5 35 61.5 C28.1 61.5 22.5 56.4 22.5 50 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M52.5 50 C52.5 43.6 58.1 38.5 65 38.5 C71.9 38.5 77.5 43.6 77.5 50 C77.5 56.4 71.9 61.5 65 61.5 C58.1 61.5 52.5 56.4 52.5 50 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M28 46 Q30 42 35 41",
+     "fill": "none",
+     "stroke": "white",
+     "weight": 4
+    },
+    {
+     "d": "M58 46 Q60 42 65 41",
+     "fill": "none",
+     "stroke": "white",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

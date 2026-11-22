@@ -1,0 +1,114 @@
+{
+ "name": "cloud-upload",
+ "tags": [
+  "bulut",
+  "yükleme",
+  "cloud",
+  "upload",
+  "bulut bilişim"
+ ],
+ "variants": [
+  {
+   "note": "cloud with a coral up arrow inside",
+   "paths": [
+    {
+     "d": "M26 74 Q10 74 10 60 Q10 47 25 46 Q27 28 46 28 Q58 28 63 38 Q66 36 70 36 Q84 37 85 52 Q93 55 92 64 Q91 74 80 74 Z",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M29 76 Q13 76 13 62 Q13 49 28 48 Q30 30 49 30 Q61 30 66 40 Q69 38 73 38 Q87 39 88 54 Q96 57 95 66 Q94 76 83 76 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M26 74 Q10 74 10 60 Q10 47 25 46 Q27 28 46 28 Q58 28 63 38 Q66 36 70 36 Q84 37 85 52 Q93 55 92 64 Q91 74 80 74 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M52 42 L66 57 L58 57 L58 72 L46 72 L46 57 L38 57 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 40 L64 55 L56 55 L56 70 L44 70 L44 55 L36 55 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "small cloud with a big mustard arrow rising out of it",
+   "paths": [
+    {
+     "d": "M50 6 L68 27 L58 27 L58 58 L42 58 L42 27 L32 27 Z",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M53 8 L71 29 L61 29 L61 60 L45 60 L45 29 L35 29 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 6 L68 27 L58 27 L58 58 L42 58 L42 27 L32 27 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M26 86 Q10 86 10 72 Q10 59 25 58 Q27 40 46 40 Q58 40 63 50 Q66 48 70 48 Q84 49 85 64 Q93 67 92 76 Q91 86 80 86 Z",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M29 88 Q13 88 13 74 Q13 61 28 60 Q30 42 49 42 Q61 42 66 52 Q69 50 73 50 Q87 51 88 66 Q96 69 95 78 Q94 88 83 88 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M26 86 Q10 86 10 72 Q10 59 25 58 Q27 40 46 40 Q58 40 63 50 Q66 48 70 48 Q84 49 85 64 Q93 67 92 76 Q91 86 80 86 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "cloud on a tray line, stroke arrow, coral tint",
+   "paths": [
+    {
+     "d": "M26 70 Q10 70 10 56 Q10 43 25 42 Q27 24 46 24 Q58 24 63 34 Q66 32 70 32 Q84 33 85 48 Q93 51 92 60 Q91 70 80 70 Z",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M29 72 Q13 72 13 58 Q13 45 28 44 Q30 26 49 26 Q61 26 66 36 Q69 34 73 34 Q87 35 88 50 Q96 53 95 62 Q94 72 83 72 Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M26 70 Q10 70 10 56 Q10 43 25 42 Q27 24 46 24 Q58 24 63 34 Q66 32 70 32 Q84 33 85 48 Q93 51 92 60 Q91 70 80 70 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 68 L50 38 M37 51 L50 38 L63 51",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M24 86 L76 86",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+  "name": "headphone-ghost",
+  "tags": [
+    "hayalet",
+    "kulaklık",
+    "fısıltı",
+    "ghost",
+    "headphones",
+    "whisper"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/off-broadway-hayalet/kapak-r0.json",
+      "paths": [
+        {
+          "d": "M20 92 L20 42 Q20 10 50 10 Q80 10 80 42 L80 92 L70 84 L60 94 L50 84 L40 94 L30 84 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M36 38 a4 6 0 1 0 8 0 a4 6 0 1 0 -8 0 M56 38 a4 6 0 1 0 8 0 a4 6 0 1 0 -8 0",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M44 56 Q50 62 56 56",
+          "stroke": "ink",
+          "weight": 2.5
+        },
+        {
+          "d": "M15 48 Q15 2 50 2 Q85 2 85 48",
+          "stroke": "coral",
+          "weight": 9,
+          "taper": false
+        },
+        {
+          "d": "M6 40 Q6 34 12 34 L20 34 L20 64 L12 64 Q6 64 6 58 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M94 40 Q94 34 88 34 L80 34 L80 64 L88 64 Q94 64 94 58 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.5
+        }
+      ]
+    }
+  ]
+}

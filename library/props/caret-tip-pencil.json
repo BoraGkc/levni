@@ -1,0 +1,59 @@
+{
+  "name": "caret-tip-pencil",
+  "tags": [
+    "kalem",
+    "metin imleci",
+    "duzeltme",
+    "editor",
+    "pencil",
+    "text cursor",
+    "caret",
+    "editing"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kitap-yayinciligi-yapay/ici-1.json",
+      "paths": [
+        {
+          "d": "M30,42 L84,42 L84,58 L30,58 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M30,42 L30,58 L9,52 L9,48 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M42,42 L42,58 M56,42 L56,58",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M84,40 L91,40 L91,60 L84,60 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M91,42 Q99,42 99,50 Q99,58 91,58 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M0,43 L9,43 M4.5,43 L4.5,57 M0,57 L9,57",
+          "stroke": "paper",
+          "weight": 7
+        },
+        {
+          "d": "M34,47 L80,47",
+          "stroke": "paper",
+          "weight": 4
+        }
+      ]
+    }
+  ]
+}

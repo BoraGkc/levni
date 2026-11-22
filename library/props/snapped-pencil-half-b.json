@@ -1,0 +1,32 @@
+{
+  "name": "snapped-pencil-half-b",
+  "tags": [
+    "kırık kurşun kalem",
+    "snapped pencil"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/mfoniso-udofia-creation/ici-1.json",
+      "paths": [
+        {
+          "d": "M10 40 L18 38 L22 44 L30 40 L34 46 L40 42 V60 H10Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M40 40 H96 V60 H40Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M86 40 V60",
+          "stroke": "paper",
+          "weight": 2,
+          "fill": "none"
+        }
+      ]
+    }
+  ]
+}

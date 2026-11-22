@@ -1,0 +1,43 @@
+{
+  "name": "magazine-skirt-dress",
+  "tags": [
+    "dress",
+    "magazine",
+    "fashion",
+    "pages"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/patti-lupone-full/ici-2.json",
+      "paths": [
+        {
+          "d": "M38,12 H62 L58,42 H42 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M42,42 H58 Q82,52 96,92 Q72,82 50,88 Q28,82 4,92 Q18,52 42,42 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M50,42 V88",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M42,56 Q30,62 22,78 M42,64 Q34,70 28,82 M58,56 Q70,62 78,78 M58,64 Q66,70 72,82",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M40,6 L44,12 M60,6 L56,12",
+          "stroke": "paper",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

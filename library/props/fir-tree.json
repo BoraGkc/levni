@@ -1,0 +1,33 @@
+{
+  "name": "fir-tree",
+  "tags": [
+    "cam agaci",
+    "fir pine tree",
+    "twin peaks"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kyle-maclachlan-anilari/ici-1.json",
+      "paths": [
+        {
+          "d": "M45 78 L55 78 L55 98 L45 98Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M50 4 L68 34 L58 34 L76 60 L64 60 L86 84 L14 84 L36 60 L24 60 L42 34 L32 34 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M50 12 L50 80 M36 60 L50 70 M64 60 L50 70 M42 34 L50 42 M58 34 L50 42",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 1.8
+        }
+      ]
+    }
+  ]
+}

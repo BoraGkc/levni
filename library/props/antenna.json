@@ -1,0 +1,25 @@
+{
+  "name": "antenna",
+  "tags": [
+    "anten"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/trump-tv-basarisizligi/kapak-3d.json",
+      "paths": [
+        {
+          "d": "M50 100 L22 20 L10 34",
+          "stroke": "ink",
+          "weight": 3.4,
+          "taper": false
+        },
+        {
+          "d": "M50 100 L78 20 L90 34",
+          "stroke": "ink",
+          "weight": 3.4,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "megaphone-giant",
+  "tags": [
+    "megafon",
+    "dev",
+    "ses",
+    "baskı",
+    "megaphone",
+    "giant",
+    "voice"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/musluman-manosfer-kadinlari/ici-2.json",
+      "paths": [
+        {
+          "d": "M10 38 H24 V62 H10 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M24 38 L82 8 L82 92 L24 62 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M82 8 Q94 50 82 92",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M34 64 L38 90 H52 L48 68",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

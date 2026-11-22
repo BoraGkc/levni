@@ -1,0 +1,42 @@
+{
+  "name": "ring-rope-health-bars",
+  "tags": [
+    "sağlık çubuğu",
+    "ring halatı",
+    "oyun",
+    "güreş"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/wwe-hollywood-gecis/ici-2.json",
+      "paths": [
+        {
+          "d": "M4 10 h42 v14 h-42 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M6 12 h30 v10 h-30 z",
+          "fill": "coral"
+        },
+        {
+          "d": "M54 10 h42 v14 h-42 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M64 12 h30 v10 h-30 z",
+          "fill": "coral"
+        },
+        {
+          "d": "M2 28 L46 28 M54 28 L98 28",
+          "stroke": "paper",
+          "weight": 6,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "name": "cup-curtain-steam",
+  "tags": [
+    "kahve fincani perde buhar",
+    "coffee cup curtain steam",
+    "twin peaks"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kyle-maclachlan-anilari/kapak-alt.json",
+      "paths": [
+        {
+          "d": "M20 54 L80 54 L76 94 Q50 99 24 94 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M80 62 Q103 62 99 78 Q95 90 78 86",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M22 54 Q50 62 78 54 Q50 48 22 54Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M23 76 L31 68 L39 76 L47 68 L55 76 L63 68 L71 76 L77 70",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 3.4
+        },
+        {
+          "d": "M23 84 L31 76 L39 84 L47 76 L55 84 L63 76 L71 84 L76 78",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 3.4
+        },
+        {
+          "d": "M42 52 L50 4 L58 52Z",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M22 54 Q16 36 28 24 Q38 14 32 2 Q52 10 48 26 Q43 40 48 52 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M78 54 Q84 36 72 24 Q62 14 68 2 Q48 10 52 26 Q57 40 52 52 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M28 46 Q24 36 32 26 M35 48 Q31 38 38 28 M72 46 Q76 36 68 26 M65 48 Q69 38 62 28",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 1.6
+        }
+      ]
+    }
+  ]
+}

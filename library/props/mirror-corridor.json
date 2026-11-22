@@ -1,0 +1,80 @@
+{
+  "name": "mirror-corridor",
+  "tags": [
+    "el aynası koridor",
+    "hand mirror corridor"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/other-mommy-jessica/ici-1.json",
+      "paths": [
+        {
+          "d": "M50 68 V99",
+          "stroke": "ink",
+          "weight": 40,
+          "fill": "none"
+        },
+        {
+          "d": "M50 68 V99",
+          "stroke": "coral",
+          "weight": 32,
+          "fill": "none"
+        },
+        {
+          "d": "M18 38 a32 32 0 1 0 64 0 a32 32 0 1 0 -64 0",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M23 38 a27 27 0 1 0 54 0 a27 27 0 1 0 -54 0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.5
+        },
+        {
+          "d": "M26 24 L43 31 L43 45 L26 53Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M74 24 L57 31 L57 45 L74 53Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M26 24 L43 31 H57 L74 24 A27 27 0 0 0 26 24Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M26 53 L43 45 H57 L74 53 A27 27 0 0 1 26 53Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M33 56 L45 46 M67 56 L55 46 M50 47 V58",
+          "stroke": "ink",
+          "weight": 1.6,
+          "fill": "none"
+        },
+        {
+          "d": "M46 33 H54 V45 H46Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M51.5 39.5 a0.9 0.9 0 1 0 1.8 0 a0.9 0.9 0 1 0 -1.8 0",
+          "fill": "mustard",
+          "stroke": "none",
+          "weight": 0
+        }
+      ]
+    }
+  ]
+}

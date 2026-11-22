@@ -1,0 +1,123 @@
+{
+ "name": "notebook",
+ "tags": [
+  "defter",
+  "spiral defter",
+  "notebook",
+  "not",
+  "okul"
+ ],
+ "variants": [
+  {
+   "note": "closed spiral notebook, coral cover with label",
+   "paths": [
+    {
+     "d": "M 25 16 L 83 14 L 85 92 L 27 94 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M22 14 L80 12 L82 90 L24 92 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M36 34 L68 33 L69 56 L37 57 Z",
+     "fill": "paper",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M36 34 L68 33 L69 56 L37 57 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M42 42 L62 42 M42 49 L56 49",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M14 24 Q22 20 32 24 M14 38 Q22 34 32 38 M14 52 Q22 48 32 52 M14 66 Q22 62 32 66 M14 80 Q22 76 32 80",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "open notebook, ruled pages",
+   "paths": [
+    {
+     "d": "M8 24 Q30 16 50 26 L50 84 Q30 76 8 84 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 26 Q70 16 92 24 L92 84 Q70 76 50 84 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M 56 32 L 88 30 L 88 42 L 56 44 Z",
+     "fill": "tone-mustard",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M16 38 L42 40 M16 48 L42 50 M16 58 L42 60 M60 52 L84 50 M60 62 L84 60 M60 72 L78 70",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 26 L50 84",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "notebook leaning, spiral on top, green strip",
+   "paths": [
+    {
+     "d": "M20 24 L78 20 L82 90 L24 92 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M 23 26 L 81 22 L 82 36 L 24 40 Z",
+     "fill": "green",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M20 24 L78 20 L79 34 L21 38",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M32 52 L68 50 M32 62 L68 60 M32 72 L60 71",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M28 16 L28 28 M42 15 L42 27 M56 14 L56 26 M70 13 L70 25",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  }
+ ]
+}

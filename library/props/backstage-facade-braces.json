@@ -1,0 +1,62 @@
+{
+  "name": "backstage-facade-braces",
+  "tags": [
+    "dekor arkasi",
+    "sahte cephe",
+    "megadoc",
+    "perde arkasi"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/streaming-platformlarinda-sakl/ici-2.json",
+      "paths": [
+        {
+          "d": "M14 96 L14 32 L26 32 L26 16 L40 16 L40 2 L62 2 L62 22 L76 22 L76 42 L88 42 L88 96 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M26 32 L26 96 M50 2 L50 96 M76 42 L76 96",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 4,
+          "taper": false
+        },
+        {
+          "d": "M14 52 L88 52 M14 76 L88 76",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 4,
+          "taper": false
+        },
+        {
+          "d": "M26 52 L50 76 M50 52 L76 76 M50 28 L26 52",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 3,
+          "taper": false
+        },
+        {
+          "d": "M88 54 L103 96 M14 54 L-1 96",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M100 96 L108 96 L108 90 L100 90 Z M-9 96 L-1 96 L-1 90 L-9 90 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M30 62 L36 62 L36 68 L30 68 Z M60 36 L66 36 L66 42 L60 42 Z",
+          "fill": "blue",
+          "stroke": "none",
+          "weight": 0
+        }
+      ]
+    }
+  ]
+}

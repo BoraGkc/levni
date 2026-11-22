@@ -1,0 +1,114 @@
+{
+ "name": "credit-card",
+ "tags": [
+  "kredi kartı",
+  "banka kartı",
+  "ödeme",
+  "credit card",
+  "card"
+ ],
+ "variants": [
+  {
+   "note": "tilted card, dark stripe and mustard chip",
+   "paths": [
+    {
+     "d": "M12 34.5 Q11.2 28.6 17.1 27.7 L80.5 18.8 Q86.5 18 87.3 23.9 L93.7 69.5 Q94.5 75.4 88.6 76.3 L25.2 85.2 Q19.3 86 18.4 80.1 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M9 31.5 Q8.2 25.6 14.1 24.7 L77.5 15.8 Q83.5 15 84.3 20.9 L90.7 66.5 Q91.5 72.4 85.6 73.3 L22.2 82.2 Q16.3 83 15.4 77.1 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M10.1 39.4 L85.4 28.9 L87.1 40.8 L11.8 51.3 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M13 45.1 L84.3 35.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 11
+    },
+    {
+     "d": "M20.8 58.1 L36.7 55.9 L38.6 69.8 L22.8 72 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M48 64.4 L79.7 60",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "two cards stacked, coral behind",
+   "paths": [
+    {
+     "d": "M16.7 19.8 Q17.8 13.9 23.7 14.9 L86.7 26 Q92.6 27.1 91.6 33 L83.6 78.3 Q82.6 84.2 76.7 83.1 L13.6 72 Q7.7 71 8.8 65.1 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M9.8 34.8 Q9.1 28.8 15.1 28.1 L78.6 20.3 Q84.5 19.6 85.3 25.5 L90.9 71.2 Q91.6 77.1 85.7 77.9 L22.1 85.7 Q16.2 86.4 15.5 80.4 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M11.1 44.7 L86.5 35.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M24.2 69.3 L51.9 65.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "front card, chip and short number dashes",
+   "paths": [
+    {
+     "d": "M13 27 Q13 21 19 21 L87 21 Q93 21 93 27 L93 77 Q93 83 87 83 L19 83 Q13 83 13 77 Z",
+     "fill": "tone-green",
+     "stroke": "none"
+    },
+    {
+     "d": "M10 24 Q10 18 16 18 L84 18 Q90 18 90 24 L90 74 Q90 80 84 80 L16 80 Q10 80 10 74 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 30 L38 30 L38 46 L20 46 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M20 62 L30 62 M38 62 L48 62 M56 62 L66 62",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M70 68 L82 68",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

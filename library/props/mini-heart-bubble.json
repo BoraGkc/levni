@@ -1,0 +1,21 @@
+{
+  "name": "mini-heart-bubble",
+  "tags": [],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kopegi-zor-sahiplenmek/ici-1-alt.json",
+      "paths": [
+        {
+          "d": "M10,20 Q10,10 20,10 L80,10 Q90,10 90,20 L90,60 Q90,70 80,70 L70,70 L78,90 L50,70 L20,70 Q10,70 10,60 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M50,56 Q28,42 34,28 Q44,22 50,32 Q56,22 66,28 Q72,42 50,56 Z",
+          "fill": "coral"
+        }
+      ]
+    }
+  ]
+}

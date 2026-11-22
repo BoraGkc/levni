@@ -1,0 +1,56 @@
+{
+  "name": "trophy-tumbler",
+  "tags": [
+    "kupa viski bardağı",
+    "trophy whiskey glass"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/michael-douglas-ve/ici-1-alt.json",
+      "paths": [
+        {
+          "d": "M16 20 Q0 20 2 38 Q6 52 24 52 M84 20 Q100 20 98 38 Q94 52 76 52",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M18 8 H82 L74 66 Q72 76 62 76 H38 Q28 76 26 66Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M22 34 H78 L74 66 Q72 76 62 76 H38 Q28 76 26 66Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M34 44 h12 v12 h-12Z M52 50 h12 v12 h-12Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M44 76 V90 M56 76 V90",
+          "stroke": "ink",
+          "weight": 3.2,
+          "fill": "none"
+        },
+        {
+          "d": "M26 90 H74 V98 H26Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M26 14 L28 26",
+          "stroke": "blue",
+          "weight": 2,
+          "fill": "none"
+        }
+      ]
+    }
+  ]
+}

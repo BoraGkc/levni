@@ -1,0 +1,65 @@
+{
+  "name": "can-mailbox-upright",
+  "tags": [
+    "bira kutusu",
+    "posta kutusu",
+    "teslim edilmeyen",
+    "can",
+    "mailbox",
+    "upright"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/bud-light-boykotculari/ici-1.json",
+      "paths": [
+        {
+          "d": "M32 22 Q32 16 38 14 H62 Q68 16 68 22 V89 Q68 94 62 94 H38 Q32 94 32 89Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M32 66 H68 V78 H32Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M34 16 a16,4 0 1,0 32,0 a16,4 0 1,0 -32,0",
+          "fill": "tone-mustard",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M46 16 a5,1.8 0 1,0 10,0 a5,1.8 0 1,0 -10,0",
+          "fill": "dark",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M38 40 H62 V50 H38Z",
+          "fill": "dark",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M37 50 L63 50 L60 62 L40 62Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M68 36 H82",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M82 36 V16 H96 V28 H82",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

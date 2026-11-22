@@ -1,0 +1,315 @@
+{
+  "name": "letter-block-tower",
+  "tags": [
+    "jenga",
+    "kule",
+    "blok",
+    "harf",
+    "dil",
+    "tower",
+    "blocks",
+    "letters",
+    "remove"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/openai-arastirmacisi-llm/ici-1.json",
+      "paths": [
+        {
+          "d": "M38 53 L62.5 53 L62.5 61.5 L38 61.5 Z",
+          "fill": "blue",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M14 89 L36.5 89 L36.5 96.5 L14 96.5 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M18 92 L22 92 M18 95 L26 95",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M38 89 L60.5 89 L60.5 96.5 L38 96.5 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M42 92 L46 92 M42 95 L50 95",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M62 89 L84.5 89 L84.5 96.5 L62 96.5 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M66 92 L70 92 M66 95 L74 95",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M15.2 80 L37.7 80 L37.7 87.5 L15.2 87.5 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M19.2 83 L23.2 83 M19.2 86 L27.2 86",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M36.8 80 L59.3 80 L59.3 87.5 L36.8 87.5 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M40.8 83 L44.8 83 M40.8 86 L48.8 86",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M63.2 80 L85.7 80 L85.7 87.5 L63.2 87.5 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M67.2 83 L71.2 83 M67.2 86 L75.2 86",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M14 71 L36.5 71 L36.5 78.5 L14 78.5 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M18 74 L22 74 M18 77 L26 77",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M38 71 L60.5 71 L60.5 78.5 L38 78.5 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M42 74 L46 74 M42 77 L50 77",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M62 71 L84.5 71 L84.5 78.5 L62 78.5 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M66 74 L70 74 M66 77 L74 77",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M15.2 62 L37.7 62 L37.7 69.5 L15.2 69.5 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M19.2 65 L23.2 65 M19.2 68 L27.2 68",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M36.8 62 L59.3 62 L59.3 69.5 L36.8 69.5 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M40.8 65 L44.8 65 M40.8 68 L48.8 68",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M63.2 62 L85.7 62 L85.7 69.5 L63.2 69.5 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M67.2 65 L71.2 65 M67.2 68 L75.2 68",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M14 53 L36.5 53 L36.5 60.5 L14 60.5 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M18 56 L22 56 M18 59 L26 59",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M62 53 L84.5 53 L84.5 60.5 L62 60.5 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M66 56 L70 56 M66 59 L74 59",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M15.2 44 L37.7 44 L37.7 51.5 L15.2 51.5 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M19.2 47 L23.2 47 M19.2 50 L27.2 50",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M36.8 44 L59.3 44 L59.3 51.5 L36.8 51.5 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M40.8 47 L44.8 47 M40.8 50 L48.8 50",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M63.2 44 L85.7 44 L85.7 51.5 L63.2 51.5 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M67.2 47 L71.2 47 M67.2 50 L75.2 50",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M14 35 L36.5 35 L36.5 42.5 L14 42.5 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M18 38 L22 38 M18 41 L26 41",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M38 35 L60.5 35 L60.5 42.5 L38 42.5 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M42 38 L46 38 M42 41 L50 41",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M62 35 L84.5 35 L84.5 42.5 L62 42.5 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M66 38 L70 38 M66 41 L74 41",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M15.2 26 L37.7 26 L37.7 33.5 L15.2 33.5 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M19.2 29 L23.2 29 M19.2 32 L27.2 32",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M36.8 26 L59.3 26 L59.3 33.5 L36.8 33.5 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M40.8 29 L44.8 29 M40.8 32 L48.8 32",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M63.2 26 L85.7 26 L85.7 33.5 L63.2 33.5 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M67.2 29 L71.2 29 M67.2 32 L75.2 32",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M88 46 L112 42 L114 58 L102 60 L97 67 L95 61 L89 62 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M94 50 L108 48 M94 55 L104 54",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2.2
+        }
+      ]
+    }
+  ]
+}

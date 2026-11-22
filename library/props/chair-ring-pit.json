@@ -1,0 +1,139 @@
+{
+  "name": "chair-ring-pit",
+  "tags": [
+    "sandalye halkasi cukur",
+    "destek grubu",
+    "ustten gorunum"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/the-holes-erkek/ici-1.json",
+      "paths": [
+        {
+          "d": "M50 2 a48 48 0 1,0 0.1 0 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M50 14 a36 36 0 1,0 0.1 0 Z",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 1.8,
+          "dash": [
+            6,
+            5
+          ]
+        },
+        {
+          "d": "M50 31 a19 19 0 1,0 0.1 0 Z",
+          "fill": "dark",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M50 37 a13 13 0 1,0 0.1 0 Z",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M54.8 25.5 L64.0 29.3 L68.0 19.6 L58.8 15.8 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M58.3 15.0 L68.9 19.4 L70.4 15.7 L59.8 11.3 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M70.7 36.0 L74.5 45.2 L84.2 41.2 L80.4 32.0 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M80.6 31.1 L85.0 41.7 L88.7 40.2 L84.3 29.6 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M74.5 54.8 L70.7 64.0 L80.4 68.0 L84.2 58.8 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M85.0 58.3 L80.6 68.9 L84.3 70.4 L88.7 59.8 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M64.0 70.7 L54.8 74.5 L58.8 84.2 L68.0 80.4 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M68.9 80.6 L58.3 85.0 L59.8 88.7 L70.4 84.3 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M45.2 74.5 L36.0 70.7 L32.0 80.4 L41.2 84.2 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M41.7 85.0 L31.1 80.6 L29.6 84.3 L40.2 88.7 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M29.3 64.0 L25.5 54.8 L15.8 58.8 L19.6 68.0 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M19.4 68.9 L15.0 58.3 L11.3 59.8 L15.7 70.4 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M25.5 45.2 L29.3 36.0 L19.6 32.0 L15.8 41.2 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M15.0 41.7 L19.4 31.1 L15.7 29.6 L11.3 40.2 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M36.0 29.3 L45.2 25.5 L41.2 15.8 L32.0 19.6 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M31.1 19.4 L41.7 15.0 L40.2 11.3 L29.6 15.7 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        }
+      ]
+    }
+  ]
+}

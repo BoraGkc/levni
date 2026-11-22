@@ -1,0 +1,30 @@
+{
+  "name": "crescent-with-thermometer",
+  "tags": [
+    "hilal",
+    "ay",
+    "termometre",
+    "regl dongusu",
+    "isi",
+    "crescent moon",
+    "thermometer"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1-v3.json",
+      "paths": [
+        {
+          "d": "M64,4 Q-6,50 64,96 Q22,50 64,4 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M40,24 Q34,34 33,44",
+          "stroke": "tone",
+          "weight": 4
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "tiny-film-camera",
+  "tags": [
+    "kamera tripod"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/streaming-platformlarinda-sakl/ici-2.json",
+      "paths": [
+        {
+          "d": "M50 60 L28 98 M50 60 L72 98 M50 60 L50 98",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 4,
+          "taper": false
+        },
+        {
+          "d": "M10 22 L62 22 L62 56 L10 56 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M62 32 L90 20 L90 58 L62 46 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M18 8 a10 10 0 1,0 0.1 0 Z M40 8 a10 10 0 1,0 0.1 0 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        }
+      ]
+    }
+  ]
+}

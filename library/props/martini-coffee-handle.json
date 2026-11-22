@@ -1,0 +1,63 @@
+{
+  "name": "martini-coffee-handle",
+  "tags": [
+    "martini kadehi kahve kulp",
+    "martini glass coffee handle",
+    "sex and the city"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kyle-maclachlan-anilari/ici-2-alt.json",
+      "paths": [
+        {
+          "d": "M10 14 L90 14 L50 60 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M20 24 L80 24 L50 54 Z",
+          "fill": "blue",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M50 60 L50 90",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M28 93 Q50 86 72 93",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M70 24 Q100 20 96 40 Q92 54 62 46",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M72 28 Q92 26 90 38 Q88 46 66 43",
+          "fill": "tone",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M60 8 L52 18",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M68 20 m-4 0 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        }
+      ]
+    }
+  ]
+}

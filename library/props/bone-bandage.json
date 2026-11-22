@@ -1,0 +1,87 @@
+{
+  "name": "bone-bandage",
+  "tags": [
+    "kemik",
+    "yara bandi",
+    "kopek",
+    "destek",
+    "bone",
+    "band-aid",
+    "dog",
+    "support"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kopegi-zor-sahiplenmek/kapak.json",
+      "paths": [
+        {
+          "d": "M18,38 L82,38 L82,62 L18,62 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M6,38 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M6,62 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M74,38 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M74,62 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M18,38 L82,38 L82,62 L18,62 Z",
+          "fill": "paper"
+        },
+        {
+          "d": "M6,38 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0",
+          "fill": "paper"
+        },
+        {
+          "d": "M6,62 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0",
+          "fill": "paper"
+        },
+        {
+          "d": "M74,38 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0",
+          "fill": "paper"
+        },
+        {
+          "d": "M74,62 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0",
+          "fill": "paper"
+        },
+        {
+          "d": "M39,33 L61,33 L61,67 L39,67 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.8
+        },
+        {
+          "d": "M44,42 L56,42 L56,58 L44,58 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M47,46 L53,46 M47,50 L53,50 M47,54 L53,54",
+          "stroke": "tone",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

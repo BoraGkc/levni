@@ -1,0 +1,62 @@
+{
+  "name": "portrait-cassette",
+  "tags": [
+    "kaset",
+    "telefon",
+    "dikey video",
+    "kisa video",
+    "cassette tape",
+    "phone",
+    "vertical video",
+    "tiktok"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kyle-gordon-parodi/ici-1-r0.json",
+      "paths": [
+        {
+          "d": "M16,2 Q16,-4 24,-4 L76,-4 Q84,-4 84,2 L84,100 Q84,106 76,106 L24,106 Q16,106 16,100 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.8
+        },
+        {
+          "d": "M24,6 L76,6 L76,40 L24,40 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.8
+        },
+        {
+          "d": "M30.0,23.0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0 M54.0,23.0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M35.4,23.0 a2.6,2.6 0 1,0 5.2,0 a2.6,2.6 0 1,0 -5.2,0 M59.4,23.0 a2.6,2.6 0 1,0 5.2,0 a2.6,2.6 0 1,0 -5.2,0",
+          "fill": "ink"
+        },
+        {
+          "d": "M24,48 L76,48 L76,96 L24,96 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.8
+        },
+        {
+          "d": "M30,56 L52,56 L52,66 L30,66 Z",
+          "fill": "blue"
+        },
+        {
+          "d": "M56,56 L70,56 M56,62 L68,62 M30,74 L70,74 M30,81 L62,81 M30,88 L66,88",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M64,14 L64,14",
+          "stroke": "ink",
+          "weight": 0
+        }
+      ]
+    }
+  ]
+}

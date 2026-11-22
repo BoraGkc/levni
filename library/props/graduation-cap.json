@@ -1,0 +1,124 @@
+{
+ "name": "graduation-cap",
+ "tags": [
+  "mezuniyet",
+  "kep",
+  "graduation cap",
+  "egitim",
+  "okul",
+  "mortarboard"
+ ],
+ "variants": [
+  {
+   "note": "mortarboard with mustard tassel",
+   "paths": [
+    {
+     "d": "M26 50 L26 70 Q26 80 50 80 Q74 80 74 70 L74 50 L50 60 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M26 62 Q50 72 74 62",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 22 L92 40 L50 58 L8 40 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M 79 43 L 85 40 L 85 64 L 89 76 L 81 76 L 83 64 Z",
+     "fill": "mustard",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M82 40 L82 62 L86 74 L78 74 L81 62",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 40 L50.2 40.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 10
+    }
+   ]
+  },
+  {
+   "note": "bold flat cap, coral top offset",
+   "paths": [
+    {
+     "d": "M26 50 L26 70 Q26 80 50 80 Q74 80 74 70 L74 50 L50 60 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M 53 24 L 95 42 L 53 60 L 11 42 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M50 22 L92 40 L50 58 L8 40 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 40 L84 52 L84 70",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M84 74 L84.2 74.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "cap tossed, tilted with motion",
+   "paths": [
+    {
+     "d": "M 30 64.1 L 36.7 80.8 Q 40.1 89.1 60.1 81 Q 80.1 72.9 76.8 64.6 L 70 47.9 L 53.4 64.3 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M 43.6 34.6 L 84.7 35.5 L 55.7 64.7 L 14.6 63.8 Z",
+     "fill": "mustard",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M 40.6 32.6 L 81.7 33.5 L 52.7 62.7 L 11.6 61.8 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M 46.6 47.7 L 64.3 28.9 L 75.4 41.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M14 78 Q24 72 30 80 M36 86 Q46 82 50 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

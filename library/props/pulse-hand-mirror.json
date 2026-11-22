@@ -1,0 +1,52 @@
+{
+  "name": "pulse-hand-mirror",
+  "tags": [
+    "ayna",
+    "kadin sembolu",
+    "nabiz",
+    "mirror",
+    "venus symbol",
+    "heartbeat"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/kapak.json",
+      "paths": [
+        {
+          "d": "M45,64 L55,64 L55,95 L45,95 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M34,76 L66,76 L66,85 L34,85 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M18,36 a32,32 0 1,0 64,0 a32,32 0 1,0 -64,0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M26,36 a24,24 0 1,0 48,0 a24,24 0 1,0 -48,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M28,40 L39,40 L44,26 L52,54 L58,34 L62,40 L72,40",
+          "stroke": "blue",
+          "weight": 6
+        },
+        {
+          "d": "M34,22 Q40,16 48,14",
+          "stroke": "tone",
+          "weight": 4
+        }
+      ]
+    }
+  ]
+}

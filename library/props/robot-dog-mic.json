@@ -1,0 +1,63 @@
+{
+  "name": "robot-dog-mic",
+  "tags": [
+    "microphone",
+    "robot dog",
+    "quadruped",
+    "comedy"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/patti-harrison-teknoloji/kapak.json",
+      "paths": [
+        {
+          "d": "M44,40 H56 V54 H44 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M32,24 a18,18 0 1,0 36,0 a18,18 0 1,0 -36,0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M38,16 H62 M34,24 H66 M38,32 H62 M44,8 V40 M56,8 V40",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M44,42 H56 V52 H44 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M18,52 H82 V64 H18 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M26,64 L18,80 L28,96 M38,64 L36,80 L44,96 M62,64 L64,80 L56,96 M74,64 L82,80 L72,96",
+          "stroke": "ink",
+          "weight": 8,
+          "taper": false
+        },
+        {
+          "d": "M15,80 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M79,80 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

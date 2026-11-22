@@ -1,0 +1,78 @@
+{
+  "name": "sandcastle",
+  "tags": [
+    "kumdan kale",
+    "plaj",
+    "sandcastle",
+    "beach"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/gentle-monster-kum/kapak-v2.json",
+      "paths": [
+        {
+          "d": "M6 92 L6 40 L12 40 L12 33 L18 33 L18 40 L24 40 L24 33 L30 33 L30 40 L34 40 L34 92 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M34 92 L34 50 L40 50 L40 44 L46 44 L46 50 L54 50 L54 44 L60 44 L60 50 L66 50 L66 92 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M41 50 L41 14 L47 14 L47 8 L53 8 L53 14 L59 14 L59 50 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M66 92 L66 52 L72 52 L74 44 L79 48 L82 40 L86 50 L90 46 L94 54 L94 92 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M43 92 L43 76 Q43 66 50 66 Q57 66 57 76 L57 92 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M50 73 a3 3 0 1 0 0.01 0 Z M48.6 76 L51.4 76 L52.3 84 L47.7 84 Z",
+          "fill": "paper",
+          "stroke": "none"
+        },
+        {
+          "d": "M49 22 L49 34 M49 38 L49 42",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M18 48 L18 70 M24 78 L24 86",
+          "stroke": "ink",
+          "weight": 2.5
+        },
+        {
+          "d": "M80 46 L77 58 L82 64 L78 76 L83 84",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M88 60 a1.6 1.6 0 1 0 0.01 0 Z M91 68 a1.6 1.6 0 1 0 0.01 0 Z M87 76 a1.6 1.6 0 1 0 0.01 0 Z M92 82 a1.6 1.6 0 1 0 0.01 0 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.5
+        },
+        {
+          "d": "M84 92 Q94 80 106 92 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2.5
+        }
+      ]
+    }
+  ]
+}

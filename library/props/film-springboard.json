@@ -1,0 +1,171 @@
+{
+  "name": "film-springboard",
+  "tags": [
+    "sıçrama tahtası",
+    "film şeridi",
+    "Oscar yarışı"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/toronto-international-film/ici-1.json",
+      "paths": [
+        {
+          "d": "M5 42 h90 v16 h-90 z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M9 43.5 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M9 53.9 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M17 43.5 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M17 53.9 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M25 43.5 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M25 53.9 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M33 43.5 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M33 53.9 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M41 43.5 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M41 53.9 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M49 43.5 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M49 53.9 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M57 43.5 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M57 53.9 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M65 43.5 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M65 53.9 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M73 43.5 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M73 53.9 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M81 43.5 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M81 53.9 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M89 43.5 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M89 53.9 h3 v2.6 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M12 47.2 h18 v5.6 h-18 z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M34 47.2 h18 v5.6 h-18 z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 0.6
+        },
+        {
+          "d": "M56 47.2 h18 v5.6 h-18 z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 0.6
+        }
+      ]
+    }
+  ]
+}

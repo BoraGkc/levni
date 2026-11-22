@@ -1,0 +1,46 @@
+{
+  "name": "quill-compass",
+  "tags": [
+    "pusula",
+    "tüy kalem",
+    "compass",
+    "quill"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/shakespearein-hayati-degistire/kapak.json",
+      "paths": [
+        {
+          "d": "M50 4 a46 46 0 1 0 0.1 0 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M50 12 V20 M50 80 V88 M12 50 H20 M80 50 H88",
+          "fill": null,
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M30 78 Q44 60 52 50 Q60 36 84 10 Q76 38 66 50 Q54 64 36 74 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M34 74 L22 92",
+          "fill": null,
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M70 24 L56 48 M62 34 L50 50",
+          "fill": null,
+          "stroke": "ink",
+          "weight": 2.5
+        }
+      ]
+    }
+  ]
+}

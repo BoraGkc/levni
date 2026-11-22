@@ -1,0 +1,190 @@
+{
+ "name": "palette",
+ "tags": [
+  "palet",
+  "boya paleti",
+  "palette",
+  "resim",
+  "sanat",
+  "paint"
+ ],
+ "variants": [
+  {
+   "note": "palette with four paint dabs and brush",
+   "paths": [
+    {
+     "d": "M10 52 Q8 22 38 14 Q72 8 90 36 Q98 54 82 62 Q68 68 66 78 Q64 90 46 90 Q12 88 10 52 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M29 66 Q29 59.56 36 59.56 Q43 59.56 43 66 Q43 72.44 36 72.44 Q29 72.44 29 66 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M25 34 Q25 27.56 32 27.56 Q39 27.56 39 34 Q39 40.44 32 40.44 Q25 40.44 25 34 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M45 28 Q45 21.56 52 21.56 Q59 21.56 59 28 Q59 34.44 52 34.44 Q45 34.44 45 28 Z",
+     "fill": "mustard",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M65 38 Q65 31.56 72 31.56 Q79 31.56 79 38 Q79 44.44 72 44.44 Q65 44.44 65 38 Z",
+     "fill": "green",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M70 56 Q70 50.48 76 50.48 Q82 50.48 82 56 Q82 61.52 76 61.52 Q70 61.52 70 56 Z",
+     "fill": "blue",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M25 34 Q25 27.56 32 27.56 Q39 27.56 39 34 Q39 40.44 32 40.44 Q25 40.44 25 34 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M45 28 Q45 21.56 52 21.56 Q59 21.56 59 28 Q59 34.44 52 34.44 Q45 34.44 45 28 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M65 38 Q65 31.56 72 31.56 Q79 31.56 79 38 Q79 44.44 72 44.44 Q65 44.44 65 38 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M70 56 Q70 50.48 76 50.48 Q82 50.48 82 56 Q82 61.52 76 61.52 Q70 61.52 70 56 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  },
+  {
+   "note": "bold: coral palette, two dabs",
+   "paths": [
+    {
+     "d": "M 13 54 Q 11 24 41 16 Q 75 10 93 38 Q 101 56 85 64 Q 71 70 69 80 Q 67 92 49 92 Q 15 90 13 54 Z",
+     "fill": "tone-coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M10 52 Q8 22 38 14 Q72 8 90 36 Q98 54 82 62 Q68 68 66 78 Q64 90 46 90 Q12 88 10 52 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M29 66 Q29 59.56 36 59.56 Q43 59.56 43 66 Q43 72.44 36 72.44 Q29 72.44 29 66 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M26 36 Q26 28.64 34 28.64 Q42 28.64 42 36 Q42 43.36 34 43.36 Q26 43.36 26 36 Z",
+     "fill": "mustard",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M26 36 Q26 28.64 34 28.64 Q42 28.64 42 36 Q42 43.36 34 43.36 Q26 43.36 26 36 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M54 32 Q54 24.64 62 24.64 Q70 24.64 70 32 Q70 39.36 62 39.36 Q54 39.36 54 32 Z",
+     "fill": "blue",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M54 32 Q54 24.64 62 24.64 Q70 24.64 70 32 Q70 39.36 62 39.36 Q54 39.36 54 32 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "palette with a brush crossing over",
+   "paths": [
+    {
+     "d": "M10 52 Q8 22 38 14 Q72 8 90 36 Q98 54 82 62 Q68 68 66 78 Q64 90 46 90 Q12 88 10 52 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M29 66 Q29 59.56 36 59.56 Q43 59.56 43 66 Q43 72.44 36 72.44 Q29 72.44 29 66 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M24 36 Q24 30.48 30 30.48 Q36 30.48 36 36 Q36 41.52 30 41.52 Q24 41.52 24 36 Z",
+     "fill": "mustard",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M40 28 Q40 22.48 46 22.48 Q52 22.48 52 28 Q52 33.52 46 33.52 Q40 33.52 40 28 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M24 36 Q24 30.48 30 30.48 Q36 30.48 36 36 Q36 41.52 30 41.52 Q24 41.52 24 36 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M40 28 Q40 22.48 46 22.48 Q52 22.48 52 28 Q52 33.52 46 33.52 Q40 33.52 40 28 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M52 90 L84 36 L90 40 L58 94 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M 84 36 L 96 14 L 92 12 L 82 32 Z",
+     "fill": "green",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M84 36 L96 14",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M60 82 L74 62",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

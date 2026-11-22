@@ -1,0 +1,40 @@
+{
+  "name": "keyhole-mask",
+  "tags": [
+    "maske",
+    "anahtar deliği",
+    "gizlilik",
+    "mask keyhole secret"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/john-malkovich-sam/ici-1.json",
+      "paths": [
+        {
+          "d": "M50 4 Q86 6 84 46 Q82 86 50 98 Q18 86 16 46 Q14 6 50 4 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M26 36 Q34 29 42 36 M58 36 Q66 29 74 36",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M30 66 Q50 82 70 66",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M50 44 m-6 0 a6 6 0 1 0 12 0 a6 6 0 1 0 -12 0 M47 48 L45 62 L55 62 L53 48 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

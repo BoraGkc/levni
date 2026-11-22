@@ -1,0 +1,64 @@
+{
+  "name": "dog-plinth-banana",
+  "tags": [
+    "köpek heykeli",
+    "muz kabuğu",
+    "kaide",
+    "dog statue",
+    "banana"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/camille-henrot-sanat/kapak.json",
+      "paths": [
+        {
+          "d": "M18 72 H82 V82 H18Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M24 82 H76 V96 H24Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M30 72 Q24 48 38 38 Q48 30 58 36 L60 22 Q60 8 72 8 L88 14 L90 22 L76 25 L70 40 Q74 58 66 72Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M60 12 Q50 18 56 32 Q64 28 64 14Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M30 66 Q16 66 18 52 Q22 58 30 58",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M76 14.2 a1.8 1.8 0 1 0 0.1 0Z",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M56 46 V72 M47 50 V72",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M64 98 Q74 90 92 94 Q80 96 70 100 Q84 100 94 98 Q80 104 66 102Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2.2
+        }
+      ]
+    }
+  ]
+}

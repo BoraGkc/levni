@@ -1,0 +1,31 @@
+{
+  "name": "anahtar-deligi",
+  "tags": [
+    "anahtar deliği",
+    "yarasa",
+    "bond"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/robert-pattinson-james/ici-1.json",
+      "paths": [
+        {
+          "d": "M50 4 Q82 4 82 34 Q82 50 64 60 L82 98 L18 98 L36 60 Q18 50 18 34 Q18 4 50 4 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M50 22 Q56 14 62 18 Q60 26 66 32 Q58 32 56 40 Q53 36 50 40 Q47 36 44 40 Q42 32 34 32 Q40 26 38 18 Q44 14 50 22 Z",
+          "fill": "blue",
+          "stroke": "blue",
+          "weight": 3
+        },
+        {
+          "d": "M42 64 L58 64 L66 92 L34 92 Z",
+          "fill": "blue"
+        }
+      ]
+    }
+  ]
+}

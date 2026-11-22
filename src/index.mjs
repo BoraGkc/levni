@@ -1,0 +1,25 @@
+// Levni public API.
+//   import { compose, critique, render } from 'levni';
+//   const { svg, used } = await compose(scene);       // SVG string + boxes for the critic
+//   await render(scene, 'out.png');                   // or out.webp / out.svg
+export { compose, critique, COLORS } from './compose.mjs';
+export { PALETTE, W, H, rng, frame } from './style.mjs';
+export { loadProps, findProp, expandProp, addPropDir, LIBRARY_DIR } from './props.mjs';
+export { expandIso } from './iso.mjs';
+export { ASSETS } from './assets.mjs';
+export { toWebp, toPng } from './export.mjs';
+export { iconsAvailable, resolveIcon } from './icon.mjs';
+
+import { writeFileSync } from 'node:fs';
+import { compose } from './compose.mjs';
+import { critique } from './critic.mjs';
+import { toPng, toWebp } from './export.mjs';
+
+// Compose a scene and write it as .png, .webp or .svg. Returns the critic's notes.
+export async function render(scene, out, opts = {}) {
+  const { svg, used } = await compose(scene);
+  if (/\.svg$/i.test(out)) writeFileSync(out, svg);
+  else if (/\.webp$/i.test(out)) await toWebp(svg, out, opts.webp);
+  else await toPng(svg, out, { preview: !!opts.preview });
+  return { notes: critique(used), svg };
+}

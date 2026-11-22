@@ -1,0 +1,102 @@
+{
+ "name": "growth-arrow",
+ "tags": [
+  "büyüme",
+  "artış",
+  "ok",
+  "growth",
+  "arrow up"
+ ],
+ "variants": [
+  {
+   "note": "bold zig-zag arrow rising, green head",
+   "paths": [
+    {
+     "d": "M10 80 L34 56 L50 66 L80 30",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 12
+    },
+    {
+     "d": "M96 16 L93 40 L73 24 Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M93 14 L90 38 L70 22 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  },
+  {
+   "note": "arrow climbing three steps",
+   "paths": [
+    {
+     "d": "M10 90 L10 72 L36 72 L36 90 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M36 90 L36 56 L62 56 L62 90 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62 90 L62 38 L88 38 L88 90 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M67 38 L91 38 L91 90 L67 90 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M16 62 L38 42 L52 48 L78 20",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M62 18 L80 16 L79 34",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "arrow over rising bars, coral accent",
+   "paths": [
+    {
+     "d": "M17 92 L17 72 L33 72 L33 92 Z M41 92 L41 58 L57 58 L57 92 Z M65 92 L65 44 L81 44 L81 92 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M14 90 L14 70 L30 70 L30 90 Z M38 90 L38 56 L54 56 L54 90 Z M62 90 L62 42 L78 42 L78 90 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M10 52 L36 34 L48 42 L84 12",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M66 10 L86 10 L86 30",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

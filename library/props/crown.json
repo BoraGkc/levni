@@ -1,0 +1,102 @@
+{
+ "name": "crown",
+ "tags": [
+  "taç",
+  "kral",
+  "crown",
+  "king",
+  "lider",
+  "birinci"
+ ],
+ "variants": [
+  {
+   "note": "classic three-peak crown with balls, mustard",
+   "paths": [
+    {
+     "d": "M17 75L13 35L37 55L53 25L69 55L93 35L89 75Q53 81 17 75Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M18 79Q53 87 88 79L87 91Q53 97 19 91Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M14 72 L10 32 L34 52 L50 22 L66 52 L90 32 L86 72 Q50 78 14 72 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M15 76 Q50 84 85 76 L84 88 Q50 94 16 88 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M5 30 Q5 25 10 25 Q15 25 15 30 Q15 35 10 35 Q5 35 5 30 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M45 18 Q45 13 50 13 Q55 13 55 18 Q55 23 50 23 Q45 23 45 18 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M85 30 Q85 25 90 25 Q95 25 95 30 Q95 35 90 35 Q85 35 85 30 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "bold simple silhouette, paper gem",
+   "paths": [
+    {
+     "d": "M15 83L13 31L35 53L53 21L71 53L93 31L91 83Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M12 80 L10 28 L32 50 L50 18 L68 50 L90 28 L88 80 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M43 62 Q43 55 50 55 Q57 55 57 62 Q57 69 50 69 Q43 69 43 62 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "rounded cartoon crown with band stripe",
+   "paths": [
+    {
+     "d": "M17 77Q11 43 15 33Q31 43 37 55Q47 33 53 25Q61 35 69 55Q75 43 91 33Q95 43 89 77Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M14 74 Q8 40 12 30 Q28 40 34 52 Q44 30 50 22 Q58 32 66 52 Q72 40 88 30 Q92 40 86 74 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M16 66 Q50 72 85 66",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

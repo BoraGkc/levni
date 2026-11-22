@@ -1,0 +1,147 @@
+{
+  "name": "banknote-staircase",
+  "tags": [
+    "banknot merdiven",
+    "esit maas",
+    "seffaf skala"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/silikon-vadisi-hala/ici-2.json",
+      "paths": [
+        {
+          "d": "M4 74 L34 74 L34 96 L4 96 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M4 74 L34 74 L34 85 L4 85 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M15.5 79.5 a3.5 3.5 0 1,0 7 0 a3.5 3.5 0 1,0 -7 0",
+          "fill": "none",
+          "stroke": "coral",
+          "weight": 2.6
+        },
+        {
+          "d": "M7 77 L10 77 M28 82 L31 82",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 2
+        },
+        {
+          "d": "M21 62 L51 62 L51 96 L21 96 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M21 62 L51 62 L51 73 L21 73 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M32.5 67.5 a3.5 3.5 0 1,0 7 0 a3.5 3.5 0 1,0 -7 0",
+          "fill": "none",
+          "stroke": "coral",
+          "weight": 2.6
+        },
+        {
+          "d": "M24 65 L27 65 M45 70 L48 70",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 2
+        },
+        {
+          "d": "M38 50 L68 50 L68 96 L38 96 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M38 50 L68 50 L68 61 L38 61 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M49.5 55.5 a3.5 3.5 0 1,0 7 0 a3.5 3.5 0 1,0 -7 0",
+          "fill": "none",
+          "stroke": "coral",
+          "weight": 2.6
+        },
+        {
+          "d": "M41 53 L44 53 M62 58 L65 58",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 2
+        },
+        {
+          "d": "M55 38 L85 38 L85 96 L55 96 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M55 38 L85 38 L85 49 L55 49 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M66.5 43.5 a3.5 3.5 0 1,0 7 0 a3.5 3.5 0 1,0 -7 0",
+          "fill": "none",
+          "stroke": "coral",
+          "weight": 2.6
+        },
+        {
+          "d": "M58 41 L61 41 M79 46 L82 46",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 2
+        },
+        {
+          "d": "M72 26 L102 26 L102 96 L72 96 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M72 26 L102 26 L102 37 L72 37 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M83.5 31.5 a3.5 3.5 0 1,0 7 0 a3.5 3.5 0 1,0 -7 0",
+          "fill": "none",
+          "stroke": "coral",
+          "weight": 2.6
+        },
+        {
+          "d": "M75 29 L78 29 M96 34 L99 34",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 2
+        },
+        {
+          "d": "M87 9 a3 3 0 1,0 0.1 0 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.2
+        },
+        {
+          "d": "M83 25 L84 13 L90 13 L91 25 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.2
+        }
+      ]
+    }
+  ]
+}

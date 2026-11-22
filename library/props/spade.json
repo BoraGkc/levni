@@ -1,0 +1,31 @@
+{
+  "name": "spade",
+  "tags": [
+    "kürek",
+    "spade",
+    "shovel"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/gentle-monster-kum/kapak-v2.json",
+      "paths": [
+        {
+          "d": "M18 20 L82 80",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M70 62 L92 72 L84 92 L62 82 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M16 14 L26 24",
+          "stroke": "ink",
+          "weight": 8
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+ "name": "globe",
+ "tags": [
+  "dünya",
+  "küre",
+  "globe",
+  "world",
+  "harita"
+ ],
+ "variants": [
+  {
+   "note": "globe in a tilted arc holder on a base",
+   "paths": [
+    {
+     "d": "M23 46 C22 28 37 14 53 14 C71 14 85 28 83 46 C82 62 69 75 53 75 C36 75 24 62 23 46 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M37 30 C45 26 51 32 47 40 C43 46 37 42 35 36 Z M61 48 C69 44 77 50 73 60 C67 66 59 60 61 48 Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M20 44 C19 26 34 12 50 12 C68 12 82 26 80 44 C79 60 66 73 50 73 C33 73 21 60 20 44 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 12 C38 30 38 56 50 73 M20 44 Q50 52 80 43",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M12 30 C4 62 26 86 54 83",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M54 83 L54 90 M34 91 L72 91",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "bold globe, green land, small stand",
+   "paths": [
+    {
+     "d": "M23 47 C22 29 37 15 53 15 C71 15 85 29 83 47 C82 63 69 76 53 76 C36 76 24 63 23 47 Z",
+     "fill": "tone-green",
+     "stroke": "none"
+    },
+    {
+     "d": "M38 31 C46 27 52 33 48 41 C44 47 38 43 36 37 Z M62 49 C70 45 78 51 74 61 C68 67 60 61 62 49 Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M20 44 C19 26 34 12 50 12 C68 12 82 26 80 44 C79 60 66 73 50 73 C33 73 21 60 20 44 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 73 L50 84 M32 90 L68 90 M32 90 L36 86 M68 90 L64 86",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

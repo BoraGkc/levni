@@ -1,0 +1,53 @@
+{
+  "name": "curtain-dress",
+  "tags": [
+    "dress",
+    "theater curtain",
+    "fashion",
+    "stage"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/patti-lupone-full/kapak-3d.json",
+      "paths": [
+        {
+          "d": "M40,4 L44,12 M60,4 L56,12",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M38,12 H62 L58,40 H42 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M42,40 H58 Q88,62 96,92 H4 Q12,62 42,40 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M50,40 V92 M46,42 L34,92 M54,42 L66,92 M44,44 L16,92 M56,44 L84,92",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M4,92 H96",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M38,40 H62",
+          "stroke": "blue",
+          "weight": 6
+        },
+        {
+          "d": "M92,70 V86 M92,86 l-3,6 M92,86 l3,6",
+          "stroke": "blue",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

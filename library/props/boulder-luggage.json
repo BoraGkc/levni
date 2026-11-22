@@ -1,0 +1,50 @@
+{
+  "name": "boulder-luggage",
+  "tags": [
+    "taş valiz",
+    "yük",
+    "kırgınlık",
+    "luggage",
+    "boulder"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/chris-rock-affetme/ici-1-alt2.json",
+      "paths": [
+        {
+          "d": "M36 28 Q36 6 50 6 Q64 6 64 28",
+          "stroke": "ink",
+          "weight": 6
+        },
+        {
+          "d": "M6 70 L14 42 L34 24 L62 20 L84 32 L96 58 L92 86 L60 94 L22 92Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3.8
+        },
+        {
+          "d": "M34 24 L40 48 L24 66 M62 20 L56 44 L84 32 M56 44 L66 70 L92 86",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M40 48 L56 44 L66 70 L30 80Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M50 6 Q40 40 20 56",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M18 56 L8 66 L18 76 L28 66Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.6
+        }
+      ]
+    }
+  ]
+}

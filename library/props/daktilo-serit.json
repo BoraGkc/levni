@@ -1,0 +1,47 @@
+{
+  "name": "daktilo-serit",
+  "tags": [
+    "daktilo",
+    "şerit",
+    "kaset"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/rent-broadway-efsanesinin/kapak-r0.json",
+      "paths": [
+        {
+          "d": "M12 62 L88 62 L94 92 L6 92 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M30 66 L70 66 M26 74 L74 74 M30 82 L70 82",
+          "stroke": "blue",
+          "weight": 4,
+          "dash": [
+            2,
+            8
+          ]
+        },
+        {
+          "d": "M18 52 L82 52 L82 62 L18 62 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M30 6 L66 6 L66 52 L30 52 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M36 16 L60 16 M36 24 L60 24 M36 32 L54 32",
+          "stroke": "ink",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

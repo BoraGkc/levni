@@ -1,0 +1,54 @@
+{
+  "name": "stage-in-broken-heart",
+  "tags": [
+    "kalp",
+    "çatlak",
+    "sahne",
+    "perde",
+    "don juan",
+    "broken heart",
+    "stage",
+    "curtain"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/off-broadway-kacirilmayacak/ici-1.json",
+      "paths": [
+        {
+          "d": "M50 24 C44 12 32 6 22 8 C8 11 2 26 6 40 C12 62 34 78 50 94 C66 78 88 62 94 40 C98 26 92 11 78 8 C68 6 56 12 50 24 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M50 24 L36 36 L47 48 L34 62 L45 78 L50 94 L60 78 L53 62 L66 48 L55 36 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M41 38 L43 78 M50 40 L50 86 M58 38 L56 78",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2,
+          "dash": [
+            3,
+            3
+          ]
+        },
+        {
+          "d": "M50 24 L44 58 L56 58 Z",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M12 20 Q18 12 30 14 M70 14 Q82 12 88 22",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2.2
+        }
+      ]
+    }
+  ]
+}

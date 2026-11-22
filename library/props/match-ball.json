@@ -1,0 +1,50 @@
+{
+  "name": "match-ball",
+  "tags": [
+    "kibrit futbol topu maç",
+    "match soccer ball"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/maddie-kowalski-burnerverse/ici-1-r0.json",
+      "paths": [
+        {
+          "d": "M30 50 H96 V58 H30Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M36 54 H92",
+          "stroke": "tone",
+          "weight": 1.2,
+          "fill": "none"
+        },
+        {
+          "d": "M10 54 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M28 46 L35 51 L32 59 L24 59 L21 51Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M28 46 V38 M35 51 L42 48 M32 59 L36 66 M24 59 L20 66 M21 51 L14 48",
+          "stroke": "ink",
+          "weight": 2,
+          "fill": "none"
+        },
+        {
+          "d": "M16 36 Q6 24 18 8 Q18 20 26 18 Q24 6 32 -2 Q40 14 36 28 Q42 24 40 36 Q32 40 16 36Z",
+          "fill": "tone",
+          "stroke": "blue",
+          "weight": 2.4
+        }
+      ]
+    }
+  ]
+}

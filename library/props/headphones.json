@@ -1,0 +1,68 @@
+{
+ "name": "headphones",
+ "tags": [
+  "kulaklık",
+  "müzik",
+  "dinleme",
+  "headphones",
+  "podcast"
+ ],
+ "variants": [
+  {
+   "note": "over-ear, coral cups",
+   "paths": [
+    {
+     "d": "M18 62 Q16 12 50 12 Q84 12 82 62",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M13 58 Q13 52 23 52 Q31 52 31 60 L31 84 Q31 92 23 92 Q13 92 13 84 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M8 54 Q8 48 18 48 Q26 48 26 56 L26 80 Q26 88 18 88 Q8 88 8 80 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M77 52 Q87 52 93 56 L93 84 Q93 92 85 92 Q75 92 75 84 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M72 56 Q72 48 80 48 Q92 48 92 54 L92 80 Q92 88 84 88 Q72 88 72 80 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "bold, solid blue cups with paper band",
+   "paths": [
+    {
+     "d": "M20 60 Q18 14 50 14 Q82 14 80 60",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M8 52 Q8 46 18 46 Q28 46 28 56 L28 80 Q28 90 18 90 Q8 90 8 80 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M72 56 Q72 46 82 46 Q92 46 92 52 L92 80 Q92 90 82 90 Q72 90 72 80 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+  "name": "mic-lamp-empty-chair",
+  "tags": [
+    "mikrofon",
+    "sorgu lambası",
+    "boş sandalye",
+    "röportaj",
+    "microphone",
+    "interrogation lamp",
+    "empty chair"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/nathan-fielder-elizabeth/ici-2.json",
+      "paths": [
+        {
+          "d": "M52 34 L82 34 L100 98 L34 98Z",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M16 98 V24 Q16 8 34 8 H52",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 6
+        },
+        {
+          "d": "M6 98 H94",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 4
+        },
+        {
+          "d": "M46 12 Q58 -4 76 6 L88 30 Q72 44 56 32Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M54 12 L70 36 M62 6 L80 32 M48 20 L60 38",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M56 66 V90 M80 66 V90",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 5
+        },
+        {
+          "d": "M54 64 H84 V70 H54Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M54 44 H61 V66 H54Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

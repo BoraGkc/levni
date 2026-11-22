@@ -1,0 +1,138 @@
+{
+ "name": "key-ring",
+ "tags": [
+  "anahtarlık",
+  "anahtar",
+  "key ring",
+  "keys",
+  "ev anahtarı"
+ ],
+ "variants": [
+  {
+   "note": "ring with two keys",
+   "paths": [
+    {
+     "d": "M34 24 C34 16.2 41 10 50 10 C59 10 66 16.2 66 24 C66 31.8 59 38 50 38 C41 38 34 31.8 34 24 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M47 38 L43 82 L53 82 L55 40Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M44 36 L40 80 L50 80 L52 38Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M44 36 L40 80 L50 80 L52 38Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M40 80 L34 80 M40 70 L35 70",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M56 38 L68 76 L76 72 L62 36Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  },
+  {
+   "note": "key with coral tag",
+   "paths": [
+    {
+     "d": "M16 22 C16 15.3 22.2 10 30 10 C37.8 10 44 15.3 44 22 C44 28.7 37.8 34 30 34 C22.2 34 16 28.7 16 22 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M27 34 L39 34 L41 64 L25 64Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M24 32 L36 32 L38 62 L22 62Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M24 32 L36 32 L38 62 L22 62Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M54 22 L74 80 L82 76 L64 18Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M60 30 L68 27",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "three keys fanned from a ring",
+   "paths": [
+    {
+     "d": "M36 18 C36 11.3 42.2 6 50 6 C57.8 6 64 11.3 64 18 C64 24.7 57.8 30 50 30 C42.2 30 36 24.7 36 18 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M40 30 L22 76 L32 80 L46 34Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M49 34 L49 90 L59 90 L59 34Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M46 32 L46 88 L56 88 L56 32Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M46 32 L46 88 L56 88 L56 32Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58 34 L74 80 L82 76 L66 30Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M46 82 L40 82",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

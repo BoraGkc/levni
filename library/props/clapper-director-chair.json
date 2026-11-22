@@ -1,0 +1,81 @@
+{
+  "name": "clapper-director-chair",
+  "tags": [
+    "yönetmen koltuğu",
+    "klaket",
+    "film"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/toronto-film-festivali/ici-1.json",
+      "paths": [
+        {
+          "d": "M20 28 L20 96 M80 28 L80 96",
+          "stroke": "ink",
+          "weight": 4,
+          "taper": false
+        },
+        {
+          "d": "M24 66 L76 96 M76 66 L24 96",
+          "stroke": "ink",
+          "weight": 3.4,
+          "taper": false
+        },
+        {
+          "d": "M20 58 L80 58 L80 68 L20 68 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M12 46 L88 46",
+          "stroke": "ink",
+          "weight": 5.5,
+          "taper": false
+        },
+        {
+          "d": "M20 18 L80 18 L80 34 L20 34 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M30 26 L70 26 M30 30 L60 30",
+          "stroke": "blue",
+          "weight": 2,
+          "taper": false
+        },
+        {
+          "d": "M20 7 L80 7 L80 18 L20 18 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M20 7 L32 7 L26 18 L20 18 Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M38 7 L50 7 L44 18 L32 18 Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M56 7 L68 7 L62 18 L50 18 Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M74 7 L80 7 L80 18 L68 18 Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

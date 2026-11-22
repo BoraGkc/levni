@@ -1,0 +1,88 @@
+{
+ "name": "monitor",
+ "tags": [
+  "monitör",
+  "ekran",
+  "televizyon",
+  "tv",
+  "monitor",
+  "screen"
+ ],
+ "variants": [
+  {
+   "note": "desktop monitor on stand, blue screen with bars",
+   "paths": [
+    {
+     "d": "M12 14 L88 14 L89 66 L11 66 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M22 23L84 23L84 61L22 61Z",
+     "fill": "blue",
+     "stroke": "none"
+    },
+    {
+     "d": "M19 21 L81 21 L81 59 L19 59 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M28 34 L62 34 M28 46 L50 46",
+     "stroke": "paper",
+     "weight": 6,
+     "fill": "none"
+    },
+    {
+     "d": "M42 66 L58 66 L60 82 L40 82 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 84 L70 84",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 10
+    }
+   ]
+  },
+  {
+   "note": "old tv with antenna and coral knob",
+   "paths": [
+    {
+     "d": "M40 22 L28 8 M60 22 L74 8",
+     "stroke": "ink",
+     "weight": 7,
+     "fill": "none"
+    },
+    {
+     "d": "M10 24 L90 23 L92 80 L8 81 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M17 31 L66 31 L66 72 L17 72 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M74 40 A6 6 0 1 0 74.1 40 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M74 62 L82 62",
+     "stroke": "ink",
+     "weight": 6,
+     "fill": "none"
+    }
+   ]
+  }
+ ]
+}

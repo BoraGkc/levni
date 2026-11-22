@@ -1,0 +1,207 @@
+{
+  "name": "bicycle",
+  "tags": [
+    "bisiklet",
+    "bicycle",
+    "bike",
+    "pedal"
+  ],
+  "variants": [
+    {
+      "note": "redrawn Nov 2026: diamond frame, fork, crank, spokes",
+      "paths": [
+        {
+          "d": "M5,64 a19,19 0 1,0 38,0 a19,19 0 1,0 -38,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 7
+        },
+        {
+          "d": "M57,64 a19,19 0 1,0 38,0 a19,19 0 1,0 -38,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 7
+        },
+        {
+          "d": "M20,64 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0M72,64 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0",
+          "fill": "ink",
+          "stroke": "none"
+        },
+        {
+          "d": "M24,47 L24,81 M7,64 L41,64 M59,64 L93,64 M76,47 L76,81",
+          "stroke": "paper",
+          "weight": 2.5
+        },
+        {
+          "d": "M24,64 L46,66 L40,38 Z M40,39 L68,39 L46,66",
+          "stroke": "coral",
+          "weight": 6.5
+        },
+        {
+          "d": "M68,39 L71,48 L76,64",
+          "stroke": "coral",
+          "weight": 6
+        },
+        {
+          "d": "M40,66 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M46,66 L52,76 M48,77 L56,76",
+          "stroke": "ink",
+          "weight": 4.5
+        },
+        {
+          "d": "M33,33 Q40,30 47,33 Q41,36 33,33 Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M40,34 L40,38",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M68,39 L66,29 M60,28 Q66,25 73,30",
+          "stroke": "ink",
+          "weight": 5
+        }
+      ]
+    },
+    {
+      "note": "side view, classic frame",
+      "paths": [
+        {
+          "d": "M7 66 C7 56.8 14.5 49.5 24 49.5 C33.5 49.5 41 56.8 41 66 C41 75.2 33.5 82.5 24 82.5 C14.5 82.5 7 75.2 7 66 Z",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M61 66 C61 56.8 68.5 49.5 78 49.5 C87.5 49.5 95 56.8 95 66 C95 75.2 87.5 82.5 78 82.5 C68.5 82.5 61 75.2 61 66 Z",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M24 66 L42 66 L52 40 L72 40 L78 66 M42 66 L36 40 L52 40 M36 40 L30 38 M70 40 L66 30 L76 28",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M37 38 L49 38 L47 42 L37 42Z",
+          "fill": "coral",
+          "stroke": "none"
+        },
+        {
+          "d": "M34 36 L46 36 L44 40 L34 40Z",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 9
+        },
+        {
+          "d": "M42 66 L48 74",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 6
+        }
+      ]
+    },
+    {
+      "note": "with front basket and rear bag, bold",
+      "paths": [
+        {
+          "d": "M10 68 C10 59.3 17 52.5 26 52.5 C35 52.5 42 59.3 42 68 C42 76.7 35 83.5 26 83.5 C17 83.5 10 76.7 10 68 Z",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M60 68 C60 59.3 67 52.5 76 52.5 C85 52.5 92 59.3 92 68 C92 76.7 85 83.5 76 83.5 C67 83.5 60 76.7 60 68 Z",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M26 68 L44 68 L54 44 L70 44 L76 68 M44 68 L38 44 L54 44 M70 44 L68 34 L80 32",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M73 48 L93 48 L91 60 L75 60 Z",
+          "fill": "tone-mustard",
+          "stroke": "none"
+        },
+        {
+          "d": "M70 46 L90 46 L88 58 L72 58 Z",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 7
+        },
+        {
+          "d": "M70 46 L90 46 L88 58 L72 58 Z",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 7
+        },
+        {
+          "d": "M30 40 L48 40 L46 46 L30 46Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 6
+        }
+      ]
+    },
+    {
+      "note": "simple seen leaning, with bell and shadow",
+      "paths": [
+        {
+          "d": "M4 64 C4 54.2 11.9 46.5 22 46.5 C32.1 46.5 40 54.2 40 64 C40 73.8 32.1 81.5 22 81.5 C11.9 81.5 4 73.8 4 64 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M62 64 C62 54.2 69.9 46.5 80 46.5 C90.1 46.5 98 54.2 98 64 C98 73.8 90.1 81.5 80 81.5 C69.9 81.5 62 73.8 62 64 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M22 64 L44 64 L56 36 L74 36 L80 64 M44 64 L36 36 L56 36 M74 36 L70 24 L84 26",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M32 34 L44 34",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 9
+        },
+        {
+          "d": "M69 20 Q75 14 81 20 Z",
+          "fill": "mustard",
+          "stroke": "none"
+        },
+        {
+          "d": "M66 18 Q72 12 78 18 Z",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 6
+        },
+        {
+          "d": "M8 88 L92 88",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}

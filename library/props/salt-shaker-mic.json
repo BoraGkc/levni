@@ -1,0 +1,118 @@
+{
+  "name": "salt-shaker-mic",
+  "tags": [
+    "parodi",
+    "podcast",
+    "mikrofon",
+    "tuzluk"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/tim-heidecker-joe/kapak.json",
+      "paths": [
+        {
+          "d": "M26 94 L74 94",
+          "stroke": "ink",
+          "weight": 5,
+          "taper": false
+        },
+        {
+          "d": "M50 66 L50 94",
+          "stroke": "ink",
+          "weight": 4,
+          "taper": false
+        },
+        {
+          "d": "M30 50 Q30 70 50 70 Q70 70 70 50",
+          "stroke": "ink",
+          "weight": 3.5,
+          "taper": false
+        },
+        {
+          "d": "M32 22 L30 62 Q30 68 36 68 L64 68 Q70 68 70 62 L68 22 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M31 44 L69 44 L70 62 Q70 68 64 68 L36 68 Q30 68 30 62 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M33 22 L35 10 Q50 2 65 10 L67 22 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M39.4 13 a1.6 1.6 0 1 0 3.2 0 a1.6 1.6 0 1 0 -3.2 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M48.4 10 a1.6 1.6 0 1 0 3.2 0 a1.6 1.6 0 1 0 -3.2 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M57.4 13 a1.6 1.6 0 1 0 3.2 0 a1.6 1.6 0 1 0 -3.2 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M40 56 a10 7 0 1 0 20 0 a10 7 0 1 0 -20 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M42 52 Q36 46 40 42 Q44 44 44 48",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M58 52 Q64 46 60 42 Q56 44 56 48",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M42 60 L36 64 M45 62 L41 67 M58 60 L64 64 M55 62 L59 67",
+          "stroke": "ink",
+          "weight": 2,
+          "taper": false
+        },
+        {
+          "d": "M16 38 Q11 50 16 62",
+          "stroke": "coral",
+          "weight": 4,
+          "taper": false
+        },
+        {
+          "d": "M84 38 Q89 50 84 62",
+          "stroke": "coral",
+          "weight": 4,
+          "taper": false
+        },
+        {
+          "d": "M9 30 Q2 50 9 70",
+          "stroke": "coral",
+          "weight": 4,
+          "taper": false
+        },
+        {
+          "d": "M91 30 Q98 50 91 70",
+          "stroke": "coral",
+          "weight": 4,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

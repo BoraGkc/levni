@@ -1,0 +1,38 @@
+{
+  "name": "pen-barrel",
+  "tags": [
+    "dolma kalem gövdesi",
+    "fountain pen barrel"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/michael-douglas-ve/kapak.json",
+      "paths": [
+        {
+          "d": "M36 0 H64 V92 Q50 100 36 92Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M36 0 H64 V10 H36Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M58 16 V84",
+          "stroke": "paper",
+          "weight": 2,
+          "fill": "none"
+        },
+        {
+          "d": "M36 30 H64 V38 H36Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+ "name": "warning-sign",
+ "tags": [
+  "uyarı",
+  "tehlike",
+  "warning",
+  "dikkat",
+  "alert"
+ ],
+ "variants": [
+  {
+   "note": "triangle with mustard fill and exclamation",
+   "paths": [
+    {
+     "d": "M53 14 L94 84 L12 86 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 12 L91 82 L9 84 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 38 L50 62",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M50 73 L50.4 73.2",
+     "stroke": "ink",
+     "weight": 10
+    }
+   ]
+  },
+  {
+   "note": "triangle sign on a pole, coral",
+   "paths": [
+    {
+     "d": "M50 60 L50 91",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M53 10 L87 64 L19 65 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 8 L84 62 L16 63 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M53 24 L75 58 L31 59 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 53 L50.4 53.2",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,316 @@
+{
+  "name": "film-awning-stall",
+  "tags": [
+    "pazar",
+    "tezgah",
+    "film şeridi",
+    "stand"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/toronto-international-film/kapak.json",
+      "paths": [
+        {
+          "d": "M10 34 h80 v36 h-80 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M10 34 L10 92 M90 34 L90 92",
+          "stroke": "ink",
+          "weight": 4,
+          "taper": false
+        },
+        {
+          "d": "M6 10 h88 v24 h-88 z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M9 11 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M9 29 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M16.6 11 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M16.6 29 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M24.2 11 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M24.2 29 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M31.799999999999997 11 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M31.799999999999997 29 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M39.4 11 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M39.4 29 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M47 11 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M47 29 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M54.599999999999994 11 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M54.599999999999994 29 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M62.199999999999996 11 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M62.199999999999996 29 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M69.8 11 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M69.8 29 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M77.39999999999999 11 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M77.39999999999999 29 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M85 11 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M85 29 h3 v3 h-3 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 0.8
+        },
+        {
+          "d": "M10 16 h13 v11 h-13 z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M26.5 16 h13 v11 h-13 z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M43 16 h13 v11 h-13 z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M59.5 16 h13 v11 h-13 z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M76 16 h13 v11 h-13 z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M6 70 h88 v24 h-88 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M6 80 L94 80",
+          "stroke": "blue",
+          "weight": 3,
+          "taper": false
+        },
+        {
+          "d": "M15 59 a9 9 0 1 0 18 0 a9 9 0 1 0 -18 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M26.7 59 a1.8 1.8 0 1 0 3.6 0 a1.8 1.8 0 1 0 -3.6 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M17.7 59 a1.8 1.8 0 1 0 3.6 0 a1.8 1.8 0 1 0 -3.6 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M22.2 63.5 a1.8 1.8 0 1 0 3.6 0 a1.8 1.8 0 1 0 -3.6 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M22.2 54.5 a1.8 1.8 0 1 0 3.6 0 a1.8 1.8 0 1 0 -3.6 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M22.74 59 a1.2600000000000002 1.2600000000000002 0 1 0 2.5200000000000005 0 a1.2600000000000002 1.2600000000000002 0 1 0 -2.5200000000000005 0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M41 57 a9 9 0 1 0 18 0 a9 9 0 1 0 -18 0",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M52.7 57 a1.8 1.8 0 1 0 3.6 0 a1.8 1.8 0 1 0 -3.6 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M43.7 57 a1.8 1.8 0 1 0 3.6 0 a1.8 1.8 0 1 0 -3.6 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M48.2 61.5 a1.8 1.8 0 1 0 3.6 0 a1.8 1.8 0 1 0 -3.6 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M48.2 52.5 a1.8 1.8 0 1 0 3.6 0 a1.8 1.8 0 1 0 -3.6 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M48.74 57 a1.2600000000000002 1.2600000000000002 0 1 0 2.5200000000000005 0 a1.2600000000000002 1.2600000000000002 0 1 0 -2.5200000000000005 0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M67 59 a9 9 0 1 0 18 0 a9 9 0 1 0 -18 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M78.7 59 a1.8 1.8 0 1 0 3.6 0 a1.8 1.8 0 1 0 -3.6 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M69.7 59 a1.8 1.8 0 1 0 3.6 0 a1.8 1.8 0 1 0 -3.6 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M74.2 63.5 a1.8 1.8 0 1 0 3.6 0 a1.8 1.8 0 1 0 -3.6 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M74.2 54.5 a1.8 1.8 0 1 0 3.6 0 a1.8 1.8 0 1 0 -3.6 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M74.74 59 a1.2600000000000002 1.2600000000000002 0 1 0 2.5200000000000005 0 a1.2600000000000002 1.2600000000000002 0 1 0 -2.5200000000000005 0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

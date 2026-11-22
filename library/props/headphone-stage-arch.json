@@ -1,0 +1,77 @@
+{
+  "name": "headphone-stage-arch",
+  "tags": [
+    "kulaklik",
+    "perde",
+    "sahne",
+    "hayalet fisilti",
+    "headphones stage curtain arch"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/off-broadway-hayalet/kapak.json",
+      "paths": [
+        {
+          "d": "M8 76 L8 50 Q8 0 50 0 Q92 0 92 50 L92 76 L80 76 L80 50 Q80 12 50 12 Q20 12 20 50 L20 76 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.8
+        },
+        {
+          "d": "M22 70 L22 46 Q22 18 50 18 Q78 18 78 46 L78 70 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M50 18 Q38 42 40 70 L22 70 L22 46 Q22 24 50 18 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M50 18 Q62 42 60 70 L78 70 L78 46 Q78 24 50 18 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M31 28 Q28 48 30 70 M70 28 Q73 48 71 70 M44 24 Q37 44 38 70 M56 24 Q63 44 62 70",
+          "stroke": "ink",
+          "weight": 1.6,
+          "fill": "none"
+        },
+        {
+          "d": "M42 70 Q50 40 58 70 Z",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M50 70 L50 98",
+          "stroke": "ink",
+          "weight": 0,
+          "fill": "none"
+        },
+        {
+          "d": "M0 60 Q0 56 4 56 L20 56 Q24 56 24 60 L24 94 Q24 98 20 98 L4 98 Q0 98 0 94 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.8
+        },
+        {
+          "d": "M76 60 Q76 56 80 56 L96 56 Q100 56 100 60 L100 94 Q100 98 96 98 L80 98 Q76 98 76 94 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.8
+        },
+        {
+          "d": "M6 68 L18 68 M6 78 L18 78 M6 88 L18 88 M82 68 L94 68 M82 78 L94 78 M82 88 L94 88",
+          "stroke": "paper",
+          "weight": 2,
+          "fill": "none"
+        }
+      ]
+    }
+  ]
+}

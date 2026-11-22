@@ -1,0 +1,38 @@
+{
+  "name": "bucket",
+  "tags": [
+    "kova",
+    "bucket",
+    "pail"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/gentle-monster-kum/kapak-v2.json",
+      "paths": [
+        {
+          "d": "M22 40 L78 40 L70 88 L30 88 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M20 36 L80 36 L80 44 L20 44 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M26 36 Q50 4 74 36",
+          "stroke": "ink",
+          "weight": 4,
+          "fill": "none"
+        },
+        {
+          "d": "M34 52 L38 80 M50 52 L50 80",
+          "stroke": "paper",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

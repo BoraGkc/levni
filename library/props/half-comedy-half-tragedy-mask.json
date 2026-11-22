@@ -1,0 +1,81 @@
+{
+  "name": "half-comedy-half-tragedy-mask",
+  "tags": [
+    "maske",
+    "komedi",
+    "dram",
+    "tiyatro",
+    "gülen",
+    "ağlayan",
+    "mask",
+    "comedy",
+    "tragedy",
+    "stage"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/other-desert-cities/ici-2-r0.json",
+      "paths": [
+        {
+          "d": "M50 4 Q88 4 88 44 Q88 84 50 98 Q12 84 12 44 Q12 4 50 4 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M50 4 Q88 4 88 44 Q88 84 50 98 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M24 42 Q33 30 43 42",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 4.4,
+          "taper": false
+        },
+        {
+          "d": "M57 36 Q66 46 76 36",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 4.4,
+          "taper": false
+        },
+        {
+          "d": "M56 26 L76 30",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 3.4,
+          "taper": false
+        },
+        {
+          "d": "M20 62 Q33 82 46 64",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 4.4,
+          "taper": false
+        },
+        {
+          "d": "M54 78 Q66 62 80 76",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 4.4,
+          "taper": false
+        },
+        {
+          "d": "M66 48 Q72 56 66 62 Q60 56 66 48 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M26 54 m-5 0 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0",
+          "fill": "coral",
+          "stroke": "none",
+          "weight": 0
+        }
+      ]
+    }
+  ]
+}

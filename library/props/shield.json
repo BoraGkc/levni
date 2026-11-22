@@ -1,0 +1,60 @@
+{
+ "name": "shield",
+ "tags": [
+  "kalkan",
+  "güvenlik",
+  "shield",
+  "koruma",
+  "gizlilik"
+ ],
+ "variants": [
+  {
+   "note": "shield with blue half and check mark",
+   "paths": [
+    {
+     "d": "M53 12 L85 22 C86 54 77 76 53 92 Z",
+     "fill": "blue",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 10 L82 20 C83 52 74 74 50 90 C26 74 17 52 18 20 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M34 48 L46 62 L68 36",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "plain tone shield with coral band",
+   "paths": [
+    {
+     "d": "M50 10 L82 20 C83 52 74 74 50 90 C26 74 17 52 18 20 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M22 38 L84 40 L83 54 L21 52 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 10 L82 20 C83 52 74 74 50 90 C26 74 17 52 18 20 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 12 L50 88",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

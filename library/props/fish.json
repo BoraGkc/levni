@@ -1,0 +1,80 @@
+{
+ "name": "fish",
+ "tags": [
+  "balık",
+  "fish",
+  "deniz",
+  "su"
+ ],
+ "variants": [
+  {
+   "note": "fish with coral body, fin and tail",
+   "paths": [
+    {
+     "d": "M74 50 L92 34 L90 67 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M13 53 C29 31 65 31 79 53 C65 75 29 75 13 53 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M10 50 C26 28 62 28 76 50 C62 72 26 72 10 50 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M44 32 L52 21 L60 33 M32 40 Q37 50 32 60",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M24 48 L24.4 48.2",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  },
+  {
+   "note": "tilted fish, tone body, mustard tail",
+   "paths": [
+    {
+     "d": "M73 56 L93 44 L95 74 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M70 54 L90 42 L92 72 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M15 43 C31 25 65 33 75 59 C59 79 29 69 15 43 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M12 40 C28 22 62 30 72 56 C56 76 26 66 12 40 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M38 62 L44 74 L54 66 M42 40 L46 48 M52 42 L56 50 M62 46 L65 53",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M24 42 L24.4 42.2",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

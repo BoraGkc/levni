@@ -1,0 +1,70 @@
+{
+  "name": "onion-mic",
+  "tags": [
+    "soğan",
+    "mikrofon",
+    "The Onion",
+    "hiciv"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/tim-heidecker-joe/ici-2.json",
+      "paths": [
+        {
+          "d": "M50 24 Q54 36 70 44 Q86 56 84 70 Q80 92 50 94 Q20 92 16 70 Q14 56 30 44 Q46 36 50 24 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M50 26 Q36 52 38 74 Q40 88 50 93",
+          "stroke": "blue",
+          "weight": 2.6,
+          "taper": false
+        },
+        {
+          "d": "M50 26 Q64 52 62 74 Q60 88 50 93",
+          "stroke": "blue",
+          "weight": 2.6,
+          "taper": false
+        },
+        {
+          "d": "M50 26 Q24 52 27 76",
+          "stroke": "blue",
+          "weight": 2.2,
+          "taper": false
+        },
+        {
+          "d": "M50 26 Q76 52 73 76",
+          "stroke": "blue",
+          "weight": 2.2,
+          "taper": false
+        },
+        {
+          "d": "M44 94 L40 99 M50 94 L50 100 M56 94 L60 99",
+          "stroke": "ink",
+          "weight": 2.4,
+          "taper": false
+        },
+        {
+          "d": "M50 22 L50 30",
+          "stroke": "ink",
+          "weight": 4.5,
+          "taper": false
+        },
+        {
+          "d": "M38 12 a12 12 0 1 0 24 0 a12 12 0 1 0 -24 0",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M40 8 L60 8 M38 12 L62 12 M40 16 L60 16",
+          "stroke": "paper",
+          "weight": 1.8,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

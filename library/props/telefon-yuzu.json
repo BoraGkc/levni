@@ -1,0 +1,37 @@
+{
+  "name": "telefon-yuzu",
+  "tags": [
+    "telefon",
+    "profil",
+    "kalp"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/randevu-uygulamasi-profillerin/kapak-3d.json",
+      "paths": [
+        {
+          "d": "M10 12 L90 12 L90 160 L10 160 Z",
+          "fill": "tone",
+          "stroke": "paper",
+          "weight": 3
+        },
+        {
+          "d": "M50 40 Q64 40 64 54 Q64 68 50 68 Q36 68 36 54 Q36 40 50 40 Z M24 104 Q50 66 76 104",
+          "stroke": "blue",
+          "weight": 6
+        },
+        {
+          "d": "M24 116 L76 116 M24 128 L66 128",
+          "stroke": "blue",
+          "weight": 5
+        },
+        {
+          "d": "M50 156 Q28 140 32 130 Q38 122 50 130 Q62 122 68 130 Q72 140 50 156 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

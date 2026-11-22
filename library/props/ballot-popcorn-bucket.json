@@ -1,0 +1,113 @@
+{
+  "name": "ballot-popcorn-bucket",
+  "tags": [
+    "misir kovasi",
+    "siyah top",
+    "oy",
+    "seyirci",
+    "popcorn bucket black balls vote"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/la-bola-negra/ici-1.json",
+      "paths": [
+        {
+          "d": "M11,46 a13,13 0 1,0 26,0 a13,13 0 1,0 -26,0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M37,46 a13,13 0 1,0 26,0 a13,13 0 1,0 -26,0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M63,46 a13,13 0 1,0 26,0 a13,13 0 1,0 -26,0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M24,28 a13,13 0 1,0 26,0 a13,13 0 1,0 -26,0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M50,28 a13,13 0 1,0 26,0 a13,13 0 1,0 -26,0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M16,43 Q18,37 24,37",
+          "stroke": "paper",
+          "weight": 2,
+          "fill": "none"
+        },
+        {
+          "d": "M42,43 Q44,37 50,37",
+          "stroke": "paper",
+          "weight": 2,
+          "fill": "none"
+        },
+        {
+          "d": "M68,43 Q70,37 76,37",
+          "stroke": "paper",
+          "weight": 2,
+          "fill": "none"
+        },
+        {
+          "d": "M29,25 Q31,19 37,19",
+          "stroke": "paper",
+          "weight": 2,
+          "fill": "none"
+        },
+        {
+          "d": "M55,25 Q57,19 63,19",
+          "stroke": "paper",
+          "weight": 2,
+          "fill": "none"
+        },
+        {
+          "d": "M8 52 L92 52 L84 98 L16 98 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M8 52 L26 52 L24 98 L16 98 Z M44 52 L62 52 L60 98 L40 98 Z M80 52 L92 52 L84 98 L78 98 Z",
+          "fill": "coral",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M8 52 L92 52 L84 98 L16 98 Z",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M26 52 L24 98 M44 52 L40 98 M62 52 L60 98 M80 52 L78 98",
+          "stroke": "ink",
+          "weight": 1.6,
+          "fill": "none"
+        },
+        {
+          "d": "M90,90 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M-10,92 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

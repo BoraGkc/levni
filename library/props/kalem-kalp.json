@@ -1,0 +1,37 @@
+{
+  "name": "kalem-kalp",
+  "tags": [
+    "kalem",
+    "kalp",
+    "biyografi"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/randevu-uygulamasi-profillerin/ici-2-r0.json",
+      "paths": [
+        {
+          "d": "M34 10 L50 10 L50 62 L34 62 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M34 62 L50 62 L42 82 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M38 74 L46 74 L42 82 Z",
+          "fill": "ink"
+        },
+        {
+          "d": "M33 10 Q26 -2 34 -6 Q42 -8 42 2 Q42 -8 50 -6 Q58 -2 51 10 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

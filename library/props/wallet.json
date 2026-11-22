@@ -1,0 +1,126 @@
+{
+ "name": "wallet",
+ "tags": [
+  "cüzdan",
+  "para cüzdanı",
+  "wallet",
+  "ödeme",
+  "harcama"
+ ],
+ "variants": [
+  {
+   "note": "closed, flap with mustard clasp",
+   "paths": [
+    {
+     "d": "M10 28 Q10 22 16 22 L84 22 Q90 22 90 28 L90 80 Q90 86 84 86 L16 86 Q10 86 10 80 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M10 40 L90 40 L90 62 L10 62 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M10 36 L90 36",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M62 46 L96 46 L96 66 L62 66 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M68 52 L94 52 L94 64 L68 64 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M72 56 L72.4 56.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  },
+  {
+   "note": "open, bills and a card poking out",
+   "paths": [
+    {
+     "d": "M16 14 L58 10 L62 40 L20 46 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M34 12 L78 18 L72 48 L30 42 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M10 42 L90 42 L90 84 Q90 88 84 88 L16 88 Q10 88 10 82 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M10 56 L90 56",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M26 70 L50 70",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "bifold three-quarter, stitching and snap",
+   "paths": [
+    {
+     "d": "M11 32 L53 26 L95 32 L95 86 L11 86 Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M8 30 L50 24 L92 30 L92 84 L8 84 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 24 L50 84",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M16 36 L16 76 M84 36 L84 76",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M16 36 L42 33 M58 33 L84 36",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M64 56 C64 52.7 66.7 50 70 50 C73.3 50 76 52.7 76 56 C76 59.3 73.3 62 70 62 C66.7 62 64 59.3 64 56 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

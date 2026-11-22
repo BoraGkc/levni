@@ -1,0 +1,100 @@
+{
+  "name": "skip-remote",
+  "tags": [
+    "kumanda",
+    "atla",
+    "izleyici",
+    "dikkat"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/trump-tv-basarisizligi/ici-2.json",
+      "paths": [
+        {
+          "d": "M26 2 L74 2 Q82 2 82 10 L82 150 L18 150 L18 10 Q18 2 26 2 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M25 16 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M28 52 a22 22 0 1 0 44 0 a22 22 0 1 0 -44 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M42 42 L42 62 L52 52 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M52 42 L52 62 L62 52 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M28.8 92 a5.2 5.2 0 1 0 10.4 0 a5.2 5.2 0 1 0 -10.4 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M44.8 92 a5.2 5.2 0 1 0 10.4 0 a5.2 5.2 0 1 0 -10.4 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M60.8 92 a5.2 5.2 0 1 0 10.4 0 a5.2 5.2 0 1 0 -10.4 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M28.8 110 a5.2 5.2 0 1 0 10.4 0 a5.2 5.2 0 1 0 -10.4 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M44.8 110 a5.2 5.2 0 1 0 10.4 0 a5.2 5.2 0 1 0 -10.4 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M60.8 110 a5.2 5.2 0 1 0 10.4 0 a5.2 5.2 0 1 0 -10.4 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M28.8 128 a5.2 5.2 0 1 0 10.4 0 a5.2 5.2 0 1 0 -10.4 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M44.8 128 a5.2 5.2 0 1 0 10.4 0 a5.2 5.2 0 1 0 -10.4 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M60.8 128 a5.2 5.2 0 1 0 10.4 0 a5.2 5.2 0 1 0 -10.4 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

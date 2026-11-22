@@ -1,0 +1,31 @@
+{
+  "name": "two-sound-rings",
+  "tags": [
+    "ses halkaları",
+    "iki katman",
+    "sound rings"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/off-broadway-hayalet/ici-2.json",
+      "paths": [
+        {
+          "d": "M50 50 m-12 0 a12 12 0 1 0 24 0 a12 12 0 1 0 -24 0 M50 50 m-26 0 a26 26 0 1 0 52 0 a26 26 0 1 0 -52 0",
+          "stroke": "blue",
+          "weight": 6,
+          "taper": false
+        },
+        {
+          "d": "M50 50 m-40 0 a40 40 0 1 0 80 0 a40 40 0 1 0 -80 0 M50 50 m-48 0 a48 48 0 1 0 96 0 a48 48 0 1 0 -96 0",
+          "stroke": "coral",
+          "weight": 6,
+          "taper": false,
+          "dash": [
+            8,
+            8
+          ]
+        }
+      ]
+    }
+  ]
+}

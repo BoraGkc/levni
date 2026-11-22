@@ -1,0 +1,63 @@
+{
+  "name": "tap-question",
+  "tags": [
+    "bira musluğu",
+    "soru işareti",
+    "boş",
+    "tap",
+    "question"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/bud-light-boykotculari/ici-2.json",
+      "paths": [
+        {
+          "d": "M10 30 H62 Q74 30 74 42 V50 H62 V44 H10 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M10 26 H24 V48 H10 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M60 50 H72 V62 H60 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M40 30 V22 M40 22 Q30 22 30 12 Q30 3 40 3 Q50 3 50 11 Q50 17 43 20",
+          "stroke": "coral",
+          "weight": 6
+        },
+        {
+          "d": "M41 24.8 a2.2 2.2 0 1 0 0.1 0Z",
+          "fill": "coral",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M66 66 q-3 6 0 9 q3 -3 0 -9Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M52 78 H80 L77 98 H55 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M57 94 H75",
+          "stroke": "mustard",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "wire-spool",
+  "tags": [
+    "makara",
+    "bakır tel",
+    "kablo",
+    "spool",
+    "copper wire",
+    "cable"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/bakir-tel-soyarak/ici-1.json",
+      "paths": [
+        {
+          "d": "M50 4 Q96 4 96 50 Q96 96 50 96 Q4 96 4 50 Q4 4 50 4 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M50 12 Q88 12 88 50 Q88 88 50 88 Q12 88 12 50 Q12 12 50 12 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M50 20 Q80 20 80 50 Q80 80 50 80 Q20 80 20 50 Q20 20 50 20 Z M50 28 Q72 28 72 50 Q72 72 50 72 Q28 72 28 50 Q28 28 50 28 Z M50 36 Q64 36 64 50 Q64 64 50 64 Q36 64 36 50 Q36 36 50 36 Z",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M50 42 Q58 42 58 50 Q58 58 50 58 Q42 58 42 50 Q42 42 50 42 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.6
+        }
+      ]
+    }
+  ]
+}

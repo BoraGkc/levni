@@ -1,0 +1,43 @@
+{
+  "name": "zimba-sahne",
+  "tags": [
+    "zımba",
+    "sahne",
+    "ofis"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/richard-riehle-office/ici-1.json",
+      "paths": [
+        {
+          "d": "M6 52 Q8 24 40 20 L94 30 L94 50 L6 56 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M6 56 L94 52 L94 66 L6 70 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M4 70 L96 66 L96 80 L4 84 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M10 77 a2,2 0 1,0 .1,0 M24 76 a2,2 0 1,0 .1,0 M38 75 a2,2 0 1,0 .1,0 M52 74 a2,2 0 1,0 .1,0 M66 73 a2,2 0 1,0 .1,0 M80 72 a2,2 0 1,0 .1,0",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M30 36 L80 40",
+          "stroke": "paper",
+          "weight": 4
+        }
+      ]
+    }
+  ]
+}

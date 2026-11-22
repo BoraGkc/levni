@@ -1,0 +1,104 @@
+{
+  "name": "leaf-museum",
+  "tags": [
+    "yaprak seklinde muze",
+    "leaf shaped museum",
+    "ma yansong lucas"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/ma-yansong-lucas/kapak-alt.json",
+      "paths": [
+        {
+          "d": "M-2 84 Q6 28 50 22 Q94 20 102 84 Z",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 3.8
+        },
+        {
+          "d": "M50 84 L50 26 M50 84 Q30 60 18 38 M50 84 Q70 60 82 38 M50 84 Q24 72 8 58 M50 84 Q76 72 92 58",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2.4
+        },
+        {
+          "d": "M-6 84 L106 84 L106 92 L-6 92 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M43 84 L43 68 Q50 60 57 68 L57 84 Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M-4 94 Q-14 98 -22 92",
+          "fill": "none",
+          "stroke": "green",
+          "weight": 4.4
+        },
+        {
+          "d": "M30 24 L34.480000000000004 32.4 L32.24 32.4 L35.6 38 L24.4 38 L27.759999999999998 32.4 L25.52 32.4 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M64 16 L69.76 26.8 L66.88 26.8 L71.2 34 L56.8 34 L61.12 26.8 L58.24 26.8 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M76 32 L79.2 38 L77.6 38 L80 42 L72 42 L74.4 38 L72.8 38 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        }
+      ]
+    },
+    {
+      "note": "harvested from .cache/cizim-drafts/ma-yansong-lucas/kapak.json",
+      "paths": [
+        {
+          "d": "M-2 84 Q2 40 50 8 Q98 40 102 84 Z",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 3.8
+        },
+        {
+          "d": "M50 8 Q52 -2 62 -6",
+          "fill": "none",
+          "stroke": "green",
+          "weight": 6
+        },
+        {
+          "d": "M50 84 L50 14 M50 74 L22 52 M50 74 L78 52 M50 56 L30 38 M50 56 L70 38 M50 40 L38 28 M50 40 L62 28 M50 84 L14 70 M50 84 L86 70",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2.6
+        },
+        {
+          "d": "M-6 84 L106 84 L106 92 L-6 92 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M43 84 L43 68 Q50 60 57 68 L57 84 Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M18 76 L18 80 M30 74 L30 80 M70 74 L70 80 M82 76 L82 80",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

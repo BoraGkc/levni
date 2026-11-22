@@ -1,0 +1,37 @@
+{
+  "name": "bike-wheel",
+  "tags": [
+    "bisiklet tekerleği",
+    "bicycle wheel"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/barbara-barrie-oyuncu/ici-2-r0.json",
+      "paths": [
+        {
+          "d": "M50 4 Q96 4 96 50 Q96 96 50 96 Q4 96 4 50 Q4 4 50 4 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M50 14 Q86 14 86 50 Q86 86 50 86 Q14 86 14 50 Q14 14 50 14 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M50 50 L90.0 50.0 M50 50 L84.6 70.0 M50 50 L70.0 84.6 M50 50 L50.0 90.0 M50 50 L30.0 84.6 M50 50 L15.4 70.0 M50 50 L10.0 50.0 M50 50 L15.4 30.0 M50 50 L30.0 15.4 M50 50 L50.0 10.0 M50 50 L70.0 15.4 M50 50 L84.6 30.0",
+          "stroke": "blue",
+          "weight": 1.8
+        },
+        {
+          "d": "M50 42 Q58 42 58 50 Q58 58 50 58 Q42 58 42 50 Q42 42 50 42 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.6
+        }
+      ]
+    }
+  ]
+}

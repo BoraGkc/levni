@@ -1,0 +1,63 @@
+{
+ "name": "check",
+ "tags": [
+  "onay",
+  "tik",
+  "doğru",
+  "check",
+  "tick",
+  "yes"
+ ],
+ "variants": [
+  {
+   "note": "bold green check, shifted fill",
+   "paths": [
+    {
+     "d": "M13 59Q12 55 16 51L24 44Q28 41 31 45L42 58L76 18Q79 14 84 17L91 23Q94 27 91 31L47 86Q43 91 38 86Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M10 56 Q9 52 13 48 L21 41 Q25 38 28 42 L39 55 L73 15 Q76 11 81 14 L88 20 Q91 24 88 28 L44 83 Q40 88 35 83 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "paper check with light green stripe",
+   "paths": [
+    {
+     "d": "M10 56 Q9 52 13 48 L21 41 Q25 38 28 42 L39 55 L73 15 Q76 11 81 14 L88 20 Q91 24 88 28 L44 83 Q40 88 35 83 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 51 L27 47 L38 60",
+     "fill": "none",
+     "stroke": "tone-green",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "single brush stroke check",
+   "paths": [
+    {
+     "d": "M17 56 Q29 64 38 81 Q55 42 84 17",
+     "fill": "none",
+     "stroke": "green",
+     "weight": 20
+    },
+    {
+     "d": "M14 53 Q26 62 35 78 Q52 40 81 14",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

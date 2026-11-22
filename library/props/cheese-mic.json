@@ -1,0 +1,38 @@
+{
+  "name": "cheese-mic",
+  "tags": [
+    "microphone",
+    "cheese",
+    "voice"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/peppino-mazzullo-topo/ici-1.json",
+      "paths": [
+        {
+          "d": "M26,28 a24,24 0 1,0 48,0 a24,24 0 1,0 -48,0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M38,22 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0M55,20 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0M49,36 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0M37,36 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.5
+        },
+        {
+          "d": "M40,50 H60 L56,92 H44 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M42,58 H58 M43,66 H57",
+          "stroke": "paper",
+          "weight": 2.5
+        }
+      ]
+    }
+  ]
+}

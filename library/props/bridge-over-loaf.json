@@ -1,0 +1,40 @@
+{
+  "name": "bridge-over-loaf",
+  "tags": [
+    "köprü",
+    "ekmek",
+    "bridge",
+    "bread"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/san-francisco-sinemasi/kapak-r0.json",
+      "paths": [
+        {
+          "d": "M22 70 V8 H30 V70 M70 70 V8 H78 V70",
+          "fill": "coral",
+          "stroke": "paper",
+          "weight": 3
+        },
+        {
+          "d": "M0 66 Q12 66 26 10 Q50 52 74 10 Q88 66 100 66",
+          "fill": null,
+          "stroke": "paper",
+          "weight": 3
+        },
+        {
+          "d": "M38 30 V54 M50 40 V50 M62 30 V54",
+          "fill": null,
+          "stroke": "paper",
+          "weight": 2.5
+        },
+        {
+          "d": "M0 68 H100",
+          "fill": null,
+          "stroke": "paper",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

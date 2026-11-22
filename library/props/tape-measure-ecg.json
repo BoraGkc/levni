@@ -1,0 +1,57 @@
+{
+  "name": "tape-measure-ecg",
+  "tags": [
+    "mezura",
+    "nabiz",
+    "ekg",
+    "surekli olcum",
+    "tape measure",
+    "heartbeat",
+    "monitoring"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-2-v2.json",
+      "paths": [
+        {
+          "d": "M34,66 L52,66 L58,38 L66,86 L72,62 L100,62",
+          "stroke": "ink",
+          "weight": 34
+        },
+        {
+          "d": "M34,66 L52,66 L58,38 L66,86 L72,62 L100,62",
+          "stroke": "paper",
+          "weight": 27
+        },
+        {
+          "d": "M40,59 L40,64 M45,59 L45,66 M50,59 L50,64 M76,55 L76,60 M81,55 L81,62 M86,55 L86,60 M91,55 L91,62 M96,55 L96,60",
+          "stroke": "blue",
+          "weight": 3
+        },
+        {
+          "d": "M6,40 Q6,28 18,28 L32,28 Q44,28 44,40 L44,78 Q44,90 32,90 L18,90 Q6,90 6,78 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M14,44 L36,44 L36,74 L14,74 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M20,54 L25,54 L28,48 L30,66 L33,58",
+          "stroke": "blue",
+          "weight": 3.6
+        },
+        {
+          "d": "M48,58 L56,58 L56,72 L48,72 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        }
+      ]
+    }
+  ]
+}

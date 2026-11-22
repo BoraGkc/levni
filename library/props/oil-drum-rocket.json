@@ -1,0 +1,75 @@
+{
+  "name": "oil-drum-rocket",
+  "tags": [
+    "varil roket",
+    "tamirci yapimi roket",
+    "nehir atlayisi"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/stunt-driver-roketli/ici-2.json",
+      "paths": [
+        {
+          "d": "M42 84 Q36 94 44 102 Q47 94 50 99 Q53 94 56 102 Q64 94 58 84 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M45 85 Q43 92 50 98 Q57 92 55 85 Z",
+          "fill": "coral",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M42 76 L58 76 L62 86 L38 86 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M30 62 L12 84 L12 92 L30 80 Z M70 62 L88 84 L88 92 L70 80 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M28 28 L72 28 L72 78 L28 78 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M28 38 L72 38 M28 52 L72 52 M28 66 L72 66",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 3.4
+        },
+        {
+          "d": "M36 28 L36 78 M64 28 L64 78",
+          "fill": "none",
+          "stroke": "tone",
+          "weight": 1.6
+        },
+        {
+          "d": "M28 28 Q28 8 50 -4 Q72 8 72 28 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M50 -4 L50 -10",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M45 14 a5 5 0 1,0 10 0 a5 5 0 1,0 -10 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

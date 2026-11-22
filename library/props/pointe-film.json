@@ -1,0 +1,50 @@
+{
+  "name": "pointe-film",
+  "tags": [
+    "balerin pabucu film şeridi",
+    "pointe shoe film strip"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/marina-vlady-fransiz/ici-1-alt.json",
+      "paths": [
+        {
+          "d": "M18 70 Q10 40 34 24 Q50 14 62 30 Q70 48 82 54 Q96 60 92 72 Q80 84 50 82 Q28 82 18 70Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M24 66 Q34 76 50 74 Q70 74 86 66",
+          "stroke": "ink",
+          "weight": 2,
+          "fill": "none"
+        },
+        {
+          "d": "M30 40 Q46 36 56 44",
+          "stroke": "paper",
+          "weight": 2,
+          "fill": "none"
+        },
+        {
+          "d": "M40 30 Q20 16 6 6 L2 14 Q18 24 34 38Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M10 8 l4 -2 M8 12 l4 -2 M16 14 l4 -2 M14 18 l4 -2 M22 20 l4 -2",
+          "stroke": "blue",
+          "weight": 2,
+          "fill": "none"
+        },
+        {
+          "d": "M44 40 Q56 24 74 22 L78 30 Q62 32 52 46Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.6
+        }
+      ]
+    }
+  ]
+}

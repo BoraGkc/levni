@@ -1,0 +1,39 @@
+{
+  "name": "monitor-yuzu",
+  "tags": [
+    "monitör",
+    "perde",
+    "ofis"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/richard-riehle-office/kapak-3d.json",
+      "paths": [
+        {
+          "d": "M8 18 L92 18 L92 82 L8 82 Z",
+          "fill": "tone",
+          "stroke": "blue",
+          "weight": 3
+        },
+        {
+          "d": "M12 22 L88 22 L88 32 L12 32 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M12 32 L38 32 Q30 56 38 80 L12 80 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M88 32 L62 32 Q70 56 62 80 L88 80 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

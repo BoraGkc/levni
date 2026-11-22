@@ -1,0 +1,204 @@
+{
+ "name": "piggy-bank",
+ "tags": [
+  "kumbara",
+  "tasarruf",
+  "birikim",
+  "piggy bank",
+  "savings"
+ ],
+ "variants": [
+  {
+   "note": "side view, coral body, coin dropping into the slot",
+   "paths": [
+    {
+     "d": "M19 58 C17 40 41 30 61 32 C81 32 91 44 87 60 C86 70 80 76 77 80 L77 92 L65 92 L65 83 Q53 86 43 83 L43 92 L31 92 L31 78 C23 72 20 66 19 58 Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M16 56 C14 38 38 28 58 30 C78 30 88 42 84 58 C83 68 77 74 74 78 L74 90 L62 90 L62 81 Q50 84 40 81 L40 90 L28 90 L28 76 C20 70 17 64 16 56 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M80 42 L95 44 L94 63 L81 65 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M34 33 L40 19 L52 32",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M68 42 L68.4 42.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M86 50 L86.4 50.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M88 58 L88.4 58.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M54 36 L70 36",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M16 54 Q6 52 8 44 Q12 40 10 35",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M54.8 15 C54.8 10.6 58.04 7 62 7 C65.96 7 69.2 10.6 69.2 15 C69.2 19.4 65.96 23 62 23 C58.04 23 54.8 19.4 54.8 15 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "bold, plain paper pig with coral cheek",
+   "paths": [
+    {
+     "d": "M16 56 C14 38 38 28 58 30 C78 30 88 42 84 58 C83 68 77 74 74 78 L74 90 L62 90 L62 81 Q50 84 40 81 L40 90 L28 90 L28 76 C20 70 17 64 16 56 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M64 46 L76 46 L76 60 L64 60 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M80 42 L95 44 L94 63 L81 65 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M34 33 L40 19 L52 32",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M66 42 L66.4 42.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87 54 L87.4 54.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M54 36 L70 36",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M16 54 Q6 52 8 44",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  },
+  {
+   "note": "detailed: coin, slot, highlight, hoof lines, green leaf",
+   "paths": [
+    {
+     "d": "M19 58 C17 40 41 30 61 32 C81 32 91 44 87 60 C86 70 80 76 77 80 L77 92 L65 92 L65 83 Q53 86 43 83 L43 92 L31 92 L31 78 C23 72 20 66 19 58 Z",
+     "fill": "tone-green",
+     "stroke": "none"
+    },
+    {
+     "d": "M16 56 C14 38 38 28 58 30 C78 30 88 42 84 58 C83 68 77 74 74 78 L74 90 L62 90 L62 81 Q50 84 40 81 L40 90 L28 90 L28 76 C20 70 17 64 16 56 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M80 42 L95 44 L94 63 L81 65 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M34 33 L40 19 L52 32",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M68 42 L68.4 42.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M87 54 L87.4 54.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M54 36 L70 36",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M22 50 Q24 42 32 38",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M28 90 L28 84 M40 90 L40 84 M62 90 L62 85 M74 90 L74 83",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M16 54 Q6 52 8 44 Q12 40 10 35",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M54.8 15 C54.8 10.6 58.04 7 62 7 C65.96 7 69.2 10.6 69.2 15 C69.2 19.4 65.96 23 62 23 C58.04 23 54.8 19.4 54.8 15 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M62 11 L62 19",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

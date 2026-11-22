@@ -1,0 +1,82 @@
+{
+  "name": "hall-stamp",
+  "tags": [
+    "mühür",
+    "onay",
+    "Kongre",
+    "sütun"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/trump-kennedy-center/ici-1.json",
+      "paths": [
+        {
+          "d": "M10 76 h80 v18 h-80 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M16 82 L84 82",
+          "stroke": "tone",
+          "weight": 1.6,
+          "taper": false
+        },
+        {
+          "d": "M36 8 Q50 -2 64 8 L62 28 L38 28 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M26 28 h48 v8 h-48 z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M30 36 h40 v6 h-40 z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M22 42 L50 34 L78 42 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M24 42 h52 v6 h-52 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M30 48 L30 62 M40 48 L40 62 M50 48 L50 62 M60 48 L60 62 M70 48 L70 62",
+          "stroke": "blue",
+          "weight": 4,
+          "taper": false
+        },
+        {
+          "d": "M22 62 h56 v6 h-56 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M32 83 L32 90 M40 80 L40 90",
+          "stroke": "coral",
+          "weight": 0.1,
+          "taper": false
+        },
+        {
+          "d": "M30 88 L38 80 L50 90 L68 78",
+          "fill": "none",
+          "stroke": "coral",
+          "weight": 4
+        }
+      ]
+    }
+  ]
+}

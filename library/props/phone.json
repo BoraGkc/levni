@@ -1,0 +1,12 @@
+{
+  "name": "phone",
+  "tags": ["telefon", "smartphone", "mobile", "cep telefonu"],
+  "variants": [
+    { "note": "front, screen with two text bars", "paths": [
+      { "d": "M32 8 Q30 8 30 12 L30 88 Q30 92 34 92 L66 92 Q70 92 70 88 L70 12 Q70 8 66 8 Z", "fill": "paper", "stroke": "ink", "weight": 9 },
+      { "d": "M36 18 L64 18 L64 76 L36 76 Z", "fill": "tone", "stroke": "none" },
+      { "d": "M40 30 L58 30 M40 40 L54 40", "stroke": "ink", "weight": 6 },
+      { "d": "M46 84 L54 84", "stroke": "ink", "weight": 7 }
+    ] }
+  ]
+}

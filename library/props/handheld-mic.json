@@ -1,0 +1,69 @@
+{
+ "name": "handheld-mic",
+ "tags": [
+  "el mikrofonu",
+  "mikrofon",
+  "mic",
+  "handheld microphone",
+  "konuşma"
+ ],
+ "variants": [
+  {
+   "note": "upright, coral band",
+   "paths": [
+    {
+     "d": "M42 56 L58 56 L55 90 Q50 93 45 90 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M46 68 L60 68 L59 78 L47 78 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M43 66 L57 66 L56 76 L44 76 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M34 30 Q34 8 50 8 Q66 8 66 30 Q66 52 50 56 Q34 52 34 30 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M38 26 L62 26 M38 36 L62 36",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "tilted, solid blue head",
+   "paths": [
+    {
+     "d": "M44 50 L58 60 L38 90 Q32 90 30 84 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M42 20 Q56 6 72 20 Q82 34 66 50 Q50 58 40 42 Q34 30 42 20 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M52 44 L62 54",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

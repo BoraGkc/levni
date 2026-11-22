@@ -1,0 +1,50 @@
+{
+  "name": "cake",
+  "tags": [
+    "pasta",
+    "doğum günü",
+    "kutlama",
+    "cake",
+    "birthday"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/broadway-son-firsatlar/ici-2.json",
+      "paths": [
+        {
+          "d": "M8 90 H92",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M16 62 H84 V90 H16 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M27 38 H73 V62 H27 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M16 62 Q24 74 32 62 Q41 76 50 62 Q59 74 68 62 Q76 74 84 62",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M50 38 V22",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M50 20 Q43 12 50 4 Q57 12 50 20 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2.5
+        }
+      ]
+    }
+  ]
+}

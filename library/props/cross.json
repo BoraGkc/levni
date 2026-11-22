@@ -1,0 +1,74 @@
+{
+ "name": "cross",
+ "tags": [
+  "çarpı",
+  "yanlış",
+  "iptal",
+  "cross",
+  "wrong",
+  "no"
+ ],
+ "variants": [
+  {
+   "note": "bold coral X, shifted fill",
+   "paths": [
+    {
+     "d": "M21 25Q19 20 24 18L30 15Q33 14 36 17L53 37L71 16Q74 13 78 15L84 19Q88 22 85 26L66 49L87 73Q90 77 86 80L80 85Q76 88 73 85L53 61L33 87Q30 90 26 87L20 83Q16 80 19 76L40 51Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M18 22 Q16 17 21 15 L27 12 Q30 11 33 14 L50 34 L68 13 Q71 10 75 12 L81 16 Q85 19 82 23 L63 46 L84 70 Q87 74 83 77 L77 82 Q73 85 70 82 L50 58 L30 84 Q27 87 23 84 L17 80 Q13 77 16 73 L37 48 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "paper X with coral offset shadow shape",
+   "paths": [
+    {
+     "d": "M22 25Q20 20 25 18L31 15Q34 14 37 17L54 37L72 16Q75 13 79 15L85 19Q89 22 86 26L67 49L88 73Q91 77 87 80L81 85Q77 88 74 85L54 61L34 87Q31 90 27 87L21 83Q17 80 20 76L41 51Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M18 22 Q16 17 21 15 L27 12 Q30 11 33 14 L50 34 L68 13 Q71 10 75 12 L81 16 Q85 19 82 23 L63 46 L84 70 Q87 74 83 77 L77 82 Q73 85 70 82 L50 58 L30 84 Q27 87 23 84 L17 80 Q13 77 16 73 L37 48 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "two brush strokes",
+   "paths": [
+    {
+     "d": "M21 20 Q50 48 80 81",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 22
+    },
+    {
+     "d": "M23 22Q52 50 82 83",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 11
+    },
+    {
+     "d": "M80 18 Q52 50 20 80",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 22
+    },
+    {
+     "d": "M82 20Q54 52 22 82",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 11
+    }
+   ]
+  }
+ ]
+}

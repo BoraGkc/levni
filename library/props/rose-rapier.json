@@ -1,0 +1,70 @@
+{
+  "name": "rose-rapier",
+  "tags": [
+    "gül",
+    "kılıç",
+    "rapier",
+    "rose",
+    "sword",
+    "don juan",
+    "aşk",
+    "düello"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/off-broadway-kacirilmayacak/ici-1-alt.json",
+      "paths": [
+        {
+          "d": "M48 36 L52 36 L51 82 L49 82 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.6,
+          "taper": false
+        },
+        {
+          "d": "M30 80 Q50 74 70 80 Q50 86 30 80 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M50 84 L50 94",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 5,
+          "taper": false
+        },
+        {
+          "d": "M50 97 m-3.4 0 a3.4 3.4 0 1 0 6.8 0 a3.4 3.4 0 1 0 -6.8 0",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M50 56 Q70 50 74 38 Q60 38 50 56 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M50 6 Q74 4 74 24 Q74 42 50 42 Q26 42 26 24 Q26 4 50 6 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M50 12 Q66 12 66 25 Q66 36 52 36 Q40 34 42 26 Q44 20 52 22 Q56 24 52 29",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M30 16 Q38 26 34 36 M70 16 Q62 26 66 36",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.6
+        }
+      ]
+    }
+  ]
+}

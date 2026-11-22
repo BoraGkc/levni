@@ -1,0 +1,74 @@
+{
+ "name": "film-reel",
+ "tags": [
+  "film makarası",
+  "makara",
+  "film",
+  "reel",
+  "sinema"
+ ],
+ "variants": [
+  {
+   "note": "front reel, 5 holes, coral hub",
+   "paths": [
+    {
+     "d": "M50 8 Q90 8 90 48 Q90 90 50 90 Q10 90 10 48 Q10 8 50 8 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 24 Q60 24 60 32 Q60 40 50 40 Q42 40 42 32 Q42 24 50 24 Z M72 46 Q80 46 80 54 Q80 62 72 62 Q64 62 64 54 Q64 46 72 46 Z M26 46 Q34 46 34 54 Q34 62 26 62 Q18 62 18 54 Q18 46 26 46 Z M38 70 Q46 70 46 78 Q46 84 38 84 Q30 84 30 78 Q30 70 38 70 Z M62 70 Q70 70 70 78 Q70 84 62 84 Q54 84 54 78 Q54 70 62 70 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M53 46 Q61 46 61 54 Q61 62 53 62 Q45 62 45 54 Q45 46 53 46 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 44 Q58 44 58 52 Q58 60 50 60 Q42 60 42 52 Q42 44 50 44 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "reel with film strip trailing, tone strip",
+   "paths": [
+    {
+     "d": "M55 72 L99 76 L99 90 L53 92 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M52 70 L96 74 L96 88 L50 90 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M64 76 L64 84 M76 78 L76 86 M88 80 L88 86",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M32 6 Q62 6 62 38 Q62 72 32 72 Q4 72 4 38 Q4 6 32 6 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M32 20 Q40 20 40 26 Q40 32 32 32 Q26 32 26 26 Q26 20 32 20 Z M32 46 Q40 46 40 52 Q40 58 32 58 Q26 58 26 52 Q26 46 32 46 Z M16 34 Q24 34 24 40 Q24 46 16 46 Q10 46 10 40 Q10 34 16 34 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

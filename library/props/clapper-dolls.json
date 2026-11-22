@@ -1,0 +1,74 @@
+{
+  "name": "clapper-dolls",
+  "tags": [
+    "klaket matruşka",
+    "clapperboard nesting dolls"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/marina-vlady-fransiz/kapak-r0.json",
+      "paths": [
+        {
+          "d": "M6 34 H94 V92 H6Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M6 34 H94 V44 H6Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M12 34 L22 44 M30 34 L40 44 M48 34 L58 44 M66 34 L76 44 M84 34 L94 44",
+          "stroke": "paper",
+          "weight": 4,
+          "fill": "none"
+        },
+        {
+          "d": "M24 53 Q31.65 53 31.65 62.35 Q37.6 71.7 35.9 80.2 Q34.2 87 24 87 Q13.8 87 12.100000000000001 80.2 Q10.399999999999999 71.7 16.35 62.35 Q16.35 53 24 53Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M44 61 Q49.85 61 49.85 68.15 Q54.4 75.3 53.1 81.8 Q51.8 87 44 87 Q36.2 87 34.9 81.8 Q33.6 75.3 38.15 68.15 Q38.15 61 44 61Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M60 67 Q64.5 67 64.5 72.5 Q68.0 78.0 67.0 83.0 Q66.0 87 60 87 Q54.0 87 53.0 83.0 Q52.0 78.0 55.5 72.5 Q55.5 67 60 67Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M73 72.5 Q76.375 72.5 76.375 76.625 Q79.0 80.75 78.25 84.5 Q77.5 87.5 73 87.5 Q68.5 87.5 67.75 84.5 Q67.0 80.75 69.625 76.625 Q69.625 72.5 73 72.5Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M83 76.5 Q85.475 76.5 85.475 79.525 Q87.4 82.55 86.85 85.3 Q86.3 87.5 83 87.5 Q79.7 87.5 79.15 85.3 Q78.6 82.55 80.525 79.525 Q80.525 76.5 83 76.5Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M4 10 L96 -2 L98 10 L6 24Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M10 22 L22 10 M28 20 L40 8 M46 18 L58 6 M64 15 L76 3 M82 12 L92 0",
+          "stroke": "ink",
+          "weight": 5,
+          "fill": "none"
+        }
+      ]
+    }
+  ]
+}

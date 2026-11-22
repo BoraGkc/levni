@@ -1,0 +1,222 @@
+{
+  "name": "wavy-facade-trees",
+  "tags": [
+    "dalgali cephe agac",
+    "wavy facade with trees",
+    "muze mimari"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/ma-yansong-lucas/ici-1-alt.json",
+      "paths": [
+        {
+          "d": "M10 52 L10 36",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M-3,26.9 a13,13 0 1,0 26,0 a13,13 0 1,0 -26,0",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M3.5,24.299999999999997 Q8.7,17.8 15.2,20.4",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M70 52 L70 34",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M55,23.5 a15,15 0 1,0 30,0 a15,15 0 1,0 -30,0",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M62.5,20.5 Q68.5,13 76,16",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M130 52 L130 36",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M117,26.9 a13,13 0 1,0 26,0 a13,13 0 1,0 -26,0",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M123.5,24.299999999999997 Q128.7,17.8 135.2,20.4",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M-10 62 Q10 40 30 62 T70 62 T110 62 T150 62 L150 120 L-10 120 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.8
+        },
+        {
+          "d": "M-10 78 Q10 56 30 78 T70 78 T110 78 T150 78 M-10 94 Q10 72 30 94 T70 94 T110 94 T150 94",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 3.2
+        },
+        {
+          "d": "M-6 56 Q10 44 24 58",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 1.8
+        }
+      ]
+    },
+    {
+      "note": "harvested from .cache/cizim-drafts/ma-yansong-lucas/ici-1-alt2.json",
+      "paths": [
+        {
+          "d": "M10 53 L10 42",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M1,35.7 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M5.5,33.9 Q9.1,29.4 13.6,31.200000000000003",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M2 57 L2 50",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M-3,46.5 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M-0.5,45.5 Q1.5,43 4,44",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M19 57 L19 50",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M14,46.5 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M16.5,45.5 Q18.5,43 21,44",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M90 53 L90 42",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M81,35.7 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M85.5,33.9 Q89.1,29.4 93.6,31.200000000000003",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M82 57 L82 50",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M77,46.5 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M79.5,45.5 Q81.5,43 84,44",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M99 57 L99 50",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M94,46.5 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "green",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M96.5,45.5 Q98.5,43 101,44",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M-10 62 Q10 40 30 62 T70 62 T110 62 T150 62 L150 120 L-10 120 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.8
+        },
+        {
+          "d": "M-10 78 Q10 56 30 78 T70 78 T110 78 T150 78 M-10 94 Q10 72 30 94 T70 94 T110 94 T150 94",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 3.2,
+          "dash": [
+            16,
+            12
+          ]
+        },
+        {
+          "d": "M-6 56 Q10 44 24 58",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 1.8
+        }
+      ]
+    }
+  ]
+}

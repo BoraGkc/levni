@@ -1,0 +1,145 @@
+{
+ "name": "scooter",
+ "tags": [
+  "scooter",
+  "e-scooter",
+  "elektrikli scooter",
+  "skuter",
+  "martı"
+ ],
+ "variants": [
+  {
+   "note": "side view, deck and handlebar",
+   "paths": [
+    {
+     "d": "M11 78 C11 73.1 15 69.3 20 69.3 C25 69.3 29 73.1 29 78 C29 82.9 25 86.7 20 86.7 C15 86.7 11 82.9 11 78 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M73 78 C73 73.1 77 69.3 82 69.3 C87 69.3 91 73.1 91 78 C91 82.9 87 86.7 82 86.7 C77 86.7 73 82.9 73 78 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20 70 L76 70 L76 62 L20 62 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M22 64 L78 64 L78 72 L22 72Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M20 62 L76 62 L76 70 L20 70Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M80 72 L72 14 M62 14 L82 14",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "simple bold scooter, green deck",
+   "paths": [
+    {
+     "d": "M8 80 C8 74.6 12.4 70.3 18 70.3 C23.6 70.3 28 74.6 28 80 C28 85.4 23.6 89.7 18 89.7 C12.4 89.7 8 85.4 8 80 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M74 80 C74 74.6 78.4 70.3 84 70.3 C89.6 70.3 94 74.6 94 80 C94 85.4 89.6 89.7 84 89.7 C78.4 89.7 74 85.4 74 80 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M19 76 L83 76 L83 68 L19 68Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M16 74 L80 74 L80 66 L16 66Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16 74 L80 74 L80 66 L16 66Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M84 70 L76 18 L64 20",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M14 66 L14 56",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "with light beam and speed lines",
+   "paths": [
+    {
+     "d": "M15 78 C15 73.1 19 69.3 24 69.3 C29 69.3 33 73.1 33 78 C33 82.9 29 86.7 24 86.7 C19 86.7 15 82.9 15 78 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M69 78 C69 73.1 73 69.3 78 69.3 C83 69.3 87 73.1 87 78 C87 82.9 83 86.7 78 86.7 C73 86.7 69 82.9 69 78 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24 70 L74 70 M36 70 L36 62",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M30 62 L60 62 L60 70 L30 70Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M78 72 L72 14 M62 16 L82 14",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M4 54 L16 54 M2 64 L14 64",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M88 20 L96 18 M88 28 L96 30",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

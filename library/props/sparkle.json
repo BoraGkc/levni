@@ -1,0 +1,73 @@
+{
+ "name": "sparkle",
+ "tags": [
+  "parıltı",
+  "ışıltı",
+  "yıldız",
+  "sparkle",
+  "magic",
+  "yeni"
+ ],
+ "variants": [
+  {
+   "note": "single four-point star, mustard shifted fill",
+   "paths": [
+    {
+     "d": "M55 11Q57.2 48.8 95 53Q57.2 57.2 51 95Q48.8 57.2 11 53Q48.8 48.8 55 11Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M52 8 Q54.2 45.8 92 50 Q54.2 54.2 48 92 Q45.8 54.2 8 50 Q45.8 45.8 52 8 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "cluster of three stars, big one mustard",
+   "paths": [
+    {
+     "d": "M45 29Q46.8 57.2 75 61Q46.8 64.8 41 93Q39.2 64.8 11 61Q39.2 57.2 45 29Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M42 26 Q43.8 54.2 72 58 Q43.8 61.8 38 90 Q36.2 61.8 8 58 Q36.2 54.2 42 26 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M73 8 Q76.2 23.8 92 26 Q76.2 28.2 75 44 Q71.8 28.2 56 26 Q71.8 23.8 73 8 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M79 66 Q79.4 76.6 90 78 Q79.4 79.4 77 90 Q76.6 79.4 66 78 Q76.6 76.6 79 66 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  },
+  {
+   "note": "fat plump leaning star",
+   "paths": [
+    {
+     "d": "M49 13Q63.4 42.6 93 53Q63.4 63.4 57 93Q42.6 63.4 13 53Q42.6 42.6 49 13Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M46 10 Q60.4 39.6 90 50 Q60.4 60.4 54 90 Q39.6 60.4 10 50 Q39.6 39.6 46 10 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

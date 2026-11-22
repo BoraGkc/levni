@@ -1,0 +1,57 @@
+{
+  "name": "heart-dumbbell",
+  "tags": [
+    "dambıl",
+    "kalp",
+    "spor",
+    "dumbbell",
+    "gym"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/manosfer-kardes-cekirdegi/kapak-v2.json",
+      "paths": [
+        {
+          "d": "M30 46 Q50 44.5 70 46 L70 54 Q50 55.5 30 54 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 9
+        },
+        {
+          "d": "M29 40 L35 40 L35 60 L29 60 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 7
+        },
+        {
+          "d": "M65 40 L71 40 L71 60 L65 60 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 7
+        },
+        {
+          "d": "M17,63.4 C-1.6000000000000014,51.4 3.1999999999999993,35.2 17,44.8 C30.8,35.2 35.6,51.4 17,63.4 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 9
+        },
+        {
+          "d": "M83,63.4 C64.4,51.4 69.2,35.2 83,44.8 C96.8,35.2 101.6,51.4 83,63.4 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 9
+        },
+        {
+          "d": "M9 44 Q12 40 16 41",
+          "stroke": "paper",
+          "weight": 5
+        },
+        {
+          "d": "M75 44 Q78 40 82 41",
+          "stroke": "paper",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}

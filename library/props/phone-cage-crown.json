@@ -1,0 +1,47 @@
+{
+  "name": "phone-cage-crown",
+  "tags": [
+    "telefon",
+    "kafes",
+    "taç",
+    "kontrol",
+    "sosyal medya"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/zuckerberg-sosyal-medya/ici-1.json",
+      "paths": [
+        {
+          "d": "M31 2 h38 a7 7 0 0 1 7 7 v82 a7 7 0 0 1 -7 7 h-38 a7 7 0 0 1 -7 -7 v-82 a7 7 0 0 1 7 -7 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M30 12 h40 v70 h-40 z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M36 12 L36 82 M43 12 L43 82 M50 12 L50 82 M57 12 L57 82 M64 12 L64 82",
+          "stroke": "paper",
+          "weight": 3.2,
+          "taper": false
+        },
+        {
+          "d": "M37 62 L37 42 L44 51 L50 38 L56 51 L63 42 L63 62 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M43 90 h14",
+          "stroke": "ink",
+          "weight": 3,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

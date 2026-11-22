@@ -1,0 +1,40 @@
+{
+  "name": "fog-popper",
+  "tags": [
+    "konfeti patlatıcı",
+    "sis",
+    "korku komedi",
+    "party popper",
+    "fog",
+    "horror comedy"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/emmy-odulleri-2026-2/ici-1.json",
+      "paths": [
+        {
+          "d": "M6 96 L52 16 L96 52Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.8
+        },
+        {
+          "d": "M16 78 L62 38 M26 62 L72 24",
+          "stroke": "paper",
+          "weight": 4
+        },
+        {
+          "d": "M52 16 L96 52",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M38 82 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 M54 62 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 M30 58 a2.6,2.6 0 1,0 5.2,0 a2.6,2.6 0 1,0 -5.2,0",
+          "fill": "mustard",
+          "stroke": "none",
+          "weight": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+ "name": "dome",
+ "tags": [
+  "kubbe",
+  "cami",
+  "dome",
+  "minare",
+  "tarihi yapı"
+ ],
+ "variants": [
+  {
+   "note": "central dome with two small spires",
+   "paths": [
+    {
+     "d": "M22 88 L22 56 L78 56 L78 88Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M27 58 C27 24 79 24 79 58Z",
+     "fill": "tone-green",
+     "stroke": "none"
+    },
+    {
+     "d": "M24 56 C24 22 76 22 76 56Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M24 56 C24 22 76 22 76 56Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 22 L50 10",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M8 88 L8 36 L14 24 L20 36 L20 88",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M80 88 L80 36 L86 24 L92 36 L92 88",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M40 88 L40 72 Q50 62 60 72 L60 88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  },
+  {
+   "note": "wide low dome with arched door",
+   "paths": [
+    {
+     "d": "M10 88 L10 62 L90 62 L90 88Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M19 64 C19 18 87 18 87 64Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M16 62 C16 16 84 16 84 62Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M16 62 C16 16 84 16 84 62Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 22 L50 10 M46 12 L54 12",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M43 90 L43 78 Q53 66 63 78 L63 90Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M40 88 L40 76 Q50 64 60 76 L60 88Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M40 88 L40 76 Q50 64 60 76 L60 88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  },
+  {
+   "note": "stepped dome silhouette, bold",
+   "paths": [
+    {
+     "d": "M24 90 L24 62 L76 62 L76 90Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M33 64 C33 38 73 38 73 64Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M30 62 C30 36 70 36 70 62Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 62 C30 36 70 36 70 62Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M10 90 L10 50 L16 38 L22 50 L22 90",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M78 90 L78 50 L84 38 L90 50 L90 90",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 36 L50 24",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M34 90 L66 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "closed-book-reel",
+  "tags": [
+    "kitap",
+    "kapalı kitap",
+    "roman",
+    "book",
+    "closed book",
+    "novel"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/netflix-east-of/ici-2-r0.json",
+      "paths": [
+        {
+          "d": "M20 4 L84 4 L84 94 L20 94 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M20 4 L30 4 L30 94 L20 94 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M40 18 L74 18 L74 40 L40 40 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.5
+        },
+        {
+          "d": "M45 25 H69 M45 32 H62",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M24 94 L88 94 L88 100 L24 100 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.5
+        }
+      ]
+    }
+  ]
+}

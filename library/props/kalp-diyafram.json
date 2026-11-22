@@ -1,0 +1,39 @@
+{
+  "name": "kalp-diyafram",
+  "tags": [
+    "kalp",
+    "diyafram",
+    "ekran görüntüsü",
+    "aperture"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/randevu-uygulamasi-profillerin/ici-1.json",
+      "paths": [
+        {
+          "d": "M50 92 C8 62 2 36 20 22 C34 12 47 22 50 30 C53 22 66 12 80 22 C98 36 92 62 50 92 Z",
+          "fill": "coral",
+          "stroke": "paper",
+          "weight": 5
+        },
+        {
+          "d": "M59.0 52.0 Q68.2 64.4 68.6 75.5 M54.5 59.8 Q48.3 73.9 39.0 79.9 M45.5 59.8 Q30.2 61.5 20.3 56.4 M41.0 52.0 Q31.8 39.6 31.4 28.5 M45.5 44.2 Q51.7 30.1 61.0 24.1 M54.5 44.2 Q69.8 42.5 79.7 47.6 ",
+          "stroke": "paper",
+          "weight": 3
+        },
+        {
+          "d": "M41 52 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0",
+          "fill": "blue",
+          "stroke": "paper",
+          "weight": 3
+        },
+        {
+          "d": "M0 14 L0 0 L14 0 M86 0 L100 0 L100 14 M0 86 L0 100 L14 100 M86 100 L100 100 L100 86",
+          "stroke": "paper",
+          "weight": 6,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

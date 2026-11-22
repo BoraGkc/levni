@@ -1,0 +1,54 @@
+{
+  "name": "horned-top-hat",
+  "tags": [
+    "silindir şapka",
+    "boynuz",
+    "şeytan",
+    "top hat",
+    "devil",
+    "horns"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/neil-patrick-harris/ici-1.json",
+      "paths": [
+        {
+          "d": "M25 34 L75 34 L77 80 L23 80 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M25 34 Q50 22 75 34 Q50 46 25 34 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M23.5 66 L76.5 66 L77 79 L23 79 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M2 86 Q50 70 98 86 Q50 110 2 86 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M30 33 Q16 30 16 14 Q15 6 20 0 Q24 14 31 18 Q40 22 42 30 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M70 33 Q84 30 84 14 Q85 6 80 0 Q76 14 69 18 Q60 22 58 30 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

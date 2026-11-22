@@ -1,0 +1,32 @@
+{
+  "name": "eraser-block",
+  "tags": [
+    "silgi",
+    "eraser"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/maddie-kowalski-burnerverse/ici-2.json",
+      "paths": [
+        {
+          "d": "M6 30 H94 V76 H6Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M6 30 H50 V76 H6Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M56 30 V76",
+          "stroke": "ink",
+          "weight": 1.2,
+          "fill": "none"
+        }
+      ]
+    }
+  ]
+}

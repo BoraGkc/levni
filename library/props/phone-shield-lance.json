@@ -1,0 +1,58 @@
+{
+  "name": "phone-shield-lance",
+  "tags": [
+    "kalkan",
+    "telefon",
+    "şövalye",
+    "mızrak"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/upward-flortte-chivalry/kapak-3d.json",
+      "paths": [
+        {
+          "d": "M6 96 L72 16",
+          "stroke": "ink",
+          "weight": 5.5,
+          "taper": false
+        },
+        {
+          "d": "M72 14 L96 6 L90 16 L98 25 L70 21 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M26 18 L74 18 Q78 18 78 22 L78 62 Q78 86 50 96 Q22 86 22 62 L22 22 Q22 18 26 18 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M28 26 L72 26 L72 62 Q72 80 50 88 Q28 80 28 62 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M44 21.5 L56 21.5",
+          "stroke": "paper",
+          "weight": 2.6,
+          "taper": false
+        },
+        {
+          "d": "M32 32 L56 32 Q58 32 58 34 L58 42 Q58 44 56 44 L40 44 L35 49 L36 44 L34 44 Q32 44 32 42 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M44 52 L66 52 Q68 52 68 54 L68 62 Q68 64 66 64 L64 64 L66 69 L60 64 L46 64 Q44 64 44 62 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

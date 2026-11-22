@@ -1,0 +1,94 @@
+{
+  "name": "gavel-hall",
+  "tags": [
+    "tokmak",
+    "konser salonu",
+    "hukuk",
+    "Kennedy Center"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/trump-kennedy-center/kapak-3d.json",
+      "paths": [
+        {
+          "d": "M45 52 L45 94",
+          "stroke": "ink",
+          "weight": 12,
+          "taper": false
+        },
+        {
+          "d": "M45 52 L45 94",
+          "stroke": "coral",
+          "weight": 7.5,
+          "taper": false
+        },
+        {
+          "d": "M26 93 L64 93 L64 99 L26 99 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M3 14 L45 -2 L87 14 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M6 12 h78 v8 h-78 z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M10 20 h6 v24 h-6 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M23 20 h6 v24 h-6 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M36 20 h6 v24 h-6 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M49 20 h6 v24 h-6 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M62 20 h6 v24 h-6 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M75 20 h6 v24 h-6 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M6 44 h78 v8 h-78 z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M2 52 h86 v4 h-86 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

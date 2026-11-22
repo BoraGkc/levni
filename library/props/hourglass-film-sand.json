@@ -1,0 +1,67 @@
+{
+  "name": "hourglass-film-sand",
+  "tags": [
+    "kum saati",
+    "film karesi",
+    "zaman",
+    "süre",
+    "hourglass",
+    "film frames",
+    "runtime"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/musk-belgeseli-dort/ici-2.json",
+      "paths": [
+        {
+          "d": "M22 4 H78 M22 96 H78",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M26 6 Q28 38 46 50 Q28 62 26 94 H74 Q72 62 54 50 Q72 38 74 6 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M30 10 H70 Q69 24 62 32 H38 Q31 24 30 10 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M38 14 h10 v7 h-10z M52 14 h10 v7 h-10z M42 24 h16 v6 h-16z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M48 48 H52 V70 H48 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.2
+        },
+        {
+          "d": "M30 92 Q34 74 50 72 Q66 74 70 92 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M38 88 h9 v-6 h-9z M53 88 h9 v-6 h-9z M45 81 h10 v-6 h-10z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M40 80 L36 88",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

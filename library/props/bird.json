@@ -1,0 +1,99 @@
+{
+ "name": "bird",
+ "tags": [
+  "kuş",
+  "bird",
+  "serçe",
+  "kanat"
+ ],
+ "variants": [
+  {
+   "note": "perched songbird with coral wing, dot eye",
+   "paths": [
+    {
+     "d": "M48 78 L48 91 M58 76 L58 91",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M26 68 L8 80 L30 80 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M27 73 C23 55 39 45 55 49 C59 33 79 31 83 43 L96 49 L83 54 C83 67 69 81 49 82 Z",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M24 70 C20 52 36 42 52 46 C56 30 76 28 80 40 L93 46 L80 51 C80 64 66 78 46 79 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M34 60 C42 52 56 56 60 64 C52 72 40 72 34 60 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M32 58 C40 50 54 54 58 62 C50 70 38 70 32 58 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M73 38 L73.4 38.2",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  },
+  {
+   "note": "bird in flight, wings up",
+   "paths": [
+    {
+     "d": "M40 52 C34 30 22 22 6 24 C14 36 26 48 38 58 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M60 52 C66 32 80 26 95 28 C88 42 78 52 64 60 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M26 56 L8 64 L28 62 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M29 59 C37 47 69 47 77 57 C69 71 37 71 29 59 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M26 56 C34 44 66 44 74 54 C66 68 34 68 26 56 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M72 54 L88 52 L74 61 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M64 52 L64.4 52.2",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  }
+ ]
+}

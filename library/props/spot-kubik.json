@@ -1,0 +1,66 @@
+{
+  "name": "spot-kubik",
+  "tags": [
+    "spot",
+    "ışık",
+    "kübik",
+    "ofis",
+    "spotlight"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/richard-riehle-office/ici-2.json",
+      "paths": [
+        {
+          "d": "M62 20 L98 4 L98 96 L62 72 Z",
+          "fill": "tone-mustard",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M8 26 L50 26 L50 66 L8 66 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M50 20 L62 20 L62 72 L50 72 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M14 32 L14 60 M20 32 L20 60 M26 32 L26 60",
+          "stroke": "paper",
+          "weight": 2.5
+        },
+        {
+          "d": "M14 66 L14 78 L44 78 L44 66",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M29 78 L29 96 M16 96 L42 96",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M84 68 L96 68 L96 78 L84 78 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M90 78 L90 84",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M76 84 L98 84 M80 84 L80 94 M96 84 L96 94",
+          "stroke": "ink",
+          "weight": 3.5
+        }
+      ]
+    }
+  ]
+}

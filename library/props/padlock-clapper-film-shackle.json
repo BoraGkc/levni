@@ -1,0 +1,72 @@
+{
+  "name": "padlock-clapper-film-shackle",
+  "tags": [
+    "kilit",
+    "klaket",
+    "film şeridi",
+    "röportaj reddi",
+    "padlock",
+    "clapperboard",
+    "film strip",
+    "interview denied"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/musk-belgeseli-dort/ici-1-alt.json",
+      "paths": [
+        {
+          "d": "M32 48 V28 Q32 4 50 4 Q68 4 68 28 V48",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 40
+        },
+        {
+          "d": "M32 48 V28 Q32 4 50 4 Q68 4 68 28 V48",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 32
+        },
+        {
+          "d": "M32 48 V28 Q32 4 50 4 Q68 4 68 28 V48",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2,
+          "dash": [
+            5,
+            7
+          ]
+        },
+        {
+          "d": "M18 50 H82 V96 H18Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M15 38 L85 34 L85 50 L15 50Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M30 37 L24 50 M46 36 L40 50 M62 36 L56 50 M78 35 L72 50",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M44,68 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M48.5 72 L46 87 H54 L51.5 72Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

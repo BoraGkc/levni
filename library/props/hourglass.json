@@ -1,0 +1,45 @@
+{
+  "name": "hourglass",
+  "tags": [
+    "kum saati",
+    "zaman",
+    "hourglass",
+    "time"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/gentle-monster-kum/kapak.json",
+      "paths": [
+        {
+          "d": "M18 6 H82 M18 94 H82",
+          "stroke": "ink",
+          "weight": 5,
+          "fill": "none"
+        },
+        {
+          "d": "M26 8 L26 22 Q26 38 46 50 Q26 62 26 78 L26 92 H74 L74 78 Q74 62 54 50 Q74 38 74 22 L74 8 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M31 22 Q34 34 46 44 H54 Q66 34 69 22 Z",
+          "fill": "mustard",
+          "stroke": "none"
+        },
+        {
+          "d": "M30 91 Q50 62 70 91 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2.5
+        },
+        {
+          "d": "M50 48 V70",
+          "stroke": "mustard",
+          "weight": 3,
+          "fill": "none"
+        }
+      ]
+    }
+  ]
+}

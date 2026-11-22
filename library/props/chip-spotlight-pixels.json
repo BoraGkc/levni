@@ -1,0 +1,206 @@
+{
+  "name": "chip-spotlight-pixels",
+  "tags": [
+    "spot ışığı",
+    "yonga",
+    "piksel",
+    "sanal oyuncu",
+    "yapay zeka"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/yapay-zeka-aktor/kapak.json",
+      "paths": [
+        {
+          "d": "M45 32 L76 18 L76 83 L45 58 Z",
+          "fill": "tone"
+        },
+        {
+          "d": "M76 18 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M76 23.6 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M76 29.2 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M76 34.8 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M76 40.4 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M76 46 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M76 51.6 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M76 57.2 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M76 62.8 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M76 68.4 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M81.5 15.5 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M81.5 21.1 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M81.5 26.7 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M81.5 32.3 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M81.5 43.5 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M81.5 49.1 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M81.5 60.3 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M81.5 65.9 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M81.5 71.5 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M87 18.6 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M87 35.4 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M87 41 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M87 63.4 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M87 69 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M92.5 10.5 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M92.5 66.5 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M92.5 83.3 h4.6 v4.6 h-4.6 z",
+          "fill": "tone"
+        },
+        {
+          "d": "M25 62 L25 82 M10 82 L40 82",
+          "stroke": "paper",
+          "weight": 4
+        },
+        {
+          "d": "M3 33 h6 v3.4 h-6 z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M3 41 h6 v3.4 h-6 z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M3 49 h6 v3.4 h-6 z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M3 57 h6 v3.4 h-6 z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M15 23 h3.4 v6 h-3.4 z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M24 23 h3.4 v6 h-3.4 z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M33 23 h3.4 v6 h-3.4 z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M8 28 h34 v34 h-34 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M29,45 a13,13 0 1,0 26,0 a13,13 0 1,0 -26,0",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M34.5,45 a7.5,7.5 0 1,0 15,0 a7.5,7.5 0 1,0 -15,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M13 34 h12 v12 h-12 z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M16 38 h6 M16 42 h6",
+          "stroke": "paper",
+          "weight": 1.4,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

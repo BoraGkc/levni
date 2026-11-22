@@ -1,0 +1,52 @@
+{
+  "name": "diamond-record",
+  "tags": [
+    "plak",
+    "beyzbol sahası",
+    "elmas",
+    "vinyl",
+    "baseball diamond"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/neil-patrick-harris/ici-2-alt.json",
+      "paths": [
+        {
+          "d": "M2 50 a48 48 0 1 0 96 0 a48 48 0 1 0 -96 0",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M10 50 a40 40 0 1 0 80 0 a40 40 0 1 0 -80 0 M17 50 a33 33 0 1 0 66 0 a33 33 0 1 0 -66 0",
+          "stroke": "tone",
+          "weight": 1.2
+        },
+        {
+          "d": "M28 50 a22 22 0 1 0 44 0 a22 22 0 1 0 -44 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M50 32 L68 50 L50 68 L32 50 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.5
+        },
+        {
+          "d": "M47 63 L53 63 L53 69 L47 69 Z M63 47 L69 47 L69 53 L63 53 Z M31 47 L37 47 L37 53 L31 53 Z M47 31 L53 31 L53 37 L47 37 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.5
+        },
+        {
+          "d": "M49 49 a1.5 1.5 0 1 0 3 0 a1.5 1.5 0 1 0 -3 0",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        }
+      ]
+    }
+  ]
+}

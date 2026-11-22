@@ -1,0 +1,47 @@
+{
+  "name": "chip-crown",
+  "tags": [
+    "taç",
+    "çip",
+    "güç",
+    "teknoloji",
+    "crown chip power"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kadinlar-teknolojide-gucu/kapak.json",
+      "paths": [
+        {
+          "d": "M30 56 L24 56 M30 66 L24 66 M30 76 L24 76 M30 86 L24 86 M70 56 L76 56 M70 66 L76 66 M70 76 L76 76 M70 86 L76 86 M40 92 L40 98 M50 92 L50 98 M60 92 L60 98",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M30 50 L70 50 L70 92 L30 92 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M38 60 L62 60 L62 82 L38 82 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M26 54 L22 14 L38 32 L50 6 L62 32 L78 14 L74 54 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M22 14 m-3 0 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0 M50 6 m-3 0 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0 M78 14 m-3 0 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.6
+        }
+      ]
+    }
+  ]
+}

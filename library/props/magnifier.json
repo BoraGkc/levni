@@ -1,0 +1,62 @@
+{
+ "name": "magnifier",
+ "tags": [
+  "büyüteç",
+  "arama",
+  "inceleme",
+  "magnifier",
+  "search"
+ ],
+ "variants": [
+  {
+   "note": "magnifier, tone lens, handle bottom right",
+   "paths": [
+    {
+     "d": "M46 16A28 26 0 1 0 46.1 16Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M44 14 A28 26 0 1 0 44.1 14 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M64 62 L88 86",
+     "stroke": "ink",
+     "weight": 14,
+     "fill": "none"
+    },
+    {
+     "d": "M30 30 Q34 24 42 23",
+     "stroke": "ink",
+     "weight": 5,
+     "fill": "none"
+    }
+   ]
+  },
+  {
+   "note": "bold magnifier at an angle, mustard handle",
+   "paths": [
+    {
+     "d": "M54 12 Q82 14 82 40 Q82 68 52 68 Q24 66 26 38 Q28 12 54 12 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M20 92L46 64L54 70L28 96Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M20 90 L44 66 L52 72 L28 94 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

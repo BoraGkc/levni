@@ -1,0 +1,109 @@
+{
+ "name": "car",
+ "tags": [
+  "araba",
+  "otomobil",
+  "car",
+  "araç",
+  "taşıt"
+ ],
+ "variants": [
+  {
+   "note": "side view sedan, coral body",
+   "paths": [
+    {
+     "d": "M16 66 L16 54 L32 50 L42 36 L66 36 L78 50 L92 54 L92 68 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M10 68 L11 52 L28 48 L38 32 L62 32 L74 47 L90 51 L90 66 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M12 58 L88 58 L88 67 L12 68 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M40 36 L48 36 L48 47 L33 47 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M52 36 L60 36 L68 47 L52 47 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M21 70 A9 8.370000000000001 0 1 0 39 70 A9 8.370000000000001 0 1 0 21 70 Z",
+     "fill": "ink",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M63 70 A9 8.370000000000001 0 1 0 81 70 A9 8.370000000000001 0 1 0 63 70 Z",
+     "fill": "ink",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M27 70 A3 2.79 0 1 0 33 70 A3 2.79 0 1 0 27 70 Z",
+     "fill": "white",
+     "stroke": "none",
+     "weight": 1
+    },
+    {
+     "d": "M69 70 A3 2.79 0 1 0 75 70 A3 2.79 0 1 0 69 70 Z",
+     "fill": "white",
+     "stroke": "none",
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "note": "chunky small hatchback, tone body",
+   "paths": [
+    {
+     "d": "M18 68 L18 46 L34 34 L64 34 L84 52 L88 68 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M12 70 L12 48 L28 32 L60 31 L80 49 L86 52 L86 69 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 36 L44 35 L45 49 L22 49 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 35 L60 35 L74 49 L50 49 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M21 72 A9 8.370000000000001 0 1 0 39 72 A9 8.370000000000001 0 1 0 21 72 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M59 72 A9 8.370000000000001 0 1 0 77 72 A9 8.370000000000001 0 1 0 59 72 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  }
+ ]
+}

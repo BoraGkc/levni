@@ -1,0 +1,80 @@
+{
+ "name": "camera",
+ "tags": [
+  "fotoğraf makinesi",
+  "kamera",
+  "camera",
+  "fotoğraf",
+  "photo"
+ ],
+ "variants": [
+  {
+   "note": "front view, coral grip stripe, big lens",
+   "paths": [
+    {
+     "d": "M12 34 L30 34 L35 24 L58 24 L63 34 L88 34 L88 78 L12 78 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M15 42 L91 42 L91 54 L15 54 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M12 40 L88 40 M12 52 L88 52",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 40 Q72 40 72 58 Q72 76 50 76 Q30 76 30 58 Q30 40 50 40 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M43 58 Q43 50 52 50",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "three-quarter, mustard flash",
+   "paths": [
+    {
+     "d": "M14 36 L26 36 L30 28 L52 28 L56 36 L84 36 L84 80 L14 80 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M71 24 L83 24 L83 32 L71 32 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M68 22 L80 22 L80 31 L68 31 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M46 44 Q66 44 66 60 Q66 76 46 76 Q28 76 28 60 Q28 44 46 44 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M46 52 Q56 52 56 60 Q56 68 46 68 Q38 68 38 60 Q38 52 46 52 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

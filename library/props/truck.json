@@ -1,0 +1,110 @@
+{
+ "name": "truck",
+ "tags": [
+  "kamyon",
+  "tır",
+  "truck",
+  "lojistik",
+  "nakliye",
+  "taşıma"
+ ],
+ "variants": [
+  {
+   "note": "box truck, cab and cargo box",
+   "paths": [
+    {
+     "d": "M20 24 L66 22 L66 66 L22 68 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M8 22 L58 22 L57 68 L8 68 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M58 36 L78 36 L90 52 L90 68 L58 68 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M63 40 L75 40 L83 51 L63 51 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M15.5 72 A8.5 7.905 0 1 0 32.5 72 A8.5 7.905 0 1 0 15.5 72 Z",
+     "fill": "ink",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M65.5 72 A8.5 7.905 0 1 0 82.5 72 A8.5 7.905 0 1 0 65.5 72 Z",
+     "fill": "ink",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M12 38 L36 38 L36 46 L12 46 Z",
+     "fill": "coral",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "semi truck, tractor and long trailer, mustard stripe",
+   "paths": [
+    {
+     "d": "M4 28 L62 28 L62 68 L4 68 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M7 52 L60 52 L60 58 L7 58 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M4 52 L62 52",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M64 40 L82 40 L94 54 L94 68 L64 68 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M70 44 L80 44 L88 54 L70 54 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M8 72 A8 7.44 0 1 0 24 72 A8 7.44 0 1 0 8 72 Z",
+     "fill": "ink",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M32 72 A8 7.44 0 1 0 48 72 A8 7.44 0 1 0 32 72 Z",
+     "fill": "ink",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M72 72 A8 7.44 0 1 0 88 72 A8 7.44 0 1 0 72 72 Z",
+     "fill": "ink",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

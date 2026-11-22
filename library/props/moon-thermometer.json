@@ -1,0 +1,94 @@
+{
+  "name": "moon-thermometer",
+  "tags": [
+    "termometre",
+    "ay evreleri",
+    "regl dongusu",
+    "isi",
+    "thermometer",
+    "moon phases",
+    "cycle"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1-alt.json",
+      "paths": [
+        {
+          "d": "M38,6 Q50,0 62,6 L62,64 a22,22 0 1,1 -24,0 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M28,84 a22,22 0 1,0 44,0 a22,22 0 1,0 -44,0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M46,70 L46,24 Q50,18 54,24 L54,70 Z",
+          "fill": "coral"
+        },
+        {
+          "d": "M38,76 a22,22 0 0,0 12,28 a14,22 0 0,1 -12,-28 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M74,16 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M74,30 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0 M79,25 a5,5 0 0,1 0,10 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M73,14 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M79,8 a6,6 0 0,1 0,12 a9,6 0 0,0 0,-12 Z",
+          "fill": "blue"
+        },
+        {
+          "d": "M73,30 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M79,24 a6,6 0 0,1 0,12 a3,6 0 0,0 0,-12 Z",
+          "fill": "blue"
+        },
+        {
+          "d": "M73,46 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M79,40 a6,6 0 0,0 0,12 a6,6 0 0,1 0,-12 Z",
+          "fill": "blue"
+        },
+        {
+          "d": "M73,62 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M62,14 L69,14 M62,30 L69,30 M62,46 L69,46 M62,62 L69,62",
+          "stroke": "ink",
+          "weight": 2.6
+        }
+      ]
+    }
+  ]
+}

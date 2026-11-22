@@ -1,0 +1,51 @@
+{
+  "name": "baby-bootie",
+  "tags": [
+    "bebek patiği",
+    "patik",
+    "ayak izi",
+    "bootie",
+    "baby sock",
+    "iplik"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/egemen-vatandaslar-bebekleri/ici-2.json",
+      "paths": [
+        {
+          "d": "M30 10 H64 V46 Q64 54 74 57 Q92 62 92 78 Q92 90 78 90 H24 Q14 90 14 80 V62 Q14 52 30 48Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.8
+        },
+        {
+          "d": "M30 10 H64 V24 H30Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M30 17 H64",
+          "stroke": "paper",
+          "weight": 1.6
+        },
+        {
+          "d": "M16 82 H92",
+          "stroke": "blue",
+          "weight": 2.4
+        },
+        {
+          "d": "M32 36 Q40 40 48 36 M46 62 Q54 66 62 62",
+          "stroke": "blue",
+          "weight": 2
+        },
+        {
+          "d": "M26 68 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0",
+          "fill": "tone",
+          "stroke": "blue",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

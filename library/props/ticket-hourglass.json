@@ -1,0 +1,166 @@
+{
+  "name": "ticket-hourglass",
+  "tags": [
+    "bilet kum saati",
+    "ticket hourglass"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/nathan-fielder-elizabeth/ici-1.json",
+      "paths": [
+        {
+          "d": "M18 4 H82 V10 H18Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M18 90 H82 V96 H18Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M22 10 H78 Q78 36 54 48 Q78 62 78 90 H22 Q22 62 46 48 Q22 36 22 10Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M49 48 V70",
+          "stroke": "coral",
+          "weight": 4,
+          "fill": "none"
+        },
+        {
+          "d": "M29 17 H44 V19.88 a1.12 1.12 0 0 0 0 2.24 V25 H29 V22.12 a1.12 1.12 0 0 0 0 -2.24Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M39.5 18 V24",
+          "stroke": "ink",
+          "weight": 1.4,
+          "dash": [
+            1.5,
+            1.5
+          ],
+          "fill": "none"
+        },
+        {
+          "d": "M46 19 H61 V21.88 a1.12 1.12 0 0 0 0 2.24 V27 H46 V24.12 a1.12 1.12 0 0 0 0 -2.24Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M56.5 20 V26",
+          "stroke": "ink",
+          "weight": 1.4,
+          "dash": [
+            1.5,
+            1.5
+          ],
+          "fill": "none"
+        },
+        {
+          "d": "M62 16 H77 V18.88 a1.12 1.12 0 0 0 0 2.24 V24 H62 V21.12 a1.12 1.12 0 0 0 0 -2.24Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M72.5 17 V23",
+          "stroke": "ink",
+          "weight": 1.4,
+          "dash": [
+            1.5,
+            1.5
+          ],
+          "fill": "none"
+        },
+        {
+          "d": "M34 28 H49 V30.88 a1.12 1.12 0 0 0 0 2.24 V36 H34 V33.12 a1.12 1.12 0 0 0 0 -2.24Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M44.5 29 V35",
+          "stroke": "ink",
+          "weight": 1.4,
+          "dash": [
+            1.5,
+            1.5
+          ],
+          "fill": "none"
+        },
+        {
+          "d": "M52 29 H67 V31.88 a1.12 1.12 0 0 0 0 2.24 V37 H52 V34.12 a1.12 1.12 0 0 0 0 -2.24Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M62.5 30 V36",
+          "stroke": "ink",
+          "weight": 1.4,
+          "dash": [
+            1.5,
+            1.5
+          ],
+          "fill": "none"
+        },
+        {
+          "d": "M32 83 H47 V85.88 a1.12 1.12 0 0 0 0 2.24 V91 H32 V88.12 a1.12 1.12 0 0 0 0 -2.24Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M42.5 84 V90",
+          "stroke": "ink",
+          "weight": 1.4,
+          "dash": [
+            1.5,
+            1.5
+          ],
+          "fill": "none"
+        },
+        {
+          "d": "M52 79 H67 V81.88 a1.12 1.12 0 0 0 0 2.24 V87 H52 V84.12 a1.12 1.12 0 0 0 0 -2.24Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M62.5 80 V86",
+          "stroke": "ink",
+          "weight": 1.4,
+          "dash": [
+            1.5,
+            1.5
+          ],
+          "fill": "none"
+        },
+        {
+          "d": "M41 73 H56 V75.88 a1.12 1.12 0 0 0 0 2.24 V81 H41 V78.12 a1.12 1.12 0 0 0 0 -2.24Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M51.5 74 V80",
+          "stroke": "ink",
+          "weight": 1.4,
+          "dash": [
+            1.5,
+            1.5
+          ],
+          "fill": "none"
+        }
+      ]
+    }
+  ]
+}

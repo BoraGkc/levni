@@ -1,0 +1,86 @@
+{
+ "name": "at-sign",
+ "tags": [
+  "at işareti",
+  "e-posta",
+  "at sign",
+  "email",
+  "mention",
+  "@"
+ ],
+ "variants": [
+  {
+   "note": "thin at sign, mustard blob behind centre",
+   "paths": [
+    {
+     "d": "M38 53Q38 38 53 38Q68 38 68 53Q68 68 53 68Q38 68 38 53Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M78 80 Q64 90 48 88 Q14 86 14 50 Q14 14 50 14 Q88 14 88 50 Q88 68 74 68 Q64 68 64 54 L64 36",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M64 40 Q60 34 50 34 Q36 34 36 50 Q36 64 50 65 Q60 65 64 54",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "fat outlined green at sign",
+   "paths": [
+    {
+     "d": "M78 80 Q64 90 48 88 Q14 86 14 50 Q14 14 50 14 Q88 14 88 50 Q88 68 74 68 Q64 68 64 54 L64 36",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 20
+    },
+    {
+     "d": "M79.5 81.5Q65.5 91.5 49.5 89.5Q15.5 87.5 15.5 51.5Q15.5 15.5 51.5 15.5Q89.5 15.5 89.5 51.5Q89.5 69.5 75.5 69.5Q65.5 69.5 65.5 55.5L65.5 37.5",
+     "fill": "none",
+     "stroke": "green",
+     "weight": 9
+    },
+    {
+     "d": "M64 40 Q60 34 50 34 Q36 34 36 50 Q36 64 50 65 Q60 65 64 54",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 20
+    },
+    {
+     "d": "M65.5 41.5Q61.5 35.5 51.5 35.5Q37.5 35.5 37.5 51.5Q37.5 65.5 51.5 66.5Q61.5 66.5 65.5 55.5",
+     "fill": "none",
+     "stroke": "green",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "at sign on tone disc, shifted",
+   "paths": [
+    {
+     "d": "M14 54Q14 16 54 16Q94 16 94 54Q94 92 54 92Q14 92 14 54Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M78 80 Q64 90 48 88 Q14 86 14 50 Q14 14 50 14 Q88 14 88 50 Q88 68 74 68 Q64 68 64 54 L64 36",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M64 40 Q60 34 50 34 Q36 34 36 50 Q36 64 50 65 Q60 65 64 54",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 10
+    }
+   ]
+  }
+ ]
+}

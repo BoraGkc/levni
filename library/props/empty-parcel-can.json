@@ -1,0 +1,69 @@
+{
+  "name": "empty-parcel-can",
+  "tags": [
+    "koli",
+    "boş kutu",
+    "kargo",
+    "parcel",
+    "empty can"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/bud-light-boykotculari/ici-1-r0.json",
+      "paths": [
+        {
+          "d": "M14 30 L8 8 L44 14 L40 32Z",
+          "fill": "tone-mustard",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M86 30 L92 8 L56 14 L60 32Z",
+          "fill": "tone-mustard",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M10 30 H90 V92 H10 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M10 30 H90 V40 H10Z",
+          "fill": "tone-mustard",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M34 48 H66 V84 Q50 90 34 84 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M34 48 Q50 54 66 48",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M44 72 Q44 62 50 62 Q56 62 56 68 Q56 72 50 74 V77",
+          "stroke": "blue",
+          "weight": 3.4
+        },
+        {
+          "d": "M50 79.2 a1.8 1.8 0 1 0 0.1 0Z",
+          "fill": "blue",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M44 30 H56 V40 H44Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.6
+        }
+      ]
+    }
+  ]
+}

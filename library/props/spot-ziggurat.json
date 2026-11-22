@@ -1,0 +1,62 @@
+{
+  "name": "spot-ziggurat",
+  "tags": [
+    "spot ışığı basamaklı sahne yıldız",
+    "spotlight steps star"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/patti-lupone-full/ici-1-r1.json",
+      "paths": [
+        {
+          "d": "M40 20 L60 20 L96 98 L4 98Z",
+          "fill": "tone",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M18.0 86 H82.0 V98 H18.0Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M25.0 74 H75.0 V86 H25.0Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M32.0 62 H68.0 V74 H32.0Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M39.0 50 H61.0 V62 H39.0Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M50 22 L53 32 L63 32 L55 38 L58 48 L50 42 L42 48 L45 38 L37 32 L47 32Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M30 -6 H70 L60 20 H40Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M44 -6 V-14 M56 -6 V-14",
+          "stroke": "ink",
+          "weight": 4,
+          "fill": "none"
+        }
+      ]
+    }
+  ]
+}

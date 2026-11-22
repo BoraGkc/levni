@@ -1,0 +1,60 @@
+{
+  "name": "tv-face",
+  "tags": [
+    "televizyon",
+    "reyting"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/trump-tv-basarisizligi/kapak-3d.json",
+      "paths": [
+        {
+          "d": "M4 6 L68 6 L68 94 L4 94 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M8 70 L64 70 M8 54 L64 54 M8 38 L64 38",
+          "stroke": "tone",
+          "weight": 1,
+          "taper": false,
+          "dash": [
+            2,
+            3
+          ]
+        },
+        {
+          "d": "M8 22 L20 20 L30 36 L40 32 L50 60 L62 82",
+          "stroke": "paper",
+          "weight": 4.5,
+          "taper": false
+        },
+        {
+          "d": "M52 66 L66 88 L46 82 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M76 28 a6 6 0 1 0 12 0 a6 6 0 1 0 -12 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M76 50 a6 6 0 1 0 12 0 a6 6 0 1 0 -12 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M76 72 L90 72 M76 78 L90 78 M76 84 L90 84",
+          "stroke": "ink",
+          "weight": 1.8,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

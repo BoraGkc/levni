@@ -1,0 +1,69 @@
+{
+  "name": "handset-test-tube",
+  "tags": [
+    "ahize",
+    "telefon",
+    "kan tüpü",
+    "damla",
+    "güven",
+    "handset",
+    "phone",
+    "test tube",
+    "drop"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/nathan-fielder-elizabeth-2/kapak.json",
+      "paths": [
+        {
+          "d": "M8 28 Q8 22 14 22 H28 Q32 22 32 28 V60 Q32 66 28 66 H14 Q8 66 8 60Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M32 36 Q50 30 68 36 V48 Q50 42 32 48Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M68 12 H90 V62 Q90 76 79 76 Q68 76 68 62Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M68 44 H90 V62 Q90 76 79 76 Q68 76 68 62Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M65 12 H93",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M79 -2 Q84 6 79 8 Q74 6 79 -2Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M14 30 H26 M14 38 H26 M14 46 H26",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M44 48 Q36 56 46 60 Q56 64 46 70 Q36 76 46 82 Q54 88 48 94",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3.2
+        }
+      ]
+    }
+  ]
+}

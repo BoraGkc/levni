@@ -1,0 +1,46 @@
+{
+  "name": "jug",
+  "tags": [
+    "testi",
+    "çatlak",
+    "jug",
+    "vase"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/gentle-monster-kum/ici-1.json",
+      "paths": [
+        {
+          "d": "M62 60 Q84 56 84 72 Q84 84 70 84",
+          "stroke": "paper",
+          "weight": 4,
+          "fill": "none"
+        },
+        {
+          "d": "M36 14 H64 L62 28 Q80 38 80 62 Q80 92 50 92 Q20 92 20 62 Q20 38 38 28 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M50 28 L44 44 L56 56 L46 72 L54 92",
+          "stroke": "ink",
+          "weight": 3,
+          "fill": "none"
+        },
+        {
+          "d": "M62 60 Q84 56 84 72 Q84 84 70 84",
+          "stroke": "ink",
+          "weight": 3.5,
+          "fill": "none"
+        },
+        {
+          "d": "M62 60 Q84 56 84 72 Q84 84 70 84",
+          "stroke": "paper",
+          "weight": 4,
+          "fill": "none"
+        }
+      ]
+    }
+  ]
+}

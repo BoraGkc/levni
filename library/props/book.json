@@ -1,0 +1,63 @@
+{
+ "name": "book",
+ "tags": [
+  "kitap",
+  "roman",
+  "okumak",
+  "book",
+  "read"
+ ],
+ "variants": [
+  {
+   "note": "closed book, front cover, blue cover offset",
+   "paths": [
+    {
+     "d": "M29 14L77 14L77 88L29 88Z",
+     "fill": "blue",
+     "stroke": "none"
+    },
+    {
+     "d": "M26 12 L74 12 L75 86 L25 87 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M34 12 L34 86",
+     "stroke": "ink",
+     "weight": 6,
+     "fill": "none"
+    },
+    {
+     "d": "M45 30 L66 30 M45 40 L60 40",
+     "stroke": "paper",
+     "weight": 6,
+     "fill": "none"
+    }
+   ]
+  },
+  {
+   "note": "open book, pages fanned",
+   "paths": [
+    {
+     "d": "M8 30 Q28 22 50 32 Q72 22 92 30 L90 78 Q70 70 50 80 Q30 70 10 78 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 32 L50 80",
+     "stroke": "ink",
+     "weight": 6,
+     "fill": "none"
+    },
+    {
+     "d": "M17 42 Q28 38 42 44 M17 53 Q28 49 42 55 M58 44 Q72 38 83 42 M58 55 Q72 49 83 53",
+     "stroke": "ink",
+     "weight": 5,
+     "fill": "none"
+    }
+   ]
+  }
+ ]
+}

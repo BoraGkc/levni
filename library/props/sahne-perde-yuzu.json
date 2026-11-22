@@ -1,0 +1,50 @@
+{
+  "name": "sahne-perde-yuzu",
+  "tags": [
+    "sahne",
+    "perde",
+    "ilan"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/playbill-george-floyd/kapak-3d.json",
+      "paths": [
+        {
+          "d": "M12 30 L88 30 L88 84 L12 84 Z",
+          "fill": "tone",
+          "stroke": "paper",
+          "weight": 3
+        },
+        {
+          "d": "M0 18 L100 18 L100 30 L0 30 Z",
+          "fill": "paper",
+          "stroke": "blue",
+          "weight": 3
+        },
+        {
+          "d": "M0 30 L36 30 Q26 56 36 84 L0 84 Z",
+          "fill": "paper",
+          "stroke": "blue",
+          "weight": 3
+        },
+        {
+          "d": "M100 30 L64 30 Q74 56 64 84 L100 84 Z",
+          "fill": "paper",
+          "stroke": "blue",
+          "weight": 3
+        },
+        {
+          "d": "M43 40 L59 38 L61 66 L45 68 Z",
+          "fill": "paper",
+          "stroke": "blue",
+          "weight": 3
+        },
+        {
+          "d": "M47 47 L56 46 M47 53 L57 52 M47 59 L55 58",
+          "stroke": "blue",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

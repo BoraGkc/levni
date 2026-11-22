@@ -1,0 +1,168 @@
+{
+ "name": "ferry",
+ "tags": [
+  "vapur",
+  "feribot",
+  "ferry",
+  "boat",
+  "istanbul",
+  "boğaz"
+ ],
+ "variants": [
+  {
+   "note": "side view, two decks, funnel",
+   "paths": [
+    {
+     "d": "M8 62 L92 62 L82 80 L20 80 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M11 64 L95 64 L93 69 L13 69 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M8 62 L92 62 L90 67 L10 67 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M8 62 L92 62 L90 67 L10 67 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M22 62 L22 46 L78 46 L78 62",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M34 46 L34 34 L66 34 L66 46",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 36 L50 20 L62 20 L62 36",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M47 34 L47 18 L59 18 L59 34",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 54 L38 54 M46 54 L54 54 M62 54 L70 54",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M12 88 Q20 84 28 88 Q36 92 44 88 Q52 84 60 88 Q68 92 76 88 Q84 84 90 88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "bold silhouette, simple",
+   "paths": [
+    {
+     "d": "M6 60 L94 60 L84 82 L18 82 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 60 L20 40 L80 40 L80 60",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M47 42 L47 22 L63 22 L63 42",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M44 40 L44 20 L60 20 L60 40",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 50 L70 50",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  },
+  {
+   "note": "with seagull and waves, flag",
+   "paths": [
+    {
+     "d": "M10 62 L90 62 L80 80 L22 80 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M24 62 L24 46 L76 46 L76 62",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M36 46 L36 36 L64 36 L64 46",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M49 38 L49 24 L59 24 L59 38",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M46 36 L46 22 L56 22 L56 36",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M60 36 L60 14 M60 14 L72 18 L60 22",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M32 54 L40 54 M48 54 L56 54 M64 54 L70 54",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M10 88 Q20 83 30 88 Q40 93 50 88 Q60 83 70 88 Q80 93 90 88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M14 24 Q20 17 26 24 M26 24 Q32 17 38 24",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

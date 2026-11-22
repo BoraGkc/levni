@@ -1,0 +1,93 @@
+{
+ "name": "basketball",
+ "tags": [
+  "basketbol",
+  "top",
+  "basketball",
+  "spor",
+  "pota"
+ ],
+ "variants": [
+  {
+   "note": "coral ball with ink seams",
+   "paths": [
+    {
+     "d": "M 15 54 Q 13 26 39 16 Q 67 8 85 28 Q 95 46 87 68 Q 75 92 49 90 Q 19 86 15 54 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M12 52 Q10 24 36 14 Q64 6 82 26 Q92 44 84 66 Q72 90 46 88 Q16 84 12 52 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M49 12 Q54 50 47 88 M12 52 Q50 56 86 48 M22 24 Q40 40 24 78 M78 22 Q60 42 76 80",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "paper ball, bold seams only",
+   "paths": [
+    {
+     "d": "M12 52 Q10 24 36 14 Q64 6 82 26 Q92 44 84 66 Q72 90 46 88 Q16 84 12 52 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M49 12 Q53 50 48 88 M12 52 Q50 57 86 48",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M22 24 Q40 40 24 78 M78 22 Q60 42 76 80",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "ball dropping through a hoop with net",
+   "paths": [
+    {
+     "d": "M20 22 Q50 14 80 22 Q80 30 50 32 Q20 30 20 22 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24 28 L34 66 M40 31 L44 68 M58 31 L56 68 M76 28 L66 66 M34 66 Q50 72 66 66",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M 36 54 Q 36 38.4 53 38.4 Q 70 38.4 70 54 Q 70 69.6 53 69.6 Q 36 69.6 36 54 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M33 52 Q33 36.36 50 36.36 Q67 36.36 67 52 Q67 67.64 50 67.64 Q33 67.64 33 52 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 36 Q53 52 49 68 M33 52 Q50 55 67 50",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

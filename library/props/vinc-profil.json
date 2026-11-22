@@ -1,0 +1,73 @@
+{
+  "name": "vinc-profil",
+  "tags": [
+    "vinç",
+    "profil kartı",
+    "kalp",
+    "crane",
+    "profile"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/randevu-uygulamasi-profillerin/ici-2.json",
+      "paths": [
+        {
+          "d": "M84 98 L84 4 M92 98 L92 4",
+          "stroke": "ink",
+          "weight": 4,
+          "taper": false
+        },
+        {
+          "d": "M84 20 L92 10 M84 34 L92 24 M84 48 L92 38 M84 62 L92 52 M84 76 L92 66 M84 90 L92 80",
+          "stroke": "ink",
+          "weight": 2.5,
+          "taper": false
+        },
+        {
+          "d": "M22 6 L98 6 M88 6 L88 0",
+          "stroke": "ink",
+          "weight": 5,
+          "taper": false
+        },
+        {
+          "d": "M48 6 L48 36",
+          "stroke": "ink",
+          "weight": 2.5,
+          "dash": [
+            3,
+            3
+          ]
+        },
+        {
+          "d": "M48.0 61.6 C21.6 39.6 26.0 17.6 39.2 17.6 C45.8 17.6 48.0 24.2 48.0 28.6 C48.0 24.2 50.2 17.6 56.8 17.6 C70.0 17.6 74.4 39.6 48.0 61.6 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M8 62 L74 62 L74 98 L8 98 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M16 70 L36 70 L36 90 L16 90 Z",
+          "fill": "tone",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M21 77 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M44 72 L66 72 M44 80 L62 80 M44 88 L66 88",
+          "stroke": "paper",
+          "weight": 3.5
+        }
+      ]
+    }
+  ]
+}

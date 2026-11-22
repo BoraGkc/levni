@@ -1,0 +1,40 @@
+{
+  "name": "pill-bottle",
+  "tags": [
+    "ilaç şişesi",
+    "hap",
+    "eczane",
+    "pill bottle",
+    "pharmacy"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/bill-irwin-uyarlamasi/ici-2.json",
+      "paths": [
+        {
+          "d": "M36 4 L64 4 L64 20 L36 20 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M40 20 L60 20 L60 28 Q80 34 80 50 L80 90 Q80 96 74 96 L26 96 Q20 96 20 90 L20 50 Q20 34 40 28 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M30 46 L70 46 L70 78 L30 78 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M44 54 L56 54 M50 54 L50 70 M38 62 L62 62",
+          "stroke": "coral",
+          "weight": 4
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+ "name": "courthouse",
+ "tags": [
+  "adliye",
+  "mahkeme",
+  "courthouse",
+  "hukuk",
+  "court"
+ ],
+ "variants": [
+  {
+   "note": "four columns, pediment, steps, coral pediment fill",
+   "paths": [
+    {
+     "d": "M52 12 L92 40 L12 41 Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M10 38 L50 10 L90 37 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M12 40 L89 40 L88 47 L11 47 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 47 L20 78 L28 78 L27 47 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M38 47 L38 78 L46 78 L45 47 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M56 47 L56 78 L64 78 L63 47 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M74 47 L74 78 L82 78 L81 47 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M10 78 L91 78 L92 85 L8 85 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M5 85 L95 85 L96 91 L4 91 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "bolder, three thick columns, round window",
+   "paths": [
+    {
+     "d": "M12 42 L50 12 L89 40 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 24 A7 6.5 0 1 0 51 24 Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M44 31 Q50 25 57 31",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M14 44 L87 44 L87 52 L13 52 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M22 52 L22 80 L34 80 L33 52 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M45 52 L45 80 L57 80 L56 52 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M68 52 L68 80 L80 80 L79 52 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M8 80 L93 80 L93 90 L7 90 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

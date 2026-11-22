@@ -1,0 +1,110 @@
+{
+ "name": "ship",
+ "tags": [
+  "gemi",
+  "tanker",
+  "ship",
+  "kargo",
+  "deniz taşımacılığı",
+  "cargo"
+ ],
+ "variants": [
+  {
+   "note": "cargo ship with stacked containers, coral and tone",
+   "paths": [
+    {
+     "d": "M6 62 L94 60 L84 82 L18 82 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 42 L34 42 L34 58 L20 58 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M38 46 L52 46 L52 58 L38 58 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M16 40 L32 40 L32 59 L16 59 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M36 44 L50 44 L50 59 L36 59 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M54 42 L66 42 L66 59 L54 59 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M70 36 L84 36 L84 60 L70 60 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M72 44 L82 44",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M2 90 Q12 86 22 90 Q32 94 42 90 Q52 86 62 90 Q72 94 82 90 Q90 87 98 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "tanker, long flat deck, pipes and tall chimney",
+   "paths": [
+    {
+     "d": "M4 58 L96 56 L86 80 L14 80 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 64 L84 62 L82 70 L22 72 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M72 30 L86 30 L86 57 L72 57 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M80 18 L84 18 L84 30 L80 30 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M12 56 L12 48 L58 48 L58 56 M26 48 L26 56 M42 48 L42 56",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M0 90 Q10 86 20 90 Q30 94 40 90 Q50 86 60 90 Q70 94 80 90 Q90 86 100 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

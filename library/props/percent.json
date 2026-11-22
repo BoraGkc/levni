@@ -1,0 +1,118 @@
+{
+ "name": "percent",
+ "tags": [
+  "yüzde",
+  "percent",
+  "oran",
+  "indirim",
+  "yüzdelik",
+  "%"
+ ],
+ "variants": [
+  {
+   "note": "mustard rings with fat slash",
+   "paths": [
+    {
+     "d": "M16 31Q16 17 31 17Q46 17 46 31Q46 45 31 45Q16 45 16 31Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M13 28 Q13 14 28 14 Q43 14 43 28 Q43 42 28 42 Q13 42 13 28 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M60 75Q60 59 75 59Q90 59 90 75Q90 91 75 91Q60 91 60 75Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M57 72 Q57 56 72 56 Q87 56 87 72 Q87 88 72 88 Q57 88 57 72 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M80 12 Q50 50 20 88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 20
+    },
+    {
+     "d": "M80 12Q50 50 20 88",
+     "fill": "none",
+     "stroke": "paper",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "paper rings, thin slash, light coral shift",
+   "paths": [
+    {
+     "d": "M17 31Q17 17 32 17Q47 17 47 31Q47 45 32 45Q17 45 17 31Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M13 28 Q13 14 28 14 Q43 14 43 28 Q43 42 28 42 Q13 42 13 28 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M61 75Q61 59 76 59Q91 59 91 75Q91 91 76 91Q61 91 61 75Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M57 72 Q57 56 72 56 Q87 56 87 72 Q87 88 72 88 Q57 88 57 72 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M80 12 Q50 50 20 88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "big solid coral dots with ink slash",
+   "paths": [
+    {
+     "d": "M12 30Q12 13 30 13Q48 13 48 30Q48 47 30 47Q12 47 12 30Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M9 27 Q9 10 27 10 Q45 10 45 27 Q45 44 27 44 Q9 44 9 27 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M58 76Q58 58 76 58Q94 58 94 76Q94 94 76 94Q58 94 58 76Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M55 73 Q55 55 73 55 Q91 55 91 73 Q91 91 73 91 Q55 91 55 73 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M82 12 Q52 50 18 88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 11
+    }
+   ]
+  }
+ ]
+}

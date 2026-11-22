@@ -1,0 +1,60 @@
+{
+  "name": "film-page-book",
+  "tags": [
+    "kitap",
+    "film şeridi",
+    "uyarlama",
+    "sayfa",
+    "book",
+    "film strip",
+    "adaptation"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/netflix-east-of/ici-2-alt.json",
+      "paths": [
+        {
+          "d": "M0 24 L50 34 L100 24 L100 94 L50 104 L0 94 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M4 26 Q28 24 49 34 L49 98 Q28 88 4 90 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M51 34 Q72 24 96 26 L96 90 Q72 88 51 98 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M10 38 Q28 36 42 44 M10 46 Q28 44 42 52 M10 54 Q28 52 42 60 M10 62 Q28 60 42 68 M10 70 Q28 68 42 76",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M58 38 Q72 32 90 33 L90 84 Q72 82 58 90 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.5
+        },
+        {
+          "d": "M62 46 Q72 42 86 42 L86 56 Q72 56 62 60 Z M62 66 Q72 62 86 62 L86 76 Q72 76 62 80 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M59 44 L61 44 M59 50 L61 50 M59 56 L61 56 M59 62 L61 62 M59 68 L61 68 M59 74 L61 74 M59 80 L61 80 M87 40 L89 40 M87 46 L89 46 M87 52 L89 52 M87 58 L89 58 M87 64 L89 64 M87 70 L89 70 M87 76 L89 76",
+          "stroke": "paper",
+          "weight": 4,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

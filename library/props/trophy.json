@@ -1,0 +1,76 @@
+{
+ "name": "trophy",
+ "tags": [
+  "kupa",
+  "ödül",
+  "trophy",
+  "şampiyon",
+  "cup"
+ ],
+ "variants": [
+  {
+   "note": "cup with handles and base, mustard",
+   "paths": [
+    {
+     "d": "M28 22 C8 20 10 46 34 46 M72 22 C92 20 90 46 66 46",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M31 16 L75 16 C76 42 69 59 53 61 C37 59 30 42 31 16 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M28 14 L72 14 C73 40 66 57 50 59 C34 57 27 40 28 14 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 59 L50 76",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M32 76 L68 76 L71 90 L29 90 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "tall bowl on coral podium",
+   "paths": [
+    {
+     "d": "M21 16 L73 16 C75 46 63 62 47 62 C31 62 19 46 21 16 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M24 14 L76 14 C78 44 66 60 50 60 C34 60 22 44 24 14 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 60 L50 74",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M29 72 L77 72 L77 88 L29 88 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M26 74 L74 74 L74 90 L26 90 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

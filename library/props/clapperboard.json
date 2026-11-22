@@ -1,0 +1,86 @@
+{
+ "name": "clapperboard",
+ "tags": [
+  "klaket",
+  "film",
+  "sinema",
+  "clapperboard",
+  "çekim"
+ ],
+ "variants": [
+  {
+   "note": "closed slate, tone stripes, coral top",
+   "paths": [
+    {
+     "d": "M14 40 L86 40 L86 86 L14 86 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M15 24 L91 32 L89 44 L15 38 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M12 22 L88 30 L86 42 L12 36 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M30 24 L24 38 M48 26 L42 39 M66 28 L60 40 M82 30 L78 41",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M24 56 L76 56 M24 68 L60 68",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "open clap, mustard arm raised",
+   "paths": [
+    {
+     "d": "M14 48 L86 48 L86 88 L14 88 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M26 64 L74 64 M26 76 L56 76",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M17 16 L87 32 L85 44 L15 30 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M14 14 L84 30 L82 42 L12 28 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M32 18 L27 31 M50 22 L45 35 M68 26 L63 39",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M12 28 L84 42 L84 50 L12 50 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

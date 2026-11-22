@@ -1,0 +1,58 @@
+{
+  "name": "chewed-sneaker",
+  "tags": [
+    "cignenmis ayakkabi",
+    "dis izi",
+    "kopek",
+    "evi dagitan",
+    "chewed shoe",
+    "bite marks",
+    "dog",
+    "mess"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kopegi-zor-sahiplenmek/ici-2-r0.json",
+      "paths": [
+        {
+          "d": "M6,70 L8,30 Q18,28 26,40 L34,44 L46,26 Q54,24 58,36 Q66,46 80,50 Q96,54 98,70 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M4,70 L98,70 L98,82 Q50,86 4,82 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M30,50 L40,42 M38,52 L48,44 M48,50 L56,42",
+          "stroke": "blue",
+          "weight": 4
+        },
+        {
+          "d": "M62,41 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0 M74,47 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0 M86,54 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.8
+        },
+        {
+          "d": "M90,60 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0 M82,52 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0 M74,49 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.8
+        },
+        {
+          "d": "M10,60 Q30,66 56,62",
+          "stroke": "blue",
+          "weight": 3,
+          "dash": [
+            6,
+            6
+          ]
+        }
+      ]
+    }
+  ]
+}

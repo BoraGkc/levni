@@ -1,0 +1,161 @@
+{
+ "name": "bus",
+ "tags": [
+  "otobüs",
+  "bus",
+  "toplu taşıma",
+  "metrobüs",
+  "yolcu"
+ ],
+ "variants": [
+  {
+   "note": "side view, windows row",
+   "paths": [
+    {
+     "d": "M8 28 Q8 22 14 22 L88 22 Q92 22 92 28 L92 74 L8 74 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M11 60 L95 60 L95 76 L11 76Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M8 58 L92 58 L92 74 L8 74Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M8 58 L92 58",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M14 30 L84 30 L84 50 L14 50 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M32 30 L32 50 M50 30 L50 50 M68 30 L68 50",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M17 76 C17 71.1 21 67.3 26 67.3 C31 67.3 35 71.1 35 76 C35 80.9 31 84.7 26 84.7 C21 84.7 17 80.9 17 76 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M65 76 C65 71.1 69 67.3 74 67.3 C79 67.3 83 71.1 83 76 C83 80.9 79 84.7 74 84.7 C69 84.7 65 80.9 65 76 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  },
+  {
+   "note": "front view, windshield and lights",
+   "paths": [
+    {
+     "d": "M22 14 Q22 10 28 10 L72 10 Q78 10 78 14 L80 80 L20 80 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M31 20 L75 20 L75 48 L31 48Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M28 18 L72 18 L72 46 L28 46Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M28 18 L72 18 L72 46 L28 46Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M26 60 L36 60 M64 60 L74 60",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M26 56 L36 56 L36 64 L26 64Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M20 72 L80 72",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M26 82 L26 90 M74 82 L74 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 10
+    }
+   ]
+  },
+  {
+   "note": "bold simple bus, coral stripe",
+   "paths": [
+    {
+     "d": "M6 30 Q6 20 16 20 L84 20 Q94 20 94 30 L94 72 L6 72 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M9 54 L97 54 L97 74 L9 74Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M6 52 L94 52 L94 72 L6 72Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M18 30 L82 30",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M6 52 L94 52",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M16 74 C16 68.6 20.4 64.3 26 64.3 C31.6 64.3 36 68.6 36 74 C36 79.4 31.6 83.7 26 83.7 C20.4 83.7 16 79.4 16 74 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M64 74 C64 68.6 68.4 64.3 74 64.3 C79.6 64.3 84 68.6 84 74 C84 79.4 79.6 83.7 74 83.7 C68.4 83.7 64 79.4 64 74 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

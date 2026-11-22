@@ -1,0 +1,68 @@
+{
+  "name": "chair-jacket",
+  "tags": [
+    "boş sandalye",
+    "ceket",
+    "liderlik",
+    "empty chair",
+    "leader"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/nvidia/kapak-v2.json",
+      "paths": [
+        {
+          "d": "M26 14 Q50 8 74 14 L72 56 L28 56 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M20 58 L80 58 L80 70 L20 70 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M26 70 L24 98 M74 70 L76 98 M40 70 L39 94 M60 70 L61 94",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M34 12 Q50 6 66 12 L68 40 L64 60 L36 60 L32 40 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M34 12 L26 24 L28 62 L36 62 L36 24",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M66 12 L74 24 L72 62 L64 62 L64 24",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M40 10 L50 30 L60 10",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M50 30 L50 58",
+          "stroke": "paper",
+          "weight": 1.8
+        },
+        {
+          "d": "M41 42 L45 46 M59 42 L55 46",
+          "stroke": "tone",
+          "weight": 1.5
+        }
+      ]
+    }
+  ]
+}

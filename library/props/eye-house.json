@@ -1,0 +1,53 @@
+{
+  "name": "eye-house",
+  "tags": [
+    "ev",
+    "göz",
+    "pencere",
+    "korku",
+    "house eye window"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/junji-ito-canli/ici-2.json",
+      "paths": [
+        {
+          "d": "M6 44 L50 6 L94 44 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M14 44 L86 44 L86 100 L14 100 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M50 62 m-22 0 Q50 40 72 62 Q50 84 28 62 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M50 62 m-9 0 a9 9 0 1 0 18 0 a9 9 0 1 0 -18 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M50 62 m-3.5 0 a3.5 3.5 0 1 0 7 0 a3.5 3.5 0 1 0 -7 0",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M70 20 L70 6 L80 6 L80 28",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        }
+      ]
+    }
+  ]
+}

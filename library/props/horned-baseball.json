@@ -1,0 +1,68 @@
+{
+  "name": "horned-baseball",
+  "tags": [
+    "beyzbol",
+    "top",
+    "şeytan",
+    "boynuz",
+    "baseball",
+    "devil",
+    "horns"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/neil-patrick-harris/kapak-r0.json",
+      "paths": [
+        {
+          "d": "M18 55 a32 32 0 1 0 64 0 a32 32 0 1 0 -64 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M27 32 Q42 55 27 78 M73 32 Q58 55 73 78",
+          "stroke": "coral",
+          "weight": 3,
+          "dash": [
+            3,
+            3
+          ]
+        },
+        {
+          "d": "M30 32 Q16 24 18 4 Q34 10 42 26 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M70 32 Q84 24 82 4 Q66 10 58 26 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M38 49 L47 53 M62 49 L53 53",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M40 65 Q50 75 60 65",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M80 72 Q100 70 94 92 Q92 98 86 94",
+          "stroke": "coral",
+          "weight": 4,
+          "taper": false
+        },
+        {
+          "d": "M84 90 L96 96 L88 102 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.5
+        }
+      ]
+    }
+  ]
+}

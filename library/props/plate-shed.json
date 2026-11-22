@@ -1,0 +1,53 @@
+{
+  "name": "plate-shed",
+  "tags": [
+    "tabak",
+    "kulübe",
+    "shed",
+    "plate",
+    "sahte restoran"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/oobah-butler-zengin/ici-1-alt.json",
+      "paths": [
+        {
+          "d": "M2 80 Q50 70 98 80 Q98 92 86 94 L14 94 Q2 92 2 80 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M30 80 Q50 76 70 80",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M30 80 L30 48 L50 34 L70 48 L70 80 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M26 49 L50 30 L74 49",
+          "fill": "none",
+          "stroke": "coral",
+          "weight": 4.5
+        },
+        {
+          "d": "M44 80 L44 60 L56 60 L56 80",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M36 56 L40 56 L40 64 L36 64 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 1.6
+        }
+      ]
+    }
+  ]
+}

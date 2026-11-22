@@ -1,0 +1,226 @@
+{
+ "name": "dashboard",
+ "tags": [
+  "gösterge paneli",
+  "dashboard",
+  "panel",
+  "grafik",
+  "metrik",
+  "analitik"
+ ],
+ "variants": [
+  {
+   "note": "monitor with a half gauge, coral needle and three bars",
+   "paths": [
+    {
+     "d": "M50 76 L50 86 M32 88 L68 88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M13 14 L87 15 Q92 15 92 20 L92 71 Q92 76 87 76 L13 76 Q8 76 8 71 L8 19 Q8 14 13 14 Z",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M16 16 L90 17 Q95 17 95 22 L95 73 Q95 78 90 78 L16 78 Q11 78 11 73 L11 21 Q11 16 16 16 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M13 14 L87 15 Q92 15 92 20 L92 71 Q92 76 87 76 L13 76 Q8 76 8 71 L8 19 Q8 14 13 14 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M17 62 Q17 30 40 30 Q61 30 61 62",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M40 62 L50 40",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 6
+    },
+    {
+     "d": "M36.4 62 C36.4 59.9 38 58.1 40 58.1 C42 58.1 43.6 59.9 43.6 62 C43.6 64.1 42 65.9 40 65.9 C38 65.9 36.4 64.1 36.4 62 Z",
+     "fill": "ink",
+     "stroke": "none",
+     "weight": 5
+    },
+    {
+     "d": "M69 54 L73 54 Q74 54 74 55 L74 63 Q74 64 73 64 L69 64 Q68 64 68 63 L68 55 Q68 54 69 54 Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M69 54 L73 54 Q74 54 74 55 L74 63 Q74 64 73 64 L69 64 Q68 64 68 63 L68 55 Q68 54 69 54 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M77 46 L81 46 Q82 46 82 47 L82 63 Q82 64 81 64 L77 64 Q76 64 76 63 L76 47 Q76 46 77 46 Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M77 46 L81 46 Q82 46 82 47 L82 63 Q82 64 81 64 L77 64 Q76 64 76 63 L76 47 Q76 46 77 46 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M85 36 L88 36 Q89 36 89 37 L89 63 Q89 64 88 64 L85 64 Q84 64 84 63 L84 37 Q84 36 85 36 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M85 36 L88 36 Q89 36 89 37 L89 63 Q89 64 88 64 L85 64 Q84 64 84 63 L84 37 Q84 36 85 36 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  },
+  {
+   "note": "monitor with three tiles and a rising line chart, mustard tint",
+   "paths": [
+    {
+     "d": "M50 76 L50 86 M32 88 L68 88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M13 14 L87 15 Q92 15 92 20 L92 71 Q92 76 87 76 L13 76 Q8 76 8 71 L8 19 Q8 14 13 14 Z",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M16 16 L90 17 Q95 17 95 22 L95 73 Q95 78 90 78 L16 78 Q11 78 11 73 L11 21 Q11 16 16 16 Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M13 14 L87 15 Q92 15 92 20 L92 71 Q92 76 87 76 L13 76 Q8 76 8 71 L8 19 Q8 14 13 14 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M17 21 L34 21 Q36 21 36 23 L36 32 Q36 34 34 34 L17 34 Q15 34 15 32 L15 23 Q15 21 17 21 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M42 21 L59 21 Q61 21 61 23 L61 32 Q61 34 59 34 L42 34 Q40 34 40 32 L40 23 Q40 21 42 21 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M67 21 L84 21 Q86 21 86 23 L86 32 Q86 34 84 34 L67 34 Q65 34 65 32 L65 23 Q65 21 67 21 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M16 66 L30 56 L44 62 L58 47 L72 52 L85 40",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M81.8 40 C81.8 38.1 83.2 36.5 85 36.5 C86.8 36.5 88.2 38.1 88.2 40 C88.2 41.9 86.8 43.5 85 43.5 C83.2 43.5 81.8 41.9 81.8 40 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "big round dial with ticks, coral needle, green arc and two bars beneath",
+   "paths": [
+    {
+     "d": "M10 50 C10 29 27.9 12 50 12 C72.1 12 90 29 90 50 C90 71 72.1 88 50 88 C27.9 88 10 71 10 50 Z",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M13 52 C13 31 30.9 14 53 14 C75.1 14 93 31 93 52 C93 73 75.1 90 53 90 C30.9 90 13 73 13 52 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M10 50 C10 29 27.9 12 50 12 C72.1 12 90 29 90 50 C90 71 72.1 88 50 88 C27.9 88 10 71 10 50 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M23.2 67.5 L27.5 65 M19 52 L24 52 M23.2 36.5 L27.5 39 M34.5 25.2 L37 29.5 M50 21 L50 26 M65.5 25.2 L63 29.5 M76.8 36.5 L72.5 39 M81 52 L76 52 M76.8 67.5 L72.5 65",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M24 70 Q20 52 30 38 Q40 26 52 25",
+     "fill": "none",
+     "stroke": "green",
+     "weight": 8
+    },
+    {
+     "d": "M50 54 L64 34",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 7
+    },
+    {
+     "d": "M45.4 54 C45.4 51.3 47.5 49 50 49 C52.5 49 54.6 51.3 54.6 54 C54.6 56.7 52.5 59 50 59 C47.5 59 45.4 56.7 45.4 54 Z",
+     "fill": "ink",
+     "stroke": "none",
+     "weight": 5
+    },
+    {
+     "d": "M37 70 L41 70 Q42 70 42 71 L42 77 Q42 78 41 78 L37 78 Q36 78 36 77 L36 71 Q36 70 37 70 Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M37 70 L41 70 Q42 70 42 71 L42 77 Q42 78 41 78 L37 78 Q36 78 36 77 L36 71 Q36 70 37 70 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M47 66 L51 66 Q52 66 52 67 L52 77 Q52 78 51 78 L47 78 Q46 78 46 77 L46 67 Q46 66 47 66 Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M47 66 L51 66 Q52 66 52 67 L52 77 Q52 78 51 78 L47 78 Q46 78 46 77 L46 67 Q46 66 47 66 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M57 72 L61 72 Q62 72 62 73 L62 77 Q62 78 61 78 L57 78 Q56 78 56 77 L56 73 Q56 72 57 72 Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M57 72 L61 72 Q62 72 62 73 L62 77 Q62 78 61 78 L57 78 Q56 78 56 77 L56 73 Q56 72 57 72 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

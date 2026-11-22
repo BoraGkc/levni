@@ -1,0 +1,80 @@
+{
+  "name": "phone-record-sleeve",
+  "tags": [
+    "telefon",
+    "plak",
+    "vinil",
+    "kisa video",
+    "parodi",
+    "phone sleeve",
+    "vinyl record",
+    "short video"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kyle-gordon-parodi/ici-1.json",
+      "paths": [
+        {
+          "d": "M16 34 a34,34 0 1,0 68,0 a34,34 0 1,0 -68,0",
+          "fill": "dark",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M20 34 a30,30 0 1,0 60,0 a30,30 0 1,0 -60,0",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 1.6
+        },
+        {
+          "d": "M25 34 a25,25 0 1,0 50,0 a25,25 0 1,0 -50,0",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 1.6
+        },
+        {
+          "d": "M30 34 a20,20 0 1,0 40,0 a20,20 0 1,0 -40,0",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 1.6
+        },
+        {
+          "d": "M42 34 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M22 40 Q22 36 28 36 L72 36 Q78 36 78 40 L78 112 Q78 118 72 118 L28 118 Q22 118 22 112 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M28 46 L72 46 L72 108 L28 108 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M32 52 L68 52 M32 62 L60 62",
+          "stroke": "paper",
+          "weight": 3,
+          "taper": false
+        },
+        {
+          "d": "M32 76 L68 76 M32 86 L56 86",
+          "stroke": "coral",
+          "weight": 3,
+          "taper": false
+        },
+        {
+          "d": "M42 113 L58 113",
+          "stroke": "ink",
+          "weight": 3,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

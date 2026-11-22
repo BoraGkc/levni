@@ -1,0 +1,81 @@
+{
+  "name": "mug-stage",
+  "tags": [
+    "fincan sahne perde",
+    "mug stage curtains",
+    "lynch"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kyle-maclachlan-anilari/kapak.json",
+      "paths": [
+        {
+          "d": "M12 26 L88 26 L82 94 Q50 100 18 94 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M88 38 Q112 36 108 62 Q104 82 84 80",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M22 34 L78 34 L76 84 L24 84 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M43 34 L57 34 L66 78 L34 78Z",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M24 70 L76 70 L76 84 L24 84Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M24 73 L30 70 L36 73 L42 70 L48 73 L54 70 L60 73 L66 70 L72 73 L76 71 M24 78 L30 75 L36 78 L42 75 L48 78 L54 75 L60 78 L66 75 L72 78 L76 76 M24 83 L30 80 L36 83 L42 80 L48 83 L54 80 L60 83 L66 80 L72 83 L76 81",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 1.4
+        },
+        {
+          "d": "M22 34 L44 34 Q42 48 36 58 Q32 68 34 72 L22 72Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M78 34 L56 34 Q58 48 64 58 Q68 68 66 72 L78 72Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M22 34 L78 34 L78 40 Q70 44 62 40 Q54 44 46 40 Q38 44 30 40 Q26 42 22 40Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M28 42 Q27 56 29 70 M32 42 Q31 54 33 62 M72 42 Q73 56 71 70 M68 42 Q69 54 67 62",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 1.4
+        },
+        {
+          "d": "M36 18 Q30 12 36 6 Q42 0 36 -6 M52 18 Q46 12 52 6 Q58 0 52 -6 M68 18 Q62 12 68 6 Q74 0 68 -6",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2.4
+        }
+      ]
+    }
+  ]
+}

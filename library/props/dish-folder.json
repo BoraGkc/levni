@@ -1,0 +1,46 @@
+{
+  "name": "dish-folder",
+  "tags": [
+    "dosya",
+    "uydu çanağı",
+    "gizli belge",
+    "folder satellite dish classified"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/john-malkovich-sam/ici-2.json",
+      "paths": [
+        {
+          "d": "M8 30 L34 30 L40 20 L92 20 L92 92 L8 92 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M8 40 L92 40 L92 92 L8 92 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M20 52 L60 52 M20 62 L50 62 M20 72 L72 72",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M62 54 L84 54 L84 66 L62 66 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M64 20 L64 10 M56 10 Q64 -2 80 4 Q74 14 56 10 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        }
+      ]
+    }
+  ]
+}

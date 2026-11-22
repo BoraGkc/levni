@@ -1,0 +1,156 @@
+{
+ "name": "cat",
+ "tags": [
+  "kedi",
+  "sokak kedisi",
+  "cat",
+  "street cat",
+  "hayvan"
+ ],
+ "variants": [
+  {
+   "note": "sitting cat, tail curled, one dot eye",
+   "paths": [
+    {
+     "d": "M33 92 C29 64 37 52 53 52 C69 52 77 64 73 92 Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M30 90 C26 62 34 50 50 50 C66 50 74 62 70 90 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 90 C26 62 34 50 50 50 C66 50 74 62 70 90 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M67 88 C86 90 92 74 84 62",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M36 30 L37 14 L46 24 C48 23 52 23 54 24 L63 14 L64 30 C68 40 62 52 50 52 C38 52 32 40 36 30Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M44 34 L45 35",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M56 34 L57 35",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M49 42 L51 42",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "stretching cat, rump up, paws forward",
+   "paths": [
+    {
+     "d": "M19 46 C19 34 33 32 45 42 C57 52 65 60 75 62 L75 80 C59 76 43 68 33 60 L31 82 L17 82 L17 58 Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M16 44 C16 32 30 30 42 40 C54 50 62 58 72 60 L72 78 C56 74 40 66 30 58 L28 80 L14 80 L14 56 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M16 44 C16 32 30 30 42 40 C54 50 62 58 72 60 L72 78 C56 74 40 66 30 58 L28 80 L14 80 L14 56 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M16 38 Q6 24 14 12",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M64 60 L66 46 L74 54 L84 54 L90 46 L92 62 C94 74 82 80 76 80 C66 80 62 72 64 60Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M74 66 L75 67",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M60 82 L94 82",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  },
+  {
+   "note": "loaf cat from the side, simple",
+   "paths": [
+    {
+     "d": "M16 88 C10 64 24 50 42 48 L72 48 C88 50 92 74 88 88 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M43 50 C49 58 63 58 69 50 L75 50 C83 52 87 58 89 64 C73 68 55 64 43 50Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M40 48 C46 56 60 56 66 48 L72 48 C80 50 84 56 86 62 C70 66 52 62 40 48Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M16 88 C10 64 24 50 42 48 L72 48 C88 50 92 74 88 88 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M12 70 L10 52 L22 56 C26 54 30 54 34 56 L44 50 L42 70 C38 80 16 80 12 70Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 64 L21 65",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M60 88 Q80 94 94 84",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "clapper-gavel",
+  "tags": [
+    "klaket",
+    "tokmak",
+    "mahkeme",
+    "belgesel",
+    "clapperboard",
+    "gavel",
+    "documentary"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/netflix-belgeseli-the/kapak.json",
+      "paths": [
+        {
+          "d": "M8 52 L92 52 L92 94 L8 94 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M8 52 L92 52 L92 63 L8 63 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M18 52 L26 63 L32 63 L24 52 Z M38 52 L46 63 L52 63 L44 52 Z M58 52 L66 63 L72 63 L64 52 Z M78 52 L86 63 L92 63 L84 52 Z",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M16 74 H60 M16 82 H44",
+          "stroke": "ink",
+          "weight": 2.5
+        },
+        {
+          "d": "M8 52 L8 42 L70 18 L72 30 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M18 43 L24 47 L30 45 L24 40 Z M38 36 L44 40 L50 38 L44 33 Z M56 30 L62 34 L67 32 L61 27 Z",
+          "fill": "blue",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M66.6 10 L79.6 5 L90.4 33 L77.4 38 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M70 11 L81 7 M87 31 L77 35",
+          "stroke": "paper",
+          "weight": 2.5
+        },
+        {
+          "d": "M8 52 a2 2 0 1 0 0.1 0",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

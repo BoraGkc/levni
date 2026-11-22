@@ -1,0 +1,104 @@
+{
+ "name": "pylon",
+ "tags": [
+  "elektrik direği",
+  "enerji hattı",
+  "pylon",
+  "yüksek gerilim",
+  "power line"
+ ],
+ "variants": [
+  {
+   "note": "lattice tower with two cross arms",
+   "paths": [
+    {
+     "d": "M42 90 L47 18 L53 18 L58 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M44 70 L56 70 M45 52 L55 52 M46 34 L54 34 M44 70 L55 52 L45 52 L56 34 L46 34",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M22 30 L78 28",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M30 50 L70 49",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M22 30 L28 30 L28 38 L22 38 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 30 L22 40 M78 28 L78 38 M30 50 L30 58 M70 49 L70 57",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M22 40 Q8 50 0 52 M78 38 Q92 48 100 50",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  },
+  {
+   "note": "simple A-frame with three insulators, wires drooping",
+   "paths": [
+    {
+     "d": "M34 90 L48 14 L52 14 L66 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M26 24 L74 22",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M36 44 L64 43",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M40 66 L60 66 M45 44 L58 66",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M25 26 L31 26 L31 36 L25 36 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M26 24 L26 36 M74 22 L74 34 M50 22 L50 30",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M26 36 Q10 46 0 44 M74 34 Q90 44 100 42",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "hooked-envelope",
+  "tags": [
+    "envelope",
+    "fish hook",
+    "phishing",
+    "invitation"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/parti-daveti-phishing/kapak.json",
+      "paths": [
+        {
+          "d": "M8,30 H92 V76 H8 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M8,30 L50,60 L92,30 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M8,76 L38,52 M92,76 L62,52",
+          "stroke": "ink",
+          "weight": 2.5
+        },
+        {
+          "d": "M50,76 V92 Q50,106 36,104 Q27,101 29,92 M29,92 L24,97 M29,92 L35,96",
+          "stroke": "paper",
+          "weight": 7
+        }
+      ]
+    }
+  ]
+}

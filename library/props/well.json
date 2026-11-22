@@ -1,0 +1,31 @@
+{
+  "name": "well",
+  "tags": [
+    "kuyu",
+    "well"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/askeri-sir-yapay/ici-2.json",
+      "paths": [
+        {
+          "d": "M12 30 L12 80 Q50 96 88 80 L88 30 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M12 30 Q50 8 88 30 Q50 50 12 30 Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M22 52 L36 56 M50 60 L50 74 M66 56 L80 52 M30 72 L44 76 M60 76 L74 72",
+          "stroke": "ink",
+          "weight": 2.2
+        }
+      ]
+    }
+  ]
+}

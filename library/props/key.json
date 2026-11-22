@@ -1,0 +1,62 @@
+{
+ "name": "key",
+ "tags": [
+  "anahtar",
+  "kilit",
+  "erişim",
+  "key",
+  "access"
+ ],
+ "variants": [
+  {
+   "note": "classic key diagonal, mustard bow",
+   "paths": [
+    {
+     "d": "M33 18A16 15 0 1 0 33.1 18Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M30 16 A20 19 0 1 0 30.1 16 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M44 50 L86 88 M72 76 L79 67 M82 85 L90 76",
+     "stroke": "ink",
+     "weight": 9,
+     "fill": "none"
+    },
+    {
+     "d": "M26 30 A3 3 0 1 0 26.1 30 Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "upright key, paper bow with triangle hole",
+   "paths": [
+    {
+     "d": "M50 8 Q70 8 70 26 Q70 42 50 42 Q30 42 30 26 Q30 8 50 8 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 18 L58 32 L42 32 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 42 L51 90 M51 70 L64 70 M51 82 L62 82",
+     "stroke": "ink",
+     "weight": 9,
+     "fill": "none"
+    }
+   ]
+  }
+ ]
+}

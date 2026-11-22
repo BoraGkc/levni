@@ -1,0 +1,159 @@
+{
+  "name": "feather-popcorn",
+  "tags": [
+    "patlamış mısır kovası tüy",
+    "popcorn bucket feathers"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/showgirls-1995in-gosterisli/ici-1-r1.json",
+      "paths": [
+        {
+          "d": "M50 58 Q32.8 52.5 16.2 45.7 Q37.8 39.0 50 58Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M50 58 Q35.3 45.8 16.2 45.7",
+          "stroke": "ink",
+          "weight": 1.2,
+          "fill": "none"
+        },
+        {
+          "d": "M50 58 Q66.7 51.2 83.8 45.7 Q71.6 64.7 50 58Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M50 58 Q69.1 57.9 83.8 45.7",
+          "stroke": "ink",
+          "weight": 1.2,
+          "fill": "none"
+        },
+        {
+          "d": "M50 58 Q31.6 41.0 14.6 22.6 Q45.8 26.9 50 58Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M50 58 Q38.7 34.0 14.6 22.6",
+          "stroke": "ink",
+          "weight": 1.2,
+          "fill": "none"
+        },
+        {
+          "d": "M50 58 Q67.0 39.6 85.4 22.6 Q81.1 53.8 50 58Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M50 58 Q74.0 46.7 85.4 22.6",
+          "stroke": "ink",
+          "weight": 1.2,
+          "fill": "none"
+        },
+        {
+          "d": "M50 58 Q39.4 32.1 30.8 5.4 Q60.4 24.4 50 58Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M50 58 Q49.9 28.2 30.8 5.4",
+          "stroke": "ink",
+          "weight": 1.2,
+          "fill": "none"
+        },
+        {
+          "d": "M50 58 Q58.5 31.3 69.2 5.4 Q79.6 39.0 50 58Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M50 58 Q69.0 35.1 69.2 5.4",
+          "stroke": "ink",
+          "weight": 1.2,
+          "fill": "none"
+        },
+        {
+          "d": "M50 56 L53 66 L63 66 L55 72 L58 82 L50 76 L42 82 L45 72 L37 66 L47 66Z",
+          "fill": "none",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M20 56 H80 L72 98 H28Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M34 58 L38 97 M46 58 L47 97 M54 58 L53 97 M66 58 L62 97",
+          "stroke": "coral",
+          "weight": 5,
+          "fill": "none",
+          "taper": false
+        },
+        {
+          "d": "M20 54 a6 6 0 1 0 12 0 a6 6 0 1 0 -12 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M29 50 a7 7 0 1 0 14 0 a7 7 0 1 0 -14 0",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M39.5 52 a6.5 6.5 0 1 0 13.0 0 a6.5 6.5 0 1 0 -13.0 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M50 50 a7 7 0 1 0 14 0 a7 7 0 1 0 -14 0",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M61 53 a6 6 0 1 0 12 0 a6 6 0 1 0 -12 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M71 55 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M36 45 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M57 45 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M18 56 H82",
+          "stroke": "ink",
+          "weight": 3,
+          "fill": "none"
+        }
+      ]
+    }
+  ]
+}

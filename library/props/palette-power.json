@@ -1,0 +1,63 @@
+{
+  "name": "palette-power",
+  "tags": [
+    "palet",
+    "güç düğmesi",
+    "üretim",
+    "palette",
+    "power"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/camille-henrot-sanat/ici-2-alt2.json",
+      "paths": [
+        {
+          "d": "M50 6 Q92 6 94 44 Q96 76 66 80 Q54 82 56 90 Q58 98 40 96 Q8 92 6 50 Q4 8 50 6Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.8
+        },
+        {
+          "d": "M30 22 a8 8 0 1 0 0.1 0Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M52 14 a8 8 0 1 0 0.1 0Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M74 22 a8 8 0 1 0 0.1 0Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M82 47 a7 7 0 1 0 0.1 0Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M24 49 a7 7 0 1 0 0.1 0Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M41 52 A14 14 0 1 0 65 52",
+          "stroke": "blue",
+          "weight": 6
+        },
+        {
+          "d": "M53 38 V54",
+          "stroke": "blue",
+          "weight": 6
+        }
+      ]
+    }
+  ]
+}

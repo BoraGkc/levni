@@ -1,0 +1,62 @@
+{
+  "name": "phone-water-basin-drop",
+  "tags": [
+    "telefon",
+    "su",
+    "damla",
+    "havuz",
+    "damlaya damlaya göl",
+    "phone",
+    "water basin",
+    "drop"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/naza-belgeseli-gazze/ici-2.json",
+      "paths": [
+        {
+          "d": "M30 2 H70 Q76 2 76 8 V92 Q76 98 70 98 H30 Q24 98 24 92 V8 Q24 2 30 2Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M30 10 H70 V88 H30Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M30 56 Q36 51 42 56 T54 56 T66 56 T70 54 V88 H30Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M38 66 Q50 71 62 66",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 1.6
+        },
+        {
+          "d": "M50 20 Q56 32 50 37 Q44 32 50 20Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M40 56 Q50 61 60 56",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 1.8
+        },
+        {
+          "d": "M46 93 H54",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

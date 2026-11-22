@@ -1,0 +1,45 @@
+{
+  "name": "cloche-lid",
+  "tags": [
+    "cloche",
+    "servis kapağı",
+    "lid"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/oobah-butler-zengin/ici-1-alt.json",
+      "paths": [
+        {
+          "d": "M6 80 L94 80 Q94 88 86 88 L14 88 Q6 88 6 80 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M10 78 Q10 26 50 26 Q90 26 90 78 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M20 70 Q20 42 38 34",
+          "fill": "none",
+          "stroke": "tone",
+          "weight": 2.4
+        },
+        {
+          "d": "M50 26 Q38 14 42 8 Q47 0 54 1 Q64 2 64 10 Q64 16 50 26 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M52 8 m-3 0 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0",
+          "fill": "paper",
+          "stroke": "none",
+          "weight": 0
+        }
+      ]
+    }
+  ]
+}

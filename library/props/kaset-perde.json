@@ -1,0 +1,68 @@
+{
+  "name": "kaset-perde",
+  "tags": [
+    "kaset",
+    "perde",
+    "tiyatro",
+    "cassette"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/rent-broadway-efsanesinin/kapak.json",
+      "paths": [
+        {
+          "d": "M4 18 L96 18 L96 82 L4 82 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M10 23 L90 23 L90 46 L10 46 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M12 25 L42 25 Q37 36 39 45 L12 45 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M88 25 L58 25 Q63 36 61 45 L88 45 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M24 54 L76 54 L82 78 L18 78 Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M29 64 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0",
+          "fill": "paper",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M57 64 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0",
+          "fill": "paper",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M36 59 L36 69 M31 64 L41 64 M64 59 L64 69 M59 64 L69 64",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M43 64 L57 64",
+          "stroke": "paper",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

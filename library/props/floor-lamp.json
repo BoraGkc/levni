@@ -1,0 +1,31 @@
+{
+  "name": "floor-lamp",
+  "tags": [
+    "lambader",
+    "lamba",
+    "floor lamp"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-compose/orna/ici-1.json",
+      "paths": [
+        {
+          "d": "M50 8 L50 98",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M28 30 Q28 8 50 8 Q72 8 72 30 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M36 98 L64 98",
+          "stroke": "ink",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}

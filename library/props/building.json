@@ -1,0 +1,80 @@
+{
+ "name": "building",
+ "tags": [
+  "bina",
+  "gökdelen",
+  "building",
+  "ofis",
+  "şehir"
+ ],
+ "variants": [
+  {
+   "note": "tall facade, window grid, coral band",
+   "paths": [
+    {
+     "d": "M33 14 L77 12 L75 92 L34 92 Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M28 90 L30 12 L72 10 L70 90 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M36 40 L44 41 L43 50 L37 49 Z M50 39 L58 40 L57 49 L51 48 Z M63 38 L69 39 L68 48 L64 47 Z M36 58 L44 59 L43 68 L37 67 Z M50 57 L58 58 L57 67 L51 66 Z M63 56 L69 57 L68 66 L64 65 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M30 24 L71 22",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M46 90 L46 78 L55 78 L55 90",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "two blocks, tall and short, ribbed windows",
+   "paths": [
+    {
+     "d": "M60 38 L90 40 L90 92 L62 92 Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M14 90 L16 10 L52 12 L51 90 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M52 36 L84 38 L84 90 L52 90 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M22 24 L44 24 M22 36 L44 36 M22 48 L45 48 M22 60 L45 60 M22 72 L45 72",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M59 48 L77 48 M59 60 L77 60 M59 72 L77 72",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

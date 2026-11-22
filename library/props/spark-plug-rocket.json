@@ -1,0 +1,70 @@
+{
+  "name": "spark-plug-rocket",
+  "tags": [
+    "buji roket",
+    "kivilcim",
+    "tamirci",
+    "cesaret"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/stunt-driver-roketli/ici-1.json",
+      "paths": [
+        {
+          "d": "M40 80 Q34 92 44 100 Q46 92 50 96 Q54 90 56 100 Q66 92 60 80 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M45 82 Q43 90 50 96 Q57 90 55 82 Z",
+          "fill": "coral",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M41 62 L59 62 L59 80 L41 80 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M41 66 L59 66 M41 70 L59 70 M41 74 L59 74 M41 78 L59 78",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2
+        },
+        {
+          "d": "M41 66 L26 84 L26 90 L41 80 Z M59 66 L74 84 L74 90 L59 80 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M34 50 L66 50 L70 56 L66 62 L34 62 L30 56 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M38 50 L38 16 Q38 10 44 10 L56 10 Q62 10 62 16 L62 50 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M36 24 L64 24 M36 32 L64 32 M36 40 L64 40",
+          "fill": "none",
+          "stroke": "blue",
+          "weight": 3.2
+        },
+        {
+          "d": "M44 10 L44 4 Q50 -4 56 4 L56 10 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.6
+        }
+      ]
+    }
+  ]
+}

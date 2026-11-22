@@ -1,0 +1,47 @@
+{
+  "name": "chip-mic",
+  "tags": [
+    "mikrofon",
+    "çip",
+    "podcast",
+    "teknoloji",
+    "microphone chip"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/kadinlar-teknolojide-gucu/kapak-alt.json",
+      "paths": [
+        {
+          "d": "M50 56 L50 88 M30 92 L70 92 M34 62 Q34 82 50 82 Q66 82 66 62",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 3.2
+        },
+        {
+          "d": "M16 14 L27 14 M16 24 L27 24 M16 34 L27 34 M16 44 L27 44 M73 14 L84 14 M73 24 L84 24 M73 34 L84 34 M73 44 L84 44",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M26 4 L74 4 Q76 4 76 6 L76 52 Q76 54 74 54 L26 54 Q24 54 24 52 L24 6 Q24 4 26 4 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M34 12 L66 12 L66 46 L34 46 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M38 20 L62 20 M38 29 L62 29 M38 38 L62 38",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        }
+      ]
+    }
+  ]
+}

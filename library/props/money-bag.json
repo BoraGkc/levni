@@ -1,0 +1,74 @@
+{
+ "name": "money-bag",
+ "tags": [
+  "para çantası",
+  "para kesesi",
+  "servet",
+  "money bag",
+  "kazanç"
+ ],
+ "variants": [
+  {
+   "note": "tied sack, coral knot band",
+   "paths": [
+    {
+     "d": "M38 20 L62 20 L56 34 Q90 48 88 72 Q86 92 50 92 Q14 92 12 72 Q10 48 44 34 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M39 30 L67 30 L65 40 L41 40 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 28 L64 28 L62 38 L38 38 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M38 20 Q30 8 40 8 M62 20 Q70 8 60 8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 52 L50 78 M42 58 Q50 54 58 58 M42 72 Q50 78 58 72",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "simpler sack, mustard tie, blank",
+   "paths": [
+    {
+     "d": "M40 24 L60 24 Q92 44 86 74 Q80 92 50 92 Q20 92 14 74 Q8 44 40 24 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M39 24 L67 24 L67 32 L39 32 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 22 L64 22 L64 30 L36 30 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M40 22 L34 10 M60 22 L66 10",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  }
+ ]
+}

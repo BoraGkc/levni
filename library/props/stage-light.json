@@ -1,0 +1,35 @@
+{
+  "name": "stage-light",
+  "tags": [
+    "spot ışığı",
+    "sahne ışığı",
+    "stüdyo lambası",
+    "spotlight",
+    "stage light"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/netflix-belgeseli-the/ici-1.json",
+      "paths": [
+        {
+          "d": "M18 30 L74 14 L74 66 L18 52 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.5
+        },
+        {
+          "d": "M74 12 Q84 40 74 68 Q68 40 74 12Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M8 36 L18 36 L18 46 L8 46 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.5
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "name": "chip-clapper",
+  "tags": [
+    "klaket",
+    "çip",
+    "clapperboard",
+    "chip"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/bu-haftanin-yeni/kapak-alt2.json",
+      "paths": [
+        {
+          "d": "M12 40 H88 V92 H12 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M12 48 H2 M88 48 H98 M12 57 H2 M88 57 H98 M12 66 H2 M88 66 H98 M12 75 H2 M88 75 H98 M12 84 H2 M88 84 H98 ",
+          "stroke": "paper",
+          "weight": 3.2
+        },
+        {
+          "d": "M32 54 H68 V82 H32 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M38 60 H62 V76 H38 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M17 45 a2.4 2.4 0 1 0 0.1 0Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M12 36 L8 18 L84 6 L88 24 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M18 34 L15 19 L25 17.5 L28 32.5 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M35 34 L32 19 L42 17.5 L45 32.5 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M52 34 L49 19 L59 17.5 L62 32.5 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M69 34 L66 19 L76 17.5 L79 32.5 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M12 40 L12 36 L88 24 L88 40",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M10 38 a3 3 0 1 0 0.1 0Z",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        }
+      ]
+    }
+  ]
+}

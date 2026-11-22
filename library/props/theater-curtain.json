@@ -1,0 +1,160 @@
+{
+ "name": "theater-curtain",
+ "tags": [
+  "perde",
+  "tiyatro",
+  "sahne",
+  "curtain",
+  "theater",
+  "stage"
+ ],
+ "variants": [
+  {
+   "note": "stage with two tied-back coral curtains and valance",
+   "paths": [
+    {
+     "d": "M18 24 L82 24 L82 86 L18 86 Z",
+     "fill": "tone",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M 17 14 L 53 14 Q 45 42 33 54 Q 27 72 29 90 L 15 90 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M 89 14 L 53 14 Q 61 42 73 54 Q 79 72 77 90 L 91 90 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M12 12 L50 12 Q42 40 30 52 Q24 70 26 88 L12 88 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M88 12 L50 12 Q58 40 70 52 Q76 70 74 88 L88 88 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M18 28 Q22 52 18 80 M23 36 Q26 56 23 80 M82 28 Q78 52 82 80 M77 36 Q74 56 77 80",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M10 90 L90 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M10 8 L90 8 L88 18 Q50 24 12 18 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  },
+  {
+   "note": "bold simple: curtains drawn to the sides",
+   "paths": [
+    {
+     "d": "M 15 16 L 49 16 Q 43 52 37 90 L 15 90 Z",
+     "fill": "mustard",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M 91 16 L 57 16 Q 63 52 69 90 L 91 90 Z",
+     "fill": "mustard",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M12 14 L46 14 Q40 50 34 88 L12 88 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M88 14 L54 14 Q60 50 66 88 L88 88 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M10 90 L90 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  },
+  {
+   "note": "half-open curtain with spotlight floor",
+   "paths": [
+    {
+     "d": "M30 62 L70 62 L84 88 L16 88 Z",
+     "fill": "tone-mustard",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M 17 12 L 89 12 L 89 40 Q 53 52 17 40 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M12 10 L86 10 L86 38 Q50 50 14 38 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M26 14 Q24 30 28 42 M42 14 Q40 32 44 46 M58 14 Q60 32 56 46 M74 14 Q76 30 72 42",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M 15 40 Q 21 64 17 90 L 27 90 Q 29 64 25 42 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M12 38 Q18 62 14 88 L24 88 Q26 62 22 40",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M 91 40 Q 83 64 87 90 L 77 90 Q 77 64 81 42 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M88 38 Q80 62 84 88 L74 88 Q74 62 78 40",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M10 90 L90 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "name": "exclamation",
+ "tags": [
+  "ünlem",
+  "dikkat",
+  "exclamation",
+  "alert",
+  "önemli"
+ ],
+ "variants": [
+  {
+   "note": "fat outlined coral bar and dot",
+   "paths": [
+    {
+     "d": "M50 14 Q53 40 49 62",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 24
+    },
+    {
+     "d": "M52 16Q55 42 51 64",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 12
+    },
+    {
+     "d": "M49 82 L49 83",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 24
+    },
+    {
+     "d": "M51 84L51 85",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 12
+    }
+   ]
+  },
+  {
+   "note": "tapered paper bar, round dot, mustard shift",
+   "paths": [
+    {
+     "d": "M43 15Q53 11 63 15Q61 43 58 65Q53 69 48 65Q45 41 43 15Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M40 12 Q50 8 60 12 Q58 40 55 62 Q50 66 45 62 Q42 38 40 12 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M46 85Q46 78 53 78Q60 78 60 85Q60 92 53 92Q46 92 46 85Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M43 82 Q43 75 50 75 Q57 75 57 82 Q57 89 50 89 Q43 89 43 82 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "double thin exclamation, coral dots",
+   "paths": [
+    {
+     "d": "M34 14 Q36 38 33 62",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M66 18 Q68 40 65 60",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M27 80 Q27 74 33 74 Q39 74 39 80 Q39 86 33 86 Q27 86 27 80 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M59 78 Q59 72 65 72 Q71 72 71 78 Q71 84 65 84 Q59 84 59 78 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

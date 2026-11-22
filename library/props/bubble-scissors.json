@@ -1,0 +1,74 @@
+{
+  "name": "bubble-scissors",
+  "tags": [
+    "makas",
+    "konuşma balonu",
+    "kesmek",
+    "token",
+    "scissors",
+    "speech bubble",
+    "cut",
+    "temizlik"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/openai-arastirmacisi-llm/ici-1-alt.json",
+      "paths": [
+        {
+          "d": "M76 45 L110 45 L110 55 L76 55 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M86 45 L86 55 M96 45 L96 55 M106 45 L106 55",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M44 48 L96 27 L97 34 L50 56 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M44 52 L96 73 L97 66 L50 44 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M2 8 Q2 2 8 2 L30 2 Q36 2 36 8 L36 22 Q36 28 30 28 L36 28 L46 46 L26 28 L8 28 Q2 28 2 22 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M9 11 L28 11 M9 19 L24 19",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2.6
+        },
+        {
+          "d": "M2 92 Q2 98 8 98 L30 98 Q36 98 36 92 L36 78 Q36 72 30 72 L36 72 L46 54 L26 72 L8 72 Q2 72 2 78 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M9 83 L28 83 M9 91 L24 91",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M46 50 m-3.8 0 a3.8 3.8 0 1 0 7.6 0 a3.8 3.8 0 1 0 -7.6 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.2
+        }
+      ]
+    }
+  ]
+}

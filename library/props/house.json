@@ -1,0 +1,92 @@
+{
+ "name": "house",
+ "tags": [
+  "ev",
+  "konut",
+  "house",
+  "home",
+  "emlak"
+ ],
+ "variants": [
+  {
+   "note": "front view, gable roof, chimney, coral roof",
+   "paths": [
+    {
+     "d": "M52 12 L92 46 L14 47 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M20 46 L20 90 L80 90 L80 46 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M66 24 L66 14 L74 14 L74 36 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M8 46 L48 10 L90 44 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M40 90 L40 62 L56 62 L56 90",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M64 58 L74 59 L73 68 L65 67 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M51.9 26 A0.1 0.09300000000000001 0 1 0 52.1 26 A0.1 0.09300000000000001 0 1 0 51.9 26 Z",
+     "fill": "none",
+     "stroke": "none",
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "note": "simple small house, tone walls, door and one window",
+   "paths": [
+    {
+     "d": "M26 52 L78 54 L77 92 L28 92 Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M20 48 L20 88 L74 88 L74 48 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M12 50 L47 14 L82 48 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M38 88 L38 64 L54 64 L54 88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M60 58 L68 58 L68 66 L60 66 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

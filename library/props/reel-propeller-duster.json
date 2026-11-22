@@ -1,0 +1,90 @@
+{
+  "name": "reel-propeller-duster",
+  "tags": [
+    "tarım uçağı",
+    "film makarası",
+    "pervane",
+    "crop duster",
+    "film reel",
+    "north by northwest"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/eva-marie-saint/ici-2.json",
+      "paths": [
+        {
+          "d": "M1,52 a19,19 0 1,0 38,0 a19,19 0 1,0 -38,0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.6
+        },
+        {
+          "d": "M16.5,52 a3.5,3.5 0 1,0 7.0,0 a3.5,3.5 0 1,0 -7.0,0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M15.8,41.5 a4.2,4.2 0 1,0 8.4,0 a4.2,4.2 0 1,0 -8.4,0 M25.79,48.76 a4.2,4.2 0 1,0 8.4,0 a4.2,4.2 0 1,0 -8.4,0 M21.970000000000002,60.49 a4.2,4.2 0 1,0 8.4,0 a4.2,4.2 0 1,0 -8.4,0 M9.629999999999999,60.49 a4.2,4.2 0 1,0 8.4,0 a4.2,4.2 0 1,0 -8.4,0 M5.81,48.76 a4.2,4.2 0 1,0 8.4,0 a4.2,4.2 0 1,0 -8.4,0 ",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M34 30 H80 V37 H34Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M42 37 L46 48 M72 37 L68 48",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M36 48 H82 L98 52 V58 L82 62 H36Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M52 48 Q56 40 66 48Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M90 52 L94 36 H100 V54Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.8
+        },
+        {
+          "d": "M84 58 L100 60 V65 L84 62Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M44 62 V72 M40 72 H54 M70 62 V72 M66 72 H80",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M26 52 H36",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M6 28 Q2 52 6 76",
+          "stroke": "blue",
+          "weight": 2.8,
+          "dash": [
+            4,
+            3
+          ]
+        }
+      ]
+    }
+  ]
+}

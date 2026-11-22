@@ -1,0 +1,39 @@
+{
+  "name": "thermometer",
+  "tags": [
+    "termometre",
+    "ateş",
+    "hastalık",
+    "thermometer",
+    "fever"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/bill-irwin-uyarlamasi/kapak.json",
+      "paths": [
+        {
+          "d": "M44 6 Q50 0 56 6 L56 66 Q66 72 66 82 Q66 94 50 94 Q34 94 34 82 Q34 72 44 66 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M50 30 L50 80",
+          "stroke": "coral",
+          "weight": 5
+        },
+        {
+          "d": "M56 22 L62 22 M56 34 L62 34 M56 46 L62 46",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M50 80 Q56 80 56 84 Q56 90 50 90 Q44 90 44 84 Q44 80 50 80 Z",
+          "fill": "coral",
+          "stroke": "coral",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

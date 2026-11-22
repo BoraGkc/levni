@@ -1,0 +1,108 @@
+{
+ "name": "chart-board",
+ "tags": [
+  "grafik",
+  "pano",
+  "çubuk grafik",
+  "chart",
+  "easel",
+  "bar chart"
+ ],
+ "variants": [
+  {
+   "note": "easel with board, three coral bars",
+   "paths": [
+    {
+     "d": "M30 66 L20 91 M70 66 L80 91 M50 64 L52 91",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M14 12 L86 14 L85 66 L15 64 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M28 60 L28 48 L38 48 L38 60 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M44 60 L44 36 L54 36 L54 60 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M60 60 L60 28 L70 28 L70 60 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M25 58 L25 46 L35 46 L35 58 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M41 58 L41 34 L51 34 L51 58 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M57 58 L57 26 L67 26 L67 58 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M20 58 L78 59",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "tone board on a post, mustard bars rising",
+   "paths": [
+    {
+     "d": "M50 64 L50 90 M34 90 L66 90",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M10 14 L90 12 L89 62 L11 64 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M25 56 L25 44 L35 44 L35 56 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M43 56 L43 34 L53 34 L53 56 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M61 56 L61 26 L71 26 L71 56 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M79 56 L79 20 L86 20 L86 56 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 54 L22 42 L32 42 L32 54 M40 54 L40 32 L50 32 L50 54 M58 54 L58 24 L68 24 L68 54 M76 54 L76 18 L83 18 L83 54",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

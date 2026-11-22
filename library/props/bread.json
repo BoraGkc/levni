@@ -1,0 +1,60 @@
+{
+ "name": "bread",
+ "tags": [
+  "ekmek",
+  "somun",
+  "bread",
+  "loaf",
+  "fırın"
+ ],
+ "variants": [
+  {
+   "note": "round loaf with three score marks",
+   "paths": [
+    {
+     "d": "M15 65 C12 43 29 33 53 33 C77 33 94 43 91 65 C91 81 83 87 53 87 C23 87 15 81 15 65 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M12 62 C9 40 26 30 50 30 C74 30 91 40 88 62 C88 78 80 84 50 84 C20 84 12 78 12 62 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M32 40 L40 60 M50 38 L58 60 M68 42 L74 60",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  },
+  {
+   "note": "baguette on a plate",
+   "paths": [
+    {
+     "d": "M6 66 L94 66 C92 82 72 88 50 88 C28 88 8 82 6 66 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 59 C16 51 22 43 30 45 L82 29 C90 27 96 35 90 41 L36 65 C30 67 22 65 20 59 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M18 56 C14 48 20 40 28 42 L80 26 C88 24 94 32 88 38 L34 62 C28 64 20 62 18 56 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M44 48 L48 38 M58 42 L62 32 M72 36 L76 27",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

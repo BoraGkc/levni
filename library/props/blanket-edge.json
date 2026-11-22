@@ -1,0 +1,26 @@
+{
+  "name": "blanket-edge",
+  "tags": [
+    "battaniye",
+    "blanket",
+    "uyku"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/chris-rock-affetme/ici-2.json",
+      "paths": [
+        {
+          "d": "M0 30 Q25 18 55 26 Q80 20 100 28 V100 H0Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M0 44 Q25 34 55 41 Q80 36 100 43 M0 58 Q25 48 55 55 Q80 50 100 57",
+          "stroke": "paper",
+          "weight": 2.4
+        }
+      ]
+    }
+  ]
+}

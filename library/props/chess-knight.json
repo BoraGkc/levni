@@ -1,0 +1,130 @@
+{
+ "name": "chess-knight",
+ "tags": [
+  "at",
+  "satranc",
+  "chess",
+  "knight",
+  "strateji",
+  "oyun"
+ ],
+ "variants": [
+  {
+   "note": "knight with mane lines, mustard body",
+   "paths": [
+    {
+     "d": "M 33 82 Q 33 64 43 52 Q 33 54 29 59 Q 23 56 25 49 Q 29 40 41 30 L 43 17 L 50 24 Q 55 15 60 16 L 61 26 Q 79 36 77 60 Q 76 72 75 82 Z",
+     "fill": "mustard",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M30 80 Q30 62 40 50 Q30 52 26 57 Q20 54 22 47 Q26 38 38 28 L40 15 L47 22 Q52 13 57 14 L58 24 Q76 34 74 58 Q73 70 72 80 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M24 80 L76 80 Q80 80 80 86 Q80 92 76 92 L24 92 Q20 92 20 86 Q20 80 24 80 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M44 33 L44.2 33.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M58 24 Q64 36 62 52 M66 34 Q70 46 68 58",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M24 50 L32 50",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "bold solid ink silhouette",
+   "paths": [
+    {
+     "d": "M30 80 Q30 62 40 50 Q30 52 26 57 Q20 54 22 47 Q26 38 38 28 L40 15 L47 22 Q52 13 57 14 L58 24 Q76 34 74 58 Q73 70 72 80 Z",
+     "fill": "ink",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M24 80 L76 80 Q80 80 80 86 Q80 92 76 92 L24 92 Q20 92 20 86 Q20 80 24 80 Z",
+     "fill": "ink",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41 33 Q41 30.24 44 30.24 Q47 30.24 47 33 Q47 35.76 44 35.76 Q41 35.76 41 33 Z",
+     "fill": "paper",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M58 26 Q64 38 62 52",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  },
+  {
+   "note": "knight on a checker tile, coral",
+   "paths": [
+    {
+     "d": "M10 82 L90 82 L90 92 L10 92 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M 50 82 L 90 82 L 90 92 L 50 92 Z",
+     "fill": "tone",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M50 82 L50 92",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M 34.6 79.6 Q 34.6 63 43.8 52 Q 34.6 53.8 30.9 58.4 Q 25.4 55.7 27.2 49.2 Q 30.9 41 42 31.8 L 43.8 19.8 L 50.2 26.2 Q 54.8 18 59.4 18.9 L 60.4 28.1 Q 76.9 37.3 75.1 59.4 Q 74.2 70.4 73.2 79.6 Z",
+     "fill": "coral",
+     "stroke": "none",
+     "weight": 0
+    },
+    {
+     "d": "M 31.6 77.6 Q 31.6 61 40.8 50 Q 31.6 51.8 27.9 56.4 Q 22.4 53.7 24.2 47.2 Q 27.9 39 39 29.8 L 40.8 17.8 L 47.2 24.2 Q 51.8 16 56.4 16.9 L 57.4 26.1 Q 73.9 35.3 72.1 57.4 Q 71.2 68.4 70.2 77.6 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M45 34 L45.2 34.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M58 26 Q64 38 62 52",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

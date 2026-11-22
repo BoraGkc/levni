@@ -1,0 +1,83 @@
+{
+  "name": "defter-sehir",
+  "tags": [
+    "defter",
+    "şehir",
+    "poster"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/rent-broadway-efsanesinin/ici-1-r0.json",
+      "paths": [
+        {
+          "d": "M8 14 L92 14 L92 94 L8 94 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M16 8 L16 20 M28 8 L28 20 M40 8 L40 20 M52 8 L52 20 M64 8 L64 20 M76 8 L76 20",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M14 80 L14 56 L23 56 L23 80",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M25 80 L25 36 L34 36 L34 80",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M36 80 L36 48 L45 48 L45 80",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M47 80 L47 20 L56 20 L56 80",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M58 80 L58 44 L67 44 L67 80",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M69 80 L69 28 L78 28 L78 80",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M80 80 L80 52 L89 52 L89 80",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M14 80 L90 80",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M16 26 Q30 20 44 28 T72 26",
+          "stroke": "blue",
+          "weight": 3
+        },
+        {
+          "d": "M70 40 Q86 46 80 60 M80 60 L74 56 M80 60 L86 56",
+          "stroke": "coral",
+          "weight": 4
+        }
+      ]
+    }
+  ]
+}

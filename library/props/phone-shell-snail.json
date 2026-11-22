@@ -1,0 +1,70 @@
+{
+  "name": "phone-shell-snail",
+  "tags": [
+    "salyangoz",
+    "telefon",
+    "yavaş",
+    "anlamlı ilişki"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/upward-flortte-chivalry/ici-2.json",
+      "paths": [
+        {
+          "d": "M4 78 Q4 70 16 70 L60 70 Q84 70 90 52 Q92 44 88 36 Q96 34 98 44 Q100 64 84 80 Q74 88 50 88 L12 88 Q4 88 4 78 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M90 40 L86 22",
+          "stroke": "ink",
+          "weight": 3,
+          "taper": false
+        },
+        {
+          "d": "M82.6 20 a3.4 3.4 0 1 0 6.8 0 a3.4 3.4 0 1 0 -6.8 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M95 42 L98 26",
+          "stroke": "ink",
+          "weight": 3,
+          "taper": false
+        },
+        {
+          "d": "M94.6 24 a3.4 3.4 0 1 0 6.8 0 a3.4 3.4 0 1 0 -6.8 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M26 70 L38 20 Q40 14 46 14 L62 14 Q68 14 66 20 L58 70 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M30 62 L40 24 L62 24 L54 62 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M36 34 L52 34 L50 42 L34 42 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M33 48 L48 48 L47 54 L32 54 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.4
+        }
+      ]
+    }
+  ]
+}

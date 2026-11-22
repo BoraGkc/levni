@@ -1,0 +1,122 @@
+{
+ "name": "factory",
+ "tags": [
+  "fabrika",
+  "sanayi",
+  "factory",
+  "üretim",
+  "duman",
+  "industry"
+ ],
+ "variants": [
+  {
+   "note": "sawtooth roof, tall chimney, smoke puffs",
+   "paths": [
+    {
+     "d": "M20 40 L24 28 L38 40 L42 28 L58 42 L60 90 L22 92 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M14 90 L15 42 L28 28 L28 42 L46 28 L46 42 L64 28 L64 42 L84 42 L83 90 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M68 42 L69 18 L80 18 L80 42",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66 20 L82 20 L82 26 L66 26 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M69 10 A5 4.65 0 1 0 79 10 A5 4.65 0 1 0 69 10 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M80 5 A4 3.6 0 1 0 88 5 A4 3.6 0 1 0 80 5 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M24 56 L32 57 L31 66 L25 65 Z M38 56 L46 57 L45 66 L39 65 Z M52 56 L60 57 L59 66 L53 65 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M66 90 L66 66 L78 66 L78 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "low hall, two chimneys, mustard smoke",
+   "paths": [
+    {
+     "d": "M10 90 L12 54 L88 52 L90 90 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 54 L20 20 L31 20 L31 54",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M52 52 L52 28 L62 28 L62 52",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16 22 L34 22 L34 28 L16 28 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M21 12 A6 5.58 0 1 0 33 12 A6 5.58 0 1 0 21 12 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M35.5 6 A4.5 4.1850000000000005 0 1 0 44.5 6 A4.5 4.1850000000000005 0 1 0 35.5 6 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M53 20 A5 4.65 0 1 0 63 20 A5 4.65 0 1 0 53 20 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M20 66 L36 66 M44 66 L60 66 M68 66 L82 66",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M70 90 L70 74 L82 74 L82 90",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

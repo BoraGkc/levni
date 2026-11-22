@@ -1,0 +1,49 @@
+{
+  "name": "bubble-hook-coin",
+  "tags": [
+    "konuşma balonu",
+    "olta",
+    "para",
+    "hırsızlık"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/yapay-zeka-komedyen/ici-2.json",
+      "paths": [
+        {
+          "d": "M14 6 h72 a8 8 0 0 1 8 8 v34 a8 8 0 0 1 -8 8 h-30 L50 56 L50 66 C50 78 50 82 56 86 C62 90 70 86 68 80 L74 80 C76 92 62 98 52 92 C42 86 44 78 44 66 L44 56 h-30 a8 8 0 0 1 -8 -8 v-34 a8 8 0 0 1 8 -8 z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3.4
+        },
+        {
+          "d": "M29.5,30 a4.5,4.5 0 1,0 9,0 a4.5,4.5 0 1,0 -9,0",
+          "fill": "coral"
+        },
+        {
+          "d": "M45.5,30 a4.5,4.5 0 1,0 9,0 a4.5,4.5 0 1,0 -9,0",
+          "fill": "coral"
+        },
+        {
+          "d": "M61.5,30 a4.5,4.5 0 1,0 9,0 a4.5,4.5 0 1,0 -9,0",
+          "fill": "coral"
+        },
+        {
+          "d": "M69.9,94 a0.1,0.1 0 1,0 0.2,0 a0.1,0.1 0 1,0 -0.2,0"
+        },
+        {
+          "d": "M74,86 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M82 81 v10 M79 84 q3 -3 6 0 q-3 3 -6 3 q3 3 0 3",
+          "stroke": "ink",
+          "weight": 1.6,
+          "taper": false
+        }
+      ]
+    }
+  ]
+}

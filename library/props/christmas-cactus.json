@@ -1,0 +1,105 @@
+{
+  "name": "christmas-cactus",
+  "tags": [
+    "kaktüs",
+    "noel",
+    "ağaç",
+    "kitap",
+    "süs",
+    "cactus",
+    "christmas tree",
+    "book ornament",
+    "çöl"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/other-desert-cities/kapak.json",
+      "paths": [
+        {
+          "d": "M40 98 L40 22 Q40 6 50 6 Q60 6 60 22 L60 98 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M40 70 L28 70 Q18 70 18 60 L18 42 Q18 34 26 34 Q34 34 34 42 L34 58 L40 58 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M60 58 L72 58 Q82 58 82 48 L82 34 Q82 26 74 26 Q66 26 66 34 L66 46 L60 46 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M50 -9 L53 -1 L61 -1 L55 4 L57 12 L50 7 L43 12 L45 4 L39 -1 L47 -1 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.2
+        },
+        {
+          "d": "M50 28 m-4.4 0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M50 52 m-4.4 0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M50 76 m-4.4 0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M26 50 m-3.6 0 a3.6 3.6 0 1 0 7.2 0 a3.6 3.6 0 1 0 -7.2 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M74 38 m-3.6 0 a3.6 3.6 0 1 0 7.2 0 a3.6 3.6 0 1 0 -7.2 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.8
+        },
+        {
+          "d": "M78 52 L78 66",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M70 66 L88 66 L88 84 L70 84 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M70 66 L74 66 L74 84 L70 84 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.6
+        },
+        {
+          "d": "M77 72 L85 72 M77 77 L83 77",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 1.4
+        },
+        {
+          "d": "M30 98 L70 98",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

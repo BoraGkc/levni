@@ -1,0 +1,125 @@
+{
+ "name": "umbrella",
+ "tags": [
+  "şemsiye",
+  "umbrella",
+  "yağmur",
+  "rain"
+ ],
+ "variants": [
+  {
+   "note": "open umbrella with hooked handle",
+   "paths": [
+    {
+     "d": "M11 54 Q13 18 53 16 Q93 18 95 54 Q85 46 74 54 Q64 46 53 54 Q42 46 32 54 Q21 46 11 54Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M8 52 Q10 16 50 14 Q90 16 92 52 Q82 44 71 52 Q61 44 50 52 Q39 44 29 52 Q18 44 8 52Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M8 52 Q10 16 50 14 Q90 16 92 52 Q82 44 71 52 Q61 44 50 52 Q39 44 29 52 Q18 44 8 52Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 14 L50 8 M50 52 L50 82 Q50 92 40 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M31 24 Q28 38 29 52 M69 24 Q72 38 71 52",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "closed umbrella standing",
+   "paths": [
+    {
+     "d": "M47 10 C61 32 65 56 63 76 L41 76 C41 56 43 32 47 10Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M44 8 C58 30 62 54 60 74 L38 74 C38 54 40 30 44 8Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M44 8 C58 30 62 54 60 74 L38 74 C38 54 40 30 44 8Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M44 8 L45 2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M46 30 Q50 52 50 74",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 74 L50 88 Q50 95 40 92",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "umbrella with rain drops",
+   "paths": [
+    {
+     "d": "M13 56 Q15 22 53 20 Q91 22 93 56 Q83 48 73 56 Q63 48 53 56 Q43 48 33 56 Q23 48 13 56Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M10 54 Q12 20 50 18 Q88 20 90 54 Q80 46 70 54 Q60 46 50 54 Q40 46 30 54 Q20 46 10 54Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M10 54 Q12 20 50 18 Q88 20 90 54 Q80 46 70 54 Q60 46 50 54 Q40 46 30 54 Q20 46 10 54Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 18 L50 10 M50 54 L50 80 Q50 90 62 88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M14 62 L10 72 M30 66 L26 76 M70 66 L66 76 M88 62 L84 72",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M22 76 L18 86 M78 78 L74 88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

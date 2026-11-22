@@ -1,0 +1,74 @@
+{
+ "name": "microphone",
+ "tags": [
+  "mikrofon",
+  "mic",
+  "stüdyo mikrofonu",
+  "podcast",
+  "microphone"
+ ],
+ "variants": [
+  {
+   "note": "studio mic on stand, coral grille",
+   "paths": [
+    {
+     "d": "M50 56 L50 84 M34 90 L66 90 M50 84 L36 90 M50 84 L64 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M31 40 Q31 62 50 62 Q69 62 69 40",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M41 14 Q53 10 65 14 L66 44 Q53 52 40 44 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M37 11 Q50 7 62 11 L63 41 Q50 49 37 41 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M38 22 L62 22 M38 31 L62 31",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "mic on boom, mustard pop-filter",
+   "paths": [
+    {
+     "d": "M16 90 L84 90 M30 90 L30 28 Q30 14 46 14 L56 14",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M57 24 Q73 22 75 36 Q75 50 59 50 Q51 42 57 24 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M53 20 Q69 18 71 32 Q71 46 55 46 Q47 38 53 20 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M56 28 L66 28 M55 36 L67 36",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

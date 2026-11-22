@@ -1,0 +1,75 @@
+{
+  "name": "talk-desk-mic-chat",
+  "tags": [
+    "talk show masasi",
+    "sohbet balonu",
+    "mikrofon",
+    "komedi programi",
+    "late night desk",
+    "chat bubble"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/jimmy-kimmel-trump/ici-1.json",
+      "paths": [
+        {
+          "d": "M4 46 L96 46 L100 56 L0 56 Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M6 56 L94 56 L94 120 L6 120 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M14 66 L86 66 L86 112 L14 112 Z",
+          "fill": "none",
+          "stroke": "paper",
+          "weight": 2.4
+        },
+        {
+          "d": "M48 46 L48 24 Q48 14 56 14 L72 14 Q80 14 80 24 L80 32 Q80 40 72 40 L62 40 L56 46 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M57 27 a2.4,2.4 0 1,0 4.8,0 a2.4,2.4 0 1,0 -4.8,0 M65 27 a2.4,2.4 0 1,0 4.8,0 a2.4,2.4 0 1,0 -4.8,0 M73 27 a2.4,2.4 0 1,0 4.8,0 a2.4,2.4 0 1,0 -4.8,0",
+          "fill": "blue"
+        },
+        {
+          "d": "M26 46 L26 24",
+          "stroke": "ink",
+          "weight": 3,
+          "taper": false
+        },
+        {
+          "d": "M20 14 Q20 8 26 8 Q32 8 32 14 L32 24 Q32 28 26 28 Q20 28 20 24 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M20 17 L32 17 M20 21 L32 21",
+          "stroke": "blue",
+          "weight": 2,
+          "taper": false
+        },
+        {
+          "d": "M84 46 L84 30 L92 30 L92 46 Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M92 33 q5,0 5,6 q0,6 -5,6",
+          "stroke": "ink",
+          "weight": 2.4
+        }
+      ]
+    }
+  ]
+}

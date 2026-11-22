@@ -1,0 +1,103 @@
+{
+  "name": "guitar-reel",
+  "tags": [
+    "gitar film makarası",
+    "guitar film reel"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/marina-vlady-fransiz/ici-2-alt.json",
+      "paths": [
+        {
+          "d": "M44 2 H56 V50 H44Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M40 0 H60 V8 H40Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M50 40 Q30 36 26 52 Q24 62 32 66 Q18 72 22 86 Q30 100 50 98 Q70 100 78 86 Q82 72 68 66 Q76 62 74 52 Q70 36 50 40Z",
+          "fill": "mustard",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M50 56 a12 12 0 1 0 0.1 0Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M50 62 a2.4 2.4 0 1 0 0.1 0Z M50 70 a2.4 2.4 0 1 0 0.1 0Z M44 66 a2.4 2.4 0 1 0 0.1 0Z M56 66 a2.4 2.4 0 1 0 0.1 0Z",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M36 88 H64",
+          "stroke": "ink",
+          "weight": 3,
+          "fill": "none"
+        },
+        {
+          "d": "M47 14 H53 M47 24 H53 M47 34 H53",
+          "stroke": "ink",
+          "weight": 1.6,
+          "fill": "none"
+        }
+      ]
+    },
+    {
+      "note": "harvested from .cache/cizim-drafts/marina-vlady-fransiz/ici-2-r0.json",
+      "paths": [
+        {
+          "d": "M38 0 H62 V50 H38Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M40 0 H60 V50 H40Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M41 4 h4 v4 h-4Z M55 4 h4 v4 h-4Z M41 12 h4 v4 h-4Z M55 12 h4 v4 h-4Z M41 20 h4 v4 h-4Z M55 20 h4 v4 h-4Z M41 28 h4 v4 h-4Z M55 28 h4 v4 h-4Z M41 36 h4 v4 h-4Z M55 36 h4 v4 h-4Z M41 44 h4 v4 h-4Z M55 44 h4 v4 h-4Z ",
+          "fill": "ink",
+          "stroke": "none",
+          "weight": 0
+        },
+        {
+          "d": "M50 40 Q30 36 26 52 Q24 62 32 66 Q18 72 22 86 Q30 100 50 98 Q70 100 78 86 Q82 72 68 66 Q76 62 74 52 Q70 36 50 40Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3.2
+        },
+        {
+          "d": "M50 58 a11 11 0 1 0 0.1 0Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 2.6
+        },
+        {
+          "d": "M36 88 H64",
+          "stroke": "ink",
+          "weight": 3,
+          "fill": "none"
+        },
+        {
+          "d": "M44 20 V90 M50 20 V90 M56 20 V90",
+          "stroke": "paper",
+          "weight": 1,
+          "fill": "none"
+        }
+      ]
+    }
+  ]
+}

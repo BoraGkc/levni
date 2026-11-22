@@ -1,0 +1,130 @@
+{
+  "name": "film-house",
+  "tags": [
+    "ev",
+    "film karesi",
+    "aile",
+    "Kore-eda"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/toronto-film-festivali/ici-2-r0.json",
+      "paths": [
+        {
+          "d": "M66 26 L66 12 L76 12 L76 34 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M8 42 L50 8 L92 42 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M16 42 L84 42 L84 92 L16 92 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M19 46 h4 v4 h-4 z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M19 54 h4 v4 h-4 z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M19 62 h4 v4 h-4 z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M19 70 h4 v4 h-4 z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M19 78 h4 v4 h-4 z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M19 86 h4 v4 h-4 z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M77 46 h4 v4 h-4 z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M77 54 h4 v4 h-4 z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M77 62 h4 v4 h-4 z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M77 70 h4 v4 h-4 z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M77 78 h4 v4 h-4 z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M77 86 h4 v4 h-4 z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 1
+        },
+        {
+          "d": "M28 50 h16 v16 h-16 z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M56 50 h16 v16 h-16 z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2.4
+        },
+        {
+          "d": "M36 50 L36 66 M64 50 L64 66",
+          "stroke": "ink",
+          "weight": 1.6,
+          "taper": false
+        },
+        {
+          "d": "M42 70 h16 v22 h-16 z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 2.4
+        }
+      ]
+    }
+  ]
+}

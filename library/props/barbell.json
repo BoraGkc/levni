@@ -1,0 +1,32 @@
+{
+  "name": "barbell",
+  "tags": [
+    "barbell",
+    "dambıl"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/the-holes-erkek/kapak.json",
+      "paths": [
+        {
+          "d": "M8 50 H92",
+          "stroke": "ink",
+          "weight": 8,
+          "taper": false
+        },
+        {
+          "d": "M20 20 H30 V80 H20 Z M70 20 H80 V80 H70 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M32 32 H38 V68 H32 Z M62 32 H68 V68 H62 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        }
+      ]
+    }
+  ]
+}

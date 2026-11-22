@@ -1,0 +1,25 @@
+{
+  "name": "gem",
+  "tags": [
+    "gem",
+    "cevher"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/streaming-platformlarinda-sakl/kapak.json",
+      "paths": [
+        {
+          "d": "M20 38 L35 18 H65 L80 38 L50 82 Z",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M20 38 H80 M35 18 L42 38 L50 82 M65 18 L58 38 L50 82",
+          "stroke": "ink",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

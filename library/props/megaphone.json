@@ -1,0 +1,76 @@
+{
+ "name": "megaphone",
+ "tags": [
+  "megafon",
+  "duyuru",
+  "ses",
+  "megaphone",
+  "announce",
+  "loudspeaker"
+ ],
+ "variants": [
+  {
+   "note": "megaphone pointing right, coral cone, sound lines",
+   "paths": [
+    {
+     "d": "M23 40L69 18L69 76L23 60Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M20 38 L66 16 L66 74 L20 58 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M10 38 L24 38 L24 60 L10 60 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 60 L42 62 L44 84 L34 84 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M76 30 L90 24 M78 46 L94 46 M76 62 L90 68",
+     "stroke": "ink",
+     "weight": 7,
+     "fill": "none"
+    }
+   ]
+  },
+  {
+   "note": "simple paper megaphone, no accent, lean",
+   "paths": [
+    {
+     "d": "M16 40 L62 18 Q72 14 72 28 L72 66 Q72 80 62 74 L16 56 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M8 40 L20 40 L20 58 L8 58 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 62 L34 84 L44 84 L42 68",
+     "stroke": "ink",
+     "weight": 8,
+     "fill": "none"
+    },
+    {
+     "d": "M82 34 L92 28 M84 48 L96 48",
+     "stroke": "ink",
+     "weight": 6,
+     "fill": "none"
+    }
+   ]
+  }
+ ]
+}

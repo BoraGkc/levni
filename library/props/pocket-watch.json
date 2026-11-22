@@ -1,0 +1,51 @@
+{
+  "name": "pocket-watch",
+  "tags": [
+    "cep saati",
+    "zaman",
+    "saat"
+  ],
+  "variants": [
+    {
+      "note": "harvested from .cache/cizim-drafts/tom-hanks-broadway/ici-2.json",
+      "paths": [
+        {
+          "d": "M50 6 L50 14",
+          "stroke": "ink",
+          "weight": 5,
+          "taper": false
+        },
+        {
+          "d": "M12 56 a38 38 0 1 0 76 0 a38 38 0 1 0 -76 0",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M20 56 a30 30 0 1 0 60 0 a30 30 0 1 0 -60 0",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 2
+        },
+        {
+          "d": "M50 56 L50 36",
+          "stroke": "ink",
+          "weight": 4,
+          "taper": false
+        },
+        {
+          "d": "M50 56 L64 62",
+          "stroke": "ink",
+          "weight": 5,
+          "taper": false
+        },
+        {
+          "d": "M46.5 56 a3.5 3.5 0 1 0 7 0 a3.5 3.5 0 1 0 -7 0",
+          "fill": "coral",
+          "stroke": "ink",
+          "weight": 1.5
+        }
+      ]
+    }
+  ]
+}
