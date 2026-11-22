@@ -1,0 +1,50 @@
+{
+ "name": "carnation",
+ "tags": [
+  "karanfil",
+  "flower",
+  "ottoman",
+  "miniature"
+ ],
+ "variants": [
+  {
+   "note": "fan-shaped carnation, serrated edge",
+   "paths": [
+    {
+     "d": "M50 52 Q52 72 50 94",
+     "stroke": "green",
+     "weight": 7
+    },
+    {
+     "d": "M50 72 Q40 64 32 66 Q40 74 50 76 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 82 Q60 74 68 76 Q60 84 50 86 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M34 40 L28 28 L36 30 L37 18 L44 25 L50 13 L56 25 L63 18 L64 30 L72 28 L66 40 Q50 48 34 40 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M40 36 L44 26 M50 36 L50 22 M60 36 L56 26",
+     "stroke": "tone-coral",
+     "weight": 4
+    },
+    {
+     "d": "M43 40 L46 54 L54 54 L57 40 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

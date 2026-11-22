@@ -1,0 +1,37 @@
+{
+ "name": "cypress",
+ "tags": [
+  "selvi",
+  "tree",
+  "miniature",
+  "garden"
+ ],
+ "variants": [
+  {
+   "note": "slender cypress",
+   "paths": [
+    {
+     "d": "M50 92 L50 99",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 3 Q65 30 62 60 Q60 84 50 92 Q40 84 38 60 Q35 30 50 3 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 14 Q55 50 50 84",
+     "stroke": "tone-green",
+     "weight": 4
+    },
+    {
+     "d": "M44 40 Q47 44 46 50 M56 56 Q53 60 54 66",
+     "stroke": "tone-green",
+     "weight": 3
+    }
+   ]
+  }
+ ]
+}

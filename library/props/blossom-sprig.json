@@ -1,0 +1,158 @@
+{
+ "name": "blossom-sprig",
+ "tags": [
+  "çiçek dalı",
+  "sprig",
+  "branch",
+  "flower",
+  "miniature",
+  "bahar"
+ ],
+ "variants": [
+  {
+   "note": "diagonal branch with leaves and three five-petal blossoms",
+   "paths": [
+    {
+     "d": "M14 92 Q34 66 58 44 Q72 30 88 14",
+     "stroke": "green",
+     "weight": 6
+    },
+    {
+     "d": "M30 72 Q18 62 10.799999999999997 63.6 Q25.2 70.8 30 72 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M46 58 Q56 42 62.0 41.2 Q50.0 55.6 46 58 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M52 50 Q40 40 32.8 41.6 Q47.2 48.8 52 50 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M68 36 Q78 20 84.0 19.200000000000003 Q72.0 33.6 68 36 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M76 28 Q64 18 56.8 19.6 Q71.2 26.8 76 28 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M58.0 33.0 A4 4 0 1 0 66.0 33.0 A4 4 0 1 0 58.0 33.0 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M62.8 36.5 A4 4 0 1 0 70.8 36.5 A4 4 0 1 0 62.8 36.5 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M60.900000000000006 42.0 A4 4 0 1 0 68.9 42.0 A4 4 0 1 0 60.900000000000006 42.0 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M55.1 42.0 A4 4 0 1 0 63.1 42.0 A4 4 0 1 0 55.1 42.0 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M53.2 36.5 A4 4 0 1 0 61.2 36.5 A4 4 0 1 0 53.2 36.5 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M59 38 A3 3 0 1 0 65 38 A3 3 0 1 0 59 38 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M74.0 17.0 A4 4 0 1 0 82.0 17.0 A4 4 0 1 0 74.0 17.0 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M78.8 20.5 A4 4 0 1 0 86.8 20.5 A4 4 0 1 0 78.8 20.5 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M76.9 26.0 A4 4 0 1 0 84.9 26.0 A4 4 0 1 0 76.9 26.0 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M71.1 26.0 A4 4 0 1 0 79.1 26.0 A4 4 0 1 0 71.1 26.0 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M69.2 20.5 A4 4 0 1 0 77.2 20.5 A4 4 0 1 0 69.2 20.5 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M75 22 A3 3 0 1 0 81 22 A3 3 0 1 0 75 22 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M36.0 55.0 A4 4 0 1 0 44.0 55.0 A4 4 0 1 0 36.0 55.0 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M40.8 58.5 A4 4 0 1 0 48.8 58.5 A4 4 0 1 0 40.8 58.5 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M38.9 64.0 A4 4 0 1 0 46.9 64.0 A4 4 0 1 0 38.9 64.0 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M33.1 64.0 A4 4 0 1 0 41.1 64.0 A4 4 0 1 0 33.1 64.0 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M31.200000000000003 58.5 A4 4 0 1 0 39.2 58.5 A4 4 0 1 0 31.200000000000003 58.5 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M37 60 A3 3 0 1 0 43 60 A3 3 0 1 0 37 60 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

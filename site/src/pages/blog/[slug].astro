@@ -1,0 +1,47 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+import { SITE } from '../../site';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+const { post } = Astro.props;
+const { Content } = await render(post);
+const url = `${SITE.url}/blog/${post.id}/`;
+const jsonld = [
+  {
+    '@type': 'BlogPosting',
+    headline: post.data.title,
+    description: post.data.description,
+    datePublished: post.data.date.toISOString(),
+    url,
+    mainEntityOfPage: url,
+    image: post.data.og ? new URL(post.data.og, SITE.url).href : `${SITE.url}/og/default.png`,
+    author: { '@id': `${SITE.ortakAlan}/#organization` },
+    publisher: { '@id': `${SITE.ortakAlan}/#organization` },
+  },
+];
+const fmt = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<Base title={post.data.title} description={post.data.description} og={post.data.og} type="article" published={post.data.date} jsonld={jsonld}>
+  <article class="wrap post">
+    <p class="meta"><a href="/blog/">Blog</a> · <time datetime={post.data.date.toISOString()}>{fmt(post.data.date)}</time></p>
+    <h1>{post.data.title}</h1>
+    <div class="ornament"><img src="/img/motif-rosette.webp" alt="" width="44" height="44" /></div>
+    <div class="prose"><Content /></div>
+  </article>
+</Base>
+
+<style>
+  .post { max-width: 780px; margin-top: 44px; }
+  .meta { font-family: var(--mono); font-size: 0.8rem; color: var(--turquoise); }
+  h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); }
+  .prose :global(h2) { font-size: 2rem; margin-top: 1.6em; }
+  .prose :global(table) { width: 100%; border-collapse: collapse; margin: 1.4em 0; }
+  .prose :global(th), .prose :global(td) { border: 1px solid var(--gold); padding: 6px; vertical-align: top; font-size: 1rem; }
+  .prose :global(td img) { width: 100%; }
+  .prose :global(pre) { margin: 1.2em 0; }
+  .prose :global(li) { margin-bottom: 0.4em; }
+</style>

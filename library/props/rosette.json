@@ -1,0 +1,87 @@
+{
+ "name": "rosette",
+ "tags": [
+  "şemse",
+  "tezhip",
+  "medallion",
+  "ornament",
+  "miniature",
+  "gül"
+ ],
+ "variants": [
+  {
+   "note": "gilded medallion with eight lapis petals",
+   "paths": [
+    {
+     "d": "M6 50 A44 44 0 1 0 94 50 A44 44 0 1 0 6 50 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M14 50 A36 36 0 1 0 86 50 A36 36 0 1 0 14 50 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M63.3 45.6 Q78.5 40.6 84 50 Q78.5 59.4 63.3 54.4 Z M62.5 56.3 Q76.8 63.5 74 74 Q63.5 76.8 56.3 62.5 Z M54.4 63.3 Q59.4 78.5 50 84 Q40.6 78.5 45.6 63.3 Z M43.7 62.5 Q36.5 76.8 26 74 Q23.2 63.5 37.5 56.3 Z M36.7 54.4 Q21.5 59.4 16 50 Q21.5 40.6 36.7 45.6 Z M37.5 43.7 Q23.2 36.5 26 26 Q36.5 23.2 43.7 37.5 Z M45.6 36.7 Q40.6 21.5 50 16 Q59.4 21.5 54.4 36.7 Z M56.3 37.5 Q63.5 23.2 74 26 Q76.8 36.5 62.5 43.7 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M35 50 A15 15 0 1 0 65 50 A15 15 0 1 0 35 50 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M44 50 A6 6 0 1 0 56 50 A6 6 0 1 0 44 50 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M77.7 61.5 h.1",
+     "stroke": "coral",
+     "weight": 7
+    },
+    {
+     "d": "M61.5 77.7 h.1",
+     "stroke": "coral",
+     "weight": 7
+    },
+    {
+     "d": "M38.5 77.7 h.1",
+     "stroke": "coral",
+     "weight": 7
+    },
+    {
+     "d": "M22.3 61.5 h.1",
+     "stroke": "coral",
+     "weight": 7
+    },
+    {
+     "d": "M22.3 38.5 h.1",
+     "stroke": "coral",
+     "weight": 7
+    },
+    {
+     "d": "M38.5 22.3 h.1",
+     "stroke": "coral",
+     "weight": 7
+    },
+    {
+     "d": "M61.5 22.3 h.1",
+     "stroke": "coral",
+     "weight": 7
+    },
+    {
+     "d": "M77.7 38.5 h.1",
+     "stroke": "coral",
+     "weight": 7
+    }
+   ]
+  }
+ ]
+}

@@ -11,6 +11,7 @@ import { ASSETS, makeNoise } from './assets.mjs';
 import { expandProp } from './props.mjs';
 import { expandIso } from './iso.mjs';
 import { flattenPath, inkLine, plateOffsets } from './ink.mjs';
+import { applyStyle } from './styles.mjs';
 
 export const COLORS = { blue: P.blue, ink: P.ink, coral: P.coral, mustard: P.mustard, green: P.green, paper: P.paper, white: P.white, dark: P.dark, tone: '#7FA6F2', 'tone-coral': '#FFB49A', 'tone-green': '#86C796', 'tone-mustard': '#FFE08A', none: 'none' };
 const c = (name, fallback = P.ink) => (name == null ? fallback : COLORS[name] || (/^#[0-9a-f]{6}$/i.test(name) ? name : fallback));
@@ -237,7 +238,8 @@ export async function compose(spec) {
     body = `<clipPath id="card"><path d="${pen.d(box(x, y, x + w, y + h, 40), { amp: 0, closed: true })}"/></clipPath><g clip-path="url(#card)">${body}</g>`;
   }
   // boil: the crayon filter's own seed; the animator steps it a few times a second for a hand-drawn shimmer
-  return { svg: frame(body, { seed: spec.boil ?? seed, background: c(spec.background, P.paper) }), used };
+  // spec.style picks a style pack (styles.mjs): the same drawing printed with other inks
+  return { svg: applyStyle(frame(body, { seed: spec.boil ?? seed, background: c(spec.background, P.paper) }), spec.style), used };
 }
 
 // dash: [on, off] in 0..100 box units; cuts each polyline into short hand-inked strokes (marking lines, seams, paths)

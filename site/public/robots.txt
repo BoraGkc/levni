@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://levni.dev/sitemap-index.xml

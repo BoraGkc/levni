@@ -1,0 +1,73 @@
+{
+ "name": "tulip",
+ "tags": [
+  "lale",
+  "flower",
+  "ottoman",
+  "miniature",
+  "spring"
+ ],
+ "variants": [
+  {
+   "note": "Ottoman tulip, needle petals, two lancet leaves",
+   "paths": [
+    {
+     "d": "M50 94 Q48 72 50 50",
+     "stroke": "green",
+     "weight": 7
+    },
+    {
+     "d": "M50 88 Q28 72 34 48 Q44 66 50 80 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 80 Q70 64 66 44 Q58 62 50 72 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 50 Q35 44 37 26 Q39 14 43 6 Q46 20 50 22 Q54 20 57 6 Q61 14 63 26 Q65 44 50 50 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 48 Q44 34 50 10 Q56 34 50 48 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "closed bud on a curved stem",
+   "paths": [
+    {
+     "d": "M48 96 Q40 70 50 46",
+     "stroke": "green",
+     "weight": 7
+    },
+    {
+     "d": "M46 86 Q26 76 26 56 Q38 68 46 76 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 46 Q37 40 39 24 Q43 12 50 6 Q57 12 61 24 Q63 40 50 46 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 42 Q46 28 50 12",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

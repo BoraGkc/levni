@@ -1,0 +1,193 @@
+---
+import { SITE } from '../site';
+
+interface Props {
+  title: string;
+  description: string;
+  og?: string;
+  type?: 'website' | 'article';
+  jsonld?: object[];
+  published?: Date;
+}
+const { title, description, og = '/og/default.png', type = 'website', jsonld = [], published } = Astro.props;
+const canonical = new URL(Astro.url.pathname, SITE.url).href;
+const ogUrl = new URL(og, SITE.url).href;
+const fullTitle = title === SITE.name ? `${SITE.name}: ${SITE.tagline}` : `${title} · ${SITE.name}`;
+
+const org = {
+  '@type': 'Organization',
+  '@id': `${SITE.ortakAlan}/#organization`,
+  name: 'Ortak Alan',
+  url: SITE.ortakAlan,
+};
+const graph = [
+  {
+    '@type': 'WebSite',
+    '@id': `${SITE.url}/#website`,
+    url: `${SITE.url}/`,
+    name: SITE.name,
+    description: SITE.description,
+    publisher: { '@id': org['@id'] },
+  },
+  org,
+  ...jsonld,
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Levni blog" href="/blog/rss.xml" />
+    <meta name="theme-color" content="#F1E4C8" />
+
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Illustration drawn by Levni" />
+    {published && <meta property="article:published_time" content={published.toISOString()} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogUrl} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+    />
+    <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="wordmark" href="/" aria-label="Levni home">
+          <img src="/img/motif-tulip.webp" alt="" width="40" height="40" />
+          <span>Levni</span>
+        </a>
+        <nav aria-label="Main">
+          <a href="/#how">How it works</a>
+          <a href="/#gallery">Gallery</a>
+          <a href="/#folio">Folio</a>
+          <a href="/blog/">Blog</a>
+          <a class="nav-gh" href={SITE.github}>GitHub</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="wrap footer-row">
+        <div>
+          <p class="footer-mark">Levni</p>
+          <p>Illustrations from a JSON scene. Code MIT, Levni Folio CC BY 4.0.</p>
+        </div>
+        <div>
+          <p>Powered by <a href={SITE.ortakAlan}>Ortak Alan</a></p>
+          <p><a href="/blog/">Blog</a> · <a href="/blog/rss.xml">RSS</a> · <a href={SITE.github}>GitHub</a></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --paper: #f1e4c8;
+    --paper-2: #f8eedb;
+    --ink: #3b2415;
+    --ink-soft: #5c4130;
+    --gold: #c9962b;
+    --gold-deep: #9c7016;
+    --vermilion: #c8402e;
+    --turquoise: #2a8c80;
+    --lapis: #1f3f8f;
+    --serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+    --display: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+    --mono: ui-monospace, Menlo, Consolas, monospace;
+    --wrap: 1120px;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.16rem;
+    line-height: 1.6;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: var(--lapis); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--vermilion); }
+  :focus-visible { outline: 3px solid var(--vermilion); outline-offset: 3px; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.1; color: var(--ink); margin: 0 0 0.5em; }
+  h1 { font-size: clamp(2.6rem, 7vw, 4.6rem); }
+  h2 { font-size: clamp(2rem, 4.5vw, 3rem); }
+  h3 { font-size: 1.6rem; }
+  em.accent, .accent { font-family: var(--display); font-style: italic; color: var(--vermilion); }
+  code, pre { font-family: var(--mono); font-size: 0.86rem; }
+  pre {
+    background: var(--paper-2);
+    border: 1px solid var(--gold);
+    box-shadow: inset 0 0 0 4px var(--paper-2), inset 0 0 0 5px rgba(201, 150, 43, 0.5);
+    padding: 1.1rem 1.2rem;
+    overflow-x: auto;
+    line-height: 1.5;
+  }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 20px; }
+  .skip { position: absolute; left: -999px; }
+  .skip:focus { left: 12px; top: 12px; background: var(--paper-2); padding: 8px 12px; z-index: 10; }
+
+  .site-header { border-bottom: 3px double var(--gold); background: var(--paper); }
+  .header-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; flex-wrap: wrap; }
+  .wordmark { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--ink); }
+  .wordmark img { width: 40px; height: 40px; }
+  .wordmark span { font-family: var(--display); font-style: italic; font-weight: 600; font-size: 1.9rem; }
+  nav { display: flex; gap: 6px 18px; flex-wrap: wrap; font-size: 1.02rem; }
+  nav a { color: var(--ink); text-decoration: none; padding: 6px 0; }
+  nav a:hover { color: var(--vermilion); }
+  .nav-gh { border-bottom: 1px solid var(--gold); }
+
+  .site-footer { border-top: 3px double var(--gold); margin-top: 72px; padding: 32px 0 40px; font-size: 1rem; color: var(--ink-soft); }
+  .footer-row { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  .footer-row p { margin: 0.2rem 0; }
+  .footer-mark { font-family: var(--display); font-style: italic; font-size: 1.6rem; color: var(--ink); }
+
+  /* tezhip frame: gold double rule with a thin vermilion inner line */
+  .tezhip {
+    position: relative;
+    border: 6px double var(--gold);
+    padding: 10px;
+    background: var(--paper-2);
+  }
+  .tezhip::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid var(--vermilion);
+    pointer-events: none;
+  }
+  .ornament { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 0 auto 18px; color: var(--gold); }
+  .ornament::before, .ornament::after { content: ''; height: 1px; width: min(120px, 22vw); background: currentColor; }
+  .ornament img { width: 44px; height: 44px; }
+
+  @media (max-width: 480px) {
+    body { font-size: 1.08rem; }
+    nav { font-size: 0.98rem; gap: 4px 14px; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+</style>

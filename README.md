@@ -13,8 +13,9 @@ Powered by [Ortak Alan](https://ortakalan.io). Named after Levni, the 18th-centu
 
 - **Agents can draw.** A scene is plain JSON: an agent (or a person) places props, panels and textures; Levni does the hand. Same seed, same picture.
 - **One look across hundreds of images.** Ortak Alan made ~500 article images with it: pressure-brush ink, riso plate misregistration, crayon paper grain.
-- **A shared library: the Levni Folio.** 469 drawn props (702 variants), CC BY 4.0, open to contributions.
+- **A shared library: the Levni Folio.** 474 drawn props (708 variants), CC BY 4.0, open to contributions.
 - **A critic built in.** Every render returns layout notes (off-canvas, accidental crops, lopsided weight, no focal point) an agent can act on before a human looks.
+- **Style packs.** The same scene printed with other inks and paper: `riso` (Ortak Alan's house look, default) and `miniature`, inspired by Tulip Era Ottoman painting, with its own tulips, carnations, cypresses and gilded medallion. Levni does not have to invent every look itself: it can take a tradition as its reference and then draw in it consistently. Set `"style": "miniature"` on a scene; a pack is a colour map in `src/styles.mjs`.
 - **MCP-ready.** The API is three calls (`compose`, `critique`, `render`) over JSON in, image out, so it maps directly onto MCP tools. An MCP server is planned.
 
 ## Install and use
@@ -80,6 +81,7 @@ The Levni Folio grows by contribution. A prop is one JSON file in `library/props
 ```
 
 - **Format.** `name` is the file name: lowercase `a-z0-9` and hyphens, English. `tags` in any language. Draw in a 0–100 box, roughly centred, the object filling 70–90 of it. Paths use colour **names** (`ink`, `blue`, `tone`, `coral`, `mustard`, `green`, `paper`, `white`), not hex, so palettes can be swapped. `weight` is the line width in output pixels (6–10 reads well). A second angle or state of the same object is another variant, not another prop.
+- **Inspired by, not copied from.** Drawing in the spirit of a style or tradition (a miniature tulip, a riso poster) is welcome; tracing a specific work is not.
 - **Check it.** `npx levni sheet check.png watering-can` shows every variant on paper and on blue; `npm test` validates and renders the whole Folio.
 - **Review rules.**
   - **Own work only.** Drawn by you, not traced from photos, icon sets, stock or other illustrations. AI-assisted path code is accepted when you directed and checked it; say so in the pull request.
@@ -89,10 +91,14 @@ The Levni Folio grows by contribution. A prop is one JSON file in `library/props
   - **House style.** Simple shapes, two inks plus paper, readable at 120 px.
 - **License.** By submitting to the Folio you release the drawing under CC BY 4.0 and are credited in its `author` field.
 
+## Website
+
+`site/` is the levni.dev site (Astro, static, Cloudflare Pages). Its images are drawn by Levni: `npm run assets` in `site/` re-renders them, `npm run build` builds `site/dist`.
+
 ## Tests
 
 ```bash
-npm test   # validates every prop file, composes each variant alone, rasterizes all 702 variants once (~30 s)
+npm test   # validates every prop file, composes each variant alone, rasterizes all 708 variants once (~30 s)
 ```
 
 ---

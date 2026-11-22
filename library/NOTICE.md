@@ -1,10 +1,12 @@
 # Levni Folio: where the props come from
 
-469 props, 702 variants, every one stored as SVG path data in a 0–100 box (`library/props/*.json`).
+474 props, 708 variants, every one stored as SVG path data in a 0–100 box (`library/props/*.json`).
 
 ## Origin
 
-- **All 702 variants were authored for Ortak Alan as path code** inside its illustration engine, between July and November 2026: 342 written directly as prop files, 360 "harvested" from `draw` elements that composers (Ortak Alan editors working with an AI agent) wrote for article illustrations and later promoted into the library. Harvested variants keep a `note` such as `harvested from <scene>`.
+- **Miniature motifs** (`tulip`, `carnation`, `blossom-sprig`, `cypress`, `rosette`, 6 variants, Nov 2026): new drawings for the miniature style pack, inspired by Tulip Era motifs, not traced from any painting or photograph.
+
+- **The other 702 variants were authored for Ortak Alan as path code** inside its illustration engine, between July and November 2026: 342 written directly as prop files, 360 "harvested" from `draw` elements that composers (Ortak Alan editors working with an AI agent) wrote for article illustrations and later promoted into the library. Harvested variants keep a `note` such as `harvested from <scene>`.
 - **No prop was found to be traced or copied from Tabler Icons or another icon set.** Checked: no prop file mentions Tabler or another source, and none uses the 24-unit Tabler grid. Tabler Icons (MIT) are only used at runtime by the optional `icon` and `ascii` elements and are not shipped here.
 - **To check before publishing:** much of the path data was written by an AI agent under editorial direction. Whether CC BY 4.0 can be enforced on such drawings depends on the jurisdiction; the license still states the terms of use clearly. If enforceable attribution matters, consider CC0 for the library instead (see the research note in the Ortak Alan repo).
 

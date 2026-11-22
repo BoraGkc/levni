@@ -1,0 +1,280 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../site';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => +b.data.date - +a.data.date);
+
+const scene = `{ "seed": 5, "style": "riso", "elements": [
+  { "type": "panel", "x": 60, "y": 52, "w": 1080, "h": 569, "color": "blue" },
+  { "type": "prop", "name": "rocket", "x": 780, "y": 300, "size": 380 },
+  { "type": "crowd", "x": 90, "y": 560, "w": 520, "rows": 2, "size": 130 }
+] }`;
+const critic = `$ npx levni render scene.json cover.png
+cover.png
+- critic: no layout problems found`;
+
+const uses = [
+  { img: 'rosette', title: 'Covers', text: 'Article and newsletter covers at 1200 × 673, ready for the CMS as WebP under a size budget.' },
+  { img: 'tulip', title: 'Spot illustrations', text: 'Small drawings inside the text: a tulip, a server rack, a ballot box, in the same hand as the cover.' },
+  { img: 'carnation', title: 'Icons and props', text: `${SITE.props} drawn objects in the Levni Folio, plus the Tabler icon set redrawn in the house line.` },
+  { img: 'blossom-sprig', title: 'Social images', text: 'Open Graph and social cards from the same scene. This page’s preview image was drawn by Levni.' },
+];
+
+const gallery = [
+  { src: 'oa-orman', alt: 'A cut tree stump on a blue panel full of glyphs, small trees on both sides', cap: 'Environment story, Ortak Alan' },
+  { src: 'oa-hadeln', alt: 'A golden arched gate with open doors behind a row of faceless audience figures on a blue panel', cap: 'Film festival story, Ortak Alan' },
+  { src: 'oa-tahmin', alt: 'A roulette wheel struck by a judge’s gavel, halftone dots behind', cap: 'Prediction markets story, Ortak Alan' },
+  { src: 'oa-ice', alt: 'A film camera projecting onto a city block, an audience along the bottom', cap: 'Documentary story, Ortak Alan' },
+  { src: 'oa-orna', alt: 'A microphone resting on a sofa on a blue panel with wave lines', cap: 'Culture story, Ortak Alan' },
+  { src: 'oa-venezuela', alt: 'A blue oil barrel beside a coral panel with a sun and a drop of oil', cap: 'Energy story, Ortak Alan' },
+  { src: 'oa-delpy', alt: 'A white jacket with a coral overprint shadow on a blue panel', cap: 'Cinema and fashion story, Ortak Alan' },
+  { src: 'cover-riso', alt: 'A rocket in front of a sun on a blue panel, an audience below', cap: 'Example cover scene' },
+];
+
+const faq = [
+  { q: 'What is Levni?', a: 'An open-source engine that draws illustrations from a JSON scene: covers, spot illustrations, icons and social images, in one consistent hand-inked style. It runs on Node with sharp; there is no image model and no API key.' },
+  { q: 'How do AI agents use it?', a: 'An agent writes the scene JSON, renders it, and reads the layout critic’s notes (off-canvas elements, accidental crops, lopsided weight, no focal point) before a person looks. Because it is JSON in and image out, it maps directly onto an MCP tool.' },
+  { q: 'What does it cost?', a: 'Nothing per image. Levni is MIT-licensed code that runs on your own machine or in CI. The Levni Folio drawings are CC BY 4.0: credit “drawings by Ortak Alan”.' },
+  { q: 'Can it draw in other styles?', a: 'Yes, through style packs. The riso pack is Ortak Alan’s house look; the miniature pack is inspired by Tulip Era Ottoman painting. A pack recolours inks and paper, and new motifs can be drawn for it.' },
+];
+
+const jsonld = [
+  {
+    '@type': 'SoftwareApplication',
+    name: 'Levni',
+    applicationCategory: 'DesignApplication',
+    operatingSystem: 'macOS, Linux, Windows (Node.js 20+)',
+    description: SITE.description,
+    url: `${SITE.url}/`,
+    license: 'https://opensource.org/licenses/MIT',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    publisher: { '@id': `${SITE.ortakAlan}/#organization` },
+  },
+  {
+    '@type': 'FAQPage',
+    mainEntity: faq.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+  },
+];
+---
+<Base title="Levni" description={SITE.description} jsonld={jsonld}>
+  <section class="hero wrap">
+    <div class="hero-text">
+      <p class="eyebrow">Open source · MCP-ready · zero cost per image</p>
+      <h1>Illustrations from a <em class="accent">JSON scene</em>.</h1>
+      <p class="lede">
+        Levni draws covers, icons, spot illustrations and social images in one consistent hand.
+        Built for agents and publishers: write a scene, render it, ship it.
+      </p>
+      <div class="ctas">
+        <a class="btn btn-primary" href={SITE.github}>{SITE.githubReady ? 'View on GitHub' : 'GitHub (coming soon)'}</a>
+        <a class="btn" href="#how">See how it works</a>
+      </div>
+      <p class="install"><code>npx levni render scene.json cover.png</code></p>
+    </div>
+    <figure class="hero-figure tezhip">
+      <picture>
+        <source media="(max-width: 700px)" srcset="/img/hero-640.webp" />
+        <img src="/img/hero.webp" width="1200" height="673" alt="A garden in miniature colours: cypresses, tulips and carnations before a golden arched gate, a gilded medallion as the sun" fetchpriority="high" />
+      </picture>
+      <figcaption>Drawn by Levni, miniature style pack.</figcaption>
+    </figure>
+  </section>
+
+  <section class="uses wrap" aria-labelledby="uses-title">
+    <div class="ornament"><img src="/img/motif-rosette.webp" alt="" width="44" height="44" loading="lazy" /></div>
+    <h2 id="uses-title" class="center">Design assets for agents and publishers</h2>
+    <div class="cards">
+      {uses.map((u) => (
+        <article class="card">
+          <img src={`/img/motif-${u.img}.webp`} alt="" width="96" height="96" loading="lazy" />
+          <h3>{u.title}</h3>
+          <p>{u.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section id="how" class="how wrap" aria-labelledby="how-title">
+    <h2 id="how-title" class="center">How it works</h2>
+    <ol class="steps">
+      <li>
+        <h3><span class="num">1</span> Write a scene</h3>
+        <p>Place props, panels and textures on a 1200 × 673 canvas. 36 element types, from library props to small isometric worlds.</p>
+        <pre><code>{scene}</code></pre>
+      </li>
+      <li>
+        <h3><span class="num">2</span> Render and read the critic</h3>
+        <p>Levni inks every line, misregisters the riso plates and adds paper grain. Same seed, same picture. Then it reports layout problems an agent can fix on its own.</p>
+        <pre><code>{critic}</code></pre>
+      </li>
+      <li>
+        <h3><span class="num">3</span> Ship it</h3>
+        <p>PNG, SVG or WebP under a size budget. Use the CLI, the Node API, or (soon) the MCP server, so an agent can illustrate an article end to end.</p>
+        <img class="tezhip step-img" src="/gallery/cover-riso.webp" width="800" height="449" alt="The rendered cover: a rocket on a blue panel with an audience below" loading="lazy" />
+      </li>
+    </ol>
+  </section>
+
+  <section class="packs wrap" aria-labelledby="packs-title">
+    <h2 id="packs-title" class="center">One scene, many inks</h2>
+    <p class="center narrow">
+      Style packs change how a scene is printed. <strong>Riso</strong> is Ortak Alan’s house look. <strong>Miniature</strong> is
+      inspired by the Tulip Era painter Levni: aged paper, gold, vermilion, turquoise and lapis. Levni can learn from a tradition
+      and then draw in it consistently, image after image.
+    </p>
+    <div class="pair">
+      <figure><img class="tezhip" src="/gallery/spot-riso.webp" width="800" height="449" alt="Books, a coffee cup and a light bulb on a mustard disc, riso colours" loading="lazy" /><figcaption>Riso</figcaption></figure>
+      <figure><img class="tezhip" src="/gallery/spot-miniature.webp" width="800" height="449" alt="The same books, cup and bulb in miniature colours" loading="lazy" /><figcaption>Miniature</figcaption></figure>
+    </div>
+    <p class="center"><a href="/blog/style-packs/">Read about style packs</a></p>
+  </section>
+
+  <section id="gallery" class="gallery wrap" aria-labelledby="gallery-title">
+    <h2 id="gallery-title" class="center">Drawn by Levni</h2>
+    <p class="center narrow">Real covers made for <a href={SITE.ortakAlan}>Ortak Alan</a> articles, about 500 so far, and example scenes from the repository.</p>
+    <div class="grid">
+      {gallery.map((g) => (
+        <figure>
+          <img src={`/gallery/${g.src}.webp`} width="800" height="449" alt={g.alt} loading="lazy" />
+          <figcaption>{g.cap}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+
+  <section id="folio" class="folio wrap" aria-labelledby="folio-title">
+    <div class="folio-box tezhip">
+      <div class="folio-text">
+        <h2 id="folio-title">The Levni Folio</h2>
+        <p>
+          A shared library of drawn objects: <strong>{SITE.props} props, {SITE.variants} variants</strong>, from tulips to server racks.
+          Each is SVG path data in a 0–100 box, released under <strong>CC BY 4.0</strong>.
+        </p>
+        <h3>Submit to the Folio</h3>
+        <ol>
+          <li>Draw one object as a JSON file of paths, using Levni’s colour names.</li>
+          <li>Check it with <code>npx levni sheet check.png your-prop</code>.</li>
+          <li>Open a pull request. Rules: your own drawing, no faces, no logos, one object per file.</li>
+        </ol>
+        <a class="btn btn-primary" href={SITE.github}>{SITE.githubReady ? 'Submit to the Folio' : 'Submit to the Folio (repo coming soon)'}</a>
+      </div>
+      <div class="folio-motifs" aria-hidden="true">
+        {['tulip', 'carnation', 'cypress', 'rosette'].map((m) => <img src={`/img/motif-${m}.webp`} alt="" width="120" height="120" loading="lazy" />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="open wrap" aria-labelledby="open-title">
+    <h2 id="open-title" class="center">Open source</h2>
+    <div class="cols">
+      <div>
+        <h3>Code: MIT</h3>
+        <p>Engine, CLI and critic. One dependency (sharp). Node 20+. Tabler Icons are optional.</p>
+      </div>
+      <div>
+        <h3>Drawings: CC BY 4.0</h3>
+        <p>Use the Folio anywhere, commercially too. Credit “drawings by Ortak Alan”.</p>
+      </div>
+      <div>
+        <h3>Powered by Ortak Alan</h3>
+        <p>Levni is made and used every day by <a href={SITE.ortakAlan}>Ortak Alan</a>, which drew its article images with it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq wrap" aria-labelledby="faq-title">
+    <h2 id="faq-title" class="center">Questions</h2>
+    {faq.map(({ q, a }) => (
+      <details>
+        <summary>{q}</summary>
+        <p>{a}</p>
+      </details>
+    ))}
+  </section>
+
+  {posts.length > 0 && (
+    <section class="latest wrap" aria-labelledby="latest-title">
+      <h2 id="latest-title" class="center">From the blog</h2>
+      <ul class="post-list">
+        {posts.slice(0, 3).map((p) => (
+          <li><a href={`/blog/${p.id}/`}>{p.data.title}</a><p>{p.data.description}</p></li>
+        ))}
+      </ul>
+    </section>
+  )}
+</Base>
+
+<style>
+  section { margin-top: 84px; }
+  .center { text-align: center; }
+  .hero > *, .steps > li, .cards > *, .grid > *, .pair > *, .folio-box > * { min-width: 0; }
+  .narrow { max-width: 680px; margin-left: auto; margin-right: auto; }
+  .hero { margin-top: 48px; display: grid; grid-template-columns: 1fr 1.25fr; gap: 48px; align-items: center; }
+  .eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--turquoise); margin: 0 0 14px; }
+  .lede { font-size: 1.28rem; color: var(--ink-soft); margin: 0 0 24px; }
+  .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 11px 20px; border: 2px solid var(--ink); color: var(--ink);
+    text-decoration: none; font-size: 1.05rem; background: transparent;
+  }
+  .btn:hover { color: var(--vermilion); border-color: var(--vermilion); }
+  .btn-primary { background: var(--vermilion); border-color: var(--vermilion); color: #fbf3e0; }
+  .btn-primary:hover { background: var(--ink); border-color: var(--ink); color: #fbf3e0; }
+  .install { margin-top: 20px; color: var(--ink-soft); }
+  .hero-figure { margin: 0; }
+  figcaption { font-size: 0.92rem; font-style: italic; color: var(--ink-soft); margin-top: 8px; text-align: center; }
+
+  .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 28px; }
+  .card { text-align: center; padding: 18px 14px; border-top: 3px double var(--gold); }
+  .card img { width: 96px; height: 96px; margin: 0 auto 6px; }
+  .card p { font-size: 1.02rem; color: var(--ink-soft); margin: 0; }
+
+  .steps { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+  .num {
+    display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%;
+    background: var(--gold); color: var(--paper-2); font-family: var(--display); font-size: 1.2rem; margin-right: 6px; vertical-align: 3px;
+  }
+  .steps p { color: var(--ink-soft); font-size: 1.04rem; }
+  .step-img { padding: 6px; }
+
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 28px 0 12px; }
+  .pair figure { margin: 0; }
+  .pair img { padding: 6px; }
+
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 28px; }
+  .grid figure { margin: 0; }
+  .grid img { border: 1px solid var(--gold); }
+
+  .folio-box { background: var(--paper); display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; align-items: center; padding: 36px; }
+  .folio-text ol { padding-left: 1.3em; }
+  .folio-text li { margin-bottom: 6px; }
+  .folio-motifs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; justify-items: center; }
+  .folio-motifs img { width: 120px; height: 120px; }
+
+  .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 24px; }
+  .cols p { color: var(--ink-soft); font-size: 1.04rem; }
+
+  .faq details { max-width: 760px; margin: 0 auto; border-bottom: 1px solid var(--gold); padding: 14px 4px; }
+  .faq summary { font-family: var(--display); font-size: 1.4rem; font-weight: 600; cursor: pointer; }
+  .faq details p { margin: 10px 0 0; color: var(--ink-soft); }
+
+  .post-list { list-style: none; padding: 0; max-width: 760px; margin: 0 auto; }
+  .post-list li { padding: 14px 0; border-bottom: 1px solid var(--gold); }
+  .post-list a { font-family: var(--display); font-size: 1.5rem; font-weight: 600; }
+  .post-list p { margin: 4px 0 0; color: var(--ink-soft); font-size: 1.02rem; }
+
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; gap: 28px; }
+    .cards, .grid { grid-template-columns: repeat(2, 1fr); }
+    .steps, .cols { grid-template-columns: minmax(0, 1fr); }
+    .folio-box { grid-template-columns: 1fr; padding: 22px; }
+    .folio-motifs { grid-template-columns: repeat(4, 1fr); }
+    .folio-motifs img { width: 72px; height: 72px; }
+  }
+  @media (max-width: 520px) {
+    section { margin-top: 60px; }
+    .cards, .grid, .pair { grid-template-columns: 1fr; }
+    .lede { font-size: 1.14rem; }
+  }
+</style>
