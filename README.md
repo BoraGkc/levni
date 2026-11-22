@@ -13,7 +13,7 @@ Powered by [Ortak Alan](https://ortakalan.io). Named after Levni, the 18th-centu
 
 - **Agents can draw.** A scene is plain JSON: an agent (or a person) places props, panels and textures; Levni does the hand. Same seed, same picture.
 - **One look across hundreds of images.** Ortak Alan made ~500 article images with it: pressure-brush ink, riso plate misregistration, crayon paper grain.
-- **A shared library.** 469 drawn props (702 variants), CC BY 4.0, open to contributions.
+- **A shared library: the Levni Folio.** 469 drawn props (702 variants), CC BY 4.0, open to contributions.
 - **A critic built in.** Every render returns layout notes (off-canvas, accidental crops, lopsided weight, no focal point) an agent can act on before a human looks.
 - **MCP-ready.** The API is three calls (`compose`, `critique`, `render`) over JSON in, image out, so it maps directly onto MCP tools. An MCP server is planned.
 
@@ -56,13 +56,13 @@ Canvas 1200 × 673. 36 element types: library props and your own path drawings (
 ## Licensing
 
 - **Code** (`src/`, `bin/`, `test/`): [MIT](LICENSE).
-- **Prop library** (`library/`): [CC BY 4.0](library/LICENSE). Use it anywhere, commercially too; credit "drawings by Ortak Alan (CC BY 4.0)". Where the drawings come from and which ones are flagged: [`library/NOTICE.md`](library/NOTICE.md).
+- **Levni Folio**, the prop library (`library/`): [CC BY 4.0](library/LICENSE). Use it anywhere, commercially too; credit "drawings by Ortak Alan (CC BY 4.0)". Where the drawings come from and which ones are flagged: [`library/NOTICE.md`](library/NOTICE.md).
 - **Tabler Icons** are MIT (Paweł Kuna), an optional peer dependency, not shipped in this package.
 - Images you render are yours; the CC BY credit applies when they contain library props.
 
-## Submit your drawing
+## Submit to the Folio
 
-The library grows by contribution. A prop is one JSON file in `library/props/`:
+The Levni Folio grows by contribution. A prop is one JSON file in `library/props/`:
 
 ```json
 {
@@ -80,14 +80,14 @@ The library grows by contribution. A prop is one JSON file in `library/props/`:
 ```
 
 - **Format.** `name` is the file name: lowercase `a-z0-9` and hyphens, English. `tags` in any language. Draw in a 0–100 box, roughly centred, the object filling 70–90 of it. Paths use colour **names** (`ink`, `blue`, `tone`, `coral`, `mustard`, `green`, `paper`, `white`), not hex, so palettes can be swapped. `weight` is the line width in output pixels (6–10 reads well). A second angle or state of the same object is another variant, not another prop.
-- **Check it.** `npx levni sheet check.png watering-can` shows every variant on paper and on blue; `npm test` validates and renders the whole library.
+- **Check it.** `npx levni sheet check.png watering-can` shows every variant on paper and on blue; `npm test` validates and renders the whole Folio.
 - **Review rules.**
   - **Own work only.** Drawn by you, not traced from photos, icon sets, stock or other illustrations. AI-assisted path code is accepted when you directed and checked it; say so in the pull request.
   - **No faces.** No human faces, portraits or hands; people only as faceless pictograms.
   - **No logos or trademarks**, and nothing that reads as one (a bitten apple, a swoosh, a real flag by accident).
   - **One object, one idea.** No text inside drawings, no scenes (compose those in a scene file).
   - **House style.** Simple shapes, two inks plus paper, readable at 120 px.
-- **License.** By submitting you release the drawing under CC BY 4.0 and are credited in its `author` field.
+- **License.** By submitting to the Folio you release the drawing under CC BY 4.0 and are credited in its `author` field.
 
 ## Tests
 

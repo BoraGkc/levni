@@ -1,4 +1,4 @@
-# Where the props come from
+# Levni Folio: where the props come from
 
 469 props, 702 variants, every one stored as SVG path data in a 0–100 box (`library/props/*.json`).
 
