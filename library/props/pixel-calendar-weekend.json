@@ -1,0 +1,71 @@
+{
+ "name": "pixel-calendar-weekend",
+ "category": "books",
+ "tags": [
+  "calendar weekend",
+  "pixel calendar weekend",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "calendar weekend, regular pixel icon",
+   "paths": [
+    {
+     "d": "M28.5 32h49v7h-49ZM28.5 46h49v7h-49ZM28.5 53h35v21h-35ZM70.5 53h7v21h-7ZM28.5 74h49v7h-49Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 15h7v7h-7ZM60.5 15h7v7h-7ZM18.5 22h63v7h-63ZM18.5 29h7v7h-7ZM74.5 29h7v7h-7ZM18.5 36h63v7h-63ZM60.5 50h7v21h-7ZM18.5 43h7v35h-7ZM74.5 43h7v35h-7ZM18.5 78h63v7h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "calendar weekend, thin pixel icon",
+   "paths": [
+    {
+     "d": "M25 28.5h56v14h-56ZM25 46h56v7h-56ZM25 53h42v21h-42ZM70.5 53h10.5v21h-10.5ZM25 74h56v10.5h-56Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 15h3.5v7h-3.5ZM64 15h3.5v7h-3.5ZM18.5 22h63v3.5h-63ZM18.5 25.5h3.5v14h-3.5ZM78 25.5h3.5v14h-3.5ZM18.5 39.5h63v3.5h-63ZM64 50h3.5v21h-3.5ZM18.5 43h3.5v38.5h-3.5ZM78 43h3.5v38.5h-3.5ZM18.5 81.5h63v3.5h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "calendar weekend, solid pixel icon",
+   "paths": [
+    {
+     "d": "M36.5 19h7v7h-7ZM64.5 19h7v7h-7ZM22.5 26h63v7h-63ZM22.5 40h63v14h-63ZM22.5 54h42v21h-42ZM71.5 54h14v21h-14ZM22.5 75h63v14h-63Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 15h7v7h-7ZM60.5 15h7v7h-7ZM18.5 22h63v7h-63ZM18.5 36h63v14h-63ZM18.5 50h42v21h-42ZM67.5 50h14v21h-14ZM18.5 71h63v14h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "calendar weekend, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M36.5 19h3.5v7h-3.5ZM68 19h3.5v7h-3.5ZM22.5 26h63v17.5h-63ZM22.5 47h63v7h-63ZM22.5 54h45.5v21h-45.5ZM71.5 54h14v21h-14ZM22.5 75h63v14h-63Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 15h3.5v7h-3.5ZM64 15h3.5v7h-3.5ZM18.5 22h63v17.5h-63ZM18.5 43h63v7h-63ZM18.5 50h45.5v21h-45.5ZM67.5 50h14v21h-14ZM18.5 71h63v14h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

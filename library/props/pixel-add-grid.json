@@ -1,0 +1,71 @@
+{
+ "name": "pixel-add-grid",
+ "category": "tech",
+ "tags": [
+  "add grid",
+  "pixel add grid",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "add grid, regular pixel icon",
+   "paths": [
+    {
+     "d": "M28.5 28.5h14v14h-14ZM63.5 28.5h14v14h-14ZM28.5 63.5h14v14h-14Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h28v7h-28ZM53.5 18.5h28v7h-28ZM18.5 25.5h7v14h-7ZM39.5 25.5h7v14h-7ZM53.5 25.5h7v14h-7ZM74.5 25.5h7v14h-7ZM18.5 39.5h28v7h-28ZM53.5 39.5h28v7h-28ZM18.5 53.5h28v7h-28ZM64 53.5h7v10.5h-7ZM53.5 64h28v7h-28ZM18.5 60.5h7v14h-7ZM39.5 60.5h7v14h-7ZM64 71h7v10.5h-7ZM18.5 74.5h28v7h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "add grid, thin pixel icon",
+   "paths": [
+    {
+     "d": "M21.5 21.5h24.5v24.5h-24.5ZM60 21.5h24.5v24.5h-24.5ZM21.5 60h24.5v24.5h-24.5Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 15h31.5v3.5h-31.5ZM53.5 15h31.5v3.5h-31.5ZM15 18.5h3.5v24.5h-3.5ZM43 18.5h3.5v24.5h-3.5ZM53.5 18.5h3.5v24.5h-3.5ZM81.5 18.5h3.5v24.5h-3.5ZM15 43h31.5v3.5h-31.5ZM53.5 43h31.5v3.5h-31.5ZM15 53.5h31.5v3.5h-31.5ZM67.5 53.5h3.5v14h-3.5ZM53.5 67.5h31.5v3.5h-31.5ZM15 57h3.5v24.5h-3.5ZM43 57h3.5v24.5h-3.5ZM67.5 71h3.5v14h-3.5ZM15 81.5h31.5v3.5h-31.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "add grid, solid pixel icon",
+   "paths": [
+    {
+     "d": "M22.5 22.5h28v28h-28ZM57.5 22.5h28v28h-28ZM68 57.5h7v10.5h-7ZM57.5 68h28v7h-28ZM22.5 57.5h28v28h-28ZM68 75h7v10.5h-7Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h28v28h-28ZM53.5 18.5h28v28h-28ZM64 53.5h7v10.5h-7ZM53.5 64h28v7h-28ZM18.5 53.5h28v28h-28ZM64 71h7v10.5h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "add grid, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M19 19h31.5v31.5h-31.5ZM57.5 19h31.5v31.5h-31.5ZM71.5 57.5h3.5v14h-3.5ZM57.5 71.5h31.5v3.5h-31.5ZM19 57.5h31.5v31.5h-31.5ZM71.5 75h3.5v14h-3.5Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 15h31.5v31.5h-31.5ZM53.5 15h31.5v31.5h-31.5ZM67.5 53.5h3.5v14h-3.5ZM53.5 67.5h31.5v3.5h-31.5ZM15 53.5h31.5v31.5h-31.5ZM67.5 71h3.5v14h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

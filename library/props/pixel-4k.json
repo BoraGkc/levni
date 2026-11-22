@@ -1,0 +1,61 @@
+{
+ "name": "pixel-4k",
+ "category": "tech",
+ "tags": [
+  "4k",
+  "pixel 4k",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "4k, regular pixel icon",
+   "paths": [
+    {
+     "d": "M74.5 32.5h7v7h-7ZM18.5 32.5h7v14h-7ZM39.5 32.5h7v14h-7ZM53.5 32.5h7v14h-7ZM67.5 39.5h7v7h-7ZM18.5 46.5h28v7h-28ZM53.5 46.5h14v7h-14ZM67.5 53.5h7v7h-7ZM39.5 53.5h7v14h-7ZM53.5 53.5h7v14h-7ZM74.5 60.5h7v7h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "4k, thin pixel icon",
+   "paths": [
+    {
+     "d": "M78 32.5h3.5v3.5h-3.5ZM74.5 36h3.5v3.5h-3.5ZM71 39.5h3.5v3.5h-3.5ZM53.5 32.5h3.5v14h-3.5ZM67.5 43h3.5v3.5h-3.5ZM18.5 32.5h3.5v17.5h-3.5ZM43 32.5h3.5v17.5h-3.5ZM53.5 46.5h14v3.5h-14ZM18.5 50h28v3.5h-28ZM67.5 50h3.5v3.5h-3.5ZM71 53.5h3.5v3.5h-3.5ZM74.5 57h3.5v3.5h-3.5ZM53.5 50h3.5v17.5h-3.5ZM43 53.5h3.5v14h-3.5ZM78 60.5h3.5v7h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "4k, solid pixel icon",
+   "paths": [
+    {
+     "d": "M15.5 26h77v10.5h-77ZM64.5 36.5h14v7h-14ZM85.5 36.5h7v7h-7ZM29.5 36.5h14v14h-14ZM64.5 43.5h7v7h-7ZM78.5 43.5h14v7h-14ZM15.5 36.5h7v21h-7ZM71.5 50.5h21v7h-21ZM64.5 57.5h7v7h-7ZM78.5 57.5h14v7h-14ZM50.5 36.5h7v35h-7ZM15.5 57.5h28v14h-28ZM64.5 64.5h14v7h-14ZM85.5 64.5h7v7h-7ZM15.5 71.5h77v10.5h-77Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M11.5 22h77v10.5h-77ZM60.5 32.5h14v7h-14ZM81.5 32.5h7v7h-7ZM25.5 32.5h14v14h-14ZM60.5 39.5h7v7h-7ZM74.5 39.5h14v7h-14ZM11.5 32.5h7v21h-7ZM67.5 46.5h21v7h-21ZM60.5 53.5h7v7h-7ZM74.5 53.5h14v7h-14ZM46.5 32.5h7v35h-7ZM11.5 53.5h28v14h-28ZM60.5 60.5h14v7h-14ZM81.5 60.5h7v7h-7ZM11.5 67.5h77v10.5h-77Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "4k, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M82 36.5h3.5v3.5h-3.5ZM78.5 40h3.5v3.5h-3.5ZM75 43.5h3.5v3.5h-3.5ZM57.5 36.5h3.5v14h-3.5ZM71.5 47h3.5v3.5h-3.5ZM22.5 36.5h3.5v17.5h-3.5ZM47 36.5h3.5v17.5h-3.5ZM57.5 50.5h14v3.5h-14ZM22.5 54h28v3.5h-28ZM71.5 54h3.5v3.5h-3.5ZM75 57.5h3.5v3.5h-3.5ZM78.5 61h3.5v3.5h-3.5ZM57.5 54h3.5v17.5h-3.5ZM47 57.5h3.5v14h-3.5ZM82 64.5h3.5v7h-3.5Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M78 32.5h3.5v3.5h-3.5ZM74.5 36h3.5v3.5h-3.5ZM71 39.5h3.5v3.5h-3.5ZM53.5 32.5h3.5v14h-3.5ZM67.5 43h3.5v3.5h-3.5ZM18.5 32.5h3.5v17.5h-3.5ZM43 32.5h3.5v17.5h-3.5ZM53.5 46.5h14v3.5h-14ZM18.5 50h28v3.5h-28ZM67.5 50h3.5v3.5h-3.5ZM71 53.5h3.5v3.5h-3.5ZM74.5 57h3.5v3.5h-3.5ZM53.5 50h3.5v17.5h-3.5ZM43 53.5h3.5v14h-3.5ZM78 60.5h3.5v7h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

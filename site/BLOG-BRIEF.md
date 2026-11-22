@@ -7,7 +7,7 @@ Read this whole file before writing. Posts live in `site/src/content/blog/<slug>
 Read before writing, and claim nothing they do not support: `README.md`, `docs/scene.md`, `CONTRIBUTING.md`, `docs/prop-prompt.md`, `src/mcp.mjs` (MCP tool names and fields), `site/src/pages/index.astro`, `site/src/pages/library/index.astro`, the existing posts in this folder.
 - Install: `npm install github:BoraGkc/levni` (not on npm yet). CLI: `levni render | sheet | list | add | check | mcp`.
 - MCP tools: `scene_guide`, `list_props`, `show_props`, `render_scene`, `critique_scene`. Claude Code: `claude mcp add levni -- npx -y github:BoraGkc/levni mcp`.
-- Library: 947 props, 1257 variants, 15 categories, CC BY 4.0 (“drawings by Ortak Alan”). Code MIT. No image model, no API key, zero cost per image.
+- Library: 1,428 props (481 pixel icons), 3,181 variants, 15 categories, CC BY 4.0 (“drawings by Ortak Alan”). Code MIT. No image model, no API key, zero cost per image.
 - `style` is `"riso"`, `"miniature"` or your own inks `{ "blue": "#…", … }`.
 - Ortak Alan drew about 500 article covers with it. Do not invent other numbers, customers, quotes, benchmarks or prices. For other products (Midjourney, DALL·E, Canva…) describe only general, well-known traits; no prices, no feature claims you cannot back.
 

@@ -1,0 +1,71 @@
+{
+ "name": "pixel-layout-align-right",
+ "category": "books",
+ "tags": [
+  "layout align right",
+  "pixel layout align right",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "layout align right, regular pixel icon",
+   "paths": [
+    {
+     "d": "M32 46h28v14h-28Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 36h42v7h-42ZM22 43h7v14h-7ZM57 43h7v14h-7ZM22 57h42v7h-42ZM71 22h7v56h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "layout align right, thin pixel icon",
+   "paths": [
+    {
+     "d": "M28.5 42.5h35v21h-35Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 36h42v3.5h-42ZM22 39.5h3.5v21h-3.5ZM60.5 39.5h3.5v21h-3.5ZM22 60.5h42v3.5h-42ZM74.5 22h3.5v56h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "layout align right, solid pixel icon",
+   "paths": [
+    {
+     "d": "M26 40h42v28h-42ZM75 26h7v56h-7Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 36h42v28h-42ZM71 22h7v56h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "layout align right, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M26 40h42v28h-42ZM78.5 26h3.5v56h-3.5Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 36h42v28h-42ZM74.5 22h3.5v56h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

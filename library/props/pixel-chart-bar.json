@@ -1,0 +1,66 @@
+{
+ "name": "pixel-chart-bar",
+ "category": "money",
+ "tags": [
+  "chart bar",
+  "pixel chart bar",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "chart bar, regular pixel icon",
+   "paths": [
+    {
+     "d": "M53.5 25.5h7v49h-7ZM39.5 39.5h7v35h-7ZM25.5 53.5h7v21h-7ZM67.5 53.5h7v21h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "chart bar, thin pixel icon",
+   "paths": [
+    {
+     "d": "M56.5 32h7v42h-7ZM39 46h7v28h-7ZM21.5 60h7v14h-7ZM74 60h7v14h-7Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 25.5h14v3.5h-14ZM32.5 39.5h14v3.5h-14ZM15 53.5h14v3.5h-14ZM67.5 53.5h14v3.5h-14ZM50 29h3.5v42h-3.5ZM60.5 29h3.5v42h-3.5ZM32.5 43h3.5v28h-3.5ZM43 43h3.5v28h-3.5ZM15 57h3.5v14h-3.5ZM25.5 57h3.5v14h-3.5ZM67.5 57h3.5v14h-3.5ZM78 57h3.5v14h-3.5ZM15 71h14v3.5h-14ZM32.5 71h14v3.5h-14ZM50 71h14v3.5h-14ZM67.5 71h14v3.5h-14Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "chart bar, solid pixel icon",
+   "paths": [
+    {
+     "d": "M57.5 29.5h7v49h-7ZM43.5 43.5h7v35h-7ZM29.5 57.5h7v21h-7ZM71.5 57.5h7v21h-7Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M53.5 25.5h7v49h-7ZM39.5 39.5h7v35h-7ZM25.5 53.5h7v21h-7ZM67.5 53.5h7v21h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "chart bar, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M54 29.5h14v49h-14ZM36.5 43.5h14v35h-14ZM19 57.5h14v21h-14ZM71.5 57.5h14v21h-14Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 25.5h14v49h-14ZM32.5 39.5h14v35h-14ZM15 53.5h14v21h-14ZM67.5 53.5h14v21h-14Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

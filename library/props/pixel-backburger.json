@@ -1,0 +1,61 @@
+{
+ "name": "pixel-backburger",
+ "category": "symbols",
+ "tags": [
+  "backburger",
+  "pixel backburger",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "backburger, regular pixel icon",
+   "paths": [
+    {
+     "d": "M32.5 32.5h7v7h-7ZM46.5 32.5h35v7h-35ZM25.5 39.5h7v7h-7ZM18.5 46.5h63v7h-63ZM25.5 53.5h7v7h-7ZM32.5 60.5h7v7h-7ZM46.5 60.5h35v7h-35Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "backburger, thin pixel icon",
+   "paths": [
+    {
+     "d": "M36 29h3.5v3.5h-3.5ZM32.5 32.5h3.5v3.5h-3.5ZM29 36h3.5v3.5h-3.5ZM46.5 36h35v3.5h-35ZM25.5 39.5h3.5v3.5h-3.5ZM22 43h3.5v3.5h-3.5ZM18.5 46.5h63v3.5h-63ZM22 50h3.5v3.5h-3.5ZM25.5 53.5h3.5v3.5h-3.5ZM29 57h3.5v3.5h-3.5ZM46.5 57h35v3.5h-35ZM32.5 60.5h3.5v3.5h-3.5ZM36 64h3.5v3.5h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "backburger, solid pixel icon",
+   "paths": [
+    {
+     "d": "M36.5 36.5h7v7h-7ZM50.5 36.5h35v7h-35ZM29.5 43.5h14v7h-14ZM22.5 50.5h63v7h-63ZM29.5 57.5h14v7h-14ZM36.5 64.5h7v7h-7ZM50.5 64.5h35v7h-35Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 32.5h7v7h-7ZM46.5 32.5h35v7h-35ZM25.5 39.5h14v7h-14ZM18.5 46.5h63v7h-63ZM25.5 53.5h14v7h-14ZM32.5 60.5h7v7h-7ZM46.5 60.5h35v7h-35Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "backburger, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M40 33h3.5v3.5h-3.5ZM36.5 36.5h3.5v3.5h-3.5ZM33 40h3.5v3.5h-3.5ZM50.5 40h35v3.5h-35ZM29.5 43.5h3.5v3.5h-3.5ZM26 47h3.5v3.5h-3.5ZM22.5 50.5h63v3.5h-63ZM26 54h3.5v3.5h-3.5ZM29.5 57.5h3.5v3.5h-3.5ZM33 61h3.5v3.5h-3.5ZM50.5 61h35v3.5h-35ZM36.5 64.5h3.5v3.5h-3.5ZM40 68h3.5v3.5h-3.5Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 29h3.5v3.5h-3.5ZM32.5 32.5h3.5v3.5h-3.5ZM29 36h3.5v3.5h-3.5ZM46.5 36h35v3.5h-35ZM25.5 39.5h3.5v3.5h-3.5ZM22 43h3.5v3.5h-3.5ZM18.5 46.5h63v3.5h-63ZM22 50h3.5v3.5h-3.5ZM25.5 53.5h3.5v3.5h-3.5ZM29 57h3.5v3.5h-3.5ZM46.5 57h35v3.5h-35ZM32.5 60.5h3.5v3.5h-3.5ZM36 64h3.5v3.5h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

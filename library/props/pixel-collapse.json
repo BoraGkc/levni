@@ -1,0 +1,61 @@
+{
+ "name": "pixel-collapse",
+ "category": "symbols",
+ "tags": [
+  "collapse",
+  "pixel collapse",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "collapse, regular pixel icon",
+   "paths": [
+    {
+     "d": "M32.5 18.5h7v7h-7ZM60.5 18.5h7v7h-7ZM39.5 25.5h7v7h-7ZM53.5 25.5h7v7h-7ZM46.5 32.5h7v7h-7ZM22 46.5h56v7h-56ZM46.5 60.5h7v7h-7ZM39.5 67.5h7v7h-7ZM53.5 67.5h7v7h-7ZM32.5 74.5h7v7h-7ZM60.5 74.5h7v7h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "collapse, thin pixel icon",
+   "paths": [
+    {
+     "d": "M29 18.5h3.5v3.5h-3.5ZM67.5 18.5h3.5v3.5h-3.5ZM32.5 22h3.5v3.5h-3.5ZM64 22h3.5v3.5h-3.5ZM36 25.5h3.5v3.5h-3.5ZM60.5 25.5h3.5v3.5h-3.5ZM39.5 29h3.5v3.5h-3.5ZM57 29h3.5v3.5h-3.5ZM43 32.5h3.5v3.5h-3.5ZM53.5 32.5h3.5v3.5h-3.5ZM46.5 36h7v3.5h-7ZM22 50h56v3.5h-56ZM46.5 60.5h7v3.5h-7ZM43 64h3.5v3.5h-3.5ZM53.5 64h3.5v3.5h-3.5ZM39.5 67.5h3.5v3.5h-3.5ZM57 67.5h3.5v3.5h-3.5ZM36 71h3.5v3.5h-3.5ZM60.5 71h3.5v3.5h-3.5ZM32.5 74.5h3.5v3.5h-3.5ZM64 74.5h3.5v3.5h-3.5ZM29 78h3.5v3.5h-3.5ZM67.5 78h3.5v3.5h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "collapse, solid pixel icon",
+   "paths": [
+    {
+     "d": "M36.5 22.5h35v7h-35ZM43.5 29.5h21v7h-21ZM50.5 36.5h7v7h-7ZM26 50.5h56v7h-56ZM50.5 64.5h7v7h-7ZM43.5 71.5h21v7h-21ZM36.5 78.5h35v7h-35Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 18.5h35v7h-35ZM39.5 25.5h21v7h-21ZM46.5 32.5h7v7h-7ZM22 46.5h56v7h-56ZM46.5 60.5h7v7h-7ZM39.5 67.5h21v7h-21ZM32.5 74.5h35v7h-35Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "collapse, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M12 12h31.5v3.5h-31.5ZM36.5 22.5h35v3.5h-35ZM40 26h28v3.5h-28ZM43.5 29.5h21v3.5h-21ZM47 33h14v3.5h-14ZM50.5 36.5h7v3.5h-7ZM26 54h56v3.5h-56Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M8 8h31.5v3.5h-31.5ZM32.5 18.5h35v3.5h-35ZM36 22h28v3.5h-28ZM39.5 25.5h21v3.5h-21ZM43 29h14v3.5h-14ZM46.5 32.5h7v3.5h-7ZM22 50h56v3.5h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

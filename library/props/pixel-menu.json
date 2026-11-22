@@ -1,0 +1,61 @@
+{
+ "name": "pixel-menu",
+ "category": "symbols",
+ "tags": [
+  "menu",
+  "pixel menu",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "menu, regular pixel icon",
+   "paths": [
+    {
+     "d": "M22 29h56v7h-56ZM22 46.5h56v7h-56ZM22 64h56v7h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "menu, thin pixel icon",
+   "paths": [
+    {
+     "d": "M22 39.5h56v3.5h-56ZM22 57h56v3.5h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "menu, solid pixel icon",
+   "paths": [
+    {
+     "d": "M26 33h56v7h-56ZM26 50.5h56v7h-56ZM26 68h56v7h-56Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 29h56v7h-56ZM22 46.5h56v7h-56ZM22 64h56v7h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "menu, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M26 43.5h56v3.5h-56ZM26 61h56v3.5h-56Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 39.5h56v3.5h-56ZM22 57h56v3.5h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

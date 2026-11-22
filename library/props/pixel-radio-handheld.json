@@ -1,0 +1,71 @@
+{
+ "name": "pixel-radio-handheld",
+ "category": "music",
+ "tags": [
+  "radio handheld",
+  "pixel radio handheld",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "radio handheld, regular pixel icon",
+   "paths": [
+    {
+     "d": "M42.5 42.5h21v14h-21ZM42.5 63.5h21v17.5h-21Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 15h7v17.5h-7ZM32.5 32.5h35v7h-35ZM32.5 39.5h7v14h-7ZM60.5 39.5h7v14h-7ZM32.5 53.5h35v7h-35ZM32.5 60.5h7v17.5h-7ZM60.5 60.5h7v17.5h-7ZM32.5 78h35v7h-35Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "radio handheld, thin pixel icon",
+   "paths": [
+    {
+     "d": "M39 39h28v17.5h-28ZM39 60h28v3.5h-28ZM39 63.5h3.5v3.5h-3.5ZM46 63.5h3.5v3.5h-3.5ZM53 63.5h3.5v3.5h-3.5ZM60 63.5h7v3.5h-7ZM39 67h28v3.5h-28ZM39 70.5h7v3.5h-7ZM49.5 70.5h3.5v3.5h-3.5ZM56.5 70.5h3.5v3.5h-3.5ZM63.5 70.5h3.5v3.5h-3.5ZM39 74h28v3.5h-28ZM39 77.5h3.5v3.5h-3.5ZM46 77.5h3.5v3.5h-3.5ZM53 77.5h3.5v3.5h-3.5ZM60 77.5h7v3.5h-7ZM39 81h28v3.5h-28Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 15h3.5v17.5h-3.5ZM32.5 32.5h35v3.5h-35ZM32.5 36h3.5v17.5h-3.5ZM64 36h3.5v17.5h-3.5ZM32.5 53.5h35v3.5h-35ZM39.5 60.5h3.5v3.5h-3.5ZM46.5 60.5h3.5v3.5h-3.5ZM53.5 60.5h3.5v3.5h-3.5ZM43 67.5h3.5v3.5h-3.5ZM50 67.5h3.5v3.5h-3.5ZM57 67.5h3.5v3.5h-3.5ZM39.5 74.5h3.5v3.5h-3.5ZM46.5 74.5h3.5v3.5h-3.5ZM53.5 74.5h3.5v3.5h-3.5ZM32.5 57h3.5v24.5h-3.5ZM64 57h3.5v24.5h-3.5ZM32.5 81.5h35v3.5h-35Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "radio handheld, solid pixel icon",
+   "paths": [
+    {
+     "d": "M36.5 19h7v17.5h-7ZM36.5 36.5h35v21h-35ZM36.5 64.5h35v24.5h-35Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 15h7v17.5h-7ZM32.5 32.5h35v21h-35ZM32.5 60.5h35v24.5h-35Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "radio handheld, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M36.5 19h3.5v17.5h-3.5ZM36.5 36.5h35v21h-35ZM36.5 57.5h3.5v3.5h-3.5ZM68 57.5h3.5v3.5h-3.5ZM36.5 61h35v3.5h-35ZM36.5 64.5h7v3.5h-7ZM47 64.5h3.5v3.5h-3.5ZM54 64.5h3.5v3.5h-3.5ZM61 64.5h10.5v3.5h-10.5ZM36.5 68h35v3.5h-35ZM36.5 71.5h10.5v3.5h-10.5ZM50.5 71.5h3.5v3.5h-3.5ZM57.5 71.5h3.5v3.5h-3.5ZM64.5 71.5h7v3.5h-7ZM36.5 75h35v3.5h-35ZM36.5 78.5h7v3.5h-7ZM47 78.5h3.5v3.5h-3.5ZM54 78.5h3.5v3.5h-3.5ZM61 78.5h10.5v3.5h-10.5ZM36.5 82h35v7h-35Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 15h3.5v17.5h-3.5ZM32.5 32.5h35v21h-35ZM32.5 53.5h3.5v3.5h-3.5ZM64 53.5h3.5v3.5h-3.5ZM32.5 57h35v3.5h-35ZM32.5 60.5h7v3.5h-7ZM43 60.5h3.5v3.5h-3.5ZM50 60.5h3.5v3.5h-3.5ZM57 60.5h10.5v3.5h-10.5ZM32.5 64h35v3.5h-35ZM32.5 67.5h10.5v3.5h-10.5ZM46.5 67.5h3.5v3.5h-3.5ZM53.5 67.5h3.5v3.5h-3.5ZM60.5 67.5h7v3.5h-7ZM32.5 71h35v3.5h-35ZM32.5 74.5h7v3.5h-7ZM43 74.5h3.5v3.5h-3.5ZM50 74.5h3.5v3.5h-3.5ZM57 74.5h10.5v3.5h-10.5ZM32.5 78h35v7h-35Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

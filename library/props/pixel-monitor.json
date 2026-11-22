@@ -1,0 +1,71 @@
+{
+ "name": "pixel-monitor",
+ "category": "tv",
+ "tags": [
+  "monitor",
+  "pixel monitor",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "monitor, regular pixel icon",
+   "paths": [
+    {
+     "d": "M25 28.5h56v35h-56Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 18.5h70v7h-70ZM15 25.5h7v35h-7ZM78 25.5h7v35h-7ZM15 60.5h70v7h-70ZM43 67.5h14v7h-14ZM36 74.5h28v7h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "monitor, thin pixel icon",
+   "paths": [
+    {
+     "d": "M21.5 25h63v42h-63ZM49.5 70.5h7v10.5h-7Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 18.5h70v3.5h-70ZM15 22h3.5v42h-3.5ZM81.5 22h3.5v42h-3.5ZM15 64h70v3.5h-70ZM43 67.5h3.5v10.5h-3.5ZM53.5 67.5h3.5v10.5h-3.5ZM36 78h28v3.5h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "monitor, solid pixel icon",
+   "paths": [
+    {
+     "d": "M19 22.5h70v49h-70ZM47 71.5h14v7h-14ZM40 78.5h28v7h-28Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 18.5h70v49h-70ZM43 67.5h14v7h-14ZM36 74.5h28v7h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "monitor, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M19 22.5h70v49h-70ZM47 71.5h3.5v10.5h-3.5ZM57.5 71.5h3.5v10.5h-3.5ZM40 82h28v3.5h-28Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 18.5h70v49h-70ZM43 67.5h3.5v10.5h-3.5ZM53.5 67.5h3.5v10.5h-3.5ZM36 78h28v3.5h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

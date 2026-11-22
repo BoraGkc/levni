@@ -1,0 +1,66 @@
+{
+ "name": "pixel-pause",
+ "category": "music",
+ "tags": [
+  "pause",
+  "pixel pause",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "pause, regular pixel icon",
+   "paths": [
+    {
+     "d": "M25.5 22h17.5v56h-17.5ZM57 22h17.5v56h-17.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "pause, thin pixel icon",
+   "paths": [
+    {
+     "d": "M32 28.5h10.5v49h-10.5ZM63.5 28.5h10.5v49h-10.5Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M25.5 22h17.5v3.5h-17.5ZM57 22h17.5v3.5h-17.5ZM25.5 25.5h3.5v49h-3.5ZM39.5 25.5h3.5v49h-3.5ZM57 25.5h3.5v49h-3.5ZM71 25.5h3.5v49h-3.5ZM25.5 74.5h17.5v3.5h-17.5ZM57 74.5h17.5v3.5h-17.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "pause, solid pixel icon",
+   "paths": [
+    {
+     "d": "M29.5 26h17.5v56h-17.5ZM61 26h17.5v56h-17.5Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M25.5 22h17.5v56h-17.5ZM57 22h17.5v56h-17.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "pause, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M29.5 26h17.5v56h-17.5ZM61 26h17.5v56h-17.5Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M25.5 22h17.5v56h-17.5ZM57 22h17.5v56h-17.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

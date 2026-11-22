@@ -1,0 +1,71 @@
+{
+ "name": "pixel-cloud-sun",
+ "category": "nature",
+ "tags": [
+  "cloud sun",
+  "pixel cloud sun",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "cloud sun, regular pixel icon",
+   "paths": [
+    {
+     "d": "M39 60h14v7h-14ZM25 67h14v7h-14ZM46 67h14v7h-14ZM25 74h35v7h-35Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M46.5 8h7v14h-7ZM15 15h7v7h-7ZM78 15h7v7h-7ZM22 22h7v7h-7ZM71 22h7v7h-7ZM36 29h21v7h-21ZM29 36h7v7h-7ZM57 36h7v7h-7ZM64 43h7v7h-7ZM78 46.5h14v7h-14ZM36 50h14v7h-14ZM22 57h14v7h-14ZM50 57h7v7h-7ZM36 64h7v7h-7ZM15 64h7v14h-7ZM57 64h7v14h-7ZM22 78h35v7h-35Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "cloud sun, thin pixel icon",
+   "paths": [
+    {
+     "d": "M39 56.5h14v3.5h-14ZM35.5 60h24.5v3.5h-24.5ZM39 63.5h24.5v3.5h-24.5ZM25 67h14v3.5h-14ZM42.5 67h21v3.5h-21ZM21.5 70.5h21v3.5h-21ZM46 70.5h21v3.5h-21ZM21.5 74h45.5v7h-45.5ZM25 81h38.5v3.5h-38.5Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 15h3.5v3.5h-3.5ZM81.5 15h3.5v3.5h-3.5ZM46.5 8h3.5v14h-3.5ZM18.5 18.5h3.5v3.5h-3.5ZM78 18.5h3.5v3.5h-3.5ZM22 22h3.5v3.5h-3.5ZM74.5 22h3.5v3.5h-3.5ZM25.5 25.5h3.5v3.5h-3.5ZM71 25.5h3.5v3.5h-3.5ZM36 29h24.5v3.5h-24.5ZM32.5 32.5h3.5v3.5h-3.5ZM60.5 32.5h3.5v3.5h-3.5ZM29 36h3.5v3.5h-3.5ZM64 36h3.5v3.5h-3.5ZM25.5 39.5h3.5v10.5h-3.5ZM78 46.5h14v3.5h-14ZM36 50h14v3.5h-14ZM67.5 39.5h3.5v17.5h-3.5ZM32.5 53.5h3.5v3.5h-3.5ZM50 53.5h7v3.5h-7ZM29 57h3.5v3.5h-3.5ZM57 57h3.5v3.5h-3.5ZM22 60.5h14v3.5h-14ZM60.5 60.5h3.5v7h-3.5ZM18.5 64h3.5v3.5h-3.5ZM36 64h3.5v3.5h-3.5ZM39.5 67.5h3.5v3.5h-3.5ZM15 67.5h3.5v10.5h-3.5ZM64 67.5h3.5v10.5h-3.5ZM18.5 78h3.5v3.5h-3.5ZM60.5 78h3.5v3.5h-3.5ZM22 81.5h38.5v3.5h-38.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "cloud sun, solid pixel icon",
+   "paths": [
+    {
+     "d": "M50.5 12h7v14h-7ZM19 19h7v7h-7ZM82 19h7v7h-7ZM26 26h7v7h-7ZM75 26h7v7h-7ZM40 33h21v7h-21ZM33 40h7v7h-7ZM61 40h7v7h-7ZM82 50.5h14v7h-14ZM68 47h7v14h-7ZM40 54h14v7h-14ZM26 61h14v7h-14ZM47 61h14v7h-14ZM19 68h28v7h-28ZM54 68h14v7h-14ZM19 75h49v7h-49ZM26 82h35v7h-35Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M46.5 8h7v14h-7ZM15 15h7v7h-7ZM78 15h7v7h-7ZM22 22h7v7h-7ZM71 22h7v7h-7ZM36 29h21v7h-21ZM29 36h7v7h-7ZM57 36h7v7h-7ZM78 46.5h14v7h-14ZM64 43h7v14h-7ZM36 50h14v7h-14ZM22 57h14v7h-14ZM43 57h14v7h-14ZM15 64h28v7h-28ZM50 64h14v7h-14ZM15 71h49v7h-49ZM22 78h35v7h-35Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "cloud sun, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M19 19h3.5v3.5h-3.5ZM85.5 19h3.5v3.5h-3.5ZM50.5 12h3.5v14h-3.5ZM22.5 22.5h3.5v3.5h-3.5ZM82 22.5h3.5v3.5h-3.5ZM26 26h3.5v3.5h-3.5ZM78.5 26h3.5v3.5h-3.5ZM29.5 29.5h3.5v3.5h-3.5ZM75 29.5h3.5v3.5h-3.5ZM40 33h24.5v3.5h-24.5ZM36.5 36.5h31.5v3.5h-31.5ZM33 40h38.5v3.5h-38.5ZM29.5 43.5h45.5v7h-45.5ZM29.5 50.5h3.5v3.5h-3.5ZM61 50.5h14v3.5h-14ZM82 50.5h14v3.5h-14ZM40 54h14v3.5h-14ZM64.5 54h10.5v3.5h-10.5ZM36.5 57.5h24.5v3.5h-24.5ZM68 57.5h7v3.5h-7ZM33 61h31.5v3.5h-31.5ZM26 64.5h7v3.5h-7ZM40 64.5h28v3.5h-28ZM22.5 68h17.5v3.5h-17.5ZM43.5 68h24.5v3.5h-24.5ZM19 71.5h24.5v3.5h-24.5ZM47 71.5h24.5v3.5h-24.5ZM19 75h52.5v7h-52.5ZM22.5 82h45.5v3.5h-45.5ZM26 85.5h38.5v3.5h-38.5Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 15h3.5v3.5h-3.5ZM81.5 15h3.5v3.5h-3.5ZM46.5 8h3.5v14h-3.5ZM18.5 18.5h3.5v3.5h-3.5ZM78 18.5h3.5v3.5h-3.5ZM22 22h3.5v3.5h-3.5ZM74.5 22h3.5v3.5h-3.5ZM25.5 25.5h3.5v3.5h-3.5ZM71 25.5h3.5v3.5h-3.5ZM36 29h24.5v3.5h-24.5ZM32.5 32.5h31.5v3.5h-31.5ZM29 36h38.5v3.5h-38.5ZM25.5 39.5h45.5v7h-45.5ZM25.5 46.5h3.5v3.5h-3.5ZM57 46.5h14v3.5h-14ZM78 46.5h14v3.5h-14ZM36 50h14v3.5h-14ZM60.5 50h10.5v3.5h-10.5ZM32.5 53.5h24.5v3.5h-24.5ZM64 53.5h7v3.5h-7ZM29 57h31.5v3.5h-31.5ZM22 60.5h7v3.5h-7ZM36 60.5h28v3.5h-28ZM18.5 64h17.5v3.5h-17.5ZM39.5 64h24.5v3.5h-24.5ZM15 67.5h24.5v3.5h-24.5ZM43 67.5h24.5v3.5h-24.5ZM15 71h52.5v7h-52.5ZM18.5 78h45.5v3.5h-45.5ZM22 81.5h38.5v3.5h-38.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

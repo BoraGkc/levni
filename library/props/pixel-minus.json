@@ -1,0 +1,61 @@
+{
+ "name": "pixel-minus",
+ "category": "symbols",
+ "tags": [
+  "minus",
+  "pixel minus",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "minus, regular pixel icon",
+   "paths": [
+    {
+     "d": "M22 46.5h56v7h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "minus, thin pixel icon",
+   "paths": [
+    {
+     "d": "M22 46.5h56v3.5h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "minus, solid pixel icon",
+   "paths": [
+    {
+     "d": "M26 50.5h56v7h-56Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 46.5h56v7h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "minus, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M26 50.5h56v3.5h-56Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 46.5h56v3.5h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

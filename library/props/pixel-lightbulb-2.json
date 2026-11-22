@@ -1,0 +1,71 @@
+{
+ "name": "pixel-lightbulb-2",
+ "category": "home",
+ "tags": [
+  "lightbulb 2",
+  "pixel lightbulb 2",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "lightbulb 2, regular pixel icon",
+   "paths": [
+    {
+     "d": "M39 25h28v7h-28ZM32 32h21v7h-21ZM60 32h14v7h-14ZM32 39h14v7h-14ZM53 39h21v7h-21ZM32 46h21v7h-21ZM60 46h14v7h-14ZM39 53h7v7h-7ZM53 53h14v7h-14ZM46 60h14v7h-14Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 15h28v7h-28ZM29 22h7v7h-7ZM64 22h7v7h-7ZM50 29h7v7h-7ZM43 36h7v7h-7ZM22 29h7v21h-7ZM71 29h7v21h-7ZM50 43h7v7h-7ZM29 50h7v7h-7ZM43 50h7v7h-7ZM64 50h7v7h-7ZM36 57h7v7h-7ZM57 57h7v7h-7ZM36 64h28v7h-28ZM36 78h28v7h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "lightbulb 2, thin pixel icon",
+   "paths": [
+    {
+     "d": "M39 21.5h28v3.5h-28ZM32 25h42v3.5h-42ZM32 28.5h21v3.5h-21ZM56.5 28.5h17.5v3.5h-17.5ZM28.5 32h21v3.5h-21ZM56.5 32h21v7h-21ZM28.5 35.5h17.5v3.5h-17.5ZM49.5 35.5h3.5v3.5h-3.5ZM28.5 39h14v3.5h-14ZM46 39h10.5v3.5h-10.5ZM67 39h10.5v3.5h-10.5ZM28.5 42.5h10.5v3.5h-10.5ZM49.5 42.5h10.5v3.5h-10.5ZM63.5 42.5h14v3.5h-14ZM53 46h3.5v3.5h-3.5ZM60 46h17.5v3.5h-17.5ZM28.5 46h21v7h-21ZM56.5 49.5h21v3.5h-21ZM32 53h17.5v3.5h-17.5ZM53 53h21v3.5h-21ZM32 56.5h42v3.5h-42ZM39 60h28v3.5h-28ZM42.5 67h21v3.5h-21ZM42.5 70.5h3.5v3.5h-3.5ZM60 70.5h3.5v3.5h-3.5ZM42.5 74h21v3.5h-21ZM42.5 77.5h3.5v3.5h-3.5ZM60 77.5h3.5v3.5h-3.5ZM42.5 81h21v3.5h-21Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 15h28v3.5h-28ZM29 18.5h7v3.5h-7ZM64 18.5h7v3.5h-7ZM25.5 22h3.5v7h-3.5ZM71 22h3.5v7h-3.5ZM50 25.5h3.5v3.5h-3.5ZM46.5 29h7v3.5h-7ZM43 32.5h3.5v3.5h-3.5ZM50 32.5h3.5v3.5h-3.5ZM39.5 36h3.5v3.5h-3.5ZM53.5 36h10.5v3.5h-10.5ZM36 39.5h10.5v3.5h-10.5ZM57 39.5h3.5v3.5h-3.5ZM46.5 43h3.5v3.5h-3.5ZM53.5 43h3.5v3.5h-3.5ZM22 29h3.5v21h-3.5ZM74.5 29h3.5v21h-3.5ZM46.5 46.5h7v3.5h-7ZM46.5 50h3.5v3.5h-3.5ZM25.5 50h3.5v7h-3.5ZM71 50h3.5v7h-3.5ZM29 57h7v3.5h-7ZM64 57h7v3.5h-7ZM36 60.5h28v3.5h-28ZM43 67.5h14v3.5h-14ZM43 74.5h14v3.5h-14ZM36 64h3.5v17.5h-3.5ZM60.5 64h3.5v17.5h-3.5ZM39.5 81.5h21v3.5h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "lightbulb 2, solid pixel icon",
+   "paths": [
+    {
+     "d": "M40 19h28v7h-28ZM33 26h42v7h-42ZM26 33h28v7h-28ZM61 33h21v7h-21ZM26 40h21v7h-21ZM54 40h28v7h-28ZM26 47h28v7h-28ZM61 47h21v7h-21ZM33 54h14v7h-14ZM54 54h21v7h-21ZM40 61h28v14h-28ZM40 82h28v7h-28Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 15h28v7h-28ZM29 22h42v7h-42ZM22 29h28v7h-28ZM57 29h21v7h-21ZM22 36h21v7h-21ZM50 36h28v7h-28ZM22 43h28v7h-28ZM57 43h21v7h-21ZM29 50h14v7h-14ZM50 50h21v7h-21ZM36 57h28v14h-28ZM36 78h28v7h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "lightbulb 2, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M40 19h28v3.5h-28ZM33 22.5h42v3.5h-42ZM29.5 26h49v3.5h-49ZM29.5 29.5h24.5v3.5h-24.5ZM57.5 29.5h21v3.5h-21ZM26 33h24.5v3.5h-24.5ZM57.5 33h24.5v7h-24.5ZM26 36.5h21v3.5h-21ZM26 40h17.5v3.5h-17.5ZM68 40h14v3.5h-14ZM26 43.5h14v3.5h-14ZM64.5 43.5h17.5v3.5h-17.5ZM61 47h21v3.5h-21ZM26 47h24.5v7h-24.5ZM57.5 50.5h24.5v3.5h-24.5ZM29.5 54h21v3.5h-21ZM54 54h24.5v3.5h-24.5ZM29.5 57.5h49v3.5h-49ZM33 61h42v3.5h-42ZM40 68h28v3.5h-28ZM40 71.5h7v3.5h-7ZM61 71.5h7v3.5h-7ZM40 75h28v3.5h-28ZM40 78.5h7v3.5h-7ZM61 78.5h7v3.5h-7ZM40 82h28v3.5h-28ZM43.5 85.5h21v3.5h-21Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 15h28v3.5h-28ZM29 18.5h42v3.5h-42ZM25.5 22h49v3.5h-49ZM25.5 25.5h24.5v3.5h-24.5ZM53.5 25.5h21v3.5h-21ZM22 29h24.5v3.5h-24.5ZM53.5 29h24.5v7h-24.5ZM22 32.5h21v3.5h-21ZM22 36h17.5v3.5h-17.5ZM64 36h14v3.5h-14ZM22 39.5h14v3.5h-14ZM60.5 39.5h17.5v3.5h-17.5ZM57 43h21v3.5h-21ZM22 43h24.5v7h-24.5ZM53.5 46.5h24.5v3.5h-24.5ZM25.5 50h21v3.5h-21ZM50 50h24.5v3.5h-24.5ZM25.5 53.5h49v3.5h-49ZM29 57h42v3.5h-42ZM36 64h28v3.5h-28ZM36 67.5h7v3.5h-7ZM57 67.5h7v3.5h-7ZM36 71h28v3.5h-28ZM36 74.5h7v3.5h-7ZM57 74.5h7v3.5h-7ZM36 78h28v3.5h-28ZM39.5 81.5h21v3.5h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

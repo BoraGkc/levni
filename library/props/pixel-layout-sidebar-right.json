@@ -1,0 +1,71 @@
+{
+ "name": "pixel-layout-sidebar-right",
+ "category": "tech",
+ "tags": [
+  "layout sidebar right",
+  "pixel layout sidebar right",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "layout sidebar right, regular pixel icon",
+   "paths": [
+    {
+     "d": "M25 35.5h42v35h-42ZM74 35.5h7v35h-7Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 25.5h70v7h-70ZM15 32.5h7v35h-7ZM64 32.5h7v35h-7ZM78 32.5h7v35h-7ZM15 67.5h70v7h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "layout sidebar right, thin pixel icon",
+   "paths": [
+    {
+     "d": "M21.5 32h63v3.5h-63ZM70.5 39h7v28h-7ZM21.5 35.5h45.5v35h-45.5ZM81 35.5h3.5v35h-3.5ZM21.5 70.5h63v3.5h-63Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 25.5h70v3.5h-70ZM64 32.5h14v3.5h-14ZM64 36h3.5v28h-3.5ZM74.5 36h3.5v28h-3.5ZM64 64h14v3.5h-14ZM15 29h3.5v42h-3.5ZM81.5 29h3.5v42h-3.5ZM15 71h70v3.5h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "layout sidebar right, solid pixel icon",
+   "paths": [
+    {
+     "d": "M19 29.5h70v7h-70ZM19 36.5h49v35h-49ZM82 36.5h7v35h-7ZM19 71.5h70v7h-70Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 25.5h70v7h-70ZM15 32.5h49v35h-49ZM78 32.5h7v35h-7ZM15 67.5h70v7h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "layout sidebar right, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M19 29.5h70v7h-70ZM71.5 40h7v28h-7ZM19 36.5h49v35h-49ZM82 36.5h7v35h-7ZM19 71.5h70v7h-70Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 25.5h70v7h-70ZM67.5 36h7v28h-7ZM15 32.5h49v35h-49ZM78 32.5h7v35h-7ZM15 67.5h70v7h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

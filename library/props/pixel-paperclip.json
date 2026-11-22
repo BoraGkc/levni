@@ -1,0 +1,61 @@
+{
+ "name": "pixel-paperclip",
+ "category": "symbols",
+ "tags": [
+  "paperclip",
+  "pixel paperclip",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "paperclip, regular pixel icon",
+   "paths": [
+    {
+     "d": "M18.5 25.5h63v7h-63ZM32.5 39.5h35v7h-35ZM74.5 32.5h7v21h-7ZM32.5 46.5h7v7h-7ZM32.5 53.5h49v7h-49ZM18.5 32.5h7v35h-7ZM18.5 67.5h56v7h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "paperclip, thin pixel icon",
+   "paths": [
+    {
+     "d": "M25.5 25.5h49v3.5h-49ZM22 29h3.5v3.5h-3.5ZM74.5 29h3.5v3.5h-3.5ZM36 39.5h28v3.5h-28ZM64 43h3.5v3.5h-3.5ZM78 32.5h3.5v21h-3.5ZM32.5 43h3.5v14h-3.5ZM74.5 53.5h3.5v3.5h-3.5ZM36 57h38.5v3.5h-38.5ZM18.5 32.5h3.5v35h-3.5ZM22 67.5h3.5v3.5h-3.5ZM25.5 71h49v3.5h-49Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "paperclip, solid pixel icon",
+   "paths": [
+    {
+     "d": "M22.5 29.5h63v7h-63ZM36.5 43.5h35v7h-35ZM78.5 36.5h7v21h-7ZM36.5 50.5h7v7h-7ZM36.5 57.5h49v7h-49ZM22.5 36.5h7v35h-7ZM22.5 71.5h56v7h-56Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 25.5h63v7h-63ZM32.5 39.5h35v7h-35ZM74.5 32.5h7v21h-7ZM32.5 46.5h7v7h-7ZM32.5 53.5h49v7h-49ZM18.5 32.5h7v35h-7ZM18.5 67.5h56v7h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "paperclip, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M29.5 29.5h49v3.5h-49ZM26 33h3.5v3.5h-3.5ZM78.5 33h3.5v3.5h-3.5ZM40 43.5h28v3.5h-28ZM68 47h3.5v3.5h-3.5ZM82 36.5h3.5v21h-3.5ZM36.5 47h3.5v14h-3.5ZM78.5 57.5h3.5v3.5h-3.5ZM40 61h38.5v3.5h-38.5ZM22.5 36.5h3.5v35h-3.5ZM26 71.5h3.5v3.5h-3.5ZM29.5 75h49v3.5h-49Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M25.5 25.5h49v3.5h-49ZM22 29h3.5v3.5h-3.5ZM74.5 29h3.5v3.5h-3.5ZM36 39.5h28v3.5h-28ZM64 43h3.5v3.5h-3.5ZM78 32.5h3.5v21h-3.5ZM32.5 43h3.5v14h-3.5ZM74.5 53.5h3.5v3.5h-3.5ZM36 57h38.5v3.5h-38.5ZM18.5 32.5h3.5v35h-3.5ZM22 67.5h3.5v3.5h-3.5ZM25.5 71h49v3.5h-49Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

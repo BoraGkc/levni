@@ -1,0 +1,71 @@
+{
+ "name": "pixel-device-laptop",
+ "category": "tech",
+ "tags": [
+  "device laptop",
+  "pixel device laptop",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "device laptop, regular pixel icon",
+   "paths": [
+    {
+     "d": "M32 32h42v28h-42Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 22h56v7h-56ZM22 29h7v28h-7ZM71 29h7v28h-7ZM22 57h56v7h-56ZM15 71h70v7h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "device laptop, thin pixel icon",
+   "paths": [
+    {
+     "d": "M28.5 28.5h49v3.5h-49ZM35.5 35.5h35v21h-35ZM28.5 32h3.5v28h-3.5ZM74 32h3.5v28h-3.5ZM28.5 60h49v3.5h-49ZM25 67h56v3.5h-56ZM21.5 70.5h63v3.5h-63ZM18 74h70v3.5h-70Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 22h56v3.5h-56ZM29 29h42v3.5h-42ZM29 32.5h3.5v21h-3.5ZM67.5 32.5h3.5v21h-3.5ZM29 53.5h42v3.5h-42ZM22 25.5h3.5v35h-3.5ZM74.5 25.5h3.5v35h-3.5ZM22 60.5h56v3.5h-56ZM18.5 64h3.5v3.5h-3.5ZM78 64h3.5v3.5h-3.5ZM15 67.5h3.5v3.5h-3.5ZM81.5 67.5h3.5v3.5h-3.5ZM11.5 71h3.5v3.5h-3.5ZM85 71h3.5v3.5h-3.5ZM8 74.5h84v3.5h-84Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "device laptop, solid pixel icon",
+   "paths": [
+    {
+     "d": "M26 26h56v42h-56ZM19 75h70v7h-70Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 22h56v42h-56ZM15 71h70v7h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "device laptop, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M26 26h56v3.5h-56ZM33 33h42v28h-42ZM26 29.5h3.5v35h-3.5ZM78.5 29.5h3.5v35h-3.5ZM26 64.5h56v3.5h-56ZM22.5 68h63v3.5h-63ZM19 71.5h70v3.5h-70ZM15.5 75h77v3.5h-77ZM12 78.5h84v3.5h-84Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 22h56v3.5h-56ZM29 29h42v28h-42ZM22 25.5h3.5v35h-3.5ZM74.5 25.5h3.5v35h-3.5ZM22 60.5h56v3.5h-56ZM18.5 64h63v3.5h-63ZM15 67.5h70v3.5h-70ZM11.5 71h77v3.5h-77ZM8 74.5h84v3.5h-84Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

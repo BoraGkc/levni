@@ -1,0 +1,71 @@
+{
+ "name": "pixel-battery-1",
+ "category": "home",
+ "tags": [
+  "battery 1",
+  "pixel battery 1",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "battery 1, regular pixel icon",
+   "paths": [
+    {
+     "d": "M25 35.5h49v7h-49ZM25 42.5h7v21h-7ZM39 42.5h35v21h-35ZM25 63.5h49v7h-49Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 25.5h63v7h-63ZM71 32.5h7v7h-7ZM29 39.5h7v21h-7ZM71 39.5h14v21h-14ZM15 32.5h7v35h-7ZM71 60.5h7v7h-7ZM15 67.5h63v7h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "battery 1, thin pixel icon",
+   "paths": [
+    {
+     "d": "M21.5 32h56v10.5h-56ZM81 46h3.5v14h-3.5ZM21.5 42.5h10.5v21h-10.5ZM35.5 42.5h42v21h-42ZM21.5 63.5h56v10.5h-56Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 25.5h56v3.5h-56ZM74.5 29h3.5v10.5h-3.5ZM74.5 39.5h10.5v3.5h-10.5ZM74.5 43h3.5v14h-3.5ZM81.5 43h3.5v14h-3.5ZM29 39.5h3.5v21h-3.5ZM74.5 57h10.5v3.5h-10.5ZM15 29h3.5v42h-3.5ZM74.5 60.5h3.5v10.5h-3.5ZM18.5 71h56v3.5h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "battery 1, solid pixel icon",
+   "paths": [
+    {
+     "d": "M19 29.5h63v14h-63ZM19 43.5h14v21h-14ZM40 43.5h49v21h-49ZM19 64.5h63v14h-63Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 25.5h63v14h-63ZM15 39.5h14v21h-14ZM36 39.5h49v21h-49ZM15 60.5h63v14h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "battery 1, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M22.5 29.5h56v3.5h-56ZM19 33h63v10.5h-63ZM19 43.5h14v21h-14ZM36.5 43.5h45.5v21h-45.5ZM85.5 43.5h3.5v21h-3.5ZM19 64.5h63v10.5h-63ZM22.5 75h56v3.5h-56Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 25.5h56v3.5h-56ZM15 29h63v10.5h-63ZM15 39.5h14v21h-14ZM32.5 39.5h45.5v21h-45.5ZM81.5 39.5h3.5v21h-3.5ZM15 60.5h63v10.5h-63ZM18.5 71h56v3.5h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

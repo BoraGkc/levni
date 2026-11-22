@@ -1,0 +1,71 @@
+{
+ "name": "pixel-sliders-2",
+ "category": "tech",
+ "tags": [
+  "sliders 2",
+  "pixel sliders 2",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "sliders 2, regular pixel icon",
+   "paths": [
+    {
+     "d": "M32 32h7v14h-7ZM67 60h7v14h-7Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 22h21v7h-21ZM22 29h7v3.5h-7ZM36 29h7v3.5h-7ZM15 32.5h14v7h-14ZM36 32.5h49v7h-49ZM22 39.5h7v3.5h-7ZM36 39.5h7v3.5h-7ZM22 43h21v7h-21ZM57 50h21v7h-21ZM57 57h7v3.5h-7ZM71 57h7v3.5h-7ZM15 60.5h49v7h-49ZM71 60.5h14v7h-14ZM57 67.5h7v3.5h-7ZM71 67.5h7v3.5h-7ZM57 71h21v7h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "sliders 2, thin pixel icon",
+   "paths": [
+    {
+     "d": "M32 28.5h7v24.5h-7ZM67 53h7v24.5h-7Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M25.5 22h14v3.5h-14ZM15 36h7v3.5h-7ZM43 36h42v3.5h-42ZM25.5 25.5h3.5v24.5h-3.5ZM36 25.5h3.5v24.5h-3.5ZM60.5 46.5h14v3.5h-14ZM25.5 50h14v3.5h-14ZM15 60.5h42v3.5h-42ZM78 60.5h7v3.5h-7ZM60.5 50h3.5v24.5h-3.5ZM71 50h3.5v24.5h-3.5ZM60.5 74.5h14v3.5h-14Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "sliders 2, solid pixel icon",
+   "paths": [
+    {
+     "d": "M26 26h21v10.5h-21ZM19 36.5h70v7h-70ZM26 43.5h21v10.5h-21ZM61 54h21v10.5h-21ZM19 64.5h70v7h-70ZM61 71.5h21v10.5h-21Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 22h21v10.5h-21ZM15 32.5h70v7h-70ZM22 39.5h21v10.5h-21ZM57 50h21v10.5h-21ZM15 60.5h70v7h-70ZM57 67.5h21v10.5h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "sliders 2, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M19 40h7v3.5h-7ZM47 40h42v3.5h-42ZM29.5 26h14v31.5h-14ZM19 64.5h42v3.5h-42ZM82 64.5h7v3.5h-7ZM64.5 50.5h14v31.5h-14Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 36h7v3.5h-7ZM43 36h42v3.5h-42ZM25.5 22h14v31.5h-14ZM15 60.5h42v3.5h-42ZM78 60.5h7v3.5h-7ZM60.5 46.5h14v31.5h-14Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

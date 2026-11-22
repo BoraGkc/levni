@@ -1,0 +1,71 @@
+{
+ "name": "pixel-video-off",
+ "category": "film",
+ "tags": [
+  "video off",
+  "pixel video off",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "video off, regular pixel icon",
+   "paths": [
+    {
+     "d": "M25 35.5h35v7h-35ZM25 42.5h7v7h-7ZM39 42.5h7v7h-7ZM53 42.5h7v7h-7ZM25 49.5h14v7h-14ZM46 49.5h14v7h-14ZM25 56.5h7v7h-7ZM39 56.5h7v7h-7ZM53 56.5h7v7h-7ZM25 63.5h35v7h-35Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 25.5h49v7h-49ZM78 25.5h7v7h-7ZM57 32.5h7v7h-7ZM71 32.5h14v7h-14ZM29 39.5h7v7h-7ZM43 39.5h7v7h-7ZM36 46.5h7v7h-7ZM57 39.5h28v21h-28ZM29 53.5h7v7h-7ZM43 53.5h7v7h-7ZM15 32.5h7v35h-7ZM57 60.5h7v7h-7ZM71 60.5h14v7h-14ZM15 67.5h49v7h-49ZM78 67.5h7v7h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "video off, thin pixel icon",
+   "paths": [
+    {
+     "d": "M81 32h3.5v3.5h-3.5ZM77.5 35.5h7v3.5h-7ZM21.5 32h42v10.5h-42ZM74 39h10.5v3.5h-10.5ZM21.5 42.5h10.5v3.5h-10.5ZM35.5 42.5h14v3.5h-14ZM53 42.5h10.5v3.5h-10.5ZM70.5 42.5h14v3.5h-14ZM21.5 46h14v3.5h-14ZM39 46h7v3.5h-7ZM49.5 46h14v3.5h-14ZM21.5 49.5h17.5v7h-17.5ZM46 49.5h17.5v7h-17.5ZM67 46h17.5v14h-17.5ZM21.5 56.5h14v3.5h-14ZM39 56.5h7v3.5h-7ZM49.5 56.5h14v3.5h-14ZM21.5 60h10.5v3.5h-10.5ZM35.5 60h14v3.5h-14ZM53 60h10.5v3.5h-10.5ZM70.5 60h14v3.5h-14ZM74 63.5h10.5v3.5h-10.5ZM77.5 67h7v3.5h-7ZM21.5 63.5h42v10.5h-42ZM81 70.5h3.5v3.5h-3.5Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 25.5h49v3.5h-49ZM78 25.5h7v3.5h-7ZM74.5 29h3.5v3.5h-3.5ZM71 32.5h3.5v3.5h-3.5ZM60.5 29h3.5v10.5h-3.5ZM67.5 36h3.5v3.5h-3.5ZM29 39.5h3.5v3.5h-3.5ZM46.5 39.5h3.5v3.5h-3.5ZM60.5 39.5h7v3.5h-7ZM32.5 43h3.5v3.5h-3.5ZM43 43h3.5v3.5h-3.5ZM36 46.5h7v7h-7ZM60.5 43h3.5v14h-3.5ZM32.5 53.5h3.5v3.5h-3.5ZM43 53.5h3.5v3.5h-3.5ZM29 57h3.5v3.5h-3.5ZM46.5 57h3.5v3.5h-3.5ZM60.5 57h7v3.5h-7ZM67.5 60.5h3.5v3.5h-3.5ZM71 64h3.5v3.5h-3.5ZM15 29h3.5v42h-3.5ZM81.5 29h3.5v42h-3.5ZM60.5 60.5h3.5v10.5h-3.5ZM74.5 67.5h3.5v3.5h-3.5ZM15 71h49v3.5h-49ZM78 71h7v3.5h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "video off, solid pixel icon",
+   "paths": [
+    {
+     "d": "M82 29.5h7v7h-7ZM19 29.5h49v14h-49ZM75 36.5h14v7h-14ZM19 43.5h14v7h-14ZM40 43.5h7v7h-7ZM54 43.5h35v7h-35ZM19 50.5h21v7h-21ZM47 50.5h42v7h-42ZM19 57.5h14v7h-14ZM40 57.5h7v7h-7ZM54 57.5h35v7h-35ZM75 64.5h14v7h-14ZM19 64.5h49v14h-49ZM82 71.5h7v7h-7Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M78 25.5h7v7h-7ZM15 25.5h49v14h-49ZM71 32.5h14v7h-14ZM15 39.5h14v7h-14ZM36 39.5h7v7h-7ZM50 39.5h35v7h-35ZM15 46.5h21v7h-21ZM43 46.5h42v7h-42ZM15 53.5h14v7h-14ZM36 53.5h7v7h-7ZM50 53.5h35v7h-35ZM71 60.5h14v7h-14ZM15 60.5h49v14h-49ZM78 67.5h7v7h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "video off, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M85.5 29.5h3.5v3.5h-3.5ZM82 33h7v3.5h-7ZM78.5 36.5h10.5v3.5h-10.5ZM19 29.5h49v14h-49ZM75 40h14v3.5h-14ZM19 43.5h14v3.5h-14ZM36.5 43.5h14v3.5h-14ZM54 43.5h14v3.5h-14ZM19 47h17.5v3.5h-17.5ZM40 47h7v3.5h-7ZM50.5 47h17.5v3.5h-17.5ZM19 50.5h21v7h-21ZM47 50.5h21v7h-21ZM19 57.5h17.5v3.5h-17.5ZM40 57.5h7v3.5h-7ZM50.5 57.5h17.5v3.5h-17.5ZM71.5 43.5h17.5v21h-17.5ZM19 61h14v3.5h-14ZM36.5 61h14v3.5h-14ZM54 61h14v3.5h-14ZM75 64.5h14v3.5h-14ZM78.5 68h10.5v3.5h-10.5ZM82 71.5h7v3.5h-7ZM19 64.5h49v14h-49ZM85.5 75h3.5v3.5h-3.5Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M81.5 25.5h3.5v3.5h-3.5ZM78 29h7v3.5h-7ZM74.5 32.5h10.5v3.5h-10.5ZM15 25.5h49v14h-49ZM71 36h14v3.5h-14ZM15 39.5h14v3.5h-14ZM32.5 39.5h14v3.5h-14ZM50 39.5h14v3.5h-14ZM15 43h17.5v3.5h-17.5ZM36 43h7v3.5h-7ZM46.5 43h17.5v3.5h-17.5ZM15 46.5h21v7h-21ZM43 46.5h21v7h-21ZM15 53.5h17.5v3.5h-17.5ZM36 53.5h7v3.5h-7ZM46.5 53.5h17.5v3.5h-17.5ZM67.5 39.5h17.5v21h-17.5ZM15 57h14v3.5h-14ZM32.5 57h14v3.5h-14ZM50 57h14v3.5h-14ZM71 60.5h14v3.5h-14ZM74.5 64h10.5v3.5h-10.5ZM78 67.5h7v3.5h-7ZM15 60.5h49v14h-49ZM81.5 71h3.5v3.5h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "name": "pixel-deskphone",
+ "category": "tech",
+ "tags": [
+  "deskphone",
+  "pixel deskphone",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "deskphone, regular pixel icon",
+   "paths": [
+    {
+     "d": "M28.5 28.5h28v21h-28ZM28.5 56.5h10.5v7h-10.5ZM46 56.5h10.5v7h-10.5ZM63.5 28.5h14v49h-14ZM28.5 70.5h10.5v7h-10.5ZM46 70.5h10.5v7h-10.5Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h63v7h-63ZM18.5 25.5h7v21h-7ZM53.5 25.5h7v21h-7ZM18.5 46.5h42v7h-42ZM18.5 53.5h7v7h-7ZM36 53.5h7v7h-7ZM53.5 53.5h7v7h-7ZM18.5 60.5h42v7h-42ZM74.5 25.5h7v49h-7ZM18.5 67.5h7v7h-7ZM36 67.5h7v7h-7ZM53.5 67.5h7v7h-7ZM18.5 74.5h63v7h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "deskphone, thin pixel icon",
+   "paths": [
+    {
+     "d": "M25 25h31.5v24.5h-31.5ZM25 53h14v7h-14ZM42.5 53h14v7h-14ZM25 63.5h14v7h-14ZM42.5 63.5h14v7h-14ZM60 25h21v56h-21ZM25 74h14v7h-14ZM42.5 74h14v7h-14Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h63v3.5h-63ZM18.5 22h3.5v24.5h-3.5ZM53.5 22h3.5v24.5h-3.5ZM18.5 46.5h38.5v3.5h-38.5ZM18.5 50h3.5v7h-3.5ZM36 50h3.5v7h-3.5ZM53.5 50h3.5v7h-3.5ZM18.5 57h38.5v3.5h-38.5ZM18.5 60.5h3.5v7h-3.5ZM36 60.5h3.5v7h-3.5ZM53.5 60.5h3.5v7h-3.5ZM18.5 67.5h38.5v3.5h-38.5ZM78 22h3.5v56h-3.5ZM18.5 71h3.5v7h-3.5ZM36 71h3.5v7h-3.5ZM53.5 71h3.5v7h-3.5ZM18.5 78h63v3.5h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "deskphone, solid pixel icon",
+   "paths": [
+    {
+     "d": "M22.5 22.5h35v28h-35ZM22.5 57.5h14v10.5h-14ZM43.5 57.5h14v10.5h-14ZM64.5 22.5h21v63h-21ZM22.5 75h14v10.5h-14ZM43.5 75h14v10.5h-14Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h35v28h-35ZM18.5 53.5h14v10.5h-14ZM39.5 53.5h14v10.5h-14ZM60.5 18.5h21v63h-21ZM18.5 71h14v10.5h-14ZM39.5 71h14v10.5h-14Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "deskphone, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M22.5 22.5h63v3.5h-63ZM29.5 29.5h31.5v17.5h-31.5ZM29.5 50.5h14v7h-14ZM47 50.5h14v7h-14ZM29.5 61h14v7h-14ZM47 61h14v7h-14ZM64.5 29.5h14v49h-14ZM29.5 71.5h14v7h-14ZM47 71.5h14v7h-14ZM22.5 26h3.5v56h-3.5ZM82 26h3.5v56h-3.5ZM22.5 82h63v3.5h-63Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h63v3.5h-63ZM25.5 25.5h31.5v17.5h-31.5ZM25.5 46.5h14v7h-14ZM43 46.5h14v7h-14ZM25.5 57h14v7h-14ZM43 57h14v7h-14ZM60.5 25.5h14v49h-14ZM25.5 67.5h14v7h-14ZM43 67.5h14v7h-14ZM18.5 22h3.5v56h-3.5ZM78 22h3.5v56h-3.5ZM18.5 78h63v3.5h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "name": "pixel-card-plus",
+ "category": "money",
+ "tags": [
+  "card plus",
+  "pixel card plus",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "card plus, regular pixel icon",
+   "paths": [
+    {
+     "d": "M15 22h70v7h-70ZM78 29h7v14h-7ZM67.5 50h7v10.5h-7ZM57 60.5h28v7h-28ZM15 29h7v42h-7ZM67.5 67.5h7v10.5h-7ZM15 71h35v7h-35Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "card plus, thin pixel icon",
+   "paths": [
+    {
+     "d": "M15 22h70v3.5h-70ZM22 29h3.5v3.5h-3.5ZM74.5 29h3.5v3.5h-3.5ZM81.5 25.5h3.5v28h-3.5ZM74.5 57h3.5v10.5h-3.5ZM22 67.5h3.5v3.5h-3.5ZM64 67.5h24.5v3.5h-24.5ZM15 25.5h3.5v49h-3.5ZM15 74.5h45.5v3.5h-45.5ZM74.5 71h3.5v10.5h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "card plus, solid pixel icon",
+   "paths": [
+    {
+     "d": "M19 26h70v21h-70ZM71.5 54h7v10.5h-7ZM61 64.5h28v7h-28ZM19 47h35v35h-35ZM71.5 71.5h7v10.5h-7Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 22h70v21h-70ZM67.5 50h7v10.5h-7ZM57 60.5h28v7h-28ZM15 43h35v35h-35ZM67.5 67.5h7v10.5h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "card plus, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M19 26h70v7h-70ZM19 33h7v3.5h-7ZM29.5 33h49v3.5h-49ZM82 33h7v3.5h-7ZM19 36.5h70v21h-70ZM19 57.5h45.5v14h-45.5ZM78.5 61h3.5v10.5h-3.5ZM19 71.5h7v3.5h-7ZM29.5 71.5h35v3.5h-35ZM68 71.5h24.5v3.5h-24.5ZM19 75h45.5v7h-45.5ZM78.5 75h3.5v10.5h-3.5Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 22h70v7h-70ZM15 29h7v3.5h-7ZM25.5 29h49v3.5h-49ZM78 29h7v3.5h-7ZM15 32.5h70v21h-70ZM15 53.5h45.5v14h-45.5ZM74.5 57h3.5v10.5h-3.5ZM15 67.5h7v3.5h-7ZM25.5 67.5h35v3.5h-35ZM64 67.5h24.5v3.5h-24.5ZM15 71h45.5v7h-45.5ZM74.5 71h3.5v10.5h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

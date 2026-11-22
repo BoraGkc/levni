@@ -1,0 +1,71 @@
+{
+ "name": "pixel-radio-tower",
+ "category": "music",
+ "tags": [
+  "radio tower",
+  "pixel radio tower",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "radio tower, regular pixel icon",
+   "paths": [
+    {
+     "d": "M46 39h14v14h-14Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 15h7v7h-7ZM78 15h7v7h-7ZM29 22h7v7h-7ZM64 22h7v7h-7ZM43 29h14v7h-14ZM36 36h7v14h-7ZM57 36h7v14h-7ZM22 29h7v28h-7ZM71 29h7v28h-7ZM43 50h14v7h-14ZM8 22h7v42h-7ZM85 22h7v42h-7ZM36 57h7v14h-7ZM57 57h7v14h-7ZM15 64h7v7h-7ZM78 64h7v7h-7ZM29 71h7v14h-7ZM64 71h7v14h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "radio tower, thin pixel icon",
+   "paths": [
+    {
+     "d": "M46 35.5h14v3.5h-14ZM42.5 39h21v14h-21ZM46 53h14v3.5h-14ZM46 60h14v7h-14ZM42.5 67h3.5v3.5h-3.5ZM60 67h3.5v3.5h-3.5ZM42.5 70.5h21v3.5h-21Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 15h3.5v3.5h-3.5ZM78 15h3.5v3.5h-3.5ZM15 18.5h3.5v7h-3.5ZM81.5 18.5h3.5v7h-3.5ZM32.5 22h3.5v3.5h-3.5ZM64 22h3.5v3.5h-3.5ZM29 25.5h3.5v7h-3.5ZM67.5 25.5h3.5v7h-3.5ZM43 29h14v3.5h-14ZM39.5 32.5h3.5v3.5h-3.5ZM57 32.5h3.5v3.5h-3.5ZM36 36h3.5v14h-3.5ZM60.5 36h3.5v14h-3.5ZM39.5 50h3.5v3.5h-3.5ZM57 50h3.5v3.5h-3.5ZM25.5 32.5h3.5v24.5h-3.5ZM71 32.5h3.5v24.5h-3.5ZM43 53.5h14v3.5h-14ZM11.5 25.5h3.5v35h-3.5ZM85 25.5h3.5v35h-3.5ZM29 57h3.5v3.5h-3.5ZM67.5 57h3.5v3.5h-3.5ZM39.5 57h3.5v7h-3.5ZM57 57h3.5v7h-3.5ZM15 60.5h3.5v7h-3.5ZM81.5 60.5h3.5v7h-3.5ZM43 64h14v3.5h-14ZM36 64h3.5v7h-3.5ZM60.5 64h3.5v7h-3.5ZM18.5 67.5h3.5v3.5h-3.5ZM78 67.5h3.5v3.5h-3.5ZM39.5 71h21v3.5h-21ZM32.5 71h3.5v7h-3.5ZM64 71h3.5v7h-3.5ZM29 78h3.5v7h-3.5ZM67.5 78h3.5v7h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "radio tower, solid pixel icon",
+   "paths": [
+    {
+     "d": "M19 19h7v7h-7ZM82 19h7v7h-7ZM33 26h7v7h-7ZM68 26h7v7h-7ZM47 33h14v7h-14ZM40 40h28v14h-28ZM26 33h7v28h-7ZM75 33h7v28h-7ZM47 54h14v7h-14ZM12 26h7v42h-7ZM89 26h7v42h-7ZM40 61h7v14h-7ZM61 61h7v14h-7ZM19 68h7v7h-7ZM82 68h7v7h-7ZM33 75h7v14h-7ZM68 75h7v14h-7Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 15h7v7h-7ZM78 15h7v7h-7ZM29 22h7v7h-7ZM64 22h7v7h-7ZM43 29h14v7h-14ZM36 36h28v14h-28ZM22 29h7v28h-7ZM71 29h7v28h-7ZM43 50h14v7h-14ZM8 22h7v42h-7ZM85 22h7v42h-7ZM36 57h7v14h-7ZM57 57h7v14h-7ZM15 64h7v7h-7ZM78 64h7v7h-7ZM29 71h7v14h-7ZM64 71h7v14h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "radio tower, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M22.5 19h3.5v3.5h-3.5ZM82 19h3.5v3.5h-3.5ZM19 22.5h3.5v7h-3.5ZM85.5 22.5h3.5v7h-3.5ZM36.5 26h3.5v3.5h-3.5ZM68 26h3.5v3.5h-3.5ZM33 29.5h3.5v7h-3.5ZM71.5 29.5h3.5v7h-3.5ZM47 33h14v3.5h-14ZM43.5 36.5h21v3.5h-21ZM40 40h28v14h-28ZM43.5 54h21v3.5h-21ZM29.5 36.5h3.5v24.5h-3.5ZM75 36.5h3.5v24.5h-3.5ZM47 57.5h14v3.5h-14ZM15.5 29.5h3.5v35h-3.5ZM89 29.5h3.5v35h-3.5ZM33 61h3.5v3.5h-3.5ZM71.5 61h3.5v3.5h-3.5ZM43.5 61h3.5v7h-3.5ZM61 61h3.5v7h-3.5ZM19 64.5h3.5v7h-3.5ZM85.5 64.5h3.5v7h-3.5ZM47 68h14v3.5h-14ZM40 68h3.5v7h-3.5ZM64.5 68h3.5v7h-3.5ZM22.5 71.5h3.5v3.5h-3.5ZM82 71.5h3.5v3.5h-3.5ZM43.5 75h21v3.5h-21ZM36.5 75h3.5v7h-3.5ZM68 75h3.5v7h-3.5ZM33 82h3.5v7h-3.5ZM71.5 82h3.5v7h-3.5Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 15h3.5v3.5h-3.5ZM78 15h3.5v3.5h-3.5ZM15 18.5h3.5v7h-3.5ZM81.5 18.5h3.5v7h-3.5ZM32.5 22h3.5v3.5h-3.5ZM64 22h3.5v3.5h-3.5ZM29 25.5h3.5v7h-3.5ZM67.5 25.5h3.5v7h-3.5ZM43 29h14v3.5h-14ZM39.5 32.5h21v3.5h-21ZM36 36h28v14h-28ZM39.5 50h21v3.5h-21ZM25.5 32.5h3.5v24.5h-3.5ZM71 32.5h3.5v24.5h-3.5ZM43 53.5h14v3.5h-14ZM11.5 25.5h3.5v35h-3.5ZM85 25.5h3.5v35h-3.5ZM29 57h3.5v3.5h-3.5ZM67.5 57h3.5v3.5h-3.5ZM39.5 57h3.5v7h-3.5ZM57 57h3.5v7h-3.5ZM15 60.5h3.5v7h-3.5ZM81.5 60.5h3.5v7h-3.5ZM43 64h14v3.5h-14ZM36 64h3.5v7h-3.5ZM60.5 64h3.5v7h-3.5ZM18.5 67.5h3.5v3.5h-3.5ZM78 67.5h3.5v3.5h-3.5ZM39.5 71h21v3.5h-21ZM32.5 71h3.5v7h-3.5ZM64 71h3.5v7h-3.5ZM29 78h3.5v7h-3.5ZM67.5 78h3.5v7h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

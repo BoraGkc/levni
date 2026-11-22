@@ -1,0 +1,61 @@
+{
+ "name": "pixel-add-row",
+ "category": "symbols",
+ "tags": [
+  "add row",
+  "pixel add row",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "add row, regular pixel icon",
+   "paths": [
+    {
+     "d": "M15 15h7v28h-7ZM36 15h7v28h-7ZM57 15h7v28h-7ZM78 15h7v28h-7ZM15 43h70v7h-70ZM46.5 57h7v10.5h-7ZM36 67.5h28v7h-28ZM46.5 74.5h7v10.5h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "add row, thin pixel icon",
+   "paths": [
+    {
+     "d": "M22 15h3.5v31.5h-3.5ZM39.5 15h3.5v31.5h-3.5ZM57 15h3.5v31.5h-3.5ZM74.5 15h3.5v31.5h-3.5ZM22 46.5h56v3.5h-56ZM50 60.5h3.5v10.5h-3.5ZM39.5 71h24.5v3.5h-24.5ZM50 74.5h3.5v10.5h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "add row, solid pixel icon",
+   "paths": [
+    {
+     "d": "M26 19h14v35h-14ZM47 19h14v35h-14ZM68 19h14v35h-14ZM50.5 61h7v10.5h-7ZM40 71.5h28v7h-28ZM50.5 78.5h7v10.5h-7Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 15h14v35h-14ZM43 15h14v35h-14ZM64 15h14v35h-14ZM46.5 57h7v10.5h-7ZM36 67.5h28v7h-28ZM46.5 74.5h7v10.5h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "add row, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M26 19h17.5v35h-17.5ZM47 19h14v35h-14ZM64.5 19h17.5v35h-17.5ZM54 64.5h3.5v10.5h-3.5ZM43.5 75h24.5v3.5h-24.5ZM54 78.5h3.5v10.5h-3.5Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 15h17.5v35h-17.5ZM43 15h14v35h-14ZM60.5 15h17.5v35h-17.5ZM50 60.5h3.5v10.5h-3.5ZM39.5 71h24.5v3.5h-24.5ZM50 74.5h3.5v10.5h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}
