@@ -1,0 +1,71 @@
+{
+ "name": "pixel-git-commit",
+ "category": "symbols",
+ "tags": [
+  "git commit",
+  "pixel git commit",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "git commit, regular pixel icon",
+   "paths": [
+    {
+     "d": "M42.5 42.5h21v21h-21Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 32.5h35v7h-35ZM32.5 39.5h7v7h-7ZM60.5 39.5h7v7h-7ZM15 46.5h24.5v7h-24.5ZM60.5 46.5h24.5v7h-24.5ZM32.5 53.5h7v7h-7ZM60.5 53.5h7v7h-7ZM32.5 60.5h35v7h-35Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "git commit, thin pixel icon",
+   "paths": [
+    {
+     "d": "M42.5 42.5h21v21h-21Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M39.5 36h21v3.5h-21ZM15 46.5h17.5v3.5h-17.5ZM67.5 50h17.5v3.5h-17.5ZM36 39.5h3.5v21h-3.5ZM60.5 39.5h3.5v21h-3.5ZM39.5 60.5h21v3.5h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "git commit, solid pixel icon",
+   "paths": [
+    {
+     "d": "M36.5 36.5h35v14h-35ZM19 50.5h70v7h-70ZM36.5 57.5h35v14h-35Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 32.5h35v14h-35ZM15 46.5h70v7h-70ZM32.5 53.5h35v14h-35Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "git commit, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M43.5 40h21v3.5h-21ZM19 50.5h17.5v3.5h-17.5ZM71.5 54h17.5v3.5h-17.5ZM40 43.5h28v21h-28ZM43.5 64.5h21v3.5h-21Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M39.5 36h21v3.5h-21ZM15 46.5h17.5v3.5h-17.5ZM67.5 50h17.5v3.5h-17.5ZM36 39.5h28v21h-28ZM39.5 60.5h21v3.5h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

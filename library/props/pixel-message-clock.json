@@ -1,0 +1,71 @@
+{
+ "name": "pixel-message-clock",
+ "category": "home",
+ "tags": [
+  "message clock",
+  "pixel message clock",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "message clock, regular pixel icon",
+   "paths": [
+    {
+     "d": "M53 53h28v7h-28ZM67 60h14v7h-14ZM53 60h7v14h-7ZM74 67h7v7h-7ZM53 74h28v7h-28Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 15h70v7h-70ZM78 22h7v14h-7ZM50 43h28v7h-28ZM57 57h7v7h-7ZM15 22h7v49h-7ZM29 64h7v7h-7ZM57 64h14v7h-14ZM43 50h7v28h-7ZM78 50h7v28h-7ZM15 71h14v7h-14ZM15 78h7v7h-7ZM50 78h28v7h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "message clock, thin pixel icon",
+   "paths": [
+    {
+     "d": "M63.5 60h17.5v3.5h-17.5ZM60 63.5h10.5v10.5h-10.5ZM74 63.5h10.5v10.5h-10.5ZM60 74h14v3.5h-14ZM77.5 74h7v3.5h-7ZM60 77.5h17.5v3.5h-17.5ZM81 77.5h3.5v3.5h-3.5ZM63.5 81h17.5v3.5h-17.5Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 15h70v3.5h-70ZM81.5 18.5h3.5v28h-3.5ZM60.5 53.5h17.5v3.5h-17.5ZM57 57h3.5v3.5h-3.5ZM78 57h3.5v3.5h-3.5ZM67.5 60.5h3.5v10.5h-3.5ZM32.5 67.5h14v3.5h-14ZM29 71h3.5v3.5h-3.5ZM71 71h3.5v3.5h-3.5ZM53.5 60.5h3.5v17.5h-3.5ZM81.5 60.5h3.5v17.5h-3.5ZM25.5 74.5h3.5v3.5h-3.5ZM74.5 74.5h3.5v3.5h-3.5ZM15 18.5h3.5v63h-3.5ZM22 78h3.5v3.5h-3.5ZM57 78h3.5v3.5h-3.5ZM78 78h3.5v3.5h-3.5ZM15 81.5h7v3.5h-7ZM60.5 81.5h17.5v3.5h-17.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "message clock, solid pixel icon",
+   "paths": [
+    {
+     "d": "M19 19h70v21h-70ZM54 47h28v7h-28ZM47 54h42v7h-42ZM68 61h21v7h-21ZM19 40h21v35h-21ZM47 61h14v14h-14ZM75 68h14v7h-14ZM19 75h14v7h-14ZM47 75h42v7h-42ZM19 82h7v7h-7ZM54 82h28v7h-28Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 15h70v21h-70ZM50 43h28v7h-28ZM43 50h42v7h-42ZM64 57h21v7h-21ZM15 36h21v35h-21ZM43 57h14v14h-14ZM71 64h14v7h-14ZM15 71h14v7h-14ZM43 71h42v7h-42ZM15 78h7v7h-7ZM50 78h28v7h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "message clock, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M19 19h70v31.5h-70ZM19 50.5h42v3.5h-42ZM19 54h38.5v3.5h-38.5ZM19 57.5h35v3.5h-35ZM64.5 57.5h17.5v3.5h-17.5ZM61 61h3.5v3.5h-3.5ZM82 61h3.5v3.5h-3.5ZM19 61h31.5v14h-31.5ZM71.5 64.5h3.5v10.5h-3.5ZM19 75h17.5v3.5h-17.5ZM75 75h3.5v3.5h-3.5ZM57.5 64.5h3.5v17.5h-3.5ZM85.5 64.5h3.5v17.5h-3.5ZM19 78.5h14v3.5h-14ZM19 82h10.5v3.5h-10.5ZM61 82h3.5v3.5h-3.5ZM82 82h3.5v3.5h-3.5ZM19 85.5h7v3.5h-7ZM64.5 85.5h17.5v3.5h-17.5Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 15h70v31.5h-70ZM15 46.5h42v3.5h-42ZM15 50h38.5v3.5h-38.5ZM15 53.5h35v3.5h-35ZM60.5 53.5h17.5v3.5h-17.5ZM57 57h3.5v3.5h-3.5ZM78 57h3.5v3.5h-3.5ZM15 57h31.5v14h-31.5ZM67.5 60.5h3.5v10.5h-3.5ZM15 71h17.5v3.5h-17.5ZM71 71h3.5v3.5h-3.5ZM53.5 60.5h3.5v17.5h-3.5ZM81.5 60.5h3.5v17.5h-3.5ZM15 74.5h14v3.5h-14ZM15 78h10.5v3.5h-10.5ZM57 78h3.5v3.5h-3.5ZM78 78h3.5v3.5h-3.5ZM15 81.5h7v3.5h-7ZM60.5 81.5h17.5v3.5h-17.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

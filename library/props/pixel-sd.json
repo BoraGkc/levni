@@ -1,0 +1,71 @@
+{
+ "name": "pixel-sd",
+ "category": "tech",
+ "tags": [
+  "sd",
+  "pixel sd",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "sd, regular pixel icon",
+   "paths": [
+    {
+     "d": "M39 25h35v7h-35ZM32 32h14v14h-14ZM53 32h7v14h-7ZM67 32h7v14h-7ZM32 46h42v35h-42Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 15h42v7h-42ZM29 22h7v7h-7ZM43 29h7v14h-7ZM57 29h7v14h-7ZM71 22h7v56h-7ZM22 29h7v49h-7ZM22 78h56v7h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "sd, thin pixel icon",
+   "paths": [
+    {
+     "d": "M35.5 21.5h42v3.5h-42ZM32 25h45.5v3.5h-45.5ZM28.5 28.5h49v3.5h-49ZM28.5 32h28v14h-28ZM60 32h3.5v14h-3.5ZM67 32h10.5v14h-10.5ZM28.5 46h49v38.5h-49Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 15h45.5v3.5h-45.5ZM29 18.5h3.5v3.5h-3.5ZM25.5 22h3.5v3.5h-3.5ZM53.5 29h3.5v14h-3.5ZM60.5 29h3.5v14h-3.5ZM74.5 18.5h3.5v63h-3.5ZM22 25.5h3.5v56h-3.5ZM22 81.5h56v3.5h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "sd, solid pixel icon",
+   "paths": [
+    {
+     "d": "M40 19h42v7h-42ZM33 26h49v7h-49ZM26 33h21v14h-21ZM54 33h7v14h-7ZM68 33h14v14h-14ZM26 47h56v42h-56Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 15h42v7h-42ZM29 22h49v7h-49ZM22 29h21v14h-21ZM50 29h7v14h-7ZM64 29h14v14h-14ZM22 43h56v42h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "sd, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M36.5 19h45.5v3.5h-45.5ZM33 22.5h49v3.5h-49ZM29.5 26h52.5v3.5h-52.5ZM26 29.5h56v3.5h-56ZM26 33h31.5v14h-31.5ZM61 33h3.5v14h-3.5ZM68 33h14v14h-14ZM26 47h56v42h-56Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 15h45.5v3.5h-45.5ZM29 18.5h49v3.5h-49ZM25.5 22h52.5v3.5h-52.5ZM22 25.5h56v3.5h-56ZM22 29h31.5v14h-31.5ZM57 29h3.5v14h-3.5ZM64 29h14v14h-14ZM22 43h56v42h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

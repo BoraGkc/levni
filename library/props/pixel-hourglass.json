@@ -1,0 +1,71 @@
+{
+ "name": "pixel-hourglass",
+ "category": "symbols",
+ "tags": [
+  "hourglass",
+  "pixel hourglass",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "hourglass, regular pixel icon",
+   "paths": [
+    {
+     "d": "M39 25h28v14h-28ZM46 39h14v7h-14ZM46 60h14v7h-14ZM39 67h28v14h-28Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M29 15h42v7h-42ZM29 22h7v14h-7ZM64 22h7v14h-7ZM36 36h7v7h-7ZM57 36h7v7h-7ZM43 43h14v14h-14ZM36 57h7v7h-7ZM57 57h7v7h-7ZM29 64h7v14h-7ZM64 64h7v14h-7ZM29 78h42v7h-42Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "hourglass, thin pixel icon",
+   "paths": [
+    {
+     "d": "M32 21.5h42v14h-42ZM35.5 35.5h35v3.5h-35ZM39 39h28v3.5h-28ZM42.5 42.5h21v3.5h-21ZM46 46h14v3.5h-14ZM49.5 49.5h7v7h-7ZM46 56.5h14v3.5h-14ZM42.5 60h21v3.5h-21ZM39 63.5h28v3.5h-28ZM35.5 67h35v3.5h-35ZM32 70.5h42v14h-42Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 15h56v3.5h-56ZM25.5 18.5h3.5v14h-3.5ZM71 18.5h3.5v14h-3.5ZM29 32.5h3.5v3.5h-3.5ZM67.5 32.5h3.5v3.5h-3.5ZM32.5 36h3.5v3.5h-3.5ZM64 36h3.5v3.5h-3.5ZM36 39.5h3.5v3.5h-3.5ZM60.5 39.5h3.5v3.5h-3.5ZM39.5 43h3.5v3.5h-3.5ZM57 43h3.5v3.5h-3.5ZM43 46.5h3.5v7h-3.5ZM53.5 46.5h3.5v7h-3.5ZM39.5 53.5h3.5v3.5h-3.5ZM57 53.5h3.5v3.5h-3.5ZM36 57h3.5v3.5h-3.5ZM60.5 57h3.5v3.5h-3.5ZM32.5 60.5h3.5v3.5h-3.5ZM64 60.5h3.5v3.5h-3.5ZM29 64h3.5v3.5h-3.5ZM67.5 64h3.5v3.5h-3.5ZM25.5 67.5h3.5v14h-3.5ZM71 67.5h3.5v14h-3.5ZM22 81.5h56v3.5h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "hourglass, solid pixel icon",
+   "paths": [
+    {
+     "d": "M33 19h42v21h-42ZM40 40h28v7h-28ZM47 47h14v14h-14ZM40 61h28v7h-28ZM33 68h42v21h-42Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M29 15h42v21h-42ZM36 36h28v7h-28ZM43 43h14v14h-14ZM36 57h28v7h-28ZM29 64h42v21h-42Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "hourglass, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M26 19h56v3.5h-56ZM29.5 26h49v10.5h-49ZM33 36.5h42v3.5h-42ZM36.5 40h35v3.5h-35ZM40 43.5h28v3.5h-28ZM43.5 47h21v3.5h-21ZM47 50.5h14v7h-14ZM43.5 57.5h21v3.5h-21ZM40 61h28v3.5h-28ZM36.5 64.5h35v3.5h-35ZM33 68h42v3.5h-42ZM29.5 71.5h49v10.5h-49ZM26 85.5h56v3.5h-56Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 15h56v3.5h-56ZM25.5 22h49v10.5h-49ZM29 32.5h42v3.5h-42ZM32.5 36h35v3.5h-35ZM36 39.5h28v3.5h-28ZM39.5 43h21v3.5h-21ZM43 46.5h14v7h-14ZM39.5 53.5h21v3.5h-21ZM36 57h28v3.5h-28ZM32.5 60.5h35v3.5h-35ZM29 64h42v3.5h-42ZM25.5 67.5h49v10.5h-49ZM22 81.5h56v3.5h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

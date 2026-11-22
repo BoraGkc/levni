@@ -1,0 +1,71 @@
+{
+ "name": "pixel-analytics",
+ "category": "money",
+ "tags": [
+  "analytics",
+  "pixel analytics",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "analytics, regular pixel icon",
+   "paths": [
+    {
+     "d": "M28.5 28.5h49v7h-49ZM28.5 35.5h35v10.5h-35ZM28.5 46h21v7h-21ZM56.5 46h7v7h-7ZM42.5 53h21v7h-21ZM70.5 35.5h7v35h-7ZM28.5 53h7v17.5h-7ZM42.5 60h7v10.5h-7ZM56.5 60h7v10.5h-7ZM28.5 70.5h49v7h-49Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h63v7h-63ZM46.5 43h7v7h-7ZM60.5 32.5h7v35h-7ZM32.5 50h7v17.5h-7ZM46.5 57h7v10.5h-7ZM18.5 25.5h7v49h-7ZM74.5 25.5h7v49h-7ZM18.5 74.5h63v7h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "analytics, thin pixel icon",
+   "paths": [
+    {
+     "d": "M25 25h56v10.5h-56ZM25 35.5h42v14h-42ZM25 49.5h31.5v3.5h-31.5ZM60 49.5h7v7h-7ZM49.5 53h7v3.5h-7ZM25 53h21v7h-21ZM49.5 56.5h17.5v3.5h-17.5ZM70.5 35.5h10.5v35h-10.5ZM25 60h10.5v10.5h-10.5ZM39 60h7v10.5h-7ZM49.5 60h7v10.5h-7ZM60 60h7v10.5h-7ZM25 70.5h56v10.5h-56Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h63v3.5h-63ZM53.5 46.5h3.5v7h-3.5ZM64 32.5h3.5v35h-3.5ZM43 50h3.5v17.5h-3.5ZM32.5 57h3.5v10.5h-3.5ZM53.5 57h3.5v10.5h-3.5ZM18.5 22h3.5v56h-3.5ZM78 22h3.5v56h-3.5ZM18.5 78h63v3.5h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "analytics, solid pixel icon",
+   "paths": [
+    {
+     "d": "M22.5 22.5h63v14h-63ZM22.5 36.5h42v10.5h-42ZM22.5 47h28v7h-28ZM57.5 47h7v7h-7ZM43.5 54h21v7h-21ZM71.5 36.5h14v35h-14ZM22.5 54h14v17.5h-14ZM43.5 61h7v10.5h-7ZM57.5 61h7v10.5h-7ZM22.5 71.5h63v14h-63Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h63v14h-63ZM18.5 32.5h42v10.5h-42ZM18.5 43h28v7h-28ZM53.5 43h7v7h-7ZM39.5 50h21v7h-21ZM67.5 32.5h14v35h-14ZM18.5 50h14v17.5h-14ZM39.5 57h7v10.5h-7ZM53.5 57h7v10.5h-7ZM18.5 67.5h63v14h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "analytics, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M22.5 22.5h63v14h-63ZM22.5 36.5h45.5v14h-45.5ZM22.5 50.5h35v3.5h-35ZM61 50.5h7v7h-7ZM50.5 54h7v3.5h-7ZM22.5 54h24.5v7h-24.5ZM50.5 57.5h17.5v3.5h-17.5ZM71.5 36.5h14v35h-14ZM22.5 61h14v10.5h-14ZM40 61h7v10.5h-7ZM50.5 61h7v10.5h-7ZM61 61h7v10.5h-7ZM22.5 71.5h63v14h-63Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h63v14h-63ZM18.5 32.5h45.5v14h-45.5ZM18.5 46.5h35v3.5h-35ZM57 46.5h7v7h-7ZM46.5 50h7v3.5h-7ZM18.5 50h24.5v7h-24.5ZM46.5 53.5h17.5v3.5h-17.5ZM67.5 32.5h14v35h-14ZM18.5 57h14v10.5h-14ZM36 57h7v10.5h-7ZM46.5 57h7v10.5h-7ZM57 57h7v10.5h-7ZM18.5 67.5h63v14h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

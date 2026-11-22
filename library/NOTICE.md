@@ -10,6 +10,10 @@ Every prop is stored as SVG path data in a 0–100 box (`library/props/*.json`).
 - **No prop was found to be traced or copied from Tabler Icons or another icon set.** Checked: no prop file mentions Tabler or another source, and none uses the 24-unit Tabler grid. Tabler Icons (MIT) are only used at runtime by the optional `icon` and `ascii` elements and are not shipped here.
 - **To check before publishing:** much of the path data was written by an AI agent under editorial direction. Whether CC BY 4.0 can be enforced on such drawings depends on the jurisdiction; the license still states the terms of use clearly. If enforceable attribution matters, consider CC0 for the library instead (see the research note in the Ortak Alan repo).
 
+## Pixel icons
+
+- **`pixel-*` props** (481 props, 1,924 variants, Nov 2026): pixel icons supplied by the project owner, who confirmed they hold the rights to release them in the Folio. Each icon comes in four cuts, stored as variants: 0 regular, 1 thin, 2 solid, 3 glyph. Converted with `tools/pixel-to-prop.mjs`: rasterised on a quarter-pixel grid and written back as rectangles so the pixels stay crisp; outline cuts get a riso fill in their enclosed areas, filled cuts print over an off-register accent copy. Categories were assigned by keyword and are worth a second look. Left out: brand logos in the source set (GitHub, Mastodon, Android, the set's own logo). Three misspelt names were fixed (dashboard, receipt, text-columns). The mood-happy, mood-neutral, mood-sad and camera-face icons are simple smileys: check them against the no-faces rule.
+
 ## Redrawn from open icon sets
 
 Some props are line icons from open sets, converted with `tools/icon-to-prop.mjs` (rescaled to the 0–100 box, inked in the house line, given a riso fill) and reviewed by eye. Their variant `note` names the source.

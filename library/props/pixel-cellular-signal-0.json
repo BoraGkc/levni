@@ -1,0 +1,71 @@
+{
+ "name": "pixel-cellular-signal-0",
+ "category": "tech",
+ "tags": [
+  "cellular signal 0",
+  "pixel cellular signal 0",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "cellular signal 0, regular pixel icon",
+   "paths": [
+    {
+     "d": "M74 32h7v42h-7ZM49.5 53h7v21h-7ZM25 67h7v7h-7Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M64 22h21v7h-21ZM39.5 43h21v7h-21ZM15 57h21v7h-21ZM64 29h7v42h-7ZM78 29h7v42h-7ZM39.5 50h7v21h-7ZM53.5 50h7v21h-7ZM15 64h7v7h-7ZM29 64h7v7h-7ZM15 71h21v7h-21ZM39.5 71h21v7h-21ZM64 71h21v7h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "cellular signal 0, thin pixel icon",
+   "paths": [
+    {
+     "d": "M70.5 28.5h14v49h-14ZM46 49.5h14v28h-14ZM21.5 63.5h14v14h-14Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M64 22h21v3.5h-21ZM39.5 43h21v3.5h-21ZM15 57h21v3.5h-21ZM64 25.5h3.5v49h-3.5ZM81.5 25.5h3.5v49h-3.5ZM39.5 46.5h3.5v28h-3.5ZM57 46.5h3.5v28h-3.5ZM15 60.5h3.5v14h-3.5ZM32.5 60.5h3.5v14h-3.5ZM15 74.5h21v3.5h-21ZM39.5 74.5h21v3.5h-21ZM64 74.5h21v3.5h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "cellular signal 0, solid pixel icon",
+   "paths": [
+    {
+     "d": "M68 26h21v56h-21ZM43.5 47h21v35h-21ZM19 61h21v21h-21Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M64 22h21v56h-21ZM39.5 43h21v35h-21ZM15 57h21v21h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "cellular signal 0, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M68 26h21v56h-21ZM43.5 47h21v35h-21ZM19 61h21v21h-21Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M64 22h21v56h-21ZM39.5 43h21v35h-21ZM15 57h21v21h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

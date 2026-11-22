@@ -1,0 +1,61 @@
+{
+ "name": "pixel-list",
+ "category": "books",
+ "tags": [
+  "list",
+  "pixel list",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "list, regular pixel icon",
+   "paths": [
+    {
+     "d": "M22 29h7v7h-7ZM36 29h42v7h-42ZM22 46.5h7v7h-7ZM36 46.5h42v7h-42ZM22 64h7v7h-7ZM36 64h42v7h-42Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "list, thin pixel icon",
+   "paths": [
+    {
+     "d": "M22 25.5h10.5v3.5h-10.5ZM22 29h3.5v3.5h-3.5ZM29 29h3.5v3.5h-3.5ZM36 29h42v3.5h-42ZM22 32.5h10.5v3.5h-10.5ZM22 43h10.5v3.5h-10.5ZM22 46.5h3.5v3.5h-3.5ZM29 46.5h3.5v3.5h-3.5ZM36 46.5h42v3.5h-42ZM22 50h10.5v3.5h-10.5ZM22 60.5h10.5v3.5h-10.5ZM22 64h3.5v3.5h-3.5ZM29 64h3.5v3.5h-3.5ZM36 64h42v3.5h-42ZM22 67.5h10.5v3.5h-10.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "list, solid pixel icon",
+   "paths": [
+    {
+     "d": "M26 33h7v7h-7ZM40 33h42v7h-42ZM26 50.5h7v7h-7ZM40 50.5h42v7h-42ZM26 68h7v7h-7ZM40 68h42v7h-42Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 29h7v7h-7ZM36 29h42v7h-42ZM22 46.5h7v7h-7ZM36 46.5h42v7h-42ZM22 64h7v7h-7ZM36 64h42v7h-42Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "list, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M40 33h42v3.5h-42ZM26 29.5h10.5v10.5h-10.5ZM40 50.5h42v3.5h-42ZM26 47h10.5v10.5h-10.5ZM40 68h42v3.5h-42ZM26 64.5h10.5v10.5h-10.5Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 29h42v3.5h-42ZM22 25.5h10.5v10.5h-10.5ZM36 46.5h42v3.5h-42ZM22 43h10.5v10.5h-10.5ZM36 64h42v3.5h-42ZM22 60.5h10.5v10.5h-10.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

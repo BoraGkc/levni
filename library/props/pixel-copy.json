@@ -1,0 +1,71 @@
+{
+ "name": "pixel-copy",
+ "category": "tech",
+ "tags": [
+  "copy",
+  "pixel copy",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "copy, regular pixel icon",
+   "paths": [
+    {
+     "d": "M46 39h28v42h-28Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 15h38.5v7h-38.5ZM36 29h42v7h-42ZM22 22h7v45.5h-7ZM36 36h7v42h-7ZM71 36h7v42h-7ZM36 78h42v7h-42Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "copy, thin pixel icon",
+   "paths": [
+    {
+     "d": "M42.5 35.5h35v49h-35Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 15h42v3.5h-42ZM60.5 18.5h3.5v7h-3.5ZM36 29h42v3.5h-42ZM22 18.5h3.5v49h-3.5ZM22 67.5h10.5v3.5h-10.5ZM36 32.5h3.5v49h-3.5ZM74.5 32.5h3.5v49h-3.5ZM36 81.5h42v3.5h-42Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "copy, solid pixel icon",
+   "paths": [
+    {
+     "d": "M26 19h38.5v7h-38.5ZM26 26h7v45.5h-7ZM40 33h42v56h-42Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 15h38.5v7h-38.5ZM22 22h7v45.5h-7ZM36 29h42v56h-42Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "copy, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M26 19h42v3.5h-42ZM64.5 22.5h3.5v7h-3.5ZM26 22.5h3.5v49h-3.5ZM26 71.5h10.5v3.5h-10.5ZM40 33h42v56h-42Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 15h42v3.5h-42ZM60.5 18.5h3.5v7h-3.5ZM22 18.5h3.5v49h-3.5ZM22 67.5h10.5v3.5h-10.5ZM36 29h42v56h-42Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

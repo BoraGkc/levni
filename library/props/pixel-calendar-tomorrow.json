@@ -1,0 +1,71 @@
+{
+ "name": "pixel-calendar-tomorrow",
+ "category": "books",
+ "tags": [
+  "calendar tomorrow",
+  "pixel calendar tomorrow",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "calendar tomorrow, regular pixel icon",
+   "paths": [
+    {
+     "d": "M28.5 32h49v7h-49ZM28.5 46h49v14h-49ZM28.5 60h28v14h-28ZM70.5 60h7v14h-7ZM28.5 74h49v7h-49Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 15h7v7h-7ZM60.5 15h7v7h-7ZM18.5 22h63v7h-63ZM18.5 29h7v7h-7ZM74.5 29h7v7h-7ZM18.5 36h63v7h-63ZM53.5 57h14v14h-14ZM18.5 43h7v35h-7ZM74.5 43h7v35h-7ZM18.5 78h63v7h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "calendar tomorrow, thin pixel icon",
+   "paths": [
+    {
+     "d": "M25 28.5h56v14h-56ZM25 46h56v14h-56ZM60 63.5h7v7h-7ZM25 60h31.5v14h-31.5ZM70.5 60h10.5v14h-10.5ZM25 74h56v10.5h-56Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 15h3.5v7h-3.5ZM64 15h3.5v7h-3.5ZM18.5 22h63v3.5h-63ZM18.5 25.5h3.5v14h-3.5ZM78 25.5h3.5v14h-3.5ZM18.5 39.5h63v3.5h-63ZM53.5 57h14v3.5h-14ZM53.5 60.5h3.5v7h-3.5ZM64 60.5h3.5v7h-3.5ZM53.5 67.5h14v3.5h-14ZM18.5 43h3.5v38.5h-3.5ZM78 43h3.5v38.5h-3.5ZM18.5 81.5h63v3.5h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "calendar tomorrow, solid pixel icon",
+   "paths": [
+    {
+     "d": "M36.5 19h7v7h-7ZM64.5 19h7v7h-7ZM22.5 26h63v7h-63ZM22.5 40h63v21h-63ZM22.5 61h35v14h-35ZM71.5 61h14v14h-14ZM22.5 75h63v14h-63Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 15h7v7h-7ZM60.5 15h7v7h-7ZM18.5 22h63v7h-63ZM18.5 36h63v21h-63ZM18.5 57h35v14h-35ZM67.5 57h14v14h-14ZM18.5 71h63v14h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "calendar tomorrow, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M36.5 19h3.5v7h-3.5ZM68 19h3.5v7h-3.5ZM22.5 26h63v17.5h-63ZM22.5 47h63v14h-63ZM61 64.5h7v7h-7ZM22.5 61h35v14h-35ZM71.5 61h14v14h-14ZM22.5 75h63v14h-63Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 15h3.5v7h-3.5ZM64 15h3.5v7h-3.5ZM18.5 22h63v17.5h-63ZM18.5 43h63v14h-63ZM57 60.5h7v7h-7ZM18.5 57h35v14h-35ZM67.5 57h14v14h-14ZM18.5 71h63v14h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

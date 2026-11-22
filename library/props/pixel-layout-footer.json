@@ -1,0 +1,71 @@
+{
+ "name": "pixel-layout-footer",
+ "category": "tech",
+ "tags": [
+  "layout footer",
+  "pixel layout footer",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "layout footer, regular pixel icon",
+   "paths": [
+    {
+     "d": "M25 35.5h56v21h-56ZM25 63.5h56v7h-56Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 25.5h70v7h-70ZM15 32.5h7v21h-7ZM78 32.5h7v21h-7ZM15 53.5h70v7h-70ZM15 60.5h7v7h-7ZM78 60.5h7v7h-7ZM15 67.5h70v7h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "layout footer, thin pixel icon",
+   "paths": [
+    {
+     "d": "M21.5 32h63v24.5h-63ZM28.5 60h49v7h-49ZM21.5 56.5h3.5v14h-3.5ZM81 56.5h3.5v14h-3.5ZM21.5 70.5h63v3.5h-63Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 25.5h70v3.5h-70ZM22 53.5h56v3.5h-56ZM22 57h3.5v7h-3.5ZM74.5 57h3.5v7h-3.5ZM22 64h56v3.5h-56ZM15 29h3.5v42h-3.5ZM81.5 29h3.5v42h-3.5ZM15 71h70v3.5h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "layout footer, solid pixel icon",
+   "paths": [
+    {
+     "d": "M19 29.5h70v35h-70ZM19 64.5h7v7h-7ZM82 64.5h7v7h-7ZM19 71.5h70v7h-70Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 25.5h70v35h-70ZM15 60.5h7v7h-7ZM78 60.5h7v7h-7ZM15 67.5h70v7h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "layout footer, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M19 29.5h70v28h-70ZM29.5 61h49v7h-49ZM19 57.5h7v14h-7ZM82 57.5h7v14h-7ZM19 71.5h70v7h-70Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 25.5h70v28h-70ZM25.5 57h49v7h-49ZM15 53.5h7v14h-7ZM78 53.5h7v14h-7ZM15 67.5h70v7h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

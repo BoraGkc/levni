@@ -1,0 +1,71 @@
+{
+ "name": "pixel-cart",
+ "category": "money",
+ "tags": [
+  "cart",
+  "pixel cart",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "cart, regular pixel icon",
+   "paths": [
+    {
+     "d": "M32 39h49v24.5h-49Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 15h14v7h-14ZM22 22h7v7h-7ZM22 29h63v7h-63ZM22 36h7v24.5h-7ZM78 36h7v24.5h-7ZM22 60.5h63v7h-63ZM29 74.5h10.5v10.5h-10.5ZM67.5 74.5h10.5v10.5h-10.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "cart, thin pixel icon",
+   "paths": [
+    {
+     "d": "M32 35.5h52.5v21h-52.5ZM32 56.5h49v3.5h-49ZM32 60h45.5v3.5h-45.5ZM32 63.5h42v3.5h-42Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 15h7v3.5h-7ZM22 18.5h3.5v3.5h-3.5ZM25.5 22h3.5v7h-3.5ZM25.5 29h59.5v3.5h-59.5ZM81.5 32.5h3.5v21h-3.5ZM78 53.5h3.5v3.5h-3.5ZM74.5 57h3.5v3.5h-3.5ZM25.5 32.5h3.5v31.5h-3.5ZM71 60.5h3.5v3.5h-3.5ZM25.5 64h45.5v3.5h-45.5ZM29 74.5h10.5v3.5h-10.5ZM67.5 74.5h10.5v3.5h-10.5ZM29 78h3.5v3.5h-3.5ZM36 78h3.5v3.5h-3.5ZM67.5 78h3.5v3.5h-3.5ZM74.5 78h3.5v3.5h-3.5ZM29 81.5h10.5v3.5h-10.5ZM67.5 81.5h10.5v3.5h-10.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "cart, solid pixel icon",
+   "paths": [
+    {
+     "d": "M19 19h14v7h-14ZM26 26h7v7h-7ZM26 33h63v38.5h-63ZM33 78.5h10.5v10.5h-10.5ZM71.5 78.5h10.5v10.5h-10.5Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 15h14v7h-14ZM22 22h7v7h-7ZM22 29h63v38.5h-63ZM29 74.5h10.5v10.5h-10.5ZM67.5 74.5h10.5v10.5h-10.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "cart, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M19 19h7v3.5h-7ZM26 22.5h3.5v3.5h-3.5ZM29.5 26h3.5v7h-3.5ZM29.5 33h59.5v24.5h-59.5ZM29.5 57.5h56v3.5h-56ZM29.5 61h52.5v3.5h-52.5ZM29.5 64.5h49v3.5h-49ZM29.5 68h45.5v3.5h-45.5ZM33 78.5h10.5v10.5h-10.5ZM71.5 78.5h10.5v10.5h-10.5Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 15h7v3.5h-7ZM22 18.5h3.5v3.5h-3.5ZM25.5 22h3.5v7h-3.5ZM25.5 29h59.5v24.5h-59.5ZM25.5 53.5h56v3.5h-56ZM25.5 57h52.5v3.5h-52.5ZM25.5 60.5h49v3.5h-49ZM25.5 64h45.5v3.5h-45.5ZM29 74.5h10.5v10.5h-10.5ZM67.5 74.5h10.5v10.5h-10.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

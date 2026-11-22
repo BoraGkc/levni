@@ -1,0 +1,71 @@
+{
+ "name": "pixel-layout-rows",
+ "category": "tech",
+ "tags": [
+  "layout rows",
+  "pixel layout rows",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "layout rows, regular pixel icon",
+   "paths": [
+    {
+     "d": "M25 35.5h56v14h-56ZM25 56.5h56v14h-56Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 25.5h70v7h-70ZM15 32.5h7v14h-7ZM78 32.5h7v14h-7ZM15 46.5h70v7h-70ZM15 53.5h7v14h-7ZM78 53.5h7v14h-7ZM15 67.5h70v7h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "layout rows, thin pixel icon",
+   "paths": [
+    {
+     "d": "M21.5 32h63v7h-63ZM21.5 39h7v3.5h-7ZM77.5 39h7v3.5h-7ZM21.5 42.5h63v7h-63ZM21.5 49.5h7v3.5h-7ZM77.5 49.5h7v3.5h-7ZM21.5 53h63v7h-63ZM21.5 60h7v3.5h-7ZM77.5 60h7v3.5h-7ZM21.5 63.5h63v10.5h-63Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 25.5h70v3.5h-70ZM25.5 36h49v3.5h-49ZM25.5 46.5h49v3.5h-49ZM25.5 57h49v3.5h-49ZM15 29h3.5v42h-3.5ZM81.5 29h3.5v42h-3.5ZM15 71h70v3.5h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "layout rows, solid pixel icon",
+   "paths": [
+    {
+     "d": "M19 29.5h70v21h-70ZM19 57.5h70v21h-70Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 25.5h70v21h-70ZM15 53.5h70v21h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "layout rows, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M19 29.5h70v10.5h-70ZM19 40h10.5v3.5h-10.5ZM78.5 40h10.5v3.5h-10.5ZM19 43.5h70v7h-70ZM19 50.5h10.5v3.5h-10.5ZM78.5 50.5h10.5v3.5h-10.5ZM19 54h70v7h-70ZM19 61h10.5v3.5h-10.5ZM78.5 61h10.5v3.5h-10.5ZM19 64.5h70v14h-70Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 25.5h70v10.5h-70ZM15 36h10.5v3.5h-10.5ZM74.5 36h10.5v3.5h-10.5ZM15 39.5h70v7h-70ZM15 46.5h10.5v3.5h-10.5ZM74.5 46.5h10.5v3.5h-10.5ZM15 50h70v7h-70ZM15 57h10.5v3.5h-10.5ZM74.5 57h10.5v3.5h-10.5ZM15 60.5h70v14h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

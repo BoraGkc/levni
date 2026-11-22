@@ -1,0 +1,71 @@
+{
+ "name": "pixel-mouse",
+ "category": "tech",
+ "tags": [
+  "mouse",
+  "pixel mouse",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "mouse, regular pixel icon",
+   "paths": [
+    {
+     "d": "M39 28.5h10.5v14h-10.5ZM56.5 28.5h10.5v14h-10.5ZM39 49.5h28v28h-28Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M29 18.5h42v7h-42ZM29 25.5h7v14h-7ZM46.5 25.5h7v14h-7ZM64 25.5h7v14h-7ZM29 39.5h42v7h-42ZM29 46.5h7v28h-7ZM64 46.5h7v28h-7ZM29 74.5h42v7h-42Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "mouse, thin pixel icon",
+   "paths": [
+    {
+     "d": "M35.5 25h17.5v21h-17.5ZM56.5 25h14v21h-14ZM35.5 49.5h35v31.5h-35Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 18.5h35v3.5h-35ZM29 22h3.5v21h-3.5ZM50 22h3.5v21h-3.5ZM67.5 22h3.5v21h-3.5ZM29 43h42v3.5h-42ZM29 46.5h3.5v31.5h-3.5ZM67.5 46.5h3.5v31.5h-3.5ZM32.5 78h35v3.5h-35Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "mouse, solid pixel icon",
+   "paths": [
+    {
+     "d": "M40 22.5h10.5v7h-10.5ZM57.5 22.5h10.5v7h-10.5ZM33 29.5h17.5v14h-17.5ZM57.5 29.5h17.5v14h-17.5ZM33 50.5h42v28h-42ZM40 78.5h28v7h-28Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 18.5h10.5v7h-10.5ZM53.5 18.5h10.5v7h-10.5ZM29 25.5h17.5v14h-17.5ZM53.5 25.5h17.5v14h-17.5ZM29 46.5h42v28h-42ZM36 74.5h28v7h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "mouse, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M36.5 22.5h35v3.5h-35ZM33 26h21v21h-21ZM57.5 26h17.5v21h-17.5ZM33 47h3.5v3.5h-3.5ZM71.5 47h3.5v3.5h-3.5ZM33 50.5h42v31.5h-42ZM36.5 82h35v3.5h-35Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 18.5h35v3.5h-35ZM29 22h21v21h-21ZM53.5 22h17.5v21h-17.5ZM29 43h3.5v3.5h-3.5ZM67.5 43h3.5v3.5h-3.5ZM29 46.5h42v31.5h-42ZM32.5 78h35v3.5h-35Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

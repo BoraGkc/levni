@@ -1,0 +1,61 @@
+{
+ "name": "pixel-plus",
+ "category": "symbols",
+ "tags": [
+  "plus",
+  "pixel plus",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "plus, regular pixel icon",
+   "paths": [
+    {
+     "d": "M46.5 22h7v24.5h-7ZM22 46.5h56v7h-56ZM46.5 53.5h7v24.5h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "plus, thin pixel icon",
+   "paths": [
+    {
+     "d": "M46.5 22h3.5v24.5h-3.5ZM22 46.5h56v3.5h-56ZM46.5 50h3.5v28h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "plus, solid pixel icon",
+   "paths": [
+    {
+     "d": "M50.5 26h7v24.5h-7ZM26 50.5h56v7h-56ZM50.5 57.5h7v24.5h-7Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M46.5 22h7v24.5h-7ZM22 46.5h56v7h-56ZM46.5 53.5h7v24.5h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "plus, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M50.5 26h3.5v24.5h-3.5ZM26 50.5h56v3.5h-56ZM50.5 54h3.5v28h-3.5Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M46.5 22h3.5v24.5h-3.5ZM22 46.5h56v3.5h-56ZM46.5 50h3.5v28h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "name": "pixel-money",
+ "category": "money",
+ "tags": [
+  "money",
+  "pixel money",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "money, regular pixel icon",
+   "paths": [
+    {
+     "d": "M25 32h42v7h-42ZM39 46h42v7h-42ZM25 39h7v21h-7ZM39 53h14v14h-14ZM67 53h14v14h-14ZM39 67h42v7h-42Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 22h56v7h-56ZM64 29h7v7h-7ZM29 36h56v7h-56ZM15 29h7v28h-7ZM29 43h7v14h-7ZM50 50h14v14h-14ZM15 57h21v7h-21ZM78 43h7v28h-7ZM29 64h7v7h-7ZM29 71h56v7h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "money, thin pixel icon",
+   "paths": [
+    {
+     "d": "M35.5 42.5h49v3.5h-49ZM35.5 46h3.5v3.5h-3.5ZM42.5 46h35v3.5h-35ZM81 46h3.5v3.5h-3.5ZM35.5 49.5h49v3.5h-49ZM35.5 53h17.5v3.5h-17.5ZM67 53h17.5v3.5h-17.5ZM35.5 56.5h14v7h-14ZM53 56.5h14v7h-14ZM70.5 56.5h14v7h-14ZM35.5 63.5h17.5v3.5h-17.5ZM67 63.5h17.5v3.5h-17.5ZM35.5 67h49v3.5h-49ZM35.5 70.5h3.5v3.5h-3.5ZM42.5 70.5h35v3.5h-35ZM81 70.5h3.5v3.5h-3.5ZM35.5 74h49v3.5h-49Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 22h56v3.5h-56ZM67.5 25.5h3.5v7h-3.5ZM22 29h3.5v3.5h-3.5ZM29 36h56v3.5h-56ZM36 43h3.5v3.5h-3.5ZM74.5 43h3.5v3.5h-3.5ZM50 50h14v3.5h-14ZM15 25.5h3.5v35h-3.5ZM46.5 53.5h3.5v7h-3.5ZM64 53.5h3.5v7h-3.5ZM15 60.5h10.5v3.5h-10.5ZM50 60.5h14v3.5h-14ZM36 67.5h3.5v3.5h-3.5ZM74.5 67.5h3.5v3.5h-3.5ZM29 39.5h3.5v35h-3.5ZM81.5 39.5h3.5v35h-3.5ZM29 74.5h56v3.5h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "money, solid pixel icon",
+   "paths": [
+    {
+     "d": "M19 26h56v7h-56ZM68 33h7v7h-7ZM33 40h56v14h-56ZM19 33h7v28h-7ZM33 54h21v7h-21ZM68 54h21v14h-21ZM19 61h35v7h-35ZM33 68h56v14h-56Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 22h56v7h-56ZM64 29h7v7h-7ZM29 36h56v14h-56ZM15 29h7v28h-7ZM29 50h21v7h-21ZM64 50h21v14h-21ZM15 57h35v7h-35ZM29 64h56v14h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "money, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M19 26h56v3.5h-56ZM71.5 29.5h3.5v7h-3.5ZM26 33h3.5v3.5h-3.5ZM33 40h56v7h-56ZM33 47h7v3.5h-7ZM43.5 47h35v3.5h-35ZM82 47h7v3.5h-7ZM19 29.5h3.5v35h-3.5ZM19 64.5h10.5v3.5h-10.5ZM33 50.5h56v21h-56ZM33 71.5h7v3.5h-7ZM43.5 71.5h35v3.5h-35ZM82 71.5h7v3.5h-7ZM33 75h56v7h-56Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 22h56v3.5h-56ZM67.5 25.5h3.5v7h-3.5ZM22 29h3.5v3.5h-3.5ZM29 36h56v7h-56ZM29 43h7v3.5h-7ZM39.5 43h35v3.5h-35ZM78 43h7v3.5h-7ZM15 25.5h3.5v35h-3.5ZM15 60.5h10.5v3.5h-10.5ZM29 46.5h56v21h-56ZM29 67.5h7v3.5h-7ZM39.5 67.5h35v3.5h-35ZM78 67.5h7v3.5h-7ZM29 71h56v7h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

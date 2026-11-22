@@ -1,0 +1,71 @@
+{
+ "name": "pixel-dashboard",
+ "category": "symbols",
+ "tags": [
+  "dashbaord",
+  "pixel dashbaord",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "dashbaord, regular pixel icon",
+   "paths": [
+    {
+     "d": "M63.5 28.5h14v7h-14ZM28.5 28.5h14v21h-14ZM63.5 56.5h14v21h-14ZM28.5 70.5h14v7h-14Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h28v7h-28ZM53.5 18.5h28v7h-28ZM53.5 25.5h7v7h-7ZM74.5 25.5h7v7h-7ZM53.5 32.5h28v7h-28ZM18.5 25.5h7v21h-7ZM39.5 25.5h7v21h-7ZM18.5 46.5h28v7h-28ZM53.5 46.5h28v7h-28ZM18.5 60.5h28v7h-28ZM53.5 53.5h7v21h-7ZM74.5 53.5h7v21h-7ZM18.5 67.5h7v7h-7ZM39.5 67.5h7v7h-7ZM18.5 74.5h28v7h-28ZM53.5 74.5h28v7h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "dashbaord, thin pixel icon",
+   "paths": [
+    {
+     "d": "M60 25h21v14h-21ZM25 25h21v28h-21ZM60 53h21v28h-21ZM25 67h21v14h-21Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h28v3.5h-28ZM53.5 18.5h28v3.5h-28ZM53.5 22h3.5v14h-3.5ZM78 22h3.5v14h-3.5ZM53.5 36h28v3.5h-28ZM18.5 22h3.5v28h-3.5ZM43 22h3.5v28h-3.5ZM53.5 46.5h28v3.5h-28ZM18.5 50h28v3.5h-28ZM18.5 60.5h28v3.5h-28ZM53.5 50h3.5v28h-3.5ZM78 50h3.5v28h-3.5ZM18.5 64h3.5v14h-3.5ZM43 64h3.5v14h-3.5ZM18.5 78h28v3.5h-28ZM53.5 78h28v3.5h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "dashbaord, solid pixel icon",
+   "paths": [
+    {
+     "d": "M57.5 22.5h28v21h-28ZM22.5 22.5h28v35h-28ZM57.5 50.5h28v35h-28ZM22.5 64.5h28v21h-28Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M53.5 18.5h28v21h-28ZM18.5 18.5h28v35h-28ZM53.5 46.5h28v35h-28ZM18.5 60.5h28v21h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "dashbaord, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M57.5 22.5h28v21h-28ZM22.5 22.5h28v35h-28ZM57.5 50.5h28v35h-28ZM22.5 64.5h28v21h-28Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M53.5 18.5h28v21h-28ZM18.5 18.5h28v35h-28ZM53.5 46.5h28v35h-28ZM18.5 60.5h28v21h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

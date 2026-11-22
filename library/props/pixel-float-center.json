@@ -1,0 +1,71 @@
+{
+ "name": "pixel-float-center",
+ "category": "tech",
+ "tags": [
+  "float center",
+  "pixel float center",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "float center, regular pixel icon",
+   "paths": [
+    {
+     "d": "M46 32h14v14h-14Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 22h28v7h-28ZM15 29h14v7h-14ZM71 29h14v7h-14ZM36 29h7v14h-7ZM57 29h7v14h-7ZM15 43h14v7h-14ZM36 43h28v7h-28ZM71 43h14v7h-14ZM15 57h70v7h-70ZM15 71h70v7h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "float center, thin pixel icon",
+   "paths": [
+    {
+     "d": "M42.5 28.5h21v17.5h-21Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 22h10.5v3.5h-10.5ZM36 22h28v3.5h-28ZM71 22h10.5v3.5h-10.5ZM18.5 32.5h10.5v3.5h-10.5ZM71 32.5h10.5v3.5h-10.5ZM36 25.5h3.5v17.5h-3.5ZM60.5 25.5h3.5v17.5h-3.5ZM18.5 43h10.5v3.5h-10.5ZM36 43h28v3.5h-28ZM71 43h10.5v3.5h-10.5ZM18.5 53.5h63v3.5h-63ZM18.5 64h63v3.5h-63ZM18.5 74.5h63v3.5h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "float center, solid pixel icon",
+   "paths": [
+    {
+     "d": "M19 33h14v7h-14ZM75 33h14v7h-14ZM40 26h28v28h-28ZM19 47h14v7h-14ZM75 47h14v7h-14ZM19 61h70v7h-70ZM19 75h70v7h-70Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 29h14v7h-14ZM71 29h14v7h-14ZM36 22h28v28h-28ZM15 43h14v7h-14ZM71 43h14v7h-14ZM15 57h70v7h-70ZM15 71h70v7h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "float center, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M22.5 26h10.5v3.5h-10.5ZM75 26h10.5v3.5h-10.5ZM22.5 36.5h10.5v3.5h-10.5ZM75 36.5h10.5v3.5h-10.5ZM40 26h28v24.5h-28ZM22.5 47h10.5v3.5h-10.5ZM75 47h10.5v3.5h-10.5ZM22.5 57.5h63v3.5h-63ZM22.5 68h63v3.5h-63ZM22.5 78.5h63v3.5h-63Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 22h10.5v3.5h-10.5ZM71 22h10.5v3.5h-10.5ZM18.5 32.5h10.5v3.5h-10.5ZM71 32.5h10.5v3.5h-10.5ZM36 22h28v24.5h-28ZM18.5 43h10.5v3.5h-10.5ZM71 43h10.5v3.5h-10.5ZM18.5 53.5h63v3.5h-63ZM18.5 64h63v3.5h-63ZM18.5 74.5h63v3.5h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

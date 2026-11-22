@@ -1,0 +1,71 @@
+{
+ "name": "pixel-add-box",
+ "category": "home",
+ "tags": [
+  "add box",
+  "pixel add box",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "add box, regular pixel icon",
+   "paths": [
+    {
+     "d": "M28.5 28.5h49v7h-49ZM28.5 35.5h21v14h-21ZM56.5 35.5h21v14h-21ZM28.5 49.5h7v7h-7ZM70.5 49.5h7v7h-7ZM28.5 56.5h21v14h-21ZM56.5 56.5h21v14h-21ZM28.5 70.5h49v7h-49Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h63v7h-63ZM46.5 32.5h7v14h-7ZM32.5 46.5h35v7h-35ZM46.5 53.5h7v14h-7ZM18.5 25.5h7v49h-7ZM74.5 25.5h7v49h-7ZM18.5 74.5h63v7h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "add box, thin pixel icon",
+   "paths": [
+    {
+     "d": "M25 25h56v10.5h-56ZM25 35.5h26.25v15.75h-26.25ZM54.75 35.5h26.25v15.75h-26.25ZM25 51.25h10.5v3.5h-10.5ZM70.5 51.25h10.5v3.5h-10.5ZM25 54.75h26.25v15.75h-26.25ZM54.75 54.75h26.25v15.75h-26.25ZM25 70.5h56v10.5h-56Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h63v3.5h-63ZM48.25 32.5h3.5v15.75h-3.5ZM32.5 48.25h35v3.5h-35ZM48.25 51.75h3.5v15.75h-3.5ZM18.5 22h3.5v56h-3.5ZM78 22h3.5v56h-3.5ZM18.5 78h63v3.5h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "add box, solid pixel icon",
+   "paths": [
+    {
+     "d": "M22.5 22.5h63v14h-63ZM22.5 36.5h28v14h-28ZM57.5 36.5h28v14h-28ZM22.5 50.5h14v7h-14ZM71.5 50.5h14v7h-14ZM22.5 57.5h28v14h-28ZM57.5 57.5h28v14h-28ZM22.5 71.5h63v14h-63Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h63v14h-63ZM18.5 32.5h28v14h-28ZM53.5 32.5h28v14h-28ZM18.5 46.5h14v7h-14ZM67.5 46.5h14v7h-14ZM18.5 53.5h28v14h-28ZM53.5 53.5h28v14h-28ZM18.5 67.5h63v14h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "add box, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M22.5 22.5h63v15.75h-63ZM22.5 38.25h29.75v14h-29.75ZM55.75 38.25h29.75v14h-29.75ZM22.5 52.25h15.75v3.5h-15.75ZM69.75 52.25h15.75v3.5h-15.75ZM22.5 55.75h29.75v14h-29.75ZM55.75 55.75h29.75v14h-29.75ZM22.5 69.75h63v15.75h-63Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h63v15.75h-63ZM18.5 34.25h29.75v14h-29.75ZM51.75 34.25h29.75v14h-29.75ZM18.5 48.25h15.75v3.5h-15.75ZM65.75 48.25h15.75v3.5h-15.75ZM18.5 51.75h29.75v14h-29.75ZM51.75 51.75h29.75v14h-29.75ZM18.5 65.75h63v15.75h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}
