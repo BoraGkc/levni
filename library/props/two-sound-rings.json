@@ -8,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/off-broadway-hayalet/ici-2.json",
+      "note": "blue concentric rings surrounded by dashed orange sound rings", "from": "harvested from .cache/cizim-drafts/off-broadway-hayalet/ici-2.json",
       "paths": [
         {
           "d": "M50 50 m-12 0 a12 12 0 1 0 24 0 a12 12 0 1 0 -24 0 M50 50 m-26 0 a26 26 0 1 0 52 0 a26 26 0 1 0 -52 0",

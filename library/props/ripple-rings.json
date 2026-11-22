@@ -11,7 +11,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/naza-belgeseli-gazze/kapak.json",
+      "note": "faint dashed circle with a thin solid ring inside", "from": "harvested from .cache/cizim-drafts/naza-belgeseli-gazze/kapak.json",
       "paths": [
         {
           "d": "M30,50 a20,20 0 1,0 40,0 a20,20 0 1,0 -40,0",

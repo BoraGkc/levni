@@ -12,7 +12,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/budapeste-otoriterlik-tehlikes/ici-1.json",
+      "note": "tall blue door seen edge-on, slightly ajar, light spilling at base", "from": "harvested from .cache/cizim-drafts/budapeste-otoriterlik-tehlikes/ici-1.json",
       "paths": [
         {
           "d": "M30 92 H70 L100 98 H0 Z",
@@ -63,7 +63,7 @@
       ]
     },
     {
-      "note": "harvested from .cache/cizim-drafts/moonlight-10-yili/ici-2.json",
+      "note": "coral open door in a blue frame, white light behind, front view", "from": "harvested from .cache/cizim-drafts/moonlight-10-yili/ici-2.json",
       "paths": [
         {
           "d": "M18 6 H82 V98 H18Z",

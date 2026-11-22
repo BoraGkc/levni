@@ -10,7 +10,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/askeri-sir-yapay/ici-2.json",
+      "note": "vertical orange needle with blue tip, standing", "from": "harvested from .cache/cizim-drafts/askeri-sir-yapay/ici-2.json",
       "paths": [
         {
           "d": "M50 2 L58 14 L56 92 L50 100 L44 92 L42 14 Z",
@@ -32,7 +32,7 @@
       ]
     },
     {
-      "note": "harvested from .cache/cizim-drafts/wildwood-stop-motion/ici-1.json",
+      "note": "blue needle with orange thread curve, vertical", "from": "harvested from .cache/cizim-drafts/wildwood-stop-motion/ici-1.json",
       "paths": [
         {
           "d": "M50 2 L50 98",

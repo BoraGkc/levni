@@ -10,7 +10,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/askeri-sir-yapay/ici-1b.json",
+      "note": "round vault hatch door with orange sun-like wheel", "from": "harvested from .cache/cizim-drafts/askeri-sir-yapay/ici-1b.json",
       "paths": [
         {
           "d": "M50 6 Q90 6 94 50 Q90 94 50 94 Q10 94 6 50 Q10 6 50 6 Z",
