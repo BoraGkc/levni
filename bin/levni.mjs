@@ -90,13 +90,14 @@ async function main() {
       }
       if (errs.length) { skipped++; console.log(`skip ${p?.name ?? '(no name)'}: ${errs.join('; ')}`); continue; }
       const target = join(dir, `${p.name}.json`);
-      const clean = { name: p.name, tags: p.tags.map(String), ...(p.author ? { author: p.author } : {}), variants: p.variants.map((v) => ({ ...(v.note ? { note: v.note } : {}), paths: v.paths })) };
+      const clean = { name: p.name, ...(p.category ? { category: p.category } : {}), tags: p.tags.map(String), ...(p.author ? { author: p.author } : {}), variants: p.variants.map((v) => ({ ...(v.note ? { note: v.note } : {}), paths: v.paths })) };
       if (existsSync(target)) {
         const cur = JSON.parse(readFileSync(target, 'utf8'));
         const seen = new Set(cur.variants.map((v) => JSON.stringify(v.paths)));
         const fresh = clean.variants.filter((v) => !seen.has(JSON.stringify(v.paths)));
         if (!fresh.length) { console.log(`same ${p.name}: already in the library`); continue; }
         cur.tags = [...new Set([...(cur.tags || []), ...clean.tags])];
+        if (!cur.category && clean.category) cur.category = clean.category;
         cur.variants.push(...fresh);
         writeFileSync(target, JSON.stringify(cur, null, 1) + '\n');
         console.log(`more ${p.name}: +${fresh.length} variant(s)`);
