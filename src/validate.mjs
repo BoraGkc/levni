@@ -41,9 +41,9 @@ export function measureVariant(v) {
   const colors = [...new Set(v.paths.flatMap((p) => [p.fill, p.stroke]).filter((c) => c && c !== 'none'))];
   const warnings = [];
   if (size < 64) warnings.push(`too small: fills ${size} of 100, scale it up to 75-85`);
-  if (size > 94) warnings.push(`too big: fills ${size} of 100, keep it inside 8..92`);
+  if (size > 98) warnings.push(`too big: fills ${size} of 100, keep it inside 4..96`);
   if (Math.abs(cx - 50) > 10 || Math.abs(cy - 50) > 10) warnings.push(`off centre: centre is (${cx},${cy}), move it to about (50,50)`);
-  if (x0 < 2 || y0 < 2 || x1 > 98 || y1 > 98) warnings.push('touches the edge of the box');
+  if (x0 < 0 || y0 < 0 || x1 > 100 || y1 > 100) warnings.push('runs outside the 0..100 box');
   if (v.paths.length < 2) warnings.push('only one path: add an inner detail or a second shape');
   if (v.paths.length > 24) warnings.push(`${v.paths.length} paths: simplify, the house style is bold and simple`);
   const accents = colors.filter((c) => !['ink', 'paper', 'white', 'tone', 'none'].includes(c));
