@@ -66,7 +66,7 @@ const graph = [
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,600;0,6..72,700;1,6..72,500;1,6..72,600&family=Figtree:wght@400;500;600;700&display=swap"
     />
     <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />
   </head>
@@ -79,12 +79,12 @@ const graph = [
           <span>Levni</span>
         </a>
         <nav aria-label="Main">
-          <a href="/#how">How it works</a>
+          <a class="nav-extra" href="/#how">How it works</a>
           <a href="/library/">Library</a>
-          <a href="/#gallery">Gallery</a>
+          <a class="nav-extra" href="/#gallery">Gallery</a>
           <a href="/#agents">Agents &amp; MCP</a>
           <a href="/blog/">Blog</a>
-          <a class="nav-gh" href={SITE.github}>★ Star on GitHub</a>
+          <a class="nav-gh" href={SITE.github}><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z" fill="currentColor"/></svg> Star on GitHub</a>
         </nav>
       </div>
     </header>
@@ -127,12 +127,15 @@ const graph = [
     --vermilion-deep: var(--coral-deep);
     --turquoise-text: var(--accent-text);
     --lapis: var(--accent-text);
-    --serif: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
-    --display: 'Fraunces', Georgia, serif;
+    --serif: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --display: 'Newsreader', Georgia, serif;
     --mono: ui-monospace, Menlo, Consolas, monospace;
     --wrap: 1120px;
   }
   * { box-sizing: border-box; }
+  ::selection { background: var(--mustard); color: var(--ink); }
+  html { accent-color: var(--accent); caret-color: var(--accent); scrollbar-color: var(--ink-soft) var(--paper); }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
   html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0;
@@ -145,7 +148,6 @@ const graph = [
   img { max-width: 100%; height: auto; display: block; }
   a { color: var(--lapis); text-decoration-thickness: 1px; text-underline-offset: 3px; }
   a:hover { color: var(--vermilion); }
-  :focus-visible { outline: 3px solid var(--vermilion); outline-offset: 3px; }
   h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.1; color: var(--ink); margin: 0 0 0.5em; }
   h1 { font-size: clamp(2.6rem, 7vw, 4.6rem); }
   h2 { font-size: clamp(2rem, 4.5vw, 3rem); }
@@ -171,7 +173,7 @@ const graph = [
   nav { display: flex; gap: 6px 18px; flex-wrap: wrap; font-size: 1.02rem; }
   nav a { color: var(--ink); text-decoration: none; padding: 10px 0; }
   nav a:hover { color: var(--vermilion); }
-  .nav-gh { font-weight: 600; }
+  .nav-gh { font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
 
   .site-footer { border-top: 2px solid var(--ink); margin-top: 72px; padding: 32px 0 40px; font-size: 1rem; color: var(--ink-soft); }
   .footer-row { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
@@ -191,6 +193,7 @@ const graph = [
   @media (max-width: 480px) {
     body { font-size: 1.08rem; }
     nav { font-size: 0.98rem; gap: 4px 14px; }
+    .nav-extra { display: none; }
   }
   @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
 </style>

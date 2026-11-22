@@ -23,6 +23,7 @@ const index = props.map((p) => ({
 writeFileSync(here('src/data/props.json'), JSON.stringify(index));
 writeFileSync(here('src/data/categories.json'), JSON.stringify(CATEGORIES));
 writeFileSync(here('src/data/inks.json'), JSON.stringify({ house: HOUSE, packs: STYLES }));
+writeFileSync(here('public/inks.json'), JSON.stringify({ house: HOUSE, packs: STYLES }));
 
 // SVG of every variant, cropped to the drawing, in house colours: the Library recolours it live in the browser
 mkdirSync(here('public/props-svg'), { recursive: true });
