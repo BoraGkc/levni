@@ -71,6 +71,85 @@
      "weight": 4
     }
    ]
+  },
+  {
+   "note": "bottle, empty: no water inside",
+   "paths": [
+    {
+     "d": "M42 8 L58 8 L58 18 L42 18 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M43 18 L57 18 L57 26 Q70 32 72 44 L72 86 Q72 92 66 92 L34 92 Q28 92 28 86 L28 44 Q30 32 43 26 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M36 36 L36 44",
+     "stroke": "ink",
+     "weight": 4,
+     "fill": "none"
+    }
+   ]
+  },
+  {
+   "note": "bottle, half full: water up to the middle",
+   "paths": [
+    {
+     "d": "M42 8 L58 8 L58 18 L42 18 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M43 18 L57 18 L57 26 Q70 32 72 44 L72 86 Q72 92 66 92 L34 92 Q28 92 28 86 L28 44 Q30 32 43 26 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M33 54 Q42 50 50 54 Q58 58 67 54 L67 84 Q67 87 63 87 L37 87 Q33 87 33 84 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 36 L36 44",
+     "stroke": "ink",
+     "weight": 4,
+     "fill": "none"
+    }
+   ]
+  },
+  {
+   "note": "bottle, full: water up to the shoulder",
+   "paths": [
+    {
+     "d": "M42 8 L58 8 L58 18 L42 18 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M43 18 L57 18 L57 26 Q70 32 72 44 L72 86 Q72 92 66 92 L34 92 Q28 92 28 86 L28 44 Q30 32 43 26 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M33 40 Q42 36 50 40 Q58 44 67 40 L67 84 Q67 87 63 87 L37 87 Q33 87 33 84 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 48 L36 56",
+     "stroke": "ink",
+     "weight": 4,
+     "fill": "none"
+    }
+   ]
   }
  ]
 }

@@ -57,6 +57,76 @@
      "weight": 8
     }
    ]
+  },
+  {
+   "note": "potted plant, sprout: one small leaf on a short stem",
+   "paths": [
+    {
+     "d": "M50 56 L50 42",
+     "stroke": "green",
+     "weight": 7,
+     "fill": "none"
+    },
+    {
+     "d": "M50 46 Q38 44 34 34 Q48 32 50 46 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M30 62 L70 62 L65 90 L35 90 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M26 54 L74 54 L74 64 L26 64 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  },
+  {
+   "note": "potted plant, wilted: leaves drooping down, stem bent",
+   "paths": [
+    {
+     "d": "M50 56 L50 30",
+     "stroke": "green",
+     "weight": 7,
+     "fill": "none"
+    },
+    {
+     "d": "M50 46 Q32 40 20 58 Q40 58 50 46 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 40 Q68 36 80 54 Q62 56 50 40 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 30 Q54 20 64 24 Q62 36 50 30 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M30 62 L70 62 L65 90 L35 90 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M26 54 L74 54 L74 64 L26 64 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
   }
  ]
 }

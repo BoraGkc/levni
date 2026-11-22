@@ -58,6 +58,33 @@
      "weight": 9
     }
    ]
+  },
+  {
+   "note": "star, empty: outline only, for ratings",
+   "paths": [
+    {
+     "d": "M52.2 9.2 L62.5 38.4 L91.2 42.9 L69.1 61.3 L74.8 92 L49 73.6 L22.9 87.6 L30.3 59.3 L8.1 38 L39.4 37.8 Z",
+     "stroke": "ink",
+     "weight": 9,
+     "fill": "none"
+    }
+   ]
+  },
+  {
+   "note": "star, half filled: left half mustard, right half empty, for ratings",
+   "paths": [
+    {
+     "d": "M50 14.1 L39.4 37.8 L8.1 38 L30.3 59.3 L22.9 87.6 L49 73.6 L50 74.2 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M52.2 9.2 L62.5 38.4 L91.2 42.9 L69.1 61.3 L74.8 92 L49 73.6 L22.9 87.6 L30.3 59.3 L8.1 38 L39.4 37.8 Z",
+     "stroke": "ink",
+     "weight": 9,
+     "fill": "none"
+    }
+   ]
   }
  ]
 }

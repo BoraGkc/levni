@@ -121,6 +121,41 @@
      "weight": 5
     }
    ]
+  },
+  {
+   "note": "umbrella, closed: furled canopy standing upright with hooked handle",
+   "paths": [
+    {
+     "d": "M50 12 Q64 30 61 64 L39 64 Q36 30 50 12 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 12 L50 6",
+     "stroke": "ink",
+     "weight": 9,
+     "fill": "none"
+    },
+    {
+     "d": "M46 26 Q43 46 44 62 M54 26 Q57 46 56 62",
+     "stroke": "ink",
+     "weight": 5,
+     "fill": "none"
+    },
+    {
+     "d": "M38 54 L62 54",
+     "stroke": "ink",
+     "weight": 6,
+     "fill": "none"
+    },
+    {
+     "d": "M50 64 L50 84 Q50 92 42 90",
+     "stroke": "ink",
+     "weight": 9,
+     "fill": "none"
+    }
+   ]
   }
  ]
 }

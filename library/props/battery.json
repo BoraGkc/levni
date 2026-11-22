@@ -6,7 +6,11 @@
   "batarya",
   "battery",
   "şarj",
-  "enerji"
+  "enerji",
+  "şarj seviyesi",
+  "battery level",
+  "low battery",
+  "full battery"
  ],
  "variants": [
   {
@@ -113,6 +117,131 @@
      "fill": "mustard",
      "stroke": "ink",
      "weight": 7
+    }
+   ]
+  },
+  {
+   "note": "horizontal, empty: three empty slots",
+   "paths": [
+    {
+     "d": "M88 43 L92 43 Q94 43 94 45 L94 57 Q94 59 92 59 L88 59 Q86 59 86 57 L86 45 Q86 43 88 43 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M14 30 L80 31 Q86 31 86 37 L86 66 Q86 72 80 72 L14 72 Q8 72 8 66 L8 36 Q8 30 14 30 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M18 38 L30 38 Q32 38 32 40 L32 62 Q32 64 30 64 L18 64 Q16 64 16 62 L16 40 Q16 38 18 38 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M38 38 L50 38 Q52 38 52 40 L52 62 Q52 64 50 64 L38 64 Q36 64 36 62 L36 40 Q36 38 38 38 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M58 38 L70 38 Q72 38 72 40 L72 62 Q72 64 70 64 L58 64 Q56 64 56 62 L56 40 Q56 38 58 38 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  },
+  {
+   "note": "horizontal, low: one coral bar",
+   "paths": [
+    {
+     "d": "M88 43 L92 43 Q94 43 94 45 L94 57 Q94 59 92 59 L88 59 Q86 59 86 57 L86 45 Q86 43 88 43 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M14 30 L80 31 Q86 31 86 37 L86 66 Q86 72 80 72 L14 72 Q8 72 8 66 L8 36 Q8 30 14 30 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 40 L32 40 Q34 40 34 42 L34 64 Q34 66 32 66 L20 66 Q18 66 18 64 L18 42 Q18 40 20 40 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M18 38 L30 38 Q32 38 32 40 L32 62 Q32 64 30 64 L18 64 Q16 64 16 62 L16 40 Q16 38 18 38 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M38 38 L50 38 Q52 38 52 40 L52 62 Q52 64 50 64 L38 64 Q36 64 36 62 L36 40 Q36 38 38 38 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M58 38 L70 38 Q72 38 72 40 L72 62 Q72 64 70 64 L58 64 Q56 64 56 62 L56 40 Q56 38 58 38 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  },
+  {
+   "note": "horizontal, full: three green bars",
+   "paths": [
+    {
+     "d": "M88 43 L92 43 Q94 43 94 45 L94 57 Q94 59 92 59 L88 59 Q86 59 86 57 L86 45 Q86 43 88 43 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M14 30 L80 31 Q86 31 86 37 L86 66 Q86 72 80 72 L14 72 Q8 72 8 66 L8 36 Q8 30 14 30 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 40 L32 40 Q34 40 34 42 L34 64 Q34 66 32 66 L20 66 Q18 66 18 64 L18 42 Q18 40 20 40 Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M18 38 L30 38 Q32 38 32 40 L32 62 Q32 64 30 64 L18 64 Q16 64 16 62 L16 40 Q16 38 18 38 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M40 40 L52 40 Q54 40 54 42 L54 64 Q54 66 52 66 L40 66 Q38 66 38 64 L38 42 Q38 40 40 40 Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M38 38 L50 38 Q52 38 52 40 L52 62 Q52 64 50 64 L38 64 Q36 64 36 62 L36 40 Q36 38 38 38 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M60 40 L72 40 Q74 40 74 42 L74 64 Q74 66 72 66 L60 66 Q58 66 58 64 L58 42 Q58 40 60 40 Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M58 38 L70 38 Q72 38 72 40 L72 62 Q72 64 70 64 L58 64 Q56 64 56 62 L56 40 Q56 38 58 38 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
     }
    ]
   }

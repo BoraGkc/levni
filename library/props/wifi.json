@@ -6,7 +6,10 @@
   "kablosuz",
   "sinyal",
   "internet",
-  "bağlantı"
+  "bağlantı",
+  "sinyal gücü",
+  "signal strength",
+  "zayıf sinyal"
  ],
  "variants": [
   {
@@ -149,6 +152,64 @@
      "fill": "none",
      "stroke": "ink",
      "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "signal arcs, weak: only the inner arc lit",
+   "paths": [
+    {
+     "d": "M16 46 Q50 12 84 45",
+     "fill": "none",
+     "stroke": "tone",
+     "weight": 9
+    },
+    {
+     "d": "M29 58 Q50 38 71 57",
+     "fill": "none",
+     "stroke": "tone",
+     "weight": 9
+    },
+    {
+     "d": "M41 69 Q50 62 59 69",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M44.5 81 C44.5 78.2 47 76 50 76 C53 76 55.5 78.2 55.5 81 C55.5 83.8 53 86 50 86 C47 86 44.5 83.8 44.5 81 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "signal arcs, medium: two arcs lit",
+   "paths": [
+    {
+     "d": "M16 46 Q50 12 84 45",
+     "fill": "none",
+     "stroke": "tone",
+     "weight": 9
+    },
+    {
+     "d": "M29 58 Q50 38 71 57",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M41 69 Q50 62 59 69",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M44.5 81 C44.5 78.2 47 76 50 76 C53 76 55.5 78.2 55.5 81 C55.5 83.8 53 86 50 86 C47 86 44.5 83.8 44.5 81 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
     }
    ]
   }

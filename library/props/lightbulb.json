@@ -77,6 +77,40 @@
      "fill": "none"
     }
    ]
+  },
+  {
+   "note": "lightbulb, off: tone glass, no glow, no rays",
+   "paths": [
+    {
+     "d": "M53 12Q79 12 79 40Q79 54 67 64L67 70L39 70L39 64Q27 54 27 40Q27 12 53 12Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 10 Q76 10 76 38 Q76 52 64 62 L64 68 L36 68 L36 62 Q24 52 24 38 Q24 10 50 10 Z",
+     "stroke": "ink",
+     "weight": 9,
+     "fill": "none"
+    },
+    {
+     "d": "M38 68 L62 68 L61 84 Q50 90 39 84 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M40 76 L61 76",
+     "stroke": "ink",
+     "weight": 5,
+     "fill": "none"
+    },
+    {
+     "d": "M44 58 L44 46 Q50 38 56 46 L56 58",
+     "stroke": "ink",
+     "weight": 5,
+     "fill": "none"
+    }
+   ]
   }
  ]
 }
