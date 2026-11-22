@@ -1,0 +1,107 @@
+{
+ "name": "smartwatch",
+ "tags": [
+  "akıllı saat",
+  "saat",
+  "smartwatch",
+  "watch",
+  "wearable",
+  "kol saati"
+ ],
+ "variants": [
+  {
+   "note": "smartwatch with a simple bar graph on the face",
+   "paths": [
+    {
+     "d": "M38 6 L62 6 L60 22 L40 22 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M40 78 L60 78 L62 94 L38 94 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M32 22 L68 22 Q78 22 78 32 L78 68 Q78 78 68 78 L32 78 Q22 78 22 68 L22 32 Q22 22 32 22 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 30 L70 30 L70 70 L30 70 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M38 64 L38 54",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 64 L50 40",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 7
+    },
+    {
+     "d": "M62 64 L62 47",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M80 42 L86 42",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "mustard smartwatch with a ring graph",
+   "paths": [
+    {
+     "d": "M38 6 L62 6 L60 22 L40 22 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M40 78 L60 78 L62 94 L38 94 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M32 22 L68 22 Q78 22 78 32 L78 68 Q78 78 68 78 L32 78 Q22 78 22 68 L22 32 Q22 22 32 22 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 30 L70 30 L70 70 L30 70 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M60 50 C60 55.5 55.5 60 50 60 C44.5 60 40 55.5 40 50 C40 44.5 44.5 40 50 40 C55.5 40 60 44.5 60 50 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M80 42 L86 42",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

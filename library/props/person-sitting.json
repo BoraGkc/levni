@@ -1,0 +1,82 @@
+{
+ "name": "person-sitting",
+ "tags": [
+  "person",
+  "sitting",
+  "seated",
+  "chair",
+  "sit",
+  "oturan",
+  "sandalye",
+  "oturmak",
+  "kişi",
+  "insan"
+ ],
+ "variants": [
+  {
+   "note": "side view, person sitting on a simple chair, blue shirt, hand on knee",
+   "paths": [
+    {
+     "d": "M26 60 L64 60 Q66 60 66 62 L66 64 Q66 66 64 66 L26 66 Q24 66 24 64 L24 62 Q24 60 26 60 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M24 34 L24 62",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M28 66 L28 90 M62 66 L62 90",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M41 32 L47 32 Q54 32 54 39 L54 55 Q54 62 47 62 L41 62 Q34 62 34 55 L34 39 Q34 32 41 32 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M44 58 L70 58 L70 83",
+     "stroke": "ink",
+     "weight": 11
+    },
+    {
+     "d": "M44 58 L70 58 L70 83",
+     "stroke": "dark",
+     "weight": 6
+    },
+    {
+     "d": "M68 88 a6 3 0 1,0 12 0 a6 3 0 1,0 -12 0 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M45 38 L55 50 L66 54",
+     "stroke": "ink",
+     "weight": 11
+    },
+    {
+     "d": "M45 38 L55 50 L66 54",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M37 19 a9 9 0 1,0 18 0 a9 9 0 1,0 -18 0 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M64.4 54 a3.6 3.6 0 1,0 7.2 0 a3.6 3.6 0 1,0 -7.2 0 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

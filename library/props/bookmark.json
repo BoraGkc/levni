@@ -1,0 +1,53 @@
+{
+ "name": "bookmark",
+ "tags": [
+  "yer imi",
+  "kitap ayracı",
+  "bookmark",
+  "ribbon",
+  "save",
+  "kaydet"
+ ],
+ "variants": [
+  {
+   "note": "coral ribbon bookmark with a notched end",
+   "paths": [
+    {
+     "d": "M28 10 L72 10 L72 90 L50 72 L28 90 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M38 20 L38 54",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "bookmark hanging over a page edge, mustard ribbon",
+   "paths": [
+    {
+     "d": "M22 12 L78 12 L78 86 L22 86 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 62 L68 62 M30 72 L56 72",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M52 12 L72 12 L72 52 L62 44 L52 52 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

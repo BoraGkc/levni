@@ -1,0 +1,138 @@
+{
+ "name": "bank",
+ "tags": [
+  "banka",
+  "finans",
+  "bank",
+  "finance",
+  "columns",
+  "sütun",
+  "tasarruf"
+ ],
+ "variants": [
+  {
+   "note": "classical bank facade, three columns, coin on the pediment",
+   "paths": [
+    {
+     "d": "M10 38 L50 12 L90 38 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M56 29 C56 32.3 53.3 35 50 35 C46.7 35 44 32.3 44 29 C44 25.7 46.7 23 50 23 C53.3 23 56 25.7 56 29 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M12 38 L88 38 L88 46 L12 46 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20 46 L30 46 L30 76 L20 76 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M45 46 L55 46 L55 76 L45 76 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M70 46 L80 46 L80 76 L70 76 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M10 76 L90 76 L90 84 L10 84 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M6 84 L94 84 L94 92 L6 92 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  },
+  {
+   "note": "tinted bank with fluted columns",
+   "paths": [
+    {
+     "d": "M10 38 L50 12 L90 38 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M56 29 C56 32.3 53.3 35 50 35 C46.7 35 44 32.3 44 29 C44 25.7 46.7 23 50 23 C53.3 23 56 25.7 56 29 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M12 38 L88 38 L88 46 L12 46 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20 46 L30 46 L30 76 L20 76 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M25 50 L25 72",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M45 46 L55 46 L55 76 L45 76 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 50 L50 72",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M70 46 L80 46 L80 76 L70 76 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M75 50 L75 72",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M10 76 L90 76 L90 84 L10 84 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M6 84 L94 84 L94 92 L6 92 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

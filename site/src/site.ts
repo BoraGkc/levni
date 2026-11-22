@@ -1,4 +1,5 @@
 // One place for links and facts the pages repeat.
+import folio from './data/props.json';
 export const SITE = {
   name: 'Levni',
   url: 'https://levni.dev',
@@ -8,6 +9,6 @@ export const SITE = {
   github: 'https://github.com/BoraGkc/levni',
   githubReady: true,
   ortakAlan: 'https://ortakalan.io',
-  props: 474,
-  variants: 708,
+  props: folio.length,
+  variants: folio.reduce((n, p) => n + p.variants.length, 0),
 };

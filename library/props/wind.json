@@ -1,0 +1,41 @@
+{
+ "name": "wind",
+ "tags": [
+  "wind",
+  "rüzgar",
+  "gust",
+  "esinti",
+  "breeze",
+  "weather",
+  "hava durumu",
+  "air",
+  "hava"
+ ],
+ "variants": [
+  {
+   "note": "Three horizontal gust lines, each ending in a small curl.",
+   "paths": [
+    {
+     "d": "M10 32 L58 32 Q74 32 74 22 Q74 14 66 14 Q60 14 60 20",
+     "stroke": "blue",
+     "weight": 14
+    },
+    {
+     "d": "M20 52 L78 52 Q92 52 92 62 Q92 70 84 70 Q78 70 78 64",
+     "stroke": "blue",
+     "weight": 14
+    },
+    {
+     "d": "M10 72 L44 72 Q56 72 56 80 Q56 86 50 86 Q46 86 46 82",
+     "stroke": "blue",
+     "weight": 14
+    },
+    {
+     "d": "M10 32 L58 32 Q74 32 74 22 Q74 14 66 14 Q60 14 60 20 M20 52 L78 52 Q92 52 92 62 Q92 70 84 70 Q78 70 78 64 M10 72 L44 72 Q56 72 56 80 Q56 86 50 86 Q46 86 46 82",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

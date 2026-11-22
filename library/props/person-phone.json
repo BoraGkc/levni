@@ -1,0 +1,94 @@
+{
+ "name": "person-phone",
+ "tags": [
+  "person",
+  "phone",
+  "smartphone",
+  "scrolling",
+  "texting",
+  "mobile",
+  "telefon",
+  "telefona bakan",
+  "mesaj",
+  "cep telefonu",
+  "insan"
+ ],
+ "variants": [
+  {
+   "note": "side view, person standing and looking down at a phone held in front, mustard shirt",
+   "paths": [
+    {
+     "d": "M47 62 L46 85",
+     "stroke": "ink",
+     "weight": 11
+    },
+    {
+     "d": "M47 62 L46 85",
+     "stroke": "dark",
+     "weight": 6
+    },
+    {
+     "d": "M54 62 L56 85",
+     "stroke": "ink",
+     "weight": 11
+    },
+    {
+     "d": "M54 62 L56 85",
+     "stroke": "dark",
+     "weight": 6
+    },
+    {
+     "d": "M43 89 a6 3 0 1,0 12 0 a6 3 0 1,0 -12 0 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M54 89 a6 3 0 1,0 12 0 a6 3 0 1,0 -12 0 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M48 31 L53 31 Q60 31 60 38 L60 56 Q60 63 53 63 L48 63 Q41 63 41 56 L41 38 Q41 31 48 31 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M45 20 a9 9 0 1,0 18 0 a9 9 0 1,0 -18 0 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M51 38 L53 52 L64 48",
+     "stroke": "ink",
+     "weight": 11
+    },
+    {
+     "d": "M51 38 L53 52 L64 48",
+     "stroke": "mustard",
+     "weight": 6
+    },
+    {
+     "d": "M65 36 L73 39 L70 53 L62 50 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M66 40 L71 42",
+     "stroke": "tone",
+     "weight": 3
+    },
+    {
+     "d": "M60.4 50 a3.6 3.6 0 1,0 7.2 0 a3.6 3.6 0 1,0 -7.2 0 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

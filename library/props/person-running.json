@@ -1,0 +1,103 @@
+{
+ "name": "person-running",
+ "tags": [
+  "person",
+  "running",
+  "runner",
+  "jogging",
+  "sprint",
+  "koşan",
+  "koşmak",
+  "koşucu",
+  "spor",
+  "atlet"
+ ],
+ "variants": [
+  {
+   "note": "side view running right, leaning forward, coral shirt with speed lines",
+   "paths": [
+    {
+     "d": "M44 60 L34 74 L22 78",
+     "stroke": "ink",
+     "weight": 11
+    },
+    {
+     "d": "M44 60 L34 74 L22 78",
+     "stroke": "dark",
+     "weight": 6
+    },
+    {
+     "d": "M11 79 a6 3 0 1,0 12 0 a6 3 0 1,0 -12 0 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M48 60 L64 64 L60 84",
+     "stroke": "ink",
+     "weight": 11
+    },
+    {
+     "d": "M48 60 L64 64 L60 84",
+     "stroke": "dark",
+     "weight": 6
+    },
+    {
+     "d": "M57 88 a6 3 0 1,0 12 0 a6 3 0 1,0 -12 0 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M56 38 L44 46 L38 36",
+     "stroke": "ink",
+     "weight": 11
+    },
+    {
+     "d": "M56 38 L44 46 L38 36",
+     "stroke": "coral",
+     "weight": 6
+    },
+    {
+     "d": "M50 34 Q58 30 64 36 Q64 44 56 52 L52 62 Q44 64 40 58 Q44 46 50 34 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M53 19 a9 9 0 1,0 18 0 a9 9 0 1,0 -18 0 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M60 40 L70 50 L78 40",
+     "stroke": "ink",
+     "weight": 11
+    },
+    {
+     "d": "M60 40 L70 50 L78 40",
+     "stroke": "coral",
+     "weight": 6
+    },
+    {
+     "d": "M34.4 35 a3.6 3.6 0 1,0 7.2 0 a3.6 3.6 0 1,0 -7.2 0 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M74.4 39 a3.6 3.6 0 1,0 7.2 0 a3.6 3.6 0 1,0 -7.2 0 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M10 40 L24 40 M8 50 L20 50",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

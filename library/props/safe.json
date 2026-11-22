@@ -1,0 +1,132 @@
+{
+ "name": "safe",
+ "tags": [
+  "kasa",
+  "çelik kasa",
+  "güvenlik",
+  "safe",
+  "strongbox",
+  "vault",
+  "security"
+ ],
+ "variants": [
+  {
+   "note": "strongbox with a round mustard dial",
+   "paths": [
+    {
+     "d": "M22 80 L22 90 M78 80 L78 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M12 14 L88 14 L88 80 L12 80 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 22 L80 22 L80 72 L20 72 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M64 47 C64 54.7 57.7 61 50 61 C42.3 61 36 54.7 36 47 C36 39.3 42.3 33 50 33 C57.7 33 64 39.3 64 47 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 36 L50 41 M50 53 L50 58 M39 47 L44 47 M56 47 L61 47",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 47 L56 41",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M24 32 L24 38 M24 56 L24 62",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "green safe with a keypad and a coral handle",
+   "paths": [
+    {
+     "d": "M22 80 L22 90 M78 80 L78 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M12 14 L88 14 L88 80 L12 80 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 22 L80 22 L80 72 L20 72 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M30 34 h.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M40 34 h.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M30 46 h.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M40 46 h.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M30 58 h.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M40 58 h.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M56 36 L56 62",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 9
+    },
+    {
+     "d": "M56 36 L74 36",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "name": "lightning",
+ "tags": [
+  "lightning",
+  "şimşek",
+  "bolt",
+  "yıldırım",
+  "storm",
+  "fırtına",
+  "thunder",
+  "elektrik"
+ ],
+ "variants": [
+  {
+   "note": "Bold mustard zig-zag lightning bolt.",
+   "paths": [
+    {
+     "d": "M58 8 L24 54 L46 54 L38 92 L76 42 L54 42 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "Blue storm cloud with a mustard bolt striking below.",
+   "paths": [
+    {
+     "d": "M24 54 Q8 54 8 42 Q8 32 22 30 Q22 14 40 14 Q50 4 64 14 Q72 10 80 20 Q92 22 92 38 Q92 54 76 54 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M56 42 L38 68 L50 68 L44 92 L68 58 L56 58 L64 42 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

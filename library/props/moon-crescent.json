@@ -1,0 +1,39 @@
+{
+ "name": "moon-crescent",
+ "tags": [
+  "moon",
+  "ay",
+  "crescent",
+  "hilal",
+  "night",
+  "gece",
+  "stars",
+  "yıldız",
+  "sky"
+ ],
+ "variants": [
+  {
+   "note": "Mustard crescent moon with two small coral stars.",
+   "paths": [
+    {
+     "d": "M58 14 A38 38 0 1 0 82 63 A30 30 0 0 1 58 14 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M78 14 L81 21 L88 24 L81 27 L78 34 L75 27 L68 24 L75 21 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M84 40 L86 44 L90 46 L86 48 L84 52 L82 48 L78 46 L82 44 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

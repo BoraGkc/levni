@@ -1,0 +1,46 @@
+{
+ "name": "rainbow",
+ "tags": [
+  "rainbow",
+  "gökkuşağı",
+  "arc",
+  "weather",
+  "hava durumu",
+  "colour",
+  "renk"
+ ],
+ "variants": [
+  {
+   "note": "Three nested arcs in coral, mustard and blue rising from two small clouds.",
+   "paths": [
+    {
+     "d": "M14 62 A36 36 0 0 1 86 62",
+     "stroke": "coral",
+     "weight": 9
+    },
+    {
+     "d": "M24 62 A26 26 0 0 1 76 62",
+     "stroke": "mustard",
+     "weight": 9
+    },
+    {
+     "d": "M34 62 A16 16 0 0 1 66 62",
+     "stroke": "blue",
+     "weight": 9
+    },
+    {
+     "d": "M16 80 Q8 80 8 72 Q8 64 18 64 Q20 56 30 58 Q38 58 38 66 Q44 68 44 74 Q44 80 36 80 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M84 80 Q92 80 92 72 Q92 64 82 64 Q80 56 70 58 Q62 58 62 66 Q56 68 56 74 Q56 80 64 80 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  }
+ ]
+}

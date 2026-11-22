@@ -25,7 +25,7 @@ The `soft` finish:
 
 - **Agents can draw.** A scene is plain JSON: an agent (or a person) places props, panels and textures; Levni does the hand. Same seed, same picture.
 - **One look across hundreds of images.** Ortak Alan made ~500 article images with it: pressure-brush ink, riso plate misregistration, crayon paper grain.
-- **A shared library: the Levni Folio.** 474 drawn props (708 variants), CC BY 4.0, open to contributions.
+- **A shared library: the Levni Folio.** 515 drawn props (772 variants), CC BY 4.0, open to contributions.
 - **A critic built in.** Every render returns layout notes (off-canvas, accidental crops, lopsided weight, no focal point) an agent can act on before a human looks.
 - **Style packs.** The same scene printed with other inks and paper: `riso` (Ortak Alan's house look, default) and `miniature`, inspired by Tulip Era Ottoman painting, with its own tulips, carnations, cypresses and gilded medallion. Levni does not have to invent every look itself: it can take a tradition as its reference and then draw in it consistently. Set `"style": "miniature"` on a scene; a pack is a colour map in `src/styles.mjs`.
 - **A soft 3D finish.** `"finish": "soft"` swaps the crayon for clean edges and film grain, with twisting gradient `ribbon`s, shaded `tube`s and an `image` badge for a logo you own. Good for tech and guide covers. Examples: [`ribbon-loop`](examples/ribbon-loop.json), [`ribbon-s`](examples/ribbon-s.json), [`ribbon-rings`](examples/ribbon-rings.json).
@@ -140,7 +140,7 @@ The Levni Folio grows by contribution. A prop is one JSON file in `library/props
 ## Tests
 
 ```bash
-npm test   # validates every prop file, composes each variant alone, rasterizes all 708 variants once (~30 s)
+npm test   # validates every prop file, composes each variant alone, rasterizes every variant once (~30 s)
 ```
 
 ---

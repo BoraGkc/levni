@@ -1,0 +1,82 @@
+{
+ "name": "mouse",
+ "tags": [
+  "fare",
+  "bilgisayar faresi",
+  "mouse",
+  "computer mouse",
+  "click",
+  "tıklama"
+ ],
+ "variants": [
+  {
+   "note": "computer mouse from above, split buttons and a coral scroll wheel",
+   "paths": [
+    {
+     "d": "M50 12 C70 12 74 28 74 46 L74 68 C74 82 64 90 50 90 C36 90 26 82 26 68 L26 46 C26 28 30 12 50 12 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 12 C70 12 74 28 74 44 L50 44 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M26 44 L74 44",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 14 L50 44",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 22 L50 34",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "mustard mouse with cable",
+   "paths": [
+    {
+     "d": "M50 12 Q50 4 60 6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 12 C70 12 74 28 74 46 L74 68 C74 82 64 90 50 90 C36 90 26 82 26 68 L26 46 C26 28 30 12 50 12 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M26 44 L74 44",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 14 L50 44",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 22 L50 34",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

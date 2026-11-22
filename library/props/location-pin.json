@@ -1,0 +1,54 @@
+{
+ "name": "location-pin",
+ "tags": [
+  "konum",
+  "harita iğnesi",
+  "adres",
+  "location pin",
+  "map pin",
+  "place",
+  "yer"
+ ],
+ "variants": [
+  {
+   "note": "coral map pin with a paper hole",
+   "paths": [
+    {
+     "d": "M50 90 C30 64 22 52 22 38 C22 22 34 10 50 10 C66 10 78 22 78 38 C78 52 70 64 50 90 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M60 38 C60 43.5 55.5 48 50 48 C44.5 48 40 43.5 40 38 C40 32.5 44.5 28 50 28 C55.5 28 60 32.5 60 38 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  },
+  {
+   "note": "coral pin standing on a small shadow, mustard centre",
+   "paths": [
+    {
+     "d": "M30 88 Q50 83 70 88 Q50 93 30 88 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 80 C32 58 24 48 24 36 C24 22 35 12 50 12 C65 12 76 22 76 36 C76 48 68 58 50 80 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M59 36 C59 41 55 45 50 45 C45 45 41 41 41 36 C41 31 45 27 50 27 C55 27 59 31 59 36 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

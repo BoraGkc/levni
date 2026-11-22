@@ -1,0 +1,77 @@
+{
+ "name": "search-bar",
+ "tags": [
+  "arama çubuğu",
+  "arama",
+  "search bar",
+  "search",
+  "magnifier",
+  "büyüteç"
+ ],
+ "variants": [
+  {
+   "note": "rounded search bar with a magnifier at right",
+   "paths": [
+    {
+     "d": "M22 34 L78 34 Q92 34 92 50 Q92 66 78 66 L22 66 Q8 66 8 50 Q8 34 22 34 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 50 L46 50",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M81 48 C81 53 77 57 72 57 C67 57 63 53 63 48 C63 43 67 39 72 39 C77 39 81 43 81 48 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M79 55 L86 62",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  },
+  {
+   "note": "mustard search bar with typed cursor and magnifier",
+   "paths": [
+    {
+     "d": "M22 34 L78 34 Q92 34 92 50 Q92 66 78 66 L22 66 Q8 66 8 50 Q8 34 22 34 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 50 L36 50",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M42 42 L42 58",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 5
+    },
+    {
+     "d": "M81 48 C81 53 77 57 72 57 C67 57 63 53 63 48 C63 43 67 39 72 39 C77 39 81 43 81 48 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M79 55 L86 62",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

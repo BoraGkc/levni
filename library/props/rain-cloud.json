@@ -1,0 +1,31 @@
+{
+ "name": "rain-cloud",
+ "tags": [
+  "rain cloud",
+  "yağmur bulutu",
+  "rain",
+  "yağmur",
+  "weather",
+  "hava durumu",
+  "shower",
+  "sağanak"
+ ],
+ "variants": [
+  {
+   "note": "Light blue cloud with four slanted rain drops.",
+   "paths": [
+    {
+     "d": "M24 56 Q8 56 8 44 Q8 34 22 32 Q22 16 40 16 Q50 6 64 16 Q72 12 80 22 Q92 24 92 40 Q92 56 76 56 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M28 66 L24 78 M44 70 L40 82 M60 66 L56 78 M76 70 L72 82",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

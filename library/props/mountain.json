@@ -1,0 +1,45 @@
+{
+ "name": "mountain",
+ "tags": [
+  "mountain",
+  "dağ",
+  "peak",
+  "zirve",
+  "snow cap",
+  "karlı",
+  "hiking",
+  "nature",
+  "doğa"
+ ],
+ "variants": [
+  {
+   "note": "Two peaks, a large blue one and a smaller pale one, both with snow caps.",
+   "paths": [
+    {
+     "d": "M52 84 L72 42 L92 84 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M8 84 L40 20 L72 84 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 40 L35 44 L40 38 L45 44 L50 40 L40 20 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M65 56 L69 60 L72 54 L76 60 L79 56 L72 42 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

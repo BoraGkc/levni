@@ -1,0 +1,54 @@
+{
+ "name": "infinity",
+ "tags": [
+  "sonsuzluk",
+  "sonsuz",
+  "döngü",
+  "infinity",
+  "loop",
+  "endless",
+  "unlimited"
+ ],
+ "variants": [
+  {
+   "note": "bold coral infinity loop with a heavy ink edge",
+   "paths": [
+    {
+     "d": "M50 50 C42 36 34 30 26 30 C14 30 8 40 8 50 C8 60 14 70 26 70 C34 70 42 64 50 50 C58 36 66 30 74 30 C86 30 92 40 92 50 C92 60 86 70 74 70 C66 70 58 64 50 50 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 22
+    },
+    {
+     "d": "M50 50 C42 36 34 30 26 30 C14 30 8 40 8 50 C8 60 14 70 26 70 C34 70 42 64 50 50 C58 36 66 30 74 30 C86 30 92 40 92 50 C92 60 86 70 74 70 C66 70 58 64 50 50 Z",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 10
+    }
+   ]
+  },
+  {
+   "note": "mustard infinity loop with a paper centre line",
+   "paths": [
+    {
+     "d": "M50 50 C42 36 34 30 26 30 C14 30 8 40 8 50 C8 60 14 70 26 70 C34 70 42 64 50 50 C58 36 66 30 74 30 C86 30 92 40 92 50 C92 60 86 70 74 70 C66 70 58 64 50 50 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 22
+    },
+    {
+     "d": "M50 50 C42 36 34 30 26 30 C14 30 8 40 8 50 C8 60 14 70 26 70 C34 70 42 64 50 50 C58 36 66 30 74 30 C86 30 92 40 92 50 C92 60 86 70 74 70 C66 70 58 64 50 50 Z",
+     "fill": "none",
+     "stroke": "mustard",
+     "weight": 10
+    },
+    {
+     "d": "M26 36 Q16 40 15 50",
+     "fill": "none",
+     "stroke": "paper",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

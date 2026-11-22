@@ -1,0 +1,59 @@
+{
+ "name": "flag",
+ "tags": [
+  "bayrak",
+  "sancak",
+  "flag",
+  "pole",
+  "milestone",
+  "hedef"
+ ],
+ "variants": [
+  {
+   "note": "plain mustard flag waving on a pole",
+   "paths": [
+    {
+     "d": "M26 14 C38 8 50 22 62 16 C70 12 76 12 84 14 L84 50 C76 48 70 48 62 54 C50 60 38 46 26 52 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M24 10 L24 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M14 90 L34 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "coral pennant on a pole",
+   "paths": [
+    {
+     "d": "M26 14 L84 32 L26 52 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M24 10 L24 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M14 90 L34 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}
