@@ -5,7 +5,8 @@
 // Output is committed (public/props/*.webp, src/data/props.json), so the Pages build needs no sharp.
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import sharp from 'sharp';
-import { compose, loadProps, CATEGORIES } from '../../src/index.mjs';
+import { compose, loadProps, CATEGORIES, STYLES } from '../../src/index.mjs';
+import { HOUSE } from '../../src/styles.mjs';
 
 const here = (p) => new URL(`../${p}`, import.meta.url).pathname;
 const force = process.argv.includes('--force');
@@ -21,6 +22,19 @@ const index = props.map((p) => ({
 }));
 writeFileSync(here('src/data/props.json'), JSON.stringify(index));
 writeFileSync(here('src/data/categories.json'), JSON.stringify(CATEGORIES));
+writeFileSync(here('src/data/inks.json'), JSON.stringify({ house: HOUSE, packs: STYLES }));
+
+// SVG of every variant, cropped to the drawing, in house colours: the Library recolours it live in the browser
+mkdirSync(here('public/props-svg'), { recursive: true });
+let svgs = 0;
+for (const p of props) for (const i of p.variants.keys()) {
+  const out = `public/props-svg/${p.name}-${i}.svg`;
+  if (!force && existsSync(here(out))) continue;
+  const { svg } = await compose({ seed: 3, elements: [{ type: 'prop', name: p.name, variant: i, x: 600, y: 336, size: 460 }] });
+  writeFileSync(here(out), svg.replace(/width="1200" height="673" viewBox="0 0 1200 673"/, 'width="520" height="520" viewBox="340 76 520 520"'));
+  svgs++;
+}
+console.log(`${svgs} svg written`);
 
 const tiles = props.flatMap((p) => p.variants.map((_, i) => ({ name: p.name, i, out: `public/props/${p.name}-${i}.webp` })));
 const todo = force ? tiles : tiles.filter((t) => !existsSync(here(t.out)));

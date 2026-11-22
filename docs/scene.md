@@ -23,7 +23,7 @@ A machine-readable outline is in [`scene.schema.json`](scene.schema.json).
 | `boil` | integer | `seed` | seed of the crayon filter only (animate it for a hand-drawn shimmer) |
 | `t` | 0..1 | `0` | animation time; trees sway, clouds drift, flags wave |
 | `locale` | string | `en` | locale used to upper-case `label` text (`tr` gives dotted İ) |
-| `style` | string | `riso` | style pack: `riso` or `miniature` (recolours inks and paper, see `src/styles.mjs`) |
+| `style` | string or object | `riso` | style pack: `riso` or `miniature`, or your own inks as `{ "blue": "#123456", "coral": "#FF8800" }` (house colour names: paper, white, ink, blue, coral, green, mustard, dark, tone, tone-coral, tone-green, tone-mustard; the rest keep the house hex). Recolours every prop, panel and texture. |
 | `finish` | string | `crayon` | `crayon`: hand-inked lines, riso plates, paper grain. `soft`: clean edges and a fine film grain, for the ribbon look |
 | `grain` | number | `0.16` | strength of the film grain in the `soft` finish |
 
