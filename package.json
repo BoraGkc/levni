@@ -40,7 +40,7 @@
     "node": ">=20"
   },
   "scripts": {
-    "test": "node test/smoke.mjs && node test/mcp.mjs",
+    "test": "node test/smoke.mjs && node test/mcp.mjs && node test/critic.mjs",
     "examples": "node examples/render-all.mjs"
   },
   "dependencies": {

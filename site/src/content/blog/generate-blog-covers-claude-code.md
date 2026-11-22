@@ -111,13 +111,14 @@ The idea is right and the layout is wrong. The rocket was placed near the corner
 The render result starts with the layout critic's notes. For the draft above it reported:
 
 ```text
-- draw "globe" (ink box 181,446 218×237) is cut 10px by the frame: pull it in or crop it boldly (set "crop": true)
+- draw "rocket" (ink box 987,-101 304×393) is mostly outside the frame, only 31% shows: move it in, or set "crop": true if the cut is the idea
+- draw "globe" (ink box 181,446 218×237) is cut by the frame, 74% shows: pull it in, or set "crop": true if the cut is deliberate
 - weight is lopsided (right heavy): balance it or make the empty side intentional
 ```
 
-The critic is cheap and blind to meaning. It checks geometry: elements off the canvas, objects cut by the frame by accident, lopsided weight, no clear focal symbol, overlapping icons. It reports at most six notes. Treat them as a to-do list.
+The critic is cheap and blind to meaning. It checks geometry: elements off the canvas or the card, objects cut by the frame without `"crop": true`, lopsided weight, no clear focal symbol, overlapping icons. It reports at most six notes. Treat them as a to-do list.
 
-Notice what it did not say. It caught the globe and the weight, and the lopsided note is the symptom of the rocket sitting far to one side. That is why the prompt asks Claude to look at the preview as well. The notes tell you where to look, and the picture tells you whether it reads.
+All three notes point at the same mistake from different sides: the rocket is mostly outside the card, the globe is clipped, and the weight piles up in one corner. The critic measures against the card when the scene has a `clip`, so a prop that falls off the card is caught even while it is still on the canvas. It still cannot tell whether the picture means anything, which is why the prompt asks Claude to look at the preview as well. The notes tell you where to look, and the picture tells you whether it reads.
 
 ## Fix the scene and render again
 
