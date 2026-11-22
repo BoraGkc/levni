@@ -1,13 +1,19 @@
 # Levni
 
+![Levni: a garden in miniature colours, drawn by Levni](docs/img/banner.png)
+
 **Hand-inked, riso-printed illustrations from a JSON scene.** Design assets for agents and publishers: covers, spot illustrations, icons and social images, drawn by code in one consistent house style, with no image model, no API key and no per-image cost.
 
-Powered by [Ortak Alan](https://ortakalan.io). Named after Levni, the 18th-century Ottoman miniaturist of the Tulip Era, whose colours were famously alive.
+Website: **[levni.dev](https://levni.dev)** · Powered by [Ortak Alan](https://ortakalan.io). Named after Levni, the 18th-century Ottoman miniaturist of the Tulip Era, whose colours were famously alive.
 
 | cover | spot | little 3D world |
 | --- | --- | --- |
 | ![Cover: a rocket in front of a sun on a blue panel, an audience below](examples/cover.png) | ![Spot: books, a coffee cup and a light bulb on a mustard disc](examples/spot.png) | ![Isometric room with a desk, laptop, lamp and stool](examples/room.png) |
 | [`cover.json`](examples/cover.json) | [`spot.json`](examples/spot.json) | [`room.json`](examples/room.json) |
+
+The same room in the `miniature` style pack:
+
+![The isometric room in miniature colours](examples/room-miniature.png)
 
 ## Why
 
@@ -63,6 +69,8 @@ Canvas 1200 × 673. 36 element types: library props and your own path drawings (
 - Images you render are yours; the CC BY credit applies when they contain library props.
 
 ## Submit to the Folio
+
+Short version below; the full guide is [CONTRIBUTING.md](CONTRIBUTING.md).
 
 The Levni Folio grows by contribution. A prop is one JSON file in `library/props/` (to write many at once with any chat model, see [`docs/prop-prompt.md`](docs/prop-prompt.md) and `levni add`):
 

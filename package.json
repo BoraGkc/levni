@@ -5,17 +5,39 @@
   "type": "module",
   "license": "MIT",
   "author": "Ortak Alan (https://ortakalan.io)",
-  "homepage": "https://ortakalan.io",
-  "keywords": ["illustration", "svg", "generative", "riso", "agents", "mcp", "cover-image", "design-assets"],
+  "homepage": "https://levni.dev",
+  "keywords": [
+    "illustration",
+    "svg",
+    "generative",
+    "riso",
+    "agents",
+    "mcp",
+    "cover-image",
+    "design-assets"
+  ],
   "main": "./src/index.mjs",
   "exports": {
     ".": "./src/index.mjs",
     "./props": "./src/props.mjs",
     "./critic": "./src/critic.mjs"
   },
-  "bin": { "levni": "./bin/levni.mjs" },
-  "files": ["src/", "bin/", "library/", "docs/", "LICENSE", "README.md"],
-  "engines": { "node": ">=20" },
+  "bin": {
+    "levni": "./bin/levni.mjs"
+  },
+  "files": [
+    "src/",
+    "bin/",
+    "library/",
+    "docs/scene.md",
+    "docs/scene.schema.json",
+    "docs/prop-prompt.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "test": "node test/smoke.mjs",
     "examples": "node examples/render-all.mjs"
@@ -27,6 +49,15 @@
     "@tabler/icons": ">=3"
   },
   "peerDependenciesMeta": {
-    "@tabler/icons": { "optional": true }
+    "@tabler/icons": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BoraGkc/levni.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BoraGkc/levni/issues"
   }
 }

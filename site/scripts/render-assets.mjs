@@ -8,7 +8,7 @@ import { compose } from '../../src/index.mjs';
 const here = (p) => new URL(`../${p}`, import.meta.url).pathname;
 const scene = (p) => JSON.parse(readFileSync(here(p), 'utf8'));
 const png = async (spec) => sharp(Buffer.from((await compose(spec)).svg)).png().toBuffer();
-for (const d of ['public/img', 'public/og', 'public/gallery']) mkdirSync(here(d), { recursive: true });
+for (const d of ['public/img', 'public/og', 'public/gallery', '../docs/img']) mkdirSync(here(d), { recursive: true });
 
 async function webp(buf, out, width) {
   await sharp(buf).resize(width).webp({ quality: 82, effort: 6, smartSubsample: true }).toFile(here(out));
@@ -65,4 +65,19 @@ for (const [k, [name]] of motifs.entries()) {
 for (const f of readdirSync(here('scenes')).filter((n) => n.startsWith('og-') && n.endsWith('.json'))) {
   const s = scene(`scenes/${f}`);
   await og(s, s.ogTitle, `public/og/${f.slice(3, -5)}.png`);
+}
+
+// 6. Repository images: README banner, GitHub social preview (1280 x 640), miniature example
+{
+  const heroPng = await png(hero);
+  await sharp(heroPng).resize(1200).png({ compressionLevel: 9, palette: true, quality: 90 }).toFile(here('../docs/img/banner.png'));
+  const base = await sharp(heroPng).resize(1280, 640, { fit: 'cover', position: 'top' }).png().toBuffer();
+  const band = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640">
+    <rect x="190" y="420" width="900" height="150" fill="#F1E4C8" stroke="#C9962B" stroke-width="6"/>
+    <rect x="202" y="432" width="876" height="126" fill="none" stroke="#C8402E" stroke-width="2"/>
+    <text x="640" y="493" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="58" fill="#3B2415">Levni</text>
+    <text x="640" y="535" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#5C4130">illustrations from a JSON scene · levni.dev</text></svg>`);
+  await sharp(base).composite([{ input: band }]).png({ compressionLevel: 9, palette: true, quality: 90 }).toFile(here('../docs/img/social-preview.png'));
+  await sharp(await png({ ...scene('../examples/room.json'), style: 'miniature' })).png({ compressionLevel: 9, palette: true, quality: 90 }).toFile(here('../examples/room-miniature.png'));
+  console.log('docs/img/banner.png, docs/img/social-preview.png, examples/room-miniature.png');
 }

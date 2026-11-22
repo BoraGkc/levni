@@ -157,7 +157,7 @@ const jsonld = [
           <li>Check it with <code>npx levni sheet check.png your-prop</code>.</li>
           <li>Open a pull request. Rules: your own drawing, no faces, no logos, one object per file.</li>
         </ol>
-        <a class="btn btn-primary" href={SITE.github}>{SITE.githubReady ? 'Submit to the Folio' : 'Submit to the Folio (repo coming soon)'}</a>
+        <a class="btn btn-primary" href={`${SITE.github}/blob/main/CONTRIBUTING.md`}>Submit to the Folio</a>
       </div>
       <div class="folio-motifs" aria-hidden="true">
         {['tulip', 'carnation', 'cypress', 'rosette'].map((m) => <img src={`/img/motif-${m}.webp`} alt="" width="120" height="120" loading="lazy" />)}
@@ -211,7 +211,7 @@ const jsonld = [
   .hero > *, .steps > li, .cards > *, .grid > *, .pair > *, .folio-box > * { min-width: 0; }
   .narrow { max-width: 680px; margin-left: auto; margin-right: auto; }
   .hero { margin-top: 48px; display: grid; grid-template-columns: 1fr 1.25fr; gap: 48px; align-items: center; }
-  .eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--turquoise); margin: 0 0 14px; }
+  .eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--turquoise-text); margin: 0 0 14px; }
   .lede { font-size: 1.28rem; color: var(--ink-soft); margin: 0 0 24px; }
   .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
   .btn {
@@ -219,7 +219,7 @@ const jsonld = [
     text-decoration: none; font-size: 1.05rem; background: transparent;
   }
   .btn:hover { color: var(--vermilion); border-color: var(--vermilion); }
-  .btn-primary { background: var(--vermilion); border-color: var(--vermilion); color: #fbf3e0; }
+  .btn-primary { background: var(--vermilion-deep); border-color: var(--vermilion-deep); color: #fbf3e0; }
   .btn-primary:hover { background: var(--ink); border-color: var(--ink); color: #fbf3e0; }
   .install { margin-top: 20px; color: var(--ink-soft); }
   .hero-figure { margin: 0; }
