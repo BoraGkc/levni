@@ -1,0 +1,38 @@
+{
+ "name": "building-factory",
+ "category": "places",
+ "tags": [
+  "building factory"
+ ],
+ "variants": [
+  {
+   "note": "building factory, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M16.4 87.8 c4.8 -16.9 8.3 -33.7 8.4 -50.4 h25.2 c0.1 16.7 3.6 33.5 8.4 50.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M52.1 54.2 h18.9 c0.1 11 3.8 22.2 8.4 33.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 20.6 a10.1 10.1 0 0 1 8.4 -4.2 a10.1 10.1 0 0 1 8.4 4.2 a10.1 10.1 0 0 0 8.4 4.2 a10.1 10.1 0 0 0 8.4 -4.2 a10.1 10.1 0 0 1 8.4 -4.2 a10.1 10.1 0 0 1 8.4 4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 87.8 l79.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

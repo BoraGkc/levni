@@ -10,7 +10,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/gta-6-cikisi/kapak-v2.json",
+      "note": "blue game controller outline with d-pad and coloured buttons, front view", "from": "harvested from .cache/cizim-drafts/gta-6-cikisi/kapak-v2.json",
       "paths": [
         {
           "d": "M22 38 Q22 28 34 28 L66 28 Q78 28 79 38 L86 66 Q88 77 77 77 Q70 77 64 66 L36 66 Q30 77 23 77 Q12 77 14 66 Z",
@@ -38,7 +38,7 @@
       ]
     },
     {
-      "note": "harvested from .cache/cizim-drafts/gta-neden-asla/kapak-v2.json",
+      "note": "game controller outline with coloured buttons and no d-pad, front view", "from": "harvested from .cache/cizim-drafts/gta-neden-asla/kapak-v2.json",
       "paths": [
         {
           "d": "M22 38 Q22 28 34 28 L66 28 Q78 28 79 38 L86 66 Q88 77 77 77 Q70 77 64 66 L36 66 Q30 77 23 77 Q12 77 14 66 Z",

@@ -1,0 +1,32 @@
+{
+ "name": "bookmark-plus",
+ "category": "symbols",
+ "tags": [
+  "bookmark plus"
+ ],
+ "variants": [
+  {
+   "note": "bookmark plus, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M50 71 l-25.2 16.8 v-58.8 a16.8 16.8 0 0 1 16.8 -16.8 h16.8 a16.8 16.8 0 0 1 16.8 16.8 v21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 79.4 h25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M79.4 66.8 v25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

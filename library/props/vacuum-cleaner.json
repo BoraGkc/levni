@@ -1,0 +1,42 @@
+{
+ "name": "vacuum-cleaner",
+ "category": "home",
+ "tags": [
+  "vacuum cleaner"
+ ],
+ "variants": [
+  {
+   "note": "vacuum cleaner, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M90.8 53 a37.8 37.8 0 1 1 -75.6 0 a37.8 37.8 0 0 1 75.6 0",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M61.4 40.4 a8.4 8.4 0 1 1 -16.8 0 a8.4 8.4 0 0 1 16.8 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M87.8 50 a37.8 37.8 0 1 1 -75.6 0 a37.8 37.8 0 0 1 75.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 37.4 a8.4 8.4 0 1 1 -16.8 0 a8.4 8.4 0 0 1 16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 66.8 h0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "name": "chart-line",
+ "category": "money",
+ "tags": [
+  "chart line"
+ ],
+ "variants": [
+  {
+   "note": "chart line, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M16.4 79.4 l67.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 62.6 l16.8 -25.2 l16.8 8.4 l16.8 -21 l16.8 16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

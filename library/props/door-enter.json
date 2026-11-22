@@ -1,0 +1,38 @@
+{
+ "name": "door-enter",
+ "category": "home",
+ "tags": [
+  "door enter"
+ ],
+ "variants": [
+  {
+   "note": "door enter, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M54.2 50 v0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 87.8 h75.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20.6 87.8 v-67.2 a8.4 8.4 0 0 1 8.4 -8.4 h25.2 m16.8 44.1 v31.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.8 29 h-29.4 m12.6 -12.6 l-12.6 12.6 l12.6 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

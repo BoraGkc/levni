@@ -1,0 +1,60 @@
+{
+ "name": "compass",
+ "category": "places",
+ "tags": [
+  "compass"
+ ],
+ "variants": [
+  {
+   "note": "compass, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M36.2 69.8 l8.4 -25.2 l25.2 -8.4 l-8.4 25.2 l-25.2 8.4",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M15.2 53 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 1 0 -75.6 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M33.2 66.8 l8.4 -25.2 l25.2 -8.4 l-8.4 25.2 l-25.2 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 50 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 1 0 -75.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 12.2 l0 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 79.4 l0 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 50 l8.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M79.4 50 l8.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

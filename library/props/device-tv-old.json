@@ -1,0 +1,49 @@
+{
+ "name": "device-tv-old",
+ "category": "tech",
+ "tags": [
+  "device tv old"
+ ],
+ "variants": [
+  {
+   "note": "device tv old, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 40.4 a8.4 8.4 0 0 1 8.4 -8.4 h58.8 a8.4 8.4 0 0 1 8.4 8.4 v37.8 a8.4 8.4 0 0 1 -8.4 8.4 h-58.8 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -37.8",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 37.4 a8.4 8.4 0 0 1 8.4 -8.4 h58.8 a8.4 8.4 0 0 1 8.4 8.4 v37.8 a8.4 8.4 0 0 1 -8.4 8.4 h-58.8 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -37.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 12.2 l-16.8 16.8 l-16.8 -16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62.6 29 v54.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M75.2 62.6 v0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M75.2 50 v0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

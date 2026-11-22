@@ -1,0 +1,37 @@
+{
+ "name": "balloon",
+ "category": "stage",
+ "tags": [
+  "balloon"
+ ],
+ "variants": [
+  {
+   "note": "balloon, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M27.8 36.2 a25.2 25.2 0 1 1 50.4 0 c0 20.9 -11.3 37.8 -25.2 37.8 s-25.2 -16.9 -25.2 -37.8",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M58.4 33.2 a8.4 8.4 0 0 0 -8.4 -8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 33.2 a25.2 25.2 0 1 1 50.4 0 c0 20.9 -11.3 37.8 -25.2 37.8 s-25.2 -16.9 -25.2 -37.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 71 v4.2 a8.4 8.4 0 0 1 -8.4 8.4 h-12.6 a8.4 8.4 0 0 0 -8.4 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

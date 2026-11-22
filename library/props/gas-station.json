@@ -1,0 +1,44 @@
+{
+ "name": "gas-station",
+ "category": "places",
+ "tags": [
+  "gas station"
+ ],
+ "variants": [
+  {
+   "note": "gas station, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M58.4 45.8 h4.2 a8.4 8.4 0 0 1 8.4 8.4 v12.6 a6.3 6.3 0 0 0 12.6 0 v-29.4 l-12.6 -12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 83.6 v-58.8 a8.4 8.4 0 0 1 8.4 -8.4 h25.2 a8.4 8.4 0 0 1 8.4 8.4 v58.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 83.6 l50.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M75.2 29 v4.2 a4.2 4.2 0 0 0 4.2 4.2 h4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 45.8 l42 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

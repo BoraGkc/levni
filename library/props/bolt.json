@@ -1,0 +1,25 @@
+{
+ "name": "bolt",
+ "category": "symbols",
+ "tags": [
+  "bolt"
+ ],
+ "variants": [
+  {
+   "note": "bolt, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M57.2 15.2 l0 29.4 l25.2 0 l-33.6 46.2 l0 -29.4 l-25.2 0 l33.6 -46.2",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M54.2 12.2 l0 29.4 l25.2 0 l-33.6 46.2 l0 -29.4 l-25.2 0 l33.6 -46.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

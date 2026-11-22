@@ -1,0 +1,37 @@
+{
+ "name": "clock-hour-4",
+ "category": "symbols",
+ "tags": [
+  "clock hour 4"
+ ],
+ "variants": [
+  {
+   "note": "clock hour 4, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 53 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 1 0 -75.6 0",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 50 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 1 0 -75.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 50 l12.6 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 29 v21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

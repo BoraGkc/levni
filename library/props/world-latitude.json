@@ -1,0 +1,43 @@
+{
+ "name": "world-latitude",
+ "category": "places",
+ "tags": [
+  "world latitude"
+ ],
+ "variants": [
+  {
+   "note": "world latitude, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 53 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 1 0 -75.6 0",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 50 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 1 0 -75.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M18.9 29 l62.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 50 l75.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M18.9 71 l62.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

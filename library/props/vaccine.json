@@ -1,0 +1,56 @@
+{
+ "name": "vaccine",
+ "category": "health",
+ "tags": [
+  "vaccine"
+ ],
+ "variants": [
+  {
+   "note": "vaccine, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M71 12.2 l16.8 16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M79.4 20.6 l-18.9 18.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M47.9 26.9 l25.2 25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M68.9 47.9 l-27.3 27.3 h-16.8 v-16.8 l27.3 -27.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M31.1 52.1 l6.3 6.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M43.7 39.5 l6.3 6.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 87.8 l12.6 -12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

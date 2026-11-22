@@ -1,0 +1,50 @@
+{
+ "name": "recycle",
+ "category": "symbols",
+ "tags": [
+  "recycle"
+ ],
+ "variants": [
+  {
+   "note": "recycle, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M50 71 l-8.4 8.4 l8.4 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 79.4 h37.8 a8.4 8.4 0 0 0 7.4 -11.5 l-2.3 -4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M35.5 45.8 l-3.1 -11.5 l-11.5 3.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M32.4 34.3 l-18.9 32.7 a8.4 8.4 0 0 0 6.3 12.1 l4.8 0.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M64.5 45.8 l11.5 3.1 l3.1 -11.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M76 48.9 l-18.9 -32.7 a8.4 8.4 0 0 0 -13.7 -0.6 l-2.5 4.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

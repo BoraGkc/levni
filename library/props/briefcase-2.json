@@ -1,0 +1,31 @@
+{
+ "name": "briefcase-2",
+ "category": "money",
+ "tags": [
+  "briefcase 2"
+ ],
+ "variants": [
+  {
+   "note": "briefcase 2, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 40.4 a8.4 8.4 0 0 1 8.4 -8.4 h58.8 a8.4 8.4 0 0 1 8.4 8.4 v37.8 a8.4 8.4 0 0 1 -8.4 8.4 h-58.8 a8.4 8.4 0 0 1 -8.4 -8.4 v-37.8",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 37.4 a8.4 8.4 0 0 1 8.4 -8.4 h58.8 a8.4 8.4 0 0 1 8.4 8.4 v37.8 a8.4 8.4 0 0 1 -8.4 8.4 h-58.8 a8.4 8.4 0 0 1 -8.4 -8.4 v-37.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 29 v-8.4 a8.4 8.4 0 0 1 8.4 -8.4 h16.8 a8.4 8.4 0 0 1 8.4 8.4 v8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

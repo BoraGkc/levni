@@ -1,0 +1,43 @@
+{
+ "name": "alarm",
+ "category": "symbols",
+ "tags": [
+  "alarm"
+ ],
+ "variants": [
+  {
+   "note": "alarm, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M23.6 57.2 a29.4 29.4 0 1 0 58.8 0 a29.4 29.4 0 1 0 -58.8 0",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M20.6 54.2 a29.4 29.4 0 1 0 58.8 0 a29.4 29.4 0 1 0 -58.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 41.6 l0 12.6 l8.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 16.4 l-11.5 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M71 16.4 l11.6 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "name": "circle-check",
+ "category": "symbols",
+ "tags": [
+  "circle check"
+ ],
+ "variants": [
+  {
+   "note": "circle check, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 53 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 1 0 -75.6 0",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 50 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 1 0 -75.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 50 l8.4 8.4 l16.8 -16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

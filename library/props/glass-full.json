@@ -1,0 +1,43 @@
+{
+ "name": "glass-full",
+ "category": "home",
+ "tags": [
+  "glass full"
+ ],
+ "variants": [
+  {
+   "note": "glass full, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M74 15.2 l4.2 29.4 c0 12.7 -11.3 21 -25.2 21 s-25.2 -8.3 -25.2 -21 l4.2 -29.4 h42",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M33.2 87.8 l33.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 62.6 l0 25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M71 12.2 l4.2 29.4 c0 12.7 -11.3 21 -25.2 21 s-25.2 -8.3 -25.2 -21 l4.2 -29.4 h42",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 41.6 a21 21 0 0 1 25.2 0 a21 21 0 0 0 25.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

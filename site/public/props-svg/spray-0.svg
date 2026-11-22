@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="520" viewBox="340 76 520 520">
+<defs>
+  <filter id="crayon" filterUnits="userSpaceOnUse" x="0" y="0" width="1200" height="673" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="3" result="wobble"/>
+    <feDisplacementMap in="SourceGraphic" in2="wobble" scale="5" xChannelSelector="R" yChannelSelector="G" result="w1"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="2" seed="10" result="tooth"/>
+    <feDisplacementMap in="w1" in2="tooth" scale="3.2" xChannelSelector="R" yChannelSelector="G" result="w2"/>
+    <feTurbulence type="fractalNoise" baseFrequency="1.1 0.8" numOctaves="2" seed="16" result="grain"/>
+    <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.0 2.3" result="speckle"/>
+    <feComposite in="w2" in2="speckle" operator="in" result="inked"/>
+    <!-- ink mottle: faint horizontal streaks where the drum laid down a little less ink, as on a riso print -->
+    <feTurbulence type="fractalNoise" baseFrequency="0.003 0.035" numOctaves="2" seed="34" result="mot"/>
+    <feColorMatrix in="mot" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.55 0 0 0 0.74" result="mota"/>
+    <feComposite in="inked" in2="mota" operator="in"/>
+  </filter>
+  <filter id="paper" filterUnits="userSpaceOnUse" x="0" y="0" width="1200" height="673">
+    <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="24" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.42  0 0 0 0 0.36  0 0 0 0.06 0"/>
+  </filter></defs>
+<rect width="1200" height="673" fill="#F4F2EC"/>
+<rect width="1200" height="673" filter="url(#paper)"/>
+<g filter="url(#crayon)">
+<g transform="translate(370 106) scale(4.6)"><path d="M19.4 53 a8.4 8.4 0 0 1 8.4 -8.4 h16.8 a8.4 8.4 0 0 1 8.4 8.4 v29.4 a8.4 8.4 0 0 1 -8.4 8.4 h-16.8 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -29.4" fill="#7FA6F2" transform="translate(-0.38 -0.47)"/><path d="M16.5,50L17,47.9L17.9,46L19.2,44.4L20.9,43.2L22.8,42.4L24.8,42.2L26.9,42.2L29,42.2L31.1,42.3L33.2,42.3L35.3,42.3L37.4,42.4L39.5,42.4L41.5,42.4L43.6,42.6L45.4,43.4L47,44.6L48.2,46.2L49,48L49.3,50L49.3,52.1L49.3,54.2L49.3,56.3L49.3,58.4L49.4,60.5L49.4,62.6L49.4,64.7L49.4,66.8L49.4,68.9L49.4,71L49.4,73.1L49.4,75.2L49.3,77.3L49.3,79.4L49,81.4L48.3,83.2L47,84.8L45.4,86L43.6,86.8L41.5,87.1L39.5,87L37.4,87.1L35.3,87.1L33.2,87.1L31.1,87.1L29,87.1L26.9,87.1L24.8,87.1L22.8,86.9L20.9,86.1L19.3,84.9L18.1,83.3L17.3,81.4L17,79.4L17,77.3L17,75.2L17,73.1L17,71L17,68.9L17,66.8L17,64.7L17,62.6L17,60.5L17,58.4L16.9,56.3L16.9,54.2L16.8,52.1L16.5,50L16.3,50L16,52.1L15.9,54.2L15.9,56.3L15.8,58.4L15.8,60.5L15.8,62.6L15.8,64.7L15.8,66.8L15.8,68.9L15.8,71L15.8,73.1L15.8,75.2L15.8,77.3L15.8,79.4L16.1,81.7L17,83.9L18.4,85.8L20.3,87.2L22.5,88.2L24.8,88.5L26.9,88.5L29,88.5L31.1,88.5L33.2,88.5L35.3,88.5L37.4,88.5L39.5,88.6L41.7,88.5L44,88.2L46.2,87.3L48.1,85.9L49.5,84L50.4,81.8L50.7,79.4L50.7,77.3L50.6,75.2L50.6,73.1L50.6,71L50.6,68.9L50.6,66.8L50.6,64.7L50.6,62.6L50.6,60.5L50.7,58.4L50.7,56.3L50.7,54.2L50.7,52.1L50.7,50L50.5,47.6L49.5,45.4L48.1,43.5L46.2,42L44,41.1L41.7,40.8L39.5,40.8L37.4,40.8L35.3,40.9L33.2,40.9L31.1,40.9L29,41L26.9,41L24.8,41L22.5,41.4L20.3,42.3L18.5,43.7L17.2,45.6L16.4,47.7L16.3,50Z" fill="#0A3FB0"/><path d="M24.9,41.6L25.2,39.5L25.3,37.4L25.4,35.3L25.4,33.2L25.5,31.1L25.5,29L25.5,26.9L25.6,24.9L25.8,23.5L26.5,22.3L27.6,21.5L29.1,21.2L31.1,21.2L33.2,21.2L35.3,21.2L37.3,21.3L38.7,21.6L39.8,22.4L40.5,23.5L40.8,24.9L40.8,26.9L40.9,29L40.9,31.1L41,33.2L41,35.3L41.1,37.4L41.1,39.5L41.5,41.6L41.7,41.6L42.1,39.5L42.1,37.4L42.2,35.3L42.2,33.2L42.3,31.1L42.3,29L42.4,26.9L42.4,24.7L42,22.9L40.9,21.3L39.3,20.2L37.5,19.9L35.3,20L33.2,20L31.1,20L28.9,20L27.1,20.3L25.5,21.3L24.4,22.9L24,24.7L24.1,26.9L24.1,29L24.1,31.1L24.2,33.2L24.2,35.3L24.3,37.4L24.4,39.5L24.7,41.6Z" fill="#0A3FB0"/><circle cx="62.60" cy="29.00" r="0.96" fill="#0A3FB0"/><circle cx="75.20" cy="37.40" r="0.96" fill="#0A3FB0"/><circle cx="75.20" cy="20.60" r="0.96" fill="#0A3FB0"/><circle cx="87.80" cy="12.20" r="0.96" fill="#0A3FB0"/><circle cx="87.80" cy="29.00" r="0.96" fill="#0A3FB0"/><circle cx="87.80" cy="45.80" r="0.96" fill="#0A3FB0"/><path d="M41.6,29.1L42.7,29.8L43.7,29.6L44.8,29.7L45.8,29.1L45.8,28.9L44.8,28.3L43.7,28.4L42.7,28.2L41.6,28.9Z" fill="#0A3FB0"/></g>
+</g>
+</svg>

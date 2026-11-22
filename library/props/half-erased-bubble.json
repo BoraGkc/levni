@@ -13,7 +13,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/openai-arastirmacisi-llm/kapak.json",
+      "note": "speech bubble with text lines, half erased dotted area, orange eraser", "from": "harvested from .cache/cizim-drafts/openai-arastirmacisi-llm/kapak.json",
       "paths": [
         {
           "d": "M12 20 Q12 12 20 12 L80 12 Q88 12 88 20 L88 60 Q88 68 80 68 L48 68 L30 86 L34 68 L20 68 Q12 68 12 60 Z",

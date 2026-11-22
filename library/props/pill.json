@@ -1,0 +1,31 @@
+{
+ "name": "pill",
+ "category": "health",
+ "tags": [
+  "pill"
+ ],
+ "variants": [
+  {
+   "note": "pill, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M21.5 55.1 l33.6 -33.6 a20.7 20.7 0 0 1 29.4 29.4 l-33.6 33.6 a20.7 20.7 0 0 1 -29.4 -29.4",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 52.1 l33.6 -33.6 a20.7 20.7 0 0 1 29.4 29.4 l-33.6 33.6 a20.7 20.7 0 0 1 -29.4 -29.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M35.3 35.3 l29.4 29.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

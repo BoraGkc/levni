@@ -1,0 +1,44 @@
+{
+ "name": "plant-2",
+ "category": "home",
+ "tags": [
+  "plant 2"
+ ],
+ "variants": [
+  {
+   "note": "plant 2, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M8 37.4 a42 42 0 1 0 84 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 79.4 a42 42 0 0 1 42 -42",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M8 37.4 a42 42 0 0 1 42 42",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 16.4 a40.7 40.7 0 0 1 12.6 31.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 47.9 a40.7 40.7 0 0 1 12.6 -31.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

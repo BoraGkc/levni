@@ -1,0 +1,37 @@
+{
+ "name": "mouse-2",
+ "category": "tech",
+ "tags": [
+  "mouse 2"
+ ],
+ "variants": [
+  {
+   "note": "mouse 2, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M27.8 32 a16.8 16.8 0 0 1 16.8 -16.8 h16.8 a16.8 16.8 0 0 1 16.8 16.8 v42 a16.8 16.8 0 0 1 -16.8 16.8 h-16.8 a16.8 16.8 0 0 1 -16.8 -16.8 l0 -42",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M24.8 29 a16.8 16.8 0 0 1 16.8 -16.8 h16.8 a16.8 16.8 0 0 1 16.8 16.8 v42 a16.8 16.8 0 0 1 -16.8 16.8 h-16.8 a16.8 16.8 0 0 1 -16.8 -16.8 l0 -42",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 12.2 v29.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 41.6 h50.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

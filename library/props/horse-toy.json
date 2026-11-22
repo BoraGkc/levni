@@ -1,0 +1,38 @@
+{
+ "name": "horse-toy",
+ "category": "home",
+ "tags": [
+  "horse toy"
+ ],
+ "variants": [
+  {
+   "note": "horse toy, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M14.3 73.1 c23.8 19.6 47.6 19.6 71.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M79.4 77.3 l-8.4 -35.7 l4.2 -8.4 l8.4 4.2 l6.3 -6.3 l-10.5 -18.9 c-21.2 0.9 -25.2 13.2 -29.4 25.2 h-25.2 a12.6 12.6 0 0 0 -12.6 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20.6 77.3 l8.4 -39.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 83.6 l8.4 -21 h16.8 l8.4 21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

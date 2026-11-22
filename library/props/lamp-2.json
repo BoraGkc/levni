@@ -1,0 +1,49 @@
+{
+ "name": "lamp-2",
+ "category": "home",
+ "tags": [
+  "lamp 2"
+ ],
+ "variants": [
+  {
+   "note": "lamp 2, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M57.2 61.4 c-9 -9 -9 -24.6 0 -33.6 c8.8 -8.8 24.5 -8.3 33.6 0 l-33.6 33.6",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M20.6 87.8 h37.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 87.8 l-29.4 -33.6 l35.7 -23.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M54.2 58.4 c-9 -9 -9 -24.6 0 -33.6 c8.8 -8.8 24.5 -8.3 33.6 0 l-33.6 33.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M48.9 31.4 l-4.9 -4.9 a8.4 8.4 0 0 1 11.9 -11.9 l4.8 4.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M64.7 50 l0.9 1.2 a10.6 10.6 0 0 0 14.9 0 c3.9 -3.9 4.1 -10.2 0.5 -14.3 l-1.5 -1.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

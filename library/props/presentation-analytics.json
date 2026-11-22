@@ -1,0 +1,56 @@
+{
+ "name": "presentation-analytics",
+ "category": "money",
+ "tags": [
+  "presentation analytics"
+ ],
+ "variants": [
+  {
+   "note": "presentation analytics, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M37.4 50 v-16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62.6 50 v-8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 50 v-4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 16.4 h75.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 16.4 v42 a8.4 8.4 0 0 0 8.4 8.4 h50.4 a8.4 8.4 0 0 0 8.4 -8.4 v-42",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 66.8 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 83.6 h25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

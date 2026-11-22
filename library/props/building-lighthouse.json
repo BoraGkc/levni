@@ -1,0 +1,43 @@
+{
+ "name": "building-lighthouse",
+ "category": "places",
+ "tags": [
+  "building lighthouse"
+ ],
+ "variants": [
+  {
+   "note": "building lighthouse, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M53 15.2 l8.4 12.6 l8.4 63 h-33.6 l8.4 -63 l8.4 -12.6",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 12.2 l8.4 12.6 l8.4 63 h-33.6 l8.4 -63 l8.4 -12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 37.4 l33.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 45.8 l8.4 -8.4 l-8.4 -8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.8 45.8 l-8.4 -8.4 l8.4 -8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

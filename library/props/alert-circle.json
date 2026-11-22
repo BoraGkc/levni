@@ -1,0 +1,37 @@
+{
+ "name": "alert-circle",
+ "category": "symbols",
+ "tags": [
+  "alert circle"
+ ],
+ "variants": [
+  {
+   "note": "alert circle, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 53 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 0 0 -75.6 0",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 50 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 0 0 -75.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 33.2 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 66.8 h0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "name": "bed",
+ "category": "home",
+ "tags": [
+  "bed"
+ ],
+ "variants": [
+  {
+   "note": "bed, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M23.6 40.4 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M53 61.4 h42 v-8.4 a12.6 12.6 0 0 0 -12.6 -12.6 h-29.4 v21",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M20.6 37.4 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M92 71 v-12.6 h-84",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M8 33.2 v37.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 58.4 h42 v-8.4 a12.6 12.6 0 0 0 -12.6 -12.6 h-29.4 v21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

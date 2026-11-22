@@ -1,0 +1,121 @@
+{
+ "name": "qrcode",
+ "category": "tech",
+ "tags": [
+  "qrcode"
+ ],
+ "variants": [
+  {
+   "note": "qrcode, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M19.4 23.6 a4.2 4.2 0 0 1 4.2 -4.2 h16.8 a4.2 4.2 0 0 1 4.2 4.2 v16.8 a4.2 4.2 0 0 1 -4.2 4.2 h-16.8 a4.2 4.2 0 0 1 -4.2 -4.2 l0 -16.8",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M32 74 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M61.4 23.6 a4.2 4.2 0 0 1 4.2 -4.2 h16.8 a4.2 4.2 0 0 1 4.2 4.2 v16.8 a4.2 4.2 0 0 1 -4.2 4.2 h-16.8 a4.2 4.2 0 0 1 -4.2 -4.2 l0 -16.8",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M32 32 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M19.4 65.6 a4.2 4.2 0 0 1 4.2 -4.2 h16.8 a4.2 4.2 0 0 1 4.2 4.2 v16.8 a4.2 4.2 0 0 1 -4.2 4.2 h-16.8 a4.2 4.2 0 0 1 -4.2 -4.2 l0 -16.8",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M74 32 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M86.6 61.4 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M16.4 20.6 a4.2 4.2 0 0 1 4.2 -4.2 h16.8 a4.2 4.2 0 0 1 4.2 4.2 v16.8 a4.2 4.2 0 0 1 -4.2 4.2 h-16.8 a4.2 4.2 0 0 1 -4.2 -4.2 l0 -16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 71 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 20.6 a4.2 4.2 0 0 1 4.2 -4.2 h16.8 a4.2 4.2 0 0 1 4.2 4.2 v16.8 a4.2 4.2 0 0 1 -4.2 4.2 h-16.8 a4.2 4.2 0 0 1 -4.2 -4.2 l0 -16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 29 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 62.6 a4.2 4.2 0 0 1 4.2 -4.2 h16.8 a4.2 4.2 0 0 1 4.2 4.2 v16.8 a4.2 4.2 0 0 1 -4.2 4.2 h-16.8 a4.2 4.2 0 0 1 -4.2 -4.2 l0 -16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M71 29 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 58.4 l12.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M83.6 58.4 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 58.4 l0 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 83.6 l12.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M71 71 l12.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M83.6 71 l0 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "name": "clipboard",
+ "category": "books",
+ "tags": [
+  "clipboard"
+ ],
+ "variants": [
+  {
+   "note": "clipboard, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M40.4 23.6 a8.4 8.4 0 0 1 8.4 -8.4 h8.4 a8.4 8.4 0 0 1 8.4 8.4 a8.4 8.4 0 0 1 -8.4 8.4 h-8.4 a8.4 8.4 0 0 1 -8.4 -8.4",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M37.4 20.6 h-8.4 a8.4 8.4 0 0 0 -8.4 8.4 v50.4 a8.4 8.4 0 0 0 8.4 8.4 h42 a8.4 8.4 0 0 0 8.4 -8.4 v-50.4 a8.4 8.4 0 0 0 -8.4 -8.4 h-8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 20.6 a8.4 8.4 0 0 1 8.4 -8.4 h8.4 a8.4 8.4 0 0 1 8.4 8.4 a8.4 8.4 0 0 1 -8.4 8.4 h-8.4 a8.4 8.4 0 0 1 -8.4 -8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "name": "webhook",
+ "category": "tech",
+ "tags": [
+  "webhook"
+ ],
+ "variants": [
+  {
+   "note": "webhook, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M20.1 56.8 a16.8 16.8 0 1 0 25.7 14.2 h25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62.9 85.7 a16.8 16.8 0 1 0 8.1 -31.5 c-3 0 -6 0.8 -8.4 2.1 l-12.6 -23.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 33.2 a16.8 16.8 0 1 0 -33.6 0 c0 6.3 3.2 11.8 8.4 14.7 l-12.6 23.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

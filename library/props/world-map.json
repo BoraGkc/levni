@@ -1,0 +1,43 @@
+{
+ "name": "world-map",
+ "category": "places",
+ "tags": [
+  "world map"
+ ],
+ "variants": [
+  {
+   "note": "world map, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 53 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 1 0 -75.6 0",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M83.6 33.2 h-8.4 a8.4 8.4 0 0 0 -8.4 8.4 a8.4 8.4 0 1 1 -16.8 0 v-4.2 a8.4 8.4 0 0 0 -8.4 -8.4 h-4.2 a8.4 8.4 0 0 1 -8.4 -8.4 v-2.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 50 h12.6 a8.4 8.4 0 0 1 8.4 8.4 v2.1 a6.3 6.3 0 0 0 6.3 6.3 a6.3 6.3 0 0 1 6.3 6.3 v13.7",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62.6 85.7 v-14.7 a8.4 8.4 0 0 1 8.4 -8.4 h14.7",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 50 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 1 0 -75.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

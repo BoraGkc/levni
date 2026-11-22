@@ -1,0 +1,43 @@
+{
+ "name": "first-aid-kit",
+ "category": "health",
+ "tags": [
+  "first aid kit"
+ ],
+ "variants": [
+  {
+   "note": "first aid kit, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M19.4 44.6 a8.4 8.4 0 0 1 8.4 -8.4 h50.4 a8.4 8.4 0 0 1 8.4 8.4 v33.6 a8.4 8.4 0 0 1 -8.4 8.4 h-50.4 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -33.6",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M33.2 33.2 v-8.4 a8.4 8.4 0 0 1 8.4 -8.4 h16.8 a8.4 8.4 0 0 1 8.4 8.4 v8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 41.6 a8.4 8.4 0 0 1 8.4 -8.4 h50.4 a8.4 8.4 0 0 1 8.4 8.4 v33.6 a8.4 8.4 0 0 1 -8.4 8.4 h-50.4 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -33.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 58.4 h16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 50 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

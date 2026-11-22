@@ -1,0 +1,44 @@
+{
+ "name": "scan",
+ "category": "tech",
+ "tags": [
+  "scan"
+ ],
+ "variants": [
+  {
+   "note": "scan, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M20.6 50 h58.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 29 v-8.4 a8.4 8.4 0 0 1 8.4 -8.4 h8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 71 v8.4 a8.4 8.4 0 0 0 8.4 8.4 h8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M71 12.2 h8.4 a8.4 8.4 0 0 1 8.4 8.4 v8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M71 87.8 h8.4 a8.4 8.4 0 0 0 8.4 -8.4 v-8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

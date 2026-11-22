@@ -1,0 +1,25 @@
+{
+ "name": "message-circle",
+ "category": "tech",
+ "tags": [
+  "message circle"
+ ],
+ "variants": [
+  {
+   "note": "message circle, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 86.6 l5.5 -16.4 c-9.8 -14.4 -6 -33.1 8.8 -43.6 c14.8 -10.5 36.1 -9.6 49.7 2 c13.7 11.7 15.5 30.5 4.3 44.1 c-11.2 13.6 -32 17.7 -48.6 9.6 l-19.7 4.2",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 83.6 l5.5 -16.4 c-9.8 -14.4 -6 -33.1 8.8 -43.6 c14.8 -10.5 36.1 -9.6 49.7 2 c13.7 11.7 15.5 30.5 4.3 44.1 c-11.2 13.6 -32 17.7 -48.6 9.6 l-19.7 4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

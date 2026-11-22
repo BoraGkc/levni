@@ -1,0 +1,54 @@
+{
+ "name": "id-badge-2",
+ "category": "money",
+ "tags": [
+  "id badge 2"
+ ],
+ "variants": [
+  {
+   "note": "id badge 2, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M32 53 h12.6 v16.8 h-12.6 l0 -16.8",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M44.6 19.4 a4.2 4.2 0 0 1 4.2 -4.2 h8.4 a4.2 4.2 0 0 1 4.2 4.2 v12.6 a4.2 4.2 0 0 1 -4.2 4.2 h-8.4 a4.2 4.2 0 0 1 -4.2 -4.2 l0 -12.6",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M29 50 h12.6 v16.8 h-12.6 l0 -16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 24.8 h-25.2 a4.2 4.2 0 0 0 -4.2 4.2 v50.4 a4.2 4.2 0 0 0 4.2 4.2 h67.2 a4.2 4.2 0 0 0 4.2 -4.2 v-50.4 a4.2 4.2 0 0 0 -4.2 -4.2 h-25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 16.4 a4.2 4.2 0 0 1 4.2 -4.2 h8.4 a4.2 4.2 0 0 1 4.2 4.2 v12.6 a4.2 4.2 0 0 1 -4.2 4.2 h-8.4 a4.2 4.2 0 0 1 -4.2 -4.2 l0 -12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 66.8 h8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 50 h16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

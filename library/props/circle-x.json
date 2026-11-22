@@ -1,0 +1,31 @@
+{
+ "name": "circle-x",
+ "category": "symbols",
+ "tags": [
+  "circle x"
+ ],
+ "variants": [
+  {
+   "note": "circle x, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 53 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 1 0 -75.6 0",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 50 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 1 0 -75.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 41.6 l16.8 16.8 m0 -16.8 l-16.8 16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

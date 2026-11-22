@@ -1,0 +1,43 @@
+{
+ "name": "photo",
+ "category": "tech",
+ "tags": [
+  "photo"
+ ],
+ "variants": [
+  {
+   "note": "photo, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 27.8 a12.6 12.6 0 0 1 12.6 -12.6 h50.4 a12.6 12.6 0 0 1 12.6 12.6 v50.4 a12.6 12.6 0 0 1 -12.6 12.6 h-50.4 a12.6 12.6 0 0 1 -12.6 -12.6 v-50.4",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M62.6 33.2 h0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 24.8 a12.6 12.6 0 0 1 12.6 -12.6 h50.4 a12.6 12.6 0 0 1 12.6 12.6 v50.4 a12.6 12.6 0 0 1 -12.6 12.6 h-50.4 a12.6 12.6 0 0 1 -12.6 -12.6 v-50.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 66.8 l21 -21 c3.9 -3.8 8.7 -3.8 12.6 0 l21 21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 58.4 l4.2 -4.2 c3.9 -3.8 8.7 -3.8 12.6 0 l12.6 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

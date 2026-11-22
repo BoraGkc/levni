@@ -1,0 +1,43 @@
+{
+ "name": "notes",
+ "category": "books",
+ "tags": [
+  "notes"
+ ],
+ "variants": [
+  {
+   "note": "notes, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M23.6 23.6 a8.4 8.4 0 0 1 8.4 -8.4 h42 a8.4 8.4 0 0 1 8.4 8.4 v58.8 a8.4 8.4 0 0 1 -8.4 8.4 h-42 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -58.8",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M20.6 20.6 a8.4 8.4 0 0 1 8.4 -8.4 h42 a8.4 8.4 0 0 1 8.4 8.4 v58.8 a8.4 8.4 0 0 1 -8.4 8.4 h-42 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -58.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 29 l25.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 45.8 l25.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 62.6 l16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

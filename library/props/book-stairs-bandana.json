@@ -7,7 +7,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/michael-douglas-ve/ici-2-alt.json",
+      "note": "staircase made of colourful books, a coral bandana-like knot on top step", "from": "harvested from .cache/cizim-drafts/michael-douglas-ve/ici-2-alt.json",
       "paths": [
         {
           "d": "M2 79 H100 V96 H2Z",
@@ -114,7 +114,7 @@
       ]
     },
     {
-      "note": "harvested from .cache/cizim-drafts/michael-douglas-ve/ici-2.json",
+      "note": "book staircase with coral bandana on top, lighter more open variant", "from": "harvested from .cache/cizim-drafts/michael-douglas-ve/ici-2.json",
       "paths": [
         {
           "d": "M2 79 H100 V96 H2Z",

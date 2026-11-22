@@ -1,0 +1,31 @@
+{
+ "name": "umbrella-closed",
+ "category": "home",
+ "tags": [
+  "umbrella closed"
+ ],
+ "variants": [
+  {
+   "note": "umbrella closed, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M40.4 69.8 l12.6 -54.6 l12.6 54.6 l-25.2 0",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M37.4 66.8 l12.6 -54.6 l12.6 54.6 l-25.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 66.8 v12.6 c0 11.2 16.8 11.2 16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

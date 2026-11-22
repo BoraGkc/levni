@@ -9,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/de-gaulle-direnisi/kapak.json",
+      "note": "retro radio with speaker grille, blue dial, antenna", "from": "harvested from .cache/cizim-drafts/de-gaulle-direnisi/kapak.json",
       "paths": [
         {
           "d": "M12 34 Q12 26 20 26 H80 Q88 26 88 34 V78 Q88 86 80 86 H20 Q12 86 12 78 Z",

@@ -1,0 +1,60 @@
+{
+ "name": "plug-connected",
+ "category": "tech",
+ "tags": [
+  "plug connected"
+ ],
+ "variants": [
+  {
+   "note": "plug connected, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M32 53 l21 21 l-6.3 6.3 a14.9 14.9 0 1 1 -21 -21 l6.3 -6.3",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M74 53 l-21 -21 l6.3 -6.3 a14.9 14.9 0 1 1 21 21 l-6.3 6.3",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M29 50 l21 21 l-6.3 6.3 a14.9 14.9 0 1 1 -21 -21 l6.3 -6.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M71 50 l-21 -21 l6.3 -6.3 a14.9 14.9 0 1 1 21 21 l-6.3 6.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 87.8 l10.5 -10.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M77.3 22.7 l10.5 -10.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 45.8 l-8.4 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M54.2 58.4 l-8.4 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

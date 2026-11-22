@@ -1,0 +1,37 @@
+{
+ "name": "home-2",
+ "category": "home",
+ "tags": [
+  "home 2"
+ ],
+ "variants": [
+  {
+   "note": "home 2, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M44.6 53 h16.8 v16.8 h-16.8 l0 -16.8",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M20.6 50 l-8.4 0 l37.8 -37.8 l37.8 37.8 l-8.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20.6 50 v29.4 a8.4 8.4 0 0 0 8.4 8.4 h42 a8.4 8.4 0 0 0 8.4 -8.4 v-29.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 50 h16.8 v16.8 h-16.8 l0 -16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "name": "brush",
+ "category": "home",
+ "tags": [
+  "brush"
+ ],
+ "variants": [
+  {
+   "note": "brush, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 90.8 v-16.8 a16.8 16.8 0 1 1 16.8 16.8 h-16.8",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 87.8 v-16.8 a16.8 16.8 0 1 1 16.8 16.8 h-16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.8 12.2 a67.2 67.2 0 0 0 -53.8 42.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.8 12.2 a67.2 67.2 0 0 1 -42.8 53.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M44.1 37.4 a37.8 37.8 0 0 1 18.5 18.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

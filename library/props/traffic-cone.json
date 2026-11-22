@@ -1,0 +1,38 @@
+{
+ "name": "traffic-cone",
+ "category": "places",
+ "tags": [
+  "traffic cone"
+ ],
+ "variants": [
+  {
+   "note": "traffic cone, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M16.4 83.6 l67.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M39.1 41.6 l21.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M32.4 62.6 l35.3 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 83.6 l21 -63 h8.4 l21 63",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

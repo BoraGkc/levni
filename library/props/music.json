@@ -1,0 +1,48 @@
+{
+ "name": "music",
+ "category": "stage",
+ "tags": [
+  "music"
+ ],
+ "variants": [
+  {
+   "note": "music, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 74 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 0 0 -25.2 0",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M57.2 74 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 0 0 -25.2 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 71 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 0 0 -25.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M54.2 71 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 0 0 -25.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 71 v-54.6 h42 v54.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 33.2 h42",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

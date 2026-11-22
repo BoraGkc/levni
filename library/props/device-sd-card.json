@@ -1,0 +1,43 @@
+{
+ "name": "device-sd-card",
+ "category": "tech",
+ "tags": [
+  "device sd card"
+ ],
+ "variants": [
+  {
+   "note": "device sd card, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M32 90.8 h42 a8.4 8.4 0 0 0 8.4 -8.4 v-58.8 a8.4 8.4 0 0 0 -8.4 -8.4 h-25.9 a8.4 8.4 0 0 0 -5.9 2.5 l-16.1 16.1 a8.4 8.4 0 0 0 -2.5 5.9 v42.7 a8.4 8.4 0 0 0 8.4 8.4",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M29 87.8 h42 a8.4 8.4 0 0 0 8.4 -8.4 v-58.8 a8.4 8.4 0 0 0 -8.4 -8.4 h-25.9 a8.4 8.4 0 0 0 -5.9 2.5 l-16.1 16.1 a8.4 8.4 0 0 0 -2.5 5.9 v42.7 a8.4 8.4 0 0 0 8.4 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M54.2 24.8 v8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 24.8 v8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 29 v4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

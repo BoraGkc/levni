@@ -1,0 +1,58 @@
+{
+ "name": "ball-bowling",
+ "category": "sport",
+ "tags": [
+  "ball bowling"
+ ],
+ "variants": [
+  {
+   "note": "ball bowling, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 53 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 1 0 -75.6 0",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M48.8 40.4 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M65.6 36.2 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M61.4 53 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 50 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 1 0 -75.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M45.8 37.4 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62.6 33.2 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 50 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,44 @@
+{
+ "name": "building-store",
+ "category": "money",
+ "tags": [
+  "building store"
+ ],
+ "variants": [
+  {
+   "note": "building store, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M12.2 87.8 l75.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 29 v4.2 a12.6 12.6 0 0 0 25.2 0 v-4.2 m0 4.2 a12.6 12.6 0 0 0 25.2 0 v-4.2 m0 4.2 a12.6 12.6 0 0 0 25.2 0 v-4.2 h-75.6 l8.4 -16.8 h58.8 l8.4 16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20.6 87.8 l0 -42.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M79.4 87.8 l0 -42.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 87.8 v-16.8 a8.4 8.4 0 0 1 8.4 -8.4 h8.4 a8.4 8.4 0 0 1 8.4 8.4 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

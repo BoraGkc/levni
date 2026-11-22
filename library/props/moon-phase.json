@@ -10,7 +10,7 @@
  ],
  "variants": [
   {
-   "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json",
+   "note": "solid blue full moon circle",
    "paths": [
     {
      "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
@@ -24,10 +24,11 @@
      "stroke": "ink",
      "weight": 3.6
     }
-   ]
+   ],
+   "from": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json"
   },
   {
-   "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json",
+   "note": "blue moon phase, waning gibbous with white crescent edge",
    "paths": [
     {
      "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
@@ -45,10 +46,11 @@
      "stroke": "ink",
      "weight": 3.6
     }
-   ]
+   ],
+   "from": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json"
   },
   {
-   "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json",
+   "note": "half blue half white circle, first quarter moon",
    "paths": [
     {
      "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
@@ -66,10 +68,11 @@
      "stroke": "ink",
      "weight": 3.6
     }
-   ]
+   ],
+   "from": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json"
   },
   {
-   "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json",
+   "note": "thin blue crescent on the left of a white disc",
    "paths": [
     {
      "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
@@ -87,10 +90,11 @@
      "stroke": "ink",
      "weight": 3.6
     }
-   ]
+   ],
+   "from": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json"
   },
   {
-   "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json",
+   "note": "empty white circle outline, new moon", "from": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json",
    "paths": [
     {
      "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",

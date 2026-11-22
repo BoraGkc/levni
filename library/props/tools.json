@@ -1,0 +1,55 @@
+{
+ "name": "tools",
+ "category": "home",
+ "tags": [
+  "tools"
+ ],
+ "variants": [
+  {
+   "note": "tools, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 90.8 h16.8 l54.6 -54.6 a6.3 6.3 0 0 0 -16.8 -16.8 l-54.6 54.6 v16.8",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 87.8 h16.8 l54.6 -54.6 a6.3 6.3 0 0 0 -16.8 -16.8 l-54.6 54.6 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M60.5 22.7 l16.8 16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 33.2 l-21 -21 l-16.8 16.8 l21 21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 33.2 l-6.3 6.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 50 l21 21 l-16.8 16.8 l-21 -21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 71 l-6.3 6.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

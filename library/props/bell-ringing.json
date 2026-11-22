@@ -1,0 +1,43 @@
+{
+ "name": "bell-ringing",
+ "category": "tech",
+ "tags": [
+  "bell ringing"
+ ],
+ "variants": [
+  {
+   "note": "bell ringing, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M44.6 23.6 a8.4 8.4 0 0 1 16.8 0 a29.4 29.4 0 0 1 16.8 25.2 v12.6 a16.8 16.8 0 0 0 8.4 12.6 h-67.2 a16.8 16.8 0 0 0 8.4 -12.6 v-12.6 a29.4 29.4 0 0 1 16.8 -25.2",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M41.6 20.6 a8.4 8.4 0 0 1 16.8 0 a29.4 29.4 0 0 1 16.8 25.2 v12.6 a16.8 16.8 0 0 0 8.4 12.6 h-67.2 a16.8 16.8 0 0 0 8.4 -12.6 v-12.6 a29.4 29.4 0 0 1 16.8 -25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 71 v4.2 a12.6 12.6 0 0 0 25.2 0 v-4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.8 27.9 a46.4 46.4 0 0 0 -11.7 -15.7",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 27.9 a46.4 46.4 0 0 1 11.7 -15.7",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -36,14 +36,15 @@ The critic is a small file, so you can list everything it looks for.
 
 | Check | Fires when | Note it writes |
 | --- | --- | --- |
-| Off canvas | An element sits more than 20 px outside the 1200 × 673 canvas, unless it is a panel, crowd, skyline or `draw` | `window at (…) runs off the canvas` |
+| Off canvas | An element sits more than 20 px outside the frame (the `clip` card if the scene has one, else the 1200 × 673 canvas), unless it is a ground such as a panel, crowd, skyline, ribbon or tube | `label at (…) runs off the card` |
 | Accidental crop | A drawing, icon, sheet, window or disc is cut by the frame by less than 12 % of its size, which looks like a slip | `draw "laptop" … is cut 16px by the frame` |
+| Hidden subject | The same kinds of object cut further, with no `"crop": true`: the note says how much still shows | `draw "rocket" … is mostly outside the frame, only 31% shows` |
 | Lopsided weight | The lighter half of the canvas holds less than 35 % of the heavier half | `weight is lopsided (right heavy)` |
 | No focal point | Nothing reaches roughly 200 px in both directions | `no clear focal symbol` |
 | Icon overlap | Two icons share more than 35 % of the smaller one's area | `two icons overlap heavily near (…)` |
 | Repeats | The same note fires several times | The note with `×3` after it |
 
-A few details matter. A crop of more than 12 % counts as bold, so it passes. An element with `"crop": true` is never reported for being cut. Panels are grounds, not objects, so a panel running off the edge is fine. And coordinates in repeated notes show as `(…)` once they are grouped.
+A few details matter. Every cut is reported unless the element says `"crop": true`, so a bold crop has to be declared; that keeps a half-visible subject from passing as a style choice. The frame is the card when the scene sets `clip`. Panels are grounds, not objects, so a panel running off the edge is fine. And coordinates in repeated notes show as `(…)` once they are grouped.
 
 Notice the critic does not say what is wrong with the story. It will not tell you a rocket is the wrong metaphor for savings. That is the part you or a vision-capable agent still have to judge, by reading the preview.
 

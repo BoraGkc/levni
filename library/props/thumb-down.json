@@ -1,0 +1,20 @@
+{
+ "name": "thumb-down",
+ "category": "symbols",
+ "tags": [
+  "thumb down"
+ ],
+ "variants": [
+  {
+   "note": "thumb down, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M29 54.2 v-33.6 a4.2 4.2 0 0 0 -4.2 -4.2 h-8.4 a4.2 4.2 0 0 0 -4.2 4.2 v29.4 a4.2 4.2 0 0 0 4.2 4.2 h12.6 a16.8 16.8 0 0 1 16.8 16.8 v4.2 a8.4 8.4 0 0 0 16.8 0 v-21 h12.6 a8.4 8.4 0 0 0 8.4 -8.4 l-4.2 -21 a8.4 12.6 0 0 0 -8.4 -8.4 h-29.4 a12.6 12.6 0 0 0 -12.6 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

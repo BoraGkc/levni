@@ -240,6 +240,8 @@ export async function compose(spec) {
   }
   // boil: the crayon filter's own seed; the animator steps it a few times a second for a hand-drawn shimmer
   // spec.style picks a style pack (styles.mjs): the same drawing printed with other inks
+  // the critic measures crops against the card when there is one, else the canvas
+  used.frame = spec.clip ? [...spec.clip] : [0, 0, W, H];
   return { svg: applyStyle(frame(body, { seed: spec.boil ?? seed, background: c(spec.background, P.paper), finish: soft ? 'soft' : 'crayon', grain: spec.grain }), spec.style), used };
 }
 

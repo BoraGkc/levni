@@ -6,7 +6,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/trump-tv-basarisizligi/kapak-3d.json",
+      "note": "simple thin blue V-shaped antenna, two diverging lines, no base", "from": "harvested from .cache/cizim-drafts/trump-tv-basarisizligi/kapak-3d.json",
       "paths": [
         {
           "d": "M50 100 L22 20 L10 34",

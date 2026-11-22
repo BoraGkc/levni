@@ -1,0 +1,60 @@
+{
+ "name": "wash-machine",
+ "category": "home",
+ "tags": [
+  "wash machine"
+ ],
+ "variants": [
+  {
+   "note": "wash machine, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M23.6 23.6 a8.4 8.4 0 0 1 8.4 -8.4 h42 a8.4 8.4 0 0 1 8.4 8.4 v58.8 a8.4 8.4 0 0 1 -8.4 8.4 h-42 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -58.8",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M36.2 61.4 a16.8 16.8 0 1 0 33.6 0 a16.8 16.8 0 1 0 -33.6 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M20.6 20.6 a8.4 8.4 0 0 1 8.4 -8.4 h42 a8.4 8.4 0 0 1 8.4 8.4 v58.8 a8.4 8.4 0 0 1 -8.4 8.4 h-42 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -58.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 58.4 a16.8 16.8 0 1 0 33.6 0 a16.8 16.8 0 1 0 -33.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 24.8 h0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M45.8 24.8 h0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 24.8 h8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 58.4 c5.6 -2.8 11.2 -2.8 16.8 0 c5.6 2.8 11.2 2.8 16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

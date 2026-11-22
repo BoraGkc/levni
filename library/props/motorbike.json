@@ -1,0 +1,48 @@
+{
+ "name": "motorbike",
+ "category": "places",
+ "tags": [
+  "motorbike"
+ ],
+ "variants": [
+  {
+   "note": "motorbike, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M11 69.8 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 1 0 -25.2 0",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M69.8 69.8 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 1 0 -25.2 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M8 66.8 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 1 0 -25.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 66.8 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 1 0 -25.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M31.1 58.4 h21 l16.8 -16.8 h-44.1 m6.3 16.8 l16.8 -16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M54.2 24.8 h8.4 l6.3 12.6 l8.4 16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "name": "book-2",
+ "category": "books",
+ "tags": [
+  "book 2"
+ ],
+ "variants": [
+  {
+   "note": "book 2, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M82.4 19.4 v67.2 h-50.4 a8.4 8.4 0 0 1 -8.4 -8.4 v-50.4 a8.4 8.4 0 0 1 8.4 -8.4 h50.4",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M79.4 16.4 v67.2 h-50.4 a8.4 8.4 0 0 1 -8.4 -8.4 v-50.4 a8.4 8.4 0 0 1 8.4 -8.4 h50.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M79.4 66.8 h-50.4 a8.4 8.4 0 0 0 -8.4 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 33.2 h25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

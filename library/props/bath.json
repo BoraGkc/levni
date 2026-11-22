@@ -1,0 +1,43 @@
+{
+ "name": "bath",
+ "category": "home",
+ "tags": [
+  "bath"
+ ],
+ "variants": [
+  {
+   "note": "bath, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M19.4 53 h67.2 a4.2 4.2 0 0 1 4.2 4.2 v12.6 a16.8 16.8 0 0 1 -16.8 16.8 h-42 a16.8 16.8 0 0 1 -16.8 -16.8 v-12.6 a4.2 4.2 0 0 1 4.2 -4.2",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M16.4 50 h67.2 a4.2 4.2 0 0 1 4.2 4.2 v12.6 a16.8 16.8 0 0 1 -16.8 16.8 h-42 a16.8 16.8 0 0 1 -16.8 -16.8 v-12.6 a4.2 4.2 0 0 1 4.2 -4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 50 v-29.4 a8.4 8.4 0 0 1 8.4 -8.4 h12.6 v9.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 87.8 l4.2 -6.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M83.6 87.8 l-4.2 -6.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "name": "feather",
+ "category": "nature",
+ "tags": [
+  "feather"
+ ],
+ "variants": [
+  {
+   "note": "feather, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M16.4 83.6 l42 -42 m0 -21 v21 h21 m-37.8 -4.2 v21 h21 m-37.8 -4.2 v21 h21 m-21 -21 l16.8 -16.8 l16.8 -16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M79.4 41.6 c2.7 -2.7 4.2 -6.4 4.2 -10.4 a14.8 14.8 0 0 0 -14.8 -14.8 c-4.1 0 -7.8 1.5 -10.4 4.2 m-12.6 54.6 l16.8 -16.8 l16.8 -16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

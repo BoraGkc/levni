@@ -1,0 +1,37 @@
+{
+ "name": "ballpen",
+ "category": "books",
+ "tags": [
+  "ballpen"
+ ],
+ "variants": [
+  {
+   "note": "ballpen, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M27.1 78.9 a11.9 11.9 0 0 0 16.8 0 l44.5 -44.5 a8.4 8.4 0 0 0 0 -11.9 l-4.9 -4.9 a8.4 8.4 0 0 0 -11.9 0 l-44.5 44.5 a11.9 11.9 0 0 0 0 16.8",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M58.4 24.8 l29.4 29.4 l-16.8 16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.1 75.9 a11.9 11.9 0 0 0 16.8 0 l44.5 -44.5 a8.4 8.4 0 0 0 0 -11.9 l-4.9 -4.9 a8.4 8.4 0 0 0 -11.9 0 l-44.5 44.5 a11.9 11.9 0 0 0 0 16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 83.6 l7.4 -7.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

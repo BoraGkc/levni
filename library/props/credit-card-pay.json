@@ -1,0 +1,50 @@
+{
+ "name": "credit-card-pay",
+ "category": "money",
+ "tags": [
+  "credit card pay"
+ ],
+ "variants": [
+  {
+   "note": "credit card pay, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M50 79.4 h-25.2 a12.6 12.6 0 0 1 -12.6 -12.6 v-33.6 a12.6 12.6 0 0 1 12.6 -12.6 h50.4 a12.6 12.6 0 0 1 12.6 12.6 v18.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 41.6 h75.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 79.4 h25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M79.4 66.8 l12.6 12.6 l-12.6 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 62.6 h0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M45.8 62.6 h8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "name": "map-pin",
+ "category": "places",
+ "tags": [
+  "map pin"
+ ],
+ "variants": [
+  {
+   "note": "map pin, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M40.4 48.8 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 0 0 -25.2 0",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M76.8 72.6 l-17.8 17.8 a8.4 8.4 0 0 1 -11.9 0 l-17.8 -17.8 a33.6 33.6 0 1 1 47.5 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M37.4 45.8 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 0 0 -25.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M73.8 69.6 l-17.8 17.8 a8.4 8.4 0 0 1 -11.9 0 l-17.8 -17.8 a33.6 33.6 0 1 1 47.5 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

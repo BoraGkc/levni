@@ -1,0 +1,37 @@
+{
+ "name": "ping-pong",
+ "category": "sport",
+ "tags": [
+  "ping pong"
+ ],
+ "variants": [
+  {
+   "note": "ping pong, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M48.8 78.2 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 1 0 -25.2 0",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M53 86.6 a32.1 32.1 0 0 1 -31.4 -53.6 l3 -3 a32.1 32.1 0 0 1 38.2 -5.4 l10 -9.8 a8.7 8.7 0 0 1 12.8 11.8 l-0.5 0.5 l-9.9 10 a32.1 32.1 0 0 1 -4.4 37.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M45.8 75.2 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 1 0 -25.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M38.7 21.9 l39.5 39.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "name": "folder",
+ "category": "books",
+ "tags": [
+  "folder"
+ ],
+ "variants": [
+  {
+   "note": "folder, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M23.6 19.4 h16.8 l12.6 12.6 h29.4 a8.4 8.4 0 0 1 8.4 8.4 v33.6 a8.4 8.4 0 0 1 -8.4 8.4 h-58.8 a8.4 8.4 0 0 1 -8.4 -8.4 v-46.2 a8.4 8.4 0 0 1 8.4 -8.4",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M20.6 16.4 h16.8 l12.6 12.6 h29.4 a8.4 8.4 0 0 1 8.4 8.4 v33.6 a8.4 8.4 0 0 1 -8.4 8.4 h-58.8 a8.4 8.4 0 0 1 -8.4 -8.4 v-46.2 a8.4 8.4 0 0 1 8.4 -8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}
