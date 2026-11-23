@@ -311,6 +311,7 @@
             "skyline",
             "halftone",
             "dither",
+            "meshgrad",
             "flowfield",
             "hatch",
             "confetti",

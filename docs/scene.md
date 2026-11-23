@@ -76,6 +76,7 @@ House rule: at most **two main inks plus paper** per scene; a third colour only 
 | `skyline` | `x0`, `x1`, `base`, `minH`, `maxH`, `colors`? | procedural buildings (40–160 heights read calmer) |
 | `halftone` | `x`, `y`, `w`, `h`, `color`, `mode` (`radial`/`linear`), `gap`?, `level`? | riso halftone dots |
 | `dither` | `x`, `y`, `w`, `h` (or `x`, `y`, `r` for a disc); `color` or `colors` [light → dark inks], `mode` (`linear` default / `radial` / `noise` / `flat`), `from` (1), `to` (0) coverage 0..1, `angle` (90 = top to bottom), `cx`, `cy`, `radius` (radial), `scale` (noise, 0.006), `cell` (12 px, min 3), `matrix` (2 / 4 / 8), `pattern` (`square` / `dot` / `line` / `plus`), `gap` | ordered (Bayer) dither field: pixel skies, 1-bit fades, dithered suns and orbs. With several `colors` the coverage walks through them (paper → first → second). Goes through the crayon finish like everything else; use `"finish": "soft"` for razor-sharp pixels |
+| `meshgrad` | `x`, `y`, `w`, `h` (or `x`, `y`, `r` for an orb); `preset`? (`orb`/`poster`), `shape`? (`rect`/`circle`/`squircle`), `radius`? (rect corners, px), `exponent`? (squircle, default 5), `base`?, `colors`? (default blue, coral, mustard, tone), `count`? (2..12, default 5) or `stops`? [{`x`,`y`,`color`,`r`?,`opacity`?} in 0..1 box units], `blur`? (px, default 14% of the short side), `drift`? (t motion, default 0.06), `grain`? (0..1, default 0.35), `grainSize`?, `bands`? (2..12 hard colour steps), `lines`? (contour lines between bands), `calm`? [[x,y,w,h]] quiet zones for text, `mask`? [{x,y,w,h,shape?,radius?}] show the field only inside these shapes | grainy mesh-gradient / blurred-orb background, feature tile, avatar or posterised poster; best with `"finish": "soft"` |
 | `flowfield` | `x`, `y`, `w`, `h`, `colors`?, `spacing`?, `length`?, `scale`?, `turn`?, `weight`? | noise flow lines (wind, water, data) |
 | `hatch` | `x, y, w, h` or `x, y, r` or `points`; `color`, `angle`?, `gap`?, `cross`?, `outline`? | hand hatching instead of a flat fill |
 | `confetti` | `x`, `y`, `w`, `h`, `kind` (`confetti`/`rain`/`stars`), `spacing`?, `colors`? | Poisson-spread confetti, rain, stars |
@@ -289,3 +290,18 @@ A dithered sunset (OG card): two-ink sky, a radial sun that fades from mustard t
 
 Any scene as a riso print: add `"screen": "riso"` (or `"1bit"`, `"blueprint"`, `"gameboy"`, `"newsprint"`, or `{ "cell": 5, "inks": ["#14181F", "#F2603F"] }`).
 
+### Meshgrad recipes
+
+Hero background with a quiet corner for the title (box units 0..1), a posterised orb and a gradient avatar:
+
+```json
+{ "finish": "soft", "background": "#14122B", "elements": [
+  { "type": "meshgrad", "x": 0, "y": 0, "w": 1200, "h": 673, "base": "#1B1745", "blur": 90,
+    "stops": [{ "x": 0.12, "y": 0.2, "color": "#FF7A59", "r": 0.75 }, { "x": 0.9, "y": 0.15, "color": "#2FD4FF", "r": 0.6 }],
+    "calm": [[0, 0.52, 0.62, 0.48]] },
+  { "type": "meshgrad", "x": 900, "y": 450, "r": 90, "preset": "poster", "colors": ["coral", "mustard"] },
+  { "type": "meshgrad", "x": 1060, "y": 450, "r": 60, "preset": "orb", "colors": ["#7CF0D0", "#2A9DFF", "#2A2BA8"] }
+] }
+```
+
+With no `colors` the field uses the engine inks, so it follows `style` packs. `mask` keeps the gradient to chosen shapes and leaves the rest of the box empty.

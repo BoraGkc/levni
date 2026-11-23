@@ -7,6 +7,7 @@ import { SOFT3D_ASSETS } from './soft3d.mjs';
 import { CHART_ASSETS } from './charts.mjs';
 import { PERSON_ASSETS } from './person.mjs';
 import { DITHER_ASSETS } from './dither.mjs';
+import { MESHGRAD_ASSETS } from './meshgrad.mjs';
 
 const f = (n) => Math.round(n * 10) / 10;
 
@@ -349,3 +350,5 @@ Object.assign(ASSETS, CHART_ASSETS);
 Object.assign(ASSETS, PERSON_ASSETS);
 // Ordered dither field (Bayer squares, dots, lines): see dither.mjs
 Object.assign(ASSETS, DITHER_ASSETS);
+// Grainy mesh gradients and blurred orbs (meshgrad): see meshgrad.mjs
+Object.assign(ASSETS, MESHGRAD_ASSETS);
