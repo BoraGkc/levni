@@ -27,7 +27,7 @@ assert.equal(init.result.serverInfo.name, 'levni');
 child.stdin.write(`${JSON.stringify({ jsonrpc: '2.0', method: 'notifications/initialized' })}\n`);
 
 const names = (await rpc('tools/list')).result.tools.map((t) => t.name);
-assert.deepEqual(names, ['scene_guide', 'list_props', 'render_scene', 'critique_scene', 'show_props', 'render_board']);
+assert.deepEqual(names, ['scene_guide', 'list_props', 'render_scene', 'critique_scene', 'show_props', 'render_board', 'render_poster']);
 
 assert.match((await tool('scene_guide')).content[0].text, /# Scene format/);
 assert.match((await tool('list_props', { query: 'cat' })).content[0].text, /^cat \(/m);
@@ -52,6 +52,10 @@ assert.equal(board.content.at(-1).type, 'image');
 assert.ok(existsSync(join(dir, 'board.png')));
 assert.match((await tool('render_board', { guide: true })).content[0].text, /# Brand boards/);
 assert.equal((await tool('render_board', { spec: { brand: { name: 'X', mark: 'no-such-prop' } } })).isError, true);
+const posters = await tool('render_poster', { spec: { brand: { name: 'Liman', mark: 'lighthouse', words: ['Sail'] }, only: ['split', 'map'] }, out_dir: join(dir, 'posters') });
+assert.ok(!posters.isError, posters.content[0].text);
+assert.ok(existsSync(join(dir, 'posters', 'series.png')));
+assert.match((await tool('render_poster', { guide: true })).content[0].text, /# Branding posters/);
 rmSync(dir, { recursive: true });
 
 assert.equal((await tool('critique_scene', { scene: JSON.stringify(scene) })).content.length, 1);
@@ -62,4 +66,4 @@ assert.equal((await tool('render_scene', { scene: '{oops' })).isError, true);
 assert.equal((await rpc('nope')).error.code, -32601);
 
 child.kill();
-console.log('mcp: handshake and 6 tools ok');
+console.log('mcp: handshake and 7 tools ok');

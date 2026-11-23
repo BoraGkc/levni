@@ -10,6 +10,8 @@ export { ASSETS } from './assets.mjs';
 export { FORMATS, resolveCanvas } from './formats.mjs';
 export { toWebp, toPng } from './export.mjs';
 export { bayer, screenRaster, SCREEN_PRESETS } from './dither.mjs';
+export { renderPosters, expandPosters, TEMPLATES as POSTER_TEMPLATES } from './poster.mjs';
+export { FONTS, layoutType } from './type.mjs';
 export { STYLES, applyStyle } from './styles.mjs';
 export { validateProp, parseProps, measureVariant, CATEGORIES } from './validate.mjs';
 export { iconsAvailable, resolveIcon } from './icon.mjs';

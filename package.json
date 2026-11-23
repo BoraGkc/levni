@@ -24,6 +24,7 @@
     "./critic": "./src/critic.mjs",
     "./judge": "./src/judge/index.mjs",
     "./mcp": "./src/mcp.mjs",
+    "./poster": "./src/poster.mjs",
     "./board": "./src/board.mjs"
   },
   "bin": {
@@ -35,6 +36,7 @@
     "adapters/",
     "bin/",
     "docs/board.md",
+    "docs/poster.md",
     "docs/ghost.md",
     "docs/judge.md",
     "docs/prop-prompt.md",

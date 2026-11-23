@@ -1,7 +1,7 @@
 // Levni as an MCP server over stdio (newline-delimited JSON-RPC 2.0). No SDK dependency: the protocol
 // surface Levni needs is small (initialize, ping, tools/list, tools/call).
 //   npx levni mcp
-// Tools: scene_guide, list_props, render_scene, critique_scene, show_props, render_board;
+// Tools: scene_guide, list_props, render_scene, critique_scene, show_props, render_board, render_poster;
 // plus ghost_drafts, ghost_preview, ghost_apply when Ghost credentials are in the environment (mcp-ghost.mjs).
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, resolve, extname } from 'node:path';
@@ -19,6 +19,7 @@ const PROTOCOLS = ['2025-06-18', '2025-03-26', '2024-11-05'];
 const VERSION = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8')).version;
 const GUIDE = new URL('../docs/scene.md', import.meta.url);
 const BOARD_GUIDE = new URL('../docs/board.md', import.meta.url);
+const POSTER_GUIDE = new URL('../docs/poster.md', import.meta.url);
 
 const scene = { type: 'object', description: 'A Levni scene: { seed?, style?, background?, elements: [...] }. Canvas is 1200 x 673. Besides drawings (props) it makes brand assets: dither fields, grainy mesh gradients, ASCII/glyph fills, seals and stickers with ring text, wireframe terrain and engravings, and a `screen` print pass (1bit, riso, blueprint, gameboy, newsprint). `style` is \"riso\", \"miniature\" or your own inks, e.g. {\"blue\":\"#6A1B9A\",\"mustard\":\"#00BFA5\"}. Call scene_guide for every element type.' };
 export const TOOLS = [
@@ -76,6 +77,20 @@ export const TOOLS = [
         out: { type: 'string', description: 'PNG path to write, relative to the server\'s working directory.' },
         preview: { type: 'boolean', description: 'Return a 900 px preview image (default true).' },
         guide: { type: 'boolean', description: 'Return the board format (docs/board.md) and do nothing else.' },
+      },
+    },
+  },
+  {
+    name: 'render_poster',
+    description: 'Make a series of branding posters (portrait, 1200 x 1600) from one brand: { "brand": { "name", "tagline", "mark": <prop name>, "inks": ["#RRGGBB", ...], "words": ["SHIP", ...] }, "only"?: [template names], "count"? }. Templates: split, map, bauhaus, echo, camo, vertical, summit, launch. Returns a contact sheet preview and, with out_dir, writes every poster. Set scenes: true to get each poster as an editable scene JSON for render_scene; guide: true for the format.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        spec: { type: 'object', description: '{ brand: {...}, only?, count? }' },
+        out_dir: { type: 'string', description: 'Folder to write poster-NN-<template>.png and series.png, relative to the server\'s working directory.' },
+        scenes: { type: 'boolean', description: 'Also return each poster as scene JSON (to tweak and pass to render_scene).' },
+        preview: { type: 'boolean', description: 'Return the contact sheet image (default true).' },
+        guide: { type: 'boolean', description: 'Return docs/poster.md and do nothing else.' },
       },
     },
   },
@@ -147,6 +162,31 @@ async function call(name, args = {}) {
     const { png, width, height } = await renderBoard(spec, file);
     const out = [text(`board ${width} x ${height}${file ? `, wrote ${file}` : ''}`)];
     if (args.preview !== false) out.push(image(await sharp(png).resize(900).png({ compressionLevel: 9, palette: true }).toBuffer()));
+    return out;
+  }
+
+  if (name === 'render_poster') {
+    if (args.guide) return [text(readFileSync(POSTER_GUIDE, 'utf8'))];
+    const spec = asScene(args.spec);
+    if (!spec || typeof spec !== 'object') throw new Error('render_poster needs a spec (or guide: true)');
+    const { renderPosters, expandPosters } = await import('./poster.mjs');
+    const out = [];
+    if (args.out_dir) {
+      const dir = resolve(String(args.out_dir));
+      const { files, sheet } = await renderPosters(spec, dir);
+      out.push(text(`${files.length} posters + series.png in ${dir}\n${files.map((f) => `- ${f}`).join('\n')}`));
+      if (args.preview !== false) out.push(image(await sharp(sheet).resize(900).png({ compressionLevel: 9, palette: true }).toBuffer()));
+    } else {
+      const list = expandPosters(spec);
+      out.push(text(`${list.length} posters: ${list.map((p) => p.template).join(', ')} (pass out_dir to write them)`));
+      if (args.preview !== false) {
+        const thumbs = await Promise.all(list.slice(0, 8).map(async (p) => sharp(Buffer.from((await compose(p.scene)).svg)).resize(225).png().toBuffer()));
+        const sheet = await sharp({ create: { width: 225 * Math.min(4, thumbs.length), height: 300 * Math.ceil(thumbs.length / 4), channels: 3, background: '#E9E6DE' } })
+          .composite(thumbs.map((input, i) => ({ input, left: (i % 4) * 225, top: Math.floor(i / 4) * 300 }))).png({ palette: true }).toBuffer();
+        out.push(image(sheet));
+      }
+    }
+    if (args.scenes) out.push(text(JSON.stringify(expandPosters(spec), null, 1)));
     return out;
   }
 

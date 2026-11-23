@@ -4,6 +4,7 @@
 //   levni sheet <out.png> [prop ...] [--recolor coral=blue,mustard=tone]
 //   levni board <spec.json> <out.png>
 //   levni list [query]
+//   levni poster <spec.json> <out-dir>
 //   levni ghost drafts|attach ...   (Ghost adapter, see docs/ghost.md)
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
@@ -25,6 +26,8 @@ const USAGE = `levni: hand-inked illustrations from JSON scenes
       Contact sheet of props (all when none named): every variant on paper and on blue.
   levni board <spec.json> <out.png>
       Brand board: { "brand": { name, tagline, mark, inks } } makes nine tiles in one call, or place scene/palette/type tiles yourself, with browser/card/tote/phone mockups. docs/board.md
+  levni poster <spec.json> <out-dir>
+      Branding posters: { "brand": { name, tagline, mark, inks, words } } makes a series of portrait posters (split, map, bauhaus, echo, camo, vertical, summit, launch) plus series.png. docs/poster.md
   levni list [query]
       List props (name, variants, tags); with a query, only names or tags that contain it.
   levni add <file> [--dir <props folder>] [--sheet out.png]
@@ -70,6 +73,12 @@ async function main() {
     const { renderBoard } = await import('../src/board.mjs');
     const r = await renderBoard(JSON.parse(readFileSync(file, 'utf8')), out, { baseDir: resolve(file, '..') });
     console.log(`${out}  (${r.width}x${r.height}, ${Math.round(r.bytes / 1024)} KB)`);
+  } else if (cmd === 'poster') {
+    const [file, outDir] = positional;
+    if (!file || !outDir) throw new Error('usage: levni poster <spec.json> <out-dir>');
+    const { renderPosters } = await import('../src/poster.mjs');
+    const r = await renderPosters(JSON.parse(readFileSync(file, 'utf8')), outDir);
+    console.log(`${r.files.length} posters + series.png -> ${outDir}`);
   } else if (cmd === 'list') {
     const q = (positional[0] || '').toLowerCase();
     const all = Object.values(loadProps()).sort((a, b) => a.name.localeCompare(b.name));
