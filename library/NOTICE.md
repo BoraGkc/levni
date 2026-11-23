@@ -1,8 +1,10 @@
 # Levni Folio: where the props come from
 
-474 props, 708 variants, every one stored as SVG path data in a 0–100 box (`library/props/*.json`).
+628 props, 883 variants, every one stored as SVG path data in a 0–100 box (`library/props/*.json`).
 
 ## Origin
+
+- **Ortak Alan vertical packs and the sensitive-topic pack** (154 props, Nov 2026): finance, energy, law and politics, sport, astrology, Turkish kitchen, Türkiye places, and a calm pack for loss and grief (tag `sensitive`). Written as path code by AI agents under Ortak Alan's direction and checked visually; not traced from any source. The zodiac emblems follow the traditional astrological glyph shapes, which are centuries old and public domain.
 
 - **Miniature motifs** (`tulip`, `carnation`, `blossom-sprig`, `cypress`, `rosette`, 6 variants, Nov 2026): new drawings for the miniature style pack, inspired by Tulip Era motifs, not traced from any painting or photograph.
 

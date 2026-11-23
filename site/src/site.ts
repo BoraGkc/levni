@@ -8,6 +8,6 @@ export const SITE = {
   github: 'https://github.com/BoraGkc/levni',
   githubReady: true,
   ortakAlan: 'https://ortakalan.io',
-  props: 474,
-  variants: 708,
+  props: 628,
+  variants: 883,
 };
