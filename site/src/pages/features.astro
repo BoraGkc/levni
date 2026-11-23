@@ -1,0 +1,109 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../site';
+
+const doc = (p) => `${SITE.github}/blob/main/${p}`;
+const tiles = ['rocket', 'tulip', 'coffee-cup', 'bicycle', 'lighthouse', 'piggy-bank', 'camera', 'globe'];
+const features = [
+  { id: 'scenes', title: 'Scenes and the critic', img: ['/gallery/cover-riso.webp'], alt: ['A rocket before a sun on a blue panel, a faceless audience below'],
+    text: 'A scene is a short JSON file: panels, props, textures and labels on a 1200 × 673 canvas, 46 element types in all. Levni inks every line with a pressure brush, prints each colour from a slightly misaligned riso plate and adds paper grain. Same seed, same picture. Every render returns the critic’s notes: elements off the canvas, accidental crops, lopsided weight, no focal point.',
+    link: [doc('docs/scene.md'), 'Scene reference'] },
+  { id: 'styles', title: 'Style packs and your own inks', img: ['/gallery/spot-riso.webp', '/gallery/spot-miniature.webp'], alt: ['Books, a cup and a bulb in riso colours', 'The same drawing in miniature colours'],
+    text: 'The same scene, printed with other inks. riso is Ortak Alan’s house look; miniature is inspired by Tulip Era painting. Pass your own colour map and every drawing in the library follows your brand.',
+    link: ['/blog/style-packs/', 'About style packs'] },
+  { id: 'soft', title: 'Soft 3D finish', img: ['/features/ribbon-loop.webp', '/features/ribbon-rings.webp'], alt: ['A blue-teal gradient ribbon arching over a pale ground', 'Three mint tube rings on deep purple'],
+    text: 'Set "finish": "soft" for clean edges and film grain: twisting gradient ribbons, shaded tubes and a rounded badge for a logo you own. Made for tech and guide covers.',
+    link: [doc('docs/scene.md#soft-3d-look-use-with-finish-soft'), 'Ribbon, tube and image'] },
+  { id: 'iso', title: 'Little 3D worlds', img: ['/gallery/room-riso.webp'], alt: ['An isometric room with a desk, laptop, lamp and stool'],
+    text: 'An iso element builds rooms, desks, stages and streets from floors, walls, boxes and cylinders, with three tones per face and library props standing inside, all in the same hand-inked line.',
+    link: [doc('docs/scene.md'), 'The iso element'] },
+  { id: 'people', title: 'Faceless people', img: ['/features/people.webp'], alt: ['Pictogram people walking, cheering and handing over an object, no faces'],
+    text: 'person draws a full-body pictogram in 15 poses: walking, running, sitting, pointing, reading, on the phone, cheering and more, holding any library object. people draws a row. Round heads with nothing on them, by design.',
+    link: [doc('docs/scene.md'), 'person and people'] },
+  { id: 'slots', title: 'Fusion slots', img: ['/features/slots-lens.webp'], alt: ['A tulip inside a magnifier lens, a star on a trophy'],
+    text: 'Props name the places where something else belongs: a TV’s screen, a magnifier’s lens, a trophy’s top. Put any drawing there with "in": { "prop": "magnifier", "slot": "lens" } and it is scaled, centred and rotated with its host. 64 hosts have slots.',
+    link: [doc('docs/scene.md#slots-fusion'), 'How slots work'] },
+  { id: 'charts', title: 'Hand-inked data', img: ['/features/chart-inflation.webp'], alt: ['A hand-drawn bar chart with one coral bar, a small line chart and a donut, labelled as sample data'],
+    text: 'bars, linechart, pie, donut and isochart take plain numbers and draw them with the same wobbly ink and flat riso fills. Values print only when you ask, and only from your data.',
+    link: [doc('docs/scene.md'), 'Data charts'] },
+  { id: 'formats', title: 'Every format, plus a title', img: ['/features/format-og.webp', '/features/format-story.webp'], alt: ['An Open Graph card with a serif headline under the art', 'A tall story version with the headline in a blue band'],
+    text: 'Render one scene as a cover, Open Graph card, square, story or YouTube thumbnail. Levni recomposes rather than crops: grounds stretch, objects move together into the free space. An optional title layer sets a crisp headline, kicker and brand line.',
+    link: [doc('docs/scene.md#formats-and-reflow'), 'Formats and titles'] },
+  { id: 'sensitive', title: 'Calm images for hard news', img: ['/features/sensitive.webp'], alt: ['A memorial candle and a single flower in quiet blues'],
+    text: 'A pack of dignified drawings for loss, disaster, illness, courts and grief: memorial candles, an empty chair, a closed door with light under it, a dove. One object, lots of space, blue only.',
+    link: [doc('docs/sensitive.md'), 'Illustrating sensitive stories'] },
+];
+const tools = [
+  ['MCP server', 'Claude, Cursor and any MCP client search the library, render scenes and read the critic.', '/mcp/'],
+  ['Ghost', 'Find drafts without images, preview a cover and inline images, attach them after your OK.', '/mcp/#ghost'],
+  ['CLI', 'levni render, sheet, list, add, check, judge and ghost from any terminal or CI job.', SITE.github],
+  ['Judge', 'Optional: rate renders against a brief with your own model key, scoring twice to beat position bias.', doc('docs/judge.md')],
+];
+const jsonld = [{ '@type': 'SoftwareApplication', name: 'Levni', applicationCategory: 'DesignApplication', operatingSystem: 'macOS, Linux, Windows (Node.js 20+)', url: `${SITE.url}/features/`, featureList: features.map((f) => f.title).concat(tools.map((t) => t[0])), offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, publisher: { '@id': `${SITE.ortakAlan}/#organization` } }];
+---
+<Base title="Features" description="Everything Levni draws: a 1,500-drawing library, style packs and custom inks, soft 3D ribbons, isometric worlds, faceless people, fusion slots, hand-inked charts, every social format, and MCP and Ghost tools for agents." jsonld={jsonld}>
+  <div class="wrap page">
+    <p class="eyebrow">Features</p>
+    <h1>Everything Levni <em class="accent">draws</em>.</h1>
+    <p class="lede">An open illustration library and the engine that draws it: JSON in, a hand-inked image out, free and on your own machine.</p>
+    <nav class="toc" aria-label="On this page">
+      <a href="#library">Library</a>{features.map((f) => <a href={`#${f.id}`}>{f.title}</a>)}<a href="#agents">Agents and tools</a>
+    </nav>
+
+    <section id="library" class="feature">
+      <div class="text">
+        <h2>The Levni Folio</h2>
+        <p>{SITE.props.toLocaleString('en')} drawings and {SITE.variants.toLocaleString('en')} variants, from tulips to server racks, sorted on shelves and searchable in English and Turkish. Each is SVG path data in a 0–100 box, released under CC BY 4.0, open to contributions.</p>
+        <p><a class="text-link" href="/library/">Browse the library</a> · <a class="text-link" href={doc('CONTRIBUTING.md')}>Submit to the Folio</a></p>
+      </div>
+      <div class="tiles">{tiles.map((t) => <img src={`/props/${t}-0.webp`} alt={t.replace(/-/g, ' ')} width="120" height="120" loading="lazy" />)}</div>
+    </section>
+
+    {features.map((f, i) => (
+      <section id={f.id} class={`feature ${i % 2 ? 'flip' : ''}`}>
+        <div class="text">
+          <h2>{f.title}</h2>
+          <p>{f.text}</p>
+          <p><a class="text-link" href={f.link[0]}>{f.link[1]}</a></p>
+        </div>
+        <div class={`imgs n${f.img.length}`}>{f.img.map((src, k) => <img class="tezhip" src={src} alt={f.alt[k]} loading="lazy" />)}</div>
+      </section>
+    ))}
+
+    <section id="agents" class="agents">
+      <h2>Agents and tools</h2>
+      <div class="cards">{tools.map(([t, d, href]) => (<a class="card" href={href}><h3>{t}</h3><p>{d}</p></a>))}</div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .page { margin-top: 48px; }
+  .eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-text); margin: 0 0 12px; }
+  .lede { font-size: 1.22rem; color: var(--ink-soft); max-width: 720px; }
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 8px; }
+  .toc a { font-size: 0.92rem; text-decoration: none; color: var(--ink); border: 1px solid var(--rule); border-radius: 999px; padding: 6px 12px; background: var(--paper-2); }
+  .toc a:hover { border-color: var(--ink); color: var(--ink); }
+  .feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 40px; align-items: center; margin-top: 72px; }
+  .feature.flip .text { order: 2; }
+  .feature h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+  .feature p { color: var(--ink-soft); }
+  .imgs { display: grid; gap: 14px; }
+  .imgs.n2 { grid-template-columns: 1fr 1fr; align-items: start; }
+  .imgs img { width: 100%; padding: 5px; }
+  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .tiles img { width: 100%; background: var(--paper-2); border: 1px solid var(--rule); border-radius: 12px; }
+  .agents { margin-top: 80px; }
+  .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 20px; }
+  .card { display: block; text-decoration: none; color: var(--ink); border: 2px solid var(--ink); background: var(--paper-2); padding: 18px; box-shadow: 5px 5px 0 var(--accent); }
+  .card:hover { color: var(--ink); transform: translate(-1px, -1px); }
+  .card h3 { font-size: 1.3rem; }
+  .card p { margin: 0; color: var(--ink-soft); font-size: 0.96rem; }
+  .text-link { font-weight: 600; }
+  @media (max-width: 860px) {
+    .feature { grid-template-columns: minmax(0, 1fr); gap: 20px; margin-top: 56px; }
+    .feature.flip .text { order: 0; }
+    .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 480px) { .cards { grid-template-columns: minmax(0, 1fr); } .imgs.n2 { grid-template-columns: 1fr; } }
+</style>

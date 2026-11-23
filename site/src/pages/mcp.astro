@@ -1,0 +1,97 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../site';
+
+const repo = SITE.github.replace('https://github.com/', '');
+const pkg = `github:${repo}`;
+const json = (env) => JSON.stringify({ mcpServers: { levni: { command: 'npx', args: ['-y', pkg, 'mcp'], ...(env ? { env } : {}) } } }, null, 2);
+
+const tools = [
+  ['scene_guide', 'The scene format: canvas, every element type, colours, style packs. The agent reads it once.'],
+  ['list_props', 'Search the Levni Folio by word, tag (English or Turkish) or shelf. Returns names, variants and what each variant shows.'],
+  ['show_props', 'A contact sheet of chosen drawings with every variant numbered, so the agent can pick by eye.'],
+  ['render_scene', 'Draw a scene. Returns the critic’s notes and a 560 px preview; with out, writes the full PNG, WebP or SVG.'],
+  ['critique_scene', 'Only the critic’s notes, for fast iterations without an image.'],
+];
+const ghostTools = [
+  ['ghost_drafts', 'Read-only. Drafts without images, their h2 headings and, for one draft, the full text.'],
+  ['ghost_preview', 'Dry run. Renders the cover and inline images, shows where each goes, returns a token. Nothing changes.'],
+  ['ghost_apply', 'Writes, only with the token from a preview of the same plan on the unchanged draft.'],
+];
+const faq = [
+  { q: 'Do I need an API key for Levni?', a: 'No. Levni runs on your own machine through npx: no account, no key, no cost per image. Your assistant writes the scene; Levni draws it locally.' },
+  { q: 'Where do my Ghost keys go?', a: 'Into the env block of your MCP client config, on your machine. Levni has no server of its own and never sees them. Without the two variables the Ghost tools do not even appear.' },
+  { q: 'Can the assistant publish a post by mistake?', a: 'No. The Ghost tools only edit drafts, never change their status, never send a newsletter, and skip drafts that already have images. Writing needs the token from a preview the user has seen.' },
+  { q: 'Which clients work?', a: 'Any MCP client that runs local stdio servers: Claude Code, Claude Desktop, Cursor, Windsurf, Cline and others. Agents without MCP can call the same features through the levni CLI.' },
+];
+const jsonld = [
+  { '@type': 'SoftwareApplication', name: 'Levni MCP server', applicationCategory: 'DesignApplication', operatingSystem: 'macOS, Linux, Windows (Node.js 20+)', url: `${SITE.url}/mcp/`, offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, publisher: { '@id': `${SITE.ortakAlan}/#organization` } },
+  { '@type': 'FAQPage', mainEntity: faq.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
+];
+---
+<Base title="MCP server: give your agent an illustrator" description="Connect Levni to Claude, Cursor or any MCP client: the agent searches the illustration library, writes scenes, reads the layout critic and saves covers. Optional Ghost tools attach images to drafts." jsonld={jsonld}>
+  <article class="wrap page">
+    <p class="eyebrow">Levni for agents</p>
+    <h1>Give your agent an <em class="accent">illustrator</em>.</h1>
+    <p class="lede">Levni’s MCP server lets an assistant draw covers, spot illustrations and social images in one hand-inked style. It searches the library, writes a scene, reads the critic’s notes, fixes them, and saves the file. Everything runs on your machine.</p>
+
+    <h2 id="setup">Set it up</h2>
+    <div class="setup">
+      <div><h3>Claude Code</h3><pre><code>{`claude mcp add levni -- npx -y ${pkg} mcp`}</code></pre></div>
+      <div><h3>Claude Desktop, Cursor and others</h3><p class="small">In <code>claude_desktop_config.json</code>, <code>.cursor/mcp.json</code> or your client’s MCP settings:</p><pre><code>{json()}</code></pre></div>
+    </div>
+    <p>Then ask: <q>Illustrate this article with Levni, show me two options, and fix what the critic reports.</q> Node.js 20 or newer is the only requirement.</p>
+
+    <h2 id="tools">What the agent can do</h2>
+    <dl class="tools">{tools.map(([n, w]) => (<><dt><code>{n}</code></dt><dd>{w}</dd></>))}</dl>
+    <figure class="shot">
+      <img class="tezhip" src="/features/slots-tv.webp" width="800" height="449" alt="A scene an agent wrote: a chart drawn inside an old TV screen on a blue panel" loading="lazy" />
+      <figcaption>A scene an agent can write in one go: a chart placed inside a TV’s screen slot.</figcaption>
+    </figure>
+
+    <h2 id="ghost">Ghost: images for your drafts</h2>
+    <p>Add your Ghost Admin credentials to the server’s <code>env</code> and three more tools appear. The assistant finds drafts without images, designs a cover and up to one image per section, shows you the plan with previews, and writes only after you say yes.</p>
+    <pre><code>{json({ GHOST_ADMIN_API_URL: 'https://your-site.com', GHOST_ADMIN_API_KEY: '<id>:<secret>' })}</code></pre>
+    <dl class="tools">{ghostTools.map(([n, w]) => (<><dt><code>{n}</code></dt><dd>{w}</dd></>))}</dl>
+    <ul class="rules">
+      <li><strong>Drafts only.</strong> The post stays a draft; nothing is published or emailed.</li>
+      <li><strong>Hands off what is done.</strong> A draft that already has any image is skipped.</li>
+      <li><strong>You see it first.</strong> The token from <code>ghost_preview</code> is tied to the plan and to the draft’s last edit. Change either and the assistant has to preview again.</li>
+      <li><strong>One image per section,</strong> after the heading and its first paragraph; headings match even with curly quotes.</li>
+    </ul>
+    <p class="small">Create the key in Ghost under Settings → Integrations → Add custom integration. Try it on a test draft first. Posts written with Ghost’s older mobiledoc editor are not supported.</p>
+
+    <h2 id="privacy">Keys, cost and privacy</h2>
+    <p>Levni has no server and no account. Drawing is free and local. Ghost keys live in your own MCP config. The optional image judge (CLI only) uses your own OpenRouter key if you choose to set one.</p>
+
+    <h2 id="faq">Questions</h2>
+    {faq.map(({ q, a }) => (<details><summary>{q}</summary><p>{a}</p></details>))}
+
+    <p class="next"><a class="text-link" href="/features/">Everything Levni can draw</a> · <a class="text-link" href="/library/">Browse the library</a> · <a class="text-link" href={`${SITE.github}#use-it-from-an-agent-mcp`}>README</a></p>
+  </article>
+</Base>
+
+<style>
+  .page { max-width: 860px; margin-top: 48px; }
+  .eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-text); margin: 0 0 12px; }
+  .lede { font-size: 1.22rem; color: var(--ink-soft); }
+  h2 { margin-top: 2.2em; font-size: clamp(1.8rem, 4vw, 2.4rem); }
+  h3 { font-size: 1.2rem; margin-bottom: 0.4em; }
+  .setup { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 20px; }
+  pre { white-space: pre; overflow-x: auto; max-width: 100%; }
+  .setup > div { min-width: 0; }
+  .small { font-size: 0.94rem; color: var(--ink-soft); }
+  .tools { display: grid; grid-template-columns: auto 1fr; gap: 10px 16px; margin: 20px 0; }
+  .tools dt code { font-size: 0.86rem; color: var(--accent-text); }
+  .tools dd { margin: 0; color: var(--ink-soft); }
+  .shot { margin: 28px 0; }
+  .shot img { padding: 6px; }
+  figcaption { font-size: 0.92rem; color: var(--ink-soft); margin-top: 10px; }
+  .rules li { margin-bottom: 6px; }
+  details { border-bottom: 1px solid var(--rule); padding: 12px 2px; }
+  summary { font-family: var(--display); font-size: 1.3rem; font-weight: 600; cursor: pointer; }
+  details p { margin: 8px 0 0; color: var(--ink-soft); }
+  .next { margin-top: 40px; }
+  .text-link { font-weight: 600; }
+  @media (max-width: 720px) { .setup { grid-template-columns: minmax(0, 1fr); } .tools { grid-template-columns: minmax(0, 1fr); gap: 2px 0; } .tools dd { margin-bottom: 10px; } }
+</style>
