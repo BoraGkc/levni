@@ -1,0 +1,24 @@
+{
+  "canvas": [
+    1500,
+    1000
+  ],
+  "quantize": true,
+  "brand": {
+    "name": "Feneri",
+    "tagline": "Slow ferries across the Bosphorus",
+    "mark": "lighthouse",
+    "inks": [
+      "#14213D",
+      "#FCA311",
+      "#3A86A8",
+      "#EFEAE0"
+    ],
+    "font": "sans",
+    "url": "feneri.ferry",
+    "person": {
+      "name": "Deniz Aksoy",
+      "role": "Harbour master"
+    }
+  }
+}

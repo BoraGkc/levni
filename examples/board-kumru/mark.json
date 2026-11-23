@@ -1,0 +1,32 @@
+{
+ "canvas": [
+  568,
+  564
+ ],
+ "style": {
+  "blue": "#2D4A7C",
+  "coral": "#E8734A",
+  "mustard": "#F0B84A",
+  "paper": "#F6F0E4",
+  "tone": "#9FB3D6"
+ },
+ "seed": 3,
+ "background": "blue",
+ "elements": [
+  {
+   "type": "disc",
+   "x": 284,
+   "y": 284,
+   "r": 214,
+   "color": "mustard"
+  },
+  {
+   "type": "prop",
+   "name": "dove",
+   "x": 284,
+   "y": 290,
+   "size": 330,
+   "palette": "paper"
+  }
+ ]
+}

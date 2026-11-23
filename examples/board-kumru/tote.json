@@ -1,0 +1,35 @@
+{
+ "canvas": [
+  150,
+  150
+ ],
+ "style": {
+  "blue": "#2D4A7C",
+  "coral": "#E8734A",
+  "mustard": "#F0B84A",
+  "paper": "#F6F0E4",
+  "tone": "#9FB3D6"
+ },
+ "seed": 9,
+ "elements": [
+  {
+   "type": "prop",
+   "name": "dove",
+   "x": 74,
+   "y": 62,
+   "size": 118,
+   "palette": "blue"
+  },
+  {
+   "type": "label",
+   "text": "KUMRU",
+   "x": 74,
+   "y": 134,
+   "size": 16,
+   "color": "blue",
+   "anchor": "middle"
+  }
+ ],
+ "finish": "soft",
+ "grain": 0
+}

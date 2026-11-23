@@ -1,0 +1,61 @@
+{
+ "canvas": [
+  272,
+  270
+ ],
+ "style": {
+  "blue": "#2D4A7C",
+  "coral": "#E8734A",
+  "mustard": "#F0B84A",
+  "paper": "#F6F0E4",
+  "tone": "#9FB3D6"
+ },
+ "seed": 13,
+ "background": "blue",
+ "elements": [
+  {
+   "type": "halftone",
+   "x": 0,
+   "y": 0,
+   "w": 272,
+   "h": 272,
+   "color": "tone",
+   "mode": "linear",
+   "gap": 14
+  },
+  {
+   "type": "prop",
+   "name": "dove",
+   "x": 70,
+   "y": 70,
+   "size": 70,
+   "palette": "paper"
+  },
+  {
+   "type": "prop",
+   "name": "dove",
+   "x": 200,
+   "y": 70,
+   "size": 70,
+   "palette": "paper",
+   "flip": true
+  },
+  {
+   "type": "prop",
+   "name": "dove",
+   "x": 70,
+   "y": 200,
+   "size": 70,
+   "palette": "paper",
+   "flip": true
+  },
+  {
+   "type": "prop",
+   "name": "dove",
+   "x": 200,
+   "y": 200,
+   "size": 70,
+   "palette": "paper"
+  }
+ ]
+}

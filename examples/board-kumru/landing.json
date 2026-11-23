@@ -1,0 +1,78 @@
+{
+ "canvas": [
+  494,
+  426
+ ],
+ "style": {
+  "blue": "#2D4A7C",
+  "coral": "#E8734A",
+  "mustard": "#F0B84A",
+  "paper": "#F6F0E4",
+  "tone": "#9FB3D6"
+ },
+ "seed": 5,
+ "background": "paper",
+ "elements": [
+  {
+   "type": "panel",
+   "x": 0,
+   "y": 0,
+   "w": 488,
+   "h": 250,
+   "color": "blue"
+  },
+  {
+   "type": "prop",
+   "name": "dove",
+   "x": 340,
+   "y": 128,
+   "size": 210
+  },
+  {
+   "type": "label",
+   "text": "Slow mornings, small batch",
+   "x": 36,
+   "y": 70,
+   "size": 13,
+   "color": "paper"
+  },
+  {
+   "type": "label",
+   "text": "Kumru",
+   "x": 36,
+   "y": 140,
+   "size": 52,
+   "color": "paper",
+   "upper": false
+  },
+  {
+   "type": "label",
+   "text": "Order a bag  ->",
+   "x": 36,
+   "y": 200,
+   "size": 14,
+   "color": "mustard"
+  },
+  {
+   "type": "prop",
+   "name": "coffee-cup",
+   "x": 110,
+   "y": 350,
+   "size": 120
+  },
+  {
+   "type": "prop",
+   "name": "coffee-grinder",
+   "x": 250,
+   "y": 350,
+   "size": 120
+  },
+  {
+   "type": "prop",
+   "name": "turkish-coffee-cup",
+   "x": 390,
+   "y": 350,
+   "size": 120
+  }
+ ]
+}

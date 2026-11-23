@@ -1,0 +1,58 @@
+{
+ "canvas": [
+  353,
+  202
+ ],
+ "style": {
+  "blue": "#2D4A7C",
+  "coral": "#E8734A",
+  "mustard": "#F0B84A",
+  "paper": "#F6F0E4",
+  "tone": "#9FB3D6"
+ },
+ "seed": 15,
+ "background": "paper",
+ "elements": [
+  {
+   "type": "panel",
+   "x": 0,
+   "y": 0,
+   "w": 110,
+   "h": 206,
+   "color": "blue"
+  },
+  {
+   "type": "prop",
+   "name": "dove",
+   "x": 55,
+   "y": 103,
+   "size": 80,
+   "palette": "paper"
+  },
+  {
+   "type": "label",
+   "text": "Ece Yilmaz",
+   "x": 128,
+   "y": 92,
+   "size": 22,
+   "color": "ink",
+   "upper": false
+  },
+  {
+   "type": "label",
+   "text": "Head roaster",
+   "x": 128,
+   "y": 118,
+   "size": 12,
+   "color": "blue"
+  },
+  {
+   "type": "label",
+   "text": "ece@kumru.studio",
+   "x": 128,
+   "y": 168,
+   "size": 11,
+   "color": "ink"
+  }
+ ]
+}

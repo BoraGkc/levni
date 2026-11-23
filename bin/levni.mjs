@@ -2,6 +2,7 @@
 // Levni CLI.
 //   levni render <scene.json> <out.png|out.webp|out.svg> [--preview] [--format cover|og|square|story|youtube]
 //   levni sheet <out.png> [prop ...] [--recolor coral=blue,mustard=tone]
+//   levni board <spec.json> <out.png>
 //   levni list [query]
 //   levni ghost drafts|attach ...   (Ghost adapter, see docs/ghost.md)
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
@@ -22,6 +23,8 @@ const USAGE = `levni: hand-inked illustrations from JSON scenes
       --format recomposes a 1200x673 scene for another canvas (sets "format" and "reflow": see docs/scene.md).
   levni sheet <out.png> [prop ...] [--recolor coral=blue,mustard=tone]
       Contact sheet of props (all when none named): every variant on paper and on blue.
+  levni board <spec.json> <out.png>
+      Brand board: { "brand": { name, tagline, mark, inks } } makes nine tiles in one call, or place scene/palette/type tiles yourself, with browser/card/tote/phone mockups. docs/board.md
   levni list [query]
       List props (name, variants, tags); with a query, only names or tags that contain it.
   levni add <file> [--dir <props folder>] [--sheet out.png]
@@ -61,6 +64,12 @@ async function main() {
     const recolor = opt('recolor') ? Object.fromEntries(opt('recolor').split(',').map((kv) => kv.split('='))) : undefined;
     const n = await sheet(out, names, recolor);
     console.log(`${n} prop variants -> ${out}`);
+  } else if (cmd === 'board') {
+    const [file, out] = positional;
+    if (!file || !out) throw new Error('usage: levni board <spec.json> <out.png>');
+    const { renderBoard } = await import('../src/board.mjs');
+    const r = await renderBoard(JSON.parse(readFileSync(file, 'utf8')), out, { baseDir: resolve(file, '..') });
+    console.log(`${out}  (${r.width}x${r.height}, ${Math.round(r.bytes / 1024)} KB)`);
   } else if (cmd === 'list') {
     const q = (positional[0] || '').toLowerCase();
     const all = Object.values(loadProps()).sort((a, b) => a.name.localeCompare(b.name));

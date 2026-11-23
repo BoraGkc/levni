@@ -12,6 +12,8 @@ export { toWebp, toPng } from './export.mjs';
 export { STYLES, applyStyle } from './styles.mjs';
 export { validateProp, parseProps, measureVariant, CATEGORIES } from './validate.mjs';
 export { iconsAvailable, resolveIcon } from './icon.mjs';
+export { renderBoard } from './board.mjs';
+export { expandBrand } from './board.mjs';
 
 import { writeFileSync } from 'node:fs';
 import { compose } from './compose.mjs';
