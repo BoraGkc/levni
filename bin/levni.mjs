@@ -6,12 +6,13 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import sharp from 'sharp';
+import { score as judgeScore, pick as judgePick, openrouter } from '../src/judge/index.mjs';
 import { render, compose, loadProps, findProp, addPropDir, LIBRARY_DIR, validateProp, parseProps, measureVariant } from '../src/index.mjs';
 
 const [cmd, ...rest] = process.argv.slice(2);
 const flag = (name) => rest.includes(`--${name}`);
 const opt = (name) => { const i = rest.indexOf(`--${name}`); return i >= 0 ? rest[i + 1] : undefined; };
-const positional = rest.filter((a, i) => !a.startsWith('--') && !(i > 0 && ['--recolor', '--dir', '--sheet'].includes(rest[i - 1])));
+const positional = rest.filter((a, i) => !a.startsWith('--') && !(i > 0 && ['--recolor', '--dir', '--sheet', '--brief', '--model'].includes(rest[i - 1])));
 
 const USAGE = `levni: hand-inked illustrations from JSON scenes
 
@@ -28,6 +29,10 @@ const USAGE = `levni: hand-inked illustrations from JSON scenes
   levni check [prop ...]
       Measure props without looking at them (for agents that cannot see images): how much of the
       box each variant fills, its centre, colours, and what to fix. All props when none named.
+  levni judge score <image> --brief "..." [--model <id>]
+  levni judge pick <image> <image> [...] --brief "..." [--model <id>]
+      Ask a judge model (OpenRouter, needs OPENROUTER_API_KEY) to rate images 0..3 for a brief, JSON out.
+      pick scores every image twice in shuffled order and averages; gaps under 0.15 are ties. docs/judge.md
 
 Scene format: docs/scene.md`;
 
@@ -111,6 +116,13 @@ async function main() {
       console.log(`look at: ${opt('sheet')} (${n} variants)`);
     }
     if (skipped) process.exitCode = 1;
+  } else if (cmd === 'judge') {
+    const [sub, ...imgs] = positional;
+    const adapter = opt('model') ? openrouter({ model: opt('model') }) : undefined;
+    const brief = opt('brief') || '';
+    if (sub === 'score' && imgs.length === 1) console.log(JSON.stringify(await judgeScore(imgs[0], { brief, adapter }), null, 2));
+    else if (sub === 'pick' && imgs.length >= 2) console.log(JSON.stringify(await judgePick(imgs, { brief, adapter }), null, 2));
+    else throw new Error('usage: levni judge score <image> --brief "..." | levni judge pick <image> <image> [...] --brief "..."');
   } else {
     console.log(USAGE);
     if (cmd && cmd !== 'help' && cmd !== '--help') process.exitCode = 1;
