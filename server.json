@@ -1,0 +1,45 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "dev.levni/levni",
+  "description": "Hand-inked illustrations, 3D covers and icons from JSON scenes. 1,600+ drawings, free and local.",
+  "repository": {
+    "url": "https://github.com/BoraGkc/levni",
+    "source": "github",
+    "id": "1467843747"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@levni/levni",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "GHOST_ADMIN_API_URL",
+          "description": "Optional: your Ghost site URL, enables the ghost_drafts / ghost_preview / ghost_apply tools",
+          "isRequired": false,
+          "format": "string",
+          "isSecret": false
+        },
+        {
+          "name": "GHOST_ADMIN_API_KEY",
+          "description": "Optional: Ghost Admin API key (id:secret) from a custom integration",
+          "isRequired": false,
+          "format": "string",
+          "isSecret": true
+        }
+      ],
+      "packageArguments": [
+        {
+          "type": "positional",
+          "value": "mcp"
+        }
+      ]
+    }
+  ],
+  "title": "Levni",
+  "websiteUrl": "https://levni.dev"
+}
