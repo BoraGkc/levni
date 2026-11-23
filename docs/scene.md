@@ -27,7 +27,7 @@ A machine-readable outline is in [`scene.schema.json`](scene.schema.json).
 | `finish` | string | `crayon` | `crayon`: hand-inked lines, riso plates, paper grain. `soft`: clean edges and a fine film grain, for the ribbon look |
 | `grain` | number | `0.16` | strength of the film grain in the `soft` finish |
 | `screen` | string or object | none | print pass on .png/.webp: the finished picture is averaged into `cell`-px blocks and Bayer-dithered to the nearest of `paper` + `inks`. Presets: `1bit`, `riso`, `blueprint`, `gameboy`, `newsprint`; or `{preset?, cell, matrix, inks, paper, spread}`. Flat paper and flat ink stay solid |
-| `format` | string | `cover` | canvas preset: `cover` 1200×673, `og` 1200×630, `square` 1080×1080, `story` 1080×1920, `youtube` 1280×720 |
+| `format` | string | `cover` | canvas preset: `cover` 1200×673, `og` 1200×630, `square` 1080×1080, `story` 1080×1920, `youtube` 1280×720, `poster` 1200×1600, `poster-tall` 1200×1800, `a4` 1240×1754 |
 | `canvas` | `[w, h]` | none | explicit canvas size (64..8192 each); wins over `format` |
 | `reflow` | boolean | `false` | recompose a scene authored for 1200×673 onto the chosen canvas (below). `levni render --format <name>` sets `format` and `reflow` |
 | `reflowFrom` | `[w, h]` | `[1200, 673]` | the canvas the scene was authored for |
@@ -76,6 +76,8 @@ House rule: at most **two main inks plus paper** per scene; a third colour only 
 | `hills` | `base`, `height`, `color`, `x`?, `w`?, `step`?, `period`? | hills, mountains |
 | `skyline` | `x0`, `x1`, `base`, `minH`, `maxH`, `colors`? | procedural buildings (40–160 heights read calmer) |
 | `halftone` | `x`, `y`, `w`, `h`, `color`, `mode` (`radial`/`linear`), `gap`?, `level`? | riso halftone dots |
+| `type` | `text` (`\n` for lines), `x`, `y` (top-left: the cap height of the first line sits at `y`), `size` or `w` (+ `fit`: `width` / `box` with `h`), `font` (`grotesk` / `black` / `mono` / `pixel` or a .ttf/.otf path), `weight` (variable fonts: grotesk 300–700, mono 100–800), `tracking` (em, e.g. -0.04), `leading` (0.92), `align` (`left` / `center` / `right`: without `w`, x is that anchor), `rotate` (-90 reads bottom to top), `upper`, `locale`, `color`, `outline`, `opacity`, `boldFont` / `boldWeight` / `lightFont` / `lightWeight`, `ink` | **Display type drawn as paths** from bundled OFL fonts, so it renders the same everywhere. `**bold**` and `__light__` switch weight inside a line (`"SMART**CONTRACTS**"`). Turkish casing is automatic. Type stays sharp above the crayon filter unless `ink: true` |
+| `block` | `x`, `y`, `w`, `h`, `color`, `radius` or `corners` [tl, tr, br, bl], `skew`, `rotate`, `outline` + `weight`, `opacity` | a crisp colour block without hand wobble: poster panels, bars, pills, half-pills |
 | `dither` | `x`, `y`, `w`, `h` (or `x`, `y`, `r` for a disc); `color` or `colors` [light → dark inks], `mode` (`linear` default / `radial` / `noise` / `flat`), `from` (1), `to` (0) coverage 0..1, `angle` (90 = top to bottom), `cx`, `cy`, `radius` (radial), `scale` (noise, 0.006), `cell` (12 px, min 3), `matrix` (2 / 4 / 8), `pattern` (`square` / `dot` / `line` / `plus`), `gap` | ordered (Bayer) dither field: pixel skies, 1-bit fades, dithered suns and orbs. With several `colors` the coverage walks through them (paper → first → second). Goes through the crayon finish like everything else; use `"finish": "soft"` for razor-sharp pixels |
 | `meshgrad` | `x`, `y`, `w`, `h` (or `x`, `y`, `r` for an orb); `preset`? (`orb`/`poster`), `shape`? (`rect`/`circle`/`squircle`), `radius`? (rect corners, px), `exponent`? (squircle, default 5), `base`?, `colors`? (default blue, coral, mustard, tone), `count`? (2..12, default 5) or `stops`? [{`x`,`y`,`color`,`r`?,`opacity`?} in 0..1 box units], `blur`? (px, default 14% of the short side), `drift`? (t motion, default 0.06), `grain`? (0..1, default 0.35), `grainSize`?, `bands`? (2..12 hard colour steps), `lines`? (contour lines between bands), `calm`? [[x,y,w,h]] quiet zones for text, `mask`? [{x,y,w,h,shape?,radius?}] show the field only inside these shapes | grainy mesh-gradient / blurred-orb background, feature tile, avatar or posterised poster; best with `"finish": "soft"` |
 | `terrain` | `x`?, `y`?, `w`?, `h`? (0,0,1200,673), `horizon`? (0.4), `rows`? (26, max 80), `cols`? (44, max 120), `height`? (0.3 of `h`), `skyline`? (0.45: how far the far rows rise into a ridge against the sky), `freq`?, `valley`?, `converge`?, `spread`?, `color`, `ground` (the background colour, hides lines behind hills), `flow`? (0, max 12: glowing streams that follow the valleys), `flowColor`? (mustard), `glow`? (horizon colour), `glowHeight`?, `glowLevel`?, `fog`? (far-line opacity), `weight`?, `seed`? | wireframe perspective terrain with a silhouette ridge and depth fade, hidden lines removed; synthwave / tech hero |
@@ -360,3 +362,19 @@ A shaded globe in text, ink on paper (lit side sparse, shadow side dense), and a
 ```
 
 Examples: [`glyphfill-globe`](../examples/glyphfill-globe.json), [`glyphfill-og-card`](../examples/glyphfill-og-card.json), [`glyphfill-coffee`](../examples/glyphfill-coffee.json).
+
+### Type recipes
+
+A split poster: a crisp colour block, a light-and-heavy kicker, a pixel headline fitted to a width, a code in the corner.
+
+```json
+{ "format": "poster", "finish": "soft", "background": "#1F3BE0", "elements": [
+  { "type": "block", "x": 0, "y": 1150, "w": 1200, "h": 450, "color": "#F0573A" },
+  { "type": "type", "text": "+ CROSS**CHAIN**", "x": 70, "y": 1300, "size": 44, "weight": 300, "boldFont": "mono", "boldWeight": 800, "color": "#E6ECF5" },
+  { "type": "type", "text": "BRIDGE.", "x": 70, "y": 1380, "w": 820, "font": "pixel", "tracking": -0.06, "color": "#E6ECF5" },
+  { "type": "type", "text": "NT5642", "x": 1130, "y": 1530, "size": 20, "font": "mono", "weight": 800, "align": "right", "color": "#14181F" }
+]}
+```
+
+Fonts are in `fonts/` under the SIL Open Font License 1.1: Space Grotesk, Archivo Black, JetBrains Mono, Departure Mono.
+

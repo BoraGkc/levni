@@ -104,7 +104,10 @@
         "og",
         "square",
         "story",
-        "youtube"
+        "youtube",
+        "poster",
+        "poster-tall",
+        "a4"
       ],
       "default": "cover"
     },
@@ -311,6 +314,8 @@
             "hills",
             "skyline",
             "halftone",
+            "type",
+            "block",
             "dither",
             "meshgrad",
             "flowfield",

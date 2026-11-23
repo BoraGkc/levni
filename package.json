@@ -41,6 +41,7 @@
     "docs/scene.md",
     "docs/scene.schema.json",
     "docs/sensitive.md",
+    "fonts/",
     "library/",
     "src/"
   ],
@@ -53,6 +54,7 @@
     "examples": "node examples/render-all.mjs"
   },
   "dependencies": {
+    "fontkit": "^3.0.0",
     "sharp": "^0.35.5"
   },
   "peerDependencies": {

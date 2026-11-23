@@ -8,6 +8,7 @@ import { SOFT3D_ASSETS } from './soft3d.mjs';
 import { CHART_ASSETS } from './charts.mjs';
 import { PERSON_ASSETS } from './person.mjs';
 import { DITHER_ASSETS } from './dither.mjs';
+import { TYPE_ASSETS } from './type.mjs';
 import { MESHGRAD_ASSETS } from './meshgrad.mjs';
 import { ENGRAVE_ASSETS } from './engrave.mjs';
 import { SEAL_ASSETS } from './seal.mjs';
@@ -364,3 +365,5 @@ Object.assign(ASSETS, SEAL_ASSETS);
 
 // Character-grid silhouettes (prop or primitive filled with glyphs/blocks/dots): see glyphfill.mjs
 Object.assign(ASSETS, GLYPHFILL_ASSETS);
+// Display type from bundled fonts, drawn as paths: see type.mjs
+Object.assign(ASSETS, TYPE_ASSETS);

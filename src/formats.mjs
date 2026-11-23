@@ -7,7 +7,7 @@
 import { layoutTitle } from './title.mjs';
 
 export const SOURCE = [1200, 673];
-export const FORMATS = { cover: [1200, 673], og: [1200, 630], square: [1080, 1080], story: [1080, 1920], youtube: [1280, 720] };
+export const FORMATS = { cover: [1200, 673], og: [1200, 630], square: [1080, 1080], story: [1080, 1920], youtube: [1280, 720], poster: [1200, 1600], 'poster-tall': [1200, 1800], a4: [1240, 1754] };
 
 export function resolveCanvas(spec) {
   if (spec.canvas != null) {
