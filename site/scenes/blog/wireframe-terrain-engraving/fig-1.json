@@ -1,0 +1,6 @@
+{ "seed": 4, "background": "dark", "elements": [
+ {"type":"terrain","x":0,"y":0,"w":600,"h":673,"horizon":0.42,"rows":26,"cols":30,"height":0.24,"freq":1.6,"color":"tone","ground":"dark","flow":0,"glow":"coral","glowHeight":0.3,"seed":2},
+ {"type":"terrain","x":600,"y":0,"w":600,"h":673,"horizon":0.42,"rows":26,"cols":30,"height":0.24,"freq":1.6,"color":"tone","ground":"dark","flow":6,"flowColor":"mustard","glow":"coral","glowHeight":0.3,"seed":2},
+ {"type":"label","text":"flow 0","x":40,"y":620,"color":"paper","size":16},
+ {"type":"label","text":"flow 6","x":640,"y":620,"color":"mustard","size":16}
+]}

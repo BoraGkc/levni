@@ -1,0 +1,14 @@
+{
+  "seed": 9,
+  "format": "og",
+  "background": "dark",
+  "finish": "soft",
+  "grain": 0.025,
+  "elements": [
+    {"type":"glyphfill","prop":"rocket","x":930,"y":315,"size":420,"mode":"dot","cell":11,"color":"tone","accent":"coral","light":{"mode":"linear","angle":60,"from":1,"to":0.4}},
+    {"type":"label","x":70,"y":110,"text":"levni","size":28,"color":"coral"},
+    {"type":"label","x":70,"y":285,"text":"JSON in.","size":60,"color":"paper","upper":false},
+    {"type":"label","x":70,"y":360,"text":"illustration out.","size":60,"color":"paper","upper":false},
+    {"type":"label","x":70,"y":560,"text":"$ levni render scene.json out.png","size":18,"color":"tone","upper":false}
+  ]
+}

@@ -7,7 +7,10 @@
 // Output is committed, so the Pages build needs no sharp.
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import sharp from 'sharp';
-import { compose, resolveCanvas } from '../../src/index.mjs';
+import { compose, resolveCanvas, renderBoard } from '../../src/index.mjs';
+import { screenRaster } from '../../src/dither.mjs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 
 const here = (p) => new URL(`../${p}`, import.meta.url).pathname;
 const force = process.argv.includes('--force');
@@ -15,6 +18,10 @@ process.chdir(here('..')); // scenes reference files (badges) relative to the re
 
 // tab order on the page
 export const GROUPS = [
+  ['brand', 'Brand assets'],
+  ['stickers', 'Seals & stickers'],
+  ['lines', 'Terrain & etching'],
+  ['boards', 'Brand boards'],
   ['soft3d', 'Soft 3D covers'],
   ['icons', '3D icons'],
   ['worlds', 'Little worlds'],
@@ -47,12 +54,22 @@ for (const [group] of GROUPS) {
     const id = f.slice(0, -5);
     const { _meta: meta = {}, ...scene } = JSON.parse(readFileSync(`${dir}/${f}`, 'utf8'));
     const big = here(`public/g/${group}/${id}.webp`), small = here(`public/g/${group}/${id}-s.webp`);
-    const { w: cw, h: ch } = resolveCanvas(scene);
+    // a brand board spec (gallery-boards/): drawn by renderBoard, shown with its spec in the dialog
+    const isBoard = group === 'boards';
+    const { w: cw, h: ch } = isBoard ? { w: scene.canvas?.[0] ?? 1800, h: scene.canvas?.[1] ?? 1200 } : resolveCanvas(scene);
     const [lw, tw] = sizes(cw, ch);
     if (force || !existsSync(big) || !existsSync(small)) {
       const t = Date.now();
-      const { svg } = await compose(scene);
-      const png = await sharp(Buffer.from(svg), { density: 72 * Math.max(1, lw / cw) }).png().toBuffer();
+      let png;
+      if (isBoard) {
+        const tmp = join(tmpdir(), `levni-board-${id}.png`);
+        await renderBoard(scene, tmp, { baseDir: dir });
+        png = readFileSync(tmp);
+      } else {
+        const { svg } = await compose(scene);
+        png = await sharp(Buffer.from(svg), { density: 72 * Math.max(1, lw / cw) }).png().toBuffer();
+        if (scene.screen) png = await screenRaster(png, scene.screen); // the print pass is raster: the CLI applies it on export
+      }
       await sharp(png).resize(lw).webp(webp).toFile(big);
       await sharp(png).resize(tw).webp({ ...webp, quality: 78 }).toFile(small);
       console.log(`${group}/${id}  ${Date.now() - t} ms`);

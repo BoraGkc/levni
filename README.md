@@ -56,7 +56,7 @@ Node 20+. The only dependency is [sharp](https://sharp.pixelplumbing.com).
 
 | | |
 | --- | --- |
-| **The Levni Folio** | 1,577 drawings, 3,356 variants (481 of them pixel icons), on 15 shelves, searchable in English and Turkish. CC BY 4.0. [Browse](https://levni.dev/library/) |
+| **The Levni Folio** | 1,628 drawings, 3,409 variants (481 of them pixel icons), on 15 shelves, searchable in English and Turkish. CC BY 4.0. [Browse](https://levni.dev/library/) |
 | **Scenes and the critic** | 64 element types on a 1200 × 673 canvas. Pressure-brush ink, riso plate misregistration, paper grain. Same seed, same picture. Every render returns layout notes: off-canvas, accidental crops, lopsided weight, no focal point. |
 | **Style packs and your inks** | `riso` (default), `miniature` (Tulip Era colours, with its own tulips, carnations, cypresses and medallion), or your own colour map: every drawing follows your brand. |
 | **Soft 3D finish** | `"finish": "soft"`: clean edges and film grain. A real little 3D renderer (pure JS, no GPU): glossy `ribbon3d` bands (loop, Möbius, spiral, knot), `torus3d`, `sphere3d`, `capsule3d`, `blob3d`, `cubes3d`, interlocking shapes in one `soft3d` scene, `extrude3d` that turns any Folio drawing into a 3D icon, and `soft3d` cover presets (`"preset": "auto"`, five palettes) with room for a title and an `image` badge. [Guide](docs/scene.md#soft-3d-v2-real-3d-shapes-use-with-finish-soft) |

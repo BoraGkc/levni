@@ -5,9 +5,13 @@ Read this whole file before writing. Posts live in `site/src/content/blog/<slug>
 
 ## Facts: only these sources
 Read before writing, and claim nothing they do not support: `README.md`, `docs/scene.md`, `CONTRIBUTING.md`, `docs/prop-prompt.md`, `src/mcp.mjs` (MCP tool names and fields), `site/src/pages/index.astro`, `site/src/pages/library/index.astro`, the existing posts in this folder.
-- Install: `npm install github:BoraGkc/levni` (not on npm yet). CLI: `levni render | sheet | list | add | check | mcp`.
-- MCP tools: `scene_guide`, `list_props`, `show_props`, `render_scene`, `critique_scene`. Claude Code: `claude mcp add levni -- npx -y github:BoraGkc/levni mcp`.
-- Library: 1,428 props (481 pixel icons), 3,181 variants, 15 categories, CC BY 4.0 (“drawings by Ortak Alan”). Code MIT. No image model, no API key, zero cost per image.
+- Version 0.2.0. Install: `npm install @levni/levni` (CLI `npx @levni/levni …`, or `levni` once installed). CLI: `levni render | board | sheet | list | add | check | mcp`.
+- MCP tools: `scene_guide`, `list_props`, `show_props`, `render_scene`, `critique_scene`, `render_board` (`render_board` takes `spec` or `{ brand }`, `out`, `preview`, `guide: true` returns docs/board.md); `render_scene` previews include the `screen` pass. Claude Code: `claude mcp add levni -- npx -y @levni/levni mcp`. Ghost tools (`ghost_drafts`, `ghost_preview`, `ghost_apply`) appear only with Ghost credentials in the environment.
+- Library: 1,577 drawings (481 pixel icons), 3,356 variants, 15 shelves, CC BY 4.0 (“drawings by Ortak Alan”). Code MIT. 64 element types. No image model, no API key, zero cost per image. (Check `README.md` if these look stale.)
+- Brand assets (0.2): `dither`, scene-level `screen` (`1bit`, `riso`, `blueprint`, `gameboy`, `newsprint` or an object), `meshgrad`, `glyphfill`, `ringtext`, `seal`, `stub`, `diecut` on `prop`/`draw`, `terrain`, `ridgelines`, `engrave`. Field names and recipes: `docs/scene.md` (sections “… recipes”). The `screen` pass is a raster step applied on PNG/WebP export (CLI `render`, MCP `render_scene` with `out`), not inside `compose()`.
+- Brand boards: `levni board <spec.json> <out.png>`; `{ "brand": { name, tagline, mark, inks, font?, url?, person? } }` makes nine tiles; `docs/board.md`.
+- Site images for these: `site/public/g/{brand,stickers,lines,boards}/` (gallery, with each scene or board spec as `<id>.json`) and the examples in `examples/`.
+- Posts for 0.2 (slugs): `levni-brand-assets` (launch), `dither-pixel-art-backgrounds`, `mesh-gradient-backgrounds`, `ascii-art-illustrations`, `seal-badge-sticker-generator`, `wireframe-terrain-engraving`, `brand-board-generator`.
 - `style` is `"riso"`, `"miniature"` or your own inks `{ "blue": "#…", … }`.
 - Ortak Alan drew about 500 article covers with it. Do not invent other numbers, customers, quotes, benchmarks or prices. For other products (Midjourney, DALL·E, Canva…) describe only general, well-known traits; no prices, no feature claims you cannot back.
 

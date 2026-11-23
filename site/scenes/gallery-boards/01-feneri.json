@@ -1,0 +1,28 @@
+{
+ "_meta": {
+  "title": "board: Feneri, ferries",
+  "alt": "A brand board for Feneri, a ferry company: a lighthouse mark, wordmark, web page, palette, social card, tote bag, sticker, pattern and a business card"
+ },
+ "canvas": [
+  1500,
+  1000
+ ],
+ "quantize": true,
+ "brand": {
+  "name": "Feneri",
+  "tagline": "Slow ferries across the Bosphorus",
+  "mark": "lighthouse",
+  "inks": [
+   "#14213D",
+   "#FCA311",
+   "#3A86A8",
+   "#EFEAE0"
+  ],
+  "font": "sans",
+  "url": "feneri.ferry",
+  "person": {
+   "name": "Deniz Aksoy",
+   "role": "Harbour master"
+  }
+ }
+}

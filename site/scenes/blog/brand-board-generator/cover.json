@@ -1,0 +1,15 @@
+{ "seed": 17, "clip": [60,52,1080,569], "elements": [
+ {"type":"panel","x":60,"y":52,"w":1080,"h":569,"color":"mustard"},
+ {"type":"panel","x":110,"y":100,"w":330,"h":470,"color":"blue"},
+ {"type":"disc","x":275,"y":300,"r":120,"color":"paper","outline":"ink"},
+ {"type":"prop","name":"bicycle","variant":0,"x":275,"y":305,"size":210},
+ {"type":"panel","x":470,"y":100,"w":330,"h":200,"color":"paper"},
+ {"type":"marks","area":[490,120,290,160],"count":5,"colors":["coral","blue"]},
+ {"type":"panel","x":470,"y":330,"w":150,"h":240,"color":"coral"},
+ {"type":"panel","x":640,"y":330,"w":160,"h":115,"color":"tone-green"},
+ {"type":"prop","name":"sailboat","x":720,"y":388,"size":100},
+ {"type":"panel","x":640,"y":465,"w":160,"h":105,"color":"blue"},
+ {"type":"panel","x":830,"y":100,"w":270,"h":470,"color":"paper","rot":3},
+ {"type":"prop","name":"bicycle","variant":1,"x":965,"y":420,"size":230,"rot":3},
+ {"type":"seal","x":965,"y":225,"size":190,"edge":"scallop","fill":"coral","prop":"star","rot":-6}
+]}

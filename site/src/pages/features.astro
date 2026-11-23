@@ -9,16 +9,40 @@ const doc = (p) => `${SITE.github}/blob/main/${p}`;
 const tiles = ['rocket', 'tulip', 'coffee-cup', 'bicycle', 'lighthouse', 'piggy-bank', 'camera', 'globe'];
 const features = [
   { id: 'scenes', title: 'Scenes and the critic', gallery: 'covers', img: ['/gallery/cover-riso.webp', '/g/covers/cover-miniature-s.webp', '/g/covers/mix-riso-s.webp'], alt: ['A rocket before a sun on a blue panel, a faceless audience below', 'The same cover in the miniature pack', 'A rocket on a coral sun among a cat, a bulb, headphones and a bicycle'],
-    text: 'A scene is a short JSON file: panels, props, textures and labels on a 1200 × 673 canvas, 55 element types in all. Levni inks every line with a pressure brush, prints each colour from a slightly misaligned riso plate and adds paper grain. Same seed, same picture. Every render returns the critic’s notes: elements off the canvas, accidental crops, lopsided weight, no focal point.',
+    text: 'A scene is a short JSON file: panels, props, textures and labels on a 1200 × 673 canvas, 64 element types in all. Levni inks every line with a pressure brush, prints each colour from a slightly misaligned riso plate and adds paper grain. Same seed, same picture. Every render returns the critic’s notes: elements off the canvas, accidental crops, lopsided weight, no focal point.',
     link: [doc('docs/scene.md'), 'Scene reference'] },
   { id: 'styles', title: 'Style packs and your own inks', gallery: 'covers', img: ['/gallery/spot-riso.webp', '/gallery/spot-miniature.webp'], alt: ['Books, a cup and a bulb in riso colours', 'The same drawing in miniature colours'],
     text: 'The same scene, printed with other inks. riso is Ortak Alan’s house look; miniature is inspired by Tulip Era painting. Pass your own colour map and every drawing in the library follows your brand.',
     link: ['/blog/style-packs/', 'About style packs'] },
+  { id: 'dither', title: 'Dither and the print screen', gallery: 'brand', img: ['/g/brand/01-dither-sunset.webp', '/g/brand/04-screen-gameboy-s.webp'], alt: ['A pixel sunset: a blue-to-coral sky and a mustard sun built from dither cells', 'The rocket cover reprinted in four greens with the gameboy screen'],
+    text: 'dither fills a rectangle or a disc with an ordered Bayer pattern: square, dot, line or plus cells, along a linear, radial or noise ramp, in one ink or several. It is how you get pixel skies, 1-bit fades and dithered suns. Add "screen" to any scene and the finished picture is reprinted as riso, 1bit, blueprint, gameboy or newsprint.',
+    fields: ['{ "type": "dither", "colors": ["blue", "coral"], "mode": "linear", "from": 0.05, "to": 1.05, "cell": 8, "matrix": 8, "pattern": "square" }', '"screen": "gameboy"'],
+    link: ['/blog/dither-pixel-art-backgrounds/', 'Dither pixel art backgrounds'] },
+  { id: 'mesh', title: 'Mesh gradients', gallery: 'brand', img: ['/g/brand/07-meshgrad-hero.webp', '/g/brand/09-meshgrad-tiles-s.webp'], alt: ['A grainy mesh gradient in coral, violet and cyan with a calm zone on the left for a headline', 'Six squircle tiles, each a different grainy gradient'],
+    text: 'meshgrad blends soft colour stops into a grainy background, an orb, a squircle app tile or a banded poster. Mark "calm" zones and the colour stays quiet where your headline goes. Same seed, same gradient.',
+    fields: ['{ "type": "meshgrad", "w": 1200, "h": 673, "base": "#1B1745", "stops": [{ "x": 0.12, "y": 0.2, "color": "#FF7A59", "r": 0.75 }], "calm": [[0, 0.52, 0.62, 0.4]], "grain": 0.14 }', '{ "type": "meshgrad", "shape": "squircle", "radius": 56, "colors": ["#FFB36B", "#FF5E62", "#8E3BC9"] }', '{ "type": "meshgrad", "preset": "poster", "bands": 5 }'],
+    link: ['/blog/mesh-gradient-backgrounds/', 'Mesh gradient backgrounds'] },
+  { id: 'glyphfill', title: 'ASCII and dot-matrix art', gallery: 'brand', img: ['/g/brand/10-glyphfill-globe.webp', '/g/brand/12-glyphfill-og-card-s.webp'], alt: ['A globe made of text characters with continents and a few coral accents', 'A rocket made of blue dots on a dark social card'],
+    text: 'glyphfill fills any library drawing or a shape (a shaded sphere with continents, a ring, a star) with characters, blocks or dots whose density follows its tone. The text stays crisp at any zoom, so it suits dev-tool hero art, README banners and social cards.',
+    fields: ['{ "type": "glyphfill", "prop": "rocket", "mode": "dot", "cell": 11, "color": "tone", "accent": "coral" }', '{ "type": "glyphfill", "shape": "sphere", "land": 0.42, "light": { "angle": 215, "elev": 28 } }'],
+    link: ['/blog/ascii-art-illustrations/', 'ASCII art illustrations'] },
+  { id: 'seals', title: 'Seals, tickets and stickers', gallery: 'stickers', img: ['/g/stickers/01-seal-sheet.webp', '/g/stickers/05-seal-night-s.webp'], alt: ['A sheet of seals, a ticket stub and die-cut stickers on blue', 'A perforated bread seal and a coral scalloped seal on a dark ground'],
+    text: 'seal draws a scalloped, perforated, zigzag or plain badge with text running round the ring and a word or a drawing in the middle. stub cuts a ticket with notches and a dotted perforation. diecut gives any drawing the thick paper outline of a printed sticker. ringtext sets type on a circle.',
+    fields: ['{ "type": "seal", "edge": "perforated", "top": "handmade in izmir", "bottom": "since 2019", "prop": "bread" }', '{ "type": "prop", "name": "rocket", "diecut": { "offset": 16, "color": "mustard" } }'],
+    link: ['/blog/seal-badge-sticker-generator/', 'Seal, badge and sticker generator'] },
+  { id: 'terrain', title: 'Terrain, ridgelines and etching', gallery: 'lines', img: ['/g/lines/01-terrain-hero.webp', '/g/lines/05-engrave-poster-s.webp', '/g/lines/06-engrave-moon-s.webp'], alt: ['Wireframe hills on a dark ground with a coral horizon glow and mustard streams', 'An etched mountain landscape with a sun, in blue pen lines', 'A moon drawn with latitude hatching and craters'],
+    text: 'terrain draws wireframe hills with hidden lines removed and glowing streams in the valleys. ridgelines stacks profile lines, each hiding the ones behind. engrave etches a landscape, a moon, a radial field or a noise field with lines whose thickness follows the tone.',
+    fields: ['{ "type": "terrain", "horizon": 0.42, "rows": 30, "cols": 54, "color": "tone", "ground": "dark", "flow": 5, "glow": "coral" }', '{ "type": "engrave", "mode": "landscape", "gap": 6, "sun": { "x": 760, "y": 200, "r": 62 } }'],
+    link: ['/blog/wireframe-terrain-engraving/', 'Wireframe terrain and engraving'] },
+  { id: 'boards', title: 'Brand boards', gallery: 'boards', img: ['/g/boards/01-feneri.webp', '/g/boards/03-firin-s.webp'], alt: ['A brand board for a ferry company: lighthouse mark, wordmark, web page, palette, social card, tote, sticker, pattern and business card', 'A brand board for a bakery with a loaf of bread as its mark'],
+    text: 'Four fields, a name, a tagline, a mark from the library and up to five inks, make a nine-tile board: mark, wordmark, web page in a browser, palette, social card, tote, sticker, pattern and a tilted business card. Or place every tile yourself, with browser, card, tote and phone mockups. levni board draws it as one PNG.',
+    fields: ['{ "brand": { "name": "Feneri", "tagline": "Slow ferries across the Bosphorus", "mark": "lighthouse", "inks": ["#14213D", "#FCA311", "#3A86A8", "#EFEAE0"] } }'],
+    link: ['/blog/brand-board-generator/', 'Brand board generator'] },
   { id: 'soft', title: 'Soft 3D covers', gallery: 'soft3d', img: ['/features/soft3d-auto-aqua.webp', '/features/soft3d-auto-night.webp', '/g/soft3d/preset-mobius-s.webp'], alt: ['A glossy teal-to-indigo 3D ribbon looping off the edge of a pale blue cover, a title on the left', 'Interlocking mint 3D rings on a deep purple cover', 'A glossy Möbius band in peach and violet on a warm cover'],
     text: 'A real little 3D renderer in plain JavaScript: glossy ribbons that loop, twist and pass behind themselves, Möbius strips, interlocking rings, spheres, capsules, blobs and stacked blocks, lit with a key light, soft highlights and film grain. "preset": "auto" with a seed composes a whole cover: a different, balanced layout per seed, room for a title, a free corner for your logo.',
     link: [doc('docs/scene.md#soft-3d-v2-real-3d-shapes-use-with-finish-soft'), 'Soft 3D reference'] },
   { id: 'icons3d', title: 'Every drawing as a 3D icon', gallery: 'icons', img: ['/features/soft3d-icons.webp', '/g/icons/30-turkish-coffee-cup-s.webp', '/g/icons/08-piggy-bank-s.webp'], alt: ['Library drawings extruded into thick, lit 3D icons: a rocket, a bulb, a cup, a trophy and a heart', 'A Turkish coffee cup on its saucer as a 3D icon', 'A piggy bank as a 3D icon, recoloured'],
-    text: 'extrude3d turns any of the 1,600+ library drawings into a thick, lit 3D icon: front faces keep their colours, sides are rounded and shaded, ink lines become a raised rim. Rotate it, recolour it, put several in one scene.',
+    text: 'extrude3d turns any library drawing into a thick, lit 3D icon: front faces keep their colours, sides are rounded and shaded, ink lines become a raised rim. Rotate it, recolour it, put several in one scene.',
     link: [doc('docs/scene.md#soft-3d-v2-real-3d-shapes-use-with-finish-soft'), 'The extrude3d element'] },
   { id: 'pixel', title: 'Pixel icons', gallery: 'pixel', img: ['/g/pixel/grid-riso-s.webp', '/g/pixel/grid-brand-s.webp'], alt: ['Twenty-one pixel icons in riso colours on paper', 'The same pixel icons in purple and teal brand inks'],
     text: `${pixelCount} pixel icons in four weights (regular, thin, solid, glyph): mail, charts, weather, files, arrows, people and more. They are Folio props like any other, so they sit in scenes, recolour with style packs and your inks, and work as 3D icons.`,
@@ -43,18 +67,19 @@ const features = [
     link: [doc('docs/sensitive.md'), 'Illustrating sensitive stories'] },
 ];
 const tools = [
-  ['MCP server', 'Claude, Cursor and any MCP client search the library, render scenes and read the critic.', '/mcp/'],
+  ['MCP server', 'Claude, Cursor and any MCP client search the library, render scenes and brand boards, and read the critic.', '/mcp/'],
   ['Ghost', 'Find drafts without images, preview a cover and inline images, attach them after your OK.', '/mcp/#ghost'],
-  ['CLI', 'levni render, sheet, list, add, check, judge and ghost from any terminal or CI job.', SITE.github],
+  ['CLI', 'levni render, board, sheet, list, add, check, judge and ghost from any terminal or CI job.', SITE.github],
   ['Judge', 'Optional: rate renders against a brief with your own model key, scoring twice to beat position bias.', doc('docs/judge.md')],
 ];
 const jsonld = [{ '@type': 'SoftwareApplication', name: 'Levni', applicationCategory: 'DesignApplication', operatingSystem: 'macOS, Linux, Windows (Node.js 20+)', url: `${SITE.url}/features/`, featureList: features.map((f) => f.title).concat(tools.map((t) => t[0])), offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, publisher: { '@id': `${SITE.ortakAlan}/#organization` } }];
 ---
-<Base title="Features" description="Everything Levni draws: a 1,600-drawing library, style packs and custom inks, soft 3D covers and 3D icons, isometric worlds, pixel icons, faceless people, fusion slots, hand-inked charts, every social format, and MCP and Ghost tools for agents." jsonld={jsonld}>
+<Base title="Features" description="Everything Levni draws: a library of over 1,500 drawings, style packs and custom inks, brand assets (dither, mesh gradients, ASCII art, seals and stickers, terrain and etching, brand boards), soft 3D covers and 3D icons, isometric worlds, pixel icons, faceless people, fusion slots, hand-inked charts, every social format, and MCP and Ghost tools for agents." jsonld={jsonld}>
   <div class="wrap page">
     <p class="eyebrow">Features</p>
     <h1>Everything Levni <em class="accent">draws</em>.</h1>
     <p class="lede">An open illustration library and the engine that draws it: JSON in, a hand-inked image out, free and on your own machine.</p>
+    <p class="new"><strong>New in 0.2.</strong> Brand assets: dither, mesh gradients, ASCII art, seals and stickers, terrain and etching, and whole brand boards. <a class="text-link" href="/blog/levni-brand-assets/">Read the launch post</a> · <a class="text-link" href="/gallery/#brand">See them in the gallery</a></p>
     <nav class="toc" aria-label="On this page">
       <a href="#library">Library</a>{features.map((f) => <a href={`#${f.id}`}>{f.title}</a>)}<a href="#agents">Agents and tools</a>
     </nav>
@@ -73,9 +98,10 @@ const jsonld = [{ '@type': 'SoftwareApplication', name: 'Levni', applicationCate
         <div class="text">
           <h2>{f.title}</h2>
           <p>{f.text}</p>
+          {f.fields && <div class="fields">{f.fields.map((c) => <code>{c}</code>)}</div>}
           <p class="links"><a class="text-link" href={f.link[0]}>{f.link[1]}</a>{f.gallery && <a class="text-link" href={`/gallery/#${f.gallery}`}>See them in the gallery</a>}</p>
         </div>
-        <div class={`imgs n${f.img.length}`}>{f.img.map((src, k) => <img class="tezhip" src={src} alt={f.alt[k]} width={src.includes('/g/icons/') ? 400 : 800} height={src.includes('/g/icons/') ? 400 : 449} loading="lazy" decoding="async" />)}</div>
+        <div class={`imgs n${f.img.length}`}>{f.img.map((src, k) => <img class="tezhip" src={src} alt={f.alt[k]} width={src.includes('/g/icons/') ? 400 : src.includes('/g/boards/') ? 1200 : 800} height={src.includes('/g/icons/') ? 400 : src.includes('/g/boards/') ? 800 : 449} loading="lazy" decoding="async" />)}</div>
       </section>
     ))}
 
@@ -90,6 +116,10 @@ const jsonld = [{ '@type': 'SoftwareApplication', name: 'Levni', applicationCate
   .page { margin-top: 48px; }
   .eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-text); margin: 0 0 12px; }
   .lede { font-size: 1.22rem; color: var(--ink-soft); max-width: 720px; }
+  .new { margin: 20px 0 0; padding: 12px 16px; border: 2px solid var(--ink); background: var(--paper-2); box-shadow: 4px 4px 0 var(--accent); color: var(--ink-soft); max-width: 760px; }
+  .new a { margin-right: 6px; }
+  .fields { display: grid; gap: 6px; margin: 0 0 14px; }
+  .fields code { display: block; font-size: 0.76rem; line-height: 1.45; padding: 7px 10px; background: var(--paper-2); border: 1px solid var(--rule); overflow-wrap: anywhere; white-space: pre-wrap; }
   .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 8px; }
   .toc a { font-size: 0.92rem; text-decoration: none; color: var(--ink); border: 1px solid var(--rule); border-radius: 999px; padding: 6px 12px; background: var(--paper-2); }
   .toc a:hover { border-color: var(--ink); color: var(--ink); }

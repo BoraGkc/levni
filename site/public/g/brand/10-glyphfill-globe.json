@@ -1,0 +1,13 @@
+{
+  "seed": 3,
+  "background": "paper",
+  "finish": "soft",
+  "grain": 0.008,
+  "elements": [
+    {"type":"glyphfill","shape":"sphere","x":850,"y":336,"size":540,"cell":7,"color":"ink","accent":"coral","land":0.42,"light":{"angle":215,"elev":28}},
+    {"type":"label","x":70,"y":110,"text":"ortakalan / world","size":18,"color":"blue"},
+    {"type":"label","x":70,"y":330,"text":"one planet,","size":64,"color":"ink","upper":false},
+    {"type":"label","x":70,"y":402,"text":"all in text.","size":64,"color":"ink","upper":false},
+    {"type":"label","x":70,"y":590,"text":"$ npx levni render globe.json","size":16,"color":"ink","upper":false}
+  ]
+}

@@ -1,0 +1,10 @@
+{ "seed": 9, "background": "paper", "elements": [
+ {"type":"seal","x":170,"y":300,"size":250,"edge":"scallop","fill":"coral","word":"01","sub":"scallop","wordColor":"paper","text":"made by hand"},
+ {"type":"seal","x":440,"y":300,"size":250,"edge":"perforated","fill":"mustard","word":"02","sub":"perforated","text":"made by hand"},
+ {"type":"seal","x":710,"y":300,"size":250,"edge":"zigzag","fill":"tone-green","word":"03","sub":"zigzag","text":"made by hand"},
+ {"type":"seal","x":980,"y":300,"size":250,"edge":"plain","fill":"blue","word":"04","sub":"plain","wordColor":"paper","textColor":"paper","text":"made by hand"},
+ {"type":"label","x":170,"y":500,"text":"edge scallop","anchor":"middle","size":16},
+ {"type":"label","x":440,"y":500,"text":"edge perforated","anchor":"middle","size":16},
+ {"type":"label","x":710,"y":500,"text":"edge zigzag","anchor":"middle","size":16},
+ {"type":"label","x":980,"y":500,"text":"edge plain","anchor":"middle","size":16}
+]}

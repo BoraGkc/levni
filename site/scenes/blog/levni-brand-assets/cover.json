@@ -1,0 +1,8 @@
+{ "seed": 9, "background": "blue", "elements": [
+  { "type": "dither", "x": 0, "y": 0, "w": 1200, "h": 673, "color": "tone", "mode": "radial", "cx": 600, "cy": 336, "radius": 700, "from": 0.5, "to": 0, "cell": 10, "matrix": 8 },
+  { "type": "seal", "x": 330, "y": 330, "size": 400, "edge": "scallop", "fill": "coral", "prop": "star", "rot": 12, "color": "ink", "ring": true },
+  { "type": "seal", "x": 800, "y": 250, "size": 300, "edge": "perforated", "fill": "paper", "prop": "coffee-cup", "rot": -8 },
+  { "type": "prop", "name": "rocket", "x": 760, "y": 500, "size": 230, "rot": 20, "diecut": { "offset": 16 } },
+  { "type": "prop", "name": "heart", "x": 1010, "y": 470, "size": 170, "rot": -14, "diecut": true },
+  { "type": "stub", "x": 360, "y": 585, "w": 250, "h": 70, "fill": "tone-mustard", "rot": -3 }
+]}

@@ -1,0 +1,13 @@
+{
+  "canvas": [1500, 1000],
+  "quantize": true,
+  "brand": {
+    "name": "Meltem",
+    "tagline": "Bikes for slow mornings by the sea",
+    "mark": "bicycle",
+    "inks": ["#1F3D2B", "#F2994A", "#7DB59A", "#F4EFE3"],
+    "font": "serif",
+    "url": "meltem.bike",
+    "person": { "name": "Selin Arda", "role": "Workshop lead" }
+  }
+}

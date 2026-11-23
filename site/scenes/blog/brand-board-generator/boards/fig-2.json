@@ -1,0 +1,22 @@
+{
+  "canvas": [1500, 1000],
+  "background": "#E6E0D0",
+  "grid": { "cols": 4, "rows": 2 },
+  "quantize": true,
+  "style": { "ink": "#1F3D2B", "blue": "#1F3D2B", "coral": "#F2994A", "mustard": "#7DB59A", "paper": "#F4EFE3", "tone": "#A9D0BC" },
+  "tiles": [
+    { "at": [0, 0, 2, 2], "bg": "#F2994A", "caption": "Mark", "fit": "none",
+      "scene": { "seed": 3, "canvas": [714, 952], "background": "coral", "elements": [
+        { "type": "disc", "x": 357, "y": 476, "r": 300, "color": "paper", "outline": "ink" },
+        { "type": "prop", "name": "bicycle", "variant": 0, "x": 357, "y": 482, "size": 440 } ] } },
+    { "at": [2, 0, 2, 1], "type": "type", "text": "Meltem", "family": "sans", "weight": 800, "sub": "Bikes for slow mornings by the sea", "bg": "#F4EFE3", "color": "#1F3D2B", "caption": "Wordmark" },
+    { "at": [2, 1, 1, 1], "type": "palette", "layout": "stack", "colors": [
+        { "hex": "#1F3D2B", "name": "Pine", "weight": 2 }, { "hex": "#F2994A", "name": "Amber" },
+        { "hex": "#7DB59A", "name": "Sage" }, { "hex": "#F4EFE3", "name": "Sand" } ] },
+    { "at": [3, 1, 1, 1], "mockup": "phone", "bg": "#7DB59A", "caption": "Story",
+      "scene": { "seed": 8, "canvas": [360, 780], "background": "paper", "elements": [
+        { "type": "panel", "x": 0, "y": 0, "w": 360, "h": 330, "color": "blue" },
+        { "type": "prop", "name": "sailboat", "x": 180, "y": 170, "size": 220, "palette": "paper" },
+        { "type": "prop", "name": "bicycle", "variant": 1, "x": 180, "y": 520, "size": 320 } ] } }
+  ]
+}

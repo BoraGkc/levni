@@ -1,0 +1,32 @@
+{
+ "_meta": {
+  "title": "engrave: radial field",
+  "alt": "Fine horizontal etched lines in blue on cream that thin out into a bright sun-like centre, captioned Figure 2"
+ },
+ "seed": 3,
+ "background": "paper",
+ "elements": [
+  {
+   "type": "engrave",
+   "mode": "radial",
+   "x": 70,
+   "y": 70,
+   "w": 1060,
+   "h": 533,
+   "gap": 6,
+   "color": "blue",
+   "ground": "paper",
+   "cx": 600,
+   "cy": 336,
+   "radius": 420,
+   "seed": 2
+  },
+  {
+   "type": "label",
+   "text": "Figure 2 / Radial",
+   "x": 70,
+   "y": 50,
+   "color": "ink"
+  }
+ ]
+}

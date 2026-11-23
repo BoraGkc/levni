@@ -1,0 +1,7 @@
+{ "seed": 5, "clip": [60, 52, 1080, 569], "screen": "riso", "elements": [
+  { "type": "panel", "x": 60, "y": 52, "w": 1080, "h": 569, "color": "blue" },
+  { "type": "dither", "x": 60, "y": 52, "w": 1080, "h": 569, "colors": ["blue", "coral"], "mode": "linear", "angle": 90, "from": 0, "to": 1, "cell": 10, "matrix": 8 },
+  { "type": "sunburst", "x": 780, "y": 300, "size": 420, "color": "mustard", "rayColor": "tone-mustard" },
+  { "type": "prop", "name": "rocket", "x": 780, "y": 300, "size": 380, "rot": 20, "shadow": true },
+  { "type": "crowd", "x": 90, "y": 560, "w": 520, "rows": 2, "size": 130, "highlight": "coral" }
+]}

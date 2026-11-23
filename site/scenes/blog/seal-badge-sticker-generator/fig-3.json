@@ -1,0 +1,8 @@
+{ "seed": 5, "background": "mustard", "elements": [
+ {"type":"stub","x":90,"y":90,"w":420,"h":170,"fill":"paper","split":0.72,"rot":-4,"text":"admit one","stubText":"no. 0412"},
+ {"type":"stub","x":640,"y":120,"w":440,"h":170,"fill":"tone-green","split":0.6,"rot":3,"text":"free refill","stubText":"row b"},
+ {"type":"prop","name":"rocket","x":220,"y":480,"size":230,"rot":15,"diecut":{"offset":16}},
+ {"type":"prop","name":"heart","x":470,"y":490,"size":190,"rot":-14,"diecut":true},
+ {"type":"prop","name":"coffee-cup","x":720,"y":480,"size":220,"rot":8,"diecut":{"offset":14}},
+ {"type":"prop","name":"lightbulb","x":980,"y":480,"size":210,"rot":-6,"diecut":{"offset":12,"color":"coral"}}
+]}

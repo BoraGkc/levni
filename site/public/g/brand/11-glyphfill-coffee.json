@@ -1,0 +1,13 @@
+{
+  "seed": 5,
+  "format": "square",
+  "background": "dark",
+  "finish": "soft",
+  "grain": 0.025,
+  "elements": [
+    {"type":"glyphfill","prop":"coffee-cup","x":540,"y":590,"size":640,"mode":"glyph","cell":10,"color":"mustard","accent":"paper"},
+    {"type":"label","x":90,"y":130,"text":"brew","size":72,"color":"paper","upper":false},
+    {"type":"label","x":90,"y":180,"text":"compile / ship / repeat","size":22,"color":"mustard","upper":false},
+    {"type":"label","x":90,"y":990,"text":"> build passing","size":20,"color":"tone","upper":false}
+  ]
+}

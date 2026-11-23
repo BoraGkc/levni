@@ -1,0 +1,134 @@
+{
+ "seed": 11,
+ "finish": "soft",
+ "background": "#0F1020",
+ "elements": [
+  {
+   "type": "meshgrad",
+   "x": 170,
+   "y": 250,
+   "r": 90,
+   "grain": 0.45,
+   "colors": [
+    "#FF8A5C",
+    "#FF3D8B",
+    "#6A4CFF"
+   ],
+   "preset": "orb",
+   "count": 4
+  },
+  {
+   "type": "meshgrad",
+   "x": 395,
+   "y": 250,
+   "r": 90,
+   "grain": 0.45,
+   "colors": [
+    "#7CF0D0",
+    "#2A9DFF",
+    "#2A2BA8"
+   ],
+   "preset": "orb",
+   "count": 4
+  },
+  {
+   "type": "meshgrad",
+   "x": 620,
+   "y": 250,
+   "r": 90,
+   "grain": 0.45,
+   "colors": [
+    "#FFE58A",
+    "#FFA23D",
+    "#E0457B"
+   ],
+   "preset": "orb",
+   "count": 4
+  },
+  {
+   "type": "meshgrad",
+   "x": 845,
+   "y": 250,
+   "r": 90,
+   "grain": 0.45,
+   "colors": [
+    "#D9B8FF",
+    "#7A5CFF",
+    "#1E1B6B"
+   ],
+   "preset": "orb",
+   "count": 4
+  },
+  {
+   "type": "meshgrad",
+   "x": 1070,
+   "y": 250,
+   "r": 90,
+   "grain": 0.45,
+   "colors": [
+    "#B8FF9A",
+    "#22B07D",
+    "#0C4A5A"
+   ],
+   "preset": "orb",
+   "count": 4
+  },
+  {
+   "type": "meshgrad",
+   "x": 170,
+   "y": 500,
+   "r": 70,
+   "grain": 0.3,
+   "colors": [
+    "#FF8A5C",
+    "#FF3D8B"
+   ],
+   "preset": "poster",
+   "count": 4
+  },
+  {
+   "type": "meshgrad",
+   "x": 330,
+   "y": 500,
+   "r": 70,
+   "grain": 0.3,
+   "colors": [
+    "#7CF0D0",
+    "#2A9DFF"
+   ],
+   "preset": "poster",
+   "count": 4
+  },
+  {
+   "type": "meshgrad",
+   "x": 490,
+   "y": 500,
+   "r": 70,
+   "grain": 0.3,
+   "colors": [
+    "#FFE58A",
+    "#E0457B"
+   ],
+   "preset": "poster",
+   "count": 4
+  },
+  {
+   "type": "label",
+   "text": "avatar set / smooth",
+   "x": 120,
+   "y": 120,
+   "size": 16,
+   "color": "#F4EFE4",
+   "anchor": "start"
+  },
+  {
+   "type": "label",
+   "text": "poster",
+   "x": 120,
+   "y": 420,
+   "size": 16,
+   "color": "#F4EFE4",
+   "anchor": "start"
+  }
+ ]
+}

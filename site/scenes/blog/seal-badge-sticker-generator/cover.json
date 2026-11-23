@@ -1,0 +1,9 @@
+{ "seed": 21, "clip": [60,52,1080,569], "elements": [
+ {"type":"panel","x":60,"y":52,"w":1080,"h":569,"color":"blue"},
+ {"type":"glyphs","x":60,"y":52,"w":1080,"h":569,"color":"tone","mode":"radial","level":0.6,"cx":520,"cy":330},
+ {"type":"seal","x":520,"y":336,"size":420,"edge":"scallop","fill":"coral","color":"ink","prop":"coffee-cup","rot":-8,"ring":true},
+ {"type":"prop","name":"rocket","x":930,"y":220,"size":210,"rot":15,"diecut":{"offset":16}},
+ {"type":"prop","name":"heart","x":190,"y":210,"size":150,"rot":-14,"diecut":true},
+ {"type":"stub","x":810,"y":400,"w":270,"h":120,"fill":"tone-mustard","rot":-6},
+ {"type":"prop","name":"star","x":250,"y":480,"size":120,"rot":10,"diecut":{"offset":12,"color":"mustard"}}
+]}

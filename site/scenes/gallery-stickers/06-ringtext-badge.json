@@ -1,0 +1,41 @@
+{
+ "_meta": {
+  "title": "ringtext: round badge",
+  "alt": "A round blue badge with a mustard centre and a lighthouse, a ring of repeating words around the edge"
+ },
+ "seed": 8,
+ "background": "paper",
+ "elements": [
+  {
+   "type": "disc",
+   "x": 600,
+   "y": 336,
+   "r": 290,
+   "color": "blue"
+  },
+  {
+   "type": "ringtext",
+   "x": 600,
+   "y": 336,
+   "r": 255,
+   "text": "slow ferries across the bosphorus",
+   "size": 24,
+   "repeat": true,
+   "color": "paper"
+  },
+  {
+   "type": "disc",
+   "x": 600,
+   "y": 336,
+   "r": 190,
+   "color": "mustard"
+  },
+  {
+   "type": "prop",
+   "name": "lighthouse",
+   "x": 600,
+   "y": 342,
+   "size": 270
+  }
+ ]
+}

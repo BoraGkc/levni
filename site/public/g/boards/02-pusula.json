@@ -1,0 +1,5 @@
+{
+  "canvas": [1500,1000],
+  "quantize": true,
+  "brand": {"name":"Pusula","tagline":"Bicycle repair and good coffee","mark":"bicycle","inks":["#1F3B2C","#E8742C","#8FB996","#F4EFE2"],"font":"sans","url":"pusula.bike","person":{"name":"Elif Demir","role":"Head mechanic"}}
+}

@@ -1,0 +1,9 @@
+{
+  "seed": 7,
+  "background": "dark",
+  "elements": [
+    {"type":"ridgelines","x":60,"y":150,"w":1080,"h":440,"lines":34,"color":"paper","ground":"dark","height":0.5,"seed":1},
+    {"type":"label","text":"Signal / Noise","x":64,"y":84,"color":"paper","size":18},
+    {"type":"label","text":"ortakalan.io","x":1136,"y":84,"anchor":"end","color":"tone","size":18}
+  ]
+}

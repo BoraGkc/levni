@@ -1,0 +1,28 @@
+{
+ "_meta": {
+  "title": "engrave: hatched moon",
+  "alt": "A moon drawn with latitude hatching and shaded craters on cream paper"
+ },
+ "seed": 2,
+ "background": "paper",
+ "elements": [
+  {
+   "type": "engrave",
+   "mode": "globe",
+   "x": 600,
+   "y": 336,
+   "r": 250,
+   "gap": 5.5,
+   "color": "ink",
+   "ground": "paper",
+   "seed": 3
+  },
+  {
+   "type": "label",
+   "text": "Luna / 384,400 km",
+   "x": 70,
+   "y": 70,
+   "color": "ink"
+  }
+ ]
+}

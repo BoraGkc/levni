@@ -1,0 +1,5 @@
+{ "seed": 4, "background": "dark", "elements": [
+ {"type":"terrain","x":0,"y":0,"w":1200,"h":673,"horizon":0.42,"rows":30,"cols":54,"height":0.26,"freq":1.6,"color":"tone","ground":"dark","flow":6,"flowColor":"mustard","glow":"coral","glowHeight":0.32,"seed":5},
+ {"type":"sparkle","x":300,"y":120,"size":50},
+ {"type":"prop","name":"moon-crescent","x":930,"y":160,"size":130}
+]}

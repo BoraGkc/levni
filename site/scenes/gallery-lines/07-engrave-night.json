@@ -1,0 +1,34 @@
+{
+ "_meta": {
+  "title": "engrave: gold on dark",
+  "alt": "An etched landscape in mustard lines on a dark ground with a round sun"
+ },
+ "seed": 6,
+ "background": "dark",
+ "elements": [
+  {
+   "type": "engrave",
+   "mode": "landscape",
+   "x": 70,
+   "y": 70,
+   "w": 1060,
+   "h": 533,
+   "gap": 6,
+   "color": "mustard",
+   "ground": "dark",
+   "sun": {
+    "x": 380,
+    "y": 210,
+    "r": 70
+   },
+   "seed": 4
+  },
+  {
+   "type": "label",
+   "text": "Plate 11 / Evening",
+   "x": 70,
+   "y": 50,
+   "color": "paper"
+  }
+ ]
+}

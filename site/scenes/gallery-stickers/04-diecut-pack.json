@@ -1,0 +1,79 @@
+{
+ "_meta": {
+  "title": "diecut: sticker pack",
+  "alt": "Six library drawings with thick paper outlines like die-cut stickers, in different outline colours, tilted on a blue ground"
+ },
+ "seed": 6,
+ "background": "blue",
+ "elements": [
+  {
+   "type": "prop",
+   "name": "cat",
+   "x": 230,
+   "y": 230,
+   "size": 300,
+   "rot": -8,
+   "diecut": {
+    "offset": 16
+   }
+  },
+  {
+   "type": "prop",
+   "name": "rocket",
+   "x": 600,
+   "y": 210,
+   "size": 300,
+   "rot": 18,
+   "diecut": {
+    "offset": 16,
+    "color": "mustard"
+   }
+  },
+  {
+   "type": "prop",
+   "name": "lighthouse",
+   "x": 930,
+   "y": 215,
+   "size": 320,
+   "rot": -5,
+   "diecut": {
+    "offset": 16
+   }
+  },
+  {
+   "type": "prop",
+   "name": "bicycle",
+   "x": 250,
+   "y": 500,
+   "size": 290,
+   "rot": 6,
+   "diecut": {
+    "offset": 16,
+    "color": "coral"
+   }
+  },
+  {
+   "type": "prop",
+   "name": "coffee-cup",
+   "x": 620,
+   "y": 500,
+   "size": 260,
+   "rot": -12,
+   "diecut": {
+    "offset": 16
+   }
+  },
+  {
+   "type": "prop",
+   "name": "tulip",
+   "x": 1010,
+   "y": 520,
+   "size": 280,
+   "rot": 10,
+   "diecut": {
+    "offset": 16,
+    "color": "mustard"
+   }
+  }
+ ]
+}

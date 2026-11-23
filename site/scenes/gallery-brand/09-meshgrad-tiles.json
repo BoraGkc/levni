@@ -1,0 +1,167 @@
+{
+ "_meta": {
+  "title": "meshgrad: squircle tiles",
+  "alt": "Six squircle tiles on cream, each filled with a different grainy mesh gradient"
+ },
+ "seed": 7,
+ "finish": "soft",
+ "background": "#F2EEE6",
+ "elements": [
+  {
+   "type": "meshgrad",
+   "x": 90,
+   "y": 90,
+   "w": 300,
+   "h": 230,
+   "shape": "squircle",
+   "radius": 56,
+   "grain": 0.15,
+   "blur": 40,
+   "colors": [
+    "#FFB36B",
+    "#FF5E62",
+    "#8E3BC9"
+   ],
+   "count": 4
+  },
+  {
+   "type": "meshgrad",
+   "x": 450,
+   "y": 90,
+   "w": 300,
+   "h": 230,
+   "shape": "squircle",
+   "radius": 56,
+   "grain": 0.15,
+   "blur": 40,
+   "colors": [
+    "#7DE2D1",
+    "#2B8CFF",
+    "#1B2BA8"
+   ],
+   "count": 4
+  },
+  {
+   "type": "meshgrad",
+   "x": 810,
+   "y": 90,
+   "w": 300,
+   "h": 230,
+   "shape": "squircle",
+   "radius": 56,
+   "grain": 0.15,
+   "blur": 40,
+   "colors": [
+    "#FFE08A",
+    "#9BE36B",
+    "#1F9D6B"
+   ],
+   "count": 4
+  },
+  {
+   "type": "meshgrad",
+   "x": 90,
+   "y": 360,
+   "w": 300,
+   "h": 230,
+   "shape": "squircle",
+   "radius": 56,
+   "grain": 0.15,
+   "blur": 40,
+   "colors": [
+    "#FFC2E0",
+    "#C77DFF",
+    "#5A3FD6"
+   ],
+   "count": 4
+  },
+  {
+   "type": "meshgrad",
+   "x": 450,
+   "y": 360,
+   "w": 300,
+   "h": 230,
+   "shape": "squircle",
+   "radius": 56,
+   "grain": 0.15,
+   "blur": 40,
+   "colors": [
+    "#FFD27A",
+    "#FF7A3D",
+    "#C8203A"
+   ],
+   "count": 4
+  },
+  {
+   "type": "meshgrad",
+   "x": 810,
+   "y": 360,
+   "w": 300,
+   "h": 230,
+   "shape": "squircle",
+   "radius": 56,
+   "grain": 0.15,
+   "blur": 40,
+   "colors": [
+    "#BFE9FF",
+    "#5BA8FF",
+    "#2B2F7A"
+   ],
+   "count": 4
+  },
+  {
+   "type": "label",
+   "text": "01 / sketch",
+   "x": 120,
+   "y": 296,
+   "size": 15,
+   "color": "#FFFFFF",
+   "anchor": "start"
+  },
+  {
+   "type": "label",
+   "text": "02 / ship",
+   "x": 480,
+   "y": 296,
+   "size": 15,
+   "color": "#FFFFFF",
+   "anchor": "start"
+  },
+  {
+   "type": "label",
+   "text": "03 / grow",
+   "x": 840,
+   "y": 296,
+   "size": 15,
+   "color": "#1B3A2A",
+   "anchor": "start"
+  },
+  {
+   "type": "label",
+   "text": "04 / team",
+   "x": 120,
+   "y": 566,
+   "size": 15,
+   "color": "#2A1A5A",
+   "anchor": "start"
+  },
+  {
+   "type": "label",
+   "text": "05 / scale",
+   "x": 480,
+   "y": 566,
+   "size": 15,
+   "color": "#FFFFFF",
+   "anchor": "start"
+  },
+  {
+   "type": "label",
+   "text": "06 / secure",
+   "x": 840,
+   "y": 566,
+   "size": 15,
+   "color": "#FFFFFF",
+   "anchor": "start"
+  }
+ ]
+}

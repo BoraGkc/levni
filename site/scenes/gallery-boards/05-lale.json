@@ -1,0 +1,24 @@
+{
+ "_meta": {
+  "title": "board: Lale, florist",
+  "alt": "A brand board for Lale, a florist, with a tulip mark in plum and coral"
+ },
+ "canvas": [
+  1500,
+  1000
+ ],
+ "quantize": true,
+ "brand": {
+  "name": "Lale",
+  "tagline": "Seasonal flowers, delivered same day",
+  "mark": "tulip",
+  "inks": [
+   "#4A1D3F",
+   "#F2705A",
+   "#F5B83D",
+   "#FBF2EA"
+  ],
+  "font": "serif",
+  "url": "lale.flowers"
+ }
+}

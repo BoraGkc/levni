@@ -97,6 +97,18 @@ const description = `Browse all ${props.length} drawings in the Levni Folio: ico
     <pre><code id="d-code"></code></pre>
   </dialog>
 
+  <section class="wrap beyond" aria-labelledby="beyond-title">
+    <div class="beyond-text">
+      <h2 id="beyond-title">Beyond drawings</h2>
+      <p>Every drawing here can also be the mark of a brand board, the middle of a seal, a die-cut sticker or a dot-matrix fill. Levni makes dither, mesh gradients, terrain and etching without any drawing at all.</p>
+      <p><a class="text-link" href="/features/#boards">Brand boards and assets</a> · <a class="text-link" href="/gallery/#brand">See them in the gallery</a></p>
+    </div>
+    <ul class="beyond-imgs">
+      <li><a href="/gallery/#stickers"><img src="/g/stickers/04-diecut-pack-s.webp" width="640" height="359" alt="Six library drawings with thick paper outlines like die-cut stickers" loading="lazy" decoding="async" /></a></li>
+      <li><a href="/gallery/#boards"><img src="/g/boards/03-firin-s.webp" width="640" height="427" alt="A brand board for a bakery with a loaf of bread from the library as its mark" loading="lazy" decoding="async" /></a></li>
+    </ul>
+  </section>
+
   <section class="wrap cta">
     <h2>Missing something?</h2>
     <p>The Folio grows with every pull request. Draw one object as SVG paths, check it with <code>npx levni check</code>, and send it.</p>
@@ -368,6 +380,13 @@ const description = `Browse all ${props.length} drawings in the Levni Folio: ico
   .custom input { width: 30px; height: 26px; padding: 0; border: 1px solid var(--rule); background: none; }
   .use-label { margin: 0 0 6px; font-size: 0.95rem; color: var(--ink-soft); }
 
+  .beyond { margin-top: 72px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 32px; align-items: center; border-top: 2px solid var(--ink); padding-top: 36px; }
+  .text-link { font-weight: 600; }
+  .beyond h2 { margin-top: 0; }
+  .beyond p { color: var(--ink-soft); }
+  .beyond-imgs { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1.3fr; gap: 14px; align-items: center; }
+  .beyond-imgs img { width: 100%; height: auto; border: 2px solid var(--ink); background: var(--paper-2); }
+  @media (max-width: 760px) { .beyond { grid-template-columns: minmax(0, 1fr); } }
   .cta { margin-top: 72px; text-align: center; }
   .cta p { color: var(--ink-soft); }
   .btn { display: inline-block; padding: 11px 20px; border: 2px solid var(--ink); color: var(--ink); text-decoration: none; font-size: 1.05rem; }

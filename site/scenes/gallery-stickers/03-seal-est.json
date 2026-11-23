@@ -1,0 +1,89 @@
+{
+ "_meta": {
+  "title": "seal: poster stamp",
+  "alt": "A poster with a large pale yellow disc, small marks and stars, and a round coral seal reading 2026 est. with Ortak Alan repeating around its ring"
+ },
+ "seed": 5,
+ "background": "paper",
+ "elements": [
+  {
+   "type": "disc",
+   "x": 170,
+   "y": 560,
+   "r": 210,
+   "color": "tone-mustard"
+  },
+  {
+   "type": "marks",
+   "area": [
+    40,
+    40,
+    470,
+    593
+   ],
+   "count": 7,
+   "colors": [
+    "coral",
+    "blue",
+    "mustard"
+   ]
+  },
+  {
+   "type": "label",
+   "x": 80,
+   "y": 90,
+   "text": "Ortak Alan / Atölye",
+   "size": 18
+  },
+  {
+   "type": "marks",
+   "area": [
+    1112,
+    40,
+    56,
+    593
+   ],
+   "count": 3,
+   "colors": [
+    "coral",
+    "blue",
+    "mustard"
+   ]
+  },
+  {
+   "type": "label",
+   "x": 80,
+   "y": 130,
+   "text": "Bağımsız yayın, sayı 01",
+   "size": 14,
+   "color": "blue"
+  },
+  {
+   "type": "seal",
+   "x": 800,
+   "y": 345,
+   "size": 470,
+   "edge": "scallop",
+   "fill": "coral",
+   "color": "ink",
+   "textColor": "ink",
+   "text": "ortak alan",
+   "sep": "✦",
+   "word": "2026",
+   "sub": "est.",
+   "wordColor": "paper",
+   "wordSize": 96
+  },
+  {
+   "type": "ringtext",
+   "x": 800,
+   "y": 345,
+   "r": 270,
+   "text": "small studio · big habits · made by hand",
+   "size": 17,
+   "repeat": true,
+   "sep": "•",
+   "color": "blue"
+  }
+ ]
+}

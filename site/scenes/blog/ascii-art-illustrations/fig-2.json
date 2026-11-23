@@ -1,0 +1,6 @@
+{ "seed": 5, "background": "dark", "finish": "soft", "grain": 0.025, "elements": [
+  { "type": "glyphfill", "prop": "rocket", "x": 300, "y": 336, "size": 440, "mode": "glyph", "cell": 9, "color": "mustard", "accent": "paper" },
+  { "type": "glyphfill", "prop": "rocket", "x": 900, "y": 336, "size": 440, "mode": "dot", "cell": 11, "color": "tone", "accent": "coral", "light": { "mode": "linear", "angle": 60, "from": 1, "to": 0.4 } },
+  { "type": "label", "x": 300, "y": 600, "text": "mode: glyph", "size": 18, "color": "paper", "upper": false, "anchor": "middle" },
+  { "type": "label", "x": 900, "y": 600, "text": "mode: dot", "size": 18, "color": "paper", "upper": false, "anchor": "middle" }
+]}

@@ -1,0 +1,28 @@
+{
+ "_meta": {
+  "title": "board: Ruzgar, sailing school",
+  "alt": "A brand board for Ruzgar, a sailing school, with a sailboat mark in teal and sand"
+ },
+ "canvas": [
+  1500,
+  1000
+ ],
+ "quantize": true,
+ "brand": {
+  "name": "Ruzgar",
+  "tagline": "Learn to sail on the Aegean",
+  "mark": "sailboat",
+  "inks": [
+   "#0B3C49",
+   "#E9A23B",
+   "#2A9D8F",
+   "#F2EBDD"
+  ],
+  "font": "sans",
+  "url": "ruzgar.sail",
+  "person": {
+   "name": "Can Yildiz",
+   "role": "Skipper"
+  }
+ }
+}

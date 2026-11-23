@@ -1,0 +1,8 @@
+{
+  "seed": 3,
+  "background": "dark",
+  "elements": [
+    {"type":"seal","x":360,"y":336,"size":460,"edge":"perforated","fill":"paper","color":"ink","top":"handmade in izmir","bottom":"since 2019","prop":"bread","rot":-6},
+    {"type":"seal","x":840,"y":336,"size":440,"edge":"scallop","fill":"coral","color":"ink","text":"open source","word":"100","sub":"percent","textColor":"paper","wordColor":"paper","rot":8}
+  ]
+}

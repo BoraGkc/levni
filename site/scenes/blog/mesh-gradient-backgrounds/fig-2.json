@@ -1,0 +1,11 @@
+{ "seed": 9, "finish": "soft", "background": "#14122B", "elements": [
+  { "type": "meshgrad", "x": 40, "y": 40, "w": 360, "h": 593, "grain": 0, "blur": 80, "base": "#1B1745",
+    "colors": ["#FF7A59", "#7A5CFF", "#2FD4FF"], "count": 4 },
+  { "type": "meshgrad", "x": 420, "y": 40, "w": 360, "h": 593, "grain": 0.35, "blur": 80, "base": "#1B1745",
+    "colors": ["#FF7A59", "#7A5CFF", "#2FD4FF"], "count": 4 },
+  { "type": "meshgrad", "x": 800, "y": 40, "w": 360, "h": 593, "grain": 0.8, "blur": 80, "base": "#1B1745",
+    "colors": ["#FF7A59", "#7A5CFF", "#2FD4FF"], "count": 4 },
+  { "type": "label", "text": "grain 0", "x": 70, "y": 590, "size": 18, "color": "#F4EFE4", "anchor": "start" },
+  { "type": "label", "text": "grain 0.35", "x": 450, "y": 590, "size": 18, "color": "#F4EFE4", "anchor": "start" },
+  { "type": "label", "text": "grain 0.8", "x": 830, "y": 590, "size": 18, "color": "#F4EFE4", "anchor": "start" }
+]}

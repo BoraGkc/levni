@@ -1,0 +1,93 @@
+{
+ "_meta": {
+  "title": "dither: pixel sunset",
+  "alt": "A dithered sunset: a blue-to-coral pixel sky, a mustard sun built from square cells, and a line-dithered dark band below"
+ },
+ "seed": 11,
+ "background": "dark",
+ "elements": [
+  {
+   "type": "dither",
+   "x": 0,
+   "y": 0,
+   "w": 1200,
+   "h": 470,
+   "colors": [
+    "blue",
+    "coral"
+   ],
+   "mode": "linear",
+   "angle": 90,
+   "from": 0.05,
+   "to": 1.05,
+   "cell": 8,
+   "matrix": 8
+  },
+  {
+   "type": "dither",
+   "x": 820,
+   "y": 400,
+   "r": 190,
+   "colors": [
+    "coral",
+    "mustard"
+   ],
+   "mode": "radial",
+   "cx": 820,
+   "cy": 260,
+   "radius": 330,
+   "from": 1,
+   "to": 0.42,
+   "cell": 8,
+   "matrix": 8
+  },
+  {
+   "type": "panel",
+   "x": 0,
+   "y": 470,
+   "w": 1200,
+   "h": 203,
+   "color": "dark"
+  },
+  {
+   "type": "dither",
+   "x": 0,
+   "y": 470,
+   "w": 1200,
+   "h": 203,
+   "color": "blue",
+   "mode": "linear",
+   "angle": 90,
+   "from": 0.55,
+   "to": 0,
+   "cell": 8,
+   "matrix": 8,
+   "pattern": "line"
+  },
+  {
+   "type": "label",
+   "text": "levni / dither",
+   "x": 64,
+   "y": 76,
+   "size": 18,
+   "color": "paper"
+  },
+  {
+   "type": "label",
+   "text": "ordered dither, from json",
+   "x": 64,
+   "y": 600,
+   "size": 18,
+   "color": "paper"
+  },
+  {
+   "type": "label",
+   "text": "bayer 8x8",
+   "x": 1136,
+   "y": 600,
+   "size": 18,
+   "color": "mustard",
+   "anchor": "end"
+  }
+ ]
+}

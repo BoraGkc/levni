@@ -1,0 +1,24 @@
+{
+ "_meta": {
+  "title": "board: Firin, bakery",
+  "alt": "A brand board for Firin, a neighbourhood bakery, with a loaf of bread as the mark in cocoa and honey"
+ },
+ "canvas": [
+  1500,
+  1000
+ ],
+ "quantize": true,
+ "brand": {
+  "name": "Firin",
+  "tagline": "Bread baked at five every morning",
+  "mark": "bread",
+  "inks": [
+   "#3B2415",
+   "#D98E2B",
+   "#B5452D",
+   "#F6ECD6"
+  ],
+  "font": "serif",
+  "url": "firin.bakery"
+ }
+}

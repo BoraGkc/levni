@@ -1,0 +1,17 @@
+{ "seed": 12, "background": "mustard", "elements": [
+ {"type":"marks","area":[40,40,1120,593],"count":9,"colors":["blue","coral","paper"]},
+ {"type":"stub","x":80,"y":150,"w":700,"h":380,"split":0.8,"fill":"paper","text":"Every 10th coffee is on us","textSize":44,"stubText":"card no. 0412","color":"ink"},
+ {"type":"label","x":124,"y":262,"text":"Kuru Fasulye Coffee · Kadıköy","size":17,"color":"blue"},
+ {"type":"disc","x":145,"y":414,"r":21,"color":"coral","outline":"ink","weight":5},
+ {"type":"disc","x":213,"y":414,"r":21,"color":"coral","outline":"ink","weight":5},
+ {"type":"disc","x":281,"y":414,"r":21,"color":"coral","outline":"ink","weight":5},
+ {"type":"disc","x":349,"y":414,"r":21,"color":"coral","outline":"ink","weight":5},
+ {"type":"disc","x":417,"y":414,"r":21,"color":"coral","outline":"ink","weight":5},
+ {"type":"disc","x":145,"y":472,"r":21,"color":"coral","outline":"ink","weight":5},
+ {"type":"disc","x":213,"y":472,"r":21,"color":"paper","outline":"ink","weight":5},
+ {"type":"disc","x":281,"y":472,"r":21,"color":"paper","outline":"ink","weight":5},
+ {"type":"disc","x":349,"y":472,"r":21,"color":"paper","outline":"ink","weight":5},
+ {"type":"disc","x":417,"y":472,"r":21,"color":"paper","outline":"ink","weight":5},
+ {"type":"seal","x":985,"y":350,"size":340,"edge":"scallop","fill":"coral","color":"ink","top":"coffee card","bottom":"loyalty","textColor":"paper","prop":"coffee-cup","rot":8},
+ {"type":"prop","name":"star","x":1100,"y":95,"size":100,"rot":14,"diecut":{"offset":12}}
+]}

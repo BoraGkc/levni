@@ -1,0 +1,9 @@
+{
+  "seed": 3,
+  "background": "dark",
+  "screen": "blueprint",
+  "elements": [
+    {"type":"prop","name":"lighthouse","x":420,"y":340,"size":560,"palette":"paper"},
+    {"type":"prop","name":"rocket","x":860,"y":330,"size":360,"rot":18,"palette":"paper"}
+  ]
+}

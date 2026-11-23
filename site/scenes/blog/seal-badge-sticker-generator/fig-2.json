@@ -1,0 +1,6 @@
+{ "seed": 14, "background": "blue", "elements": [
+ {"type":"seal","x":330,"y":336,"size":420,"edge":"scallop","fill":"paper","prop":"rocket","text":"small studio","sep":"*","ringColor":"ink"},
+ {"type":"seal","x":850,"y":336,"size":420,"edge":"perforated","fill":"mustard","prop":"star","top":"approved","bottom":"no. 07","spacing":4},
+ {"type":"label","x":330,"y":590,"text":"text: repeats and closes the ring","anchor":"middle","size":15,"color":"paper"},
+ {"type":"label","x":850,"y":590,"text":"top + bottom: two centred arcs","anchor":"middle","size":15,"color":"paper"}
+]}

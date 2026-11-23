@@ -21,6 +21,10 @@ const pixelTiles: Item[] = pixelProps.filter((_, i) => i % 7 === 0).slice(0, 66)
 });
 
 const intro: Record<string, [string, string, string]> = {
+  brand: ['Ordered dither fields, a print pass that reprints any scene as riso, gameboy, blueprint or newsprint, grainy mesh gradients with calm zones for text, and ASCII, block and dot-matrix fills of any drawing. Backgrounds, hero art and dev-tool cards, all from JSON.', doc('docs/scene.md#dither-recipes'), 'Dither, mesh gradient and glyph fill recipes'],
+  stickers: ['seal sets a scalloped, perforated or zigzag badge with ring text and a word or drawing in the middle; stub cuts a ticket; diecut gives any drawing a thick paper outline like a printed sticker.', doc('docs/scene.md#seal-recipes'), 'Seal recipes'],
+  lines: ['terrain draws wireframe hills with glowing streams, ridgelines stacks profile lines that hide each other, and engrave etches mountains, a moon or a radial field with lines whose thickness follows the tone.', doc('docs/scene.md#line-art-landscape-recipes'), 'Line-art landscape recipes'],
+  boards: ['One call, { "brand": { name, tagline, mark, inks } }, makes a nine-tile board: mark, wordmark, web page, palette, social card, tote, sticker, pattern and business card. The dialog shows the whole spec.', doc('docs/board.md'), 'Brand boards guide'],
   soft3d: ['A real little 3D renderer in plain JavaScript. "preset": "auto" with a seed composes a whole cover in one of five palettes (or yours), with room for a title and a badge. Neighbouring seeds always differ.', doc('docs/scene.md#soft-3d-v2-real-3d-shapes-use-with-finish-soft'), 'Soft 3D reference'],
   icons: ['extrude3d turns any of the Folio drawings into a thick, lit 3D icon: front colours kept, sides rounded and shaded, ink lines raised into a rim. Rotate it, recolour it, change its depth.', doc('docs/scene.md#soft-3d-v2-real-3d-shapes-use-with-finish-soft'), 'The extrude3d element'],
   worlds: ['One line, "preset": "cafe", lays out a seeded isometric world on a floating slab. Seven presets (room, desk, street, city, cafe, office, classroom), hand-inked or "style": "soft", in four palettes and every style pack.', doc('docs/scene.md#little-3d-worlds-iso'), 'Little 3D worlds reference'],
@@ -40,7 +44,7 @@ const large = (i: Item) => i.big || (i.src ? i.src : `/g/${i.group}/${i.id}.webp
 const json = (i: Item) => (i.code ? undefined : `/g/${i.group}/${i.id}.json`);
 const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= i.h ? 'square' : 'tall');
 ---
-<Base title="Gallery" description={`${total} images drawn by Levni from a JSON scene: soft 3D covers, 3D icons, isometric little worlds, pixel icons, hand-inked charts, riso and miniature covers, every social format. Open any one to copy its scene.`}>
+<Base title="Gallery" description={`${total} images drawn by Levni from a JSON scene: brand assets and brand boards, dither, mesh gradients, seals and stickers, etched terrain, soft 3D covers, 3D icons, isometric little worlds, pixel icons, hand-inked charts, riso and miniature covers, every social format. Open any one to copy its scene.`}>
   <div class="wrap head">
     <p class="eyebrow">Gallery · every image drawn by Levni</p>
     <h1>What one JSON scene <em class="accent">becomes</em>.</h1>
@@ -86,9 +90,9 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
       <div class="dlg-side">
         <h2 id="g-title"></h2>
         <p id="g-alt" class="dlg-alt"></p>
-        <div class="code-head"><span>scene.json</span><button type="button" id="g-copy" class="copy">Copy</button></div>
+        <div class="code-head"><span id="g-file">scene.json</span><button type="button" id="g-copy" class="copy">Copy</button></div>
         <pre><code id="g-code"></code></pre>
-        <p class="dlg-run">Render it: <code>npx levni render scene.json out.png</code></p>
+        <p class="dlg-run">Render it: <code id="g-run">npx levni render scene.json out.png</code></p>
       </div>
     </div>
   </dialog>
@@ -137,6 +141,9 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
       if (list[at] === a) code.textContent = cache.get(d.json!)!;
     }
     copy.textContent = 'Copy';
+    const board = d.big!.includes('/g/boards/');
+    document.getElementById('g-file')!.textContent = board ? 'board.json' : 'scene.json';
+    document.getElementById('g-run')!.textContent = board ? 'npx levni board board.json out.png' : 'npx levni render scene.json out.png';
     if (!dlg.open) dlg.showModal();
   }
   document.querySelector('main')!.addEventListener('click', (e) => {
@@ -186,6 +193,7 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
 
   .grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); }
   .grid-icons, .grid-formats { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+  .grid-boards { grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); }
   .grid-icons .wide { grid-column: span 2; }
   .grid-pixel { grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 10px; }
   .grid-pixel .wide { grid-column: 1 / -1; }
@@ -232,7 +240,7 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
     dialog pre { max-height: 40dvh; }
   }
   @media (max-width: 520px) {
-    .grid { grid-template-columns: minmax(0, 1fr); }
+    .grid, .grid-boards { grid-template-columns: minmax(0, 1fr); }
     .grid-icons, .grid-formats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
     .grid-pixel { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .tabs a { padding: 6px 12px; font-size: 0.9rem; }

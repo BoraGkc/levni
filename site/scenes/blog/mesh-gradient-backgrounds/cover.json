@@ -1,0 +1,12 @@
+{ "seed": 6, "finish": "soft", "background": "#14122B", "elements": [
+  { "type": "meshgrad", "x": 0, "y": 0, "w": 1200, "h": 673, "base": "#1B1745", "blur": 90, "grain": 0.2,
+    "stops": [
+      { "x": 0.12, "y": 0.2, "color": "#FF7A59", "r": 0.75 },
+      { "x": 0.45, "y": 0.95, "color": "#7A5CFF", "r": 0.8 },
+      { "x": 0.9, "y": 0.15, "color": "#2FD4FF", "r": 0.6 },
+      { "x": 0.85, "y": 0.9, "color": "#FF4FA3", "r": 0.55 },
+      { "x": 0.5, "y": 0.4, "color": "#3B2BB5", "r": 0.5 } ] },
+  { "type": "meshgrad", "x": 820, "y": 330, "r": 170, "preset": "orb", "grain": 0.45, "colors": ["#FFE58A", "#FFA23D", "#E0457B"], "count": 4 },
+  { "type": "meshgrad", "x": 560, "y": 440, "r": 80, "preset": "orb", "grain": 0.45, "colors": ["#7CF0D0", "#2A9DFF", "#2A2BA8"], "count": 4 },
+  { "type": "meshgrad", "x": 1010, "y": 520, "r": 56, "preset": "orb", "grain": 0.45, "colors": ["#D9B8FF", "#7A5CFF", "#1E1B6B"], "count": 4 }
+]}

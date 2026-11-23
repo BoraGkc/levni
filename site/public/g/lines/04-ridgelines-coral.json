@@ -1,0 +1,8 @@
+{
+  "seed": 4,
+  "background": "paper",
+  "elements": [
+    {"type":"ridgelines","x":80,"y":170,"w":1040,"h":430,"lines":42,"color":"coral","ground":"paper","height":0.42,"peaks":"noise","seed":7,"weight":2},
+    {"type":"label","text":"Weekly readers, 52 weeks","x":80,"y":96,"color":"ink","size":18}
+  ]
+}

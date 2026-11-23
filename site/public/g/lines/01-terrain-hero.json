@@ -1,0 +1,10 @@
+{
+  "seed": 4,
+  "background": "dark",
+  "elements": [
+    {"type":"terrain","x":0,"y":0,"w":1200,"h":673,"horizon":0.42,"rows":30,"cols":54,"height":0.24,"freq":1.6,"color":"tone","ground":"dark","flow":5,"flowColor":"mustard","glow":"coral","glowHeight":0.3,"seed":2},
+    {"type":"prop","name":"rocket","x":790,"y":282,"size":74,"rot":14},
+    {"type":"label","text":"Ortak Alan / Atölye","x":64,"y":70,"color":"paper"},
+    {"type":"label","text":"N 41.02  E 28.97","x":1136,"y":70,"anchor":"end","color":"tone"}
+  ]
+}

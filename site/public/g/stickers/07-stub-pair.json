@@ -1,0 +1,8 @@
+{
+  "seed": 14,
+  "background": "paper",
+  "elements": [
+    {"type":"stub","x":150,"y":120,"w":480,"h":190,"fill":"tone-green","split":0.72,"rot":-5,"text":"admit one","stubText":"no. 07"},
+    {"type":"stub","x":570,"y":360,"w":480,"h":190,"fill":"tone-coral","split":0.72,"rot":4,"text":"front row","stubText":"no. 12"}
+  ]
+}

@@ -1,0 +1,28 @@
+{
+ "_meta": {
+  "title": "board: Kule, a studio",
+  "alt": "A brand board for Kule, an architecture studio, with a house mark in deep navy and vivid pink"
+ },
+ "canvas": [
+  1500,
+  1000
+ ],
+ "quantize": true,
+ "brand": {
+  "name": "Kule",
+  "tagline": "Towers, bridges and small rooms",
+  "mark": "house",
+  "inks": [
+   "#10163A",
+   "#FF4F7B",
+   "#6C7BFF",
+   "#F3F1FA"
+  ],
+  "font": "mono",
+  "url": "kule.studio",
+  "person": {
+   "name": "Mert Aydin",
+   "role": "Principal"
+  }
+ }
+}

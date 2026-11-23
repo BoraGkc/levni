@@ -36,7 +36,21 @@ const reel = [
   item('charts', 'donut', 'Hand-inked data'),
   item('covers', 'slots-tv', 'Slots'),
   item('soft3d', 'auto-06', 'Soft 3D cover'),
+  item('brand', '01-dither-sunset', 'Dither'),
+  item('lines', '01-terrain-hero', 'Terrain'),
+  item('stickers', '01-seal-sheet', 'Seals and stickers'),
+  item('brand', '07-meshgrad-hero', 'Mesh gradient'),
+  item('lines', '05-engrave-poster', 'Etching'),
+  item('brand', '10-glyphfill-globe', 'ASCII art'),
 ];
+
+// Brand assets (0.2): drawn by Levni, linked to their gallery tabs
+const assets = [
+  { group: 'boards', id: '01-feneri', w: 640, h: 427, label: 'Brand board', text: 'Mark, wordmark, web page, palette, social card, tote, sticker, pattern and card from four fields.', blog: ['/blog/brand-board-generator/', 'Brand board generator'] },
+  { group: 'stickers', id: '01-seal-sheet', w: 640, h: 359, label: 'Seals and stickers', text: 'Scalloped and perforated seals, tickets and die-cut drawings.', blog: ['/blog/seal-badge-sticker-generator/', 'Seal and sticker generator'] },
+  { group: 'brand', id: '01-dither-sunset', w: 640, h: 359, label: 'Dither and mesh gradients', text: 'Pixel skies, print screens, grainy gradients and ASCII fills for backgrounds and hero art.', blog: ['/blog/dither-pixel-art-backgrounds/', 'Dither backgrounds'] },
+  { group: 'lines', id: '01-terrain-hero', w: 640, h: 359, label: 'Terrain and etching', text: 'Wireframe hills, ridgelines and pen-hatched landscapes.', blog: ['/blog/wireframe-terrain-engraving/', 'Terrain and engraving'] },
+].map((a) => ({ ...a, alt: (showcase.items as { group: string; id: string; alt: string }[]).find((i) => i.group === a.group && i.id === a.id)?.alt ?? a.label }));
 
 // The recolour demo: real per-variant SVGs from /props-svg, recoloured in the browser like a style pack
 const demo = [
@@ -108,6 +122,7 @@ const tools = [
   ['list_props', 'search the library by word, tag or shelf'],
   ['show_props', 'a contact sheet of drawings and their variants'],
   ['render_scene', 'draw a scene, return a preview and the critic’s notes'],
+  ['render_board', 'a whole brand board from a name, mark and inks'],
   ['critique_scene', 'only the notes, for quick iterations'],
   ['scene_guide', 'every element type, colour and style pack'],
 ];
@@ -128,7 +143,7 @@ const faq = [
   { q: 'How do AI agents use it?', a: 'An agent writes the scene JSON, renders it, and reads the layout critic’s notes (off-canvas elements, accidental crops, lopsided weight, no focal point) before a person looks. Because it is JSON in and image out, it maps directly onto an MCP tool.' },
   { q: 'What does it cost?', a: 'Nothing per image. Levni is MIT-licensed code that runs on your own machine or in CI. The Levni Folio drawings are CC BY 4.0: credit “drawings by Ortak Alan”.' },
   { q: 'Can it draw in my brand colours?', a: 'Yes. Set "style" to a map of your own inks, for example { "blue": "#6A1B9A", "mustard": "#00BFA5" }, and every drawing, panel and texture follows. Riso and miniature are the two built-in packs.' },
-  { q: 'Is there an MCP server?', a: 'Yes: run npx levni mcp. It gives assistants five tools: the scene guide, library search, a contact sheet of props, render with preview, and the critic. Agents without MCP use the same engine through the CLI.' },
+  { q: 'Is there an MCP server?', a: 'Yes: run npx levni mcp. It gives assistants six tools: the scene guide, library search, a contact sheet of props, render with preview, brand boards, and the critic. Agents without MCP use the same engine through the CLI.' },
 ];
 
 const jsonld = [
@@ -156,7 +171,7 @@ const star = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
     <div class="wrap hero-head">
       <p class="pill"><span class="dot" aria-hidden="true"></span> Open source · MCP-ready · free</p>
       <h1>Illustrations your <em>agent</em> can draw.</h1>
-      <p class="lede">{SITE.props.toLocaleString('en')} hand-inked drawings and an engine that turns a few lines of JSON into covers, 3D icons, little isometric worlds and charts. No image model, no API key.</p>
+      <p class="lede">{SITE.props.toLocaleString('en')} hand-inked drawings and an engine that turns a few lines of JSON into covers, 3D icons, little isometric worlds, charts and brand assets, from dithered backgrounds to whole brand boards. No image model, no API key.</p>
       <div class="ctas">
         <a class="btn btn-primary" href="/gallery/">See what it draws</a>
         <a class="btn" href="/mcp/">Add it to Claude</a>
@@ -238,6 +253,23 @@ const star = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
     </div>
   </section>
 
+  <!-- 4b. Brand assets (0.2) -->
+  <section id="brand" class="brand wrap" aria-labelledby="brand-title">
+    <div class="split-head">
+      <h2 id="brand-title">Brand assets, not only drawings.</h2>
+      <p>New in 0.2: backgrounds, badges and whole identity boards from the same JSON. <a href="/blog/levni-brand-assets/">What is new</a> · <a href="/features/#dither">Features</a></p>
+    </div>
+    <ul class="assets">
+      {assets.map((a) => (
+        <li>
+          <a href={`/gallery/#${a.group}`}><img src={`/g/${a.group}/${a.id}-s.webp`} width={a.w} height={a.h} alt={a.alt} loading="lazy" decoding="async" /></a>
+          <h3>{a.label}</h3>
+          <p>{a.text} <a href={a.blog[0]}>{a.blog[1]}</a></p>
+        </li>
+      ))}
+    </ul>
+  </section>
+
   <!-- 5. Proof: real covers -->
   <section id="gallery" class="gallery wrap" aria-labelledby="gallery-title">
     <div class="split-head">
@@ -258,7 +290,7 @@ const star = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
   <section id="agents" class="agents wrap" aria-labelledby="agents-title">
     <div class="agents-text">
       <h2 id="agents-title">Give your agent an illustrator.</h2>
-      <p>One MCP server, five tools (three more for Ghost). The agent searches the library, writes the scene, reads the critic and saves the file, without a person in the loop until the picture is right.</p>
+      <p>One MCP server, six tools (three more for Ghost). The agent searches the library, writes the scene or a brand board, reads the critic and saves the file, without a person in the loop until the picture is right.</p>
       <dl class="tools">
         {tools.map(([name, what]) => (<><dt><code>{name}</code></dt><dd>{what}</dd></>))}
       </dl>
@@ -485,6 +517,14 @@ const star = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
   .steps strong { color: var(--ink); }
 
   /* gallery */
+  .brand { margin-top: clamp(64px, 8vw, 104px); }
+  .assets { list-style: none; padding: 0; margin: 32px 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+  .assets img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border: 2px solid var(--ink); background: var(--paper-2); }
+  .assets a:hover img { box-shadow: 5px 5px 0 var(--accent); }
+  .assets h3 { font-size: 1.15rem; margin: 12px 0 4px; }
+  .assets p { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
+  @media (max-width: 900px) { .assets { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 480px) { .assets { grid-template-columns: minmax(0, 1fr); } }
   .split-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
   .split-head h2 { margin: 0; }
   .split-head p { margin: 0; color: var(--ink-soft); max-width: 40ch; }

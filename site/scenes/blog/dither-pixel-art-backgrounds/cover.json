@@ -1,0 +1,7 @@
+{ "seed": 11, "background": "dark", "elements": [
+  { "type": "dither", "x": 0, "y": 0, "w": 1200, "h": 470, "colors": ["blue", "coral"], "mode": "linear", "angle": 90, "from": 0.05, "to": 1.05, "cell": 8, "matrix": 8 },
+  { "type": "dither", "x": 760, "y": 400, "r": 190, "colors": ["coral", "mustard"], "mode": "radial", "cx": 760, "cy": 260, "radius": 330, "from": 1, "to": 0.42, "cell": 8, "matrix": 8 },
+  { "type": "panel", "x": 0, "y": 470, "w": 1200, "h": 203, "color": "dark" },
+  { "type": "dither", "x": 0, "y": 470, "w": 1200, "h": 203, "color": "blue", "mode": "linear", "angle": 90, "from": 0.55, "to": 0, "cell": 8, "matrix": 8, "pattern": "line" },
+  { "type": "prop", "name": "rocket", "x": 420, "y": 290, "size": 330, "rot": 24, "shadow": true }
+]}

@@ -1,0 +1,77 @@
+{
+ "_meta": {
+  "title": "dither: square, dot, plus",
+  "alt": "Three tall dither fields side by side: blue squares fading down, coral dots fading out from the centre, mustard and green plus signs in noise"
+ },
+ "seed": 4,
+ "background": "paper",
+ "elements": [
+  {
+   "type": "dither",
+   "x": 64,
+   "y": 96,
+   "w": 330,
+   "h": 430,
+   "color": "blue",
+   "mode": "linear",
+   "angle": 90,
+   "from": 1,
+   "to": 0,
+   "cell": 12,
+   "matrix": 4
+  },
+  {
+   "type": "dither",
+   "x": 435,
+   "y": 96,
+   "w": 330,
+   "h": 430,
+   "color": "coral",
+   "mode": "radial",
+   "from": 1,
+   "to": 0,
+   "cell": 14,
+   "matrix": 4,
+   "pattern": "dot"
+  },
+  {
+   "type": "dither",
+   "x": 806,
+   "y": 96,
+   "w": 330,
+   "h": 430,
+   "colors": [
+    "mustard",
+    "green"
+   ],
+   "mode": "noise",
+   "scale": 0.008,
+   "from": 0,
+   "to": 2,
+   "cell": 12,
+   "matrix": 4,
+   "pattern": "plus"
+  },
+  {
+   "type": "label",
+   "text": "01 / square",
+   "x": 64,
+   "y": 568,
+   "size": 17
+  },
+  {
+   "type": "label",
+   "text": "02 / dot",
+   "x": 435,
+   "y": 568,
+   "size": 17
+  },
+  {
+   "type": "label",
+   "text": "03 / plus, two inks",
+   "x": 806,
+   "y": 568,
+   "size": 17
+  }
+ ]
+}
