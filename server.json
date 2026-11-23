@@ -1,18 +1,18 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "dev.levni/levni",
-  "description": "Hand-inked illustrations, 3D covers and icons from JSON scenes. 1,600+ drawings, free and local.",
+  "description": "Hand-inked illustrations, brand assets and brand boards from JSON scenes. 1,600+ drawings, free and local.",
   "repository": {
     "url": "https://github.com/BoraGkc/levni",
     "source": "github",
     "id": "1467843747"
   },
-  "version": "0.1.0",
+  "version": "0.2.0",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "@levni/levni",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "transport": {
         "type": "stdio"
       },

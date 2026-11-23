@@ -1,7 +1,7 @@
 // Levni as an MCP server over stdio (newline-delimited JSON-RPC 2.0). No SDK dependency: the protocol
 // surface Levni needs is small (initialize, ping, tools/list, tools/call).
 //   npx levni mcp
-// Tools: scene_guide, list_props, render_scene, critique_scene, show_props;
+// Tools: scene_guide, list_props, render_scene, critique_scene, show_props, render_board;
 // plus ghost_drafts, ghost_preview, ghost_apply when Ghost credentials are in the environment (mcp-ghost.mjs).
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, resolve, extname } from 'node:path';
@@ -18,6 +18,7 @@ import { GHOST_TOOLS, ghostEnabled, callGhost } from './mcp-ghost.mjs';
 const PROTOCOLS = ['2025-06-18', '2025-03-26', '2024-11-05'];
 const VERSION = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8')).version;
 const GUIDE = new URL('../docs/scene.md', import.meta.url);
+const BOARD_GUIDE = new URL('../docs/board.md', import.meta.url);
 
 const scene = { type: 'object', description: 'A Levni scene: { seed?, style?, background?, elements: [...] }. Canvas is 1200 x 673. Besides drawings (props) it makes brand assets: dither fields, grainy mesh gradients, ASCII/glyph fills, seals and stickers with ring text, wireframe terrain and engravings, and a `screen` print pass (1bit, riso, blueprint, gameboy, newsprint). `style` is \"riso\", \"miniature\" or your own inks, e.g. {\"blue\":\"#6A1B9A\",\"mustard\":\"#00BFA5\"}. Call scene_guide for every element type.' };
 export const TOOLS = [
@@ -63,6 +64,19 @@ export const TOOLS = [
       type: 'object',
       properties: { names: { type: 'array', items: { type: 'string' }, description: 'Prop names from list_props.' } },
       required: ['names'],
+    },
+  },
+  {
+    name: 'render_board',
+    description: 'Make a brand board: one image with a mark, wordmark, palette, web page, social card, tote, sticker, pattern and business card. Shortest form: { "brand": { "name", "tagline", "mark": <prop name from list_props>, "inks": ["#RRGGBB", ...] } }. Or place tiles yourself: { "grid": {cols, rows}, "tiles": [{ "at": [col, row, colspan, rowspan], "scene": {...} | "palette" | "type", "mockup": "browser"|"card"|"tote"|"phone" }] }. Set guide: true to get the full board format instead of rendering.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        spec: { type: 'object', description: 'Board spec, or { brand: {...} }.' },
+        out: { type: 'string', description: 'PNG path to write, relative to the server\'s working directory.' },
+        preview: { type: 'boolean', description: 'Return a 900 px preview image (default true).' },
+        guide: { type: 'boolean', description: 'Return the board format (docs/board.md) and do nothing else.' },
+      },
     },
   },
 ];
@@ -116,6 +130,23 @@ async function call(name, args = {}) {
       out.push(text(`wrote ${file}`));
     }
     if (args.preview !== false) out.push(image(await preview(svg, 560, scene.screen)));
+    return out;
+  }
+
+  if (name === 'render_board') {
+    if (args.guide) return [text(readFileSync(BOARD_GUIDE, 'utf8'))];
+    const spec = asScene(args.spec);
+    if (!spec || typeof spec !== 'object') throw new Error('render_board needs a spec (or guide: true)');
+    const { renderBoard } = await import('./board.mjs');
+    let file = null;
+    if (args.out) {
+      file = resolve(String(args.out));
+      if (extname(file).toLowerCase() !== '.png') throw new Error('out must end in .png');
+      mkdirSync(dirname(file), { recursive: true });
+    }
+    const { png, width, height } = await renderBoard(spec, file);
+    const out = [text(`board ${width} x ${height}${file ? `, wrote ${file}` : ''}`)];
+    if (args.preview !== false) out.push(image(await sharp(png).resize(900).png({ compressionLevel: 9, palette: true }).toBuffer()));
     return out;
   }
 

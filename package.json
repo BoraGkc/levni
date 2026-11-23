@@ -1,6 +1,6 @@
 {
   "name": "@levni/levni",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "mcpName": "dev.levni/levni",
   "description": "Hand-inked, riso-printed illustrations from JSON scenes. Design assets for agents and publishers. Powered by Ortak Alan.",
   "type": "module",
@@ -34,6 +34,7 @@
     "README.md",
     "adapters/",
     "bin/",
+    "docs/board.md",
     "docs/ghost.md",
     "docs/judge.md",
     "docs/prop-prompt.md",

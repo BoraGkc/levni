@@ -27,7 +27,7 @@ assert.equal(init.result.serverInfo.name, 'levni');
 child.stdin.write(`${JSON.stringify({ jsonrpc: '2.0', method: 'notifications/initialized' })}\n`);
 
 const names = (await rpc('tools/list')).result.tools.map((t) => t.name);
-assert.deepEqual(names, ['scene_guide', 'list_props', 'render_scene', 'critique_scene', 'show_props']);
+assert.deepEqual(names, ['scene_guide', 'list_props', 'render_scene', 'critique_scene', 'show_props', 'render_board']);
 
 assert.match((await tool('scene_guide')).content[0].text, /# Scene format/);
 assert.match((await tool('list_props', { query: 'cat' })).content[0].text, /^cat \(/m);
@@ -41,6 +41,17 @@ const r = await tool('render_scene', { scene, out: join(dir, 'cover.webp') });
 assert.ok(!r.isError, r.content[0].text);
 assert.equal(r.content.at(-1).type, 'image');
 assert.ok(existsSync(join(dir, 'cover.webp')));
+// brand assets: a screened scene previews and writes; a one-call brand board renders
+const screened = await tool('render_scene', { scene: { seed: 2, screen: 'riso', elements: [{ type: 'dither', x: 0, y: 0, w: 1200, h: 673, colors: ['blue', 'coral'] }] }, out: join(dir, 'riso.png') });
+assert.ok(!screened.isError, screened.content[0].text);
+assert.ok(existsSync(join(dir, 'riso.png')));
+const board = await tool('render_board', { spec: { brand: { name: 'Feneri', tagline: 'Slow ferries', mark: 'lighthouse', inks: ['#14213D', '#FCA311'] } }, out: join(dir, 'board.png') });
+assert.ok(!board.isError, board.content[0].text);
+assert.match(board.content[0].text, /^board \d+ x \d+/);
+assert.equal(board.content.at(-1).type, 'image');
+assert.ok(existsSync(join(dir, 'board.png')));
+assert.match((await tool('render_board', { guide: true })).content[0].text, /# Brand boards/);
+assert.equal((await tool('render_board', { spec: { brand: { name: 'X', mark: 'no-such-prop' } } })).isError, true);
 rmSync(dir, { recursive: true });
 
 assert.equal((await tool('critique_scene', { scene: JSON.stringify(scene) })).content.length, 1);
@@ -51,4 +62,4 @@ assert.equal((await tool('render_scene', { scene: '{oops' })).isError, true);
 assert.equal((await rpc('nope')).error.code, -32601);
 
 child.kill();
-console.log('mcp: handshake and 5 tools ok');
+console.log('mcp: handshake and 6 tools ok');
