@@ -1,0 +1,61 @@
+{
+  "name": "umbrella-closed",
+  "tags": [
+    "sensitive",
+    "umbrella",
+    "şemsiye",
+    "closed",
+    "kapalı",
+    "rain",
+    "yağmur",
+    "waiting",
+    "bekleme",
+    "shelter",
+    "sığınak"
+  ],
+  "variants": [
+    {
+      "note": "furled umbrella standing upright",
+      "paths": [
+        {
+          "d": "M50 6 Q28 38 36 68 L64 68 Q72 38 50 6 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M50 10 L50 66",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M46 22 Q43 44 46 64",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M54 22 Q57 44 54 64",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M36 56 L64 56 L64 62 L36 62 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M50 68 L50 84",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M50 84 Q50 94 41 92 Q36 90 38 84",
+          "stroke": "ink",
+          "weight": 9
+        }
+      ]
+    }
+  ],
+  "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

@@ -1,0 +1,76 @@
+{
+  "name": "tealight-bowl",
+  "tags": [
+    "sensitive",
+    "candles",
+    "water",
+    "floating",
+    "anma",
+    "mum",
+    "vigil",
+    "memorial",
+    "grief",
+    "kayıp",
+    "su"
+  ],
+  "variants": [
+    {
+      "note": "shallow bowl with three floating candles",
+      "paths": [
+        {
+          "d": "M10 52 Q14 84 50 86 Q86 84 90 52 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M10 52 L90 52",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M22 52 L38 52 L36 58 L24 58 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M30 32 Q23.7 41.8 30 48.8 Q36.3 41.8 30 32Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M42 56 L60 56 L58 64 L44 64 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M51 34 Q43.8 45.2 51 53.2 Q58.2 45.2 51 34Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M64 52 L78 52 L76 58 L66 58 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M71 33 Q64.7 42.8 71 49.8 Q77.3 42.8 71 33Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M28 74 Q50 80 72 74",
+          "stroke": "paper",
+          "weight": 4
+        }
+      ]
+    }
+  ],
+  "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

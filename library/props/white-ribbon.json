@@ -1,0 +1,44 @@
+{
+  "name": "white-ribbon",
+  "tags": [
+    "sensitive",
+    "ribbon",
+    "kurdele",
+    "awareness",
+    "farkındalık",
+    "mourning",
+    "yas",
+    "memorial",
+    "anma",
+    "solidarity",
+    "dayanışma",
+    "illness"
+  ],
+  "variants": [
+    {
+      "note": "awareness ribbon, white",
+      "paths": [
+        {
+          "d": "M50 12 Q28 12 28 34 Q28 48 42 58 L26 90 L42 86 L52 70 L58 88 L74 92 L58 58 Q72 48 72 34 Q72 12 50 12 Z M50 24 Q40 24 40 34 Q40 42 50 52 Q60 42 60 34 Q60 24 50 24 Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 7,
+          "rule": "evenodd"
+        }
+      ]
+    },
+    {
+      "note": "mourning ribbon, black",
+      "paths": [
+        {
+          "d": "M50 12 Q28 12 28 34 Q28 48 42 58 L26 90 L42 86 L52 70 L58 88 L74 92 L58 58 Q72 48 72 34 Q72 12 50 12 Z M50 24 Q40 24 40 34 Q40 42 50 52 Q60 42 60 34 Q60 24 50 24 Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 7,
+          "rule": "evenodd"
+        }
+      ]
+    }
+  ],
+  "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

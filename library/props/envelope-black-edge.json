@@ -1,0 +1,48 @@
+{
+  "name": "envelope-black-edge",
+  "tags": [
+    "sensitive",
+    "letter",
+    "mektup",
+    "envelope",
+    "zarf",
+    "mourning",
+    "yas",
+    "obituary",
+    "vefat",
+    "condolence",
+    "taziye",
+    "news",
+    "notice"
+  ],
+  "variants": [
+    {
+      "note": "letter with a black mourning border",
+      "paths": [
+        {
+          "d": "M10 24 L90 24 L90 78 L10 78 Z",
+          "fill": "ink",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M16 30 L84 30 L84 72 L16 72 Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M16 30 L50 56 L84 30",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M16 72 L40 50 M84 72 L60 50",
+          "stroke": "ink",
+          "weight": 3
+        }
+      ]
+    }
+  ],
+  "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

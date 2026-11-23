@@ -1,0 +1,138 @@
+{
+  "name": "single-flower",
+  "tags": [
+    "sensitive",
+    "flower",
+    "çiçek",
+    "white flower",
+    "anma",
+    "memorial",
+    "grief",
+    "yas",
+    "tribute",
+    "hospital",
+    "get well"
+  ],
+  "variants": [
+    {
+      "note": "one white flower, long stem, two leaves",
+      "paths": [
+        {
+          "d": "M50 40 Q46 66 50 92",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M49 80 Q35.1 80.1 28.2 68 Q42.1 67.9 49 80Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M49 68 Q55.9 55.9 69.8 56 Q62.9 68.1 49 68Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M50 30 Q62 22.3 74 30 Q62 37.7 50 30Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M50 30 Q63.9 33.1 67 47 Q53.1 43.9 50 30Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M50 30 Q57.7 42 50 54 Q42.3 42 50 30Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M50 30 Q46.9 43.9 33 47 Q36.1 33.1 50 30Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M50 30 Q38 37.7 26 30 Q38 22.3 50 30Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M50 30 Q36.1 26.9 33 13 Q46.9 16.1 50 30Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M50 30 Q42.3 18 50 6 Q57.7 18 50 30Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M50 30 Q53.1 16.1 67 13 Q63.9 26.9 50 30Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M43.28 30 a6.720000000000001 6.720000000000001 0 1 0 13.440000000000001 0 a6.720000000000001 6.720000000000001 0 1 0 -13.440000000000001 0Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 4
+        }
+      ]
+    },
+    {
+      "note": "drooping bell flower on a bent stem",
+      "paths": [
+        {
+          "d": "M62 92 Q64 50 44 28",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M63 84 Q71.4 71.3 86.6 73 Q78.2 85.8 63 84Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M62 70 Q49.3 72.8 41.3 62.5 Q54.1 59.7 62 70Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M26 30 Q24 56 42 58 Q60 56 58 30 Q42 18 26 30Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M42 24 L42 52",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M33 28 L32 48",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M51 28 L52 48",
+          "stroke": "ink",
+          "weight": 4
+        }
+      ]
+    }
+  ],
+  "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

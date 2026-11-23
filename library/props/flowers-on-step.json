@@ -1,0 +1,179 @@
+{
+  "name": "flowers-on-step",
+  "tags": [
+    "sensitive",
+    "flowers",
+    "çiçekler",
+    "step",
+    "basamak",
+    "anma",
+    "memorial",
+    "tribute",
+    "grief",
+    "yas",
+    "tragedy",
+    "laid flowers"
+  ],
+  "variants": [
+    {
+      "note": "small bouquet laid on a stone step",
+      "paths": [
+        {
+          "d": "M10 66 L84 66 L94 76 L6 76 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 7
+        },
+        {
+          "d": "M6 76 L94 76 L94 92 L6 92 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 7
+        },
+        {
+          "d": "M30 56 L70 70",
+          "stroke": "ink",
+          "weight": 7
+        },
+        {
+          "d": "M32 50 L66 66",
+          "stroke": "ink",
+          "weight": 6
+        },
+        {
+          "d": "M64 60 L80 66 L76 74 L62 70 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M26 50 Q33.5 45.2 41 50 Q33.5 54.8 26 50Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M26 50 Q33.9 54.1 33.5 63 Q25.6 58.9 26 50Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M26 50 Q26.4 58.9 18.5 63 Q18.1 54.1 26 50Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M26 50 Q18.5 54.8 11 50 Q18.5 45.2 26 50Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M26 50 Q18.1 45.9 18.5 37 Q26.4 41.1 26 50Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M26 50 Q25.6 41.1 33.5 37 Q33.9 45.9 26 50Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M21.8 50 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M40 42 Q47 37.5 54 42 Q47 46.5 40 42Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M40 42 Q47.4 45.8 47 54.1 Q39.6 50.3 40 42Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M40 42 Q40.4 50.3 33 54.1 Q32.6 45.8 40 42Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M40 42 Q33 46.5 26 42 Q33 37.5 40 42Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M40 42 Q32.6 38.2 33 29.9 Q40.4 33.7 40 42Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M40 42 Q39.6 33.7 47 29.9 Q47.4 38.2 40 42Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M36.08 42 a3.9200000000000004 3.9200000000000004 0 1 0 7.840000000000001 0 a3.9200000000000004 3.9200000000000004 0 1 0 -7.840000000000001 0Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M18 64 Q24 60.2 30 64 Q24 67.8 18 64Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M18 64 Q24.3 67.3 24 74.4 Q17.7 71.1 18 64Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M18 64 Q18.3 71.1 12 74.4 Q11.7 67.3 18 64Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M18 64 Q12 67.8 6 64 Q12 60.2 18 64Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M18 64 Q11.7 60.7 12 53.6 Q18.3 56.9 18 64Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M18 64 Q17.7 56.9 24 53.6 Q24.3 60.7 18 64Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M14.64 64 a3.3600000000000003 3.3600000000000003 0 1 0 6.720000000000001 0 a3.3600000000000003 3.3600000000000003 0 1 0 -6.720000000000001 0Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 4
+        }
+      ]
+    }
+  ],
+  "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

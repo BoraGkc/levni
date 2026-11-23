@@ -1,0 +1,149 @@
+{
+  "name": "candle-group",
+  "tags": [
+    "sensitive",
+    "candles",
+    "mum",
+    "anma",
+    "vigil",
+    "memorial",
+    "grief",
+    "yas",
+    "kayıp",
+    "nöbet"
+  ],
+  "variants": [
+    {
+      "note": "three candles of different heights",
+      "paths": [
+        {
+          "d": "M8 92 L92 92",
+          "stroke": "ink",
+          "weight": 6
+        },
+        {
+          "d": "M20 56 L36 56 L36 90 L20 90 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 7
+        },
+        {
+          "d": "M28 32 Q19.9 44.6 28 53.6 Q36.1 44.6 28 32Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M42 40 L58 40 L58 90 L42 90 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 7
+        },
+        {
+          "d": "M50 14 Q41 28 50 38 Q59 28 50 14Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M64 62 L80 62 L80 90 L64 90 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 7
+        },
+        {
+          "d": "M72 38 Q63.9 50.6 72 59.6 Q80.1 50.6 72 38Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M28 56 L28 52",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M50 40 L50 36",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M72 62 L72 58",
+          "stroke": "ink",
+          "weight": 4
+        }
+      ]
+    },
+    {
+      "note": "five jar candles in a row",
+      "paths": [
+        {
+          "d": "M6 92 L94 92",
+          "stroke": "ink",
+          "weight": 6
+        },
+        {
+          "d": "M7 60 L7 90 L21 90 L21 60 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 6
+        },
+        {
+          "d": "M14 38 Q8.600000000000001 46.4 14 52.4 Q19.4 46.4 14 38Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M25 54 L25 90 L39 90 L39 54 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 6
+        },
+        {
+          "d": "M32 32 Q26.6 40.4 32 46.4 Q37.4 40.4 32 32Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M43 48 L43 90 L57 90 L57 48 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 6
+        },
+        {
+          "d": "M50 26 Q44.6 34.4 50 40.4 Q55.4 34.4 50 26Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M61 56 L61 90 L75 90 L75 56 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 6
+        },
+        {
+          "d": "M68 34 Q62.6 42.4 68 48.4 Q73.4 42.4 68 34Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M79 62 L79 90 L93 90 L93 62 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 6
+        },
+        {
+          "d": "M86 40 Q80.6 48.4 86 54.4 Q91.4 48.4 86 40Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 5
+        }
+      ]
+    }
+  ],
+  "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

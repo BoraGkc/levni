@@ -1,0 +1,103 @@
+{
+  "name": "empty-chair",
+  "tags": [
+    "sensitive",
+    "chair",
+    "sandalye",
+    "empty",
+    "boş",
+    "absence",
+    "loss",
+    "kayıp",
+    "missing",
+    "grief",
+    "yas"
+  ],
+  "variants": [
+    {
+      "note": "plain wooden chair, front view",
+      "paths": [
+        {
+          "d": "M32 60 L30 92",
+          "stroke": "ink",
+          "weight": 9
+        },
+        {
+          "d": "M68 60 L70 92",
+          "stroke": "ink",
+          "weight": 9
+        },
+        {
+          "d": "M34 58 L33 12",
+          "stroke": "ink",
+          "weight": 9
+        },
+        {
+          "d": "M66 58 L67 12",
+          "stroke": "ink",
+          "weight": 9
+        },
+        {
+          "d": "M30 10 L70 10 L70 20 L30 20 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 7
+        },
+        {
+          "d": "M34 32 L66 32",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M34 44 L66 44",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M24 58 L76 58 L78 68 L22 68 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 8
+        }
+      ]
+    },
+    {
+      "note": "side view, one chair, shadow",
+      "paths": [
+        {
+          "d": "M26 92 Q50 98 78 92 Q50 88 26 92Z",
+          "fill": "tone",
+          "stroke": "none"
+        },
+        {
+          "d": "M30 62 L26 92",
+          "stroke": "ink",
+          "weight": 9
+        },
+        {
+          "d": "M70 62 L74 92",
+          "stroke": "ink",
+          "weight": 9
+        },
+        {
+          "d": "M28 14 L38 14 L44 60 L34 60 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M32 34 L40 34",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M30 58 L74 58 L74 68 L30 68 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 8
+        }
+      ]
+    }
+  ],
+  "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

@@ -1,0 +1,59 @@
+{
+  "name": "folded-flag",
+  "tags": [
+    "sensitive",
+    "flag",
+    "bayrak",
+    "folded",
+    "katlanmış",
+    "memorial",
+    "anma",
+    "state funeral",
+    "tribute",
+    "mourning",
+    "yas"
+  ],
+  "variants": [
+    {
+      "note": "triangular fold, plain stripes, no emblem",
+      "paths": [
+        {
+          "d": "M10 28 L30 33.5 L30 66.5 L10 72 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M30 33.5 L50 39 L50 61 L30 66.5 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M50 39 L70 44.5 L70 55.5 L50 61 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M70 44.5 L90 50 L90 50 L70 55.5 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M10 28 L90 50 L10 72 Z",
+          "fill": "none",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M10 28 L10 72",
+          "stroke": "ink",
+          "weight": 8
+        }
+      ]
+    }
+  ],
+  "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

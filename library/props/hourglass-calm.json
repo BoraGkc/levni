@@ -1,0 +1,58 @@
+{
+  "name": "hourglass-calm",
+  "tags": [
+    "sensitive",
+    "hourglass",
+    "kum saati",
+    "time",
+    "zaman",
+    "waiting",
+    "bekleme",
+    "patience",
+    "sabır",
+    "grief",
+    "yas",
+    "court"
+  ],
+  "variants": [
+    {
+      "note": "hourglass, sand mostly settled",
+      "paths": [
+        {
+          "d": "M30 14 L70 14 Q70 38 54 50 Q70 62 70 86 L30 86 Q30 62 46 50 Q30 38 30 14Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 7
+        },
+        {
+          "d": "M38 22 L62 22 Q60 32 52 44 L48 44 Q40 32 38 22Z",
+          "fill": "tone",
+          "stroke": "none"
+        },
+        {
+          "d": "M32 84 Q50 62 68 84 L68 85 L32 85Z",
+          "fill": "tone",
+          "stroke": "none"
+        },
+        {
+          "d": "M50 46 L50 66",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M22 6 L78 6 L78 14 L22 14 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 7
+        },
+        {
+          "d": "M22 86 L78 86 L78 94 L22 94 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 7
+        }
+      ]
+    }
+  ],
+  "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

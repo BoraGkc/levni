@@ -85,6 +85,8 @@ An optional, pluggable judge rates renders against a brief, so an agent can pick
 - **Tabler Icons** are MIT (Paweł Kuna), an optional peer dependency, not shipped in this package.
 - Images you render are yours; the CC BY credit applies when they contain library props.
 
+Sensitive stories (loss, disaster, illness, courts, grief): a calm blue-palette prop pack and how to use it is in [`docs/sensitive.md`](docs/sensitive.md).
+
 ## Submit to the Folio
 
 Short version below; the full guide is [CONTRIBUTING.md](CONTRIBUTING.md).

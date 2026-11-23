@@ -1,0 +1,55 @@
+{
+  "name": "open-book-blank",
+  "tags": [
+    "sensitive",
+    "book",
+    "kitap",
+    "open",
+    "açık",
+    "blank",
+    "boş sayfa",
+    "story",
+    "hikaye",
+    "memory",
+    "anı",
+    "remembrance",
+    "condolence",
+    "taziye"
+  ],
+  "variants": [
+    {
+      "note": "open book with blank pages",
+      "paths": [
+        {
+          "d": "M6 34 L6 84 Q30 78 50 88 Q70 78 94 84 L94 34 Z",
+          "fill": "blue",
+          "stroke": "ink",
+          "weight": 7
+        },
+        {
+          "d": "M12 28 Q30 24 50 34 L50 82 Q30 72 12 76 Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 7
+        },
+        {
+          "d": "M88 28 Q70 24 50 34 L50 82 Q70 72 88 76 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 7
+        },
+        {
+          "d": "M50 34 L50 82",
+          "stroke": "ink",
+          "weight": 5
+        },
+        {
+          "d": "M16 80 Q30 76 46 86",
+          "stroke": "tone",
+          "weight": 4
+        }
+      ]
+    }
+  ],
+  "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

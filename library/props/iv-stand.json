@@ -1,0 +1,81 @@
+{
+  "name": "iv-stand",
+  "tags": [
+    "sensitive",
+    "hospital",
+    "hastane",
+    "iv",
+    "serum",
+    "drip",
+    "illness",
+    "hastalık",
+    "care",
+    "sağlık",
+    "treatment",
+    "tedavi"
+  ],
+  "variants": [
+    {
+      "note": "drip stand with one bag",
+      "paths": [
+        {
+          "d": "M50 10 L50 82",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M36 14 L64 14",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M32 18 L46 18 L48 52 Q40 58 30 52 Z",
+          "fill": "white",
+          "stroke": "ink",
+          "weight": 6
+        },
+        {
+          "d": "M31 40 L47 40 L48 52 Q40 58 30 52 Z",
+          "fill": "blue",
+          "stroke": "none"
+        },
+        {
+          "d": "M40 58 Q36 70 46 76",
+          "stroke": "ink",
+          "weight": 4
+        },
+        {
+          "d": "M39 16 h.1",
+          "stroke": "ink",
+          "weight": 6
+        },
+        {
+          "d": "M50 82 L26 90",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M50 82 L74 90",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M50 82 L50 90",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M26 91 h.1",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M74 91 h.1",
+          "stroke": "ink",
+          "weight": 8
+        }
+      ]
+    }
+  ],
+  "author": "Ortak Alan (AI-assisted, directed and checked)"
+}
