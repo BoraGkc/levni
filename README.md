@@ -68,6 +68,10 @@ Your own prop folders: set `LEVNI_PROPS=/path/to/props` (several, separated by `
 
 Canvas 1200 × 673. 39 element types: library props and your own path drawings (with extrusion, hatch shading and cast shadows), small isometric worlds, panels, glyph fields, halftones, flow fields, faceless crowds and isotype grids, bubbles, trees, flags, arrows, labels. Full reference: [`docs/scene.md`](docs/scene.md); JSON Schema: [`docs/scene.schema.json`](docs/scene.schema.json).
 
+## Formats and titles
+
+One scene, several canvases: `levni render scene.json out.png --format og|square|story|youtube` (or `"format"` / `"canvas": [w, h]` in the scene). A scene written for 1200×673 is recomposed, not cropped: grounds stretch, objects keep their shape and move as one cluster into the free area (upper part on `story`). A `"title": { "text", "kicker", "position", "font", "band", "brand" }` adds a crisp headline layer above the art. Rules and limits: [docs/scene.md](docs/scene.md#formats-and-reflow).
+
 ## Licensing
 
 - **Code** (`src/`, `bin/`, `test/`): [MIT](LICENSE).

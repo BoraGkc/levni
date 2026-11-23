@@ -39,7 +39,7 @@
     "node": ">=20"
   },
   "scripts": {
-    "test": "node test/smoke.mjs",
+    "test": "node test/formats.mjs && node test/smoke.mjs",
     "examples": "node examples/render-all.mjs"
   },
   "dependencies": {

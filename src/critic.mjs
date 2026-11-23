@@ -1,8 +1,9 @@
 // Cheap layout critic: things a director should fix before a human looks.
 // Takes the `used` boxes compose() returns and gives back at most six short notes.
-import { W, H } from './style.mjs';
+import { W as W0, H as H0 } from './style.mjs';
 
-export function critique(used) {
+export function critique(used, canvas = { w: W0, h: H0 }) {
+  const W = canvas.w, H = canvas.h;
   const notes = [];
   const area = (b) => Math.max(0, b.w) * Math.max(0, b.h);
   for (const b of used) {

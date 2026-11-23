@@ -39,7 +39,7 @@ export function rng(seed) {
 // - low-frequency displacement: the hand wobble of a long line,
 // - high-frequency displacement: the fuzzy, torn edge of wax on paper,
 // - sparse speckle: paper showing through the pigment.
-export function filterDefs(seed = 1) {
+export function filterDefs(seed = 1, W = 1200, H = 673) {
   return `
   <filter id="crayon" filterUnits="userSpaceOnUse" x="0" y="0" width="${W}" height="${H}" color-interpolation-filters="sRGB">
     <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="${seed}" result="wobble"/>
@@ -98,7 +98,7 @@ export function toAscii(body) {
   return out;
 }
 
-export function frame(body, { seed = 1, background = PALETTE.paper, ascii = false, finish = 'crayon', grain = 0.16 } = {}) {
+export function frame(body, { seed = 1, background = PALETTE.paper, ascii = false, finish = 'crayon', grain = 0.16, w: W = 1200, h: H = 673 } = {}) {
   if (ascii) body = toAscii(body);
   if (finish === 'soft') {
     // soft finish: clean shapes, only a fine film grain over the whole picture (no wobble, no crayon edge)
@@ -113,7 +113,7 @@ ${body}
 </svg>`;
   }
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
-<defs>${filterDefs(seed)}${ascii ? asciiPatterns(seed) : ''}</defs>
+<defs>${filterDefs(seed, W, H)}${ascii ? asciiPatterns(seed) : ''}</defs>
 <rect width="${W}" height="${H}" fill="${background}"/>
 <rect width="${W}" height="${H}" filter="url(#paper)"/>
 <g filter="url(#crayon)">
