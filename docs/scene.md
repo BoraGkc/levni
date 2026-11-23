@@ -129,6 +129,37 @@ Charts are drawn with the hand pen from numbers you give; nothing else is invent
 | `tube` | `points` or `circle` [cx, cy, r] (or [cx, cy, rx, ry, rotation]), `width`, `color`, `light`? | a round tube shaded from a dark rim to a light core; three circles make interlocking rings |
 | `image` | `src` (local png, jpg, svg or webp), `x`, `y` (centre), `size`, `card`?, `cardColor`?, `radius`? | a picture on a rounded card, e.g. a product logo you have the right to show. Logos never go into the Folio |
 
+### Soft 3D (v2): real 3D shapes, use with `"finish": "soft"`
+
+A small 3D renderer in plain math: shapes are cut into small quads, lit (a key light from the upper left, ambient, a soft glossy highlight and a rim), coloured through a ramp per material (cool shadow, base, pale highlight) and painted back to front. A ribbon passes behind itself, interlocking rings really interlock, and quads are overdrawn with their own colour so no seam shows. Pure SVG, no dependency; a typical cover renders in about half a second.
+
+**Coordinates.** Canvas pixels, as everywhere: x right, y down, plus z toward the viewer (z = 0 is the picture plane, where a point lands exactly on its x, y). One perspective camera looks at the canvas centre; `fov` (default 28) sets how strong the perspective is. A shape placed with `x`, `y`, `size` is built in a unit space (radius 1) and scaled so it is about `size` px across; `rotate: [rx, ry, rz]` (degrees, x first, then y, then z) turns it about its own centre. Each element is sorted on its own: shapes that must pass through each other go into one `soft3d` element.
+
+**Materials.** `colors` (a gradient across the shape: around a torus, along a ribbon, top to bottom on a sphere) or `color`; `gloss` (0..1, default 0.55), `shine` (highlight tightness, default 34), `rim` (0..1), `rimColor`, `shadowTint` (default deep indigo), `highlight`, `shadowColor`. `shadow`: a soft drop shadow (default on; `false`, or `{ color, opacity, blur, dx, dy }`). `spin`: turns per animation loop.
+
+| type | fields | notes |
+| --- | --- | --- |
+| `ribbon3d` | `preset` (`loop`, `s-curve`, `wave`, `spiral`, `mobius`, `knot`, `ring`) or `points` [[x, y, z] …] (canvas px), `x`, `y`, `size`, `width` (px), `twist` (turns along the length), `colors` (stops along the length), `back` (colour of the back side), `roll`, `curl`, `seed` | a band swept along a smooth 3D line with rotation-minimising frames. `mobius` (a closed band with `twist: 0.5`) has one side and no seam. `seed` bends a preset smoothly, so every seed is a slightly different ribbon. With `points` the line is in canvas pixels and `x`, `y`, `size` are not used |
+| `tube3d` | same as `ribbon3d`, `width` is the diameter | a round tube along the line; `preset: "knot"` is a trefoil knot |
+| `torus3d` | `x`, `y`, `size`, `thickness` (tube / ring radius, default 0.36), `rotate`, `colors` | a glossy ring |
+| `sphere3d` | `x`, `y`, `size`, `colors` | |
+| `capsule3d` | `x`, `y`, `size` (length), `radius` (0..1 of half the length, default 0.42), `rotate`, `colors` | a pill |
+| `blob3d` | `x`, `y`, `size`, `wobble` (default 0.22), `seed`, `colors` | a smooth, softly lumpy sphere; the seed shapes it |
+| `cubes3d` | `x`, `y`, `size`, `heights` [[…] rows] or `rows`/`cols`/`maxHeight` (seeded), or `blocks` [[i, level, j] …], `round` (corner radius, default 0.18), `gap`, `colors`, `colorBy` (`height`), `rotate`, `seed` | stacked rounded blocks, like a little building or a 3D bar chart; with two `colors` and `"colorBy": "height"` the stack shades from the first colour at the bottom to the last at the top |
+| `extrude3d` | `name` (+ `variant`, `recolor`, `palette`) of a Folio prop, or `paths` (0..100 box), `x`, `y`, `size`, `depth` (fraction of size, default 0.16), `rotate` (default [-16, -26, 3]), `lines` (`raised` or `none`), `ink` (recolour the lines), `sheen` (`false` to switch off the front gloss) | every library drawing as a 3D icon: the filled shapes become one thick object with rounded, lit sides, the front keeps the prop's colours, the ink lines become a raised rim. Fits the visible ink to `size` |
+| `soft3d` | `objects` [{ `type`: `torus`, `sphere`, `capsule`, `blob`, `cubes`, `ribbon`, `tube`, plus their fields, `x`, `y`, `z`, `size`, `rotate` }], `x`, `y` (pivot), `rotate` (turns the whole group about the pivot), `yaw`, `pitch`, `fov` | several shapes with one camera and one depth sort: chains of rings, a planet in its ring. Objects inside a scene have no default rotation |
+| `soft3d` with `preset` | `preset`: `auto` or `ribbon`, `wave`, `mobius`, `spiral`, `knot`, `rings`, `orbit`, `pebbles`, `stack`; `seed`, `palette`, `titleSpace` (`bottom` default, `top`, `left`, `none`), `badge` (an image path or the `image` fields), `badgeCorner`, `side` (`right`/`left`), `background` (`false` keeps the scene's own) | a whole cover: a studio gradient background with a glow, one or two hero shapes bleeding off one or two edges, clear room for a left-aligned title, and a clear corner for a badge. The layout is chosen by trying several placements and keeping the most balanced one. With `auto`, seeds 1 to 9 walk through all nine layouts, so neighbouring seeds always differ |
+
+**Palettes** for `soft3d` presets (`palette`): `aqua` (pale blue, teal to indigo), `sunset` (peach, amber to violet), `mint-night` (deep purple, mint), `lilac` (pale lilac, violet), `mono-blue` (royal blue, pale blues), or your own: `{ "background": ["#F2EEE6", "#E4DCCD"], "stops": ["#FFB36B", "#FF5E62", "#8E3BC9"] }` (optional `solids` [[a, b] …] for spheres and rings, `cubes`, `shadowTint`, `dark`). On the dark palettes set the scene `background` to the palette's dark colour (`#140A35` for mint-night, `#071A5C` for mono-blue) so the title picks light text and a matching halo.
+
+```json
+{ "finish": "soft", "background": "#E4EEF9",
+  "elements": [{ "type": "soft3d", "preset": "auto", "seed": 4, "palette": "aqua", "badge": "logo.svg" }],
+  "title": { "text": "Why every newsroom wants a data desk", "kicker": "Analysis" } }
+```
+
+Limits: painter's sorting is per quad, so two surfaces that actually cut through each other (not just pass close) show a slightly jagged meeting line; interlocking rings must not touch: with ring radius R and tube radius r (`thickness` = r / R, at most 0.33 for a chain), put chain links between R + r and 2 (R − r) apart (`size` 300 and `thickness` 0.3: 150 to 160 px); two links can simply sit R apart. Each element sorts only its own shapes. Shading is flat per quad (quads are a few pixels), so very large, very smooth shapes can show faint steps that the film grain hides. The old `ribbon` and `tube` above stay as they were.
+
 ## Formats and reflow
 
 `format` / `canvas` set the canvas; the frame, filters and critic follow it. A scene whose coordinates are written for another size simply sets `format` and uses its own coordinates. To **reuse** a 1200×673 scene on another canvas set `"reflow": true` (or `levni render scene.json out.png --format story`). It is a recomposition, not a crop:

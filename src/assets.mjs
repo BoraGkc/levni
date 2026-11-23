@@ -3,6 +3,7 @@
 // Every asset takes `t` (0..1, default 0) so the animation renderer can move it deterministically.
 import { box, ellipse } from './pen.mjs';
 import { SOFT_ASSETS } from './ribbon.mjs';
+import { SOFT3D_ASSETS } from './soft3d.mjs';
 import { CHART_ASSETS } from './charts.mjs';
 import { PERSON_ASSETS } from './person.mjs';
 
@@ -338,6 +339,8 @@ Object.assign(ASSETS, {
 
 // Soft 3D-feel elements (ribbon, tube, image): see ribbon.mjs
 Object.assign(ASSETS, SOFT_ASSETS);
+// Soft 3D v2 (real 3D: ribbon3d, torus3d, extrude3d, soft3d covers …): see soft3d.mjs
+Object.assign(ASSETS, SOFT3D_ASSETS);
 
 // Data charts (bars, linechart, pie, donut, isochart): see charts.mjs
 Object.assign(ASSETS, CHART_ASSETS);

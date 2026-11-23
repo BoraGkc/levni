@@ -2,6 +2,9 @@
 // Takes the `used` boxes compose() returns and gives back at most six short notes.
 import { W as W0, H as H0 } from './style.mjs';
 
+// soft 3D shapes bleed on purpose (their boxes are clipped to the canvas) and count as focal objects
+const SOFT3D = ['soft3d', 'ribbon3d', 'tube3d', 'torus3d', 'sphere3d', 'capsule3d', 'blob3d', 'cubes3d', 'extrude3d'];
+
 export function critique(used, canvas = { w: W0, h: H0 }) {
   const W = canvas.w, H = canvas.h;
   const notes = [];
@@ -10,7 +13,7 @@ export function critique(used, canvas = { w: W0, h: H0 }) {
   const [fx, fy, fw, fh] = used.frame || [0, 0, W, H];
   const OBJECTS = ['draw', 'icon', 'sheet', 'window', 'disc'];
   for (const b of used) {
-    if (b.crop || OBJECTS.includes(b.type) || ['panel', 'crowd', 'skyline', 'ribbon', 'tube'].includes(b.type)) continue;
+    if (b.crop || OBJECTS.includes(b.type) || ['panel', 'crowd', 'skyline', 'ribbon', 'tube', ...SOFT3D].includes(b.type)) continue;
     if (b.x < fx - 20 || b.y < fy - 20 || b.x + b.w > fx + fw + 20 || b.y + b.h > fy + fh + 20) notes.push(`${b.type} at (${Math.round(b.x)},${Math.round(b.y)}) runs off the ${used.frame && (fx || fy) ? 'card' : 'canvas'}`);
   }
   // objects cut by the frame without "crop": true. A sliver looks like a mistake; a big cut hides the subject.
@@ -30,7 +33,7 @@ export function critique(used, canvas = { w: W0, h: H0 }) {
   const mass = (x0, x1) => ink.reduce((s, b) => s + Math.max(0, Math.min(b.x + b.w, x1) - Math.max(b.x, x0)) * b.h, 0);
   const L = mass(0, W / 2), R = mass(W / 2, W);
   if (L + R > 0 && Math.min(L, R) / Math.max(L, R) < 0.35) notes.push(`weight is lopsided (${L > R ? 'left' : 'right'} heavy): balance it or make the empty side intentional`);
-  const big = ink.filter((b) => ['icon', 'draw', 'ascii', 'disc', 'shape', 'sheet', 'window', 'crowd', 'isotype', 'skyline', 'bars', 'linechart', 'pie', 'donut', 'isochart'].includes(b.type)).sort((a, b) => area(b) - area(a))[0];
+  const big = ink.filter((b) => ['icon', 'draw', 'ascii', 'disc', 'shape', 'sheet', 'window', 'crowd', 'isotype', 'skyline', 'bars', 'linechart', 'pie', 'donut', 'isochart', ...SOFT3D].includes(b.type)).sort((a, b) => area(b) - area(a))[0];
   if (!big || area(big) < 200 * 200) notes.push('no clear focal symbol: one element should be at least ~220px');
   const icons = used.filter((b) => b.type === 'icon');
   for (let i = 0; i < icons.length; i++) for (let j = i + 1; j < icons.length; j++) {

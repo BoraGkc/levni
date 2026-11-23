@@ -327,6 +327,15 @@
             "ribbon",
             "tube",
             "image",
+            "soft3d",
+            "ribbon3d",
+            "tube3d",
+            "torus3d",
+            "sphere3d",
+            "capsule3d",
+            "blob3d",
+            "cubes3d",
+            "extrude3d",
             "bars",
             "linechart",
             "pie",
@@ -392,6 +401,41 @@
           "items": {
             "$ref": "#/$defs/path"
           }
+        },
+        "preset": {
+          "type": "string",
+          "description": "soft3d: auto, ribbon, wave, mobius, spiral, knot, rings, orbit, pebbles, stack. ribbon3d / tube3d: loop, s-curve, wave, spiral, mobius, knot, ring"
+        },
+        "palette": {
+          "description": "soft3d cover theme: aqua, sunset, mint-night, lilac, mono-blue, or { background: [a, b], stops: [...] }",
+          "anyOf": [
+            { "enum": ["aqua", "sunset", "mint-night", "lilac", "mono-blue"] },
+            { "type": "object" }
+          ]
+        },
+        "rotate": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 3,
+          "maxItems": 3,
+          "description": "soft 3D: [rx, ry, rz] in degrees, x first, then y, then z"
+        },
+        "objects": {
+          "type": "array",
+          "items": { "type": "object" },
+          "description": "soft3d: shapes sharing one camera and one depth sort (torus, sphere, capsule, blob, cubes, ribbon, tube), each with x, y, z, size, rotate"
+        },
+        "depth": {
+          "type": "number",
+          "description": "extrude3d: thickness as a fraction of size (default 0.16)"
+        },
+        "lines": {
+          "enum": ["raised", "none"],
+          "description": "extrude3d: draw the prop's ink lines as a raised rim (default) or leave them out"
+        },
+        "twist": {
+          "type": "number",
+          "description": "ribbon3d: turns along the length (a closed band with 0.5 is a Möbius strip)"
         }
       },
       "required": [

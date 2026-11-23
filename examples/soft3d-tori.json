@@ -1,0 +1,73 @@
+{
+ "seed": 8,
+ "finish": "soft",
+ "background": "#1D0E48",
+ "elements": [
+  {
+   "type": "soft3d",
+   "x": 600,
+   "y": 336,
+   "rotate": [
+    -28,
+    24,
+    -18
+   ],
+   "objects": [
+    {
+     "type": "torus",
+     "x": 367,
+     "y": 336,
+     "size": 300,
+     "thickness": 0.3,
+     "colors": [
+      "#6BF5C8",
+      "#20B7A4"
+     ]
+    },
+    {
+     "type": "torus",
+     "x": 522,
+     "y": 336,
+     "size": 300,
+     "thickness": 0.3,
+     "rotate": [
+      90,
+      0,
+      0
+     ],
+     "colors": [
+      "#A7FFE6",
+      "#3FC8D9"
+     ]
+    },
+    {
+     "type": "torus",
+     "x": 678,
+     "y": 336,
+     "size": 300,
+     "thickness": 0.3,
+     "colors": [
+      "#7C8CFF",
+      "#4A3FD1"
+     ]
+    },
+    {
+     "type": "torus",
+     "x": 833,
+     "y": 336,
+     "size": 300,
+     "thickness": 0.3,
+     "rotate": [
+      90,
+      0,
+      0
+     ],
+     "colors": [
+      "#6BF5C8",
+      "#3F7BFF"
+     ]
+    }
+   ]
+  }
+ ]
+}
