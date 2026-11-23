@@ -1,0 +1,44 @@
+{
+ "name": "lira-note",
+ "tags": [
+  "lira banknotu",
+  "banknot",
+  "tek not",
+  "paper money"
+ ],
+ "variants": [
+  {
+   "note": "single note with oval window, wavy band, corner dots",
+   "paths": [
+    {
+     "d": "M8 26 H92 V74 H8 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M36 50 A14 18 0 1 0 64 50 A14 18 0 1 0 36 50 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M16 62 Q26 54 36 62 M64 38 Q74 46 84 38",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M18 36 h.1",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M82 64 h.1",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

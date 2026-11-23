@@ -1,0 +1,53 @@
+{
+ "name": "pumpjack",
+ "tags": [
+  "petrol pompası",
+  "nodding donkey",
+  "pumpjack",
+  "oil well",
+  "kuyu pompası"
+ ],
+ "variants": [
+  {
+   "note": "beam on A-frame with head, crank and base",
+   "paths": [
+    {
+     "d": "M30 88 L44 44 L58 88 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M10 36 L84 24 L86 38 L12 50 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M10 36 Q4 46 14 54 L22 46 Z",
+     "fill": "ink",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M84 32 L80 70",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M62 74 A14 14 0 1 0 90 74 A14 14 0 1 0 62 74 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M4 92 H96",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

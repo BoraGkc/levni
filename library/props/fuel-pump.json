@@ -1,0 +1,54 @@
+{
+ "name": "fuel-pump",
+ "tags": [
+  "akaryakıt",
+  "benzin pompası",
+  "fuel pump",
+  "petrol",
+  "gas station",
+  "istasyon"
+ ],
+ "variants": [
+  {
+   "note": "pump body with screen, hose and nozzle",
+   "paths": [
+    {
+     "d": "M14 10 H62 V90 H14 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M22 18 H54 V36 H22 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M22 50 H54",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M62 40 H78 Q86 40 86 50 V72",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M80 72 H92 V84 H80 Z",
+     "fill": "ink",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M8 90 H68",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

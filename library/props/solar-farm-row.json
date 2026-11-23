@@ -1,0 +1,48 @@
+{
+ "name": "solar-farm-row",
+ "tags": [
+  "güneş enerjisi",
+  "solar",
+  "panel",
+  "solar farm",
+  "ges",
+  "yenilenebilir"
+ ],
+ "variants": [
+  {
+   "note": "three tilted panels on short legs",
+   "paths": [
+    {
+     "d": "M6 46 L34 30 L40 56 L12 72 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M36 40 L64 24 L70 50 L42 66 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M66 34 L94 18 L100 44 L72 60 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M12 72 L14 90 M42 66 L44 90 M72 60 L74 90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M4 92 H96",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

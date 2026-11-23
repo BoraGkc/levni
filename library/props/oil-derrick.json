@@ -1,0 +1,42 @@
+{
+ "name": "oil-derrick",
+ "tags": [
+  "petrol kulesi",
+  "sondaj",
+  "oil derrick",
+  "rig",
+  "drilling",
+  "kuyu"
+ ],
+ "variants": [
+  {
+   "note": "lattice derrick on base with drip",
+   "paths": [
+    {
+     "d": "M26 90 L42 14 H58 L74 90 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M32 62 H68 M37 38 H63 M32 62 L63 38 M68 62 L37 38",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M10 90 H90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 94 Q44 100 50 100 Q56 100 50 94 Z",
+     "fill": "ink",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

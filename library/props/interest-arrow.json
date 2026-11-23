@@ -1,0 +1,36 @@
+{
+ "name": "interest-arrow",
+ "tags": [
+  "faiz",
+  "getiri",
+  "interest",
+  "yield",
+  "growth",
+  "büyüme"
+ ],
+ "variants": [
+  {
+   "note": "coin with curved arrow circling upward",
+   "paths": [
+    {
+     "d": "M28 56 A22 22 0 1 0 72 56 A22 22 0 1 0 28 56 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M38 56 A12 12 0 1 0 62 56 A12 12 0 1 0 38 56 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M16 60 Q14 22 52 16 M40 8 L54 16 L44 28",
+     "fill": "none",
+     "stroke": "green",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "voting-booth",
+ "tags": [
+  "oy kabini",
+  "seçim",
+  "voting booth",
+  "curtain",
+  "perde"
+ ],
+ "variants": [
+  {
+   "note": "booth with side panels, front curtain and legs",
+   "paths": [
+    {
+     "d": "M14 10 H86 V20 H14 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M14 20 H24 V86 H14 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M76 20 H86 V86 H76 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24 20 H76 V86 H24 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M40 20 V86 M56 20 V86",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M14 90 H86",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

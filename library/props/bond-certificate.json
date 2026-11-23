@@ -1,0 +1,47 @@
+{
+ "name": "bond-certificate",
+ "tags": [
+  "tahvil",
+  "senet",
+  "bond",
+  "certificate",
+  "yatırım belgesi"
+ ],
+ "variants": [
+  {
+   "note": "landscape certificate with border and ribbon seal",
+   "paths": [
+    {
+     "d": "M8 18 H92 V74 H8 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M16 26 H84 V66 H16 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M26 40 H60 M26 52 H48",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M60 70 L56 92 L66 86 L76 92 L72 70 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M56 60 A10 10 0 1 0 76 60 A10 10 0 1 0 56 60 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

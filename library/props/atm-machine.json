@@ -1,0 +1,71 @@
+{
+ "name": "atm-machine",
+ "tags": [
+  "atm",
+  "bankamatik",
+  "para çekme",
+  "cash machine",
+  "banka"
+ ],
+ "variants": [
+  {
+   "note": "tall ATM with screen, keypad dots and cash slot",
+   "paths": [
+    {
+     "d": "M20 10 H80 V90 H20 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M28 18 H72 V42 H28 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M34 54 h.1",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M46 54 h.1",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58 54 h.1",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M34 64 h.1",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M46 64 h.1",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58 64 h.1",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M30 74 H70 V82 H30 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M36 78 H64",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "name": "oil-drop",
+ "tags": [
+  "petrol damlası",
+  "ham petrol",
+  "oil",
+  "crude",
+  "damla"
+ ],
+ "variants": [
+  {
+   "note": "large drop with highlight",
+   "paths": [
+    {
+     "d": "M50 8 Q18 46 18 64 Q18 90 50 90 Q82 90 82 64 Q82 46 50 8 Z",
+     "fill": "ink",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M36 62 Q36 76 46 80",
+     "fill": "none",
+     "stroke": "paper",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

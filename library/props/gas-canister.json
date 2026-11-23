@@ -1,0 +1,42 @@
+{
+ "name": "gas-canister",
+ "tags": [
+  "tüp",
+  "gaz tüpü",
+  "gas canister",
+  "lpg",
+  "propane",
+  "cylinder"
+ ],
+ "variants": [
+  {
+   "note": "tank with collar, valve and flame label",
+   "paths": [
+    {
+     "d": "M50 22 V12 M40 12 H60",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M36 22 H64 V30 H36 Z",
+     "fill": "ink",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M30 30 H70 Q74 34 74 42 V84 Q74 92 66 92 H34 Q26 92 26 84 V42 Q26 34 30 30 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M50 74 Q40 66 50 48 Q60 66 50 74 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

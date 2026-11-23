@@ -1,0 +1,57 @@
+{
+ "name": "note-stack",
+ "tags": [
+  "banknot destesi",
+  "nakit",
+  "cash",
+  "bundle",
+  "para",
+  "money"
+ ],
+ "variants": [
+  {
+   "note": "bundle of notes with paper band, round mark",
+   "paths": [
+    {
+     "d": "M10 34 L84 22 L90 62 L16 74 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M10 38 H90 V82 H10 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M36 60 A14 14 0 1 0 64 60 A14 14 0 1 0 36 60 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M22 48 h.1",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M78 72 h.1",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M38 38 H62 V82 H38 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M38 38 V82 M62 38 V82",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  }
+ ]
+}

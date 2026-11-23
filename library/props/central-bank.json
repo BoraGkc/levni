@@ -1,0 +1,66 @@
+{
+ "name": "central-bank",
+ "tags": [
+  "merkez bankası",
+  "banka",
+  "sütun",
+  "columns",
+  "bank",
+  "finance",
+  "institution"
+ ],
+ "variants": [
+  {
+   "note": "columned bank with round medallion in pediment",
+   "paths": [
+    {
+     "d": "M10 36 L50 10 L90 36 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M44 28 A6 6 0 1 0 56 28 A6 6 0 1 0 44 28 Z",
+     "fill": "blue",
+     "stroke": "none"
+    },
+    {
+     "d": "M18 40 H82 V46 H18 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24 46 H32 V78 H24 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M46 46 H54 V78 H46 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M68 46 H76 V78 H68 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M12 78 H88 V84 H12 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M6 86 H94 V92 H6 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

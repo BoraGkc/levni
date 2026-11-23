@@ -1,0 +1,42 @@
+{
+ "name": "price-tag-rising",
+ "tags": [
+  "fiyat etiketi",
+  "zam",
+  "price",
+  "price hike",
+  "etiket",
+  "tag"
+ ],
+ "variants": [
+  {
+   "note": "tag with hole and string, coral up arrow",
+   "paths": [
+    {
+     "d": "M24 30 Q10 16 22 10",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M18 40 L46 12 H88 V52 L46 88 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M29 36 A5 5 0 1 0 39 36 A5 5 0 1 0 29 36 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M66 70 L66 34 M52 46 L66 30 L80 46",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

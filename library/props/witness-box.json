@@ -1,0 +1,46 @@
+{
+ "name": "witness-box",
+ "tags": [
+  "tanık kürsüsü",
+  "mahkeme",
+  "witness stand",
+  "courtroom"
+ ],
+ "variants": [
+  {
+   "note": "wooden box with railing front, step",
+   "paths": [
+    {
+     "d": "M12 40 H88 V88 H12 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M12 54 H88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M20 40 V16 M80 40 V16 M20 16 H80",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M32 40 V22 M44 40 V22 M56 40 V22 M68 40 V22",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M6 92 H94",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

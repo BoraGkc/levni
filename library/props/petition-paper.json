@@ -1,0 +1,47 @@
+{
+ "name": "petition-paper",
+ "tags": [
+  "dilekçe",
+  "imza",
+  "petition",
+  "signatures",
+  "kampanya"
+ ],
+ "variants": [
+  {
+   "note": "sheet with rows of scribble signatures",
+   "paths": [
+    {
+     "d": "M20 8 H80 V92 H20 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M28 26 Q34 16 38 26 T50 26 T62 26 T72 26",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M28 44 Q34 34 38 44 T50 44 T62 44 T72 44",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M28 62 Q34 52 38 62 T50 62 T62 62",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M28 80 H72",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

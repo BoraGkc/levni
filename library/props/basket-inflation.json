@@ -1,0 +1,54 @@
+{
+ "name": "basket-inflation",
+ "tags": [
+  "enflasyon",
+  "market sepeti",
+  "sepet",
+  "basket",
+  "groceries",
+  "cost of living"
+ ],
+ "variants": [
+  {
+   "note": "wicker basket with loaf, bottle and rising coral arrow",
+   "paths": [
+    {
+     "d": "M24 48 Q50 4 76 48",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M38 46 Q32 30 40 28 Q50 24 56 30 Q62 40 58 46 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M66 48 L66 30 L72 30 L72 48 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M12 46 H88 L78 88 H22 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 62 H80 M30 46 L32 88 M50 46 V88 M70 46 L68 88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M82 40 L92 18 M84 20 L92 18 L94 28",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

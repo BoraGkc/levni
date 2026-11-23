@@ -1,0 +1,29 @@
+{
+ "name": "lightning-bolt",
+ "tags": [
+  "şimşek",
+  "elektrik",
+  "lightning",
+  "bolt",
+  "güç"
+ ],
+ "variants": [
+  {
+   "note": "bold zigzag bolt",
+   "paths": [
+    {
+     "d": "M58 6 L24 54 H46 L38 94 L76 40 H54 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M52 22 L38 44",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

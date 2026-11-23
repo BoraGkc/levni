@@ -1,0 +1,54 @@
+{
+ "name": "safe-box",
+ "tags": [
+  "kasa",
+  "çelik kasa",
+  "safe",
+  "vault",
+  "security",
+  "finance"
+ ],
+ "variants": [
+  {
+   "note": "steel safe with dial and handle, short feet",
+   "paths": [
+    {
+     "d": "M12 12 H88 V82 H12 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M22 22 H78 V72 H22 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M34 47 A12 12 0 1 0 58 47 A12 12 0 1 0 34 47 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M46 47 L46 38",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M64 36 V58",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 82 V90 M80 82 V90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

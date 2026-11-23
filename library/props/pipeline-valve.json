@@ -1,0 +1,48 @@
+{
+ "name": "pipeline-valve",
+ "tags": [
+  "boru hattı",
+  "vana",
+  "pipeline",
+  "valve",
+  "doğalgaz",
+  "petrol"
+ ],
+ "variants": [
+  {
+   "note": "pipe with flanges and valve wheel on top",
+   "paths": [
+    {
+     "d": "M6 56 H94 V78 H6 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 56 V78 M70 56 V78",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 56 V30",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M36 22 A14 14 0 1 0 64 22 A14 14 0 1 0 36 22 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 12 V32 M40 22 H60",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

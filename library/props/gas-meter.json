@@ -1,0 +1,51 @@
+{
+ "name": "gas-meter",
+ "tags": [
+  "doğalgaz sayacı",
+  "sayaç",
+  "gas meter",
+  "utility",
+  "fatura"
+ ],
+ "variants": [
+  {
+   "note": "boxy meter, round dial window, two pipes on top",
+   "paths": [
+    {
+     "d": "M34 8 V26 M66 8 V26",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M14 26 H86 V88 H14 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M30 57 A20 20 0 1 0 70 57 A20 20 0 1 0 30 57 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 57 L58 46",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M26 38 h.1",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M74 38 h.1",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  }
+ ]
+}

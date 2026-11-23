@@ -5,7 +5,8 @@
   "mahkeme",
   "courthouse",
   "hukuk",
-  "court"
+  "court",
+  "justice"
  ],
  "variants": [
   {
@@ -113,6 +114,53 @@
     {
      "d": "M8 80 L93 80 L93 90 L7 90 Z",
      "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "wide courthouse with centre steps and three columns, blue roof",
+   "paths": [
+    {
+     "d": "M8 34 L50 10 L92 34 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 38 H80 V44 H20 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M26 44 H34 V74 H26 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M46 44 H54 V74 H46 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M66 44 H74 V74 H66 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M14 74 H86 V80 H14 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M8 82 H92 V90 H8 Z",
+     "fill": "tone",
      "stroke": "ink",
      "weight": 9
     }

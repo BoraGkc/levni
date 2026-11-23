@@ -1,0 +1,46 @@
+{
+ "name": "fingerprint",
+ "tags": [
+  "parmak izi",
+  "kimlik",
+  "fingerprint",
+  "biometric"
+ ],
+ "variants": [
+  {
+   "note": "concentric loops with a gap, in a rounded card",
+   "paths": [
+    {
+     "d": "M14 12 H86 V88 H14 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 66 Q28 34 50 32 Q70 32 70 56",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M38 70 Q38 44 50 44 Q60 44 60 60",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 54 Q50 66 48 76",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M24 50 Q28 26 50 22 Q72 22 76 44",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "name": "law-scroll",
+ "tags": [
+  "kanun",
+  "ferman",
+  "scroll",
+  "decree",
+  "hukuk"
+ ],
+ "variants": [
+  {
+   "note": "unrolled scroll with two rolled ends and lines",
+   "paths": [
+    {
+     "d": "M22 20 H78 V80 H22 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M14 14 H86 V24 H14 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M14 76 H86 V86 H14 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M32 36 H68 M32 48 H68 M32 60 H56",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "name": "rate-board",
+ "tags": [
+  "kur tahtası",
+  "döviz",
+  "exchange rate",
+  "currency",
+  "board",
+  "finance"
+ ],
+ "variants": [
+  {
+   "note": "board with two rows of digit tiles and up/down triangles",
+   "paths": [
+    {
+     "d": "M8 18 H92 V82 H8 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M16 28 H28 V40 H16 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M32 28 H44 V40 H32 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M48 28 H60 V40 H48 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M16 50 H28 V62 H16 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M32 50 H44 V62 H32 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M48 50 H60 V62 H48 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M78 38 L68 28 L88 28 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M78 54 L68 64 L88 64 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M30 82 V92 M70 82 V92",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

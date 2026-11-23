@@ -1,0 +1,41 @@
+{
+ "name": "radiator",
+ "tags": [
+  "kalorifer",
+  "ısıtıcı",
+  "radiator",
+  "heating",
+  "kombi"
+ ],
+ "variants": [
+  {
+   "note": "panel with five fins and valve",
+   "paths": [
+    {
+     "d": "M10 22 H90 V78 H10 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M24 22 V78 M38 22 V78 M52 22 V78 M66 22 V78",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M80 50 A6 6 0 1 0 92 50 A6 6 0 1 0 80 50 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M16 78 V92 M84 78 V92",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

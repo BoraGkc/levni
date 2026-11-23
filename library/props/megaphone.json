@@ -6,7 +6,8 @@
   "ses",
   "megaphone",
   "announce",
-  "loudspeaker"
+  "loudspeaker",
+  "hoparlör"
  ],
  "variants": [
   {
@@ -69,6 +70,29 @@
      "stroke": "ink",
      "weight": 6,
      "fill": "none"
+    }
+   ]
+  },
+  {
+   "note": "cone megaphone pointing left with handle",
+   "paths": [
+    {
+     "d": "M12 40 L58 20 V80 L12 60 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M56 16 H68 V84 H56 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M74 56 L84 80 H92",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
     }
    ]
   }
