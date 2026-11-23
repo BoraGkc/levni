@@ -60,6 +60,33 @@ for (let i = 0; i < list.length; i += 24) {
   tiles++;
 }
 
+// 3b. Data charts: every chart composes without NaN, including empty, zero, single, negative and junk data
+{
+  const data = [[], [0, 0, 0], [5], [-4, 3, -1], [1, NaN, 'x', null, 4], [1e9, 1], [0.0001, 0.0002]];
+  const make = (v, ink) => [
+    { type: 'bars', x: 10, y: 10, w: 300, h: 200, values: v, labels: v.map((_, i) => 'l' + i), showValues: true },
+    { type: 'bars', x: 10, y: 10, w: 300, h: 200, values: v, horizontal: true, labels: ['a'], showValues: true, highlight: 0 },
+    { type: 'linechart', x: 10, y: 10, w: 300, h: 200, values: v, area: true, dots: true, showValues: true },
+    { type: 'linechart', x: 10, y: 10, w: 300, h: 200, series: [v, v.slice().reverse()] },
+    { type: 'pie', x: 300, y: 300, r: 80, values: v, labels: ['a', 'b'], showValues: true },
+    { type: 'donut', x: 300, y: 300, r: 80, values: v, highlight: 0 },
+    { type: 'isochart', x: 10, y: 10, values: v, unit: 0.5, showValues: true },
+    { type: 'isochart', x: 10, y: 10, values: v, unit: 0, icon: 'phone' },
+  ];
+  for (const [k, v] of data.entries()) {
+    try {
+      const { svg } = await compose({ seed: 2, elements: make(v) });
+      if (/NaN|undefined|Infinity/.test(svg)) fail(`charts data#${k}`, 'SVG contains NaN/undefined/Infinity');
+    } catch (err) { fail(`charts data#${k}`, err.message); }
+  }
+  for (const bad of [{ values: undefined }, { values: 7 }, { values: [] , w: 0, h: -5 }, { values: [1, 2], r: 0 }]) for (const type of ['bars', 'linechart', 'pie', 'donut', 'isochart']) {
+    try {
+      const { svg } = await compose({ seed: 2, elements: [{ type, x: 50, y: 50, w: 200, h: 100, r: 40, ...bad }] });
+      if (/NaN|undefined|Infinity/.test(svg)) fail(`charts ${type}`, 'SVG contains NaN/undefined/Infinity on odd input');
+    } catch (err) { fail(`charts ${type}`, err.message); }
+  }
+}
+
 // 4. Every example scene renders (small, fast)
 const { readdirSync, readFileSync } = await import('node:fs');
 const exDir = new URL('../examples/', import.meta.url);

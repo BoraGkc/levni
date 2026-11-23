@@ -197,7 +197,12 @@
             "label",
             "ribbon",
             "tube",
-            "image"
+            "image",
+            "bars",
+            "linechart",
+            "pie",
+            "donut",
+            "isochart"
           ]
         },
         "x": {
