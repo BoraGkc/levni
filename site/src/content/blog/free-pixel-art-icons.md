@@ -30,7 +30,7 @@ This guide shows how to find the icons, pick a cut, recolour them and place them
 Every pixel icon's name starts with `pixel-`: `pixel-heart`, `pixel-calendar`, `pixel-chart-bar`, `pixel-git-merge`. Install Levni and search from the terminal:
 
 ```bash
-npm install github:BoraGkc/levni
+npm install @levni/levni
 npx levni list pixel
 npx levni list pixel calendar
 ```

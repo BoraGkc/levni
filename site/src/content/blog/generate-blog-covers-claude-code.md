@@ -27,10 +27,10 @@ This guide takes you from an empty project to a finished cover, then to a whole 
 
 ## Install Levni in your project
 
-Levni is not on npm yet, so install it from GitHub:
+Install Levni from npm:
 
 ```bash
-npm install github:BoraGkc/levni
+npm install @levni/levni
 ```
 
 That gives you the `levni` command and the engine. You can already draw by hand: write a scene file and render it.
@@ -47,7 +47,7 @@ npx levni render scene.json cover.webp
 The `mcp` command runs Levni as an [MCP server](https://modelcontextprotocol.io) over stdio. Register it with one line:
 
 ```bash
-claude mcp add levni -- npx -y github:BoraGkc/levni mcp
+claude mcp add levni -- npx -y @levni/levni mcp
 ```
 
 Start a new Claude Code session in the project and ask it to list its tools. You should see five from Levni. If you use another client, the same server works there too: see [the MCP server setup guide](/blog/illustration-mcp-server-setup/).

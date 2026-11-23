@@ -9,7 +9,7 @@ import showcase from '../data/gallery.json';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => +b.data.date - +a.data.date);
 const repo = SITE.github.replace('https://github.com/', '');
-const pkg = `github:${repo}`;
+const pkg = '@levni/levni';
 
 // The marquee: two rows of real library tiles, picked across shelves so the breadth shows at a glance
 const rowA = ['cat', 'rocket', 'bicycle', 'coffee-cup', 'person-laptop', 'piggy-bank', 'umbrella', 'camera', 'pizza-slice', 'lighthouse', 'headphones', 'trophy', 'sun', 'bank', 'guitar', 'ambulance', 'sailboat', 'robot'];

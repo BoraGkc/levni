@@ -27,10 +27,10 @@ This guide builds that cover, then shows how to change the layout with a seed, s
 
 ## Render your first 3D cover image
 
-Levni is not on npm yet, so install it from GitHub:
+Install Levni from npm:
 
 ```bash
-npm install github:BoraGkc/levni
+npm install @levni/levni
 ```
 
 Make a file called `cover.json`. This is the whole scene:

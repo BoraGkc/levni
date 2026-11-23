@@ -27,10 +27,10 @@ This guide makes one icon, compares it with the flat drawing, recolours it, rota
 
 ## Make your first 3D icon
 
-Install Levni from GitHub (it is not on npm yet):
+Install Levni from npm:
 
 ```bash
-npm install github:BoraGkc/levni
+npm install @levni/levni
 ```
 
 Save this as `bulb.json`:

@@ -51,10 +51,10 @@ Start with a normal 1200 by 673 scene and a title. Keep the drawing compact: one
   "title": { "text": "Ten habits of calm teams", "kicker": "Work", "brand": "levni.dev" } }
 ```
 
-Install Levni from GitHub and render it:
+Install Levni from npm and render it:
 
 ```bash
-npm install github:BoraGkc/levni
+npm install @levni/levni
 npx levni render habits.json cover.png
 ```
 

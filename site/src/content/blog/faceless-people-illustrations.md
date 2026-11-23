@@ -37,10 +37,10 @@ The library's own drawings follow the same rule: no faces, no hands. People appe
 
 ## Draw one person in a pose
 
-Install Levni from GitHub (it is not on npm yet):
+Install Levni from npm:
 
 ```bash
-npm install github:BoraGkc/levni
+npm install @levni/levni
 ```
 
 A person needs a position, a size and a pose:

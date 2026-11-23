@@ -27,10 +27,10 @@ This guide draws each chart type from a short JSON scene, then shows how to put 
 
 ## Draw a bar chart
 
-Install Levni from GitHub (it is not on npm yet):
+Install Levni from npm:
 
 ```bash
-npm install github:BoraGkc/levni
+npm install @levni/levni
 ```
 
 Save this as `bars.json`:

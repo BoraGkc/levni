@@ -26,10 +26,10 @@ This guide shows how to print one scene in three sets of inks, how to recolour a
 
 ## Start from one scene
 
-Install Levni from GitHub (it is not on npm yet):
+Install Levni from npm:
 
 ```bash
-npm install github:BoraGkc/levni
+npm install @levni/levni
 ```
 
 Here is a small scene: a laptop on a sun, a coffee cup and a plant. It has no `style` field, so it prints in the default `riso` inks.

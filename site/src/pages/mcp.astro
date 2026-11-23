@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import { SITE } from '../site';
 
 const repo = SITE.github.replace('https://github.com/', '');
-const pkg = `github:${repo}`;
+const pkg = '@levni/levni';
 const json = (env) => JSON.stringify({ mcpServers: { levni: { command: 'npx', args: ['-y', pkg, 'mcp'], ...(env ? { env } : {}) } } }, null, 2);
 
 const tools = [

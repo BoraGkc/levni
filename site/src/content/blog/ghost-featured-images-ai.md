@@ -41,14 +41,14 @@ You need two values:
 The Ghost tools appear only when both variables are in the Levni server's environment. In Claude Desktop, Cursor and most clients, add this to the MCP config file:
 
 ```json
-{ "mcpServers": { "levni": { "command": "npx", "args": ["-y", "github:BoraGkc/levni", "mcp"],
+{ "mcpServers": { "levni": { "command": "npx", "args": ["-y", "@levni/levni", "mcp"],
   "env": { "GHOST_ADMIN_API_URL": "https://your-site.com", "GHOST_ADMIN_API_KEY": "<id>:<secret>" } } } }
 ```
 
 In Claude Code, pass the variables when you add the server:
 
 ```bash
-claude mcp add levni -e GHOST_ADMIN_API_URL=https://your-site.com -e GHOST_ADMIN_API_KEY=<id>:<secret> -- npx -y github:BoraGkc/levni mcp
+claude mcp add levni -e GHOST_ADMIN_API_URL=https://your-site.com -e GHOST_ADMIN_API_KEY=<id>:<secret> -- npx -y @levni/levni mcp
 ```
 
 Restart the client. You should now see eight Levni tools: the five drawing tools (`scene_guide`, `list_props`, `show_props`, `render_scene`, `critique_scene`) and the three Ghost tools. Without the two variables, the Ghost tools do not exist at all. More on the basic setup is in [the MCP server guide](/blog/illustration-mcp-server-setup/) and on [the MCP page](/mcp/).

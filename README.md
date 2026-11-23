@@ -18,13 +18,13 @@ Named after Levni, the 18th-century Ottoman painter of the Tulip Era, whose colo
 **With an AI assistant (MCP).** Claude Code:
 
 ```bash
-claude mcp add levni -- npx -y github:BoraGkc/levni mcp
+claude mcp add levni -- npx -y @levni/levni mcp
 ```
 
 Claude Desktop, Cursor and other clients (`claude_desktop_config.json`, `.cursor/mcp.json`, …):
 
 ```json
-{ "mcpServers": { "levni": { "command": "npx", "args": ["-y", "github:BoraGkc/levni", "mcp"] } } }
+{ "mcpServers": { "levni": { "command": "npx", "args": ["-y", "@levni/levni", "mcp"] } } }
 ```
 
 Then ask: *"Illustrate this article with Levni and fix what the critic reports."*
@@ -41,7 +41,7 @@ npx levni sheet props.png rocket phone     # contact sheet of props, every varia
 **From code.**
 
 ```js
-import { compose, critique, render } from 'levni';
+import { compose, critique, render } from '@levni/levni';
 
 const scene = { seed: 4, elements: [{ type: 'prop', name: 'rocket', x: 600, y: 336, size: 360, shadow: true }] };
 const { notes } = await render(scene, 'rocket.png');   // writes the file, returns the critic's notes
@@ -95,7 +95,7 @@ From a checkout, use `"command": "node", "args": ["/path/to/levni/bin/levni.mjs"
 Add your Ghost Admin credentials to the server's `env` and three more tools appear:
 
 ```json
-{ "mcpServers": { "levni": { "command": "npx", "args": ["-y", "github:BoraGkc/levni", "mcp"],
+{ "mcpServers": { "levni": { "command": "npx", "args": ["-y", "@levni/levni", "mcp"],
   "env": { "GHOST_ADMIN_API_URL": "https://your-site.com", "GHOST_ADMIN_API_KEY": "<id>:<secret>" } } } }
 ```
 

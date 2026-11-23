@@ -13,7 +13,7 @@ faq:
   - q: "Where do the props come from?"
     a: "The library grew from the metaphors the articles needed. When a story called for an object that did not exist yet, someone drew it and added it, so later covers could reuse it. The library now has 538 props in 848 variants."
   - q: "Can I use the same approach for my own publication?"
-    a: "Yes. Levni is open source (MIT) and the drawings are CC BY 4.0, so you can build a house style of your own. Install it from GitHub, pick your inks with a style pack, and add props as your stories need them."
+    a: "Yes. Levni is open source (MIT) and the drawings are CC BY 4.0, so you can build a house style of your own. Install it from npm (`@levni/levni`), pick your inks with a style pack, and add props as your stories need them."
 ---
 
 A publication that runs hundreds of articles needs hundreds of pictures. Stock photos make every site look the same, and a fresh illustration for each story is slow and expensive, with a different hand every time. [Ortak Alan](https://ortakalan.io), a Turkish publication, wanted something else: a cover for every article, all recognisably theirs.

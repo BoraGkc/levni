@@ -27,10 +27,10 @@ This guide shows the presets, how seeds work, the bases and the soft style, and 
 
 ## Draw an isometric diorama with one line
 
-Install Levni from GitHub (it is not on npm yet):
+Install Levni from npm:
 
 ```bash
-npm install github:BoraGkc/levni
+npm install @levni/levni
 ```
 
 Save this as `room.json`:

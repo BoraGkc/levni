@@ -22,7 +22,7 @@ An isometric room is a favourite illustration for blog covers about work, homes,
 
 Levni has a small 3D world built into its scene format. You describe a room as a list of floors, walls, boxes and props, and the engine draws it in the same hand-inked riso style as the rest of the library. There is no image model and no API key, so it costs nothing per image.
 
-This guide builds one room in four steps: the shell, the furniture, the objects on the desk, and a finished cover. You need Node 20 or newer and Levni. Install it with `npm install github:BoraGkc/levni`, and the whole thing takes about ten minutes.
+This guide builds one room in four steps: the shell, the furniture, the objects on the desk, and a finished cover. You need Node 20 or newer and Levni. Install it with `npm install @levni/levni`, and the whole thing takes about ten minutes.
 
 ## Know the world you are drawing
 

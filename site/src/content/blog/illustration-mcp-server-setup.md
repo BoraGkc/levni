@@ -7,11 +7,11 @@ kind: Guide
 coverAlt: "A laptop on the left, a robot on the right and a power plug in the middle on a yellow disc, all on a blue card"
 faq:
   - q: "How do I add an MCP server to Claude Desktop?"
-    a: "Open claude_desktop_config.json, add a levni entry under mcpServers with the command npx and the arguments -y, github:BoraGkc/levni and mcp, then restart Claude Desktop. The five tools appear in the tools menu of a new chat."
+    a: "Open claude_desktop_config.json, add a levni entry under mcpServers with the command npx and the arguments -y, @levni/levni and mcp, then restart Claude Desktop. The five tools appear in the tools menu of a new chat."
   - q: "Where is the Cursor MCP config file?"
     a: "Cursor reads .cursor/mcp.json in your project for one repository, or a global mcp.json in your home .cursor folder for every project. Both use the same mcpServers format as Claude Desktop."
   - q: "Why does the first run of npx take so long?"
-    a: "Levni is installed from GitHub, so npx has to download the package and its image library, sharp, before the server starts. The first start can take a minute. Later starts use the cache and are quick."
+    a: "On first run npx has to download the package and its image library, sharp, before the server starts. The first start can take a minute. Later starts use the cache and are quick."
   - q: "Does the Levni MCP server need an API key?"
     a: "No. The server draws from a JSON scene on your machine. It calls no image model and no web service, so there is no key to set and no cost per image."
   - q: "Which Node version do I need?"
@@ -31,14 +31,14 @@ The client is the app you chat in. It starts `levni mcp` as a child process and 
 ![A laptop and a small robot on a coral card, an arrow to a power plug on a yellow disc, and an arrow to a server rack on a blue card](/blog/illustration-mcp-server-setup/fig-1.webp)
 *The client (laptop and agent) starts the server and speaks to it through stdio.*
 
-So every client needs the same three facts: a command (`npx`), its arguments (`-y github:BoraGkc/levni mcp`) and a name (`levni`). Only the file that holds them changes. For the background, the [MCP documentation](https://modelcontextprotocol.io) explains the protocol in full.
+So every client needs the same three facts: a command (`npx`), its arguments (`-y @levni/levni mcp`) and a name (`levni`). Only the file that holds them changes. For the background, the [MCP documentation](https://modelcontextprotocol.io) explains the protocol in full.
 
 ## Add the server to Claude Code
 
 Claude Code has a command for it, so there is no file to edit:
 
 ```bash
-claude mcp add levni -- npx -y github:BoraGkc/levni mcp
+claude mcp add levni -- npx -y @levni/levni mcp
 ```
 
 Start a new session and ask Claude to list its tools. You should see `scene_guide`, `list_props`, `show_props`, `render_scene` and `critique_scene`. For a full walk-through that ends in a finished cover, read [how to generate blog covers with Claude Code](/blog/generate-blog-covers-claude-code/).
@@ -52,7 +52,7 @@ Claude Desktop reads `claude_desktop_config.json`. Open it from Settings, Develo
   "mcpServers": {
     "levni": {
       "command": "npx",
-      "args": ["-y", "github:BoraGkc/levni", "mcp"]
+      "args": ["-y", "@levni/levni", "mcp"]
     }
   }
 }
@@ -69,7 +69,7 @@ Cursor uses the same `mcpServers` format. Save it as `.cursor/mcp.json` in your 
   "mcpServers": {
     "levni": {
       "command": "npx",
-      "args": ["-y", "github:BoraGkc/levni", "mcp"]
+      "args": ["-y", "@levni/levni", "mcp"]
     }
   }
 }
@@ -87,7 +87,7 @@ VS Code differs in two ways: the top-level key is `servers`, not `mcpServers`, a
     "levni": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "github:BoraGkc/levni", "mcp"]
+      "args": ["-y", "@levni/levni", "mcp"]
     }
   }
 }
@@ -143,8 +143,8 @@ A working setup answers with a short list of tool calls, a preview image and a p
 Most failures come from four causes.
 
 1. **Old Node.** Levni needs Node 20 or newer. Run `node --version` in the shell your client uses. A client launched from the dock can see a different Node from your terminal.
-2. **A slow first start.** `npx` installs Levni from GitHub, along with `sharp`, on first run. That can take a minute, and some clients give up before the server answers. Run `npx -y github:BoraGkc/levni mcp` once in a terminal to warm the cache, stop it with Ctrl+C, then restart the client.
-3. **`npx` not found.** GUI apps do not always inherit your shell's PATH. Give the full path to `npx` in `command`, or run Levni from a checkout instead: `"command": "node", "args": ["/path/to/levni/bin/levni.mjs", "mcp"]`. On Windows, if the client cannot launch `npx` directly, use `"command": "cmd"` with `"args": ["/c", "npx", "-y", "github:BoraGkc/levni", "mcp"]`.
+2. **A slow first start.** `npx` downloads Levni from npm, along with `sharp`, on first run. That can take a minute, and some clients give up before the server answers. Run `npx -y @levni/levni mcp` once in a terminal to warm the cache, stop it with Ctrl+C, then restart the client.
+3. **`npx` not found.** GUI apps do not always inherit your shell's PATH. Give the full path to `npx` in `command`, or run Levni from a checkout instead: `"command": "node", "args": ["/path/to/levni/bin/levni.mjs", "mcp"]`. On Windows, if the client cannot launch `npx` directly, use `"command": "cmd"` with `"args": ["/c", "npx", "-y", "@levni/levni", "mcp"]`.
 4. **The file is not where you looked.** Files from `render_scene` are written relative to the client's working directory. Ask the agent to print the path from the `wrote` line, or give `out` as an absolute path.
 
 A JSON typo in the config fails silently in some clients. If no tools appear, validate the file and restart the client fully.
