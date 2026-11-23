@@ -1,12 +1,13 @@
 {
   "name": "crab-front",
+  "category": "nature",
   "tags": [
     "yengeç",
     "tuz"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/tim-heidecker-joe/kapak-3d.json",
+      "note": "coral crab seen from the front with blue legs", "from": "harvested from .cache/cizim-drafts/tim-heidecker-joe/kapak-3d.json",
       "paths": [
         {
           "d": "M10 55 a40 28 0 1 0 80 0 a40 28 0 1 0 -80 0",

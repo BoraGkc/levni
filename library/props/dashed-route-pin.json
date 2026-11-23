@@ -1,5 +1,6 @@
 {
   "name": "dashed-route-pin",
+  "category": "places",
   "tags": [
     "rota",
     "kesik çizgi",
@@ -10,7 +11,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/oobah-butler-zengin/ici-1.json",
+      "note": "mostly empty frame, only a small coral dot at top right", "from": "harvested from .cache/cizim-drafts/oobah-butler-zengin/ici-1.json",
       "paths": [
         {
           "d": "M10 90 Q30 20 60 50 Q80 70 92 14",

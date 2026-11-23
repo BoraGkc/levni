@@ -1,0 +1,31 @@
+{
+ "name": "leaf",
+ "category": "nature",
+ "tags": [
+  "leaf"
+ ],
+ "variants": [
+  {
+   "note": "leaf, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M40.4 78.2 c26.1 0 44.1 -13.8 46.2 -50.4 v-8.4 h-16.9 c-37.8 0 -50.3 16.8 -50.4 37.8 c0 4.2 0 12.6 8.4 21 h12.6 l0.1 0",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M20.6 87.8 c2.1 -18.9 10.5 -33.6 29.4 -42",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 75.2 c26.1 0 44.1 -13.8 46.2 -50.4 v-8.4 h-16.9 c-37.8 0 -50.3 16.8 -50.4 37.8 c0 4.2 0 12.6 8.4 21 h12.6 l0.1 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

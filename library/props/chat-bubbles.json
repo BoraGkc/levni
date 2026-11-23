@@ -1,0 +1,79 @@
+{
+ "name": "chat-bubbles",
+ "category": "tech",
+ "tags": [
+  "sohbet",
+  "mesaj",
+  "konuşma balonu",
+  "chat",
+  "speech bubbles",
+  "message",
+  "dialog"
+ ],
+ "variants": [
+  {
+   "note": "two overlapping speech bubbles, the front one coral with three dots",
+   "paths": [
+    {
+     "d": "M20 16 L56 16 Q64 16 64 24 L64 44 Q64 52 56 52 L36 52 L24 64 L24 52 L20 52 Q12 52 12 44 L12 24 Q12 16 20 16 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 28 L50 28 M20 38 L42 38",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M44 40 L80 40 Q88 40 88 48 L88 68 Q88 76 80 76 L76 76 L76 88 L64 76 L44 76 Q36 76 36 68 L36 48 Q36 40 44 40 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 58 h.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62 58 h.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M74 58 h.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  },
+  {
+   "note": "tinted bubbles, mustard in front with text lines",
+   "paths": [
+    {
+     "d": "M20 16 L56 16 Q64 16 64 24 L64 44 Q64 52 56 52 L36 52 L24 64 L24 52 L20 52 Q12 52 12 44 L12 24 Q12 16 20 16 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M44 40 L80 40 Q88 40 88 48 L88 68 Q88 76 80 76 L76 76 L76 88 L64 76 L44 76 Q36 76 36 68 L36 48 Q36 40 44 40 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M46 54 L74 54 M46 64 L64 64",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

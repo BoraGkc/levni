@@ -1,5 +1,6 @@
 {
   "name": "film-bar",
+  "category": "film",
   "tags": [
     "film şeridi",
     "halter",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/john-turturro-yeni/ici-2-alt.json",
+      "note": "thin horizontal film strip bar with perforations, small, blue", "from": "harvested from .cache/cizim-drafts/john-turturro-yeni/ici-2-alt.json",
       "paths": [
         {
           "d": "M10 44 L90 44 L90 56 L10 56 Z",

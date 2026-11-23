@@ -1,0 +1,90 @@
+{
+ "name": "pizza-slice",
+ "category": "food",
+ "tags": [
+  "pizza",
+  "dilim",
+  "slice",
+  "italian",
+  "italyan",
+  "fast food",
+  "peynir"
+ ],
+ "variants": [
+  {
+   "note": "classic slice, crust on top, three coral pepperoni",
+   "paths": [
+    {
+     "d": "M20 22 L80 22 L50 90 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M16 16 Q50 8 84 16 L82 28 Q50 20 18 28 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M46 40 C46 43.3 43.3 46 40 46 C36.7 46 34 43.3 34 40 C34 36.7 36.7 34 40 34 C43.3 34 46 36.7 46 40 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M64 44 C64 47.3 61.3 50 58 50 C54.7 50 52 47.3 52 44 C52 40.7 54.7 38 58 38 C61.3 38 64 40.7 64 44 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M53 62 C53 64.8 50.8 67 48 67 C45.3 67 43 64.8 43 62 C43 59.3 45.3 57 48 57 C50.8 57 53 59.3 53 62 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "veggie slice with green peppers and a coral tomato",
+   "paths": [
+    {
+     "d": "M20 22 L80 22 L50 90 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M16 16 Q50 8 84 16 L82 28 Q50 20 18 28 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M46 40 C46 43.3 43.3 46 40 46 C36.7 46 34 43.3 34 40 C34 36.7 36.7 34 40 34 C43.3 34 46 36.7 46 40 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M63 46 C63 48.8 60.8 51 58 51 C55.3 51 53 48.8 53 46 C53 43.3 55.3 41 58 41 C60.8 41 63 43.3 63 46 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M53 64 C53 66.8 50.8 69 48 69 C45.3 69 43 66.8 43 64 C43 61.3 45.3 59 48 59 C50.8 59 53 61.3 53 64 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M36 34 L44 34",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

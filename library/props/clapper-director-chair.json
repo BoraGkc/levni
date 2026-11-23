@@ -1,5 +1,6 @@
 {
   "name": "clapper-director-chair",
+  "category": "film",
   "tags": [
     "yönetmen koltuğu",
     "klaket",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/toronto-film-festivali/ici-1.json",
+      "note": "folding director's chair, white seat with clapperboard stripes on top", "from": "harvested from .cache/cizim-drafts/toronto-film-festivali/ici-1.json",
       "paths": [
         {
           "d": "M20 28 L20 96 M80 28 L80 96",

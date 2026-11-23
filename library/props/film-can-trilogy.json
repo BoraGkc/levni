@@ -1,5 +1,6 @@
 {
   "name": "film-can-trilogy",
+  "category": "film",
   "tags": [
     "film cans",
     "trilogy",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/patricio-guzman-silin/ici-1.json",
+      "note": "stacked blue film cans seen from the side, three layers", "from": "harvested from .cache/cizim-drafts/patricio-guzman-silin/ici-1.json",
       "paths": [
         {
           "d": "M14,18 h72 v20 h-72 Z",

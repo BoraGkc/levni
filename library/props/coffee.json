@@ -1,0 +1,49 @@
+{
+ "name": "coffee",
+ "category": "home",
+ "tags": [
+  "coffee"
+ ],
+ "variants": [
+  {
+   "note": "coffee, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 44.6 h58.8 v21 a25.2 25.2 0 0 1 -25.2 25.2 h-8.4 a25.2 25.2 0 0 1 -25.2 -25.2 v-21",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 58.4 c3.5 2.7 8.7 4.3 14.7 4.2 c6 0.1 11.2 -1.5 14.7 -4.2 c3.5 -2.7 8.7 -4.3 14.7 -4.2 c6 -0.1 11.2 1.5 14.7 4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 12.2 a10.1 10.1 0 0 0 -4.2 8.4 a10.1 10.1 0 0 0 4.2 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 12.2 a10.1 10.1 0 0 0 -4.2 8.4 a10.1 10.1 0 0 0 4.2 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 41.6 h58.8 v21 a25.2 25.2 0 0 1 -25.2 25.2 h-8.4 a25.2 25.2 0 0 1 -25.2 -25.2 v-21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M69.9 69.8 a12.6 12.6 0 1 0 1.1 -23.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

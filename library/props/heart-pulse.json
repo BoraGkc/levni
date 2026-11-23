@@ -1,0 +1,49 @@
+{
+ "name": "heart-pulse",
+ "category": "health",
+ "tags": [
+  "kalp",
+  "nabız",
+  "heartbeat",
+  "kalp atışı",
+  "ecg",
+  "ekg",
+  "cardiology",
+  "kardiyoloji",
+  "pulse"
+ ],
+ "variants": [
+  {
+   "note": "coral heart with an ink pulse line across it",
+   "paths": [
+    {
+     "d": "M50 86 C18 62 10 42 22 28 C32 18 46 22 50 34 C54 22 68 18 78 28 C90 42 82 62 50 86 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M12 52 L34 52 L42 38 L52 66 L60 46 L66 52 L88 52",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  },
+  {
+   "note": "pale heart, coral pulse line running out of both sides",
+   "paths": [
+    {
+     "d": "M50 86 C18 62 10 42 22 28 C32 18 46 22 50 34 C54 22 68 18 78 28 C90 42 82 62 50 86 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M8 52 L34 52 L42 38 L52 66 L60 46 L66 52 L92 52",
+     "stroke": "coral",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

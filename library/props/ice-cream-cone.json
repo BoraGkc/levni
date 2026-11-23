@@ -1,0 +1,92 @@
+{
+ "name": "ice-cream-cone",
+ "category": "food",
+ "tags": [
+  "dondurma",
+  "ice cream",
+  "cone",
+  "külah",
+  "dessert",
+  "tatlı",
+  "summer",
+  "yaz"
+ ],
+ "variants": [
+  {
+   "note": "waffle cone, two scoops (tone and coral) with a cherry",
+   "paths": [
+    {
+     "d": "M32 50 L68 50 L50 92 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M38 58 L52 84 M62 58 L48 84",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M64 28 C64 35.7 57.7 42 50 42 C42.3 42 36 35.7 36 28 C36 20.3 42.3 14 50 14 C57.7 14 64 20.3 64 28 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M28 52 Q22 36 38 32 Q50 28 62 32 Q78 36 72 52 Q64 58 58 52 Q50 60 42 52 Q34 58 28 52 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M55 9 C55 11.8 52.8 14 50 14 C47.3 14 45 11.8 45 9 C45 6.3 47.3 4 50 4 C52.8 4 55 6.3 55 9 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "one big pistachio scoop with a dripping edge and sprinkles",
+   "paths": [
+    {
+     "d": "M32 54 L68 54 L50 92 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M38 62 L52 86 M62 62 L48 86",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M24 54 Q18 26 50 22 Q82 26 76 54 Q70 62 64 54 Q58 64 52 54 Q46 60 40 54 Q34 62 24 54 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M40 38 h.1",
+     "stroke": "coral",
+     "weight": 6
+    },
+    {
+     "d": "M56 34 h.1",
+     "stroke": "mustard",
+     "weight": 6
+    },
+    {
+     "d": "M62 46 h.1",
+     "stroke": "coral",
+     "weight": 6
+    },
+    {
+     "d": "M46 46 h.1",
+     "stroke": "mustard",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

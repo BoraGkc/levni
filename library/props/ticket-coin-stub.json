@@ -1,5 +1,6 @@
 {
   "name": "ticket-coin-stub",
+  "category": "stage",
   "tags": [
     "bilet",
     "gelir",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/toronto-international-film/ici-2.json",
+      "note": "orange ticket stub with a stack of coins at right", "from": "harvested from .cache/cizim-drafts/toronto-international-film/ici-2.json",
       "paths": [
         {
           "d": "M6 22 L94 22 L94 78 L6 78 Z",

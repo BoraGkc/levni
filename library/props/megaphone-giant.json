@@ -1,5 +1,6 @@
 {
   "name": "megaphone-giant",
+  "category": "music",
   "tags": [
     "megafon",
     "dev",
@@ -11,7 +12,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/musluman-manosfer-kadinlari/ici-2.json",
+      "note": "large blue megaphone pointing right", "from": "harvested from .cache/cizim-drafts/musluman-manosfer-kadinlari/ici-2.json",
       "paths": [
         {
           "d": "M10 38 H24 V62 H10 Z",

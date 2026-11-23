@@ -1,5 +1,6 @@
 {
   "name": "tape-measure-ecg",
+  "category": "health",
   "tags": [
     "mezura",
     "nabiz",
@@ -11,7 +12,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-2-v2.json",
+      "note": "tape measure with a numbered ruler face, orange-bordered case", "from": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-2-v2.json",
       "paths": [
         {
           "d": "M34,66 L52,66 L58,38 L66,86 L72,62 L100,62",

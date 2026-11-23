@@ -1,0 +1,67 @@
+{
+ "name": "barcode",
+ "category": "tech",
+ "tags": [
+  "barcode"
+ ],
+ "variants": [
+  {
+   "note": "barcode, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M48.8 40.4 h-4.2 v25.2 h4.2 v-25.2",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M16.4 29 v-4.2 a8.4 8.4 0 0 1 8.4 -8.4 h8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 71 v4.2 a8.4 8.4 0 0 0 8.4 8.4 h8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 16.4 h8.4 a8.4 8.4 0 0 1 8.4 8.4 v4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 83.6 h8.4 a8.4 8.4 0 0 0 8.4 -8.4 v-4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 37.4 v25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M71 37.4 v25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M45.8 37.4 h-4.2 v25.2 h4.2 v-25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 37.4 v25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,5 +1,6 @@
 {
   "name": "spotlight-lamp",
+  "category": "stage",
   "tags": [
     "spot ışığı",
     "sahne",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/tom-hanks-broadway/ici-1.json",
+      "note": "orange boxy spotlight lamp, side view, white barn door", "from": "harvested from .cache/cizim-drafts/tom-hanks-broadway/ici-1.json",
       "paths": [
         {
           "d": "M50 74 L50 92 M32 92 L68 92",

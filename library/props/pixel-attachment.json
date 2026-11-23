@@ -1,0 +1,61 @@
+{
+ "name": "pixel-attachment",
+ "category": "tech",
+ "tags": [
+  "attachment",
+  "pixel attachment",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "attachment, regular pixel icon",
+   "paths": [
+    {
+     "d": "M25.5 18.5h49v7h-49ZM39.5 32.5h21v7h-21ZM53.5 39.5h7v28h-7ZM25.5 25.5h7v49h-7ZM67.5 25.5h7v49h-7ZM39.5 39.5h7v35h-7ZM39.5 74.5h35v7h-35Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "attachment, thin pixel icon",
+   "paths": [
+    {
+     "d": "M29 18.5h42v3.5h-42ZM43 32.5h14v3.5h-14ZM57 36h3.5v31.5h-3.5ZM25.5 22h3.5v52.5h-3.5ZM71 22h3.5v56h-3.5ZM39.5 36h3.5v42h-3.5ZM43 78h28v3.5h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "attachment, solid pixel icon",
+   "paths": [
+    {
+     "d": "M29.5 22.5h49v7h-49ZM43.5 36.5h21v7h-21ZM57.5 43.5h7v28h-7ZM29.5 29.5h7v49h-7ZM71.5 29.5h7v49h-7ZM43.5 43.5h7v35h-7ZM43.5 78.5h35v7h-35Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M25.5 18.5h49v7h-49ZM39.5 32.5h21v7h-21ZM53.5 39.5h7v28h-7ZM25.5 25.5h7v49h-7ZM67.5 25.5h7v49h-7ZM39.5 39.5h7v35h-7ZM39.5 74.5h35v7h-35Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "attachment, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M29.5 22.5h49v3.5h-49ZM43.5 36.5h21v3.5h-21ZM61 40h3.5v31.5h-3.5ZM29.5 26h3.5v52.5h-3.5ZM75 26h3.5v56h-3.5ZM43.5 40h3.5v42h-3.5ZM43.5 82h35v3.5h-35Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M25.5 18.5h49v3.5h-49ZM39.5 32.5h21v3.5h-21ZM57 36h3.5v31.5h-3.5ZM25.5 22h3.5v52.5h-3.5ZM71 22h3.5v56h-3.5ZM39.5 36h3.5v42h-3.5ZM39.5 78h35v3.5h-35Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

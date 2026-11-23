@@ -1,0 +1,65 @@
+{
+ "name": "link",
+ "category": "symbols",
+ "tags": [
+  "bağlantı",
+  "zincir",
+  "halka",
+  "link",
+  "chain",
+  "hyperlink",
+  "connect"
+ ],
+ "variants": [
+  {
+   "note": "two chain links interlocked on a diagonal",
+   "paths": [
+    {
+     "d": "M24.4 58.6 L38.6 44.4 Q47.1 36 55.6 44.4 Q64 52.9 55.6 61.4 L41.4 75.6 Q32.9 84 24.4 75.6 Q16 67.1 24.4 58.6 Z M30.1 62.8 L42.8 50.1 Q46.4 46.6 49.9 50.1 Q53.4 53.6 49.9 57.2 L37.2 69.9 Q33.6 73.4 30.1 69.9 Q26.6 66.4 30.1 62.8 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8,
+     "rule": "evenodd"
+    },
+    {
+     "d": "M44.4 38.6 L58.6 24.4 Q67.1 16 75.6 24.4 Q84 32.9 75.6 41.4 L61.4 55.6 Q52.9 64 44.4 55.6 Q36 47.1 44.4 38.6 Z M50.1 42.8 L62.8 30.1 Q66.4 26.6 69.9 30.1 Q73.4 33.6 69.9 37.2 L57.2 49.9 Q53.6 53.4 50.1 49.9 Q46.6 46.4 50.1 42.8 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 8,
+     "rule": "evenodd"
+    }
+   ]
+  },
+  {
+   "note": "two coral and paper links just apart with spark lines",
+   "paths": [
+    {
+     "d": "M18.4 64.6 L32.6 50.4 Q41.1 42 49.6 50.4 Q58 58.9 49.6 67.4 L35.4 81.6 Q26.9 90 18.4 81.6 Q10 73.1 18.4 64.6 Z M24.1 68.8 L36.8 56.1 Q40.4 52.6 43.9 56.1 Q47.4 59.6 43.9 63.2 L31.2 75.9 Q27.6 79.4 24.1 75.9 Q20.6 72.4 24.1 68.8 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 8,
+     "rule": "evenodd"
+    },
+    {
+     "d": "M50.4 32.6 L64.6 18.4 Q73.1 10 81.6 18.4 Q90 26.9 81.6 35.4 L67.4 49.6 Q58.9 58 50.4 49.6 Q42 41.1 50.4 32.6 Z M56.1 36.8 L68.8 24.1 Q72.4 20.6 75.9 24.1 Q79.4 27.6 75.9 31.2 L63.2 43.9 Q59.6 47.4 56.1 43.9 Q52.6 40.4 56.1 36.8 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8,
+     "rule": "evenodd"
+    },
+    {
+     "d": "M52 52 L52 52.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M46 40 L42 34 M60 66 L64 72",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

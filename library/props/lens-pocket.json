@@ -1,5 +1,6 @@
 {
   "name": "lens-pocket",
+  "category": "tech",
   "tags": [
     "cep",
     "kamera merceği",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/john-turturro-yeni/kapak.json",
+      "note": "round lens pocket, blue rings with orange centre", "from": "harvested from .cache/cizim-drafts/john-turturro-yeni/kapak.json",
       "paths": [
         {
           "d": "M50 50 m-46 0 a46 46 0 1 0 92 0 a46 46 0 1 0 -92 0",

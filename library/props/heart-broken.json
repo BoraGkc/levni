@@ -1,0 +1,31 @@
+{
+ "name": "heart-broken",
+ "category": "health",
+ "tags": [
+  "heart broken"
+ ],
+ "variants": [
+  {
+   "note": "heart broken, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M84.5 55.4 l-31.5 31.2 l-31.5 -31.2 a21 21 0 1 1 31.5 -27.6 a21 21 0 1 1 31.5 27.6",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M81.5 52.4 l-31.5 31.2 l-31.5 -31.2 a21 21 0 1 1 31.5 -27.6 a21 21 0 1 1 31.5 27.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 24.8 l-8.4 16.8 l16.8 12.6 l-8.4 16.8 v12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

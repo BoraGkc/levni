@@ -1,5 +1,6 @@
 {
   "name": "court-columns",
+  "category": "law",
   "tags": [
     "adliye",
     "sütun",
@@ -10,7 +11,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/nick-reiner-davasi/ici-1.json",
+      "note": "courthouse pediment roof above a base, columns missing between, blue", "from": "harvested from .cache/cizim-drafts/nick-reiner-davasi/ici-1.json",
       "paths": [
         {
           "d": "M4 28 L50 4 L96 28 Z",

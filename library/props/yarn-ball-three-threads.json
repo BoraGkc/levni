@@ -1,5 +1,6 @@
 {
   "name": "yarn-ball-three-threads",
+  "category": "home",
   "tags": [
     "yun yumagi uc ip",
     "yarn ball three threads",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/la-bola-negra-2/kapak.json",
+      "note": "blue yarn ball with three threads ending in heart and leaf", "from": "harvested from .cache/cizim-drafts/la-bola-negra-2/kapak.json",
       "paths": [
         {
           "d": "M2,50 a26,26 0 1,0 52,0 a26,26 0 1,0 -52,0",

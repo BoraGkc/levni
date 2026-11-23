@@ -1,0 +1,71 @@
+{
+ "name": "pixel-device-tablet",
+ "category": "tech",
+ "tags": [
+  "device tablet",
+  "pixel device tablet",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "device tablet, regular pixel icon",
+   "paths": [
+    {
+     "d": "M32 25h42v42h-42ZM32 67h17.5v7h-17.5ZM56.5 67h17.5v7h-17.5ZM32 74h42v7h-42Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 15h56v7h-56ZM46.5 64h7v7h-7ZM22 22h7v56h-7ZM71 22h7v56h-7ZM22 78h56v7h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "device tablet, thin pixel icon",
+   "paths": [
+    {
+     "d": "M28.5 21.5h49v52.5h-49ZM28.5 74h21v3.5h-21ZM56.5 74h21v3.5h-21ZM28.5 77.5h49v7h-49Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 15h56v3.5h-56ZM46.5 71h7v3.5h-7ZM22 18.5h3.5v63h-3.5ZM74.5 18.5h3.5v63h-3.5ZM22 81.5h56v3.5h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "device tablet, solid pixel icon",
+   "paths": [
+    {
+     "d": "M26 19h56v49h-56ZM26 68h24.5v7h-24.5ZM57.5 68h24.5v7h-24.5ZM26 75h56v14h-56Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 15h56v49h-56ZM22 64h24.5v7h-24.5ZM53.5 64h24.5v7h-24.5ZM22 71h56v14h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "device tablet, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M26 19h56v3.5h-56ZM33 26h42v49h-42ZM33 75h17.5v3.5h-17.5ZM57.5 75h17.5v3.5h-17.5ZM33 78.5h42v3.5h-42ZM26 22.5h3.5v63h-3.5ZM78.5 22.5h3.5v63h-3.5ZM26 85.5h56v3.5h-56Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M22 15h56v3.5h-56ZM29 22h42v49h-42ZM29 71h17.5v3.5h-17.5ZM53.5 71h17.5v3.5h-17.5ZM29 74.5h42v3.5h-42ZM22 18.5h3.5v63h-3.5ZM74.5 18.5h3.5v63h-3.5ZM22 81.5h56v3.5h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

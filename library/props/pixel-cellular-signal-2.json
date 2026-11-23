@@ -1,0 +1,71 @@
+{
+ "name": "pixel-cellular-signal-2",
+ "category": "tech",
+ "tags": [
+  "cellular signal 2",
+  "pixel cellular signal 2",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "cellular signal 2, regular pixel icon",
+   "paths": [
+    {
+     "d": "M74 32h7v42h-7Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M64 22h21v7h-21ZM64 29h7v42h-7ZM78 29h7v42h-7ZM39.5 43h21v35h-21ZM15 57h21v21h-21ZM64 71h21v7h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "cellular signal 2, thin pixel icon",
+   "paths": [
+    {
+     "d": "M70.5 28.5h14v49h-14Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M64 22h21v3.5h-21ZM39.5 43h21v3.5h-21ZM39.5 46.5h7v3.5h-7ZM50 46.5h3.5v3.5h-3.5ZM57 46.5h3.5v3.5h-3.5ZM39.5 50h3.5v3.5h-3.5ZM46.5 50h3.5v3.5h-3.5ZM53.5 50h7v3.5h-7ZM39.5 53.5h7v3.5h-7ZM50 53.5h3.5v3.5h-3.5ZM57 53.5h3.5v3.5h-3.5ZM15 57h21v3.5h-21ZM39.5 57h3.5v3.5h-3.5ZM46.5 57h3.5v3.5h-3.5ZM53.5 57h7v3.5h-7ZM15 60.5h7v3.5h-7ZM25.5 60.5h3.5v3.5h-3.5ZM32.5 60.5h3.5v3.5h-3.5ZM39.5 60.5h7v3.5h-7ZM50 60.5h3.5v3.5h-3.5ZM57 60.5h3.5v3.5h-3.5ZM15 64h3.5v3.5h-3.5ZM22 64h3.5v3.5h-3.5ZM29 64h7v3.5h-7ZM39.5 64h3.5v3.5h-3.5ZM46.5 64h3.5v3.5h-3.5ZM53.5 64h7v3.5h-7ZM15 67.5h7v3.5h-7ZM25.5 67.5h3.5v3.5h-3.5ZM32.5 67.5h3.5v3.5h-3.5ZM39.5 67.5h7v3.5h-7ZM50 67.5h3.5v3.5h-3.5ZM57 67.5h3.5v3.5h-3.5ZM64 25.5h3.5v49h-3.5ZM81.5 25.5h3.5v49h-3.5ZM15 71h3.5v3.5h-3.5ZM22 71h3.5v3.5h-3.5ZM29 71h7v3.5h-7ZM39.5 71h3.5v3.5h-3.5ZM46.5 71h3.5v3.5h-3.5ZM53.5 71h7v3.5h-7ZM15 74.5h21v3.5h-21ZM39.5 74.5h21v3.5h-21ZM64 74.5h21v3.5h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "cellular signal 2, solid pixel icon",
+   "paths": [
+    {
+     "d": "M43.5 47h21v7h-21ZM19 61h21v7h-21ZM43.5 54h7v21h-7ZM57.5 54h7v21h-7ZM19 68h7v7h-7ZM33 68h7v7h-7ZM68 26h21v56h-21ZM19 75h21v7h-21ZM43.5 75h21v7h-21Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M39.5 43h21v7h-21ZM15 57h21v7h-21ZM39.5 50h7v21h-7ZM53.5 50h7v21h-7ZM15 64h7v7h-7ZM29 64h7v7h-7ZM64 22h21v56h-21ZM15 71h21v7h-21ZM39.5 71h21v7h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "cellular signal 2, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M43.5 47h21v3.5h-21ZM43.5 50.5h7v3.5h-7ZM54 50.5h3.5v3.5h-3.5ZM61 50.5h3.5v3.5h-3.5ZM43.5 54h3.5v3.5h-3.5ZM50.5 54h3.5v3.5h-3.5ZM57.5 54h7v3.5h-7ZM43.5 57.5h7v3.5h-7ZM54 57.5h3.5v3.5h-3.5ZM61 57.5h3.5v3.5h-3.5ZM19 61h21v3.5h-21ZM43.5 61h3.5v3.5h-3.5ZM50.5 61h3.5v3.5h-3.5ZM57.5 61h7v3.5h-7ZM19 64.5h7v3.5h-7ZM29.5 64.5h3.5v3.5h-3.5ZM36.5 64.5h3.5v3.5h-3.5ZM43.5 64.5h7v3.5h-7ZM54 64.5h3.5v3.5h-3.5ZM61 64.5h3.5v3.5h-3.5ZM19 68h3.5v3.5h-3.5ZM26 68h3.5v3.5h-3.5ZM33 68h7v3.5h-7ZM43.5 68h3.5v3.5h-3.5ZM50.5 68h3.5v3.5h-3.5ZM57.5 68h7v3.5h-7ZM19 71.5h7v3.5h-7ZM29.5 71.5h3.5v3.5h-3.5ZM36.5 71.5h3.5v3.5h-3.5ZM43.5 71.5h7v3.5h-7ZM54 71.5h3.5v3.5h-3.5ZM61 71.5h3.5v3.5h-3.5ZM19 75h3.5v3.5h-3.5ZM26 75h3.5v3.5h-3.5ZM33 75h7v3.5h-7ZM43.5 75h3.5v3.5h-3.5ZM50.5 75h3.5v3.5h-3.5ZM57.5 75h7v3.5h-7ZM68 26h21v56h-21ZM19 78.5h21v3.5h-21ZM43.5 78.5h21v3.5h-21Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M39.5 43h21v3.5h-21ZM39.5 46.5h7v3.5h-7ZM50 46.5h3.5v3.5h-3.5ZM57 46.5h3.5v3.5h-3.5ZM39.5 50h3.5v3.5h-3.5ZM46.5 50h3.5v3.5h-3.5ZM53.5 50h7v3.5h-7ZM39.5 53.5h7v3.5h-7ZM50 53.5h3.5v3.5h-3.5ZM57 53.5h3.5v3.5h-3.5ZM15 57h21v3.5h-21ZM39.5 57h3.5v3.5h-3.5ZM46.5 57h3.5v3.5h-3.5ZM53.5 57h7v3.5h-7ZM15 60.5h7v3.5h-7ZM25.5 60.5h3.5v3.5h-3.5ZM32.5 60.5h3.5v3.5h-3.5ZM39.5 60.5h7v3.5h-7ZM50 60.5h3.5v3.5h-3.5ZM57 60.5h3.5v3.5h-3.5ZM15 64h3.5v3.5h-3.5ZM22 64h3.5v3.5h-3.5ZM29 64h7v3.5h-7ZM39.5 64h3.5v3.5h-3.5ZM46.5 64h3.5v3.5h-3.5ZM53.5 64h7v3.5h-7ZM15 67.5h7v3.5h-7ZM25.5 67.5h3.5v3.5h-3.5ZM32.5 67.5h3.5v3.5h-3.5ZM39.5 67.5h7v3.5h-7ZM50 67.5h3.5v3.5h-3.5ZM57 67.5h3.5v3.5h-3.5ZM15 71h3.5v3.5h-3.5ZM22 71h3.5v3.5h-3.5ZM29 71h7v3.5h-7ZM39.5 71h3.5v3.5h-3.5ZM46.5 71h3.5v3.5h-3.5ZM53.5 71h7v3.5h-7ZM64 22h21v56h-21ZM15 74.5h21v3.5h-21ZM39.5 74.5h21v3.5h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

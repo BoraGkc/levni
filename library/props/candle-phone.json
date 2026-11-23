@@ -1,5 +1,6 @@
 {
   "name": "candle-phone",
+  "category": "tech",
   "tags": [
     "telefon",
     "mum",
@@ -9,7 +10,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/maddie-kowalski-burnerverse/ici-1.json",
+      "note": "blue smartphone with a flame on top like a melting candle", "from": "harvested from .cache/cizim-drafts/maddie-kowalski-burnerverse/ici-1.json",
       "paths": [
         {
           "d": "M50 -4 Q40 8 46 16 Q50 12 52 18 Q60 8 50 -4 Z",

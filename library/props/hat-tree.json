@@ -1,12 +1,13 @@
 {
   "name": "hat-tree",
+  "category": "home",
   "tags": [
     "şapka askısı ağaç",
     "hat stand tree"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/sarah-jones-america/ici-2.json",
+      "note": "branching blue tree holding hats and a serving cloche as fruit", "from": "harvested from .cache/cizim-drafts/sarah-jones-america/ici-2.json",
       "paths": [
         {
           "d": "M50 100 V34",

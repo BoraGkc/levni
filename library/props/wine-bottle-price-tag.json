@@ -1,66 +1,81 @@
 {
-  "name": "wine-bottle-price-tag",
-  "tags": [
-    "şarap şişesi",
-    "fiyat etiketi",
-    "wine bottle",
-    "price tag",
-    "sahte marka"
-  ],
-  "variants": [
+ "name": "wine-bottle-price-tag",
+ "category": "money",
+ "tags": [
+  "şarap şişesi",
+  "fiyat etiketi",
+  "wine bottle",
+  "price tag",
+  "sahte marka"
+ ],
+ "variants": [
+  {
+   "note": "blue wine bottle with an orange price tag hanging",
+   "from": "harvested from .cache/cizim-drafts/oobah-butler-zengin/ici-2-alt.json",
+   "paths": [
     {
-      "slots": { "tag": [68, 46, 24, 28], "label": [40, 50, 22, 36] },
-      "note": "harvested from .cache/cizim-drafts/oobah-butler-zengin/ici-2-alt.json",
-      "paths": [
-        {
-          "d": "M36 44 Q36 30 45 24 L45 6 L55 6 L55 24 Q64 30 64 44 L64 90 Q64 98 56 98 L44 98 Q36 98 36 90 Z",
-          "fill": "blue",
-          "stroke": "ink",
-          "weight": 3.2
-        },
-        {
-          "d": "M44 2 L56 2 L56 12 L44 12 Z",
-          "fill": "coral",
-          "stroke": "ink",
-          "weight": 2.4
-        },
-        {
-          "d": "M41 46 L41 88",
-          "fill": "none",
-          "stroke": "tone",
-          "weight": 2.4
-        },
-        {
-          "d": "M45 20 Q70 24 76 38",
-          "fill": "none",
-          "stroke": "ink",
-          "weight": 2
-        },
-        {
-          "d": "M62 46 L88 40 L96 48 L92 76 L66 80 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 3
-        },
-        {
-          "d": "M62 46 L88 40 L96 48 L92 76 L66 80 Z",
-          "fill": "none",
-          "stroke": "ink",
-          "weight": 3
-        },
-        {
-          "d": "M76 38 m-2.6 0 a2.6 2.6 0 1 0 5.2 0 a2.6 2.6 0 1 0 -5.2 0",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 1.6
-        },
-        {
-          "d": "M72 56 L86 53 M72 62 L84 60 M72 68 L82 66",
-          "fill": "none",
-          "stroke": "coral",
-          "weight": 3
-        }
-      ]
+     "d": "M36 44 Q36 30 45 24 L45 6 L55 6 L55 24 Q64 30 64 44 L64 90 Q64 98 56 98 L44 98 Q36 98 36 90 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 3.2
+    },
+    {
+     "d": "M44 2 L56 2 L56 12 L44 12 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 2.4
+    },
+    {
+     "d": "M41 46 L41 88",
+     "fill": "none",
+     "stroke": "tone",
+     "weight": 2.4
+    },
+    {
+     "d": "M45 20 Q70 24 76 38",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 2
+    },
+    {
+     "d": "M62 46 L88 40 L96 48 L92 76 L66 80 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M62 46 L88 40 L96 48 L92 76 L66 80 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M76 38 m-2.6 0 a2.6 2.6 0 1 0 5.2 0 a2.6 2.6 0 1 0 -5.2 0",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 1.6
+    },
+    {
+     "d": "M72 56 L86 53 M72 62 L84 60 M72 68 L82 66",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 3
     }
-  ]
+   ],
+   "slots": {
+    "tag": [
+     68,
+     46,
+     24,
+     28
+    ],
+    "label": [
+     40,
+     50,
+     22,
+     36
+    ]
+   }
+  }
+ ]
 }

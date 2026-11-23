@@ -1,0 +1,37 @@
+{
+ "name": "campfire",
+ "category": "places",
+ "tags": [
+  "campfire"
+ ],
+ "variants": [
+  {
+   "note": "campfire, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M53 65.6 a16.8 16.8 0 0 0 16.8 -16.8 c0 -12.6 -8.4 -12.6 -8.4 -33.6 c-16.8 8.4 -25.2 21 -25.2 33.6 a16.8 16.8 0 0 0 16.8 16.8",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M16.4 87.8 l67.2 -16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M83.6 87.8 l-67.2 -16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 62.6 a16.8 16.8 0 0 0 16.8 -16.8 c0 -12.6 -8.4 -12.6 -8.4 -33.6 c-16.8 8.4 -25.2 21 -25.2 33.6 a16.8 16.8 0 0 0 16.8 16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

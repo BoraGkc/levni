@@ -1,5 +1,6 @@
 {
   "name": "telefon-yuzu",
+  "category": "tech",
   "tags": [
     "telefon",
     "profil",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/randevu-uygulamasi-profillerin/kapak-3d.json",
+      "note": "large blue phone screen showing a person icon over a hourglass", "from": "harvested from .cache/cizim-drafts/randevu-uygulamasi-profillerin/kapak-3d.json",
       "paths": [
         {
           "d": "M10 12 L90 12 L90 160 L10 160 Z",

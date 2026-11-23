@@ -1,5 +1,6 @@
 {
   "name": "leaf-museum",
+  "category": "nature",
   "tags": [
     "yaprak seklinde muze",
     "leaf shaped museum",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/ma-yansong-lucas/kapak-alt.json",
+      "note": "green dome museum with white tree icons and leaf veins", "from": "harvested from .cache/cizim-drafts/ma-yansong-lucas/kapak-alt.json",
       "paths": [
         {
           "d": "M-2 84 Q6 28 50 22 Q94 20 102 84 Z",
@@ -60,7 +61,7 @@
       ]
     },
     {
-      "note": "harvested from .cache/cizim-drafts/ma-yansong-lucas/kapak.json",
+      "note": "green leaf-shaped museum building with arched door", "from": "harvested from .cache/cizim-drafts/ma-yansong-lucas/kapak.json",
       "paths": [
         {
           "d": "M-2 84 Q2 40 50 8 Q98 40 102 84 Z",

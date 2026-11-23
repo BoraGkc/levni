@@ -1,0 +1,65 @@
+{
+ "name": "git-branch",
+ "category": "tech",
+ "tags": [
+  "git branch"
+ ],
+ "variants": [
+  {
+   "note": "git branch, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M23.6 78.2 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M23.6 27.8 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M65.6 27.8 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M20.6 75.2 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20.6 24.8 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62.6 24.8 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 33.2 l0 33.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 75.2 h25.2 a8.4 8.4 0 0 0 8.4 -8.4 v-21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 58.4 l12.6 -12.6 l12.6 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{ "seed": 21, "clip": [60,52,1080,569], "elements": [
+ {"type":"panel","x":60,"y":52,"w":1080,"h":569,"color":"blue"},
+ {"type":"glyphs","x":60,"y":52,"w":1080,"h":569,"color":"tone","mode":"radial","level":0.7,"cx":600,"cy":330},
+ {"type":"disc","x":600,"y":340,"r":225,"color":"mustard"},
+ {"type":"prop","name":"plug","variant":0,"x":600,"y":340,"size":400,"rot":-20,"shadow":true},
+ {"type":"prop","name":"laptop","variant":1,"x":260,"y":420,"size":330,"shadow":true},
+ {"type":"prop","name":"robot","variant":2,"x":950,"y":400,"size":320},
+ {"type":"prop","name":"sparkle","x":330,"y":190,"size":80},
+ {"type":"prop","name":"sparkle","x":900,"y":170,"size":70},
+ {"type":"ticks","x":740,"y":160,"angle":-40,"size":36}
+]}

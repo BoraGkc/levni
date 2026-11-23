@@ -1,0 +1,50 @@
+{
+ "name": "bolt-badge",
+ "category": "symbols",
+ "tags": [
+  "şimşek rozeti",
+  "hızlı",
+  "enerji",
+  "bolt badge",
+  "lightning",
+  "fast",
+  "power",
+  "rozet"
+ ],
+ "variants": [
+  {
+   "note": "mustard circle badge with a bolt",
+   "paths": [
+    {
+     "d": "M88 50 C88 71 71 88 50 88 C29 88 12 71 12 50 C12 29 29 12 50 12 C71 12 88 29 88 50 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M56 20 L34 54 L48 54 L42 80 L66 44 L52 44 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  },
+  {
+   "note": "scalloped coral badge with a mustard bolt",
+   "paths": [
+    {
+     "d": "M91 50 L83.8 59.1 L85.5 70.5 L74.7 74.7 L70.5 85.5 L59.1 83.8 L50 91 L40.9 83.8 L29.5 85.5 L25.3 74.7 L14.5 70.5 L16.2 59.1 L9 50 L16.2 40.9 L14.5 29.5 L25.3 25.3 L29.5 14.5 L40.9 16.2 L50 9 L59.1 16.2 L70.5 14.5 L74.7 25.3 L85.5 29.5 L83.8 40.9 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M56 20 L34 54 L48 54 L42 80 L66 44 L52 44 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  }
+ ]
+}

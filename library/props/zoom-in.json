@@ -1,0 +1,43 @@
+{
+ "name": "zoom-in",
+ "category": "symbols",
+ "tags": [
+  "zoom in"
+ ],
+ "variants": [
+  {
+   "note": "zoom in, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 44.6 a29.4 29.4 0 1 0 58.8 0 a29.4 29.4 0 1 0 -58.8 0",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 41.6 a29.4 29.4 0 1 0 58.8 0 a29.4 29.4 0 1 0 -58.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 41.6 l25.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 29 l0 25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.8 87.8 l-25.2 -25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

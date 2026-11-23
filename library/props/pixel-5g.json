@@ -1,0 +1,61 @@
+{
+ "name": "pixel-5g",
+ "category": "tech",
+ "tags": [
+  "5g",
+  "pixel 5g",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "5g, regular pixel icon",
+   "paths": [
+    {
+     "d": "M18.5 32.5h24.5v7h-24.5ZM50 32.5h31.5v7h-31.5ZM18.5 39.5h7v7h-7ZM18.5 46.5h24.5v7h-24.5ZM67.5 46.5h14v7h-14ZM50 39.5h7v21h-7ZM36 53.5h7v7h-7ZM74.5 53.5h7v7h-7ZM18.5 60.5h24.5v7h-24.5ZM50 60.5h31.5v7h-31.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "5g, thin pixel icon",
+   "paths": [
+    {
+     "d": "M18.5 32.5h24.5v3.5h-24.5ZM53.5 32.5h28v3.5h-28ZM18.5 36h3.5v14h-3.5ZM18.5 50h21v3.5h-21ZM67.5 50h14v3.5h-14ZM50 36h3.5v28h-3.5ZM39.5 53.5h3.5v10.5h-3.5ZM78 53.5h3.5v10.5h-3.5ZM18.5 64h21v3.5h-21ZM53.5 64h24.5v3.5h-24.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "5g, solid pixel icon",
+   "paths": [
+    {
+     "d": "M22.5 36.5h24.5v7h-24.5ZM54 36.5h31.5v7h-31.5ZM22.5 43.5h7v7h-7ZM22.5 50.5h24.5v7h-24.5ZM71.5 50.5h14v7h-14ZM54 43.5h7v21h-7ZM40 57.5h7v7h-7ZM78.5 57.5h7v7h-7ZM22.5 64.5h24.5v7h-24.5ZM54 64.5h31.5v7h-31.5Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 32.5h24.5v7h-24.5ZM50 32.5h31.5v7h-31.5ZM18.5 39.5h7v7h-7ZM18.5 46.5h24.5v7h-24.5ZM67.5 46.5h14v7h-14ZM50 39.5h7v21h-7ZM36 53.5h7v7h-7ZM74.5 53.5h7v7h-7ZM18.5 60.5h24.5v7h-24.5ZM50 60.5h31.5v7h-31.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "5g, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M22.5 36.5h24.5v3.5h-24.5ZM57.5 36.5h28v3.5h-28ZM22.5 40h3.5v14h-3.5ZM22.5 54h21v3.5h-21ZM71.5 54h14v3.5h-14ZM54 40h3.5v28h-3.5ZM43.5 57.5h3.5v10.5h-3.5ZM82 57.5h3.5v10.5h-3.5ZM22.5 68h21v3.5h-21ZM57.5 68h24.5v3.5h-24.5Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 32.5h24.5v3.5h-24.5ZM53.5 32.5h28v3.5h-28ZM18.5 36h3.5v14h-3.5ZM18.5 50h21v3.5h-21ZM67.5 50h14v3.5h-14ZM50 36h3.5v28h-3.5ZM39.5 53.5h3.5v10.5h-3.5ZM78 53.5h3.5v10.5h-3.5ZM18.5 64h21v3.5h-21ZM53.5 64h24.5v3.5h-24.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

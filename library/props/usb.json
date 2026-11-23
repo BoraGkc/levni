@@ -1,0 +1,76 @@
+{
+ "name": "usb",
+ "category": "tech",
+ "tags": [
+  "usb"
+ ],
+ "variants": [
+  {
+   "note": "usb, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M44.6 82.4 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M69.8 44.6 h8.4 v-8.4 h-8.4 l0 8.4",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M27.8 40.4 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M44.6 25.7 h16.8 l-8.4 -10.5 l-8.4 10.5",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M41.6 79.4 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 71 v-48.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 41.6 v12.6 l21 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 60.5 l21 -8.4 v-10.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 41.6 h8.4 v-8.4 h-8.4 l0 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 37.4 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 22.7 h16.8 l-8.4 -10.5 l-8.4 10.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

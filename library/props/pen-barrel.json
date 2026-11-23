@@ -1,12 +1,13 @@
 {
   "name": "pen-barrel",
+  "category": "books",
   "tags": [
     "dolma kalem gövdesi",
     "fountain pen barrel"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/michael-douglas-ve/kapak.json",
+      "note": "blue pen barrel upright with yellow band and orange stripe", "from": "harvested from .cache/cizim-drafts/michael-douglas-ve/kapak.json",
       "paths": [
         {
           "d": "M36 0 H64 V92 Q50 100 36 92Z",

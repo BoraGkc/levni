@@ -1,0 +1,97 @@
+{
+ "name": "bell",
+ "category": "tech",
+ "tags": [
+  "bildirim",
+  "zil",
+  "çan",
+  "bell",
+  "notification",
+  "alert",
+  "uyarı"
+ ],
+ "variants": [
+  {
+   "note": "notification bell with a small coral dot badge",
+   "paths": [
+    {
+     "d": "M55 15 C55 17.8 52.8 20 50 20 C47.2 20 45 17.8 45 15 C45 12.2 47.2 10 50 10 C52.8 10 55 12.2 55 15 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 20 C34 20 30 36 30 50 C30 62 24 68 18 74 L82 74 C76 68 70 62 70 50 C70 36 66 20 50 20 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M42 80 Q50 92 58 80 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M38 40 Q38 32 44 28",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M83 24 C83 29 79 33 74 33 C69 33 65 29 65 24 C65 19 69 15 74 15 C79 15 83 19 83 24 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  },
+  {
+   "note": "mustard bell ringing, sound lines either side",
+   "paths": [
+    {
+     "d": "M55 15 C55 17.8 52.8 20 50 20 C47.2 20 45 17.8 45 15 C45 12.2 47.2 10 50 10 C52.8 10 55 12.2 55 15 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 20 C34 20 30 36 30 50 C30 62 24 68 18 74 L82 74 C76 68 70 62 70 50 C70 36 66 20 50 20 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M42 80 Q50 92 58 80 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M12 38 Q8 48 12 58",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M88 38 Q92 48 88 58",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M20 34 Q17 42 20 50",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M80 34 Q83 42 80 50",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

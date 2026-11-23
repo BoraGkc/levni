@@ -1,0 +1,61 @@
+{
+ "name": "pixel-dollar",
+ "category": "money",
+ "tags": [
+  "dollar",
+  "pixel dollar",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "dollar, regular pixel icon",
+   "paths": [
+    {
+     "d": "M46.5 15h7v14h-7ZM25.5 29h49v7h-49ZM25.5 36h7v10.5h-7ZM25.5 46.5h49v7h-49ZM67.5 53.5h7v10.5h-7ZM25.5 64h49v7h-49ZM46.5 71h7v14h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "dollar, thin pixel icon",
+   "paths": [
+    {
+     "d": "M50 15h3.5v14h-3.5ZM25.5 29h49v3.5h-49ZM25.5 32.5h3.5v14h-3.5ZM25.5 46.5h49v3.5h-49ZM71 50h3.5v17.5h-3.5ZM25.5 67.5h49v3.5h-49ZM46.5 71h3.5v14h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "dollar, solid pixel icon",
+   "paths": [
+    {
+     "d": "M50.5 19h7v14h-7ZM29.5 33h49v7h-49ZM29.5 40h7v10.5h-7ZM29.5 50.5h49v7h-49ZM71.5 57.5h7v10.5h-7ZM29.5 68h49v7h-49ZM50.5 75h7v14h-7Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M46.5 15h7v14h-7ZM25.5 29h49v7h-49ZM25.5 36h7v10.5h-7ZM25.5 46.5h49v7h-49ZM67.5 53.5h7v10.5h-7ZM25.5 64h49v7h-49ZM46.5 71h7v14h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "dollar, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M54 19h3.5v14h-3.5ZM29.5 33h49v3.5h-49ZM29.5 36.5h3.5v14h-3.5ZM29.5 50.5h49v3.5h-49ZM75 54h3.5v17.5h-3.5ZM29.5 71.5h49v3.5h-49ZM50.5 75h3.5v14h-3.5Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 15h3.5v14h-3.5ZM25.5 29h49v3.5h-49ZM25.5 32.5h3.5v14h-3.5ZM25.5 46.5h49v3.5h-49ZM71 50h3.5v17.5h-3.5ZM25.5 67.5h49v3.5h-49ZM46.5 71h3.5v14h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

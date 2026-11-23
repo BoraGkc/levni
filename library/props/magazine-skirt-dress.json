@@ -1,5 +1,6 @@
 {
   "name": "magazine-skirt-dress",
+  "category": "books",
   "tags": [
     "dress",
     "magazine",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/patti-lupone-full/ici-2.json",
+      "note": "white magazine skirt dress shape with orange waistband", "from": "harvested from .cache/cizim-drafts/patti-lupone-full/ici-2.json",
       "paths": [
         {
           "d": "M38,12 H62 L58,42 H42 Z",

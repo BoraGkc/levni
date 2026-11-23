@@ -1,5 +1,6 @@
 {
   "name": "pocket-watch",
+  "category": "symbols",
   "tags": [
     "cep saati",
     "zaman",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/tom-hanks-broadway/ici-2.json",
+      "note": "round pocket watch, blue face, front view, top crown", "from": "harvested from .cache/cizim-drafts/tom-hanks-broadway/ici-2.json",
       "paths": [
         {
           "d": "M50 6 L50 14",

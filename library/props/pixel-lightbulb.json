@@ -1,0 +1,71 @@
+{
+ "name": "pixel-lightbulb",
+ "category": "home",
+ "tags": [
+  "lightbulb",
+  "pixel lightbulb",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "lightbulb, regular pixel icon",
+   "paths": [
+    {
+     "d": "M39 25h28v7h-28ZM32 32h42v21h-42ZM39 53h28v7h-28ZM46 60h14v7h-14Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 15h28v7h-28ZM29 22h7v7h-7ZM64 22h7v7h-7ZM22 29h7v21h-7ZM71 29h7v21h-7ZM29 50h7v7h-7ZM64 50h7v7h-7ZM36 57h7v7h-7ZM57 57h7v7h-7ZM36 64h28v7h-28ZM36 78h28v7h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "lightbulb, thin pixel icon",
+   "paths": [
+    {
+     "d": "M39 21.5h28v3.5h-28ZM32 25h42v3.5h-42ZM32 28.5h7v3.5h-7ZM46 28.5h28v3.5h-28ZM28.5 32h7v7h-7ZM39 32h38.5v7h-38.5ZM28.5 39h49v14h-49ZM32 53h42v7h-42ZM39 60h28v3.5h-28ZM42.5 67h21v3.5h-21ZM42.5 70.5h3.5v3.5h-3.5ZM60 70.5h3.5v3.5h-3.5ZM42.5 74h21v3.5h-21ZM42.5 77.5h3.5v3.5h-3.5ZM60 77.5h3.5v3.5h-3.5ZM42.5 81h21v3.5h-21Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 15h28v3.5h-28ZM29 18.5h7v3.5h-7ZM64 18.5h7v3.5h-7ZM25.5 22h3.5v7h-3.5ZM71 22h3.5v7h-3.5ZM36 25.5h7v3.5h-7ZM32.5 29h3.5v7h-3.5ZM22 29h3.5v21h-3.5ZM74.5 29h3.5v21h-3.5ZM25.5 50h3.5v7h-3.5ZM71 50h3.5v7h-3.5ZM29 57h7v3.5h-7ZM64 57h7v3.5h-7ZM36 60.5h28v3.5h-28ZM43 67.5h14v3.5h-14ZM43 74.5h14v3.5h-14ZM36 64h3.5v17.5h-3.5ZM60.5 64h3.5v17.5h-3.5ZM39.5 81.5h21v3.5h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "lightbulb, solid pixel icon",
+   "paths": [
+    {
+     "d": "M40 19h28v7h-28ZM33 26h42v7h-42ZM26 33h56v21h-56ZM33 54h42v7h-42ZM40 61h28v14h-28ZM40 82h28v7h-28Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 15h28v7h-28ZM29 22h42v7h-42ZM22 29h56v21h-56ZM29 50h42v7h-42ZM36 57h28v14h-28ZM36 78h28v7h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "lightbulb, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M40 19h28v3.5h-28ZM33 22.5h42v3.5h-42ZM29.5 26h49v3.5h-49ZM29.5 29.5h10.5v3.5h-10.5ZM47 29.5h31.5v3.5h-31.5ZM26 33h10.5v7h-10.5ZM40 33h42v7h-42ZM26 40h56v14h-56ZM29.5 54h49v7h-49ZM33 61h42v3.5h-42ZM40 68h28v3.5h-28ZM40 71.5h7v3.5h-7ZM61 71.5h7v3.5h-7ZM40 75h28v3.5h-28ZM40 78.5h7v3.5h-7ZM61 78.5h7v3.5h-7ZM40 82h28v3.5h-28ZM43.5 85.5h21v3.5h-21Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 15h28v3.5h-28ZM29 18.5h42v3.5h-42ZM25.5 22h49v3.5h-49ZM25.5 25.5h10.5v3.5h-10.5ZM43 25.5h31.5v3.5h-31.5ZM22 29h10.5v7h-10.5ZM36 29h42v7h-42ZM22 36h56v14h-56ZM25.5 50h49v7h-49ZM29 57h42v3.5h-42ZM36 64h28v3.5h-28ZM36 67.5h7v3.5h-7ZM57 67.5h7v3.5h-7ZM36 71h28v3.5h-28ZM36 74.5h7v3.5h-7ZM57 74.5h7v3.5h-7ZM36 78h28v3.5h-28ZM39.5 81.5h21v3.5h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

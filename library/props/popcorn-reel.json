@@ -1,5 +1,6 @@
 {
   "name": "popcorn-reel",
+  "category": "film",
   "tags": [
     "film makarası",
     "misir patlağı",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/bu-haftanin-yeni/kapak.json",
+      "note": "large film reel with spoked holes, orange accents, tilted", "from": "harvested from .cache/cizim-drafts/bu-haftanin-yeni/kapak.json",
       "paths": [
         {
           "d": "M50 4 a46 46 0 1 0 0.1 0Z",

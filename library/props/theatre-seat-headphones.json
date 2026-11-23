@@ -1,5 +1,6 @@
 {
   "name": "theatre-seat-headphones",
+  "category": "stage",
   "tags": [
     "tiyatro koltuğu",
     "kulaklık",
@@ -10,7 +11,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/off-broadway-hayalet/ici-2.json",
+      "note": "orange theatre seat with blue headphones, front view", "from": "harvested from .cache/cizim-drafts/off-broadway-hayalet/ici-2.json",
       "paths": [
         {
           "d": "M26 6 Q50 0 74 6 L78 62 L22 62 Z",

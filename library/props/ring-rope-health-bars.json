@@ -1,5 +1,6 @@
 {
   "name": "ring-rope-health-bars",
+  "category": "sport",
   "tags": [
     "sağlık çubuğu",
     "ring halatı",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/wwe-hollywood-gecis/ici-2.json",
+      "note": "two small orange health bars floating, nothing else", "from": "harvested from .cache/cizim-drafts/wwe-hollywood-gecis/ici-2.json",
       "paths": [
         {
           "d": "M4 10 h42 v14 h-42 z",

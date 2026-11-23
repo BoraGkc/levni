@@ -1,0 +1,61 @@
+{
+ "name": "pixel-chevrons-vertical",
+ "category": "symbols",
+ "tags": [
+  "chevrons vertical",
+  "pixel chevrons vertical",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "chevrons vertical, regular pixel icon",
+   "paths": [
+    {
+     "d": "M46.5 22h7v7h-7ZM39.5 29h7v7h-7ZM53.5 29h7v7h-7ZM32.5 36h7v7h-7ZM60.5 36h7v7h-7ZM32.5 57h7v7h-7ZM60.5 57h7v7h-7ZM39.5 64h7v7h-7ZM53.5 64h7v7h-7ZM46.5 71h7v7h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "chevrons vertical, thin pixel icon",
+   "paths": [
+    {
+     "d": "M46.5 25.5h7v3.5h-7ZM43 29h3.5v3.5h-3.5ZM53.5 29h3.5v3.5h-3.5ZM39.5 32.5h3.5v3.5h-3.5ZM57 32.5h3.5v3.5h-3.5ZM36 36h3.5v3.5h-3.5ZM60.5 36h3.5v3.5h-3.5ZM32.5 39.5h3.5v3.5h-3.5ZM64 39.5h3.5v3.5h-3.5ZM32.5 57h3.5v3.5h-3.5ZM64 57h3.5v3.5h-3.5ZM36 60.5h3.5v3.5h-3.5ZM60.5 60.5h3.5v3.5h-3.5ZM39.5 64h3.5v3.5h-3.5ZM57 64h3.5v3.5h-3.5ZM43 67.5h3.5v3.5h-3.5ZM53.5 67.5h3.5v3.5h-3.5ZM46.5 71h7v3.5h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "chevrons vertical, solid pixel icon",
+   "paths": [
+    {
+     "d": "M50.5 26h7v7h-7ZM43.5 33h21v7h-21ZM36.5 40h35v7h-35ZM36.5 61h35v7h-35ZM43.5 68h21v7h-21ZM50.5 75h7v7h-7Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M46.5 22h7v7h-7ZM39.5 29h21v7h-21ZM32.5 36h35v7h-35ZM32.5 57h35v7h-35ZM39.5 64h21v7h-21ZM46.5 71h7v7h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "chevrons vertical, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M50.5 29.5h7v3.5h-7ZM47 33h14v3.5h-14ZM43.5 36.5h21v3.5h-21ZM40 40h28v3.5h-28ZM36.5 43.5h35v3.5h-35ZM36.5 61h35v3.5h-35ZM40 64.5h28v3.5h-28ZM43.5 68h21v3.5h-21ZM47 71.5h14v3.5h-14ZM50.5 75h7v3.5h-7Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M46.5 25.5h7v3.5h-7ZM43 29h14v3.5h-14ZM39.5 32.5h21v3.5h-21ZM36 36h28v3.5h-28ZM32.5 39.5h35v3.5h-35ZM32.5 57h35v3.5h-35ZM36 60.5h28v3.5h-28ZM39.5 64h21v3.5h-21ZM43 67.5h14v3.5h-14ZM46.5 71h7v3.5h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

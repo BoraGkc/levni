@@ -1,5 +1,6 @@
 {
   "name": "palette-power",
+  "category": "books",
   "tags": [
     "palet",
     "güç düğmesi",
@@ -9,7 +10,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/camille-henrot-sanat/ici-2-alt2.json",
+      "note": "artist's paint palette with a smiling face, coloured dots", "from": "harvested from .cache/cizim-drafts/camille-henrot-sanat/ici-2-alt2.json",
       "paths": [
         {
           "d": "M50 6 Q92 6 94 44 Q96 76 66 80 Q54 82 56 90 Q58 98 40 96 Q8 92 6 50 Q4 8 50 6Z",

@@ -1,0 +1,36 @@
+{
+ "name": "chart-donut",
+ "category": "money",
+ "tags": [
+  "chart donut"
+ ],
+ "variants": [
+  {
+   "note": "chart donut, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M44.6 16 a37.8 37.8 0 1 0 45.4 45.4 a4.2 4.2 0 0 0 -4.2 -4.2 h-16 a17.2 17.2 0 1 1 -21 -21 v-16.8 a3.8 3.8 0 0 0 -4.2 -3.4",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M65.6 17.3 a37.8 37.8 0 0 1 23.1 23.1 h-18.9 a37.8 37.8 0 0 0 -4.2 -4.2 v-18.9",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M41.6 13 a37.8 37.8 0 1 0 45.4 45.4 a4.2 4.2 0 0 0 -4.2 -4.2 h-16 a17.2 17.2 0 1 1 -21 -21 v-16.8 a3.8 3.8 0 0 0 -4.2 -3.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62.6 14.3 a37.8 37.8 0 0 1 23.1 23.1 h-18.9 a37.8 37.8 0 0 0 -4.2 -4.2 v-18.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

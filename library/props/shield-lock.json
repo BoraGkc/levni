@@ -1,0 +1,42 @@
+{
+ "name": "shield-lock",
+ "category": "tech",
+ "tags": [
+  "shield lock"
+ ],
+ "variants": [
+  {
+   "note": "shield lock, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M53 15.2 a50.4 50.4 0 0 0 35.7 12.6 a50.4 50.4 0 0 1 -35.7 63 a50.4 50.4 0 0 1 -35.7 -63 a50.4 50.4 0 0 0 35.7 -12.6",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M48.8 48.8 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 12.2 a50.4 50.4 0 0 0 35.7 12.6 a50.4 50.4 0 0 1 -35.7 63 a50.4 50.4 0 0 1 -35.7 -63 a50.4 50.4 0 0 0 35.7 -12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M45.8 45.8 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 50 l0 10.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

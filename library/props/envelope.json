@@ -1,5 +1,6 @@
 {
  "name": "envelope",
+ "category": "books",
  "tags": [
   "zarf",
   "mektup",
@@ -70,6 +71,35 @@
      "stroke": "ink",
      "weight": 7,
      "fill": "none"
+    }
+   ]
+  },
+  {
+   "note": "envelope, open: flap up and a letter sticking out",
+   "paths": [
+    {
+     "d": "M10 44 L50 12 L90 44 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M22 48 L22 24 L78 24 L78 48 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M32 33 L68 33 M32 41 L58 41",
+     "stroke": "ink",
+     "weight": 4,
+     "fill": "none"
+    },
+    {
+     "d": "M10 44 L50 64 L90 44 L91 82 L9 82 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
     }
    ]
   }

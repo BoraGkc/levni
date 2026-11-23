@@ -1,0 +1,55 @@
+{
+ "name": "cooker",
+ "category": "home",
+ "tags": [
+  "cooker"
+ ],
+ "variants": [
+  {
+   "note": "cooker, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M23.6 23.6 a8.4 8.4 0 0 1 8.4 -8.4 h42 a8.4 8.4 0 0 1 8.4 8.4 v58.8 a8.4 8.4 0 0 1 -8.4 8.4 h-42 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -58.8",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 29 h0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62.6 29 h0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 29 h0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20.6 20.6 a8.4 8.4 0 0 1 8.4 -8.4 h42 a8.4 8.4 0 0 1 8.4 8.4 v58.8 a8.4 8.4 0 0 1 -8.4 8.4 h-42 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -58.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 62.6 h25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20.6 45.8 h58.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

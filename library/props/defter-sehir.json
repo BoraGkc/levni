@@ -1,5 +1,6 @@
 {
   "name": "defter-sehir",
+  "category": "books",
   "tags": [
     "defter",
     "şehir",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/rent-broadway-efsanesinin/ici-1-r0.json",
+      "note": "calendar-like notebook page with blue and coral bar chart skyline", "from": "harvested from .cache/cizim-drafts/rent-broadway-efsanesinin/ici-1-r0.json",
       "paths": [
         {
           "d": "M8 14 L92 14 L92 94 L8 94 Z",

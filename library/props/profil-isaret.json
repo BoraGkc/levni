@@ -1,5 +1,6 @@
 {
   "name": "profil-isaret",
+  "category": "tech",
   "tags": [
     "profil",
     "avatar",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/randevu-uygulamasi-profillerin/kapak-flat.json",
+      "note": "blue person head and shoulders with speed lines, profile sign", "from": "harvested from .cache/cizim-drafts/randevu-uygulamasi-profillerin/kapak-flat.json",
       "paths": [
         {
           "d": "M30 30 a14,14 0 1,0 28,0 a14,14 0 1,0 -28,0 M20 70 Q44 40 68 70",

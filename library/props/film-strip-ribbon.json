@@ -1,5 +1,6 @@
 {
   "name": "film-strip-ribbon",
+  "category": "film",
   "tags": [
     "film şeridi",
     "kurdele",
@@ -10,7 +11,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/netflix-east-of/ici-2-r0.json",
+      "note": "slim blue film strip ribbon with four empty frames, flat horizontal", "from": "harvested from .cache/cizim-drafts/netflix-east-of/ici-2-r0.json",
       "paths": [
         {
           "d": "M0 36 L100 36 L100 64 L0 64 Z",

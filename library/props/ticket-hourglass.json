@@ -1,12 +1,13 @@
 {
   "name": "ticket-hourglass",
+  "category": "stage",
   "tags": [
     "bilet kum saati",
     "ticket hourglass"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/nathan-fielder-elizabeth/ici-1.json",
+      "note": "hourglass filled with bricks above, orange bricks below, blue phone behind", "from": "harvested from .cache/cizim-drafts/nathan-fielder-elizabeth/ici-1.json",
       "paths": [
         {
           "d": "M18 4 H82 V10 H18Z",

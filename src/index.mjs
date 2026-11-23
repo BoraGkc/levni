@@ -10,7 +10,7 @@ export { ASSETS } from './assets.mjs';
 export { FORMATS, resolveCanvas } from './formats.mjs';
 export { toWebp, toPng } from './export.mjs';
 export { STYLES, applyStyle } from './styles.mjs';
-export { validateProp, parseProps, measureVariant } from './validate.mjs';
+export { validateProp, parseProps, measureVariant, CATEGORIES } from './validate.mjs';
 export { iconsAvailable, resolveIcon } from './icon.mjs';
 
 import { writeFileSync } from 'node:fs';

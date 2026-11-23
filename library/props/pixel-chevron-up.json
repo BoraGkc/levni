@@ -1,0 +1,61 @@
+{
+ "name": "pixel-chevron-up",
+ "category": "symbols",
+ "tags": [
+  "chevron up",
+  "pixel chevron up",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "chevron up, regular pixel icon",
+   "paths": [
+    {
+     "d": "M46.5 36h7v7h-7ZM39.5 43h7v7h-7ZM53.5 43h7v7h-7ZM32.5 50h7v7h-7ZM60.5 50h7v7h-7ZM25.5 57h7v7h-7ZM67.5 57h7v7h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "chevron up, thin pixel icon",
+   "paths": [
+    {
+     "d": "M46.5 39.5h7v3.5h-7ZM43 43h3.5v3.5h-3.5ZM53.5 43h3.5v3.5h-3.5ZM39.5 46.5h3.5v3.5h-3.5ZM57 46.5h3.5v3.5h-3.5ZM36 50h3.5v3.5h-3.5ZM60.5 50h3.5v3.5h-3.5ZM32.5 53.5h3.5v3.5h-3.5ZM64 53.5h3.5v3.5h-3.5ZM29 57h3.5v3.5h-3.5ZM67.5 57h3.5v3.5h-3.5ZM25.5 60.5h3.5v3.5h-3.5ZM71 60.5h3.5v3.5h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "chevron up, solid pixel icon",
+   "paths": [
+    {
+     "d": "M50.5 40h7v7h-7ZM43.5 47h21v7h-21ZM36.5 54h35v7h-35ZM29.5 61h49v7h-49Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M46.5 36h7v7h-7ZM39.5 43h21v7h-21ZM32.5 50h35v7h-35ZM25.5 57h49v7h-49Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "chevron up, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M50.5 43.5h7v3.5h-7ZM47 47h14v3.5h-14ZM43.5 50.5h21v3.5h-21ZM40 54h28v3.5h-28ZM36.5 57.5h35v3.5h-35ZM33 61h42v3.5h-42Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M46.5 39.5h7v3.5h-7ZM43 43h14v3.5h-14ZM39.5 46.5h21v3.5h-21ZM36 50h28v3.5h-28ZM32.5 53.5h35v3.5h-35ZM29 57h42v3.5h-42Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

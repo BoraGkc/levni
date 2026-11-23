@@ -1,0 +1,7 @@
+{ "seed": 6, "clip": [60,52,1080,569], "elements": [
+ {"type":"panel","x":60,"y":52,"w":520,"h":569,"color":"tone-mustard"},
+ {"type":"panel","x":620,"y":52,"w":520,"h":569,"color":"tone-mustard"},
+ {"type":"prop","name":"potted-plant","variant":0,"x":320,"y":340,"size":380},
+ {"type":"prop","name":"potted-plant","variant":0,"x":880,"y":340,"size":380,"recolor":{"coral":"blue","tone-coral":"tone"}},
+ {"type":"arrow","from":[450,200],"to":[760,200],"bend":-40,"color":"ink"}
+]}

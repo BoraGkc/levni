@@ -1,5 +1,6 @@
 {
   "name": "film-strip-staircase",
+  "category": "film",
   "tags": [
     "merdiven",
     "film seridi",
@@ -11,7 +12,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/korku-filmleri-halloween/kapak-stairs.json",
+      "note": "solid blue staircase made of film strip with perforation holes", "from": "harvested from .cache/cizim-drafts/korku-filmleri-halloween/kapak-stairs.json",
       "paths": [
         {
           "d": "M4,94 L4,81 L19,81 L19,68 L34,68 L34,55 L49,55 L49,42 L64,42 L64,29 L79,29 L79,16 L94,16 L94,94 Z",

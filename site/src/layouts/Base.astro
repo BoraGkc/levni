@@ -44,7 +44,7 @@ const graph = [
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="alternate" type="application/rss+xml" title="Levni blog" href="/blog/rss.xml" />
-    <meta name="theme-color" content="#F1E4C8" />
+    <meta name="theme-color" content="#F4F2EC" />
     <meta name="color-scheme" content="light" />
 
     <meta property="og:type" content={type} />
@@ -66,7 +66,7 @@ const graph = [
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,600;0,6..72,700;1,6..72,500;1,6..72,600&family=Figtree:wght@400;500;600;700&display=swap"
     />
     <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />
   </head>
@@ -75,15 +75,16 @@ const graph = [
     <header class="site-header">
       <div class="wrap header-row">
         <a class="wordmark" href="/" aria-label="Levni home">
-          <img src="/img/motif-tulip.webp" alt="" width="40" height="40" />
+          <img src="/props/pencil-0.webp" alt="" width="40" height="40" />
           <span>Levni</span>
         </a>
         <nav aria-label="Main">
-          <a href="/#how">How it works</a>
-          <a href="/#gallery">Gallery</a>
-          <a href="/#folio">Folio</a>
+          <a class="nav-extra" href="/#how">How it works</a>
+          <a href="/library/">Library</a>
+          <a class="nav-extra" href="/#gallery">Gallery</a>
+          <a href="/#agents">Agents &amp; MCP</a>
           <a href="/blog/">Blog</a>
-          <a class="nav-gh" href={SITE.github}>GitHub</a>
+          <a class="nav-gh" href={SITE.github}><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z" fill="currentColor"/></svg> Star on GitHub</a>
         </nav>
       </div>
     </header>
@@ -94,11 +95,11 @@ const graph = [
       <div class="wrap footer-row">
         <div>
           <p class="footer-mark">Levni</p>
-          <p>Illustrations from a JSON scene. Code MIT, Levni Folio CC BY 4.0.</p>
+          <p>An open illustration library and the engine that draws it. Code MIT, Levni Folio CC BY 4.0.</p>
         </div>
         <div>
           <p>Powered by <a href={SITE.ortakAlan}>Ortak Alan</a></p>
-          <p><a href="/blog/">Blog</a> · <a href="/blog/rss.xml">RSS</a> · <a href={SITE.github}>GitHub</a> · <a href={`${SITE.github}/blob/main/CONTRIBUTING.md`}>Contribute</a></p>
+          <p><a href="/library/">Library</a> · <a href="/blog/">Blog</a> · <a href="/blog/rss.xml">RSS</a> · <a href={SITE.github}>GitHub</a> · <a href={`${SITE.github}/blob/main/CONTRIBUTING.md`}>Contribute</a></p>
         </div>
       </div>
     </footer>
@@ -107,36 +108,46 @@ const graph = [
 
 <style is:global>
   :root {
-    --paper: #f1e4c8;
-    --paper-2: #f8eedb;
-    --ink: #3b2415;
-    --ink-soft: #5c4130;
-    --gold: #c9962b;
-    --gold-deep: #9c7016;
-    --vermilion: #c8402e;
-    --turquoise: #2a8c80;
-    --turquoise-text: #1f6b62; /* 5:1 on paper, for small text */
-    --vermilion-deep: #b0372a; /* 5.5:1 under cream text */
-    --lapis: #1f3f8f;
-    --serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
-    --display: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+    /* riso print: the Ortak Alan house palette */
+    --paper: #f4f2ec;
+    --paper-2: #fbfaf6;
+    --ink: #14181f;
+    --ink-soft: #4a5160;
+    --rule: #d9d5cb;
+    --accent: #0b57d0;      /* riso blue */
+    --accent-text: #0a3fb0;
+    --coral: #f2603f;
+    --coral-deep: #c2401f;  /* 4.9:1 under white text */
+    --mustard: #f2c230;
+    --green: #1e783f;
+    /* older names the pages still use */
+    --gold: var(--rule);
+    --gold-deep: var(--ink-soft);
+    --vermilion: var(--coral-deep);
+    --vermilion-deep: var(--coral-deep);
+    --turquoise-text: var(--accent-text);
+    --lapis: var(--accent-text);
+    --serif: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --display: 'Newsreader', Georgia, serif;
     --mono: ui-monospace, Menlo, Consolas, monospace;
     --wrap: 1120px;
   }
   * { box-sizing: border-box; }
+  ::selection { background: var(--mustard); color: var(--ink); }
+  html { accent-color: var(--accent); caret-color: var(--accent); scrollbar-color: var(--ink-soft) var(--paper); }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
   html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0;
     background: var(--paper);
     color: var(--ink);
     font-family: var(--serif);
-    font-size: 1.16rem;
+    font-size: 1.06rem;
     line-height: 1.6;
   }
   img { max-width: 100%; height: auto; display: block; }
   a { color: var(--lapis); text-decoration-thickness: 1px; text-underline-offset: 3px; }
   a:hover { color: var(--vermilion); }
-  :focus-visible { outline: 3px solid var(--vermilion); outline-offset: 3px; }
   h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.1; color: var(--ink); margin: 0 0 0.5em; }
   h1 { font-size: clamp(2.6rem, 7vw, 4.6rem); }
   h2 { font-size: clamp(2rem, 4.5vw, 3rem); }
@@ -146,7 +157,6 @@ const graph = [
   pre {
     background: var(--paper-2);
     border: 1px solid var(--gold);
-    box-shadow: inset 0 0 0 4px var(--paper-2), inset 0 0 0 5px rgba(201, 150, 43, 0.5);
     padding: 1.1rem 1.2rem;
     overflow-x: auto;
     line-height: 1.5;
@@ -155,34 +165,26 @@ const graph = [
   .skip { position: absolute; left: -999px; }
   .skip:focus { left: 12px; top: 12px; background: var(--paper-2); padding: 8px 12px; z-index: 10; }
 
-  .site-header { border-bottom: 3px double var(--gold); background: var(--paper); }
+  .site-header { border-bottom: 2px solid var(--ink); background: var(--paper); }
   .header-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; flex-wrap: wrap; }
   .wordmark { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--ink); }
   .wordmark img { width: 40px; height: 40px; }
-  .wordmark span { font-family: var(--display); font-style: italic; font-weight: 600; font-size: 1.9rem; }
+  .wordmark span { font-family: var(--display); font-style: italic; font-weight: 600; font-size: 1.7rem; }
   nav { display: flex; gap: 6px 18px; flex-wrap: wrap; font-size: 1.02rem; }
   nav a { color: var(--ink); text-decoration: none; padding: 10px 0; }
   nav a:hover { color: var(--vermilion); }
-  .nav-gh { border-bottom: 1px solid var(--gold); }
+  .nav-gh { font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
 
-  .site-footer { border-top: 3px double var(--gold); margin-top: 72px; padding: 32px 0 40px; font-size: 1rem; color: var(--ink-soft); }
+  .site-footer { border-top: 2px solid var(--ink); margin-top: 72px; padding: 32px 0 40px; font-size: 1rem; color: var(--ink-soft); }
   .footer-row { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
   .footer-row p { margin: 0.2rem 0; }
   .footer-mark { font-family: var(--display); font-style: italic; font-size: 1.6rem; color: var(--ink); }
 
-  /* tezhip frame: gold double rule with a thin vermilion inner line */
+  /* print frame: a hard ink border with an offset riso-blue plate behind it */
   .tezhip {
-    position: relative;
-    border: 6px double var(--gold);
-    padding: 10px;
+    border: 2px solid var(--ink);
     background: var(--paper-2);
-  }
-  .tezhip::before {
-    content: '';
-    position: absolute;
-    inset: 4px;
-    border: 1px solid var(--vermilion);
-    pointer-events: none;
+    box-shadow: 6px 6px 0 var(--accent);
   }
   .ornament { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 0 auto 18px; color: var(--gold); }
   .ornament::before, .ornament::after { content: ''; height: 1px; width: min(120px, 22vw); background: currentColor; }
@@ -191,6 +193,7 @@ const graph = [
   @media (max-width: 480px) {
     body { font-size: 1.08rem; }
     nav { font-size: 0.98rem; gap: 4px 14px; }
+    .nav-extra { display: none; }
   }
   @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
 </style>

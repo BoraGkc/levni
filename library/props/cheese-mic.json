@@ -1,5 +1,6 @@
 {
   "name": "cheese-mic",
+  "category": "music",
   "tags": [
     "microphone",
     "cheese",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/peppino-mazzullo-topo/ici-1.json",
+      "note": "blue microphone whose head is a cheese with holes", "from": "harvested from .cache/cizim-drafts/peppino-mazzullo-topo/ici-1.json",
       "paths": [
         {
           "d": "M26,28 a24,24 0 1,0 48,0 a24,24 0 1,0 -48,0",

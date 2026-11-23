@@ -1,5 +1,6 @@
 {
   "name": "tape-strap-watch",
+  "category": "health",
   "tags": [
     "akilli saat",
     "mezura",
@@ -10,7 +11,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-2-alt.json",
+      "note": "smart watch with an ECG pulse line on screen, strap", "from": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-2-alt.json",
       "paths": [
         {
           "d": "M36,-6 L64,-6 L62,30 L38,30 Z",

@@ -1,0 +1,71 @@
+{
+ "name": "pixel-device-tv-smart",
+ "category": "tv",
+ "tags": [
+  "device tv smart",
+  "pixel device tv smart",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "device tv smart, regular pixel icon",
+   "paths": [
+    {
+     "d": "M25 32h56v35h-56Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 22h70v7h-70ZM15 29h7v35h-7ZM78 29h7v35h-7ZM15 64h70v7h-70ZM36 71h28v7h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "device tv smart, thin pixel icon",
+   "paths": [
+    {
+     "d": "M21.5 28.5h63v42h-63ZM42.5 74h21v3.5h-21Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 22h70v3.5h-70ZM15 25.5h3.5v42h-3.5ZM81.5 25.5h3.5v42h-3.5ZM15 67.5h70v3.5h-70ZM36 71h3.5v3.5h-3.5ZM60.5 71h3.5v3.5h-3.5ZM32.5 74.5h35v3.5h-35Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "device tv smart, solid pixel icon",
+   "paths": [
+    {
+     "d": "M19 26h70v49h-70ZM40 75h28v7h-28Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 22h70v49h-70ZM36 71h28v7h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "device tv smart, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M19 26h70v3.5h-70ZM26 33h56v35h-56ZM19 29.5h3.5v42h-3.5ZM85.5 29.5h3.5v42h-3.5ZM19 71.5h70v3.5h-70ZM40 75h28v3.5h-28ZM36.5 78.5h35v3.5h-35Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 22h70v3.5h-70ZM22 29h56v35h-56ZM15 25.5h3.5v42h-3.5ZM81.5 25.5h3.5v42h-3.5ZM15 67.5h70v3.5h-70ZM36 71h28v3.5h-28ZM32.5 74.5h35v3.5h-35Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

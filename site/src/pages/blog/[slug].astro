@@ -1,47 +1,223 @@
 ---
 import Base from '../../layouts/Base.astro';
+import PostCard from '../../components/PostCard.astro';
 import { getCollection, render } from 'astro:content';
 import { SITE } from '../../site';
+import { CATEGORIES, readMinutes, fmtDate } from '../../blog';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
-  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post, all: posts } }));
 }
-const { post } = Astro.props;
-const { Content } = await render(post);
+const { post, all } = Astro.props;
+const { Content, headings } = await render(post);
+const d = post.data;
 const url = `${SITE.url}/blog/${post.id}/`;
+const cat = CATEGORIES[d.category];
+const minutes = readMinutes(post.body || '');
+const cover = d.cover ?? `/blog/${post.id}/cover.webp`;
+const og = d.og ?? `/blog/${post.id}/og.png`;
+const toc = headings.filter((h) => h.depth === 2);
+const shown = d.updated ?? d.date;
+
+// same shelf first, then the newest of the rest
+const others = all.filter((p) => p.id !== post.id).sort((a, b) => +b.data.date - +a.data.date);
+const related = [...others.filter((p) => p.data.category === d.category), ...others.filter((p) => p.data.category !== d.category)].slice(0, 3);
+
 const jsonld = [
   {
     '@type': 'BlogPosting',
-    headline: post.data.title,
-    description: post.data.description,
-    datePublished: post.data.date.toISOString(),
+    headline: d.title,
+    description: d.description,
+    datePublished: d.date.toISOString(),
+    dateModified: shown.toISOString(),
     url,
     mainEntityOfPage: url,
-    image: post.data.og ? new URL(post.data.og, SITE.url).href : `${SITE.url}/og/default.png`,
-    author: { '@id': `${SITE.ortakAlan}/#organization` },
+    image: new URL(og, SITE.url).href,
+    articleSection: cat.label,
+    author: { '@type': 'Organization', name: d.author, url: SITE.ortakAlan },
     publisher: { '@id': `${SITE.ortakAlan}/#organization` },
   },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Blog', item: `${SITE.url}/blog/` },
+      { '@type': 'ListItem', position: 2, name: cat.label, item: `${SITE.url}/blog/category/${d.category}/` },
+      { '@type': 'ListItem', position: 3, name: d.title, item: url },
+    ],
+  },
+  ...(d.faq.length
+    ? [{ '@type': 'FAQPage', mainEntity: d.faq.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) }]
+    : []),
 ];
-const fmt = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 ---
-<Base title={post.data.title} description={post.data.description} og={post.data.og} type="article" published={post.data.date} jsonld={jsonld}>
-  <article class="wrap post">
-    <p class="meta"><a href="/blog/">Blog</a> · <time datetime={post.data.date.toISOString()}>{fmt(post.data.date)}</time></p>
-    <h1>{post.data.title}</h1>
-    <div class="ornament"><img src="/img/motif-rosette.webp" alt="" width="44" height="44" /></div>
-    <div class="prose"><Content /></div>
-  </article>
+<Base title={d.title} description={d.description} og={og} type="article" published={d.date} jsonld={jsonld}>
+  <header class="wrap post-head">
+    <p class="crumbs"><a href="/blog/">Blog</a> / <a href={`/blog/category/${d.category}/`}>{cat.label}</a></p>
+    <p class="kind">{d.kind}</p>
+    <h1>{d.title}</h1>
+    <p class="dek">{d.description}</p>
+    <div class="byline">
+      <img src="/props/pencil-0.webp" alt="" width="44" height="44" />
+      <div>
+        <a href={SITE.ortakAlan}>{d.author}</a>
+        <p>{d.updated ? 'Updated' : 'Published'} <time datetime={shown.toISOString()}>{fmtDate(shown)}</time> · {minutes} min read</p>
+      </div>
+    </div>
+  </header>
+
+  <figure class="wrap cover">
+    <img src={cover} width="1200" height="673" alt={d.coverAlt ?? ''} fetchpriority="high" />
+    <figcaption>Cover drawn by Levni from a JSON scene.</figcaption>
+  </figure>
+
+  <div class="wrap post-grid">
+    <nav class="toc" aria-label="On this page">
+      {toc.length > 1 && (
+        <>
+          <p class="toc-title">On this page</p>
+          <ol>
+            {toc.map((h) => <li><a href={`#${h.slug}`} data-toc={h.slug}>{h.text}</a></li>)}
+            {d.faq.length > 0 && <li><a href="#faq" data-toc="faq">FAQs</a></li>}
+          </ol>
+        </>
+      )}
+    </nav>
+
+    <article class="prose">
+      <Content />
+      {d.faq.length > 0 && (
+        <section class="faq" aria-labelledby="faq">
+          <h2 id="faq">FAQs</h2>
+          {d.faq.map(({ q, a }) => (
+            <>
+              <h3>{q}</h3>
+              <p>{a}</p>
+            </>
+          ))}
+        </section>
+      )}
+    </article>
+
+    <aside class="side">
+      <div class="side-card">
+        <img src="/props/rocket-0.webp" alt="" width="120" height="120" loading="lazy" />
+        <p class="side-eyebrow">Levni · open source</p>
+        <p class="side-title">Draw this in your own project</p>
+        <p class="side-text">{SITE.props} hand-inked drawings, an MCP server for agents, zero cost per image.</p>
+        <a class="side-btn" href="/library/">Browse the library →</a>
+        <a class="side-link" href={SITE.github}>★ Star on GitHub</a>
+      </div>
+    </aside>
+  </div>
+
+  {related.length > 0 && (
+    <section class="wrap related" aria-labelledby="related-title">
+      <p class="eyebrow">Related</p>
+      <div class="related-head">
+        <h2 id="related-title">More on {cat.label}</h2>
+        <a href="/blog/">All posts →</a>
+      </div>
+      <div class="cards">{related.map((p) => <PostCard post={p} />)}</div>
+    </section>
+  )}
+
+  <section class="wrap band">
+    <img src="/img/hero-640.webp" alt="" width="640" height="359" loading="lazy" />
+    <div>
+      <p class="side-eyebrow">Levni</p>
+      <p class="band-title">Give your agent an illustrator.</p>
+      <p>Add the MCP server, describe the picture, read the critic, ship the cover.</p>
+      <a class="side-btn" href="/#agents">Set up the MCP server →</a>
+    </div>
+  </section>
 </Base>
 
+<script>
+  // highlight the section in view
+  const links = new Map([...document.querySelectorAll<HTMLAnchorElement>('[data-toc]')].map((a) => [a.dataset.toc!, a]));
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) if (e.isIntersecting) {
+      links.forEach((a) => a.removeAttribute('aria-current'));
+      links.get(e.target.id)?.setAttribute('aria-current', 'true');
+    }
+  }, { rootMargin: '0px 0px -70% 0px' });
+  links.forEach((_, id) => { const h = document.getElementById(id); if (h) io.observe(h); });
+</script>
+
 <style>
-  .post { max-width: 780px; margin-top: 44px; }
-  .meta { font-family: var(--mono); font-size: 0.8rem; color: var(--turquoise-text); }
-  h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); }
-  .prose :global(h2) { font-size: 2rem; margin-top: 1.6em; }
-  .prose :global(table) { width: 100%; border-collapse: collapse; margin: 1.4em 0; }
-  .prose :global(th), .prose :global(td) { border: 1px solid var(--gold); padding: 6px; vertical-align: top; font-size: 1rem; }
-  .prose :global(td img) { width: 100%; }
-  .prose :global(pre) { margin: 1.2em 0; }
+  .post-head { margin-top: 40px; max-width: 1120px; }
+  .crumbs { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 18px; }
+  .crumbs a { color: inherit; text-decoration: none; }
+  .crumbs a:hover { color: var(--accent); }
+  .kind { font-family: var(--mono); font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-text); margin: 0 0 10px; }
+  .kind::before { content: ''; display: inline-block; width: 9px; height: 9px; background: var(--coral); margin-right: 8px; vertical-align: 1px; }
+  h1 { font-size: clamp(2.2rem, 5.4vw, 3.8rem); max-width: 22ch; }
+  .dek { font-size: 1.25rem; color: var(--ink-soft); max-width: 720px; margin: 0 0 24px; }
+  .byline { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--rule); padding-top: 18px; max-width: 920px; }
+  .byline img { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--rule); background: var(--paper-2); }
+  .byline a { color: var(--ink); text-decoration: none; font-weight: 600; }
+  .byline p { margin: 0; font-family: var(--mono); font-size: 0.8rem; color: var(--ink-soft); }
+
+  .cover { margin-top: 32px; margin-bottom: 0; }
+  .cover img { width: 100%; border: 2px solid var(--ink); box-shadow: 6px 6px 0 var(--accent); }
+  .cover figcaption { font-size: 0.85rem; color: var(--ink-soft); margin-top: 10px; }
+
+  .post-grid { display: grid; grid-template-columns: 220px minmax(0, 1fr) 260px; gap: 44px; margin-top: 44px; align-items: start; }
+  .toc, .side { position: sticky; top: 24px; }
+  .toc { border-left: 1px solid var(--rule); padding-left: 16px; }
+  .toc-title { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 10px; }
+  .toc ol { list-style: none; padding: 0; margin: 0; }
+  .toc li { margin: 0 0 10px; }
+  .toc a { color: var(--ink-soft); text-decoration: none; font-size: 0.93rem; line-height: 1.35; display: block; }
+  .toc a:hover, .toc a[aria-current] { color: var(--accent-text); }
+  .toc a[aria-current] { box-shadow: -17px 0 0 -15px var(--ink); }
+
+  .prose { font-size: 1.1rem; line-height: 1.75; }
+  .prose :global(p) { margin: 0 0 1.2em; }
+  .prose :global(h2) { font-size: 2rem; margin: 1.8em 0 0.6em; scroll-margin-top: 20px; }
+  .prose :global(h3) { font-size: 1.35rem; margin: 1.4em 0 0.4em; }
+  .prose :global(img) { width: 100%; border: 2px solid var(--ink); box-shadow: 5px 5px 0 var(--accent); margin: 1.2em 0 0.4em; background: var(--paper-2); }
+  .prose :global(img + em), .prose :global(p > em:only-child) { display: block; font-size: 0.92rem; color: var(--ink-soft); }
+  .prose :global(table) { width: 100%; border-collapse: collapse; margin: 1.4em 0; font-size: 0.98rem; }
+  .prose :global(th) { text-align: left; background: var(--paper-2); }
+  .prose :global(th), .prose :global(td) { border: 1px solid var(--rule); padding: 8px 10px; vertical-align: top; }
+  .prose :global(pre) { margin: 1.2em 0; font-size: 0.86rem; }
+  .prose :global(:not(pre) > code) { background: var(--paper-2); border: 1px solid var(--rule); padding: 1px 5px; font-size: 0.88em; }
+  .prose :global(blockquote) { margin: 1.4em 0; padding: 12px 18px; border-left: 4px solid var(--coral); background: var(--paper-2); }
+  .prose :global(blockquote p:last-child) { margin: 0; }
   .prose :global(li) { margin-bottom: 0.4em; }
+  .faq { margin-top: 2.4em; }
+
+  .side-card { background: var(--accent); color: #fff; padding: 22px; border: 2px solid var(--ink); }
+  .side-card img { width: 120px; height: 120px; background: var(--paper); border-radius: 50%; border: 2px solid var(--ink); }
+  .side-eyebrow { font-family: var(--mono); font-size: 0.76rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mustard); margin: 14px 0 6px; }
+  .side-title { font-family: var(--display); font-size: 1.5rem; line-height: 1.15; margin: 0 0 8px; }
+  .side-text { font-size: 0.95rem; opacity: 0.92; margin: 0 0 16px; }
+  .side-btn { display: inline-block; background: var(--mustard); color: var(--ink); text-decoration: none; font-weight: 600; padding: 10px 16px; border: 2px solid var(--ink); }
+  .side-btn:hover { background: var(--paper); color: var(--ink); }
+  .side-link { display: block; margin-top: 12px; color: #fff; }
+  .side-link:hover { color: var(--mustard); }
+
+  .related { margin-top: 90px; }
+  .eyebrow { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 6px; }
+  .related-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; border-bottom: 1px solid var(--rule); padding-bottom: 14px; }
+  .related-head h2 { margin: 0; }
+  .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 28px; }
+
+  .band { margin-top: 80px; display: grid; grid-template-columns: 1fr 1.3fr; gap: 36px; align-items: center; background: var(--ink); color: var(--paper); padding: 36px; }
+  .band img { border: 2px solid var(--paper); }
+  .band-title { font-family: var(--display); font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; margin: 0 0 10px; }
+  .band p { color: var(--paper); }
+
+  @media (max-width: 1100px) {
+    .post-grid { grid-template-columns: minmax(0, 1fr) 240px; }
+    .toc { display: none; }
+  }
+  @media (max-width: 800px) {
+    .post-grid { grid-template-columns: minmax(0, 1fr); }
+    .side { position: static; }
+    .cards { grid-template-columns: minmax(0, 1fr); }
+    .band { grid-template-columns: 1fr; padding: 22px; }
+  }
 </style>

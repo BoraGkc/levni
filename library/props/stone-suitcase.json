@@ -1,51 +1,64 @@
 {
-  "name": "stone-suitcase",
-  "tags": [
-    "taş valiz",
-    "yük",
-    "kırgınlık",
-    "suitcase",
-    "stone",
-    "grudge"
-  ],
-  "variants": [
+ "name": "stone-suitcase",
+ "category": "home",
+ "tags": [
+  "taş valiz",
+  "yük",
+  "kırgınlık",
+  "suitcase",
+  "stone",
+  "grudge"
+ ],
+ "variants": [
+  {
+   "note": "blue briefcase with orange clasps and a grumpy face",
+   "from": "harvested from .cache/cizim-drafts/chris-rock-affetme/ici-1.json",
+   "paths": [
     {
-      "slots": { "front": [14, 34, 72, 50], "top": [50, 8] },
-      "note": "harvested from .cache/cizim-drafts/chris-rock-affetme/ici-1.json",
-      "paths": [
-        {
-          "d": "M34 26 Q34 8 50 8 Q66 8 66 26",
-          "stroke": "ink",
-          "weight": 6
-        },
-        {
-          "d": "M8 44 Q6 28 24 26 L50 22 L78 26 Q96 30 94 48 L96 72 Q96 92 74 92 L26 92 Q6 92 6 72Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 3.8
-        },
-        {
-          "d": "M6 52 H94",
-          "stroke": "ink",
-          "weight": 2.6
-        },
-        {
-          "d": "M24 52 V66 H36 V52 M64 52 V66 H76 V52",
-          "fill": "coral",
-          "stroke": "ink",
-          "weight": 2.6
-        },
-        {
-          "d": "M18 32 L26 42 L20 50 M70 70 L62 78 L72 86 M82 36 L76 44",
-          "stroke": "ink",
-          "weight": 2.2
-        },
-        {
-          "d": "M36 78 Q44 72 52 78",
-          "stroke": "ink",
-          "weight": 2
-        }
-      ]
+     "d": "M34 26 Q34 8 50 8 Q66 8 66 26",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M8 44 Q6 28 24 26 L50 22 L78 26 Q96 30 94 48 L96 72 Q96 92 74 92 L26 92 Q6 92 6 72Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 3.8
+    },
+    {
+     "d": "M6 52 H94",
+     "stroke": "ink",
+     "weight": 2.6
+    },
+    {
+     "d": "M24 52 V66 H36 V52 M64 52 V66 H76 V52",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 2.6
+    },
+    {
+     "d": "M18 32 L26 42 L20 50 M70 70 L62 78 L72 86 M82 36 L76 44",
+     "stroke": "ink",
+     "weight": 2.2
+    },
+    {
+     "d": "M36 78 Q44 72 52 78",
+     "stroke": "ink",
+     "weight": 2
     }
-  ]
+   ],
+   "slots": {
+    "front": [
+     14,
+     34,
+     72,
+     50
+    ],
+    "top": [
+     50,
+     8
+    ]
+   }
+  }
+ ]
 }

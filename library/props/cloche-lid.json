@@ -1,5 +1,6 @@
 {
   "name": "cloche-lid",
+  "category": "home",
   "tags": [
     "cloche",
     "servis kapağı",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/oobah-butler-zengin/ici-1-alt.json",
+      "note": "white glass cloche dome on a tray, coral map pin on the knob", "from": "harvested from .cache/cizim-drafts/oobah-butler-zengin/ici-1-alt.json",
       "paths": [
         {
           "d": "M6 80 L94 80 Q94 88 86 88 L14 88 Q6 88 6 80 Z",

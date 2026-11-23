@@ -1,0 +1,71 @@
+{
+ "name": "pixel-checkbox-on",
+ "category": "home",
+ "tags": [
+  "checkbox on",
+  "pixel checkbox on",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "checkbox on, regular pixel icon",
+   "paths": [
+    {
+     "d": "M28.5 28.5h49v49h-49Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h63v7h-63ZM18.5 25.5h7v49h-7ZM74.5 25.5h7v49h-7ZM18.5 74.5h63v7h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "checkbox on, thin pixel icon",
+   "paths": [
+    {
+     "d": "M25 25h56v56h-56Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h63v3.5h-63ZM18.5 22h3.5v56h-3.5ZM78 22h3.5v56h-3.5ZM18.5 78h63v3.5h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "checkbox on, solid pixel icon",
+   "paths": [
+    {
+     "d": "M22.5 22.5h63v63h-63Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h63v63h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "checkbox on, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M22.5 22.5h63v3.5h-63ZM29.5 29.5h49v49h-49ZM22.5 26h3.5v56h-3.5ZM82 26h3.5v56h-3.5ZM22.5 82h63v3.5h-63Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h63v3.5h-63ZM25.5 25.5h49v49h-49ZM18.5 22h3.5v56h-3.5ZM78 22h3.5v56h-3.5ZM18.5 78h63v3.5h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

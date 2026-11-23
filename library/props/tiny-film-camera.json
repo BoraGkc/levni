@@ -1,11 +1,12 @@
 {
   "name": "tiny-film-camera",
+  "category": "film",
   "tags": [
     "kamera tripod"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/streaming-platformlarinda-sakl/ici-2.json",
+      "note": "small orange film camera with two reels, blue lens, tripod legs", "from": "harvested from .cache/cizim-drafts/streaming-platformlarinda-sakl/ici-2.json",
       "paths": [
         {
           "d": "M50 60 L28 98 M50 60 L72 98 M50 60 L50 98",

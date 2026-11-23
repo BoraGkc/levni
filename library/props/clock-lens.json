@@ -1,5 +1,6 @@
 {
   "name": "clock-lens",
+  "category": "stage",
   "tags": [
     "saat",
     "spot ışığı",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/tom-hanks-broadway/kapak-3d.json",
+      "note": "round porthole-like clock with coral frame, blue face and rivets", "from": "harvested from .cache/cizim-drafts/tom-hanks-broadway/kapak-3d.json",
       "paths": [
         {
           "d": "M3 50 a47 47 0 1 0 94 0 a47 47 0 1 0 -94 0",

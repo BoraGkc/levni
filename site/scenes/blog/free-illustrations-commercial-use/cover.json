@@ -1,0 +1,10 @@
+{ "seed": 41, "clip": [60,52,1080,569], "elements": [
+ {"type":"panel","x":60,"y":52,"w":1080,"h":569,"color":"blue"},
+ {"type":"glyphs","x":60,"y":52,"w":1080,"h":569,"color":"tone","mode":"radial","level":0.6,"cx":620,"cy":330},
+ {"type":"disc","x":620,"y":330,"r":220,"color":"mustard"},
+ {"type":"prop","name":"banknotes","x":620,"y":340,"size":400,"shadow":true},
+ {"type":"prop","name":"storefront","x":250,"y":430,"size":290},
+ {"type":"prop","name":"book","variant":0,"x":980,"y":430,"size":260},
+ {"type":"prop","name":"sparkle","x":420,"y":150,"size":90},
+ {"type":"ticks","x":830,"y":170,"angle":-40,"size":40}
+]}

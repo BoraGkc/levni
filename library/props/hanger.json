@@ -1,11 +1,12 @@
 {
   "name": "hanger",
+  "category": "home",
   "tags": [
     "elbise askisi kiyafet sanal oyuncu"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/yapay-zeka-aktor/kapak-r0.json",
+      "note": "faint pale outline of a clothes hanger, very light strokes", "from": "harvested from .cache/cizim-drafts/yapay-zeka-aktor/kapak-r0.json",
       "paths": [
         {
           "d": "M50 44 L50 24 q0 -12 14 -12 q14 0 14 12 q0 10 -12 10",

@@ -1,0 +1,71 @@
+{
+ "name": "pixel-credit-card-minus",
+ "category": "money",
+ "tags": [
+  "credit card minus",
+  "pixel credit card minus",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "credit card minus, regular pixel icon",
+   "paths": [
+    {
+     "d": "M25 32h56v7h-56Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 22h70v7h-70ZM15 29h7v7h-7ZM78 29h7v7h-7ZM15 36h70v14h-70ZM15 50h7v21h-7ZM64 64h21v7h-21ZM15 71h42v7h-42Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "credit card minus, thin pixel icon",
+   "paths": [
+    {
+     "d": "M21.5 28.5h63v10.5h-63ZM21.5 42.5h63v7h-63Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 22h70v3.5h-70ZM15 25.5h3.5v10.5h-3.5ZM81.5 25.5h3.5v10.5h-3.5ZM15 36h70v3.5h-70ZM15 39.5h3.5v7h-3.5ZM81.5 39.5h3.5v7h-3.5ZM15 46.5h70v3.5h-70ZM81.5 50h3.5v7h-3.5ZM25.5 57h21v3.5h-21ZM25.5 64h14v3.5h-14ZM67.5 67.5h17.5v3.5h-17.5ZM15 50h3.5v24.5h-3.5ZM15 74.5h49v3.5h-49Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "credit card minus, solid pixel icon",
+   "paths": [
+    {
+     "d": "M19 26h70v14h-70ZM19 40h7v14h-7ZM82 40h7v14h-7ZM68 64.5h21v7h-21ZM19 54h42v28h-42Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 22h70v14h-70ZM15 36h7v14h-7ZM78 36h7v14h-7ZM64 60.5h21v7h-21ZM15 50h42v28h-42Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "credit card minus, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M19 26h70v14h-70ZM19 40h3.5v14h-3.5ZM85.5 40h3.5v14h-3.5ZM19 54h70v7h-70ZM19 61h10.5v3.5h-10.5ZM50.5 61h38.5v3.5h-38.5ZM19 64.5h49v3.5h-49ZM19 68h10.5v3.5h-10.5ZM43.5 68h24.5v3.5h-24.5ZM71.5 71.5h17.5v3.5h-17.5ZM19 71.5h49v10.5h-49Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 22h70v14h-70ZM15 36h3.5v14h-3.5ZM81.5 36h3.5v14h-3.5ZM15 50h70v7h-70ZM15 57h10.5v3.5h-10.5ZM46.5 57h38.5v3.5h-38.5ZM15 60.5h49v3.5h-49ZM15 64h10.5v3.5h-10.5ZM39.5 64h24.5v3.5h-24.5ZM67.5 67.5h17.5v3.5h-17.5ZM15 67.5h49v10.5h-49Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

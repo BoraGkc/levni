@@ -1,12 +1,13 @@
 {
   "name": "mirror-corridor",
+  "category": "home",
   "tags": [
     "el aynası koridor",
     "hand mirror corridor"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/other-mommy-jessica/ici-1.json",
+      "note": "round mirror showing a blue corridor, orange stand", "from": "harvested from .cache/cizim-drafts/other-mommy-jessica/ici-1.json",
       "paths": [
         {
           "d": "M50 68 V99",

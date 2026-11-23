@@ -1,0 +1,26 @@
+{
+ "name": "quote",
+ "category": "books",
+ "tags": [
+  "quote"
+ ],
+ "variants": [
+  {
+   "note": "quote, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M41.6 45.8 h-16.8 a4.2 4.2 0 0 1 -4.2 -4.2 v-12.6 a4.2 4.2 0 0 1 4.2 -4.2 h12.6 a4.2 4.2 0 0 1 4.2 4.2 v25.2 c0 11.2 -5.6 18.2 -16.8 21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M79.4 45.8 h-16.8 a4.2 4.2 0 0 1 -4.2 -4.2 v-12.6 a4.2 4.2 0 0 1 4.2 -4.2 h12.6 a4.2 4.2 0 0 1 4.2 4.2 v25.2 c0 11.2 -5.6 18.2 -16.8 21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -20,10 +20,25 @@ export const STYLES = {
 };
 
 // Recolour a finished SVG for a style pack (one pass, case-insensitive on the house hex values).
+// `name` is a pack name, or an object of your own inks: { "blue": "#123456", "coral": "#FF8800", ... }
+// (any house colour name; the ones left out keep the house hex). Hex values only.
 export function applyStyle(svg, name) {
-  const pack = name && STYLES[name];
+  const pack = typeof name === 'object' && name ? brandPack(name) : name && STYLES[name];
   if (!pack || !Object.keys(pack).length) return svg;
-  const map = new Map(Object.entries(pack).map(([k, hex]) => [HOUSE[k].toLowerCase(), hex]));
+  const map = new Map(Object.entries(pack).filter(([k]) => HOUSE[k]).map(([k, hex]) => [HOUSE[k].toLowerCase(), hex]));
   const re = new RegExp(`(${[...map.keys()].join('|')})(?![0-9a-f])`, 'gi');
   return svg.replace(re, (m) => map.get(m.toLowerCase()) || m);
 }
+
+// A custom ink set, checked: unknown names and non-hex values are an error, so a typo does not pass silently.
+export function brandPack(inks) {
+  const out = {};
+  for (const [k, v] of Object.entries(inks)) {
+    if (!(k in HOUSE)) throw new Error(`style: unknown colour "${k}" (use ${Object.keys(HOUSE).join(', ')})`);
+    if (!/^#[0-9a-f]{6}$/i.test(v)) throw new Error(`style: "${k}" must be a hex colour like #0B57D0`);
+    out[k] = v;
+  }
+  return out;
+}
+
+export { HOUSE };

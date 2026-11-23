@@ -1,5 +1,6 @@
 {
   "name": "water-tower",
+  "category": "places",
   "tags": [
     "su kulesi",
     "New York",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/paper-tiger-80ler/kapak-v2.json",
+      "note": "blue water tower on legs, top view slightly angled", "from": "harvested from .cache/cizim-drafts/paper-tiger-80ler/kapak-v2.json",
       "paths": [
         {
           "d": "M22 40 L78 40 L78 66 L22 66 Z",

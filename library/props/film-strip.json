@@ -1,5 +1,6 @@
 {
   "name": "film-strip",
+  "category": "film",
   "tags": [
     "film şeridi",
     "sinema",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-compose/hadeln/ici-1.json",
+      "note": "horizontal film strip with four frames, one frame filled orange", "from": "harvested from .cache/cizim-compose/hadeln/ici-1.json",
       "paths": [
         {
           "d": "M0 28 H100 V72 H0 Z",

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="520" viewBox="340 76 520 520">
+<defs>
+  <filter id="crayon" filterUnits="userSpaceOnUse" x="0" y="0" width="1200" height="673" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="3" result="wobble"/>
+    <feDisplacementMap in="SourceGraphic" in2="wobble" scale="5" xChannelSelector="R" yChannelSelector="G" result="w1"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="2" seed="10" result="tooth"/>
+    <feDisplacementMap in="w1" in2="tooth" scale="3.2" xChannelSelector="R" yChannelSelector="G" result="w2"/>
+    <feTurbulence type="fractalNoise" baseFrequency="1.1 0.8" numOctaves="2" seed="16" result="grain"/>
+    <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.0 2.3" result="speckle"/>
+    <feComposite in="w2" in2="speckle" operator="in" result="inked"/>
+    <!-- ink mottle: faint horizontal streaks where the drum laid down a little less ink, as on a riso print -->
+    <feTurbulence type="fractalNoise" baseFrequency="0.003 0.035" numOctaves="2" seed="34" result="mot"/>
+    <feColorMatrix in="mot" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.55 0 0 0 0.74" result="mota"/>
+    <feComposite in="inked" in2="mota" operator="in"/>
+  </filter>
+  <filter id="paper" filterUnits="userSpaceOnUse" x="0" y="0" width="1200" height="673">
+    <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="24" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.42  0 0 0 0 0.36  0 0 0 0.06 0"/>
+  </filter></defs>
+<rect width="1200" height="673" fill="#F4F2EC"/>
+<rect width="1200" height="673" filter="url(#paper)"/>
+<g filter="url(#crayon)">
+<g transform="translate(370 106) scale(4.6)"><path d="M21.5 21.5h52.5v3.5h-52.5ZM21.5 25h56v3.5h-56ZM63.5 28.5h17.5v3.5h-17.5ZM35.5 32h24.5v3.5h-24.5ZM35.5 35.5h3.5v3.5h-3.5ZM49.5 35.5h10.5v3.5h-10.5ZM35.5 39h24.5v3.5h-24.5ZM21.5 28.5h10.5v17.5h-10.5ZM63.5 32h21v14h-21ZM21.5 46h63v14h-63ZM35.5 63.5h35v3.5h-35ZM35.5 67h3.5v3.5h-3.5ZM67 67h3.5v3.5h-3.5ZM35.5 70.5h35v3.5h-35ZM35.5 74h3.5v3.5h-3.5ZM53 74h17.5v3.5h-17.5ZM21.5 60h10.5v24.5h-10.5ZM74 60h10.5v24.5h-10.5ZM35.5 77.5h35v7h-35Z" fill="#7FA6F2" transform="translate(-0.38 -0.47)"/><path d="M15 15h56v3.5h-56ZM71 18.5h3.5v3.5h-3.5ZM74.5 22h3.5v3.5h-3.5ZM29 25.5h31.5v3.5h-31.5ZM78 25.5h3.5v3.5h-3.5ZM36 32.5h10.5v3.5h-10.5ZM29 29h3.5v10.5h-3.5ZM57 29h3.5v10.5h-3.5ZM29 39.5h31.5v3.5h-31.5ZM29 57h42v3.5h-42ZM36 64h28v3.5h-28ZM36 71h14v3.5h-14ZM15 18.5h3.5v63h-3.5ZM81.5 29h3.5v52.5h-3.5ZM29 60.5h3.5v21h-3.5ZM67.5 60.5h3.5v21h-3.5ZM15 81.5h70v3.5h-70Z" fill="#0A3FB0"/></g>
+</g>
+</svg>

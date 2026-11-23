@@ -1,13 +1,14 @@
 // One place for links and facts the pages repeat.
+import folio from './data/props.json';
 export const SITE = {
   name: 'Levni',
   url: 'https://levni.dev',
-  tagline: 'Illustrations from a JSON scene',
+  tagline: 'An open illustration library',
   description:
-    'Levni is an open-source illustration engine for agents and publishers: covers, icons, spot illustrations and social images from a JSON scene, in one consistent hand. MCP-ready, zero cost per image.',
+    'Levni is an open library of hand-inked illustrations and the engine that composes them: covers, icons, spot illustrations and social images from a JSON scene, in one consistent style. Free for agents and publishers.',
   github: 'https://github.com/BoraGkc/levni',
   githubReady: true,
   ortakAlan: 'https://ortakalan.io',
-  props: 628,
-  variants: 883,
+  props: folio.length,
+  variants: folio.reduce((n, p) => n + p.variants.length, 0),
 };

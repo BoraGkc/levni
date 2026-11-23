@@ -1,12 +1,13 @@
 {
   "name": "pillow",
+  "category": "home",
   "tags": [
     "yastık",
     "pillow"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/chris-rock-affetme/ici-2-r0.json",
+      "note": "plump blue rounded pillow, front view, soft highlight", "from": "harvested from .cache/cizim-drafts/chris-rock-affetme/ici-2-r0.json",
       "paths": [
         {
           "d": "M6 24 Q50 8 94 24 Q100 50 94 76 Q50 92 6 76 Q0 50 6 24Z",

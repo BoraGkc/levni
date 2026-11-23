@@ -1,12 +1,13 @@
 {
   "name": "film-crescent-moon",
+  "category": "film",
   "tags": [
     "film şeridi hilal ay",
     "film strip crescent moon"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/moonlight-10-yili/kapak.json",
+      "note": "blue film strip curved into a crescent moon shape", "from": "harvested from .cache/cizim-drafts/moonlight-10-yili/kapak.json",
       "paths": [
         {
           "d": "M62 4 A46 46 0 1 0 94 66 A38 38 0 1 1 62 4Z",

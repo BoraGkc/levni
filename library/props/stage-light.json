@@ -1,5 +1,6 @@
 {
   "name": "stage-light",
+  "category": "stage",
   "tags": [
     "spot ışığı",
     "sahne ışığı",
@@ -9,7 +10,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/netflix-belgeseli-the/ici-1.json",
+      "note": "blue stage light cone-shaped lamp, front view", "from": "harvested from .cache/cizim-drafts/netflix-belgeseli-the/ici-1.json",
       "paths": [
         {
           "d": "M18 30 L74 14 L74 66 L18 52 Z",

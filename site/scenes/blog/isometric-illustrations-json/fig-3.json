@@ -1,0 +1,14 @@
+{ "seed": 7, "background": "paper", "elements": [
+  { "type": "iso", "x": 600, "y": 270, "scale": 0.95, "objects": [
+    { "kind": "floor", "x": 0, "y": 0, "w": 360, "d": 360, "color": "paper", "pattern": "boards" },
+    { "kind": "wall", "axis": "x", "x": 0, "y": 0, "w": 360, "h": 220, "color": "tone", "window": [0.55, 0.25, 0.3, 0.4] },
+    { "kind": "wall", "axis": "y", "x": 0, "y": 0, "d": 360, "h": 220, "color": "blue" },
+    { "kind": "box", "x": 40, "y": 70, "w": 180, "d": 80, "h": 80, "color": "coral" },
+    { "kind": "box", "x": 260, "y": 20, "w": 80, "d": 120, "h": 150, "color": "mustard" },
+    { "kind": "cylinder", "x": 130, "y": 250, "r": 34, "h": 50, "color": "green" },
+    { "kind": "prop", "name": "laptop", "x": 110, "y": 112, "z": 80, "size": 170, "flip": true },
+    { "kind": "prop", "name": "coffee-cup", "x": 195, "y": 125, "z": 80, "size": 55 },
+    { "kind": "prop", "name": "potted-plant", "x": 300, "y": 80, "z": 150, "size": 90 },
+    { "kind": "prop", "name": "floor-lamp", "x": 300, "y": 320, "size": 200 }
+  ] }
+] }

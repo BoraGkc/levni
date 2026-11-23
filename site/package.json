@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "assets": "node scripts/render-assets.mjs"
+    "assets": "node scripts/render-assets.mjs",
+    "library": "node scripts/render-library.mjs",
+    "blog": "node scripts/render-blog.mjs"
   },
   "dependencies": {
     "astro": "^7.3.8",

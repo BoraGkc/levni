@@ -1,60 +1,77 @@
 {
-  "name": "radio",
-  "tags": [
-    "radyo",
-    "yayın",
-    "radio",
-    "broadcast"
-  ],
-  "variants": [
+ "name": "radio",
+ "category": "tv",
+ "tags": [
+  "radyo",
+  "yayın",
+  "radio",
+  "broadcast"
+ ],
+ "variants": [
+  {
+   "note": "retro radio with speaker grille, blue dial, antenna",
+   "from": "harvested from .cache/cizim-drafts/de-gaulle-direnisi/kapak.json",
+   "paths": [
     {
-      "slots": { "screen": [21, 41, 30, 39], "dial": [72, 70], "top": [50, 25] },
-      "note": "harvested from .cache/cizim-drafts/de-gaulle-direnisi/kapak.json",
-      "paths": [
-        {
-          "d": "M12 34 Q12 26 20 26 H80 Q88 26 88 34 V78 Q88 86 80 86 H20 Q12 86 12 78 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 4
-        },
-        {
-          "d": "M20 40 H52 V80 H20 Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 3
-        },
-        {
-          "d": "M24 46 H48 M24 54 H48 M24 62 H48 M24 70 H48",
-          "stroke": "ink",
-          "weight": 2.2
-        },
-        {
-          "d": "M72 56 a12 12 0 1 0 0.1 0 Z",
-          "fill": "blue",
-          "stroke": "ink",
-          "weight": 3
-        },
-        {
-          "d": "M72 56 L78 50",
-          "stroke": "paper",
-          "weight": 3
-        },
-        {
-          "d": "M58 38 H84",
-          "stroke": "ink",
-          "weight": 3
-        },
-        {
-          "d": "M24 86 V92 M76 86 V92",
-          "stroke": "ink",
-          "weight": 4
-        },
-        {
-          "d": "M70 26 L90 4",
-          "stroke": "ink",
-          "weight": 3
-        }
-      ]
+     "d": "M12 34 Q12 26 20 26 H80 Q88 26 88 34 V78 Q88 86 80 86 H20 Q12 86 12 78 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M20 40 H52 V80 H20 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M24 46 H48 M24 54 H48 M24 62 H48 M24 70 H48",
+     "stroke": "ink",
+     "weight": 2.2
+    },
+    {
+     "d": "M72 56 a12 12 0 1 0 0.1 0 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M72 56 L78 50",
+     "stroke": "paper",
+     "weight": 3
+    },
+    {
+     "d": "M58 38 H84",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M24 86 V92 M76 86 V92",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M70 26 L90 4",
+     "stroke": "ink",
+     "weight": 3
     }
-  ]
+   ],
+   "slots": {
+    "screen": [
+     21,
+     41,
+     30,
+     39
+    ],
+    "dial": [
+     72,
+     70
+    ],
+    "top": [
+     50,
+     25
+    ]
+   }
+  }
+ ]
 }

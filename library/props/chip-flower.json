@@ -1,12 +1,13 @@
 {
   "name": "chip-flower",
+  "category": "tech",
   "tags": [
     "çip ezilen çiçek",
     "chip crushed flower"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/patti-harrison-teknoloji/ici-2.json",
+      "note": "white chip board with pins, crushing a coral flower with green leaves beneath", "from": "harvested from .cache/cizim-drafts/patti-harrison-teknoloji/ici-2.json",
       "paths": [
         {
           "d": "M50 70 V98",

@@ -1,80 +1,89 @@
 {
-  "name": "stage-tv",
-  "tags": [
-    "televizyon",
-    "tv",
-    "sahne",
-    "ışık",
-    "komedi",
-    "dizi",
-    "television",
-    "stage",
-    "spotlight",
-    "debut"
-  ],
-  "variants": [
+ "name": "stage-tv",
+ "category": "tv",
+ "tags": [
+  "televizyon",
+  "tv",
+  "sahne",
+  "ışık",
+  "komedi",
+  "dizi",
+  "television",
+  "stage",
+  "spotlight",
+  "debut"
+ ],
+ "variants": [
+  {
+   "note": "retro television with a smiling orange screen, antenna",
+   "from": "harvested from .cache/cizim-drafts/other-desert-cities/ici-2-alt.json",
+   "paths": [
     {
-      "slots": { "screen": [17, 34, 48, 44] },
-      "note": "harvested from .cache/cizim-drafts/other-desert-cities/ici-2-alt.json",
-      "paths": [
-        {
-          "d": "M50 22 L30 2 M50 22 L70 4",
-          "fill": "none",
-          "stroke": "ink",
-          "weight": 3.4,
-          "taper": false
-        },
-        {
-          "d": "M14 24 L86 24 Q92 24 92 30 L92 82 Q92 88 86 88 L14 88 Q8 88 8 82 L8 30 Q8 24 14 24 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 3.4
-        },
-        {
-          "d": "M16 32 L66 32 L66 80 L16 80 Z",
-          "fill": "coral",
-          "stroke": "ink",
-          "weight": 3
-        },
-        {
-          "d": "M26 42 Q32 36 38 42 M44 42 Q50 36 56 42",
-          "fill": "none",
-          "stroke": "paper",
-          "weight": 3,
-          "taper": false
-        },
-        {
-          "d": "M26 64 Q41 76 56 64",
-          "fill": "none",
-          "stroke": "paper",
-          "weight": 3,
-          "taper": false
-        },
-        {
-          "d": "M78 40 m-5 0 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0",
-          "fill": "blue",
-          "stroke": "ink",
-          "weight": 2
-        },
-        {
-          "d": "M78 58 m-5 0 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0",
-          "fill": "blue",
-          "stroke": "ink",
-          "weight": 2
-        },
-        {
-          "d": "M72 72 L84 72",
-          "fill": "none",
-          "stroke": "ink",
-          "weight": 2.4
-        },
-        {
-          "d": "M20 88 L16 96 M80 88 L84 96",
-          "fill": "none",
-          "stroke": "ink",
-          "weight": 3.4
-        }
-      ]
+     "d": "M50 22 L30 2 M50 22 L70 4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 3.4,
+     "taper": false
+    },
+    {
+     "d": "M14 24 L86 24 Q92 24 92 30 L92 82 Q92 88 86 88 L14 88 Q8 88 8 82 L8 30 Q8 24 14 24 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 3.4
+    },
+    {
+     "d": "M16 32 L66 32 L66 80 L16 80 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M26 42 Q32 36 38 42 M44 42 Q50 36 56 42",
+     "fill": "none",
+     "stroke": "paper",
+     "weight": 3,
+     "taper": false
+    },
+    {
+     "d": "M26 64 Q41 76 56 64",
+     "fill": "none",
+     "stroke": "paper",
+     "weight": 3,
+     "taper": false
+    },
+    {
+     "d": "M78 40 m-5 0 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 2
+    },
+    {
+     "d": "M78 58 m-5 0 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 2
+    },
+    {
+     "d": "M72 72 L84 72",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 2.4
+    },
+    {
+     "d": "M20 88 L16 96 M80 88 L84 96",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 3.4
     }
-  ]
+   ],
+   "slots": {
+    "screen": [
+     17,
+     34,
+     48,
+     44
+    ]
+   }
+  }
+ ]
 }

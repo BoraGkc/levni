@@ -1,5 +1,6 @@
 {
   "name": "sound-sand-hourglass",
+  "category": "music",
   "tags": [
     "saat",
     "12 saat",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/tim-heidecker-joe/ici-1-r0.json",
+      "note": "hourglass with orange sound waves in the top, sand mound below", "from": "harvested from .cache/cizim-drafts/tim-heidecker-joe/ici-1-r0.json",
       "paths": [
         {
           "d": "M24 6 L76 6 L76 13 L24 13 Z",

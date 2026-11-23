@@ -1,0 +1,103 @@
+{
+ "name": "pan",
+ "category": "food",
+ "tags": [
+  "tava",
+  "frying pan",
+  "pan",
+  "yumurta",
+  "egg",
+  "cooking",
+  "pişirme",
+  "kahvaltı"
+ ],
+ "variants": [
+  {
+   "note": "top view of a dark pan with a fried egg",
+   "paths": [
+    {
+     "d": "M64 50 L94 46 L94 60 L64 60 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M76 54 C76 72.7 60.7 88 42 88 C23.3 88 8 72.7 8 54 C8 35.3 23.3 20 42 20 C60.7 20 76 35.3 76 54 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M68 54 C68 68.3 56.3 80 42 80 C27.7 80 16 68.3 16 54 C16 39.7 27.7 28 42 28 C56.3 28 68 39.7 68 54 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M26 54 Q22 40 36 38 Q44 30 54 38 Q66 40 62 54 Q64 68 48 68 Q40 74 32 66 Q22 64 26 54 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M53 52 C53 57 49 61 44 61 C39.1 61 35 57 35 52 C35 47.1 39.1 43 44 43 C49 43 53 47.1 53 52 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "pan with two small eggs and a green herb sprig",
+   "paths": [
+    {
+     "d": "M64 50 L94 46 L94 60 L64 60 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M76 54 C76 72.7 60.7 88 42 88 C23.3 88 8 72.7 8 54 C8 35.3 23.3 20 42 20 C60.7 20 76 35.3 76 54 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M68 54 C68 68.3 56.3 80 42 80 C27.7 80 16 68.3 16 54 C16 39.7 27.7 28 42 28 C56.3 28 68 39.7 68 54 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M24 50 Q22 38 34 38 Q44 36 44 48 Q44 60 32 60 Q24 60 24 50 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M39 49 C39 51.8 36.8 54 34 54 C31.3 54 29 51.8 29 49 C29 46.3 31.3 44 34 44 C36.8 44 39 46.3 39 49 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M44 62 Q42 52 52 50 Q62 48 62 58 Q62 68 52 68 Q46 68 44 62 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M58 59 C58 61.8 55.8 64 53 64 C50.3 64 48 61.8 48 59 C48 56.3 50.3 54 53 54 C55.8 54 58 56.3 58 59 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 38 Q58 34 62 40",
+     "stroke": "green",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "name": "shopping-cart",
+ "category": "money",
+ "tags": [
+  "shopping cart"
+ ],
+ "variants": [
+  {
+   "note": "shopping cart, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M19.4 82.4 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M65.6 82.4 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M16.4 79.4 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62.6 79.4 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M71 71 h-46.2 v-58.8 h-8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 20.6 l58.8 4.2 l-4.2 29.4 h-54.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

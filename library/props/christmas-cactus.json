@@ -1,5 +1,6 @@
 {
   "name": "christmas-cactus",
+  "category": "nature",
   "tags": [
     "kaktüs",
     "noel",
@@ -13,7 +14,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/other-desert-cities/kapak.json",
+      "note": "blue cactus with red star on top, ornaments, and a small book tag", "from": "harvested from .cache/cizim-drafts/other-desert-cities/kapak.json",
       "paths": [
         {
           "d": "M40 98 L40 22 Q40 6 50 6 Q60 6 60 22 L60 98 Z",

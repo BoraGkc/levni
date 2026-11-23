@@ -1,0 +1,38 @@
+{
+ "name": "cactus",
+ "category": "nature",
+ "tags": [
+  "cactus"
+ ],
+ "variants": [
+  {
+   "note": "cactus, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M24.8 37.4 v4.2 a12.6 12.6 0 0 0 12.6 12.6 h4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M75.2 33.2 v21 a12.6 12.6 0 0 1 -12.6 12.6 h-4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 87.8 v-67.2 a8.4 8.4 0 1 1 16.8 0 v67.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 87.8 h42",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,5 +1,6 @@
 {
   "name": "pliers",
+  "category": "home",
   "tags": [
     "pense",
     "alet",
@@ -9,7 +10,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/bakir-tel-soyarak/ici-2.json",
+      "note": "pair of pliers, open, orange handles and blue jaws, upright", "from": "harvested from .cache/cizim-drafts/bakir-tel-soyarak/ici-2.json",
       "paths": [
         {
           "d": "M44 4 L48 4 L50 30 L52 4 L56 4 L58 34 L52 44 L48 44 L42 34 Z",

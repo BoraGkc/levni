@@ -1,43 +1,56 @@
 {
-  "name": "door",
-  "tags": [
-    "kapı",
-    "giriş",
-    "door"
-  ],
-  "variants": [
+ "name": "door",
+ "category": "home",
+ "tags": [
+  "kapı",
+  "giriş",
+  "door"
+ ],
+ "variants": [
+  {
+   "note": "front view of a plain arched white door with a small coral knob",
+   "from": "harvested from .cache/cizim-compose/ice/ici-1.json",
+   "paths": [
     {
-      "slots": { "panel": [32, 24, 36, 68], "knob": [61, 83] },
-      "note": "harvested from .cache/cizim-compose/ice/ici-1.json",
-      "paths": [
-        {
-          "d": "M20 98 V30 Q20 6 50 6 Q80 6 80 30 V98 Z",
-          "fill": "white",
-          "stroke": "ink",
-          "weight": 3.5
-        },
-        {
-          "d": "M30 98 V34 Q30 16 50 16 Q70 16 70 34 V98",
-          "stroke": "ink",
-          "weight": 2.5
-        },
-        {
-          "d": "M36 50 H64 M36 66 H64",
-          "stroke": "ink",
-          "weight": 2
-        },
-        {
-          "d": "M62 80 a2.4 2.4 0 1 0 0.1 0",
-          "fill": "coral",
-          "stroke": "ink",
-          "weight": 2.5
-        },
-        {
-          "d": "M14 98 H86",
-          "stroke": "ink",
-          "weight": 4
-        }
-      ]
+     "d": "M20 98 V30 Q20 6 50 6 Q80 6 80 30 V98 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 3.5
+    },
+    {
+     "d": "M30 98 V34 Q30 16 50 16 Q70 16 70 34 V98",
+     "stroke": "ink",
+     "weight": 2.5
+    },
+    {
+     "d": "M36 50 H64 M36 66 H64",
+     "stroke": "ink",
+     "weight": 2
+    },
+    {
+     "d": "M62 80 a2.4 2.4 0 1 0 0.1 0",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 2.5
+    },
+    {
+     "d": "M14 98 H86",
+     "stroke": "ink",
+     "weight": 4
     }
-  ]
+   ],
+   "slots": {
+    "panel": [
+     32,
+     24,
+     36,
+     68
+    ],
+    "knob": [
+     61,
+     83
+    ]
+   }
+  }
+ ]
 }

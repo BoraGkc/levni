@@ -9,6 +9,7 @@ The Levni Folio is the shared library of drawn objects in `library/props/`. Each
 ```json
 {
   "name": "watering-can",
+  "category": "home",
   "tags": ["garden", "water", "sulama"],
   "author": "Your Name",
   "variants": [
@@ -22,7 +23,7 @@ The Levni Folio is the shared library of drawn objects in `library/props/`. Each
 
 ### Format
 
-- `name`: the file name, lowercase English, `a-z0-9` and hyphens. `tags` in any language.
+- `name`: the file name, lowercase English, `a-z0-9` and hyphens. `tags` in any language. `category` is one shelf of the Library: film, tv, stage, music, books, tech, money, law, sport, home, food, nature, places, health, symbols.
 - Draw in a 0–100 box (y grows downward), centred, the object filling 70–85 of it.
 - Colours are **names**, never hex: `ink` (outlines), `blue`, `tone`, `coral`, `tone-coral`, `mustard`, `tone-mustard`, `green`, `tone-green`, `paper`, `white`, `dark`. Names let style packs recolour your drawing.
 - `weight` is the line width in output pixels: 8–10 outlines, 4–6 details.

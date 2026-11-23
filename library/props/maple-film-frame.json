@@ -1,5 +1,6 @@
 {
   "name": "maple-film-frame",
+  "category": "film",
   "tags": [
     "akçaağaç",
     "toronto",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/toronto-film-festivali/ici-2.json",
+      "note": "orange maple leaf holding a film frame, blue stem", "from": "harvested from .cache/cizim-drafts/toronto-film-festivali/ici-2.json",
       "paths": [
         {
           "d": "M50 2 L57 18 L66 13 L64 32 L80 26 L76 40 L96 46 L82 60 L87 70 L60 66 L60 84 L53 84 L53 98 L47 98 L47 84 L40 84 L40 66 L13 70 L18 60 L4 46 L24 40 L20 26 L36 32 L34 13 L43 18 Z",

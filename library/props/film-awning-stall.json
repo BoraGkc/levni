@@ -1,5 +1,6 @@
 {
   "name": "film-awning-stall",
+  "category": "film",
   "tags": [
     "pazar",
     "tezgah",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/toronto-international-film/kapak.json",
+      "note": "market stall with film-strip awning, three coral film reels on the counter", "from": "harvested from .cache/cizim-drafts/toronto-international-film/kapak.json",
       "paths": [
         {
           "d": "M10 34 h80 v36 h-80 z",

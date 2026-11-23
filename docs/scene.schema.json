@@ -42,11 +42,38 @@
       }
     },
     "style": {
-      "enum": [
-        "riso",
-        "miniature"
-      ],
-      "default": "riso"
+      "description": "Style pack name, or your own inks: house colour name -> hex.",
+      "oneOf": [
+        {
+          "enum": [
+            "riso",
+            "miniature"
+          ]
+        },
+        {
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "paper",
+              "white",
+              "ink",
+              "blue",
+              "coral",
+              "green",
+              "mustard",
+              "dark",
+              "tone",
+              "tone-coral",
+              "tone-green",
+              "tone-mustard"
+            ]
+          },
+          "additionalProperties": {
+            "type": "string",
+            "pattern": "^#[0-9a-fA-F]{6}$"
+          }
+        }
+      ]
     },
     "finish": {
       "enum": [

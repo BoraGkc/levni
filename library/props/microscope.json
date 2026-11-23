@@ -1,0 +1,61 @@
+{
+ "name": "microscope",
+ "category": "health",
+ "tags": [
+  "microscope"
+ ],
+ "variants": [
+  {
+   "note": "microscope, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M40.4 48.8 l12.6 12.6 l25.2 -25.2 l-12.6 -12.6 l-25.2 25.2",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M20.6 87.8 h58.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 75.2 h8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 75.2 v12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 45.8 l12.6 12.6 l25.2 -25.2 l-12.6 -12.6 l-25.2 25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M43.7 52.1 l-6.3 6.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M71 12.2 l12.6 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 87.8 a25.2 25.2 0 0 0 15.6 -45",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

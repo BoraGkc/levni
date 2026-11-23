@@ -1,5 +1,6 @@
 {
   "name": "chair-jacket",
+  "category": "money",
   "tags": [
     "boş sandalye",
     "ceket",
@@ -9,7 +10,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/nvidia/kapak-v2.json",
+      "note": "blue jacket draped over the back of an empty chair, front view", "from": "harvested from .cache/cizim-drafts/nvidia/kapak-v2.json",
       "paths": [
         {
           "d": "M26 14 Q50 8 74 14 L72 56 L28 56 Z",

@@ -1,0 +1,25 @@
+{
+ "name": "location",
+ "category": "symbols",
+ "tags": [
+  "location"
+ ],
+ "variants": [
+  {
+   "note": "location, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M90.8 15.2 l-27.3 75.6 a2.3 2.3 0 0 1 -4.2 0 l-14.7 -29.4 l-29.4 -14.7 a2.3 2.3 0 0 1 0 -4.2 l75.6 -27.3",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M87.8 12.2 l-27.3 75.6 a2.3 2.3 0 0 1 -4.2 0 l-14.7 -29.4 l-29.4 -14.7 a2.3 2.3 0 0 1 0 -4.2 l75.6 -27.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

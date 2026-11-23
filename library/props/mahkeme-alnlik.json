@@ -1,11 +1,12 @@
 {
   "name": "mahkeme-alnlik",
+  "category": "law",
   "tags": [
     "alınlık"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/russell-brand-tecavuz/kapak-3d.json",
+      "note": "thin blue triangular pediment outline, forehead shape", "from": "harvested from .cache/cizim-drafts/russell-brand-tecavuz/kapak-3d.json",
       "paths": [
         {
           "d": "M0 62 L50 36 L100 62 Z",

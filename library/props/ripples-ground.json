@@ -1,12 +1,13 @@
 {
   "name": "ripples-ground",
+  "category": "nature",
   "tags": [
     "dalga halkalari",
     "viral yayilim"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/sosyal-medya-isbirliklerinde/ici-1.json",
+      "note": "tiny faint blue ellipse ripple on the ground", "from": "harvested from .cache/cizim-drafts/sosyal-medya-isbirliklerinde/ici-1.json",
       "paths": [
         {
           "d": "M28 58 a22 8.36 0 1,0 44 0 a22 8.36 0 1,0 -44 0",

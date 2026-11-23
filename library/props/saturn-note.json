@@ -1,5 +1,6 @@
 {
   "name": "saturn-note",
+  "category": "music",
   "tags": [
     "nota",
     "gezegen",
@@ -13,7 +14,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/off-broadway-kacirilmayacak/ici-2-alt.json",
+      "note": "orange ringed planet with swirl streaks, small", "from": "harvested from .cache/cizim-drafts/off-broadway-kacirilmayacak/ici-2-alt.json",
       "paths": [
         {
           "d": "M60 58 L60 4",

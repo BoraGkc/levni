@@ -1,0 +1,44 @@
+{
+ "name": "armchair-2",
+ "category": "home",
+ "tags": [
+  "armchair 2"
+ ],
+ "variants": [
+  {
+   "note": "armchair 2, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M20.6 41.6 v-16.8 a12.6 12.6 0 0 1 12.6 -12.6 h33.6 a12.6 12.6 0 0 1 12.6 12.6 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 62.6 v-8.4 a12.6 12.6 0 1 1 12.6 12.6 v12.6 h-58.8 v-12.6 a12.6 12.6 0 1 1 12.6 -12.6 v8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 50 h33.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 79.4 v8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M71 79.4 v8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

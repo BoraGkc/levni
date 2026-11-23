@@ -28,6 +28,9 @@ const USAGE = `levni: hand-inked illustrations from JSON scenes
       Import props written elsewhere (one prop, an array, or a chat answer with \`\`\`json blocks).
       Checks each one, writes new props, adds new variants to existing ones, skips broken ones.
       Default folder: the library in this checkout. --sheet draws the imported props for a look.
+  levni mcp
+      Run Levni as an MCP server over stdio (tools: scene_guide, list_props, render_scene,
+      critique_scene, show_props). Add it to an MCP client as: npx levni mcp
   levni check [prop ...]
       Measure props without looking at them (for agents that cannot see images): how much of the
       box each variant fills, its centre, colours, and what to fix. All props when none named.
@@ -100,13 +103,14 @@ async function main() {
       }
       if (errs.length) { skipped++; console.log(`skip ${p?.name ?? '(no name)'}: ${errs.join('; ')}`); continue; }
       const target = join(dir, `${p.name}.json`);
-      const clean = { name: p.name, tags: p.tags.map(String), ...(p.author ? { author: p.author } : {}), variants: p.variants.map((v) => ({ ...(v.note ? { note: v.note } : {}), paths: v.paths })) };
+      const clean = { name: p.name, ...(p.category ? { category: p.category } : {}), tags: p.tags.map(String), ...(p.author ? { author: p.author } : {}), variants: p.variants.map((v) => ({ ...(v.note ? { note: v.note } : {}), paths: v.paths })) };
       if (existsSync(target)) {
         const cur = JSON.parse(readFileSync(target, 'utf8'));
         const seen = new Set(cur.variants.map((v) => JSON.stringify(v.paths)));
         const fresh = clean.variants.filter((v) => !seen.has(JSON.stringify(v.paths)));
         if (!fresh.length) { console.log(`same ${p.name}: already in the library`); continue; }
         cur.tags = [...new Set([...(cur.tags || []), ...clean.tags])];
+        if (!cur.category && clean.category) cur.category = clean.category;
         cur.variants.push(...fresh);
         writeFileSync(target, JSON.stringify(cur, null, 1) + '\n');
         console.log(`more ${p.name}: +${fresh.length} variant(s)`);
@@ -134,6 +138,9 @@ async function main() {
   } else if (cmd === 'ghost') {
     const { ghostCli } = await import('../adapters/ghost/index.mjs');
     process.exitCode = await ghostCli(rest);
+  } else if (cmd === 'mcp') {
+    const { serve } = await import('../src/mcp.mjs');
+    serve();
   } else {
     console.log(USAGE);
     if (cmd && cmd !== 'help' && cmd !== '--help') process.exitCode = 1;

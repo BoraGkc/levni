@@ -1,12 +1,13 @@
 {
   "name": "match-ball",
+  "category": "sport",
   "tags": [
     "kibrit futbol topu maç",
     "match soccer ball"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/maddie-kowalski-burnerverse/ici-1-r0.json",
+      "note": "blue match head ball with flame on a long stick", "from": "harvested from .cache/cizim-drafts/maddie-kowalski-burnerverse/ici-1-r0.json",
       "paths": [
         {
           "d": "M30 50 H96 V58 H30Z",

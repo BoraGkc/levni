@@ -1,5 +1,6 @@
 {
   "name": "compass-steps",
+  "category": "books",
   "tags": [
     "pergel",
     "kalem",
@@ -13,7 +14,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/openai-matematik-atilimi/ici-1-alt.json",
+      "note": "blue drawing compass with a pencil, coral dashed arc beside it", "from": "harvested from .cache/cizim-drafts/openai-matematik-atilimi/ici-1-alt.json",
       "paths": [
         {
           "d": "M77 99 Q106 92 102 64 Q98 38 70 30",

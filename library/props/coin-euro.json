@@ -1,0 +1,43 @@
+{
+ "name": "coin-euro",
+ "category": "money",
+ "tags": [
+  "coin euro"
+ ],
+ "variants": [
+  {
+   "note": "coin euro, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 53 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 1 0 -75.6 0",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 50 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 1 0 -75.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M60.1 33.2 c-2.8 -2.6 -6.3 -4.2 -10.1 -4.2 c-9.3 0 -16.8 9.4 -16.8 21 s7.5 21 16.8 21 c3.8 0 7.3 -1.6 10.1 -4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 43.7 h16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 56.3 h16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

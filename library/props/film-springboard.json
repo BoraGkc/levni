@@ -1,5 +1,6 @@
 {
   "name": "film-springboard",
+  "category": "film",
   "tags": [
     "sıçrama tahtası",
     "film şeridi",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/toronto-international-film/ici-1.json",
+      "note": "thin blue film strip lying flat like a short springboard plank", "from": "harvested from .cache/cizim-drafts/toronto-international-film/ici-1.json",
       "paths": [
         {
           "d": "M5 42 h90 v16 h-90 z",

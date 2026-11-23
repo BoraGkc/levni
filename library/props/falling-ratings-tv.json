@@ -1,87 +1,96 @@
 {
-  "name": "falling-ratings-tv",
-  "tags": [
-    "televizyon",
-    "reyting",
-    "düşüş",
-    "Apprentice"
-  ],
-  "variants": [
+ "name": "falling-ratings-tv",
+ "category": "tv",
+ "tags": [
+  "televizyon",
+  "reyting",
+  "düşüş",
+  "Apprentice"
+ ],
+ "variants": [
+  {
+   "note": "blue television with antenna showing a falling graph arrow, coral dials",
+   "from": "harvested from .cache/cizim-drafts/trump-tv-basarisizligi/kapak.json",
+   "paths": [
     {
-      "slots": { "screen": [15, 33, 51, 46] },
-      "note": "harvested from .cache/cizim-drafts/trump-tv-basarisizligi/kapak.json",
-      "paths": [
-        {
-          "d": "M50 24 L30 8 L22 18",
-          "stroke": "ink",
-          "weight": 3,
-          "taper": false
-        },
-        {
-          "d": "M50 24 L70 8 L80 18",
-          "stroke": "ink",
-          "weight": 3,
-          "taper": false
-        },
-        {
-          "d": "M20 88 L16 97 M80 88 L84 97",
-          "stroke": "ink",
-          "weight": 4.5,
-          "taper": false
-        },
-        {
-          "d": "M10 24 L90 24 Q94 24 94 28 L94 84 Q94 88 90 88 L10 88 Q6 88 6 84 L6 28 Q6 24 10 24 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 3.5
-        },
-        {
-          "d": "M14 32 L68 32 L68 80 L14 80 Z",
-          "fill": "blue",
-          "stroke": "ink",
-          "weight": 3
-        },
-        {
-          "d": "M18 76 L64 76 M18 66 L64 66 M18 56 L64 56 M18 46 L64 46",
-          "stroke": "tone",
-          "weight": 1,
-          "taper": false,
-          "dash": [
-            2,
-            3
-          ]
-        },
-        {
-          "d": "M18 42 L28 40 L36 50 L44 48 L52 62 L60 70",
-          "stroke": "paper",
-          "weight": 3.6,
-          "taper": false
-        },
-        {
-          "d": "M54 62 L64 74 L50 72 Z",
-          "fill": "coral",
-          "stroke": "ink",
-          "weight": 1.6
-        },
-        {
-          "d": "M76 38 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0",
-          "fill": "coral",
-          "stroke": "ink",
-          "weight": 2
-        },
-        {
-          "d": "M76 54 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0",
-          "fill": "coral",
-          "stroke": "ink",
-          "weight": 2
-        },
-        {
-          "d": "M76 66 L87 66 M76 71 L87 71 M76 76 L87 76",
-          "stroke": "ink",
-          "weight": 1.6,
-          "taper": false
-        }
-      ]
+     "d": "M50 24 L30 8 L22 18",
+     "stroke": "ink",
+     "weight": 3,
+     "taper": false
+    },
+    {
+     "d": "M50 24 L70 8 L80 18",
+     "stroke": "ink",
+     "weight": 3,
+     "taper": false
+    },
+    {
+     "d": "M20 88 L16 97 M80 88 L84 97",
+     "stroke": "ink",
+     "weight": 4.5,
+     "taper": false
+    },
+    {
+     "d": "M10 24 L90 24 Q94 24 94 28 L94 84 Q94 88 90 88 L10 88 Q6 88 6 84 L6 28 Q6 24 10 24 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 3.5
+    },
+    {
+     "d": "M14 32 L68 32 L68 80 L14 80 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M18 76 L64 76 M18 66 L64 66 M18 56 L64 56 M18 46 L64 46",
+     "stroke": "tone",
+     "weight": 1,
+     "taper": false,
+     "dash": [
+      2,
+      3
+     ]
+    },
+    {
+     "d": "M18 42 L28 40 L36 50 L44 48 L52 62 L60 70",
+     "stroke": "paper",
+     "weight": 3.6,
+     "taper": false
+    },
+    {
+     "d": "M54 62 L64 74 L50 72 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 1.6
+    },
+    {
+     "d": "M76 38 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 2
+    },
+    {
+     "d": "M76 54 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 2
+    },
+    {
+     "d": "M76 66 L87 66 M76 71 L87 71 M76 76 L87 76",
+     "stroke": "ink",
+     "weight": 1.6,
+     "taper": false
     }
-  ]
+   ],
+   "slots": {
+    "screen": [
+     15,
+     33,
+     51,
+     46
+    ]
+   }
+  }
+ ]
 }

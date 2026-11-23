@@ -1,0 +1,25 @@
+{
+ "name": "badge",
+ "category": "symbols",
+ "tags": [
+  "badge"
+ ],
+ "variants": [
+  {
+   "note": "badge, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M74 74 v-54.6 l-21 12.6 l-21 -12.6 v54.6 l21 12.6 l21 -12.6",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M71 71 v-54.6 l-21 12.6 l-21 -12.6 v54.6 l21 12.6 l21 -12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

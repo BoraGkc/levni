@@ -1,5 +1,6 @@
 {
   "name": "witch-hat-mirror",
+  "category": "stage",
   "tags": [
     "ayna",
     "cadı şapkası",
@@ -11,7 +12,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/off-broadway-hayalet/ici-1.json",
+      "note": "hand mirror with a blue witch hat reflection, orange handle", "from": "harvested from .cache/cizim-drafts/off-broadway-hayalet/ici-1.json",
       "paths": [
         {
           "d": "M44 66 L56 66 L58 98 L42 98 Z",

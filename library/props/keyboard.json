@@ -1,0 +1,192 @@
+{
+ "name": "keyboard",
+ "category": "tech",
+ "tags": [
+  "klavye",
+  "tuş takımı",
+  "keyboard",
+  "keys",
+  "typing",
+  "yazı"
+ ],
+ "variants": [
+  {
+   "note": "computer keyboard from above, three rows of keys and a space bar",
+   "paths": [
+    {
+     "d": "M8 28 L92 28 L92 74 L8 74 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M14 34 L23 34 L23 42 L14 42 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M26 34 L35 34 L35 42 L26 42 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M38 34 L47 34 L47 42 L38 42 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 34 L59 34 L59 42 L50 42 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M62 34 L71 34 L71 42 L62 42 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M74 34 L83 34 L83 42 L74 42 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M18 46 L27 46 L27 54 L18 54 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M30 46 L39 46 L39 54 L30 54 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M42 46 L51 46 L51 54 L42 54 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M54 46 L63 46 L63 54 L54 54 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M66 46 L75 46 L75 54 L66 54 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M78 46 L87 46 L87 54 L78 54 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M30 58 L70 58 L70 66 L30 66 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M16 58 L26 58 L26 66 L16 66 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M74 58 L84 58 L84 66 L74 66 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  },
+  {
+   "note": "mustard keyboard with coral enter key",
+   "paths": [
+    {
+     "d": "M8 28 L92 28 L92 74 L8 74 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M14 34 L23 34 L23 42 L14 42 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M26 34 L35 34 L35 42 L26 42 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M38 34 L47 34 L47 42 L38 42 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 34 L59 34 L59 42 L50 42 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M62 34 L71 34 L71 42 L62 42 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M74 34 L86 34 L86 54 L74 54 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M18 46 L27 46 L27 54 L18 54 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M30 46 L39 46 L39 54 L30 54 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M42 46 L51 46 L51 54 L42 54 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M54 46 L63 46 L63 54 L54 54 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M24 58 L74 58 L74 66 L24 66 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

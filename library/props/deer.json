@@ -1,0 +1,85 @@
+{
+ "name": "deer",
+ "category": "nature",
+ "tags": [
+  "deer"
+ ],
+ "variants": [
+  {
+   "note": "deer, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M53 78.2 c-4.2 0 -16.8 -12.6 -16.8 -25.2 c0 -8.4 5.6 -12.6 16.8 -12.6 s16.8 4.2 16.8 12.6 c0 12.6 -12.6 25.2 -16.8 25.2",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 12.2 c0 8.4 4.2 12.6 16.8 12.6 c8.4 0 12.6 4.2 12.6 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.8 12.2 c0 8.4 -4.2 12.6 -16.8 12.6 c-8.4 0 -12.6 1.4 -12.6 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 75.2 c-4.2 0 -16.8 -12.6 -16.8 -25.2 c0 -8.4 5.6 -12.6 16.8 -12.6 s16.8 4.2 16.8 12.6 c0 12.6 -12.6 25.2 -16.8 25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M63.4 62.1 l0.4 -0.8 a16.8 16.8 0 1 1 -27.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M71 12.2 c0 5.6 -1.4 9.8 -4.2 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 12.2 c0 5.6 1.4 9.8 4.2 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 24.8 c-11.2 2.8 -18.2 7 -21 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M71 24.8 c11.2 2.8 18.2 7 21 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M35.3 41.6 l-6.3 -4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M64.7 41.6 l6.3 -4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 62.6 h0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

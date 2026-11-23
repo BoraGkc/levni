@@ -1,0 +1,37 @@
+{
+ "name": "bulb",
+ "category": "home",
+ "tags": [
+  "bulb"
+ ],
+ "variants": [
+  {
+   "note": "bulb, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M40.4 69.8 a21 21 0 1 1 25.2 0 a14.7 14.7 0 0 0 -4.2 12.6 a8.4 8.4 0 0 1 -16.8 0 a14.7 14.7 0 0 0 -4.2 -12.6",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 50 h4.2 m33.6 -37.8 v4.2 m33.6 33.6 h4.2 m-64.7 -26.9 l2.9 2.9 m50.8 -2.9 l-2.9 2.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 66.8 a21 21 0 1 1 25.2 0 a14.7 14.7 0 0 0 -4.2 12.6 a8.4 8.4 0 0 1 -16.8 0 a14.7 14.7 0 0 0 -4.2 -12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M40.3 71 l19.3 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

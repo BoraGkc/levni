@@ -1,0 +1,38 @@
+{
+ "name": "news",
+ "category": "books",
+ "tags": [
+  "news"
+ ],
+ "variants": [
+  {
+   "note": "news, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M66.8 24.8 h12.6 a4.2 4.2 0 0 1 4.2 4.2 v46.2 a8.4 8.4 0 0 1 -16.8 0 v-54.6 a4.2 4.2 0 0 0 -4.2 -4.2 h-42 a4.2 4.2 0 0 0 -4.2 4.2 v50.4 a12.6 12.6 0 0 0 12.6 12.6 h46.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 33.2 l16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 50 l16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 66.8 l16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

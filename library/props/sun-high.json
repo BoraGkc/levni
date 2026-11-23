@@ -1,0 +1,73 @@
+{
+ "name": "sun-high",
+ "category": "nature",
+ "tags": [
+  "sun high"
+ ],
+ "variants": [
+  {
+   "note": "sun high, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M64.9 64.9 a16.8 16.8 0 1 0 -23.8 -23.8 a16.8 16.8 0 0 0 23.8 23.8",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M61.9 61.9 a16.8 16.8 0 1 0 -23.8 -23.8 a16.8 16.8 0 0 0 23.8 23.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M26.2 73.8 l-5.9 5.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M26.2 26.2 l-5.9 -5.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M73.8 26.2 l5.9 -5.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M73.8 73.8 l5.9 5.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M16.4 50 h-8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 16.4 v-8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M83.6 50 h8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 83.6 v8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

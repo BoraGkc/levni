@@ -1,5 +1,6 @@
 {
   "name": "boxing-glove",
+  "category": "sport",
   "tags": [
     "boks eldiveni",
     "boks",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/rocky-nin-gercek/kapak.json",
+      "note": "coral boxing glove with white cuff, blue outline, side view", "from": "harvested from .cache/cizim-drafts/rocky-nin-gercek/kapak.json",
       "paths": [
         {
           "d": "M24 42 Q20 14 48 10 Q80 6 88 36 Q94 60 76 69 L72 76 L32 76 Q26 62 24 42 Z",

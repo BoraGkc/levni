@@ -1,0 +1,73 @@
+{
+ "name": "spray",
+ "category": "home",
+ "tags": [
+  "spray"
+ ],
+ "variants": [
+  {
+   "note": "spray, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M19.4 53 a8.4 8.4 0 0 1 8.4 -8.4 h16.8 a8.4 8.4 0 0 1 8.4 8.4 v29.4 a8.4 8.4 0 0 1 -8.4 8.4 h-16.8 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -29.4",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M16.4 50 a8.4 8.4 0 0 1 8.4 -8.4 h16.8 a8.4 8.4 0 0 1 8.4 8.4 v29.4 a8.4 8.4 0 0 1 -8.4 8.4 h-16.8 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -29.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 41.6 v-16.8 a4.2 4.2 0 0 1 4.2 -4.2 h8.4 a4.2 4.2 0 0 1 4.2 4.2 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62.6 29 h0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M75.2 37.4 h0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M75.2 20.6 h0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.8 12.2 h0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.8 29 h0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.8 45.8 h0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 29 h4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

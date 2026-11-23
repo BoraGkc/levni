@@ -1,5 +1,6 @@
 {
  "name": "laptop",
+ "category": "tech",
  "tags": [
   "dizüstü",
   "bilgisayar",
@@ -65,6 +66,29 @@
     },
     {
      "d": "M44 70 L62 73",
+     "stroke": "ink",
+     "weight": 5,
+     "fill": "none"
+    }
+   ]
+  },
+  {
+   "note": "laptop, closed: lid down, seen from slightly above as a flat slab",
+   "paths": [
+    {
+     "d": "M22 36 L80 36 L92 58 L10 58 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M10 58 L92 58 L92 68 Q92 72 88 72 L14 72 Q10 72 10 68 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M44 65 L58 65",
      "stroke": "ink",
      "weight": 5,
      "fill": "none"

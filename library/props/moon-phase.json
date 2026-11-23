@@ -1,109 +1,185 @@
 {
-  "name": "moon-phase",
-  "tags": [
-    "ay evresi",
-    "dolunay",
-    "hilal",
-    "moon phase",
-    "cycle"
-  ],
-  "variants": [
+ "name": "moon-phase",
+ "category": "nature",
+ "tags": [
+  "ay evresi",
+  "dolunay",
+  "hilal",
+  "moon phase",
+  "cycle"
+ ],
+ "variants": [
+  {
+   "note": "solid blue full moon circle",
+   "paths": [
     {
-      "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json",
-      "paths": [
-        {
-          "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
-          "fill": "blue",
-          "stroke": "ink",
-          "weight": 3.6
-        },
-        {
-          "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
-          "fill": "none",
-          "stroke": "ink",
-          "weight": 3.6
-        }
-      ]
+     "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 3.6
     },
     {
-      "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json",
-      "paths": [
-        {
-          "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 3.6
-        },
-        {
-          "d": "M50 10 A40 40 0 0 0 50 90 A22 40 0 0 0 50 10 Z",
-          "fill": "blue"
-        },
-        {
-          "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
-          "fill": "none",
-          "stroke": "ink",
-          "weight": 3.6
-        }
-      ]
-    },
-    {
-      "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json",
-      "paths": [
-        {
-          "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 3.6
-        },
-        {
-          "d": "M50 10 A40 40 0 0 0 50 90 Z",
-          "fill": "blue"
-        },
-        {
-          "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
-          "fill": "none",
-          "stroke": "ink",
-          "weight": 3.6
-        }
-      ]
-    },
-    {
-      "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json",
-      "paths": [
-        {
-          "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 3.6
-        },
-        {
-          "d": "M50 10 A40 40 0 0 0 50 90 A22 40 0 0 1 50 10 Z",
-          "fill": "blue"
-        },
-        {
-          "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
-          "fill": "none",
-          "stroke": "ink",
-          "weight": 3.6
-        }
-      ]
-    },
-    {
-      "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json",
-      "paths": [
-        {
-          "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 3.6
-        },
-        {
-          "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
-          "fill": "none",
-          "stroke": "ink",
-          "weight": 3.6
-        }
-      ]
+     "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 3.6
     }
-  ]
+   ],
+   "from": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json"
+  },
+  {
+   "note": "blue moon phase, waning gibbous with white crescent edge",
+   "paths": [
+    {
+     "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 3.6
+    },
+    {
+     "d": "M50 10 A40 40 0 0 0 50 90 A22 40 0 0 0 50 10 Z",
+     "fill": "blue"
+    },
+    {
+     "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 3.6
+    }
+   ],
+   "from": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json"
+  },
+  {
+   "note": "half blue half white circle, first quarter moon",
+   "paths": [
+    {
+     "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 3.6
+    },
+    {
+     "d": "M50 10 A40 40 0 0 0 50 90 Z",
+     "fill": "blue"
+    },
+    {
+     "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 3.6
+    }
+   ],
+   "from": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json"
+  },
+  {
+   "note": "thin blue crescent on the left of a white disc",
+   "paths": [
+    {
+     "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 3.6
+    },
+    {
+     "d": "M50 10 A40 40 0 0 0 50 90 A22 40 0 0 1 50 10 Z",
+     "fill": "blue"
+    },
+    {
+     "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 3.6
+    }
+   ],
+   "from": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json"
+  },
+  {
+   "note": "empty white circle outline, new moon", "from": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json",
+   "paths": [
+    {
+     "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 3.6
+    },
+    {
+     "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 3.6
+    }
+   ]
+  },
+  {
+   "note": "moon phase, new moon: dark disc, barely outlined",
+   "paths": [
+    {
+     "d": "M10 50 A40 40 0 1 0 90 50 A40 40 0 1 0 10 50 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 3.6
+    },
+    {
+     "d": "M16 40 Q20 28 30 22",
+     "stroke": "tone",
+     "weight": 2.5,
+     "fill": "none"
+    }
+   ]
+  },
+  {
+   "note": "moon phase, first quarter: right half lit blue, left half dark",
+   "paths": [
+    {
+     "d": "M10 50 A40 40 0 1 0 90 50 A40 40 0 1 0 10 50 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 3.6
+    },
+    {
+     "d": "M50 10 A40 40 0 0 1 50 90 Z",
+     "fill": "blue",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 10 V90",
+     "stroke": "ink",
+     "weight": 3,
+     "fill": "none"
+    },
+    {
+     "d": "M10 50 A40 40 0 1 0 90 50 A40 40 0 1 0 10 50 Z",
+     "stroke": "ink",
+     "weight": 3.6,
+     "fill": "none"
+    }
+   ]
+  },
+  {
+   "note": "moon phase, full moon: whole disc lit with tone craters",
+   "paths": [
+    {
+     "d": "M10 50 A40 40 0 1 0 90 50 A40 40 0 1 0 10 50 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 3.6
+    },
+    {
+     "d": "M30 34 A7 7 0 1 0 44 34 A7 7 0 1 0 30 34 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M56 58 A10 10 0 1 0 76 58 A10 10 0 1 0 56 58 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M34 66 A5 5 0 1 0 44 66 A5 5 0 1 0 34 66 Z",
+     "fill": "tone",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
 }

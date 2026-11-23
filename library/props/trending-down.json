@@ -1,0 +1,26 @@
+{
+ "name": "trending-down",
+ "category": "money",
+ "tags": [
+  "trending down"
+ ],
+ "variants": [
+  {
+   "note": "trending down, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M12.2 29 l25.2 25.2 l16.8 -16.8 l33.6 33.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.8 41.6 l0 29.4 l-29.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

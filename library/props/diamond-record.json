@@ -1,5 +1,6 @@
 {
   "name": "diamond-record",
+  "category": "music",
   "tags": [
     "plak",
     "beyzbol sahası",
@@ -9,7 +10,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/neil-patrick-harris/ici-2-alt.json",
+      "note": "blue vinyl record whose centre label is a baseball diamond", "from": "harvested from .cache/cizim-drafts/neil-patrick-harris/ici-2-alt.json",
       "paths": [
         {
           "d": "M2 50 a48 48 0 1 0 96 0 a48 48 0 1 0 -96 0",

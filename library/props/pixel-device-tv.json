@@ -1,0 +1,71 @@
+{
+ "name": "pixel-device-tv",
+ "category": "tv",
+ "tags": [
+  "device tv",
+  "pixel device tv",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "device tv, regular pixel icon",
+   "paths": [
+    {
+     "d": "M25 39h56v35h-56Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 15h7v7h-7ZM60.5 15h7v7h-7ZM39.5 22h7v7h-7ZM53.5 22h7v7h-7ZM15 29h70v7h-70ZM15 36h7v35h-7ZM78 36h7v35h-7ZM15 71h70v7h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "device tv, thin pixel icon",
+   "paths": [
+    {
+     "d": "M21.5 35.5h63v42h-63Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 15h3.5v3.5h-3.5ZM64 15h3.5v3.5h-3.5ZM36 18.5h3.5v3.5h-3.5ZM60.5 18.5h3.5v3.5h-3.5ZM39.5 22h3.5v3.5h-3.5ZM57 22h3.5v3.5h-3.5ZM43 25.5h3.5v3.5h-3.5ZM53.5 25.5h3.5v3.5h-3.5ZM15 29h70v3.5h-70ZM15 32.5h3.5v42h-3.5ZM81.5 32.5h3.5v42h-3.5ZM15 74.5h70v3.5h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "device tv, solid pixel icon",
+   "paths": [
+    {
+     "d": "M36.5 19h7v7h-7ZM64.5 19h7v7h-7ZM43.5 26h7v7h-7ZM57.5 26h7v7h-7ZM19 33h70v49h-70Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 15h7v7h-7ZM60.5 15h7v7h-7ZM39.5 22h7v7h-7ZM53.5 22h7v7h-7ZM15 29h70v49h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "device tv, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M36.5 19h3.5v3.5h-3.5ZM68 19h3.5v3.5h-3.5ZM40 22.5h3.5v3.5h-3.5ZM64.5 22.5h3.5v3.5h-3.5ZM43.5 26h3.5v3.5h-3.5ZM61 26h3.5v3.5h-3.5ZM47 29.5h3.5v3.5h-3.5ZM57.5 29.5h3.5v3.5h-3.5ZM19 33h70v3.5h-70ZM26 40h56v35h-56ZM19 36.5h3.5v42h-3.5ZM85.5 36.5h3.5v42h-3.5ZM19 78.5h70v3.5h-70Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 15h3.5v3.5h-3.5ZM64 15h3.5v3.5h-3.5ZM36 18.5h3.5v3.5h-3.5ZM60.5 18.5h3.5v3.5h-3.5ZM39.5 22h3.5v3.5h-3.5ZM57 22h3.5v3.5h-3.5ZM43 25.5h3.5v3.5h-3.5ZM53.5 25.5h3.5v3.5h-3.5ZM15 29h70v3.5h-70ZM22 36h56v35h-56ZM15 32.5h3.5v42h-3.5ZM81.5 32.5h3.5v42h-3.5ZM15 74.5h70v3.5h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

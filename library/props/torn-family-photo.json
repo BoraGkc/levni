@@ -1,5 +1,6 @@
 {
   "name": "torn-family-photo",
+  "category": "home",
   "tags": [
     "fotoğraf",
     "çerçeve",
@@ -13,7 +14,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/other-desert-cities/ici-1-r0.json",
+      "note": "torn family photo, blue sky, orange sun, cactus silhouette", "from": "harvested from .cache/cizim-drafts/other-desert-cities/ici-1-r0.json",
       "paths": [
         {
           "d": "M4 8 L96 8 L96 94 L4 94 Z",

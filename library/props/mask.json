@@ -1,5 +1,6 @@
 {
   "name": "mask",
+  "category": "stage",
   "tags": [
     "maske",
     "yüz maskesi",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/minotaur-putin-rusyasinda/ici-1.json",
+      "note": "pale oval mask with closed eyes and small smile", "from": "harvested from .cache/cizim-drafts/minotaur-putin-rusyasinda/ici-1.json",
       "paths": [
         {
           "d": "M50 60 V104",

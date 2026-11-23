@@ -1,0 +1,71 @@
+{
+ "name": "pixel-file",
+ "category": "books",
+ "tags": [
+  "file",
+  "pixel file",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "file, regular pixel icon",
+   "paths": [
+    {
+     "d": "M63.5 32h7v7h-7ZM28.5 25h28v21h-28ZM28.5 46h49v35h-49Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 15h42v7h-42ZM53.5 22h14v7h-14ZM53.5 29h7v7h-7ZM67.5 29h7v7h-7ZM53.5 36h28v7h-28ZM18.5 22h7v56h-7ZM74.5 43h7v35h-7ZM18.5 78h63v7h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "file, thin pixel icon",
+   "paths": [
+    {
+     "d": "M60 25h3.5v3.5h-3.5ZM60 28.5h7v3.5h-7ZM60 32h10.5v3.5h-10.5ZM60 35.5h14v3.5h-14ZM60 39h17.5v3.5h-17.5ZM25 21.5h31.5v24.5h-31.5ZM25 46h56v38.5h-56Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 15h38.5v3.5h-38.5ZM53.5 18.5h7v3.5h-7ZM60.5 22h3.5v3.5h-3.5ZM64 25.5h3.5v3.5h-3.5ZM67.5 29h3.5v3.5h-3.5ZM71 32.5h3.5v3.5h-3.5ZM53.5 22h3.5v17.5h-3.5ZM74.5 36h3.5v3.5h-3.5ZM53.5 39.5h28v3.5h-28ZM18.5 18.5h3.5v63h-3.5ZM78 43h3.5v38.5h-3.5ZM18.5 81.5h63v3.5h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "file, solid pixel icon",
+   "paths": [
+    {
+     "d": "M22.5 19h42v7h-42ZM64.5 26h7v7h-7ZM71.5 33h7v7h-7ZM22.5 26h35v21h-35ZM78.5 40h7v7h-7ZM22.5 47h63v42h-63Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 15h42v7h-42ZM60.5 22h7v7h-7ZM67.5 29h7v7h-7ZM18.5 22h35v21h-35ZM74.5 36h7v7h-7ZM18.5 43h63v42h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "file, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M61 22.5h3.5v3.5h-3.5ZM61 26h7v3.5h-7ZM61 29.5h10.5v3.5h-10.5ZM61 33h14v3.5h-14ZM61 36.5h17.5v3.5h-17.5ZM61 40h21v3.5h-21ZM22.5 19h35v28h-35ZM22.5 47h63v42h-63Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M57 18.5h3.5v3.5h-3.5ZM57 22h7v3.5h-7ZM57 25.5h10.5v3.5h-10.5ZM57 29h14v3.5h-14ZM57 32.5h17.5v3.5h-17.5ZM57 36h21v3.5h-21ZM18.5 15h35v28h-35ZM18.5 43h63v42h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

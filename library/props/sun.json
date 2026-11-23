@@ -1,0 +1,54 @@
+{
+ "name": "sun",
+ "category": "nature",
+ "tags": [
+  "sun",
+  "güneş",
+  "sunny",
+  "güneşli",
+  "weather",
+  "hava durumu",
+  "summer",
+  "yaz"
+ ],
+ "variants": [
+  {
+   "note": "Round mustard sun with eight short rays.",
+   "paths": [
+    {
+     "d": "M30 50 A20 20 0 1 1 70 50 A20 20 0 1 1 30 50 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 20 L50 10 M50 80 L50 90 M20 50 L10 50 M80 50 L90 50 M29 29 L22 22 M71 29 L78 22 M29 71 L22 78 M71 71 L78 78",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  },
+  {
+   "note": "Sun peeking out half behind a paper cloud.",
+   "paths": [
+    {
+     "d": "M22 40 A16 16 0 1 1 54 40 A16 16 0 1 1 22 40 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M38 16 L38 10 M14 40 L8 40 M21 23 L17 19 M55 23 L59 19 M21 57 L17 61",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M30 86 Q14 86 14 72 Q14 60 28 58 Q28 42 46 42 Q56 32 70 42 Q80 40 86 50 Q92 54 92 70 Q92 86 78 86 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

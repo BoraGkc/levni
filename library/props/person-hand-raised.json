@@ -1,0 +1,100 @@
+{
+ "name": "person-hand-raised",
+ "category": "books",
+ "tags": [
+  "person",
+  "question",
+  "hand raised",
+  "student",
+  "class",
+  "ask",
+  "soru",
+  "el kaldıran",
+  "öğrenci",
+  "sınıf",
+  "insan"
+ ],
+ "variants": [
+  {
+   "note": "front view, standing with one arm up as if asking a question, green shirt",
+   "paths": [
+    {
+     "d": "M44 62 L44 85",
+     "stroke": "ink",
+     "weight": 11
+    },
+    {
+     "d": "M44 62 L44 85",
+     "stroke": "dark",
+     "weight": 6
+    },
+    {
+     "d": "M56 62 L56 85",
+     "stroke": "ink",
+     "weight": 11
+    },
+    {
+     "d": "M56 62 L56 85",
+     "stroke": "dark",
+     "weight": 6
+    },
+    {
+     "d": "M36.5 89 a5.5 3 0 1,0 11 0 a5.5 3 0 1,0 -11 0 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M52.5 89 a5.5 3 0 1,0 11 0 a5.5 3 0 1,0 -11 0 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M39 36 L34 58",
+     "stroke": "ink",
+     "weight": 11
+    },
+    {
+     "d": "M39 36 L34 58",
+     "stroke": "green",
+     "weight": 6
+    },
+    {
+     "d": "M61 36 L70 26 L68 16",
+     "stroke": "ink",
+     "weight": 11
+    },
+    {
+     "d": "M61 36 L70 26 L68 16",
+     "stroke": "green",
+     "weight": 6
+    },
+    {
+     "d": "M45 30 L55 30 Q62 30 62 37 L62 56 Q62 63 55 63 L45 63 Q38 63 38 56 L38 37 Q38 30 45 30 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41 18 a9 9 0 1,0 18 0 a9 9 0 1,0 -18 0 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M30.4 58 a3.6 3.6 0 1,0 7.2 0 a3.6 3.6 0 1,0 -7.2 0 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M64.4 16 a3.6 3.6 0 1,0 7.2 0 a3.6 3.6 0 1,0 -7.2 0 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

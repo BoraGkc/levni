@@ -1,0 +1,26 @@
+{
+ "name": "school",
+ "category": "books",
+ "tags": [
+  "school"
+ ],
+ "variants": [
+  {
+   "note": "school, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M92 37.4 l-42 -16.8 l-42 16.8 l42 16.8 l42 -16.8 v25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 44.1 v22.7 a25.2 12.6 0 0 0 50.4 0 v-22.7",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

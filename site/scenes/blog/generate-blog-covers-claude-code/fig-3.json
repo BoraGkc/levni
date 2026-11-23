@@ -1,0 +1,14 @@
+{ "seed": 7, "elements": [
+ {"type":"panel","x":40,"y":60,"w":350,"h":553,"color":"blue","rot":-1.5},
+ {"type":"disc","x":215,"y":300,"r":120,"color":"mustard"},
+ {"type":"prop","name":"piggy-bank","x":215,"y":310,"size":260,"shadow":true},
+ {"type":"prop","name":"coins","x":120,"y":500,"size":90},
+ {"type":"panel","x":425,"y":60,"w":350,"h":553,"color":"coral","rot":1},
+ {"type":"disc","x":600,"y":300,"r":120,"color":"mustard"},
+ {"type":"prop","name":"tent","x":600,"y":310,"size":260,"shadow":true},
+ {"type":"prop","name":"sun","x":690,"y":160,"size":90},
+ {"type":"panel","x":810,"y":60,"w":350,"h":553,"color":"green","rot":-1},
+ {"type":"disc","x":985,"y":300,"r":120,"color":"mustard"},
+ {"type":"prop","name":"stethoscope","x":985,"y":310,"size":260,"shadow":true},
+ {"type":"prop","name":"heart","x":1060,"y":490,"size":90}
+]}

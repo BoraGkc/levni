@@ -1,5 +1,6 @@
 {
   "name": "tap-question",
+  "category": "food",
   "tags": [
     "bira musluğu",
     "soru işareti",
@@ -9,7 +10,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/bud-light-boykotculari/ici-2.json",
+      "note": "blue tap faucet with an orange question mark dripping into a glass", "from": "harvested from .cache/cizim-drafts/bud-light-boykotculari/ici-2.json",
       "paths": [
         {
           "d": "M10 30 H62 Q74 30 74 42 V50 H62 V44 H10 Z",

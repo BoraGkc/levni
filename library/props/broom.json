@@ -1,5 +1,6 @@
 {
   "name": "broom",
+  "category": "home",
   "tags": [
     "süpürge",
     "temizlik",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/instagram-karsiliksiz-takipc/kapak-v2.json",
+      "note": "broom with yellow bristles and a long blue handle, tilted", "from": "harvested from .cache/cizim-drafts/instagram-karsiliksiz-takipc/kapak-v2.json",
       "paths": [
         {
           "d": "M94 2 L56 68",

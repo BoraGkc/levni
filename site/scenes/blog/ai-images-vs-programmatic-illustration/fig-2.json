@@ -1,0 +1,11 @@
+{ "seed": 21, "elements": [
+ {"type":"panel","x":15,"y":60,"w":370,"h":553,"color":"blue","rot":-1},
+ {"type":"disc","x":200,"y":320,"r":125,"color":"mustard"},
+ {"type":"prop","name":"piggy-bank","variant":1,"x":200,"y":330,"size":270,"shadow":true},
+ {"type":"panel","x":415,"y":60,"w":370,"h":553,"color":"coral","rot":1},
+ {"type":"disc","x":600,"y":320,"r":125,"color":"mustard"},
+ {"type":"prop","name":"piggy-bank","variant":2,"x":600,"y":330,"size":270,"rot":-8,"shadow":true},
+ {"type":"panel","x":815,"y":60,"w":370,"h":553,"color":"blue","rot":-1},
+ {"type":"disc","x":1000,"y":320,"r":125,"color":"mustard"},
+ {"type":"prop","name":"piggy-bank","variant":3,"x":1000,"y":330,"size":270,"flip":true,"shadow":true}
+]}

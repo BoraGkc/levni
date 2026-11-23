@@ -1,5 +1,6 @@
 {
   "name": "popcorn-bucket-black-balls",
+  "category": "film",
   "tags": [
     "misir kovasi siyah toplar",
     "popcorn bucket black balls",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/la-bola-negra/ici-1-alt.json",
+      "note": "striped popcorn bucket overflowing with dark blue popcorn balls, small spark marks", "from": "harvested from .cache/cizim-drafts/la-bola-negra/ici-1-alt.json",
       "paths": [
         {
           "d": "M20 44 L80 44 L73 98 L27 98 Z",

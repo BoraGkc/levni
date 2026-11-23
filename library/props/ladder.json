@@ -1,0 +1,50 @@
+{
+ "name": "ladder",
+ "category": "home",
+ "tags": [
+  "ladder"
+ ],
+ "variants": [
+  {
+   "note": "ladder, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M33.2 12.2 v75.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 12.2 v75.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 58.4 h33.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 41.6 h33.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 24.8 h33.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 75.2 h33.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

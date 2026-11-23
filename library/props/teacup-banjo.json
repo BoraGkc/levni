@@ -1,5 +1,6 @@
 {
   "name": "teacup-banjo",
+  "category": "music",
   "tags": [
     "çay fincanı",
     "banjo",
@@ -12,7 +13,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/get-out-filminin/ici-2.json",
+      "note": "teacup with a banjo neck and yellow soundhole, top view", "from": "harvested from .cache/cizim-drafts/get-out-filminin/ici-2.json",
       "paths": [
         {
           "d": "M1,50 a31,31 0 1,0 62,0 a31,31 0 1,0 -62,0",

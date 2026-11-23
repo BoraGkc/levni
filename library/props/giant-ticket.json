@@ -1,47 +1,62 @@
 {
-  "name": "giant-ticket",
-  "tags": [
-    "bilet",
-    "festival",
-    "dev bilet",
-    "kuyruk",
-    "ticket",
-    "giant"
-  ],
-  "variants": [
+ "name": "giant-ticket",
+ "category": "stage",
+ "tags": [
+  "bilet",
+  "festival",
+  "dev bilet",
+  "kuyruk",
+  "ticket",
+  "giant"
+ ],
+ "variants": [
+  {
+   "note": "large blue ticket with orange stub, torn edge, front view",
+   "from": "harvested from .cache/cizim-drafts/nathan-fielder-elizabeth/ici-1-r0.json",
+   "paths": [
     {
-      "slots": { "body": [8, 28, 60, 44], "stub": [76, 28, 17, 44] },
-      "note": "harvested from .cache/cizim-drafts/nathan-fielder-elizabeth/ici-1-r0.json",
-      "paths": [
-        {
-          "d": "M4 22 H96 V42 a8 8 0 0 0 0 16 V78 H4 V58 a8 8 0 0 0 0 -16Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 3.2
-        },
-        {
-          "d": "M72 22 H96 V42 a8 8 0 0 0 0 16 V78 H72Z",
-          "fill": "coral",
-          "stroke": "ink",
-          "weight": 2.6
-        },
-        {
-          "d": "M72 24 V76",
-          "fill": "none",
-          "stroke": "ink",
-          "weight": 2,
-          "dash": [
-            3,
-            3.5
-          ]
-        },
-        {
-          "d": "M12 40 H60 M12 50 H52 M12 60 H56",
-          "fill": "none",
-          "stroke": "ink",
-          "weight": 2.2
-        }
-      ]
+     "d": "M4 22 H96 V42 a8 8 0 0 0 0 16 V78 H4 V58 a8 8 0 0 0 0 -16Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 3.2
+    },
+    {
+     "d": "M72 22 H96 V42 a8 8 0 0 0 0 16 V78 H72Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 2.6
+    },
+    {
+     "d": "M72 24 V76",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 2,
+     "dash": [
+      3,
+      3.5
+     ]
+    },
+    {
+     "d": "M12 40 H60 M12 50 H52 M12 60 H56",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 2.2
     }
-  ]
+   ],
+   "slots": {
+    "body": [
+     8,
+     28,
+     60,
+     44
+    ],
+    "stub": [
+     76,
+     28,
+     17,
+     44
+    ]
+   }
+  }
+ ]
 }

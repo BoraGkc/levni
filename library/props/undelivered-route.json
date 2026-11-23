@@ -1,5 +1,6 @@
 {
   "name": "undelivered-route",
+  "category": "money",
   "tags": [
     "rota",
     "teslimat",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/bud-light-boykotculari/ici-1.json",
+      "note": "almost empty page, only a few tiny dots", "from": "harvested from .cache/cizim-drafts/bud-light-boykotculari/ici-1.json",
       "paths": [
         {
           "d": "M98.7 7.5 C83 7.5 87 29.4 71.7 25 H53.3",

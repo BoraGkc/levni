@@ -1,12 +1,13 @@
 {
   "name": "checklist-ghost",
+  "category": "books",
   "tags": [
     "yapılacaklar listesi hayalet",
     "checklist paper ghost"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/mfoniso-udofia-creation/kapak-r0.json",
+      "note": "torn paper checklist with checkboxes and a ghost-like blue shape", "from": "harvested from .cache/cizim-drafts/mfoniso-udofia-creation/kapak-r0.json",
       "paths": [
         {
           "d": "M22 6 H78 Q84 6 84 14 V88 Q78 80 72 90 Q64 80 56 92 Q48 82 40 92 Q32 80 26 90 Q20 82 16 88 V14 Q16 6 22 6Z",

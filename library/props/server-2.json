@@ -1,0 +1,70 @@
+{
+ "name": "server-2",
+ "category": "tech",
+ "tags": [
+  "server 2"
+ ],
+ "variants": [
+  {
+   "note": "server 2, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 32 a12.6 12.6 0 0 1 12.6 -12.6 h50.4 a12.6 12.6 0 0 1 12.6 12.6 v8.4 a12.6 12.6 0 0 1 -12.6 12.6 h-50.4 a12.6 12.6 0 0 1 -12.6 -12.6 v-8.4",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M15.2 65.6 a12.6 12.6 0 0 1 12.6 -12.6 h50.4 a12.6 12.6 0 0 1 12.6 12.6 v8.4 a12.6 12.6 0 0 1 -12.6 12.6 h-50.4 a12.6 12.6 0 0 1 -12.6 -12.6 l0 -8.4",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M32 36.2 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M32 69.8 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 29 a12.6 12.6 0 0 1 12.6 -12.6 h50.4 a12.6 12.6 0 0 1 12.6 12.6 v8.4 a12.6 12.6 0 0 1 -12.6 12.6 h-50.4 a12.6 12.6 0 0 1 -12.6 -12.6 v-8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 62.6 a12.6 12.6 0 0 1 12.6 -12.6 h50.4 a12.6 12.6 0 0 1 12.6 12.6 v8.4 a12.6 12.6 0 0 1 -12.6 12.6 h-50.4 a12.6 12.6 0 0 1 -12.6 -12.6 l0 -8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 33.2 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 66.8 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M45.8 33.2 h25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M45.8 66.8 h25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

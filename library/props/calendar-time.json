@@ -1,0 +1,55 @@
+{
+ "name": "calendar-time",
+ "category": "symbols",
+ "tags": [
+  "calendar time"
+ ],
+ "variants": [
+  {
+   "note": "calendar time, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M61.4 78.2 a16.8 16.8 0 1 0 33.6 0 a16.8 16.8 0 1 0 -33.6 0",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M49.1 87.8 h-28.5 a8.4 8.4 0 0 1 -8.4 -8.4 v-50.4 a8.4 8.4 0 0 1 8.4 -8.4 h50.4 a8.4 8.4 0 0 1 8.4 8.4 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 75.2 a16.8 16.8 0 1 0 33.6 0 a16.8 16.8 0 1 0 -33.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62.6 12.2 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 12.2 v16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 45.8 h67.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M75.2 68.9 v6.3 l4.2 4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,94 @@
+{
+ "name": "stethoscope",
+ "category": "health",
+ "tags": [
+  "steteskop",
+  "doktor",
+  "doctor",
+  "stethoscope",
+  "sağlık",
+  "health",
+  "hospital",
+  "hastane"
+ ],
+ "variants": [
+  {
+   "note": "Y-shaped tube with mustard chest piece",
+   "paths": [
+    {
+     "d": "M30 14 Q30 40 50 48 Q70 40 70 14",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 48 L50 66 Q50 76 56 76",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M35 12 C35 14.8 32.8 17 30 17 C27.3 17 25 14.8 25 12 C25 9.3 27.3 7 30 7 C32.8 7 35 9.3 35 12 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M75 12 C75 14.8 72.8 17 70 17 C67.3 17 65 14.8 65 12 C65 9.3 67.3 7 70 7 C72.8 7 75 9.3 75 12 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M78 76 C78 82.6 72.6 88 66 88 C59.4 88 54 82.6 54 76 C54 69.4 59.4 64 66 64 C72.6 64 78 69.4 78 76 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M71 76 C71 78.8 68.8 81 66 81 C63.3 81 61 78.8 61 76 C61 73.3 63.3 71 66 71 C68.8 71 71 73.3 71 76 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  },
+  {
+   "note": "coral colourway, chest piece in front view",
+   "paths": [
+    {
+     "d": "M28 12 Q28 34 50 40 Q72 34 72 12",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 40 L50 52",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33 10 C33 12.8 30.8 15 28 15 C25.3 15 23 12.8 23 10 C23 7.3 25.3 5 28 5 C30.8 5 33 7.3 33 10 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M77 10 C77 12.8 74.8 15 72 15 C69.3 15 67 12.8 67 10 C67 7.3 69.3 5 72 5 C74.8 5 77 7.3 77 10 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M70 70 C70 81 61 90 50 90 C39 90 30 81 30 70 C30 59 39 50 50 50 C61 50 70 59 70 70 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M60 70 C60 75.5 55.5 80 50 80 C44.5 80 40 75.5 40 70 C40 64.5 44.5 60 50 60 C55.5 60 60 64.5 60 70 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

@@ -1,5 +1,6 @@
 {
   "name": "reel-scales",
+  "category": "film",
   "tags": [
     "scales",
     "film",
@@ -12,7 +13,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/paramount-warner-bros/kapak.json",
+      "note": "balance scales holding a film reel on one pan, other pan light", "from": "harvested from .cache/cizim-drafts/paramount-warner-bros/kapak.json",
       "paths": [
         {
           "d": "M50,18 V92 M30,92 H70",
@@ -122,7 +123,7 @@
       ]
     },
     {
-      "note": "harvested from .cache/cizim-drafts/toronto-film-festivali/kapak-3d.json",
+      "note": "balance scales tilted, reel and blue ball on pans, orange weights", "from": "harvested from .cache/cizim-drafts/toronto-film-festivali/kapak-3d.json",
       "paths": [
         {
           "d": "M32 94 L68 94",

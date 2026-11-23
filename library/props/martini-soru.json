@@ -1,5 +1,6 @@
 {
   "name": "martini-soru",
+  "category": "home",
   "tags": [
     "martini",
     "soru işareti",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/robert-pattinson-james/ici-2.json",
+      "note": "orange martini glass triangle with question mark and bow tie", "from": "harvested from .cache/cizim-drafts/robert-pattinson-james/ici-2.json",
       "paths": [
         {
           "d": "M14 16 L86 16 L53 60 L47 60 Z",

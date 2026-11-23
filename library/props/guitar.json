@@ -1,5 +1,6 @@
 {
   "name": "guitar",
+  "category": "music",
   "tags": [
     "gitar",
     "muzik",
@@ -156,7 +157,7 @@
       ]
     },
     {
-      "note": "harvested from .cache/cizim-drafts/joe-keery-stranger/kapak-v2.json",
+      "note": "small orange guitar with blue neck, upright", "from": "harvested from .cache/cizim-drafts/joe-keery-stranger/kapak-v2.json",
       "paths": [
         {
           "d": "M50 46 C37 46 31 54 35 62 C24 66 21 83 33 91 C43 98 57 98 67 91 C79 83 76 66 65 62 C69 54 63 46 50 46 Z",

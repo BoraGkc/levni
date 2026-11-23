@@ -1,0 +1,42 @@
+{
+ "name": "accessible",
+ "category": "home",
+ "tags": [
+  "accessible"
+ ],
+ "variants": [
+  {
+   "note": "accessible, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 53 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 1 0 -75.6 0",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M50.9 34.1 a2.1 2.1 0 1 0 4.2 0 a2.1 2.1 0 1 0 -4.2 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 50 a37.8 37.8 0 1 0 75.6 0 a37.8 37.8 0 1 0 -75.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 68.9 l8.4 -12.6 l8.4 12.6 m-8.4 -12.6 v-8.4 l12.6 -4.2 m-25.2 0 l12.6 4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M47.9 31.1 a2.1 2.1 0 1 0 4.2 0 a2.1 2.1 0 1 0 -4.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

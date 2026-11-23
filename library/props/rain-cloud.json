@@ -1,62 +1,83 @@
 {
-  "name": "rain-cloud",
-  "tags": [
-    "sensitive",
-    "rain",
-    "yağmur",
-    "cloud",
-    "bulut",
-    "sorrow",
-    "hüzün",
-    "storm",
-    "fırtına",
-    "flood",
-    "sel",
-    "weather",
-    "grief"
-  ],
-  "variants": [
+ "name": "rain-cloud",
+ "category": "nature",
+ "tags": [
+  "rain cloud",
+  "yağmur bulutu",
+  "rain",
+  "yağmur",
+  "weather",
+  "hava durumu",
+  "shower",
+  "sağanak",
+  "sensitive",
+  "cloud",
+  "bulut",
+  "sorrow",
+  "hüzün",
+  "storm",
+  "fırtına",
+  "flood",
+  "sel",
+  "grief"
+ ],
+ "variants": [
+  {
+   "note": "Light blue cloud with four slanted rain drops.",
+   "paths": [
     {
-      "note": "grey cloud with soft rain",
-      "paths": [
-        {
-          "d": "M24 52 Q10 52 12 40 Q14 30 28 32 Q30 16 48 16 Q64 16 68 30 Q86 28 88 42 Q90 52 76 52 Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M28 62 L24 76",
-          "stroke": "tone",
-          "weight": 6
-        },
-        {
-          "d": "M46 62 L42 78",
-          "stroke": "tone",
-          "weight": 6
-        },
-        {
-          "d": "M64 62 L60 76",
-          "stroke": "tone",
-          "weight": 6
-        },
-        {
-          "d": "M37 74 L34 88",
-          "stroke": "tone",
-          "weight": 6
-        },
-        {
-          "d": "M55 76 L52 90",
-          "stroke": "tone",
-          "weight": 6
-        },
-        {
-          "d": "M73 72 L70 84",
-          "stroke": "tone",
-          "weight": 6
-        }
-      ]
+     "d": "M24 56 Q8 56 8 44 Q8 34 22 32 Q22 16 40 16 Q50 6 64 16 Q72 12 80 22 Q92 24 92 40 Q92 56 76 56 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M28 66 L24 78 M44 70 L40 82 M60 66 L56 78 M76 70 L72 82",
+     "stroke": "ink",
+     "weight": 8
     }
-  ],
-  "author": "Ortak Alan (AI-assisted, directed and checked)"
+   ]
+  },
+  {
+   "note": "grey cloud with soft rain",
+   "paths": [
+    {
+     "d": "M24 52 Q10 52 12 40 Q14 30 28 32 Q30 16 48 16 Q64 16 68 30 Q86 28 88 42 Q90 52 76 52 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M28 62 L24 76",
+     "stroke": "tone",
+     "weight": 6
+    },
+    {
+     "d": "M46 62 L42 78",
+     "stroke": "tone",
+     "weight": 6
+    },
+    {
+     "d": "M64 62 L60 76",
+     "stroke": "tone",
+     "weight": 6
+    },
+    {
+     "d": "M37 74 L34 88",
+     "stroke": "tone",
+     "weight": 6
+    },
+    {
+     "d": "M55 76 L52 90",
+     "stroke": "tone",
+     "weight": 6
+    },
+    {
+     "d": "M73 72 L70 84",
+     "stroke": "tone",
+     "weight": 6
+    }
+   ]
+  }
+ ]
 }

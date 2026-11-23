@@ -1,0 +1,90 @@
+{
+ "name": "line-chart",
+ "category": "money",
+ "tags": [
+  "çizgi grafik",
+  "büyüme",
+  "grafik",
+  "line chart",
+  "growth",
+  "trend",
+  "artış"
+ ],
+ "variants": [
+  {
+   "note": "axes with a rising coral line and ink dots",
+   "paths": [
+    {
+     "d": "M16 12 L16 84 L90 84",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24 70 L40 56 L54 62 L70 38 L84 22",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 8
+    },
+    {
+     "d": "M24 70 h.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M40 56 h.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M54 62 h.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M70 38 h.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M84 22 h.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 10
+    }
+   ]
+  },
+  {
+   "note": "area under the rising line filled light blue",
+   "paths": [
+    {
+     "d": "M24 70 L40 56 L54 62 L70 38 L84 22 L84 84 L24 84 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M16 12 L16 84 L90 84",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24 70 L40 56 L54 62 L70 38 L84 22",
+     "fill": "none",
+     "stroke": "mustard",
+     "weight": 8
+    },
+    {
+     "d": "M84 22 h.1",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 10
+    }
+   ]
+  }
+ ]
+}

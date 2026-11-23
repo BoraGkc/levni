@@ -1,0 +1,53 @@
+{
+ "name": "bike",
+ "category": "places",
+ "tags": [
+  "bike"
+ ],
+ "variants": [
+  {
+   "note": "bike, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M11 78.2 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 0 0 -25.2 0",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M69.8 78.2 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 0 0 -25.2 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M57.2 23.6 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M8 75.2 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 0 0 -25.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 75.2 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 0 0 -25.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 79.4 v-16.8 l-12.6 -12.6 l21 -16.8 l8.4 12.6 h12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M54.2 20.6 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

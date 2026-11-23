@@ -1,0 +1,32 @@
+{
+ "name": "building-warehouse",
+ "category": "places",
+ "tags": [
+  "building warehouse"
+ ],
+ "variants": [
+  {
+   "note": "building warehouse, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M12.2 87.8 v-54.6 l37.8 -16.8 l37.8 16.8 v54.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M54.2 54.2 h16.8 v33.6 h-42 v-25.2 h25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M54.2 87.8 v-37.8 a4.2 4.2 0 0 0 -4.2 -4.2 h-8.4 a4.2 4.2 0 0 0 -4.2 4.2 v12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

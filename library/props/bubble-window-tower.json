@@ -1,5 +1,6 @@
 {
   "name": "bubble-window-tower",
+  "category": "tech",
   "tags": [
     "apartman",
     "pencere",
@@ -13,7 +14,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/openai-arastirmacisi-llm/ici-2-alt2.json",
+      "note": "apartment tower front view, windows filled with coral and blue speech bubbles", "from": "harvested from .cache/cizim-drafts/openai-arastirmacisi-llm/ici-2-alt2.json",
       "paths": [
         {
           "d": "M12 8 L88 8 L88 96 L12 96 Z",
@@ -214,7 +215,7 @@
       ]
     },
     {
-      "note": "harvested from .cache/cizim-drafts/openai-arastirmacisi-llm/ici-2.json",
+      "note": "apartment tower of blue speech-bubble windows, calmer lighter variant", "from": "harvested from .cache/cizim-drafts/openai-arastirmacisi-llm/ici-2.json",
       "paths": [
         {
           "d": "M12 8 L88 8 L88 96 L12 96 Z",

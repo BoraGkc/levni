@@ -1,5 +1,6 @@
 {
  "name": "clock",
+ "category": "symbols",
  "tags": [
   "saat",
   "zaman",
@@ -67,6 +68,90 @@
      "d": "M50 52 L50 38 M50 52 L62 58",
      "stroke": "ink",
      "weight": 7,
+     "fill": "none"
+    }
+   ]
+  },
+  {
+   "note": "clock, 3 o'clock: hour hand right, minute hand up",
+   "paths": [
+    {
+     "d": "M53 12A40 38 0 1 0 53.1 12Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 10 A40 38 0 1 0 50.1 10 Z",
+     "stroke": "ink",
+     "weight": 10,
+     "fill": "none"
+    },
+    {
+     "d": "M50 48 L50 24 M50 48 L67 48",
+     "stroke": "ink",
+     "weight": 8,
+     "fill": "none"
+    },
+    {
+     "d": "M50 17 L50 20 M83 49 L80 49 M50 82 L50 79 M17 49 L20 49",
+     "stroke": "ink",
+     "weight": 5,
+     "fill": "none"
+    }
+   ]
+  },
+  {
+   "note": "clock, 6 o'clock: hour hand down, minute hand up",
+   "paths": [
+    {
+     "d": "M53 12A40 38 0 1 0 53.1 12Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 10 A40 38 0 1 0 50.1 10 Z",
+     "stroke": "ink",
+     "weight": 10,
+     "fill": "none"
+    },
+    {
+     "d": "M50 48 L50 24 M50 48 L50 65",
+     "stroke": "ink",
+     "weight": 8,
+     "fill": "none"
+    },
+    {
+     "d": "M50 17 L50 20 M83 49 L80 49 M50 82 L50 79 M17 49 L20 49",
+     "stroke": "ink",
+     "weight": 5,
+     "fill": "none"
+    }
+   ]
+  },
+  {
+   "note": "clock, 9 o'clock: hour hand left, minute hand up",
+   "paths": [
+    {
+     "d": "M53 12A40 38 0 1 0 53.1 12Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 10 A40 38 0 1 0 50.1 10 Z",
+     "stroke": "ink",
+     "weight": 10,
+     "fill": "none"
+    },
+    {
+     "d": "M50 48 L50 24 M50 48 L33 48",
+     "stroke": "ink",
+     "weight": 8,
+     "fill": "none"
+    },
+    {
+     "d": "M50 17 L50 20 M83 49 L80 49 M50 82 L50 79 M17 49 L20 49",
+     "stroke": "ink",
+     "weight": 5,
      "fill": "none"
     }
    ]

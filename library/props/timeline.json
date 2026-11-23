@@ -1,0 +1,64 @@
+{
+ "name": "timeline",
+ "category": "symbols",
+ "tags": [
+  "timeline"
+ ],
+ "variants": [
+  {
+   "note": "timeline, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M61.4 61.4 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M40.4 40.4 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M15.2 69.8 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M82.4 36.2 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M16.4 66.8 l25.2 -29.4 l21 21 l21 -25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 58.4 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 37.4 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 66.8 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M79.4 33.2 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

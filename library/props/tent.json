@@ -1,0 +1,54 @@
+{
+ "name": "tent",
+ "category": "places",
+ "tags": [
+  "çadır",
+  "tent",
+  "camping",
+  "kamp",
+  "outdoor",
+  "doğa",
+  "tatil",
+  "adventure"
+ ],
+ "variants": [
+  {
+   "note": "A-frame tent, coral, dark doorway, mustard flag",
+   "paths": [
+    {
+     "d": "M50 18 L50 8",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 8 L62 12 L50 16 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M10 82 L50 18 L90 82 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M42 82 L50 46 L58 82 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 46 L36 82 M50 46 L64 82",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M10 86 L90 86",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

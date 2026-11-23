@@ -1,5 +1,6 @@
 {
   "name": "book-protest-sign",
+  "category": "books",
   "tags": [
     "kitap",
     "pankart",
@@ -12,7 +13,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/kitap-yayinciligi-yapay/ici-2.json",
+      "note": "open book on a sign pole, coral X mark on the right page", "from": "harvested from .cache/cizim-drafts/kitap-yayinciligi-yapay/ici-2.json",
       "paths": [
         {
           "d": "M46,50 L54,50 L54,120 L46,120 Z",

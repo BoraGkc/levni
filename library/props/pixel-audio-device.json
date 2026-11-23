@@ -1,0 +1,71 @@
+{
+ "name": "pixel-audio-device",
+ "category": "music",
+ "tags": [
+  "audio device",
+  "pixel audio device",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "audio device, regular pixel icon",
+   "paths": [
+    {
+     "d": "M53 32h28v7h-28ZM53 39h10.5v7h-10.5ZM70.5 39h10.5v7h-10.5ZM53 46h28v7h-28ZM53 53h7v14h-7ZM74 53h7v14h-7ZM53 67h28v7h-28Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 22h21v7h-21ZM43 22h42v7h-42ZM60.5 36h7v7h-7ZM15 29h7v28h-7ZM57 50h14v14h-14ZM15 57h21v7h-21ZM43 29h7v42h-7ZM78 29h7v42h-7ZM22 71h14v7h-14ZM43 71h42v7h-42Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "audio device, thin pixel icon",
+   "paths": [
+    {
+     "d": "M49.5 28.5h35v10.5h-35ZM49.5 39h14v3.5h-14ZM70.5 39h14v3.5h-14ZM49.5 42.5h35v10.5h-35ZM63.5 56.5h7v7h-7ZM49.5 53h10.5v14h-10.5ZM74 53h10.5v14h-10.5ZM49.5 67h35v10.5h-35Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 22h21v3.5h-21ZM43 22h42v3.5h-42ZM60.5 36h7v3.5h-7ZM57 50h14v3.5h-14ZM15 25.5h3.5v35h-3.5ZM57 53.5h3.5v7h-3.5ZM67.5 53.5h3.5v7h-3.5ZM15 60.5h21v3.5h-21ZM57 60.5h14v3.5h-14ZM43 25.5h3.5v49h-3.5ZM81.5 25.5h3.5v49h-3.5ZM22 74.5h14v3.5h-14ZM43 74.5h42v3.5h-42Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "audio device, solid pixel icon",
+   "paths": [
+    {
+     "d": "M47 26h42v14h-42ZM47 40h17.5v7h-17.5ZM71.5 40h17.5v7h-17.5ZM47 47h42v7h-42ZM19 26h21v42h-21ZM47 54h14v14h-14ZM75 54h14v14h-14ZM47 68h42v14h-42ZM26 75h14v7h-14Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M43 22h42v14h-42ZM43 36h17.5v7h-17.5ZM67.5 36h17.5v7h-17.5ZM43 43h42v7h-42ZM15 22h21v42h-21ZM43 50h14v14h-14ZM71 50h14v14h-14ZM43 64h42v14h-42ZM22 71h14v7h-14Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "audio device, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M47 26h42v14h-42ZM47 40h17.5v3.5h-17.5ZM71.5 40h17.5v3.5h-17.5ZM47 43.5h42v10.5h-42ZM19 26h24.5v42h-24.5ZM47 54h14v14h-14ZM75 54h14v14h-14ZM40 68h3.5v10.5h-3.5ZM47 68h42v14h-42ZM26 78.5h17.5v3.5h-17.5Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M43 22h42v14h-42ZM43 36h17.5v3.5h-17.5ZM67.5 36h17.5v3.5h-17.5ZM43 39.5h42v10.5h-42ZM15 22h24.5v42h-24.5ZM43 50h14v14h-14ZM71 50h14v14h-14ZM36 64h3.5v10.5h-3.5ZM43 64h42v14h-42ZM22 74.5h17.5v3.5h-17.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

@@ -1,5 +1,6 @@
 {
   "name": "kum-saati-sayfa",
+  "category": "books",
   "tags": [
     "kum saati",
     "sayfa",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/rent-broadway-efsanesinin/ici-2.json",
+      "note": "light-blue hourglass with text page lines inside, orange accents", "from": "harvested from .cache/cizim-drafts/rent-broadway-efsanesinin/ici-2.json",
       "paths": [
         {
           "d": "M22 14 L78 14 L56 50 L44 50 Z",

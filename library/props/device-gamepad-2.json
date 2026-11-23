@@ -1,0 +1,49 @@
+{
+ "name": "device-gamepad-2",
+ "category": "tech",
+ "tags": [
+  "device gamepad 2"
+ ],
+ "variants": [
+  {
+   "note": "device gamepad 2, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M53 23.6 h14.7 a21 21 0 0 1 0 42 h-23.1 l-16.9 17.8 a9.7 9.7 0 0 1 -16.5 -8.5 l6.9 -34.3 a21 21 0 0 1 20.6 -16.9 h14.3",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 20.6 h14.7 a21 21 0 0 1 0 42 h-23.1 l-16.9 17.8 a9.7 9.7 0 0 1 -16.5 -8.5 l6.9 -34.3 a21 21 0 0 1 20.6 -16.9 h14.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 62.6 l17.1 18 a9.7 9.7 0 0 0 16.5 -8.5 l-6.7 -34.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 37.4 v8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 41.6 h8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 41.6 h8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,5 +1,6 @@
 {
   "name": "caret-tip-pencil",
+  "category": "books",
   "tags": [
     "kalem",
     "metin imleci",
@@ -12,7 +13,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/kitap-yayinciligi-yapay/ici-1.json",
+      "note": "horizontal pencil with coral band, its tip drawn like a text cursor", "from": "harvested from .cache/cizim-drafts/kitap-yayinciligi-yapay/ici-1.json",
       "paths": [
         {
           "d": "M30,42 L84,42 L84,58 L30,58 Z",

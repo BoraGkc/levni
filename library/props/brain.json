@@ -1,0 +1,74 @@
+{
+ "name": "brain",
+ "category": "health",
+ "tags": [
+  "beyin",
+  "brain",
+  "mind",
+  "zihin",
+  "nöroloji",
+  "neurology",
+  "düşünce",
+  "thinking"
+ ],
+ "variants": [
+  {
+   "note": "side view brain with folds and a stem",
+   "paths": [
+    {
+     "d": "M18 54 Q8 44 16 34 Q18 20 34 20 Q42 10 56 14 Q66 8 76 18 Q90 22 88 38 Q94 50 84 58 Q82 70 70 68 Q66 72 62 70 L60 84 L48 84 L46 68 Q38 74 30 68 Q18 68 18 54 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M34 34 Q42 40 36 50",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M52 24 Q58 34 50 42 Q58 48 54 58",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M70 32 Q64 40 72 48",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M26 54 Q34 52 38 58",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "front view, two hemispheres in two colours",
+   "paths": [
+    {
+     "d": "M48 16 Q30 10 20 24 Q8 32 14 48 Q8 60 22 68 Q30 80 48 80 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M52 16 Q70 10 80 24 Q92 32 86 48 Q92 60 78 68 Q70 80 52 80 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M32 28 Q38 36 30 44 Q38 52 34 62",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M68 28 Q62 36 70 44 Q62 52 66 62",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

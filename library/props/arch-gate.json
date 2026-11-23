@@ -1,5 +1,6 @@
 {
   "name": "arch-gate",
+  "category": "places",
   "tags": [
     "kemer kapı",
     "açılan kapı",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-compose/hadeln/kapak.json",
+      "note": "front view of an arched gate, yellow door flung open between blue panels", "from": "harvested from .cache/cizim-compose/hadeln/kapak.json",
       "paths": [
         {
           "d": "M22 98 V42 Q22 22 50 4 Q78 22 78 42 V98 Z",

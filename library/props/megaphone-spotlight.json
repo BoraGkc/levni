@@ -1,5 +1,6 @@
 {
   "name": "megaphone-spotlight",
+  "category": "music",
   "tags": [
     "megafon",
     "spot ışığı",
@@ -9,7 +10,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/budapeste-otoriterlik-tehlikes/kapak-alt.json",
+      "note": "small blue megaphone on orange spotlight beam above a chair", "from": "harvested from .cache/cizim-drafts/budapeste-otoriterlik-tehlikes/kapak-alt.json",
       "paths": [
         {
           "d": "M32 40 L96 4 L96 96 L32 60 Z",
@@ -64,7 +65,7 @@
       ]
     },
     {
-      "note": "harvested from .cache/cizim-drafts/budapeste-otoriterlik-tehlikes/kapak.json",
+      "note": "blue speaker horn facing left beside a small chair", "from": "harvested from .cache/cizim-drafts/budapeste-otoriterlik-tehlikes/kapak.json",
       "paths": [
         {
           "d": "M32 40 L96 4 L96 96 L32 60 Z",

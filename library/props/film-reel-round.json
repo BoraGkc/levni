@@ -1,5 +1,6 @@
 {
   "name": "film-reel-round",
+  "category": "film",
   "tags": [
     "film makarası",
     "belgesel",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/naza-belgeseli-gazze/kapak.json",
+      "note": "round blue film reel with six circular holes, front view", "from": "harvested from .cache/cizim-drafts/naza-belgeseli-gazze/kapak.json",
       "paths": [
         {
           "d": "M4,50 a46,46 0 1,0 92,0 a46,46 0 1,0 -92,0",

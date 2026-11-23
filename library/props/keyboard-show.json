@@ -1,0 +1,103 @@
+{
+ "name": "keyboard-show",
+ "category": "tech",
+ "tags": [
+  "keyboard show"
+ ],
+ "variants": [
+  {
+   "note": "keyboard show, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M11 23.6 a8.4 8.4 0 0 1 8.4 -8.4 h67.2 a8.4 8.4 0 0 1 8.4 8.4 v33.6 a8.4 8.4 0 0 1 -8.4 8.4 h-67.2 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -33.6",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M27.8 32 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M44.6 32 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M61.4 32 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M78.2 32 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M27.8 48.8 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M78.2 48.8 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M8 20.6 a8.4 8.4 0 0 1 8.4 -8.4 h67.2 a8.4 8.4 0 0 1 8.4 8.4 v33.6 a8.4 8.4 0 0 1 -8.4 8.4 h-67.2 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -33.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 29 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 29 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 29 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M75.2 29 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 45.8 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M75.2 45.8 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 45.8 l16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 79.4 l8.4 8.4 l8.4 -8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

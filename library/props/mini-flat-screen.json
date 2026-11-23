@@ -1,34 +1,43 @@
 {
-  "name": "mini-flat-screen",
-  "tags": [
-    "minik ekran",
-    "yeni nesil dizi"
-  ],
-  "variants": [
+ "name": "mini-flat-screen",
+ "category": "tv",
+ "tags": [
+  "minik ekran",
+  "yeni nesil dizi"
+ ],
+ "variants": [
+  {
+   "note": "flat screen outline with orange play triangle",
+   "from": "harvested from .cache/cizim-drafts/sopranosun-etkisi-21/kapak.json",
+   "paths": [
     {
-      "slots": { "screen": [8, 12, 84, 48] },
-      "note": "harvested from .cache/cizim-drafts/sopranosun-etkisi-21/kapak.json",
-      "paths": [
-        {
-          "d": "M50 62 L50 96 M34 96 L66 96",
-          "fill": "none",
-          "stroke": "paper",
-          "weight": 3,
-          "taper": false
-        },
-        {
-          "d": "M6 10 L94 10 L94 62 L6 62 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 2.4
-        },
-        {
-          "d": "M42 24 L42 48 L62 36 Z",
-          "fill": "coral",
-          "stroke": "ink",
-          "weight": 1.6
-        }
-      ]
+     "d": "M50 62 L50 96 M34 96 L66 96",
+     "fill": "none",
+     "stroke": "paper",
+     "weight": 3,
+     "taper": false
+    },
+    {
+     "d": "M6 10 L94 10 L94 62 L6 62 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 2.4
+    },
+    {
+     "d": "M42 24 L42 48 L62 36 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 1.6
     }
-  ]
+   ],
+   "slots": {
+    "screen": [
+     8,
+     12,
+     84,
+     48
+    ]
+   }
+  }
+ ]
 }

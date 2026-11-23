@@ -1,0 +1,71 @@
+{
+ "name": "pixel-trash",
+ "category": "home",
+ "tags": [
+  "trash",
+  "pixel trash",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "trash, regular pixel icon",
+   "paths": [
+    {
+     "d": "M46 25h14v7h-14ZM32 39h42v7h-42ZM32 46h10.5v28h-10.5ZM49.5 46h7v28h-7ZM63.5 46h10.5v28h-10.5ZM32 74h42v7h-42Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 15h28v7h-28ZM36 22h7v7h-7ZM57 22h7v7h-7ZM15 29h70v7h-70ZM39.5 43h7v28h-7ZM53.5 43h7v28h-7ZM22 36h7v42h-7ZM71 36h7v42h-7ZM22 78h56v7h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "trash, thin pixel icon",
+   "paths": [
+    {
+     "d": "M42.5 21.5h21v10.5h-21ZM28.5 35.5h49v10.5h-49ZM28.5 46h7v28h-7ZM39 46h7v28h-7ZM49.5 46h7v28h-7ZM60 46h7v28h-7ZM70.5 46h7v28h-7ZM28.5 74h49v10.5h-49Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M39.5 15h21v3.5h-21ZM36 18.5h3.5v10.5h-3.5ZM60.5 18.5h3.5v10.5h-3.5ZM15 29h70v3.5h-70ZM32.5 43h3.5v28h-3.5ZM43 43h3.5v28h-3.5ZM53.5 43h3.5v28h-3.5ZM64 43h3.5v28h-3.5ZM22 32.5h3.5v49h-3.5ZM74.5 32.5h3.5v49h-3.5ZM22 81.5h56v3.5h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "trash, solid pixel icon",
+   "paths": [
+    {
+     "d": "M40 19h28v7h-28ZM40 26h7v7h-7ZM61 26h7v7h-7ZM19 33h70v7h-70ZM26 40h56v7h-56ZM26 47h17.5v28h-17.5ZM50.5 47h7v28h-7ZM64.5 47h17.5v28h-17.5ZM26 75h56v14h-56Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 15h28v7h-28ZM36 22h7v7h-7ZM57 22h7v7h-7ZM15 29h70v7h-70ZM22 36h56v7h-56ZM22 43h17.5v28h-17.5ZM46.5 43h7v28h-7ZM60.5 43h17.5v28h-17.5ZM22 71h56v14h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "trash, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M43.5 19h21v3.5h-21ZM40 22.5h3.5v10.5h-3.5ZM64.5 22.5h3.5v10.5h-3.5ZM19 33h70v3.5h-70ZM26 36.5h56v10.5h-56ZM26 47h10.5v28h-10.5ZM40 47h7v28h-7ZM50.5 47h7v28h-7ZM61 47h7v28h-7ZM71.5 47h10.5v28h-10.5ZM26 75h56v14h-56Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M39.5 15h21v3.5h-21ZM36 18.5h3.5v10.5h-3.5ZM60.5 18.5h3.5v10.5h-3.5ZM15 29h70v3.5h-70ZM22 32.5h56v10.5h-56ZM22 43h10.5v28h-10.5ZM36 43h7v28h-7ZM46.5 43h7v28h-7ZM57 43h7v28h-7ZM67.5 43h10.5v28h-10.5ZM22 71h56v14h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

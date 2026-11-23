@@ -1,0 +1,49 @@
+{
+ "name": "ruler-2",
+ "category": "books",
+ "tags": [
+  "ruler 2"
+ ],
+ "variants": [
+  {
+   "note": "ruler 2, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M74 15.2 l16.8 16.8 l-58.8 58.8 l-16.8 -16.8 l58.8 -58.8",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M71 12.2 l16.8 16.8 l-58.8 58.8 l-16.8 -16.8 l58.8 -58.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 29 l-6.3 -6.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M54.2 41.6 l-6.3 -6.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 54.2 l-6.3 -6.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 66.8 l-6.3 -6.3",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

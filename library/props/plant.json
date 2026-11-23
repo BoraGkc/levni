@@ -1,0 +1,43 @@
+{
+ "name": "plant",
+ "category": "nature",
+ "tags": [
+  "plant"
+ ],
+ "variants": [
+  {
+   "note": "plant, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M32 65.6 h42 v16.8 a8.4 8.4 0 0 1 -8.4 8.4 h-25.2 a8.4 8.4 0 0 1 -8.4 -8.4 v-16.8",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M29 62.6 h42 v16.8 a8.4 8.4 0 0 1 -8.4 8.4 h-25.2 a8.4 8.4 0 0 1 -8.4 -8.4 v-16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 37.4 a25.2 25.2 0 0 0 -25.2 -25.2 h-12.6 v8.4 a25.2 25.2 0 0 0 25.2 25.2 h12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 45.8 a25.2 25.2 0 0 1 25.2 -25.2 h12.6 v4.2 a25.2 25.2 0 0 1 -25.2 25.2 h-12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 62.6 l0 -25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "name": "sun-wind",
+ "category": "nature",
+ "tags": [
+  "sun wind"
+ ],
+ "variants": [
+  {
+   "note": "sun wind, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M60.4 41.6 a16.8 16.8 0 1 0 -23 22.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M8 50 h4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M45.8 12.2 v4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M45.8 83.6 v4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M18.9 23.1 l2.9 2.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M72.7 23.1 l-2.9 2.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M21.9 73.9 l-2.9 2.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62.6 54.2 h21 a8.4 8.4 0 1 0 0 -16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 66.8 h24 l1.1 0 a8.4 8.4 0 0 1 8.5 8.4 a8.4 8.4 0 0 1 -8.4 8.4 h-1.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

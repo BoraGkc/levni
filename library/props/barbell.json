@@ -1,12 +1,13 @@
 {
   "name": "barbell",
+  "category": "sport",
   "tags": [
     "barbell",
     "dambıl"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/the-holes-erkek/kapak.json",
+      "note": "blue barbell with round weights on both ends, side view", "from": "harvested from .cache/cizim-drafts/the-holes-erkek/kapak.json",
       "paths": [
         {
           "d": "M8 50 H92",

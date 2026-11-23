@@ -1,0 +1,31 @@
+{
+ "name": "cloud-fog",
+ "category": "nature",
+ "tags": [
+  "cloud fog"
+ ],
+ "variants": [
+  {
+   "note": "cloud fog, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M32 69.8 a19.3 18.5 0 0 1 0 -37.8 a21 18.9 0 0 1 46.2 8.4 h4.2 a14.7 14.7 0 0 1 0 29.4 h-50.4",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M29 66.8 a19.3 18.5 0 0 1 0 -37.8 a21 18.9 0 0 1 46.2 8.4 h4.2 a14.7 14.7 0 0 1 0 29.4 h-50.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20.6 83.6 l58.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

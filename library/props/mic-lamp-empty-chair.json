@@ -1,5 +1,6 @@
 {
   "name": "mic-lamp-empty-chair",
+  "category": "music",
   "tags": [
     "mikrofon",
     "sorgu lambası",
@@ -11,7 +12,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/nathan-fielder-elizabeth/ici-2.json",
+      "note": "chair beneath a hanging orange lamp mic, empty seat", "from": "harvested from .cache/cizim-drafts/nathan-fielder-elizabeth/ici-2.json",
       "paths": [
         {
           "d": "M52 34 L82 34 L100 98 L34 98Z",

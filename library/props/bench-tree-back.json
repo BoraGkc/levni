@@ -1,5 +1,6 @@
 {
   "name": "bench-tree-back",
+  "category": "home",
   "tags": [
     "sirtligi agac olan bank",
     "bench with tree backrest",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/ma-yansong-lucas/ici-2-alt.json",
+      "note": "park bench with a green tree growing up as its backrest", "from": "harvested from .cache/cizim-drafts/ma-yansong-lucas/ici-2-alt.json",
       "paths": [
         {
           "d": "M6 66 L94 66 L94 74 L6 74 Z",

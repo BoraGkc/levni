@@ -1,0 +1,71 @@
+{
+ "name": "pixel-shopping-bag",
+ "category": "money",
+ "tags": [
+  "shopping bag",
+  "pixel shopping bag",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "shopping bag, regular pixel icon",
+   "paths": [
+    {
+     "d": "M42.5 25h21v7h-21ZM28.5 39h7v7h-7ZM42.5 39h21v7h-21ZM70.5 39h7v7h-7ZM28.5 46h49v35h-49Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M39.5 15h21v7h-21ZM32.5 22h7v7h-7ZM60.5 22h7v7h-7ZM18.5 29h63v7h-63ZM32.5 36h7v7h-7ZM60.5 36h7v7h-7ZM18.5 36h7v42h-7ZM74.5 36h7v42h-7ZM18.5 78h63v7h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "shopping bag, thin pixel icon",
+   "paths": [
+    {
+     "d": "M42.5 21.5h21v3.5h-21ZM39 25h28v7h-28ZM25 35.5h10.5v10.5h-10.5ZM39 35.5h28v10.5h-28ZM70.5 35.5h10.5v10.5h-10.5ZM25 46h56v38.5h-56Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M39.5 15h21v3.5h-21ZM36 18.5h3.5v3.5h-3.5ZM60.5 18.5h3.5v3.5h-3.5ZM32.5 22h3.5v7h-3.5ZM64 22h3.5v7h-3.5ZM18.5 29h63v3.5h-63ZM32.5 32.5h3.5v10.5h-3.5ZM64 32.5h3.5v10.5h-3.5ZM18.5 32.5h3.5v49h-3.5ZM78 32.5h3.5v49h-3.5ZM18.5 81.5h63v3.5h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "shopping bag, solid pixel icon",
+   "paths": [
+    {
+     "d": "M43.5 19h21v7h-21ZM36.5 26h7v7h-7ZM64.5 26h7v7h-7ZM22.5 33h14v14h-14ZM43.5 33h21v14h-21ZM71.5 33h14v14h-14ZM22.5 47h63v42h-63Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M39.5 15h21v7h-21ZM32.5 22h7v7h-7ZM60.5 22h7v7h-7ZM18.5 29h14v14h-14ZM39.5 29h21v14h-21ZM67.5 29h14v14h-14ZM18.5 43h63v42h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "shopping bag, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M43.5 19h21v3.5h-21ZM40 22.5h3.5v3.5h-3.5ZM64.5 22.5h3.5v3.5h-3.5ZM36.5 26h3.5v7h-3.5ZM68 26h3.5v7h-3.5ZM22.5 33h63v3.5h-63ZM22.5 36.5h14v10.5h-14ZM40 36.5h28v10.5h-28ZM71.5 36.5h14v10.5h-14ZM22.5 47h63v42h-63Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M39.5 15h21v3.5h-21ZM36 18.5h3.5v3.5h-3.5ZM60.5 18.5h3.5v3.5h-3.5ZM32.5 22h3.5v7h-3.5ZM64 22h3.5v7h-3.5ZM18.5 29h63v3.5h-63ZM18.5 32.5h14v10.5h-14ZM36 32.5h28v10.5h-28ZM67.5 32.5h14v10.5h-14ZM18.5 43h63v42h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

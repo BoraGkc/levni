@@ -1,0 +1,66 @@
+{
+ "name": "pixel-downasaur",
+ "category": "symbols",
+ "tags": [
+  "downasaur",
+  "pixel downasaur",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "downasaur, regular pixel icon",
+   "paths": [
+    {
+     "d": "M39 39h7v7h-7Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M29 22h49v7h-49ZM22 29h63v7h-63ZM15 36h21v7h-21ZM43 36h42v7h-42ZM15 43h70v7h-70ZM15 50h42v7h-42ZM15 57h63v7h-63ZM15 64h49v7h-49ZM15 71h42v7h-42Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "downasaur, thin pixel icon",
+   "paths": [
+    {
+     "d": "M32.5 22h38.5v3.5h-38.5ZM25.5 25.5h7v3.5h-7ZM71 25.5h7v3.5h-7ZM22 29h3.5v3.5h-3.5ZM78 29h3.5v7h-3.5ZM18.5 32.5h3.5v7h-3.5ZM32.5 39.5h3.5v3.5h-3.5ZM81.5 36h3.5v10.5h-3.5ZM50 46.5h31.5v3.5h-31.5ZM50 50h3.5v7h-3.5ZM53.5 57h28v3.5h-28ZM78 60.5h3.5v3.5h-3.5ZM64 64h14v3.5h-14ZM57 67.5h7v3.5h-7ZM15 39.5h3.5v35h-3.5ZM53.5 71h3.5v7h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "downasaur, solid pixel icon",
+   "paths": [
+    {
+     "d": "M33 26h49v7h-49ZM26 33h63v7h-63ZM19 40h21v7h-21ZM47 40h42v7h-42ZM19 47h70v7h-70ZM19 54h42v7h-42ZM19 61h63v7h-63ZM19 68h49v7h-49ZM19 75h42v7h-42Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M29 22h49v7h-49ZM22 29h63v7h-63ZM15 36h21v7h-21ZM43 36h42v7h-42ZM15 43h70v7h-70ZM15 50h42v7h-42ZM15 57h63v7h-63ZM15 64h49v7h-49ZM15 71h42v7h-42Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "downasaur, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M36.5 26h38.5v3.5h-38.5ZM29.5 29.5h52.5v3.5h-52.5ZM26 33h59.5v3.5h-59.5ZM22.5 36.5h63v3.5h-63ZM22.5 40h66.5v3.5h-66.5ZM19 43.5h17.5v3.5h-17.5ZM40 43.5h49v3.5h-49ZM19 47h70v3.5h-70ZM19 50.5h66.5v3.5h-66.5ZM19 54h38.5v7h-38.5ZM19 61h66.5v7h-66.5ZM19 68h63v3.5h-63ZM19 71.5h49v3.5h-49ZM19 75h42v7h-42Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M32.5 22h38.5v3.5h-38.5ZM25.5 25.5h52.5v3.5h-52.5ZM22 29h59.5v3.5h-59.5ZM18.5 32.5h63v3.5h-63ZM18.5 36h66.5v3.5h-66.5ZM15 39.5h17.5v3.5h-17.5ZM36 39.5h49v3.5h-49ZM15 43h70v3.5h-70ZM15 46.5h66.5v3.5h-66.5ZM15 50h38.5v7h-38.5ZM15 57h66.5v7h-66.5ZM15 64h63v3.5h-63ZM15 67.5h49v3.5h-49ZM15 71h42v7h-42Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

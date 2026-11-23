@@ -1,0 +1,71 @@
+{
+ "name": "pixel-trophy",
+ "category": "sport",
+ "tags": [
+  "trophy",
+  "pixel trophy",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "trophy, regular pixel icon",
+   "paths": [
+    {
+     "d": "M25 35.5h7v21h-7ZM74 35.5h7v21h-7ZM39 28.5h28v35h-28Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M29 18.5h42v7h-42ZM15 25.5h21v7h-21ZM64 25.5h21v7h-21ZM15 32.5h7v21h-7ZM29 32.5h7v21h-7ZM64 32.5h7v21h-7ZM78 32.5h7v21h-7ZM15 53.5h21v7h-21ZM64 53.5h21v7h-21ZM29 60.5h42v7h-42ZM46.5 67.5h7v7h-7ZM36 74.5h28v7h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "trophy, thin pixel icon",
+   "paths": [
+    {
+     "d": "M21.5 35.5h10.5v17.5h-10.5ZM74 35.5h10.5v17.5h-10.5ZM35.5 25h35v38.5h-35ZM39 63.5h28v3.5h-28ZM49.5 70.5h7v10.5h-7Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M29 18.5h42v3.5h-42ZM29 22h3.5v7h-3.5ZM67.5 22h3.5v7h-3.5ZM15 29h17.5v3.5h-17.5ZM67.5 29h17.5v3.5h-17.5ZM15 32.5h3.5v17.5h-3.5ZM29 32.5h3.5v17.5h-3.5ZM67.5 32.5h3.5v17.5h-3.5ZM81.5 32.5h3.5v17.5h-3.5ZM15 50h17.5v3.5h-17.5ZM67.5 50h17.5v3.5h-17.5ZM29 53.5h3.5v7h-3.5ZM67.5 53.5h3.5v7h-3.5ZM32.5 60.5h3.5v3.5h-3.5ZM64 60.5h3.5v3.5h-3.5ZM36 64h28v3.5h-28ZM43 67.5h3.5v10.5h-3.5ZM53.5 67.5h3.5v10.5h-3.5ZM36 78h28v3.5h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "trophy, solid pixel icon",
+   "paths": [
+    {
+     "d": "M33 22.5h42v7h-42ZM19 29.5h70v7h-70ZM19 36.5h7v21h-7ZM33 36.5h42v21h-42ZM82 36.5h7v21h-7ZM19 57.5h70v7h-70ZM33 64.5h42v7h-42ZM50.5 71.5h7v7h-7ZM40 78.5h28v7h-28Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M29 18.5h42v7h-42ZM15 25.5h70v7h-70ZM15 32.5h7v21h-7ZM29 32.5h42v21h-42ZM78 32.5h7v21h-7ZM15 53.5h70v7h-70ZM29 60.5h42v7h-42ZM46.5 67.5h7v7h-7ZM36 74.5h28v7h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "trophy, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M33 22.5h42v10.5h-42ZM19 33h70v3.5h-70ZM19 36.5h3.5v17.5h-3.5ZM33 36.5h42v17.5h-42ZM85.5 36.5h3.5v17.5h-3.5ZM19 54h70v3.5h-70ZM33 57.5h42v7h-42ZM36.5 64.5h35v3.5h-35ZM40 68h28v3.5h-28ZM47 71.5h14v10.5h-14ZM40 82h28v3.5h-28Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M29 18.5h42v10.5h-42ZM15 29h70v3.5h-70ZM15 32.5h3.5v17.5h-3.5ZM29 32.5h42v17.5h-42ZM81.5 32.5h3.5v17.5h-3.5ZM15 50h70v3.5h-70ZM29 53.5h42v7h-42ZM32.5 60.5h35v3.5h-35ZM36 64h28v3.5h-28ZM43 67.5h14v10.5h-14ZM36 78h28v3.5h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

@@ -1,5 +1,6 @@
 {
   "name": "redacted-folder",
+  "category": "books",
   "tags": [
     "dosya klasoru",
     "karartilmis satirlar",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/jimmy-kimmel-trump/kapak.json",
+      "note": "yellow folder with blue and orange redaction bars over text", "from": "harvested from .cache/cizim-drafts/jimmy-kimmel-trump/kapak.json",
       "paths": [
         {
           "d": "M4 14 L40 14 L46 4 L96 4 L96 86 L4 86 Z",

@@ -1,12 +1,13 @@
 {
   "name": "matryoshka-reel",
+  "category": "film",
   "tags": [
     "matruşka film makarası",
     "matryoshka film reel"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/marina-vlady-fransiz/kapak-alt.json",
+      "note": "orange matryoshka doll with film reel belly", "from": "harvested from .cache/cizim-drafts/marina-vlady-fransiz/kapak-alt.json",
       "paths": [
         {
           "d": "M50 4 Q74 4 76 30 Q92 50 90 76 Q86 96 50 96 Q14 96 10 76 Q8 50 24 30 Q26 4 50 4Z",

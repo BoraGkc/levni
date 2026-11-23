@@ -1,0 +1,20 @@
+{
+ "name": "bluetooth",
+ "category": "tech",
+ "tags": [
+  "bluetooth"
+ ],
+ "variants": [
+  {
+   "note": "bluetooth, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M29 33.2 l42 33.6 l-21 16.8 l0 -67.2 l21 16.8 l-42 33.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

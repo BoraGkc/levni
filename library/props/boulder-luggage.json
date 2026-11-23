@@ -1,5 +1,6 @@
 {
   "name": "boulder-luggage",
+  "category": "home",
   "tags": [
     "taş valiz",
     "yük",
@@ -9,7 +10,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/chris-rock-affetme/ici-1-alt2.json",
+      "note": "faceted light blue boulder shaped like a luggage bag with handle and red tag", "from": "harvested from .cache/cizim-drafts/chris-rock-affetme/ici-1-alt2.json",
       "paths": [
         {
           "d": "M36 28 Q36 6 50 6 Q64 6 64 28",

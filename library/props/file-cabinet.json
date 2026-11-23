@@ -1,47 +1,68 @@
 {
-  "name": "file-cabinet",
-  "tags": [
-    "dosya dolabı",
-    "arşiv",
-    "gizli belge",
-    "file cabinet",
-    "archive",
-    "classified"
-  ],
-  "variants": [
+ "name": "file-cabinet",
+ "category": "books",
+ "tags": [
+  "dosya dolabı",
+  "arşiv",
+  "gizli belge",
+  "file cabinet",
+  "archive",
+  "classified"
+ ],
+ "variants": [
+  {
+   "note": "blue filing cabinet with three drawers, a document sticking out sideways",
+   "from": "harvested from .cache/cizim-drafts/askeri-sir-yapay/kapak.json",
+   "paths": [
     {
-      "slots": { "drawer1": [24, 17, 38, 20], "drawer2": [24, 44, 38, 20], "drawer3": [24, 71, 38, 20] },
-      "note": "harvested from .cache/cizim-drafts/askeri-sir-yapay/kapak.json",
-      "paths": [
-        {
-          "d": "M20 14 L66 14 L66 94 L20 94 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 3.2
-        },
-        {
-          "d": "M20 40 L66 40 M20 67 L66 67",
-          "stroke": "ink",
-          "weight": 3
-        },
-        {
-          "d": "M36 26 L50 26 L50 31 L36 31 Z M36 53 L50 53 L50 58 L36 58 Z M36 80 L50 80 L50 85 L36 85 Z",
-          "fill": "ink",
-          "stroke": "ink",
-          "weight": 1.5
-        },
-        {
-          "d": "M66 44 L96 38 L96 64 L66 66 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 3
-        },
-        {
-          "d": "M70 50 L92 46 M70 58 L90 55",
-          "stroke": "ink",
-          "weight": 2.2
-        }
-      ]
+     "d": "M20 14 L66 14 L66 94 L20 94 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 3.2
+    },
+    {
+     "d": "M20 40 L66 40 M20 67 L66 67",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M36 26 L50 26 L50 31 L36 31 Z M36 53 L50 53 L50 58 L36 58 Z M36 80 L50 80 L50 85 L36 85 Z",
+     "fill": "ink",
+     "stroke": "ink",
+     "weight": 1.5
+    },
+    {
+     "d": "M66 44 L96 38 L96 64 L66 66 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M70 50 L92 46 M70 58 L90 55",
+     "stroke": "ink",
+     "weight": 2.2
     }
-  ]
+   ],
+   "slots": {
+    "drawer1": [
+     24,
+     17,
+     38,
+     20
+    ],
+    "drawer2": [
+     24,
+     44,
+     38,
+     20
+    ],
+    "drawer3": [
+     24,
+     71,
+     38,
+     20
+    ]
+   }
+  }
+ ]
 }

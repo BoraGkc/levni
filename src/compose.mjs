@@ -260,6 +260,8 @@ async function composeOnce(spec, canvas, lay) {
   }
   // boil: the crayon filter's own seed; the animator steps it a few times a second for a hand-drawn shimmer
   // spec.style picks a style pack (styles.mjs): the same drawing printed with other inks
+  // the critic measures crops against the card when there is one, else the canvas
+  used.frame = spec.clip ? [...spec.clip] : [0, 0, canvas.w, canvas.h];
   let svg = frame(body, { seed: spec.boil ?? seed, background: c(spec.background, P.paper), finish: soft ? 'soft' : 'crayon', grain: spec.grain, w: canvas.w, h: canvas.h });
   // the title layer sits above everything, outside the crayon filter (title.mjs)
   if (spec.title) svg = svg.replace(/<\/svg>\s*$/, `${layoutTitle(spec.title, canvas, safeInsets(canvas)).draw(c, c(spec.background, P.paper))}\n</svg>`);

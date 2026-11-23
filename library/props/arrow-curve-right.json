@@ -1,0 +1,26 @@
+{
+ "name": "arrow-curve-right",
+ "category": "symbols",
+ "tags": [
+  "arrow curve right"
+ ],
+ "variants": [
+  {
+   "note": "arrow curve right, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M41.6 29 l16.8 -16.8 l16.8 16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 12.2 v18.5 a28.3 28.3 0 0 1 -12.6 23.5 a28.3 28.3 0 0 0 -12.6 23.5 v10.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

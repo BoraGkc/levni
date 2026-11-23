@@ -1,5 +1,6 @@
 {
   "name": "phone-cage-crown",
+  "category": "tech",
   "tags": [
     "telefon",
     "kafes",
@@ -9,7 +10,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/zuckerberg-sosyal-medya/ici-1.json",
+      "note": "phone with striped blue screen and yellow crown, front view", "from": "harvested from .cache/cizim-drafts/zuckerberg-sosyal-medya/ici-1.json",
       "paths": [
         {
           "d": "M31 2 h38 a7 7 0 0 1 7 7 v82 a7 7 0 0 1 -7 7 h-38 a7 7 0 0 1 -7 -7 v-82 a7 7 0 0 1 7 -7 z",

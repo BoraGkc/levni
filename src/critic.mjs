@@ -6,17 +6,25 @@ export function critique(used, canvas = { w: W0, h: H0 }) {
   const W = canvas.w, H = canvas.h;
   const notes = [];
   const area = (b) => Math.max(0, b.w) * Math.max(0, b.h);
+  // the frame is the clip card when the scene has one, else the canvas
+  const [fx, fy, fw, fh] = used.frame || [0, 0, W, H];
+  const OBJECTS = ['draw', 'icon', 'sheet', 'window', 'disc'];
   for (const b of used) {
-    if (!b.crop && (b.x < -20 || b.y < -20 || b.x + b.w > W + 20 || b.y + b.h > H + 20)) {
-      if (!['panel', 'crowd', 'skyline', 'draw'].includes(b.type)) notes.push(`${b.type} at (${Math.round(b.x)},${Math.round(b.y)}) runs off the canvas`);
-    }
+    if (b.crop || OBJECTS.includes(b.type) || ['panel', 'crowd', 'skyline', 'ribbon', 'tube'].includes(b.type)) continue;
+    if (b.x < fx - 20 || b.y < fy - 20 || b.x + b.w > fx + fw + 20 || b.y + b.h > fy + fh + 20) notes.push(`${b.type} at (${Math.round(b.x)},${Math.round(b.y)}) runs off the ${used.frame && (fx || fy) ? 'card' : 'canvas'}`);
   }
-  // objects (not grounds) touching the frame edge by accident: an object cut by < 6 % of its size looks like a mistake
+  // objects cut by the frame without "crop": true. A sliver looks like a mistake; a big cut hides the subject.
   for (const b of used) {
-    if (!['draw', 'icon', 'sheet', 'window', 'disc'].includes(b.type) || b.crop) continue;
-    const cutL = -b.x, cutR = b.x + b.w - W, cutT = -b.y, cutB = b.y + b.h - H;
+    if (!OBJECTS.includes(b.type) || b.crop || !(b.w > 0 && b.h > 0)) continue;
+    const cutL = fx - b.x, cutR = b.x + b.w - (fx + fw), cutT = fy - b.y, cutB = b.y + b.h - (fy + fh);
     const worst = Math.max(cutL, cutR, cutT, cutB);
-    if (worst > 0 && worst < Math.max(b.w, b.h) * 0.12) notes.push(`${b.type}${b.name ? ` "${b.name}"` : ''} (ink box ${Math.round(b.x)},${Math.round(b.y)} ${Math.round(b.w)}×${Math.round(b.h)}) is cut ${Math.round(worst)}px by the frame: pull it in or crop it boldly (set "crop": true)`);
+    if (worst <= 0) continue;
+    const vw = Math.max(0, Math.min(b.x + b.w, fx + fw) - Math.max(b.x, fx)), vh = Math.max(0, Math.min(b.y + b.h, fy + fh) - Math.max(b.y, fy));
+    const shown = Math.round((100 * vw * vh) / area(b));
+    const what = `${b.type}${b.name ? ` "${b.name}"` : ''} (ink box ${Math.round(b.x)},${Math.round(b.y)} ${Math.round(b.w)}×${Math.round(b.h)})`;
+    if (worst < Math.max(b.w, b.h) * 0.12) notes.push(`${what} is cut ${Math.round(worst)}px by the frame: pull it in or crop it boldly (set "crop": true)`);
+    else if (shown < 60) notes.push(`${what} is mostly outside the frame, only ${shown}% shows: move it in, or set "crop": true if the cut is the idea`);
+    else notes.push(`${what} is cut by the frame, ${shown}% shows: pull it in, or set "crop": true if the cut is deliberate`);
   }
   const ink = used.filter((b) => b.type !== 'panel');
   const mass = (x0, x1) => ink.reduce((s, b) => s + Math.max(0, Math.min(b.x + b.w, x1) - Math.max(b.x, x0)) * b.h, 0);

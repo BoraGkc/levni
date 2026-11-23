@@ -1,13 +1,107 @@
 {
  "name": "calculator",
+ "category": "money",
  "tags": [
-  "hesap makinesi",
   "calculator",
+  "hesap makinesi",
   "toplama",
   "accounting",
   "muhasebe"
  ],
  "variants": [
+  {
+   "note": "calculator, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M19.4 23.6 a8.4 8.4 0 0 1 8.4 -8.4 h50.4 a8.4 8.4 0 0 1 8.4 8.4 v58.8 a8.4 8.4 0 0 1 -8.4 8.4 h-50.4 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -58.8",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M36.2 36.2 a4.2 4.2 0 0 1 4.2 -4.2 h25.2 a4.2 4.2 0 0 1 4.2 4.2 v4.2 a4.2 4.2 0 0 1 -4.2 4.2 h-25.2 a4.2 4.2 0 0 1 -4.2 -4.2 l0 -4.2",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M36.2 61.4 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M53 61.4 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M69.8 61.4 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M36.2 74 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M53 74 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M69.8 74 l0 0",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M16.4 20.6 a8.4 8.4 0 0 1 8.4 -8.4 h50.4 a8.4 8.4 0 0 1 8.4 8.4 v58.8 a8.4 8.4 0 0 1 -8.4 8.4 h-50.4 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -58.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 33.2 a4.2 4.2 0 0 1 4.2 -4.2 h25.2 a4.2 4.2 0 0 1 4.2 4.2 v4.2 a4.2 4.2 0 0 1 -4.2 4.2 h-25.2 a4.2 4.2 0 0 1 -4.2 -4.2 l0 -4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 58.4 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 58.4 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 58.4 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 71 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 71 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 71 l0 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  },
   {
    "note": "body with blank screen and button grid",
    "paths": [

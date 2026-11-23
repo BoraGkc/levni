@@ -1,0 +1,38 @@
+{
+ "name": "ironing-steam",
+ "category": "home",
+ "tags": [
+  "ironing steam"
+ ],
+ "variants": [
+  {
+   "note": "ironing steam, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M50 79.4 v8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 16.4 h31.3 a12.6 12.6 0 0 1 12.4 10.5 l2.4 14.5 l3.4 20.4 a4.2 4.2 0 0 1 -4.1 4.9 h-70.6 a29.4 29.4 0 0 1 29.4 -29.4 h41.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 79.4 l-4.2 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 79.4 l4.2 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

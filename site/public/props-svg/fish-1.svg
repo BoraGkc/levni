@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="520" viewBox="340 76 520 520">
+<defs>
+  <filter id="crayon" filterUnits="userSpaceOnUse" x="0" y="0" width="1200" height="673" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="3" result="wobble"/>
+    <feDisplacementMap in="SourceGraphic" in2="wobble" scale="5" xChannelSelector="R" yChannelSelector="G" result="w1"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="2" seed="10" result="tooth"/>
+    <feDisplacementMap in="w1" in2="tooth" scale="3.2" xChannelSelector="R" yChannelSelector="G" result="w2"/>
+    <feTurbulence type="fractalNoise" baseFrequency="1.1 0.8" numOctaves="2" seed="16" result="grain"/>
+    <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.0 2.3" result="speckle"/>
+    <feComposite in="w2" in2="speckle" operator="in" result="inked"/>
+    <!-- ink mottle: faint horizontal streaks where the drum laid down a little less ink, as on a riso print -->
+    <feTurbulence type="fractalNoise" baseFrequency="0.003 0.035" numOctaves="2" seed="34" result="mot"/>
+    <feColorMatrix in="mot" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.55 0 0 0 0.74" result="mota"/>
+    <feComposite in="inked" in2="mota" operator="in"/>
+  </filter>
+  <filter id="paper" filterUnits="userSpaceOnUse" x="0" y="0" width="1200" height="673">
+    <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="24" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.42  0 0 0 0 0.36  0 0 0 0.06 0"/>
+  </filter></defs>
+<rect width="1200" height="673" fill="#F4F2EC"/>
+<rect width="1200" height="673" filter="url(#paper)"/>
+<g filter="url(#crayon)">
+<g transform="translate(370 106) scale(4.6)"><path d="M73 56 L93 44 L95 74 Z" fill="#F2C230" transform="translate(-0.03 -0.44)"/><path d="M84.6,45.4L86.7,44.7L88.6,43.7L89.6,42.7L89.3,44.2L89.4,46.3L89.5,48.5L89.6,50.6L89.8,52.8L90,54.9L90.3,57L90.4,59.2L90.6,61.3L90.7,63.5L90.8,65.6L90.9,67.8L91,69.9L92.5,71.3L70.6,53.4L72.2,53.6L74,52.5L75.8,51.4L77.7,50.3L79.5,49.2L81.3,48.1L83.2,47L84.9,45.7L86.6,44.4L86.5,44.1L84.2,44.4L82.3,45.7L80.5,46.8L78.7,47.9L76.9,49L75.1,50.1L73.2,51.2L71.4,52.2L69.4,54.6L91.5,72.7L92.7,69.8L92.5,67.7L92.3,65.5L92.2,63.4L92,61.2L91.9,59.1L91.7,57L91.7,54.8L91.6,52.7L91.5,50.5L91.4,48.4L91.2,46.2L91,44.1L90.4,41.3L87.8,42.4L86,43.6L84.5,45.2Z" fill="#0A3FB0"/><path d="M15 43 C31 25 65 33 75 59 C59 79 29 69 15 43 Z" fill="#7FA6F2" transform="translate(-0.38 -0.47)"/><path d="M65.9,45.6L66.9,47.4L67.9,49L68.9,50.7L69.8,52.5L70.6,54.3L71.4,55.9L70.3,57L69,58.3L67.7,59.5L66.4,60.5L65,61.5L63.6,62.4L62.1,63.1L60.7,63.8L59.2,64.4L57.6,64.9L56.1,65.2L54.5,65.5L52.9,65.7L51.3,65.8L49.7,65.8L48.1,65.7L46.4,65.5L44.8,65.3L43.1,64.9L41.5,64.5L39.8,63.9L38.2,63.3L36.6,62.6L35,61.8L33.4,60.9L31.8,60L30.2,59L28.7,57.9L27.2,56.7L25.7,55.5L24.3,54.2L22.9,52.8L21.5,51.3L20.1,49.8L18.8,48.3L17.6,46.6L16.3,44.9L15.2,43.2L14,41.4L13,39.5L12.8,40.7L14,39.4L15.2,38.3L16.5,37.2L17.9,36.2L19.3,35.3L20.7,34.5L22.2,33.8L23.7,33.1L25.3,32.6L26.9,32.1L28.6,31.8L30.2,31.5L31.9,31.3L33.6,31.2L35.4,31.2L37.1,31.3L38.8,31.4L40.6,31.6L42.3,32L44,32.4L45.8,32.8L47.5,33.4L49.1,34L50.8,34.7L52.5,35.5L54.1,36.4L55.7,37.3L57.2,38.3L58.7,39.4L60.2,40.5L61.6,41.8L63,43.1L64.3,44.4L65.2,46.4L66.9,47.3L67.6,49.4L69.2,50.9L70.4,52.6L70.5,52.6L69.9,50.4L68.4,48.9L67.8,46.7L66,45.7L65.3,43.7L63.9,42.2L62.5,40.8L61.1,39.5L59.6,38.2L58.1,37.1L56.5,36L54.9,35L53.2,34L51.5,33.2L49.8,32.4L48,31.7L46.3,31.2L44.5,30.6L42.7,30.2L40.8,29.9L39,29.6L37.2,29.5L35.4,29.4L33.6,29.4L31.8,29.5L30,29.7L28.2,30L26.5,30.4L24.8,30.8L23.1,31.4L21.5,32L19.8,32.8L18.3,33.6L16.7,34.5L15.3,35.6L13.9,36.7L12.5,37.9L11.2,39.3L11,40.5L12.1,42.5L13.3,44.4L14.5,46.2L15.7,48L17.1,49.7L18.4,51.3L19.8,52.9L21.3,54.4L22.8,55.8L24.3,57.1L25.9,58.4L27.5,59.5L29.1,60.6L30.8,61.7L32.5,62.6L34.1,63.4L35.9,64.2L37.6,64.9L39.3,65.5L41,66L42.8,66.5L44.5,66.8L46.2,67.1L47.9,67.3L49.7,67.4L51.4,67.3L53.1,67.2L54.7,67L56.4,66.7L58,66.3L59.7,65.8L61.3,65.2L62.8,64.5L64.3,63.7L65.8,62.7L67.3,61.7L68.6,60.5L70,59.3L71.3,57.9L72.6,56.1L71.8,53.8L70.8,52L69.8,50.2L68.7,48.5L67.6,46.9L66.1,45.5Z" fill="#0A3FB0"/><path d="M37.9,62L38.5,63.9L39.3,65.6L40.1,67.4L41,69.1L41.9,70.8L42.7,72.5L43.9,74.6L46.1,73.2L47.7,71.8L49.3,70.4L51,69.1L52.6,67.7L54.1,66.1L53.9,65.9L52.1,67L50.4,68.3L48.7,69.6L46.9,70.8L45.3,72.2L44.1,73.4L43.6,72.1L42.7,70.4L41.9,68.6L41,66.9L40.1,65.2L39.2,63.6L38.1,62Z" fill="#0A3FB0"/><path d="M41.9,40L42.4,41.8L43.1,43.5L44,45L44.7,46.6L45.9,48L46.1,48L45.7,46.2L44.8,44.6L44.1,42.9L43.2,41.4L42.1,40Z" fill="#0A3FB0"/><path d="M51.9,42L52.4,43.8L52.9,45.5L53.8,47.1L54.7,48.6L55.9,50L56.1,50L55.7,48.2L55,46.5L54.3,44.9L53.2,43.4L52.1,42Z" fill="#0A3FB0"/><path d="M61.9,46L62.2,48L63,49.7L63.8,51.4L64.9,53L65.1,53L64.7,51.1L64,49.3L63.3,47.5L62.1,46Z" fill="#0A3FB0"/><circle cx="24.00" cy="42.00" r="0.96" fill="#0A3FB0"/></g>
+</g>
+</svg>

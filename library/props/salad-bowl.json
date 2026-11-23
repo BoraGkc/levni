@@ -1,0 +1,101 @@
+{
+ "name": "salad-bowl",
+ "category": "food",
+ "tags": [
+  "salad",
+  "salata",
+  "bowl",
+  "kase",
+  "healthy",
+  "sağlıklı",
+  "vegetable",
+  "sebze"
+ ],
+ "variants": [
+  {
+   "note": "tone bowl heaped with green leaves and a coral tomato",
+   "paths": [
+    {
+     "d": "M18 54 Q14 34 30 30 Q38 40 34 54 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M34 54 Q34 24 52 22 Q62 34 56 54 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M54 54 Q58 30 76 30 Q88 40 82 54 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M53 48 C53 51.9 49.9 55 46 55 C42.2 55 39 51.9 39 48 C39 44.2 42.2 41 46 41 C49.9 41 53 44.2 53 48 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M10 52 L90 52 Q88 82 66 88 L34 88 Q12 82 10 52 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M22 64 Q50 72 78 64",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  },
+  {
+   "note": "coral bowl with leaves, a mustard egg slice and a fork",
+   "paths": [
+    {
+     "d": "M72 8 L72 40 M66 8 L66 18 M78 8 L78 18",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M14 54 Q12 34 30 32 Q38 42 34 54 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M56 54 Q58 28 76 32 Q88 42 84 54 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M60 44 C60 50.6 54.6 56 48 56 C41.4 56 36 50.6 36 44 C36 37.4 41.4 32 48 32 C54.6 32 60 37.4 60 44 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M53 44 C53 46.8 50.8 49 48 49 C45.3 49 43 46.8 43 44 C43 41.3 45.3 39 48 39 C50.8 39 53 41.3 53 44 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M10 52 L90 52 Q88 82 66 88 L34 88 Q12 82 10 52 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M24 64 Q50 72 76 64",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

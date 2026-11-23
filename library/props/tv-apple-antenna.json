@@ -1,105 +1,114 @@
 {
-  "name": "tv-apple-antenna",
-  "tags": [
-    "televizyon",
-    "elma",
-    "antenn",
-    "dal",
-    "eden",
-    "tv",
-    "apple tree",
-    "antenna"
-  ],
-  "variants": [
+ "name": "tv-apple-antenna",
+ "category": "tv",
+ "tags": [
+  "televizyon",
+  "elma",
+  "antenn",
+  "dal",
+  "eden",
+  "tv",
+  "apple tree",
+  "antenna"
+ ],
+ "variants": [
+  {
+   "note": "retro TV with antennae apples and an open book on screen",
+   "from": "harvested from .cache/cizim-drafts/ghost-adventures-ve/ici-1.json",
+   "paths": [
     {
-      "slots": { "screen": [19, 38, 46, 40] },
-      "note": "harvested from .cache/cizim-drafts/ghost-adventures-ve/ici-1.json",
-      "paths": [
-        {
-          "d": "M48 28 Q44 14 24 8",
-          "stroke": "ink",
-          "weight": 5
-        },
-        {
-          "d": "M52 28 Q58 14 78 12",
-          "stroke": "ink",
-          "weight": 5
-        },
-        {
-          "d": "M34 11 Q36 4 42 6 Q40 12 34 11Z M64 17 Q68 8 74 10 Q72 17 64 17Z M22 14 Q16 18 14 12 Q18 8 22 14Z",
-          "fill": "green",
-          "stroke": "ink",
-          "weight": 2
-        },
-        {
-          "d": "M15,16 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0",
-          "fill": "coral",
-          "stroke": "ink",
-          "weight": 3
-        },
-        {
-          "d": "M73,20 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0",
-          "fill": "coral",
-          "stroke": "ink",
-          "weight": 3
-        },
-        {
-          "d": "M22 9 V6 M80 13 V10",
-          "stroke": "ink",
-          "weight": 2.4
-        },
-        {
-          "d": "M8 32 Q8 28 12 28 H88 Q92 28 92 32 V84 Q92 88 88 88 H12 Q8 88 8 84Z",
-          "fill": "blue",
-          "stroke": "ink",
-          "weight": 3.8
-        },
-        {
-          "d": "M16 36 H68 V80 H16Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 3
-        },
-        {
-          "d": "M22 44 Q42 38 42 46 V72 Q32 66 22 72Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 2.2
-        },
-        {
-          "d": "M62 44 Q42 38 42 46 V72 Q52 66 62 72Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 2.2
-        },
-        {
-          "d": "M26 52 H38 M26 58 H38 M46 52 H58 M46 58 H58",
-          "stroke": "blue",
-          "weight": 1.6
-        },
-        {
-          "d": "M75,48 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 2.4
-        },
-        {
-          "d": "M75,66 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 2.4
-        },
-        {
-          "d": "M78 48 H82 M78 66 H82",
-          "stroke": "coral",
-          "weight": 2
-        },
-        {
-          "d": "M18 88 L14 98 M82 88 L86 98",
-          "stroke": "ink",
-          "weight": 4
-        }
-      ]
+     "d": "M48 28 Q44 14 24 8",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M52 28 Q58 14 78 12",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M34 11 Q36 4 42 6 Q40 12 34 11Z M64 17 Q68 8 74 10 Q72 17 64 17Z M22 14 Q16 18 14 12 Q18 8 22 14Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 2
+    },
+    {
+     "d": "M15,16 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M73,20 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M22 9 V6 M80 13 V10",
+     "stroke": "ink",
+     "weight": 2.4
+    },
+    {
+     "d": "M8 32 Q8 28 12 28 H88 Q92 28 92 32 V84 Q92 88 88 88 H12 Q8 88 8 84Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 3.8
+    },
+    {
+     "d": "M16 36 H68 V80 H16Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M22 44 Q42 38 42 46 V72 Q32 66 22 72Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 2.2
+    },
+    {
+     "d": "M62 44 Q42 38 42 46 V72 Q52 66 62 72Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 2.2
+    },
+    {
+     "d": "M26 52 H38 M26 58 H38 M46 52 H58 M46 58 H58",
+     "stroke": "blue",
+     "weight": 1.6
+    },
+    {
+     "d": "M75,48 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 2.4
+    },
+    {
+     "d": "M75,66 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 2.4
+    },
+    {
+     "d": "M78 48 H82 M78 66 H82",
+     "stroke": "coral",
+     "weight": 2
+    },
+    {
+     "d": "M18 88 L14 98 M82 88 L86 98",
+     "stroke": "ink",
+     "weight": 4
     }
-  ]
+   ],
+   "slots": {
+    "screen": [
+     19,
+     38,
+     46,
+     40
+    ]
+   }
+  }
+ ]
 }

@@ -3,6 +3,9 @@ title: "Introducing Levni: illustrations from a JSON scene"
 description: "Levni is an open-source engine that turns a short JSON scene into a hand-inked, riso-printed illustration. Built for agents and publishers, with zero cost per image."
 date: 2026-11-22
 og: /og/introducing-levni.png
+category: stories
+kind: Story
+coverAlt: "An illustration drawn by Levni for its launch post"
 ---
 
 Every article needs a picture, and most publishers solve that the same way: a stock photo nobody remembers, or an image model that draws something different every time. [Ortak Alan](https://ortakalan.io) tried both. Then we wrote an engine instead.

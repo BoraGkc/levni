@@ -1,0 +1,49 @@
+{
+ "name": "map-2",
+ "category": "places",
+ "tags": [
+  "map 2"
+ ],
+ "variants": [
+  {
+   "note": "map 2, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M91.3 87.1 a12.6 12.6 0 1 0 -17.8 0 c1.8 1.8 4.7 4.4 8.9 7.9 c4.4 -3.7 7.4 -6.4 8.9 -7.9",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 77.3 l-12.6 -6.3 l-25.2 12.6 v-54.6 l25.2 -12.6 l25.2 12.6 l25.2 -12.6 v31.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 16.4 v54.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62.6 29 v23.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M88.3 84.1 a12.6 12.6 0 1 0 -17.8 0 c1.8 1.8 4.7 4.4 8.9 7.9 c4.4 -3.7 7.4 -6.4 8.9 -7.9",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M79.4 75.2 v0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

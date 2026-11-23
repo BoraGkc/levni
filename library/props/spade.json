@@ -1,5 +1,6 @@
 {
   "name": "spade",
+  "category": "home",
   "tags": [
     "kürek",
     "spade",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/gentle-monster-kum/kapak-v2.json",
+      "note": "small spade shovel lying diagonally, yellow blade", "from": "harvested from .cache/cizim-drafts/gentle-monster-kum/kapak-v2.json",
       "paths": [
         {
           "d": "M18 20 L82 80",

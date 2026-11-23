@@ -1,0 +1,37 @@
+{
+ "name": "road-sign",
+ "category": "places",
+ "tags": [
+  "road sign"
+ ],
+ "variants": [
+  {
+   "note": "road sign, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M59.1 13.5 l33.4 33.4 a8.6 8.6 0 0 1 0 12.1 l-33.4 33.4 a8.6 8.6 0 0 1 -12.1 0 l-33.4 -33.4 a8.6 8.6 0 0 1 0 -12.1 l33.4 -33.4 a8.6 8.6 0 0 1 12.1 0",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M56.1 10.5 l33.4 33.4 a8.6 8.6 0 0 1 0 12.1 l-33.4 33.4 a8.6 8.6 0 0 1 -12.1 0 l-33.4 -33.4 a8.6 8.6 0 0 1 0 -12.1 l33.4 -33.4 a8.6 8.6 0 0 1 12.1 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37.4 58.4 v-8.4 c0 -2.5 1.7 -4.2 4.2 -4.2 h21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M54.2 37.4 l8.4 8.4 l-8.4 8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

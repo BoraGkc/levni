@@ -1,5 +1,6 @@
 {
   "name": "chip-pin-book",
+  "category": "books",
   "tags": [
     "kitap",
     "cip",
@@ -12,7 +13,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/kitap-yayinciligi-yapay/kapak.json",
+      "note": "coral spiral-bound book with blue chip label and pin, front view", "from": "harvested from .cache/cizim-drafts/kitap-yayinciligi-yapay/kapak.json",
       "paths": [
         {
           "d": "M4,20 L16,20 M4,34 L16,34 M4,48 L16,48 M4,62 L16,62 M4,76 L16,76 M84,20 L96,20 M84,34 L96,34 M84,48 L96,48 M84,62 L96,62 M84,76 L96,76",

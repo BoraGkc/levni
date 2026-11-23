@@ -1,0 +1,49 @@
+{
+ "name": "podium",
+ "category": "sport",
+ "tags": [
+  "podium"
+ ],
+ "variants": [
+  {
+   "note": "podium, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M23.6 36.2 h58.8 l-2.6 10.4 a8.4 8.4 0 0 1 -8.1 6.4 h-37.3 a8.4 8.4 0 0 1 -8.1 -6.4 l-2.6 -10.4",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M20.6 33.2 h58.8 l-2.6 10.4 a8.4 8.4 0 0 1 -8.1 6.4 h-37.3 a8.4 8.4 0 0 1 -8.1 -6.4 l-2.6 -10.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 33.2 v-8.4 a12.6 12.6 0 0 1 12.6 -12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33.2 50 l4.2 37.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 50 l-4.2 37.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 87.8 h42",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "name": "pixel-playlist",
+ "category": "music",
+ "tags": [
+  "playlist",
+  "pixel playlist",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "playlist, regular pixel icon",
+   "paths": [
+    {
+     "d": "M53 63.5h14v7h-14Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 25.5h42v7h-42ZM64 25.5h21v14h-21ZM15 39.5h42v7h-42ZM64 39.5h7v14h-7ZM15 53.5h21v7h-21ZM43 53.5h28v7h-28ZM43 60.5h7v7h-7ZM64 60.5h7v7h-7ZM15 67.5h21v7h-21ZM43 67.5h28v7h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "playlist, thin pixel icon",
+   "paths": [
+    {
+     "d": "M74 32h10.5v7h-10.5ZM49.5 60h21v14h-21Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M67.5 25.5h17.5v3.5h-17.5ZM15 29h45.5v3.5h-45.5ZM67.5 29h3.5v7h-3.5ZM81.5 29h3.5v7h-3.5ZM67.5 36h17.5v3.5h-17.5ZM15 39.5h45.5v3.5h-45.5ZM67.5 39.5h3.5v14h-3.5ZM15 50h21v3.5h-21ZM46.5 53.5h24.5v3.5h-24.5ZM15 60.5h21v3.5h-21ZM43 57h3.5v14h-3.5ZM67.5 57h3.5v14h-3.5ZM15 71h21v3.5h-21ZM46.5 71h21v3.5h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "playlist, solid pixel icon",
+   "paths": [
+    {
+     "d": "M19 29.5h42v7h-42ZM68 29.5h21v14h-21ZM19 43.5h42v7h-42ZM68 43.5h7v14h-7ZM19 57.5h21v7h-21ZM47 57.5h28v21h-28ZM19 71.5h21v7h-21Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 25.5h42v7h-42ZM64 25.5h21v14h-21ZM15 39.5h42v7h-42ZM64 39.5h7v14h-7ZM15 53.5h21v7h-21ZM43 53.5h28v21h-28ZM15 67.5h21v7h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "playlist, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M19 33h45.5v3.5h-45.5ZM71.5 29.5h17.5v14h-17.5ZM19 43.5h45.5v3.5h-45.5ZM71.5 43.5h3.5v14h-3.5ZM19 54h21v3.5h-21ZM50.5 57.5h24.5v3.5h-24.5ZM19 64.5h21v3.5h-21ZM47 61h28v14h-28ZM19 75h21v3.5h-21ZM50.5 75h21v3.5h-21Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 29h45.5v3.5h-45.5ZM67.5 25.5h17.5v14h-17.5ZM15 39.5h45.5v3.5h-45.5ZM67.5 39.5h3.5v14h-3.5ZM15 50h21v3.5h-21ZM46.5 53.5h24.5v3.5h-24.5ZM15 60.5h21v3.5h-21ZM43 57h28v14h-28ZM15 71h21v3.5h-21ZM46.5 71h21v3.5h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

@@ -1,5 +1,6 @@
 {
   "name": "pulcinella-question",
+  "category": "stage",
   "tags": [
     "pulcinella maske",
     "soru işareti",
@@ -9,7 +10,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/camille-henrot-sanat/ici-1.json",
+      "note": "mask face with orange headband, blue eyes and orange question mark nose", "from": "harvested from .cache/cizim-drafts/camille-henrot-sanat/ici-1.json",
       "paths": [
         {
           "d": "M50 6 Q86 6 86 44 Q86 72 66 84 Q50 92 34 84 Q14 72 14 44 Q14 6 50 6Z",

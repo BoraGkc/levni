@@ -1,5 +1,6 @@
 {
   "name": "quill-compass",
+  "category": "books",
   "tags": [
     "pusula",
     "tüy kalem",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/shakespearein-hayati-degistire/kapak.json",
+      "note": "round compass with orange and blue needle, thin ticks", "from": "harvested from .cache/cizim-drafts/shakespearein-hayati-degistire/kapak.json",
       "paths": [
         {
           "d": "M50 4 a46 46 0 1 0 0.1 0 Z",

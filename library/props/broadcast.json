@@ -1,0 +1,37 @@
+{
+ "name": "broadcast",
+ "category": "tech",
+ "tags": [
+  "broadcast"
+ ],
+ "variants": [
+  {
+   "note": "broadcast, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M48.8 57.2 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M76.7 80.9 a37.8 37.8 0 1 0 -53.5 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M64.9 69.1 a21 21 0 1 0 -29.7 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M45.8 54.2 a4.2 4.2 0 1 0 8.4 0 a4.2 4.2 0 1 0 -8.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

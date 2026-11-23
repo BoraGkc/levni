@@ -1,0 +1,32 @@
+{
+ "name": "currency-lira",
+ "category": "money",
+ "tags": [
+  "currency lira"
+ ],
+ "variants": [
+  {
+   "note": "currency lira, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M41.6 20.6 v63 a29.4 29.4 0 0 0 29.4 -29.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24.8 62.6 l33.6 -16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58.4 29 l-33.6 16.8",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

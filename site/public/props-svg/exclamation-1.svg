@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="520" viewBox="340 76 520 520">
+<defs>
+  <filter id="crayon" filterUnits="userSpaceOnUse" x="0" y="0" width="1200" height="673" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="3" result="wobble"/>
+    <feDisplacementMap in="SourceGraphic" in2="wobble" scale="5" xChannelSelector="R" yChannelSelector="G" result="w1"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="2" seed="10" result="tooth"/>
+    <feDisplacementMap in="w1" in2="tooth" scale="3.2" xChannelSelector="R" yChannelSelector="G" result="w2"/>
+    <feTurbulence type="fractalNoise" baseFrequency="1.1 0.8" numOctaves="2" seed="16" result="grain"/>
+    <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.0 2.3" result="speckle"/>
+    <feComposite in="w2" in2="speckle" operator="in" result="inked"/>
+    <!-- ink mottle: faint horizontal streaks where the drum laid down a little less ink, as on a riso print -->
+    <feTurbulence type="fractalNoise" baseFrequency="0.003 0.035" numOctaves="2" seed="34" result="mot"/>
+    <feColorMatrix in="mot" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.55 0 0 0 0.74" result="mota"/>
+    <feComposite in="inked" in2="mota" operator="in"/>
+  </filter>
+  <filter id="paper" filterUnits="userSpaceOnUse" x="0" y="0" width="1200" height="673">
+    <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="24" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.42  0 0 0 0 0.36  0 0 0 0.06 0"/>
+  </filter></defs>
+<rect width="1200" height="673" fill="#F4F2EC"/>
+<rect width="1200" height="673" filter="url(#paper)"/>
+<g filter="url(#crayon)">
+<g transform="translate(370 106) scale(4.6)"><path d="M43 15Q53 11 63 15Q61 43 58 65Q53 69 48 65Q45 41 43 15Z" fill="#F2C230" transform="translate(-0.03 -0.44)"/><path d="M40 12 Q50 8 60 12 Q58 40 55 62 Q50 66 45 62 Q42 38 40 12 Z" fill="#F4F2EC"/><path d="M58,35.2L57.3,37.4L57,39.5L56.7,41.7L56.5,43.8L56.2,45.9L56,48L55.7,50L55.4,52.1L55.1,54.1L54.9,56L54.6,58L54.3,60L54.2,61.5L52.9,62.3L51.4,62.9L50,63.1L48.6,62.9L47.1,62.3L45.8,61.5L45.6,59.8L45.3,57.7L45,55.6L44.8,53.5L44.5,51.4L44.2,49.3L44,47.1L43.7,45L43.5,42.8L43.3,40.7L43.1,38.5L42.9,36.3L42.7,34.2L42.5,32L42.3,29.8L42.1,27.6L41.9,25.4L41.7,23.1L41.6,20.9L41.4,18.7L41.2,16.4L41,14.2L40.8,11.9L40.3,12.8L42.2,12.1L44.2,11.5L46.1,11.1L48.1,10.9L50,10.8L51.9,10.8L53.9,11.1L55.8,11.5L57.8,12L59.3,12.4L59.1,14.4L58.9,16.8L58.7,19.1L58.5,21.5L58.3,23.8L58.1,26.1L57.9,28.4L57.7,30.7L57.5,32.9L57.3,35L57.3,37.4L57.3,40L57.2,41.3L57.5,41.4L58.5,40.2L58.8,37.5L58.8,35.1L59.1,33.1L59.3,30.8L59.5,28.6L59.7,26.3L59.9,24L60.1,21.6L60.3,19.3L60.4,16.9L60.6,14.5L60.7,11.6L58.2,10.6L56.2,10L54.1,9.6L52.1,9.3L50,9.2L47.9,9.3L45.9,9.5L43.8,9.9L41.8,10.5L39.7,11.2L39.2,12.1L39.3,14.3L39.5,16.6L39.7,18.8L39.9,21.1L40.1,23.3L40.3,25.5L40.5,27.7L40.7,29.9L41,32.1L41.2,34.3L41.4,36.5L41.7,38.7L41.9,40.8L42.1,43L42.3,45.1L42.6,47.3L42.8,49.4L43,51.6L43.2,53.7L43.4,55.8L43.7,57.9L43.9,60L44.2,62.5L46.2,63.9L48.1,64.7L50,64.9L51.9,64.7L53.8,63.9L55.8,62.5L56.2,60.2L56.4,58.2L56.7,56.3L56.9,54.3L57.1,52.3L57.3,50.2L57.5,48.1L57.7,46.1L57.9,43.9L58.1,41.8L58.3,39.6L58.4,37.5L58.2,35.2Z" fill="#0A3FB0"/><path d="M46 85Q46 78 53 78Q60 78 60 85Q60 92 53 92Q46 92 46 85Z" fill="#F2C230" transform="translate(-0.03 -0.44)"/><path d="M55.6,77.3L55.9,78.8L56.2,80.3L56.2,82L56,83.7L55.6,85.1L54.9,86.1L54.1,86.9L53,87.4L51.7,87.8L50,88L48.3,87.9L46.9,87.6L45.8,87L45,86.2L44.4,85.1L44.1,83.7L43.9,81.9L43.9,82.1L44,80.3L44.4,78.9L44.9,77.8L45.7,76.9L46.8,76.2L48.2,75.8L50,75.6L51.8,75.7L53.2,76.2L54.3,76.7L54.9,78.1L56.6,78.8L56.7,78.7L55.9,77.3L55.2,75.9L53.7,75L52,74.5L50,74.4L48,74.5L46.3,75L44.9,75.7L43.7,76.8L42.8,78.3L42.2,80L42.1,81.9L42.1,82.1L42.2,84L42.7,85.8L43.6,87.3L44.7,88.4L46.2,89.3L48,89.8L50,90L52,89.9L53.8,89.4L55.3,88.6L56.5,87.3L57.3,85.8L57.7,84L57.8,82L57.5,80L57,78.4L55.8,77.2Z" fill="#0A3FB0"/></g>
+</g>
+</svg>

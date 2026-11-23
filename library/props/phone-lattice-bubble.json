@@ -1,5 +1,6 @@
 {
   "name": "phone-lattice-bubble",
+  "category": "tech",
   "tags": [
     "telefon",
     "kafes",
@@ -11,7 +12,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/musluman-manosfer-kadinlari/kapak.json",
+      "note": "phone with blue lattice screen lines, front view", "from": "harvested from .cache/cizim-drafts/musluman-manosfer-kadinlari/kapak.json",
       "paths": [
         {
           "d": "M30 2 H70 Q76 2 76 8 V92 Q76 98 70 98 H30 Q24 98 24 92 V8 Q24 2 30 2Z",

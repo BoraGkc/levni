@@ -1,11 +1,12 @@
 {
   "name": "leaf-sewn",
+  "category": "home",
   "tags": [
     "yaprak dikis iplik el emegi"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/wildwood-stop-motion/ici-1.json",
+      "note": "single green leaf with orange stitches, side view", "from": "harvested from .cache/cizim-drafts/wildwood-stop-motion/ici-1.json",
       "paths": [
         {
           "d": "M8 86 Q4 30 62 8 Q96 52 44 90 Q22 96 8 86 Z",

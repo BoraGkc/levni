@@ -1,0 +1,61 @@
+{
+ "name": "pixel-corner-down-left",
+ "category": "symbols",
+ "tags": [
+  "corner down left",
+  "pixel corner down left",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "corner down left, regular pixel icon",
+   "paths": [
+    {
+     "d": "M36 43h7v7h-7ZM71 22h7v35h-7ZM29 50h7v7h-7ZM22 57h56v7h-56ZM29 64h7v7h-7ZM36 71h7v7h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "corner down left, thin pixel icon",
+   "paths": [
+    {
+     "d": "M39.5 39.5h3.5v3.5h-3.5ZM36 43h3.5v3.5h-3.5ZM32.5 46.5h3.5v3.5h-3.5ZM29 50h3.5v3.5h-3.5ZM74.5 22h3.5v35h-3.5ZM25.5 53.5h3.5v3.5h-3.5ZM22 57h56v3.5h-56ZM25.5 60.5h3.5v3.5h-3.5ZM29 64h3.5v3.5h-3.5ZM32.5 67.5h3.5v3.5h-3.5ZM36 71h3.5v3.5h-3.5ZM39.5 74.5h3.5v3.5h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "corner down left, solid pixel icon",
+   "paths": [
+    {
+     "d": "M40 47h7v7h-7ZM75 26h7v35h-7ZM33 54h14v7h-14ZM26 61h56v7h-56ZM33 68h14v7h-14ZM40 75h7v7h-7Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M36 43h7v7h-7ZM71 22h7v35h-7ZM29 50h14v7h-14ZM22 57h56v7h-56ZM29 64h14v7h-14ZM36 71h7v7h-7Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "corner down left, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M43.5 43.5h3.5v3.5h-3.5ZM40 47h7v3.5h-7ZM36.5 50.5h10.5v3.5h-10.5ZM33 54h14v3.5h-14ZM78.5 26h3.5v35h-3.5ZM29.5 57.5h17.5v3.5h-17.5ZM26 61h56v3.5h-56ZM29.5 64.5h17.5v3.5h-17.5ZM33 68h14v3.5h-14ZM36.5 71.5h10.5v3.5h-10.5ZM40 75h7v3.5h-7ZM43.5 78.5h3.5v3.5h-3.5Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M39.5 39.5h3.5v3.5h-3.5ZM36 43h7v3.5h-7ZM32.5 46.5h10.5v3.5h-10.5ZM29 50h14v3.5h-14ZM74.5 22h3.5v35h-3.5ZM25.5 53.5h17.5v3.5h-17.5ZM22 57h56v3.5h-56ZM25.5 60.5h17.5v3.5h-17.5ZM29 64h14v3.5h-14ZM32.5 67.5h10.5v3.5h-10.5ZM36 71h7v3.5h-7ZM39.5 74.5h3.5v3.5h-3.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

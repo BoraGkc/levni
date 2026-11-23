@@ -1,5 +1,6 @@
 {
   "name": "drop-head-note",
+  "category": "music",
   "tags": [
     "nota",
     "damla",
@@ -12,7 +13,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/kyle-gordon-parodi/ici-2.json",
+      "note": "coral water drop with a white stem and flag like a music note", "from": "harvested from .cache/cizim-drafts/kyle-gordon-parodi/ici-2.json",
       "paths": [
         {
           "d": "M4,97 a46,9 0 1,0 92,0 a46,9 0 1,0 -92,0",

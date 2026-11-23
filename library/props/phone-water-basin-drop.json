@@ -1,5 +1,6 @@
 {
   "name": "phone-water-basin-drop",
+  "category": "tech",
   "tags": [
     "telefon",
     "su",
@@ -12,7 +13,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/naza-belgeseli-gazze/ici-2.json",
+      "note": "phone with blue water basin and a drop on screen", "from": "harvested from .cache/cizim-drafts/naza-belgeseli-gazze/ici-2.json",
       "paths": [
         {
           "d": "M30 2 H70 Q76 2 76 8 V92 Q76 98 70 98 H30 Q24 98 24 92 V8 Q24 2 30 2Z",

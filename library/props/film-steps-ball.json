@@ -1,12 +1,13 @@
 {
   "name": "film-steps-ball",
+  "category": "film",
   "tags": [
     "rocky merdiveni film seridi basamak top",
     "rocky steps film strip ball"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/la-bola-negra/ici-2-alt.json",
+      "note": "ascending steps of film strip blocks with a film reel ball on top", "from": "harvested from .cache/cizim-drafts/la-bola-negra/ici-2-alt.json",
       "paths": [
         {
           "d": "M4 86 L21.5 86 L21.5 98 L4 98 Z",

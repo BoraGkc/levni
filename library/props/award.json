@@ -1,0 +1,37 @@
+{
+ "name": "award",
+ "category": "money",
+ "tags": [
+  "award"
+ ],
+ "variants": [
+  {
+   "note": "award, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M27.8 40.4 a25.2 25.2 0 1 0 50.4 0 a25.2 25.2 0 1 0 -50.4 0",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M24.8 37.4 a25.2 25.2 0 1 0 50.4 0 a25.2 25.2 0 1 0 -50.4 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 62.6 l14.3 24.7 l6.7 -13.6 l15.1 1 l-14.3 -24.7",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M28.2 50 l-14.3 24.7 l15.1 -1 l6.7 13.6 l14.3 -24.7",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

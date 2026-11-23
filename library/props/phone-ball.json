@@ -1,12 +1,13 @@
 {
   "name": "phone-ball",
+  "category": "tech",
   "tags": [
     "telefon futbol topu",
     "phone soccer ball"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/maddie-kowalski-burnerverse/kapak-alt.json",
+      "note": "blue tablet with a soccer ball on screen", "from": "harvested from .cache/cizim-drafts/maddie-kowalski-burnerverse/kapak-alt.json",
       "paths": [
         {
           "d": "M20 4 H80 Q92 4 92 16 V84 Q92 96 80 96 H20 Q8 96 8 84 V16 Q8 4 20 4Z",

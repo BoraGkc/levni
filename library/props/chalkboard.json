@@ -1,0 +1,31 @@
+{
+ "name": "chalkboard",
+ "category": "books",
+ "tags": [
+  "chalkboard"
+ ],
+ "variants": [
+  {
+   "note": "chalkboard, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M48.8 74 a4.2 4.2 0 0 1 4.2 -4.2 h16.8 a4.2 4.2 0 0 1 4.2 4.2 v4.2 a4.2 4.2 0 0 1 -4.2 4.2 h-16.8 a4.2 4.2 0 0 1 -4.2 -4.2 l0 -4.2",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M33.2 79.4 h-12.6 a8.4 8.4 0 0 1 -8.4 -8.4 v-42 a8.4 8.4 0 0 1 8.4 -8.4 h58.8 a8.4 8.4 0 0 1 8.4 8.4 v46.2 a4.2 4.2 0 0 1 -4.2 4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M45.8 71 a4.2 4.2 0 0 1 4.2 -4.2 h16.8 a4.2 4.2 0 0 1 4.2 4.2 v4.2 a4.2 4.2 0 0 1 -4.2 4.2 h-16.8 a4.2 4.2 0 0 1 -4.2 -4.2 l0 -4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

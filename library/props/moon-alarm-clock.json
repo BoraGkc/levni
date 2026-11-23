@@ -1,5 +1,6 @@
 {
   "name": "moon-alarm-clock",
+  "category": "home",
   "tags": [
     "çalar saat",
     "hilal",
@@ -10,7 +11,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/chris-rock-affetme/ici-2-alt2.json",
+      "note": "blue alarm clock with orange bells and crescent moon face", "from": "harvested from .cache/cizim-drafts/chris-rock-affetme/ici-2-alt2.json",
       "paths": [
         {
           "d": "M24 22 Q10 8 22 4 Q34 4 38 18Z M76 22 Q90 8 78 4 Q66 4 62 18Z",

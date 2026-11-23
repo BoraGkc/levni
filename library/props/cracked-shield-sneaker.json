@@ -1,5 +1,6 @@
 {
   "name": "cracked-shield-sneaker",
+  "category": "money",
   "tags": [
     "catlak kalkan ayakkabi",
     "itibar riski",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/sosyal-medya-isbirliklerinde/ici-2.json",
+      "note": "blue shield with a coral crack and a sneaker inside", "from": "harvested from .cache/cizim-drafts/sosyal-medya-isbirliklerinde/ici-2.json",
       "paths": [
         {
           "d": "M12 10 L88 10 L88 52 Q88 80 50 98 Q12 80 12 52 Z",

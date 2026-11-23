@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="520" viewBox="340 76 520 520">
+<defs>
+  <filter id="crayon" filterUnits="userSpaceOnUse" x="0" y="0" width="1200" height="673" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="3" result="wobble"/>
+    <feDisplacementMap in="SourceGraphic" in2="wobble" scale="5" xChannelSelector="R" yChannelSelector="G" result="w1"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="2" seed="10" result="tooth"/>
+    <feDisplacementMap in="w1" in2="tooth" scale="3.2" xChannelSelector="R" yChannelSelector="G" result="w2"/>
+    <feTurbulence type="fractalNoise" baseFrequency="1.1 0.8" numOctaves="2" seed="16" result="grain"/>
+    <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.0 2.3" result="speckle"/>
+    <feComposite in="w2" in2="speckle" operator="in" result="inked"/>
+    <!-- ink mottle: faint horizontal streaks where the drum laid down a little less ink, as on a riso print -->
+    <feTurbulence type="fractalNoise" baseFrequency="0.003 0.035" numOctaves="2" seed="34" result="mot"/>
+    <feColorMatrix in="mot" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.55 0 0 0 0.74" result="mota"/>
+    <feComposite in="inked" in2="mota" operator="in"/>
+  </filter>
+  <filter id="paper" filterUnits="userSpaceOnUse" x="0" y="0" width="1200" height="673">
+    <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="24" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.42  0 0 0 0 0.36  0 0 0 0.06 0"/>
+  </filter></defs>
+<rect width="1200" height="673" fill="#F4F2EC"/>
+<rect width="1200" height="673" filter="url(#paper)"/>
+<g filter="url(#crayon)">
+<g transform="translate(370 106) scale(4.6)"><path d="M21.5 32h56v10.5h-56ZM81 46h3.5v14h-3.5ZM21.5 42.5h10.5v21h-10.5ZM35.5 42.5h7v21h-7ZM46 42.5h7v21h-7ZM56.5 42.5h7v21h-7ZM67 42.5h10.5v21h-10.5ZM21.5 63.5h56v10.5h-56Z" fill="#F2603F" transform="translate(0.13 -0.60)"/><path d="M18.5 25.5h56v3.5h-56ZM74.5 29h3.5v10.5h-3.5ZM74.5 39.5h10.5v3.5h-10.5ZM74.5 43h3.5v14h-3.5ZM81.5 43h3.5v14h-3.5ZM29 39.5h3.5v21h-3.5ZM39.5 39.5h3.5v21h-3.5ZM50 39.5h3.5v21h-3.5ZM60.5 39.5h3.5v21h-3.5ZM74.5 57h10.5v3.5h-10.5ZM15 29h3.5v42h-3.5ZM74.5 60.5h3.5v10.5h-3.5ZM18.5 71h56v3.5h-56Z" fill="#0A3FB0"/></g>
+</g>
+</svg>

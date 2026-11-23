@@ -1,11 +1,12 @@
 {
   "name": "mini-papyon",
+  "category": "home",
   "tags": [
     "papyon"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/robert-pattinson-james/ici-2-r0.json",
+      "note": "blue bow tie, flat front view", "from": "harvested from .cache/cizim-drafts/robert-pattinson-james/ici-2-r0.json",
       "paths": [
         {
           "d": "M44 50 L8 30 L8 70 Z",

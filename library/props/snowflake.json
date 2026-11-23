@@ -1,0 +1,32 @@
+{
+ "name": "snowflake",
+ "category": "nature",
+ "tags": [
+  "snowflake",
+  "kar tanesi",
+  "snow",
+  "kar",
+  "winter",
+  "kış",
+  "ice",
+  "buz",
+  "crystal"
+ ],
+ "variants": [
+  {
+   "note": "Six-armed blue snowflake with a small chevron on every arm.",
+   "paths": [
+    {
+     "d": "M50 50 L88 50 M50 50 L69 82.9 M50 50 L31 82.9 M50 50 L12 50 M50 50 L31 17.1 M50 50 L69 17.1",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M74 50 L80.8 41.4 M74 50 L80.8 58.6 M62 70.8 L72.9 72.4 M62 70.8 L58 81 M38 70.8 L42 81 M38 70.8 L27.1 72.4 M26 50 L19.2 58.6 M26 50 L19.2 41.4 M38 29.2 L27.1 27.6 M38 29.2 L42 19 M62 29.2 L58 19 M62 29.2 L72.9 27.6",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

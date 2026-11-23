@@ -1,5 +1,6 @@
 {
   "name": "padlock-clapper-film-shackle",
+  "category": "film",
   "tags": [
     "kilit",
     "klaket",
@@ -12,7 +13,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/musk-belgeseli-dort/ici-1-alt.json",
+      "note": "padlock with clapperboard stripes shackle, blue keyhole body", "from": "harvested from .cache/cizim-drafts/musk-belgeseli-dort/ici-1-alt.json",
       "paths": [
         {
           "d": "M32 48 V28 Q32 4 50 4 Q68 4 68 28 V48",

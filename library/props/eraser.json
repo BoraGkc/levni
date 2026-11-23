@@ -1,0 +1,26 @@
+{
+ "name": "eraser",
+ "category": "books",
+ "tags": [
+  "eraser"
+ ],
+ "variants": [
+  {
+   "note": "eraser, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M79.4 83.6 h-44.1 l-17.7 -18.1 a4.2 4.2 0 0 1 0 -5.9 l42 -42 a4.2 4.2 0 0 1 5.9 0 l21 21 a4.2 4.2 0 0 1 0 5.9 l-38.6 39.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M75.2 55.5 l-26.5 -26.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

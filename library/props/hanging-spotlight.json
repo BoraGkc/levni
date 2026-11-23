@@ -1,5 +1,6 @@
 {
   "name": "hanging-spotlight",
+  "category": "stage",
   "tags": [
     "spot ışığı",
     "sahne",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/tom-hanks-broadway/kapak.json",
+      "note": "orange lampshade hanging as a spotlight with small flame wick", "from": "harvested from .cache/cizim-drafts/tom-hanks-broadway/kapak.json",
       "paths": [
         {
           "d": "M50 6 L50 20",

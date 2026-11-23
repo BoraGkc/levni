@@ -1,5 +1,6 @@
 {
   "name": "camera-drone",
+  "category": "film",
   "tags": [
     "drone kamera",
     "film",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/bu-haftanin-yeni/ici-2.json",
+      "note": "quadcopter drone with four rotors and a coral camera, blue outline", "from": "harvested from .cache/cizim-drafts/bu-haftanin-yeni/ici-2.json",
       "paths": [
         {
           "d": "M50 52 L10 14",

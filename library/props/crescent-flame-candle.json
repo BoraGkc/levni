@@ -1,5 +1,6 @@
 {
   "name": "crescent-flame-candle",
+  "category": "home",
   "tags": [
     "mum",
     "alev",
@@ -14,7 +15,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1-v4.json",
+      "note": "paint-can-like candle with a coral crescent moon as the flame", "from": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1-v4.json",
       "paths": [
         {
           "d": "M32,46 L68,46 L68,92 Q50,98 32,92 Z",

@@ -1,5 +1,6 @@
 {
   "name": "snowflake-key",
+  "category": "nature",
   "tags": [
     "anahtar",
     "kar tanesi",
@@ -12,7 +13,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/korku-filmleri-halloween/ici-1.json",
+      "note": "key with a snowflake gear head, orange teeth", "from": "harvested from .cache/cizim-drafts/korku-filmleri-halloween/ici-1.json",
       "paths": [
         {
           "d": "M46,47 L98,48 L98,53 L46,53 Z",

@@ -1,5 +1,6 @@
 {
   "name": "clock-mic",
+  "category": "music",
   "tags": [
     "mikrofon",
     "saat",
@@ -9,7 +10,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/saturday-night-live/kapak.json",
+      "note": "white wall clock face on a microphone-like stand, blue hands", "from": "harvested from .cache/cizim-drafts/saturday-night-live/kapak.json",
       "paths": [
         {
           "d": "M46 62 V96 M30 96 H70",

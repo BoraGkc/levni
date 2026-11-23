@@ -1,0 +1,32 @@
+{
+ "name": "flask",
+ "category": "health",
+ "tags": [
+  "flask"
+ ],
+ "variants": [
+  {
+   "note": "flask, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M37.4 12.2 l25.2 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 37.4 l16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 12.2 v25.2 l-16.8 46.2 a2.9 2.9 0 0 0 2.1 4.2 h46.2 a2.9 2.9 0 0 0 2.1 -4.2 l-16.8 -46.2 v-25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

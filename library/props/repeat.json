@@ -1,0 +1,26 @@
+{
+ "name": "repeat",
+ "category": "symbols",
+ "tags": [
+  "repeat"
+ ],
+ "variants": [
+  {
+   "note": "repeat, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M16.4 50 v-12.6 a12.6 12.6 0 0 1 12.6 -12.6 h54.6 m-12.6 -12.6 l12.6 12.6 l-12.6 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M83.6 50 v12.6 a12.6 12.6 0 0 1 -12.6 12.6 h-54.6 m12.6 12.6 l-12.6 -12.6 l12.6 -12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{ "seed": 3, "clip": [60,52,1080,569], "elements": [
+ {"type":"panel","x":60,"y":52,"w":1080,"h":569,"color":"paper","outline":true},
+ {"type":"prop","name":"battery","variant":3,"x":220,"y":220,"size":200},
+ {"type":"prop","name":"battery","variant":4,"x":470,"y":220,"size":200},
+ {"type":"prop","name":"battery","variant":0,"x":720,"y":220,"size":200},
+ {"type":"prop","name":"battery","variant":5,"x":970,"y":220,"size":200},
+ {"type":"label","text":"EMPTY","x":220,"y":330,"size":18,"anchor":"middle"},
+ {"type":"label","text":"LOW","x":470,"y":330,"size":18,"anchor":"middle"},
+ {"type":"label","text":"TWO BARS","x":720,"y":330,"size":18,"anchor":"middle"},
+ {"type":"label","text":"FULL","x":970,"y":330,"size":18,"anchor":"middle"},
+ {"type":"prop","name":"wifi","variant":3,"x":330,"y":480,"size":200},
+ {"type":"prop","name":"wifi","variant":4,"x":600,"y":480,"size":200},
+ {"type":"prop","name":"wifi","variant":0,"x":870,"y":480,"size":200},
+ {"type":"label","text":"WEAK","x":330,"y":585,"size":18,"anchor":"middle"},
+ {"type":"label","text":"MEDIUM","x":600,"y":585,"size":18,"anchor":"middle"},
+ {"type":"label","text":"STRONG","x":870,"y":585,"size":18,"anchor":"middle"}
+]}

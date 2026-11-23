@@ -1,0 +1,49 @@
+{
+ "name": "tooth",
+ "category": "health",
+ "tags": [
+  "diş",
+  "tooth",
+  "dentist",
+  "diş hekimi",
+  "oral",
+  "ağız",
+  "teeth",
+  "sağlık"
+ ],
+ "variants": [
+  {
+   "note": "clean white tooth with a shine line",
+   "paths": [
+    {
+     "d": "M30 20 Q40 14 50 20 Q60 14 70 20 Q82 28 76 50 Q72 66 70 84 Q68 92 62 90 Q56 88 54 70 Q52 62 50 62 Q48 62 46 70 Q44 88 38 90 Q32 92 30 84 Q28 66 24 50 Q18 28 30 20 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M32 30 Q30 38 32 46",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "note": "tone tooth with a mustard sparkle",
+   "paths": [
+    {
+     "d": "M26 24 Q36 18 46 24 Q56 18 66 24 Q78 32 72 52 Q68 68 66 86 Q64 94 58 92 Q52 90 50 72 Q48 66 46 72 Q42 90 36 92 Q30 94 28 86 Q26 68 22 52 Q16 32 26 24 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M82 8 Q82 15 89 17 Q82 19 82 26 Q82 19 75 17 Q82 15 82 8 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

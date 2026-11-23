@@ -1,5 +1,6 @@
 {
   "name": "question-cable",
+  "category": "music",
   "tags": [
     "soru işareti",
     "mikrofon kablosu",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/kadinlar-teknolojide-gucu/ici-2-r0.json",
+      "note": "very faint outlined large question mark with small orange dot", "from": "harvested from .cache/cizim-drafts/kadinlar-teknolojide-gucu/ici-2-r0.json",
       "paths": [
         {
           "d": "M20 34 Q20 6 50 6 Q80 6 80 32 Q80 52 50 60 Q44 62 44 74",

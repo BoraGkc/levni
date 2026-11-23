@@ -1,0 +1,54 @@
+{
+ "name": "eyeglass",
+ "category": "home",
+ "tags": [
+  "eyeglass"
+ ],
+ "variants": [
+  {
+   "note": "eyeglass, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M90.8 71.9 a14.7 14.7 0 0 1 -29.4 0 v-10.5 h29.4 v10.5",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M44.6 71.9 a14.7 14.7 0 0 1 -29.4 0 v-10.5 h29.4 v10.5",
+     "fill": "paper",
+     "stroke": "none"
+    },
+    {
+     "d": "M33.2 16.4 h-8.4 l-12.6 42",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66.8 16.4 h8.4 l12.6 42",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 66.8 l16.8 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.8 68.9 a14.7 14.7 0 0 1 -29.4 0 v-10.5 h29.4 v10.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 68.9 a14.7 14.7 0 0 1 -29.4 0 v-10.5 h29.4 v10.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

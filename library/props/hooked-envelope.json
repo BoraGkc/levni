@@ -1,5 +1,6 @@
 {
   "name": "hooked-envelope",
+  "category": "books",
   "tags": [
     "envelope",
     "fish hook",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/parti-daveti-phishing/kapak.json",
+      "note": "blue envelope with orange flap, hooked shape, front view", "from": "harvested from .cache/cizim-drafts/parti-daveti-phishing/kapak.json",
       "paths": [
         {
           "d": "M8,30 H92 V76 H8 Z",

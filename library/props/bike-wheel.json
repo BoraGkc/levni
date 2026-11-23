@@ -1,12 +1,13 @@
 {
   "name": "bike-wheel",
+  "category": "sport",
   "tags": [
     "bisiklet tekerleği",
     "bicycle wheel"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/barbara-barrie-oyuncu/ici-2-r0.json",
+      "note": "blue bicycle wheel with thin spokes and a thick tire, side view", "from": "harvested from .cache/cizim-drafts/barbara-barrie-oyuncu/ici-2-r0.json",
       "paths": [
         {
           "d": "M50 4 Q96 4 96 50 Q96 96 50 96 Q4 96 4 50 Q4 4 50 4 Z",

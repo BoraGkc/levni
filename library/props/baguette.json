@@ -1,0 +1,43 @@
+{
+ "name": "baguette",
+ "category": "food",
+ "tags": [
+  "baguette"
+ ],
+ "variants": [
+  {
+   "note": "baguette, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M26.2 50 l23.7 -23.7 c11.2 -11.2 24.9 -15.7 36.4 -5.1 l0.8 0.8 a12.5 12.5 0 0 1 0 17.8 l-47.4 47.4 a12.6 12.6 0 0 1 -17.2 0.6 l-0.6 -0.6 c-11.5 -11.4 -7.2 -25.7 4.3 -37.1",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M23.2 47 l23.7 -23.7 c11.2 -11.2 24.9 -15.7 36.4 -5.1 l0.8 0.8 a12.5 12.5 0 0 1 0 17.8 l-47.4 47.4 a12.6 12.6 0 0 1 -17.2 0.6 l-0.6 -0.6 c-11.5 -11.4 -7.2 -25.7 4.3 -37.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M39.5 31.1 l6.3 14.7",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M26.9 43.7 l6.3 14.7",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M52.1 18.5 l6.3 14.7",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,5 +1,6 @@
 {
   "name": "wrench",
+  "category": "home",
   "tags": [
     "anahtar",
     "İngiliz anahtarı",
@@ -9,7 +10,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/charioteer-oyunu-antikapital/ici-2.json",
+      "note": "orange wrench, upright, blue outline", "from": "harvested from .cache/cizim-drafts/charioteer-oyunu-antikapital/ici-2.json",
       "paths": [
         {
           "d": "M44 90 L44 40 Q28 36 28 20 Q28 10 36 6 L36 20 L44 22 L52 20 L52 6 Q60 10 60 20 Q60 36 52 40 L52 90 Q52 96 48 96 Q44 96 44 90 Z",

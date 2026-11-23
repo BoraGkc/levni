@@ -1,5 +1,6 @@
 {
   "name": "door-rocket-keyhole",
+  "category": "home",
   "tags": [
     "kapı",
     "anahtar deliği",
@@ -11,7 +12,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/musk-belgeseli-dort/ici-1.json",
+      "note": "arched white door with a coral drop shaped keyhole, rocket motif", "from": "harvested from .cache/cizim-drafts/musk-belgeseli-dort/ici-1.json",
       "paths": [
         {
           "d": "M22 100 L22 32 Q22 2 50 2 Q78 2 78 32 L78 100 Z",

@@ -1,5 +1,6 @@
 {
   "name": "big-pillow",
+  "category": "home",
   "tags": [
     "yastık",
     "pillow",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/chris-rock-affetme/ici-2.json",
+      "note": "large plump white pillow, blue outline, one small crease line", "from": "harvested from .cache/cizim-drafts/chris-rock-affetme/ici-2.json",
       "paths": [
         {
           "d": "M2 30 Q50 12 98 30 Q104 52 98 78 Q50 94 2 78 Q-4 52 2 30Z",

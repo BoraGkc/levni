@@ -1,0 +1,71 @@
+{
+ "name": "pixel-notes-multiple",
+ "category": "books",
+ "tags": [
+  "notes multiple",
+  "pixel notes multiple",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "notes multiple, regular pixel icon",
+   "paths": [
+    {
+     "d": "M35.5 18h49v7h-49ZM35.5 25h7v7h-7ZM77.5 25h7v7h-7ZM35.5 32h49v7h-49ZM35.5 39h7v7h-7ZM77.5 39h7v7h-7ZM35.5 46h49v7h-49ZM35.5 53h7v7h-7ZM67 53h17.5v7h-17.5ZM35.5 60h49v14h-49Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M25.5 8h63v7h-63ZM39.5 22h35v7h-35ZM39.5 36h35v7h-35ZM39.5 50h24.5v7h-24.5ZM25.5 15h7v56h-7ZM81.5 15h7v56h-7ZM25.5 71h63v7h-63ZM11.5 22h7v63h-7ZM11.5 85h63v7h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "notes multiple, thin pixel icon",
+   "paths": [
+    {
+     "d": "M35.5 18h49v10.5h-49ZM35.5 28.5h10.5v3.5h-10.5ZM74 28.5h10.5v3.5h-10.5ZM35.5 32h49v3.5h-49ZM35.5 35.5h10.5v3.5h-10.5ZM74 35.5h10.5v3.5h-10.5ZM35.5 39h49v3.5h-49ZM35.5 42.5h10.5v3.5h-10.5ZM60 42.5h24.5v3.5h-24.5ZM35.5 46h49v3.5h-49ZM35.5 49.5h10.5v3.5h-10.5ZM60 49.5h24.5v3.5h-24.5ZM35.5 53h49v21h-49Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M29 11.5h56v3.5h-56ZM43 25.5h28v3.5h-28ZM43 32.5h28v3.5h-28ZM43 39.5h14v3.5h-14ZM43 46.5h14v3.5h-14ZM29 15h3.5v56h-3.5ZM81.5 15h3.5v56h-3.5ZM29 71h56v3.5h-56ZM22 18.5h3.5v59.5h-3.5ZM22 78h56v3.5h-56ZM15 25.5h3.5v59.5h-3.5ZM15 85h56v3.5h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "notes multiple, solid pixel icon",
+   "paths": [
+    {
+     "d": "M29.5 12h63v14h-63ZM29.5 26h14v7h-14ZM78.5 26h14v7h-14ZM29.5 33h63v7h-63ZM29.5 40h14v7h-14ZM78.5 40h14v7h-14ZM29.5 47h63v7h-63ZM29.5 54h14v7h-14ZM68 54h24.5v7h-24.5ZM29.5 61h63v21h-63ZM15.5 26h7v63h-7ZM15.5 89h63v7h-63Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M25.5 8h63v14h-63ZM25.5 22h14v7h-14ZM74.5 22h14v7h-14ZM25.5 29h63v7h-63ZM25.5 36h14v7h-14ZM74.5 36h14v7h-14ZM25.5 43h63v7h-63ZM25.5 50h14v7h-14ZM64 50h24.5v7h-24.5ZM25.5 57h63v21h-63ZM11.5 22h7v63h-7ZM11.5 85h63v7h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "notes multiple, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M33 15.5h56v14h-56ZM33 29.5h14v3.5h-14ZM75 29.5h14v3.5h-14ZM33 33h56v3.5h-56ZM33 36.5h14v3.5h-14ZM75 36.5h14v3.5h-14ZM33 40h56v3.5h-56ZM33 43.5h14v3.5h-14ZM61 43.5h28v3.5h-28ZM33 47h56v3.5h-56ZM33 50.5h14v3.5h-14ZM61 50.5h28v3.5h-28ZM33 54h56v24.5h-56ZM26 22.5h3.5v59.5h-3.5ZM26 82h56v3.5h-56ZM19 29.5h3.5v59.5h-3.5ZM19 89h56v3.5h-56Z",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M29 11.5h56v14h-56ZM29 25.5h14v3.5h-14ZM71 25.5h14v3.5h-14ZM29 29h56v3.5h-56ZM29 32.5h14v3.5h-14ZM71 32.5h14v3.5h-14ZM29 36h56v3.5h-56ZM29 39.5h14v3.5h-14ZM57 39.5h28v3.5h-28ZM29 43h56v3.5h-56ZM29 46.5h14v3.5h-14ZM57 46.5h28v3.5h-28ZM29 50h56v24.5h-56ZM22 18.5h3.5v59.5h-3.5ZM22 78h56v3.5h-56ZM15 25.5h3.5v59.5h-3.5ZM15 85h56v3.5h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "name": "swords",
+ "category": "sport",
+ "tags": [
+  "swords"
+ ],
+ "variants": [
+  {
+   "note": "swords, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M90.8 15.2 v21 l-46.2 37.8 l-16.8 16.8 l-12.6 -12.6 l16.8 -16.8 l37.8 -46.2 l21 0",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M87.8 12.2 v21 l-46.2 37.8 l-16.8 16.8 l-12.6 -12.6 l16.8 -16.8 l37.8 -46.2 l21 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20.6 54.2 l25.2 25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M59.7 72.3 l15.5 15.5 l12.6 -12.6 l-14.1 -14.1",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M41.6 22.7 l-8.4 -10.5 h-21 v21 l12.6 10.5",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

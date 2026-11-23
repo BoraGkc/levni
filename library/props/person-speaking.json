@@ -1,0 +1,81 @@
+{
+ "name": "person-speaking",
+ "category": "stage",
+ "tags": [
+  "person",
+  "speaker",
+  "speaking",
+  "lectern",
+  "podium",
+  "talk",
+  "presentation",
+  "konuşmacı",
+  "kürsü",
+  "sunum",
+  "konuşma",
+  "insan"
+ ],
+ "variants": [
+  {
+   "note": "front view, speaker behind a small lectern, one arm raised, coral shirt",
+   "paths": [
+    {
+     "d": "M45 29 L55 29 Q62 29 62 36 L62 56 Q62 63 55 63 L45 63 Q38 63 38 56 L38 36 Q38 29 45 29 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M39 36 L34 52",
+     "stroke": "ink",
+     "weight": 11
+    },
+    {
+     "d": "M39 36 L34 52",
+     "stroke": "coral",
+     "weight": 6
+    },
+    {
+     "d": "M61 35 L72 24 L74 13",
+     "stroke": "ink",
+     "weight": 11
+    },
+    {
+     "d": "M61 35 L72 24 L74 13",
+     "stroke": "coral",
+     "weight": 6
+    },
+    {
+     "d": "M41 18 a9 9 0 1,0 18 0 a9 9 0 1,0 -18 0 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M30 58 L70 58 L66 90 L34 90 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M29 55 L71 55 Q73 55 73 57 L73 59 Q73 61 71 61 L29 61 Q27 61 27 59 L27 57 Q27 55 29 55 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M30.4 52 a3.6 3.6 0 1,0 7.2 0 a3.6 3.6 0 1,0 -7.2 0 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M70.4 12 a3.6 3.6 0 1,0 7.2 0 a3.6 3.6 0 1,0 -7.2 0 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

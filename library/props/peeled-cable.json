@@ -1,5 +1,6 @@
 {
   "name": "peeled-cable",
+  "category": "tech",
   "tags": [
     "soyulmuş kablo",
     "bakır",
@@ -9,7 +10,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/bakir-tel-soyarak/kapak.json",
+      "note": "peeled cable end with orange wires fanning out", "from": "harvested from .cache/cizim-drafts/bakir-tel-soyarak/kapak.json",
       "paths": [
         {
           "d": "M44 50 Q64 30 96 28",

@@ -1,5 +1,6 @@
 {
   "name": "film-reel-rocket",
+  "category": "film",
   "tags": [
     "roket",
     "film makarası",
@@ -10,7 +11,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/musk-belgeseli-dort/kapak.json",
+      "note": "rocket with a film reel as its body, coral fins and blue outline", "from": "harvested from .cache/cizim-drafts/musk-belgeseli-dort/kapak.json",
       "paths": [
         {
           "d": "M42 68 L58 68 L58 100 L42 100 Z",

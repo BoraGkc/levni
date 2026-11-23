@@ -1,0 +1,114 @@
+{
+ "name": "airplane",
+ "category": "places",
+ "tags": [
+  "uçak",
+  "airplane",
+  "plane",
+  "aircraft",
+  "seyahat",
+  "travel",
+  "flight",
+  "uçuş"
+ ],
+ "variants": [
+  {
+   "note": "side view jet, nose right, coral tail fin",
+   "paths": [
+    {
+     "d": "M10 46 L8 24 L26 24 L34 44 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M44 58 L66 58 L48 84 L34 84 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M10 50 Q10 44 20 44 L74 44 Q92 44 92 54 Q92 60 80 60 L22 60 Q10 60 10 50 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M76 46 L86 47 L88 51 L76 51 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M30 52 h.1",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M40 52 h.1",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 52 h.1",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M60 52 h.1",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "side view, tone-coral body with a mustard tail",
+   "paths": [
+    {
+     "d": "M10 46 L8 22 L26 22 L34 44 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M44 58 L66 58 L48 84 L34 84 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M10 50 Q10 44 20 44 L74 44 Q92 44 92 54 Q92 60 80 60 L22 60 Q10 60 10 50 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M76 46 L86 47 L88 51 L76 51 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M30 52 h.1",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M40 52 h.1",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 52 h.1",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M60 52 h.1",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

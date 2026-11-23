@@ -1,0 +1,31 @@
+{
+ "name": "building-castle",
+ "category": "places",
+ "tags": [
+  "building castle"
+ ],
+ "variants": [
+  {
+   "note": "building castle, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M65.6 82.4 v-8.4 a12.6 12.6 0 0 0 -25.2 0 v8.4 a4.2 4.2 0 0 1 -4.2 4.2 h-16.8 a4.2 4.2 0 0 1 -4.2 -4.2 v-58.8 h16.8 v12.6 h12.6 v-12.6 h16.8 v12.6 h12.6 v-12.6 h16.8 v58.8 a4.2 4.2 0 0 1 -4.2 4.2 h-16.8 a4.2 4.2 0 0 1 -4.2 -4.2",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M62.6 79.4 v-8.4 a12.6 12.6 0 0 0 -25.2 0 v8.4 a4.2 4.2 0 0 1 -4.2 4.2 h-16.8 a4.2 4.2 0 0 1 -4.2 -4.2 v-58.8 h16.8 v12.6 h12.6 v-12.6 h16.8 v12.6 h12.6 v-12.6 h16.8 v58.8 a4.2 4.2 0 0 1 -4.2 4.2 h-16.8 a4.2 4.2 0 0 1 -4.2 -4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 45.8 l75.6 0",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,5 +1,6 @@
 {
   "name": "stage-in-broken-heart",
+  "category": "stage",
   "tags": [
     "kalp",
     "çatlak",
@@ -12,7 +13,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/off-broadway-kacirilmayacak/ici-1.json",
+      "note": "orange broken heart with a stage curtain opening in the crack", "from": "harvested from .cache/cizim-drafts/off-broadway-kacirilmayacak/ici-1.json",
       "paths": [
         {
           "d": "M50 24 C44 12 32 6 22 8 C8 11 2 26 6 40 C12 62 34 78 50 94 C66 78 88 62 94 40 C98 26 92 11 78 8 C68 6 56 12 50 24 Z",

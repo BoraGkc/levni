@@ -1,49 +1,58 @@
 {
-  "name": "curtain-tv",
-  "tags": [
-    "television",
-    "curtain",
-    "vintage"
-  ],
-  "variants": [
+ "name": "curtain-tv",
+ "category": "tv",
+ "tags": [
+  "television",
+  "curtain",
+  "vintage"
+ ],
+ "variants": [
+  {
+   "note": "vintage blue television front view, stripe-curtain screen and two dials",
+   "from": "harvested from .cache/cizim-drafts/peppino-mazzullo-topo/ici-2.json",
+   "paths": [
     {
-      "slots": { "screen": [18, 33, 48, 49] },
-      "note": "harvested from .cache/cizim-drafts/peppino-mazzullo-topo/ici-2.json",
-      "paths": [
-        {
-          "d": "M50,24 L28,4 M50,24 L72,4",
-          "stroke": "paper",
-          "weight": 3
-        },
-        {
-          "d": "M8,24 H92 V92 H8 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 4
-        },
-        {
-          "d": "M16,32 H66 V84 H16 Z",
-          "fill": "blue",
-          "stroke": "ink",
-          "weight": 3
-        },
-        {
-          "d": "M16,32 Q26,50 22,84 M30,32 Q36,56 34,84 M44,32 Q50,56 48,84 M58,32 Q62,56 60,84 M66,32 V84",
-          "stroke": "paper",
-          "weight": 2
-        },
-        {
-          "d": "M74,44 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0M74,64 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 2.5
-        },
-        {
-          "d": "M18,92 V98 M82,92 V98",
-          "stroke": "ink",
-          "weight": 4
-        }
-      ]
+     "d": "M50,24 L28,4 M50,24 L72,4",
+     "stroke": "paper",
+     "weight": 3
+    },
+    {
+     "d": "M8,24 H92 V92 H8 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M16,32 H66 V84 H16 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M16,32 Q26,50 22,84 M30,32 Q36,56 34,84 M44,32 Q50,56 48,84 M58,32 Q62,56 60,84 M66,32 V84",
+     "stroke": "paper",
+     "weight": 2
+    },
+    {
+     "d": "M74,44 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0M74,64 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 2.5
+    },
+    {
+     "d": "M18,92 V98 M82,92 V98",
+     "stroke": "ink",
+     "weight": 4
     }
-  ]
+   ],
+   "slots": {
+    "screen": [
+     18,
+     33,
+     48,
+     49
+    ]
+   }
+  }
+ ]
 }

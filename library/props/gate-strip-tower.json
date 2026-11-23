@@ -1,12 +1,13 @@
 {
   "name": "gate-strip-tower",
+  "category": "film",
   "tags": [
     "köprü kulesi film şeridi",
     "bridge tower film strip"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/san-francisco-sinemasi/kapak.json",
+      "note": "film strip towers with ladder rungs forming a bridge gate, orange studs", "from": "harvested from .cache/cizim-drafts/san-francisco-sinemasi/kapak.json",
       "paths": [
         {
           "d": "M16 4 H30 V100 H16Z",

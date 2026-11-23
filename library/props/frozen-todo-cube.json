@@ -1,5 +1,6 @@
 {
   "name": "frozen-todo-cube",
+  "category": "books",
   "tags": [
     "buz kupu",
     "yapilacaklar listesi",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/mfoniso-udofia-creation/kapak.json",
+      "note": "blue checklist cube with ticks, torn by an orange zigzag crack", "from": "harvested from .cache/cizim-drafts/mfoniso-udofia-creation/kapak.json",
       "paths": [
         {
           "d": "M14 14 L86 14 L86 86 L14 86 Z",

@@ -1,0 +1,37 @@
+{
+ "name": "submarine",
+ "category": "places",
+ "tags": [
+  "submarine"
+ ],
+ "variants": [
+  {
+   "note": "submarine, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 48.8 v25.2 h8.4 l4.2 -6.3 l12.6 6.3 h42 a12.6 12.6 0 0 0 0 -25.2 h-42 l-12.6 6.3 l-4.2 -6.3 h-8.4",
+     "fill": "tone-mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 45.8 v25.2 h8.4 l4.2 -6.3 l12.6 6.3 h42 a12.6 12.6 0 0 0 0 -25.2 h-42 l-12.6 6.3 l-4.2 -6.3 h-8.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M71 45.8 l-4.2 -12.6 h-21 l-4.2 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M54.2 33.2 v-8.4 a4.2 4.2 0 0 1 4.2 -4.2 h4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,5 +1,6 @@
 {
   "name": "phone",
+  "category": "tech",
   "tags": ["telefon", "smartphone", "mobile", "cep telefonu"],
   "variants": [
     { "slots": { "screen": [37, 20, 26, 56] }, "note": "front, screen with two text bars", "paths": [

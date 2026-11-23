@@ -1,0 +1,25 @@
+{
+ "name": "filter",
+ "category": "symbols",
+ "tags": [
+  "filter"
+ ],
+ "variants": [
+  {
+   "note": "filter, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M19.4 19.4 h67.2 v9.1 a8.4 8.4 0 0 1 -2.5 5.9 l-18.5 18.5 v29.4 l-25.2 8.4 v-35.7 l-18.8 -20.7 a8.4 8.4 0 0 1 -2.2 -5.6 v-9.4",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M16.4 16.4 h67.2 v9.1 a8.4 8.4 0 0 1 -2.5 5.9 l-18.5 18.5 v29.4 l-25.2 8.4 v-35.7 l-18.8 -20.7 a8.4 8.4 0 0 1 -2.2 -5.6 v-9.4",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

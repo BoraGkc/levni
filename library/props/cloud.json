@@ -1,0 +1,32 @@
+{
+ "name": "cloud",
+ "category": "nature",
+ "tags": [
+  "cloud",
+  "bulut",
+  "weather",
+  "hava durumu",
+  "sky",
+  "gökyüzü",
+  "cloudy",
+  "bulutlu"
+ ],
+ "variants": [
+  {
+   "note": "Puffy paper cloud with a flat base and one inner curve.",
+   "paths": [
+    {
+     "d": "M24 74 Q8 74 8 60 Q8 48 22 46 Q22 28 40 28 Q50 16 64 28 Q72 22 80 32 Q92 36 92 56 Q92 74 76 74 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M26 62 Q34 58 42 62",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

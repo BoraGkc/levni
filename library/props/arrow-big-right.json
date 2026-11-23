@@ -1,0 +1,25 @@
+{
+ "name": "arrow-big-right",
+ "category": "symbols",
+ "tags": [
+  "arrow big right"
+ ],
+ "variants": [
+  {
+   "note": "arrow big right, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M19.4 40.4 h33.6 v-15.1 a4.2 4.2 0 0 1 7.2 -3 l27.7 27.7 a4.2 4.2 0 0 1 0 5.9 l-27.7 27.7 a4.2 4.2 0 0 1 -7.2 -3 v-15.1 h-33.6 a4.2 4.2 0 0 1 -4.2 -4.2 v-16.8 a4.2 4.2 0 0 1 4.2 -4.2",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M16.4 37.4 h33.6 v-15.1 a4.2 4.2 0 0 1 7.2 -3 l27.7 27.7 a4.2 4.2 0 0 1 0 5.9 l-27.7 27.7 a4.2 4.2 0 0 1 -7.2 -3 v-15.1 h-33.6 a4.2 4.2 0 0 1 -4.2 -4.2 v-16.8 a4.2 4.2 0 0 1 4.2 -4.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

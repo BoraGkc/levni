@@ -1,5 +1,6 @@
 {
   "name": "clapper-roof-haunted-house",
+  "category": "film",
   "tags": [
     "perili ev",
     "klaket",
@@ -11,7 +12,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/korku-filmleri-halloween/kapak-alt.json",
+      "note": "coral-roofed haunted house with clapperboard stripes as a tilted roof, blue", "from": "harvested from .cache/cizim-drafts/korku-filmleri-halloween/kapak-alt.json",
       "paths": [
         {
           "d": "M26,44 L74,44 L74,96 L26,96 Z",

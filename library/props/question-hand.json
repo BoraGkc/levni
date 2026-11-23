@@ -1,12 +1,13 @@
 {
   "name": "question-hand",
+  "category": "symbols",
   "tags": [
     "el kaldıran soru işareti",
     "raised hand question mark"
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/silikon-vadisi-hala/ici-1-r1.json",
+      "note": "open blue hand, palm out, orange question mark on palm", "from": "harvested from .cache/cizim-drafts/silikon-vadisi-hala/ici-1-r1.json",
       "paths": [
         {
           "d": "M26 60 V23.5 a5.5 5.5 0 0 1 11 0 V60Z",

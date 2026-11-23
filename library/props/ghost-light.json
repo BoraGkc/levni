@@ -1,5 +1,6 @@
 {
   "name": "ghost-light",
+  "category": "stage",
   "tags": [
     "hayalet ışık",
     "sahne ışığı",
@@ -11,7 +12,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/barbara-barrie-oyuncu/kapak-bulb.json",
+      "note": "bulb-topped ghost light on a tripod stand, thin blue pole", "from": "harvested from .cache/cizim-drafts/barbara-barrie-oyuncu/kapak-bulb.json",
       "paths": [
         {
           "d": "M50 20 L50 86 M34 96 L50 86 L66 96 M40 98 L60 98",
@@ -38,7 +39,7 @@
       ]
     },
     {
-      "note": "harvested from .cache/cizim-drafts/patti-lupone-full/ici-1-r0.json",
+      "note": "orange basketball floating above a thin faint pole", "from": "harvested from .cache/cizim-drafts/patti-lupone-full/ici-1-r0.json",
       "paths": [
         {
           "d": "M50,40 V90 M32,96 L50,86 L68,96",

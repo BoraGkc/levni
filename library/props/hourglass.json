@@ -1,45 +1,137 @@
 {
-  "name": "hourglass",
-  "tags": [
-    "kum saati",
-    "zaman",
-    "hourglass",
-    "time"
-  ],
-  "variants": [
+ "name": "hourglass",
+ "category": "symbols",
+ "tags": [
+  "kum saati",
+  "zaman",
+  "hourglass",
+  "time"
+ ],
+ "variants": [
+  {
+   "note": "hourglass with yellow sand, blue frame, classic", "from": "harvested from .cache/cizim-drafts/gentle-monster-kum/kapak.json",
+   "paths": [
     {
-      "note": "harvested from .cache/cizim-drafts/gentle-monster-kum/kapak.json",
-      "paths": [
-        {
-          "d": "M18 6 H82 M18 94 H82",
-          "stroke": "ink",
-          "weight": 5,
-          "fill": "none"
-        },
-        {
-          "d": "M26 8 L26 22 Q26 38 46 50 Q26 62 26 78 L26 92 H74 L74 78 Q74 62 54 50 Q74 38 74 22 L74 8 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 3.5
-        },
-        {
-          "d": "M31 22 Q34 34 46 44 H54 Q66 34 69 22 Z",
-          "fill": "mustard",
-          "stroke": "none"
-        },
-        {
-          "d": "M30 91 Q50 62 70 91 Z",
-          "fill": "mustard",
-          "stroke": "ink",
-          "weight": 2.5
-        },
-        {
-          "d": "M50 48 V70",
-          "stroke": "mustard",
-          "weight": 3,
-          "fill": "none"
-        }
-      ]
+     "d": "M18 6 H82 M18 94 H82",
+     "stroke": "ink",
+     "weight": 5,
+     "fill": "none"
+    },
+    {
+     "d": "M26 8 L26 22 Q26 38 46 50 Q26 62 26 78 L26 92 H74 L74 78 Q74 62 54 50 Q74 38 74 22 L74 8 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 3.5
+    },
+    {
+     "d": "M31 22 Q34 34 46 44 H54 Q66 34 69 22 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M30 91 Q50 62 70 91 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 2.5
+    },
+    {
+     "d": "M50 48 V70",
+     "stroke": "mustard",
+     "weight": 3,
+     "fill": "none"
     }
-  ]
+   ]
+  },
+  {
+   "note": "hourglass, full top: all sand in the upper bulb, time just started",
+   "paths": [
+    {
+     "d": "M18 6 H82 M18 94 H82",
+     "stroke": "ink",
+     "weight": 5,
+     "fill": "none"
+    },
+    {
+     "d": "M26 8 L26 22 Q26 38 46 50 Q26 62 26 78 L26 92 H74 L74 78 Q74 62 54 50 Q74 38 74 22 L74 8 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 3.5
+    },
+    {
+     "d": "M30 12 L70 12 L69 22 Q66 34 54 44 H46 Q34 34 31 22 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M42 91 Q50 85 58 91 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 2.5
+    },
+    {
+     "d": "M50 48 V82",
+     "stroke": "mustard",
+     "weight": 3,
+     "fill": "none"
+    }
+   ]
+  },
+  {
+   "note": "hourglass, half: sand split between the two bulbs",
+   "paths": [
+    {
+     "d": "M18 6 H82 M18 94 H82",
+     "stroke": "ink",
+     "weight": 5,
+     "fill": "none"
+    },
+    {
+     "d": "M26 8 L26 22 Q26 38 46 50 Q26 62 26 78 L26 92 H74 L74 78 Q74 62 54 50 Q74 38 74 22 L74 8 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 3.5
+    },
+    {
+     "d": "M31 22 Q33 31 40 38 L60 38 Q67 31 69 22 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M32 91 Q50 70 68 91 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 2.5
+    },
+    {
+     "d": "M50 48 V76",
+     "stroke": "mustard",
+     "weight": 3,
+     "fill": "none"
+    }
+   ]
+  },
+  {
+   "note": "hourglass, empty top: all sand fallen, time's up",
+   "paths": [
+    {
+     "d": "M18 6 H82 M18 94 H82",
+     "stroke": "ink",
+     "weight": 5,
+     "fill": "none"
+    },
+    {
+     "d": "M26 8 L26 22 Q26 38 46 50 Q26 62 26 78 L26 92 H74 L74 78 Q74 62 54 50 Q74 38 74 22 L74 8 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 3.5
+    },
+    {
+     "d": "M29 91 Q50 58 71 91 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 2.5
+    }
+   ]
+  }
+ ]
 }

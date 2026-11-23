@@ -21,7 +21,8 @@
     ".": "./src/index.mjs",
     "./props": "./src/props.mjs",
     "./critic": "./src/critic.mjs",
-    "./judge": "./src/judge/index.mjs"
+    "./judge": "./src/judge/index.mjs",
+    "./mcp": "./src/mcp.mjs"
   },
   "bin": {
     "levni": "./bin/levni.mjs"

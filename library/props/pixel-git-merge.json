@@ -1,0 +1,71 @@
+{
+ "name": "pixel-git-merge",
+ "category": "symbols",
+ "tags": [
+  "git merge",
+  "pixel git merge",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "git merge, regular pixel icon",
+   "paths": [
+    {
+     "d": "M25 25h14v14h-14ZM67 67h14v14h-14Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 15h28v7h-28ZM15 22h7v14h-7ZM36 22h7v14h-7ZM15 36h28v7h-28ZM43 43h7v7h-7ZM50 50h7v7h-7ZM57 57h28v7h-28ZM57 64h7v14h-7ZM78 64h7v14h-7ZM25.5 43h7v42h-7ZM57 78h28v7h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "git merge, thin pixel icon",
+   "paths": [
+    {
+     "d": "M21.5 21.5h17.5v17.5h-17.5ZM67 67h17.5v17.5h-17.5Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 15h17.5v3.5h-17.5ZM15 18.5h3.5v17.5h-3.5ZM36 18.5h3.5v17.5h-3.5ZM18.5 36h17.5v3.5h-17.5ZM39.5 39.5h3.5v3.5h-3.5ZM43 43h3.5v3.5h-3.5ZM46.5 46.5h3.5v3.5h-3.5ZM50 50h3.5v3.5h-3.5ZM53.5 53.5h3.5v3.5h-3.5ZM57 57h3.5v3.5h-3.5ZM64 60.5h17.5v3.5h-17.5ZM60.5 64h3.5v17.5h-3.5ZM81.5 64h3.5v17.5h-3.5ZM25.5 43h3.5v42h-3.5ZM64 81.5h17.5v3.5h-17.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "git merge, solid pixel icon",
+   "paths": [
+    {
+     "d": "M19 19h28v28h-28ZM47 47h7v7h-7ZM54 54h7v7h-7ZM29.5 47h7v42h-7ZM61 61h28v28h-28Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 15h28v28h-28ZM43 43h7v7h-7ZM50 50h7v7h-7ZM25.5 43h7v42h-7ZM57 57h28v28h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "git merge, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M22.5 19h17.5v3.5h-17.5ZM19 22.5h24.5v17.5h-24.5ZM22.5 40h17.5v3.5h-17.5ZM43.5 43.5h3.5v3.5h-3.5ZM47 47h3.5v3.5h-3.5ZM50.5 50.5h3.5v3.5h-3.5ZM54 54h3.5v3.5h-3.5ZM57.5 57.5h3.5v3.5h-3.5ZM61 61h3.5v3.5h-3.5ZM68 64.5h17.5v3.5h-17.5ZM64.5 68h24.5v17.5h-24.5ZM29.5 47h3.5v42h-3.5ZM68 85.5h17.5v3.5h-17.5Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 15h17.5v3.5h-17.5ZM15 18.5h24.5v17.5h-24.5ZM18.5 36h17.5v3.5h-17.5ZM39.5 39.5h3.5v3.5h-3.5ZM43 43h3.5v3.5h-3.5ZM46.5 46.5h3.5v3.5h-3.5ZM50 50h3.5v3.5h-3.5ZM53.5 53.5h3.5v3.5h-3.5ZM57 57h3.5v3.5h-3.5ZM64 60.5h17.5v3.5h-17.5ZM60.5 64h24.5v17.5h-24.5ZM25.5 43h3.5v42h-3.5ZM64 81.5h17.5v3.5h-17.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

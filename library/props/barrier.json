@@ -1,5 +1,6 @@
 {
   "name": "barrier",
+  "category": "places",
   "tags": [
     "bariyer",
     "kapı kolu",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-compose/orman/ici-2.json",
+      "note": "barrier gate arm striped red and white, blue post, raised at angle", "from": "harvested from .cache/cizim-compose/orman/ici-2.json",
       "paths": [
         {
           "d": "M12 96 L12 52 L28 52 L28 96 Z",

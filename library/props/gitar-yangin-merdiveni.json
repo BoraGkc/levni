@@ -1,5 +1,6 @@
 {
   "name": "gitar-yangin-merdiveni",
+  "category": "music",
   "tags": [
     "gitar",
     "yangın merdiveni",
@@ -9,7 +10,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/rent-broadway-efsanesinin/ici-1.json",
+      "note": "blue acoustic guitar with a yellow plus sound hole, upright", "from": "harvested from .cache/cizim-drafts/rent-broadway-efsanesinin/ici-1.json",
       "paths": [
         {
           "d": "M44 2 L56 2 L56 8 L44 8 Z",

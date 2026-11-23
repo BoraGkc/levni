@@ -1,0 +1,61 @@
+{
+ "name": "pie-chart",
+ "category": "money",
+ "tags": [
+  "pasta grafik",
+  "pasta dilimi",
+  "grafik",
+  "pie chart",
+  "chart",
+  "statistics",
+  "istatistik"
+ ],
+ "variants": [
+  {
+   "note": "circle with a coral slice pulled out",
+   "paths": [
+    {
+     "d": "M46 54 L80 54 A34 34 0 1 1 46 20 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M46 54 L22 78",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M54 46 L54 12 A34 34 0 0 1 88 46 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "three-slice pie, mustard quarter and coral slice pulled out",
+   "paths": [
+    {
+     "d": "M46 54 L46 88 A34 34 0 0 1 12 54 A34 34 0 0 1 46 20 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M46 54 L80 54 A34 34 0 0 1 46 88 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M54 46 L54 12 A34 34 0 0 1 88 46 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

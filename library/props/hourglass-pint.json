@@ -1,5 +1,6 @@
 {
   "name": "hourglass-pint",
+  "category": "food",
   "tags": [
     "bira bardağı",
     "kum saati",
@@ -9,7 +10,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/bud-light-boykotculari/kapak.json",
+      "note": "hourglass topped with beer foam, yellow sand, pint glass shape", "from": "harvested from .cache/cizim-drafts/bud-light-boykotculari/kapak.json",
       "paths": [
         {
           "d": "M22 10 H78 Q72 38 56 50 Q72 62 78 92 H22 Q28 62 44 50 Q28 38 22 10Z",

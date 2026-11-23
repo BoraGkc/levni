@@ -1,0 +1,91 @@
+{
+ "name": "bridge",
+ "category": "places",
+ "tags": [
+  "köprü",
+  "bridge",
+  "suspension",
+  "asma köprü",
+  "istanbul",
+  "boğaz",
+  "travel",
+  "yol"
+ ],
+ "variants": [
+  {
+   "note": "suspension bridge, coral towers, hanger cables, water",
+   "paths": [
+    {
+     "d": "M8 78 L92 78 L92 90 L8 90 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M12 84 Q20 80 28 84 Q36 88 44 84 Q52 80 60 84 Q68 88 76 84 Q84 80 90 84",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M8 62 Q20 50 28 26 M72 26 Q80 50 92 62",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M28 26 Q50 70 72 26",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M38 41 L38 66 M44 46 L44 66 M50 48 L50 66 M56 46 L56 66 M62 41 L62 66",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M24 22 L32 22 L32 78 L24 78 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M68 22 L76 22 L76 78 L68 78 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M6 66 L94 66 L94 72 L6 72 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  },
+  {
+   "note": "old stone arch bridge with railing over water",
+   "paths": [
+    {
+     "d": "M8 78 L92 78 L92 90 L8 90 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M12 84 Q20 80 28 84 Q36 88 44 84 Q52 80 60 84 Q68 88 76 84 Q84 80 90 84",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M8 46 L92 46 L92 76 L8 76 Z M16 76 L16 62 Q26 50 36 62 L36 76 Z M42 76 L42 62 Q52 50 62 62 L62 76 Z M68 76 L68 62 Q78 50 88 62 L88 76 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 8,
+     "rule": "evenodd"
+    },
+    {
+     "d": "M8 36 L92 36 M16 36 L16 46 M34 36 L34 46 M50 36 L50 46 M66 36 L66 46 M84 36 L84 46",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

@@ -1,5 +1,6 @@
 {
   "name": "bone-bandage",
+  "category": "nature",
   "tags": [
     "kemik",
     "yara bandi",
@@ -12,7 +13,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/kopegi-zor-sahiplenmek/kapak.json",
+      "note": "blue-outlined dog bone with a bandage patch in the middle", "from": "harvested from .cache/cizim-drafts/kopegi-zor-sahiplenmek/kapak.json",
       "paths": [
         {
           "d": "M18,38 L82,38 L82,62 L18,62 Z",

@@ -1,0 +1,18 @@
+{ "seed": 9, "clip": [60,52,1080,569], "elements": [
+ {"type":"panel","x":60,"y":52,"w":1080,"h":569,"color":"paper","outline":true},
+ {"type":"prop","name":"film-camera","x":200,"y":170,"size":170},
+ {"type":"prop","name":"radio","x":400,"y":170,"size":170},
+ {"type":"prop","name":"theater-curtain","x":600,"y":170,"size":170},
+ {"type":"prop","name":"guitar","x":800,"y":170,"size":170},
+ {"type":"prop","name":"book","x":1000,"y":170,"size":170},
+ {"type":"prop","name":"gear","x":200,"y":340,"size":170},
+ {"type":"prop","name":"bank","x":400,"y":340,"size":170},
+ {"type":"prop","name":"scales","x":600,"y":340,"size":170},
+ {"type":"prop","name":"trophy","x":800,"y":340,"size":170},
+ {"type":"prop","name":"house","x":1000,"y":340,"size":170},
+ {"type":"prop","name":"apple","x":200,"y":510,"size":170},
+ {"type":"prop","name":"fir-tree","x":400,"y":510,"size":170},
+ {"type":"prop","name":"bridge","x":600,"y":510,"size":170},
+ {"type":"prop","name":"stethoscope","x":800,"y":510,"size":170},
+ {"type":"prop","name":"clock","x":1000,"y":510,"size":170}
+]}

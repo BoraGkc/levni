@@ -1,0 +1,61 @@
+{
+ "name": "pixel-redo",
+ "category": "symbols",
+ "tags": [
+  "redo",
+  "pixel redo",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "redo, regular pixel icon",
+   "paths": [
+    {
+     "d": "M57 22h7v7h-7ZM64 29h7v7h-7ZM29 36h49v7h-49ZM64 43h7v7h-7ZM57 50h7v7h-7ZM22 43h7v28h-7ZM29 71h21v7h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "redo, thin pixel icon",
+   "paths": [
+    {
+     "d": "M57 18.5h3.5v3.5h-3.5ZM60.5 22h3.5v3.5h-3.5ZM64 25.5h3.5v3.5h-3.5ZM67.5 29h3.5v3.5h-3.5ZM71 32.5h3.5v3.5h-3.5ZM29 36h49v3.5h-49ZM25.5 39.5h3.5v3.5h-3.5ZM71 39.5h3.5v3.5h-3.5ZM67.5 43h3.5v3.5h-3.5ZM64 46.5h3.5v3.5h-3.5ZM60.5 50h3.5v3.5h-3.5ZM57 53.5h3.5v3.5h-3.5ZM22 43h3.5v31.5h-3.5ZM25.5 74.5h3.5v3.5h-3.5ZM29 78h21v3.5h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "redo, solid pixel icon",
+   "paths": [
+    {
+     "d": "M61 26h7v7h-7ZM61 33h14v7h-14ZM33 40h49v7h-49ZM61 47h14v7h-14ZM61 54h7v7h-7ZM26 47h7v28h-7ZM33 75h21v7h-21Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M57 22h7v7h-7ZM57 29h14v7h-14ZM29 36h49v7h-49ZM57 43h14v7h-14ZM57 50h7v7h-7ZM22 43h7v28h-7ZM29 71h21v7h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "redo, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M64.5 26h3.5v3.5h-3.5ZM64.5 29.5h7v3.5h-7ZM64.5 33h10.5v3.5h-10.5ZM64.5 36.5h14v3.5h-14ZM33 40h49v3.5h-49ZM29.5 43.5h3.5v3.5h-3.5ZM64.5 43.5h14v3.5h-14ZM64.5 47h10.5v3.5h-10.5ZM64.5 50.5h7v3.5h-7ZM64.5 54h3.5v3.5h-3.5ZM26 47h3.5v31.5h-3.5ZM29.5 78.5h3.5v3.5h-3.5ZM33 82h21v3.5h-21Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M60.5 22h3.5v3.5h-3.5ZM60.5 25.5h7v3.5h-7ZM60.5 29h10.5v3.5h-10.5ZM60.5 32.5h14v3.5h-14ZM29 36h49v3.5h-49ZM25.5 39.5h3.5v3.5h-3.5ZM60.5 39.5h14v3.5h-14ZM60.5 43h10.5v3.5h-10.5ZM60.5 46.5h7v3.5h-7ZM60.5 50h3.5v3.5h-3.5ZM22 43h3.5v31.5h-3.5ZM25.5 74.5h3.5v3.5h-3.5ZM29 78h21v3.5h-21Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+---
+import Base from '../../../layouts/Base.astro';
+import PostCard from '../../../components/PostCard.astro';
+import { getCollection } from 'astro:content';
+import { CATEGORIES, type Category } from '../../../blog';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return (Object.keys(CATEGORIES) as Category[])
+    .filter((c) => posts.some((p) => p.data.category === c))
+    .map((cat) => ({ params: { cat }, props: { posts: posts.filter((p) => p.data.category === cat).sort((a, b) => +b.data.date - +a.data.date) } }));
+}
+const { cat } = Astro.params as { cat: Category };
+const { posts } = Astro.props;
+const c = CATEGORIES[cat];
+---
+<Base title={`${c.label} · Blog`} description={`${c.blurb} Guides and stories from the Levni blog.`}>
+  <section class="wrap head">
+    <p class="crumbs"><a href="/blog/">Blog</a> / {c.label}</p>
+    <h1>{c.label}</h1>
+    <p class="lede">{c.blurb}</p>
+  </section>
+  <section class="wrap">
+    <div class="cards">{posts.map((p) => <PostCard post={p} />)}</div>
+  </section>
+</Base>
+
+<style>
+  .head { margin-top: 48px; }
+  .crumbs { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); }
+  .crumbs a { color: inherit; }
+  .lede { font-size: 1.2rem; color: var(--ink-soft); max-width: 680px; }
+  .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 24px; }
+  @media (max-width: 900px) { .cards { grid-template-columns: minmax(0, 1fr); } }
+</style>

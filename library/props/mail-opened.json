@@ -1,0 +1,43 @@
+{
+ "name": "mail-opened",
+ "category": "tech",
+ "tags": [
+  "mail opened"
+ ],
+ "variants": [
+  {
+   "note": "mail opened, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M15.2 40.4 l37.8 25.2 l37.8 -25.2 l-37.8 -25.2 l-37.8 25.2",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M12.2 37.4 l37.8 25.2 l37.8 -25.2 l-37.8 -25.2 l-37.8 25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.8 37.4 v42 a8.4 8.4 0 0 1 -8.4 8.4 h-58.8 a8.4 8.4 0 0 1 -8.4 -8.4 v-42",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 79.4 l25.2 -25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M62.6 54.2 l25.2 25.2",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

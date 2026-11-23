@@ -1,0 +1,71 @@
+{
+ "name": "pixel-wallet",
+ "category": "money",
+ "tags": [
+  "wallet",
+  "pixel wallet",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "wallet, regular pixel icon",
+   "paths": [
+    {
+     "d": "M25 28.5h49v7h-49ZM53 42.5h28v7h-28ZM53 49.5h7v7h-7ZM67 49.5h14v7h-14ZM53 56.5h28v7h-28ZM25 35.5h21v35h-21ZM25 70.5h49v7h-49Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 18.5h63v7h-63ZM71 25.5h7v7h-7ZM43 32.5h42v7h-42ZM57 46.5h7v7h-7ZM43 39.5h7v21h-7ZM78 39.5h7v21h-7ZM43 60.5h42v7h-42ZM15 25.5h7v49h-7ZM71 67.5h7v7h-7ZM15 74.5h63v7h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "wallet, thin pixel icon",
+   "paths": [
+    {
+     "d": "M21.5 25h56v10.5h-56ZM49.5 39h35v7h-35ZM49.5 46h7v14h-7ZM60 46h24.5v14h-24.5ZM49.5 60h35v7h-35ZM21.5 35.5h24.5v35h-24.5ZM21.5 70.5h56v10.5h-56Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h56v3.5h-56ZM74.5 22h3.5v10.5h-3.5ZM43 32.5h42v3.5h-42ZM53.5 43h3.5v14h-3.5ZM43 36h3.5v28h-3.5ZM81.5 36h3.5v28h-3.5ZM43 64h42v3.5h-42ZM15 22h3.5v56h-3.5ZM74.5 67.5h3.5v10.5h-3.5ZM18.5 78h56v3.5h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "wallet, solid pixel icon",
+   "paths": [
+    {
+     "d": "M19 22.5h63v7h-63ZM47 36.5h42v14h-42ZM47 50.5h14v7h-14ZM68 50.5h21v7h-21ZM47 57.5h42v14h-42ZM19 29.5h21v49h-21ZM19 78.5h63v7h-63Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 18.5h63v7h-63ZM43 32.5h42v14h-42ZM43 46.5h14v7h-14ZM64 46.5h21v7h-21ZM43 53.5h42v14h-42ZM15 25.5h21v49h-21ZM15 74.5h63v7h-63Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "wallet, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M22.5 22.5h56v3.5h-56ZM19 26h63v10.5h-63ZM50.5 40h38.5v7h-38.5ZM50.5 47h7v14h-7ZM61 47h28v14h-28ZM50.5 61h38.5v7h-38.5ZM19 36.5h28v35h-28ZM19 71.5h63v10.5h-63ZM22.5 82h56v3.5h-56Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M18.5 18.5h56v3.5h-56ZM15 22h63v10.5h-63ZM46.5 36h38.5v7h-38.5ZM46.5 43h7v14h-7ZM57 43h28v14h-28ZM46.5 57h38.5v7h-38.5ZM15 32.5h28v35h-28ZM15 67.5h63v10.5h-63ZM18.5 78h56v3.5h-56Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

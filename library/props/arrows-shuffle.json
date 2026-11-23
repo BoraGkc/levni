@@ -1,0 +1,38 @@
+{
+ "name": "arrows-shuffle",
+ "category": "symbols",
+ "tags": [
+  "arrows shuffle"
+ ],
+ "variants": [
+  {
+   "note": "arrows shuffle, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M75.2 16.4 l12.6 12.6 l-12.6 12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M75.2 83.6 l12.6 -12.6 l-12.6 -12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12.2 29 h12.6 a21 21 0 0 1 21 21 a21 21 0 0 0 21 21 h21",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M87.8 29 h-21 a20.9 20.9 0 0 0 -12.6 4.2 m-16.8 33.6 a20.9 20.9 0 0 1 -12.6 4.2 h-12.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

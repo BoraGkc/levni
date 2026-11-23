@@ -1,5 +1,6 @@
 {
   "name": "anahtar-deligi",
+  "category": "home",
   "tags": [
     "anahtar deliği",
     "yarasa",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/robert-pattinson-james/ici-1.json",
+      "note": "blue keyhole shape with a small bat silhouette inside the opening", "from": "harvested from .cache/cizim-drafts/robert-pattinson-james/ici-1.json",
       "paths": [
         {
           "d": "M50 4 Q82 4 82 34 Q82 50 64 60 L82 98 L18 98 L36 60 Q18 50 18 34 Q18 4 50 4 Z",

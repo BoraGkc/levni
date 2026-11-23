@@ -1,5 +1,6 @@
 {
   "name": "ballot-box-reel-ball",
+  "category": "film",
   "tags": [
     "oy sandigi film makarasi siyah top",
     "ballot box film reel black ball",
@@ -7,7 +8,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/la-bola-negra/kapak-alt.json",
+      "note": "film reel resting like a ball on a ballot box with red band", "from": "harvested from .cache/cizim-drafts/la-bola-negra/kapak-alt.json",
       "paths": [
         {
           "d": "M28,26 a22,22 0 1,0 44,0 a22,22 0 1,0 -44,0",

@@ -1,5 +1,6 @@
 {
   "name": "mailbox-overflowing-book",
+  "category": "books",
   "tags": [
     "posta kutusu",
     "kitap",
@@ -12,7 +13,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/other-desert-cities/ici-1.json",
+      "note": "blue mailbox overflowing with books, orange flag", "from": "harvested from .cache/cizim-drafts/other-desert-cities/ici-1.json",
       "paths": [
         {
           "d": "M44 70 L56 70 L56 100 L44 100 Z",

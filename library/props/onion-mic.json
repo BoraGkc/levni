@@ -1,5 +1,6 @@
 {
   "name": "onion-mic",
+  "category": "music",
   "tags": [
     "soğan",
     "mikrofon",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/tim-heidecker-joe/ici-2.json",
+      "note": "onion with blue top forming a microphone", "from": "harvested from .cache/cizim-drafts/tim-heidecker-joe/ici-2.json",
       "paths": [
         {
           "d": "M50 24 Q54 36 70 44 Q86 56 84 70 Q80 92 50 94 Q20 92 16 70 Q14 56 30 44 Q46 36 50 24 Z",

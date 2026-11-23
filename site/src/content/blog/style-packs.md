@@ -3,6 +3,9 @@ title: "Style packs: one scene, many inks"
 description: "Levni style packs print the same scene with a different set of inks and paper. The first two: Ortak Alan riso and a miniature pack inspired by Tulip Era painting."
 date: 2026-11-22
 og: /og/style-packs.png
+category: brand
+kind: Explainer
+coverAlt: "A small isometric room drawn by Levni"
 ---
 
 A Levni scene says *what* is in the picture. A **style pack** says how it is printed: which inks, which paper. Switch the pack and every panel, prop and texture follows, without touching the scene.

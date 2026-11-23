@@ -1,0 +1,25 @@
+{
+ "name": "carambola",
+ "category": "food",
+ "tags": [
+  "carambola"
+ ],
+ "variants": [
+  {
+   "note": "carambola, line icon redrawn from Tabler Icons (MIT)",
+   "paths": [
+    {
+     "d": "M75.2 91.2 q-7.1 0 -22.2 -11 q-15.1 11 -22.2 11 q-11.4 0 -2.1 -28.6 q-39.4 -28.5 9 -28.5 h0.3 q7.5 -23.2 15 -23.2 q7.5 0 15 23.2 h0.3 q48.4 0 9 28.5 q9.4 28.6 -2.1 28.6",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M72.2 88.2 q-7.1 0 -22.2 -11 q-15.1 11 -22.2 11 q-11.4 0 -2.1 -28.6 q-39.4 -28.5 9 -28.5 h0.3 q7.5 -23.2 15 -23.2 q7.5 0 15 23.2 h0.3 q48.4 0 9 28.5 q9.4 28.6 -2.1 28.6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,5 +1,6 @@
 {
   "name": "heart-eye-mask",
+  "category": "stage",
   "tags": [
     "maske",
     "kalp",
@@ -11,7 +12,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/off-broadway-kacirilmayacak/ici-1-r0.json",
+      "note": "blue sleep mask with two orange hearts as eyes", "from": "harvested from .cache/cizim-drafts/off-broadway-kacirilmayacak/ici-1-r0.json",
       "paths": [
         {
           "d": "M3 44 Q2 24 28 30 Q50 40 72 30 Q98 24 97 44 Q98 70 72 66 Q56 63 50 54 Q44 63 28 66 Q2 70 3 44 Z",

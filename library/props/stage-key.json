@@ -1,5 +1,6 @@
 {
   "name": "stage-key",
+  "category": "stage",
   "tags": [
     "anahtar",
     "sahne",
@@ -11,7 +12,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-drafts/chulpan-khamatova-ionesco/ici-1.json",
+      "note": "key whose round head shows a stage curtain, blue", "from": "harvested from .cache/cizim-drafts/chulpan-khamatova-ionesco/ici-1.json",
       "paths": [
         {
           "d": "M40 47 H98 V53 H88 V61 H82 V53 H74 V58 H68 V53 H40Z",

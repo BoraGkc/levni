@@ -1,0 +1,71 @@
+{
+ "name": "pixel-chess",
+ "category": "sport",
+ "tags": [
+  "chess",
+  "pixel chess",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "chess, regular pixel icon",
+   "paths": [
+    {
+     "d": "M25 25h14v14h-14ZM53 25h14v14h-14ZM39 39h14v14h-14ZM67 39h14v14h-14ZM25 53h14v14h-14ZM53 53h14v14h-14ZM39 67h14v14h-14ZM67 67h14v14h-14Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 15h70v7h-70ZM15 22h7v14h-7ZM36 22h14v14h-14ZM64 22h21v14h-21ZM15 36h21v14h-21ZM50 36h14v14h-14ZM78 36h7v14h-7ZM15 50h7v14h-7ZM36 50h14v14h-14ZM64 50h21v14h-21ZM15 64h21v14h-21ZM50 64h14v14h-14ZM78 64h7v14h-7ZM15 78h70v7h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "chess, thin pixel icon",
+   "paths": [
+    {
+     "d": "M21.5 21.5h63v3.5h-63ZM21.5 25h3.5v14h-3.5ZM39 25h14v14h-14ZM67 25h17.5v14h-17.5ZM21.5 39h17.5v14h-17.5ZM53 39h14v14h-14ZM81 39h3.5v14h-3.5ZM21.5 53h3.5v14h-3.5ZM39 53h14v14h-14ZM67 53h17.5v14h-17.5ZM21.5 67h17.5v14h-17.5ZM53 67h14v14h-14ZM81 67h3.5v14h-3.5ZM21.5 81h63v3.5h-63Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 15h70v3.5h-70ZM22 22h14v14h-14ZM50 22h14v14h-14ZM36 36h14v14h-14ZM64 36h14v14h-14ZM22 50h14v14h-14ZM50 50h14v14h-14ZM36 64h14v14h-14ZM64 64h14v14h-14ZM15 18.5h3.5v63h-3.5ZM81.5 18.5h3.5v63h-3.5ZM15 81.5h70v3.5h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "chess, solid pixel icon",
+   "paths": [
+    {
+     "d": "M19 19h70v7h-70ZM19 26h7v14h-7ZM40 26h14v14h-14ZM68 26h21v14h-21ZM19 40h21v14h-21ZM54 40h14v14h-14ZM82 40h7v14h-7ZM19 54h7v14h-7ZM40 54h14v14h-14ZM68 54h21v14h-21ZM19 68h21v14h-21ZM54 68h14v14h-14ZM82 68h7v14h-7ZM19 82h70v7h-70Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 15h70v7h-70ZM15 22h7v14h-7ZM36 22h14v14h-14ZM64 22h21v14h-21ZM15 36h21v14h-21ZM50 36h14v14h-14ZM78 36h7v14h-7ZM15 50h7v14h-7ZM36 50h14v14h-14ZM64 50h21v14h-21ZM15 64h21v14h-21ZM50 64h14v14h-14ZM78 64h7v14h-7ZM15 78h70v7h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "chess, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M19 19h70v3.5h-70ZM19 22.5h21v14h-21ZM54 22.5h21v14h-21ZM85.5 22.5h3.5v14h-3.5ZM19 36.5h70v3.5h-70ZM19 40h3.5v14h-3.5ZM36.5 40h21v14h-21ZM71.5 40h17.5v14h-17.5ZM19 54h70v3.5h-70ZM19 57.5h21v14h-21ZM54 57.5h21v14h-21ZM85.5 57.5h3.5v14h-3.5ZM19 71.5h70v3.5h-70ZM19 75h3.5v10.5h-3.5ZM36.5 75h21v10.5h-21ZM71.5 75h17.5v10.5h-17.5ZM19 85.5h70v3.5h-70Z",
+     "fill": "tone-coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M15 15h70v3.5h-70ZM15 18.5h21v14h-21ZM50 18.5h21v14h-21ZM81.5 18.5h3.5v14h-3.5ZM15 32.5h70v3.5h-70ZM15 36h3.5v14h-3.5ZM32.5 36h21v14h-21ZM67.5 36h17.5v14h-17.5ZM15 50h70v3.5h-70ZM15 53.5h21v14h-21ZM50 53.5h21v14h-21ZM81.5 53.5h3.5v14h-3.5ZM15 67.5h70v3.5h-70ZM15 71h3.5v10.5h-3.5ZM32.5 71h21v10.5h-21ZM67.5 71h17.5v10.5h-17.5ZM15 81.5h70v3.5h-70Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

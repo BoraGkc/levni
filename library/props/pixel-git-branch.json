@@ -1,0 +1,71 @@
+{
+ "name": "pixel-git-branch",
+ "category": "symbols",
+ "tags": [
+  "git branch",
+  "pixel git branch",
+  "pixel"
+ ],
+ "variants": [
+  {
+   "note": "git branch, regular pixel icon",
+   "paths": [
+    {
+     "d": "M67 25h14v14h-14ZM25 67h14v14h-14Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M57 15h28v7h-28ZM57 22h7v14h-7ZM78 22h7v14h-7ZM57 36h28v7h-28ZM25.5 15h7v42h-7ZM15 57h28v7h-28ZM67.5 43h7v24.5h-7ZM36 64h7v3.5h-7ZM36 67.5h38.5v7h-38.5ZM15 64h7v14h-7ZM36 74.5h7v3.5h-7ZM15 78h28v7h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "git branch, thin pixel icon",
+   "paths": [
+    {
+     "d": "M63.5 25h17.5v17.5h-17.5ZM25 63.5h17.5v17.5h-17.5Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M60.5 18.5h17.5v3.5h-17.5ZM57 22h3.5v17.5h-3.5ZM78 22h3.5v17.5h-3.5ZM60.5 39.5h17.5v3.5h-17.5ZM29 18.5h3.5v35h-3.5ZM22 57h17.5v3.5h-17.5ZM67.5 46.5h3.5v21h-3.5ZM46.5 67.5h24.5v3.5h-24.5ZM18.5 60.5h3.5v17.5h-3.5ZM39.5 60.5h3.5v17.5h-3.5ZM22 78h17.5v3.5h-17.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "git branch, solid pixel icon",
+   "paths": [
+    {
+     "d": "M61 19h28v28h-28ZM29.5 19h7v42h-7ZM71.5 47h7v24.5h-7ZM19 61h28v10.5h-28ZM19 71.5h59.5v7h-59.5ZM19 78.5h28v10.5h-28Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M57 15h28v28h-28ZM25.5 15h7v42h-7ZM67.5 43h7v24.5h-7ZM15 57h28v10.5h-28ZM15 67.5h59.5v7h-59.5ZM15 74.5h28v10.5h-28Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  },
+  {
+   "note": "git branch, glyph pixel icon",
+   "paths": [
+    {
+     "d": "M64.5 22.5h17.5v3.5h-17.5ZM61 26h24.5v17.5h-24.5ZM64.5 43.5h17.5v3.5h-17.5ZM33 22.5h3.5v35h-3.5ZM26 61h17.5v3.5h-17.5ZM71.5 50.5h3.5v21h-3.5ZM50.5 71.5h24.5v3.5h-24.5ZM22.5 64.5h24.5v17.5h-24.5ZM26 82h17.5v3.5h-17.5Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M60.5 18.5h17.5v3.5h-17.5ZM57 22h24.5v17.5h-24.5ZM60.5 39.5h17.5v3.5h-17.5ZM29 18.5h3.5v35h-3.5ZM22 57h17.5v3.5h-17.5ZM67.5 46.5h3.5v21h-3.5ZM46.5 67.5h24.5v3.5h-24.5ZM18.5 60.5h24.5v17.5h-24.5ZM22 78h17.5v3.5h-17.5Z",
+     "fill": "ink",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

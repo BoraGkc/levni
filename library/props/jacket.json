@@ -1,5 +1,6 @@
 {
   "name": "jacket",
+  "category": "home",
   "tags": [
     "ceket",
     "moda",
@@ -8,7 +9,7 @@
   ],
   "variants": [
     {
-      "note": "harvested from .cache/cizim-compose/delpy/ici-2.json",
+      "note": "light-blue jacket, open front view", "from": "harvested from .cache/cizim-compose/delpy/ici-2.json",
       "paths": [
         {
           "d": "M34 8 L50 20 L66 8 L86 18 L97 84 L83 88 L76 44 L78 96 L22 96 L24 44 L17 88 L3 84 L14 18 Z",
@@ -24,7 +25,7 @@
       ]
     },
     {
-      "note": "harvested from .cache/cizim-compose/delpy/kapak.json",
+      "note": "thin outline of jacket collar and lapels, faint", "from": "harvested from .cache/cizim-compose/delpy/kapak.json",
       "paths": [
         {
           "d": "M34 8 L50 20 L66 8 L86 18 L97 84 L83 88 L76 44 L78 96 L22 96 L24 44 L17 88 L3 84 L14 18 Z",
