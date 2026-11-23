@@ -11,6 +11,7 @@ import { glyphField, iconMask, peep } from './glyphs.mjs';
 import { sketch, marks, wave, arrow } from './brushes.mjs';
 import { ASSETS, makeNoise } from './assets.mjs';
 import { expandProp } from './props.mjs';
+import { expandSeal } from './seal.mjs';
 import { expandIso } from './iso.mjs';
 import { flattenPath, inkLine, plateOffsets } from './ink.mjs';
 import { applyStyle } from './styles.mjs';
@@ -58,7 +59,7 @@ async function composeOnce(spec, canvas, lay) {
   let clip = 0;
 
   // props (library/props/*.json) are pre-drawn `draw` elements and `iso` is a macro: expand them first
-  for (const e of resolveSlots((spec.elements || []).flatMap(expandIso).map(expandProp))) {
+  for (const e of resolveSlots((spec.elements || []).flatMap(expandIso).flatMap(expandSeal).map(expandProp))) {
     const t = e.type;
     cur = e;
     const m0 = lay?.start(out, used);
@@ -141,6 +142,15 @@ async function composeOnce(spec, canvas, lay) {
       // shadow / extrude / shade add depth while keeping the hand-drawn line (see docs/scene.md).
       const paths = (fillOver) => (e.paths || []).map((p) => `<path d="${esc(p.d)}" fill="${fillOver ?? (p.fill ? c(p.fill) : 'none')}" stroke="${fillOver ?? (p.stroke === 'none' ? 'none' : c(p.stroke, P.ink))}" stroke-width="${(p.weight ?? 10) / k}" stroke-linecap="round" stroke-linejoin="round"/>`).join('');
       const tf = (dx = 0, dy = 0) => `translate(${e.x - (e.size ?? 200) / 2 + dx} ${e.y - (e.size ?? 200) / 2 + dy}) scale(${k})${e.flip ? ' translate(100 0) scale(-1 1)' : ''}${e.rot ? ` rotate(${e.rot} 50 50)` : ''}`;
+      // die-cut sticker: a thick paper offset around the whole silhouette (holes filled), a hairline ink edge and a small shadow
+      if (e.diecut) {
+        const dcut = { offset: 14, color: 'paper', line: 'ink', shadow: true, ...(e.diecut === true ? {} : e.diecut) };
+        dcut.offset = Math.min(60, Math.max(0, Number.isFinite(+dcut.offset) ? +dcut.offset : 14));
+        const blob = (col, grow, dx = 0, dy = 0) => `<g transform="${tf(dx, dy)}">${(e.paths || []).map((p) => `<path d="${esc(p.d)}" fill="${col}" stroke="${col}" stroke-width="${(grow + (p.weight ?? 10)) / k}" stroke-linejoin="round" stroke-linecap="round"/>`).join('')}</g>`;
+        if (dcut.shadow) out.push(`<g style="mix-blend-mode:multiply" opacity="0.25">${blob(c('ink'), dcut.offset * 2 + 3, 6, 8)}</g>`);
+        if (dcut.line && dcut.line !== 'none') out.push(blob(c(dcut.line), dcut.offset * 2 + 6));
+        out.push(blob(c(dcut.color), dcut.offset * 2));
+      }
       if (e.overprint) out.push(`<g style="mix-blend-mode:multiply" transform="${tf(14, 12)}">${paths(c(e.overprint))}</g>`);
       // ---- depth (all optional): cast shadow, extrusion (thickness), hatch shading on the side away from the light
       const filled = (e.paths || []).filter((p) => p.fill && p.fill !== 'none');
@@ -171,7 +181,7 @@ async function composeOnce(spec, canvas, lay) {
         const er = rng(seed * 17 + used.length + 3);
         // only pure line art (no paper/white areas its lines could sit on) flips to paper on a dark ground
         const lightFill = (e.paths || []).some((p) => ['paper', 'white', 'tone', 'mustard'].includes(p.fill));
-        const lineArtOnDark = e.autoContrast !== false && !lightFill && inDark(e.x, e.y);
+        const lineArtOnDark = e.autoContrast !== false && !lightFill && !e.diecut && inDark(e.x, e.y);
         const parts = (e.paths || []).map((p) => {
           let s = '';
           if (p.fill && p.fill !== 'none') {
@@ -244,7 +254,8 @@ async function composeOnce(spec, canvas, lay) {
       const onDark = CHARTS.has(t) && inDark(e.x ?? 0, e.y ?? 0);
       const ee = onDark ? { ...e, ink: e.ink ?? 'paper', colors: e.colors ?? ['tone', 'mustard', 'coral', 'paper'] } : e;
       const { svg, bbox } = ASSETS[t](ee, { pen: makePen(er, { hand }), r: er, c, noise, t: time, canvas });
-      out.push(e.rot ? `<g transform="rotate(${e.rot} ${e.x} ${e.y})">${svg}</g>` : svg);
+      const [pvx, pvy] = t === 'stub' ? [e.x + (e.w ?? 0) / 2, e.y + (e.h ?? 0) / 2] : [e.x, e.y]; // a ticket turns about its centre
+      out.push(e.rot ? `<g transform="rotate(${e.rot} ${pvx} ${pvy})">${svg}</g>` : svg);
       if (bbox) note(t, ...bbox);
     } else if (t === 'label') {
       // label colour follows the ground unless set: paper on dark panels, ink elsewhere

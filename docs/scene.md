@@ -56,8 +56,8 @@ House rule: at most **two main inks plus paper** per scene; a third colour only 
 
 | type | fields | notes |
 | --- | --- | --- |
-| `prop` | `id`?, `in`?, `name` (name or tag, any language), `variant`?, `x`, `y` (centre), `size`, `flip`?, `rot`?, `overprint`?, `crop`?, `recolor`? (`{"coral":"blue"}`), `palette`? (`"blue"`), `fit`? | **Use this first.** A drawing from the prop library (`levni list`, `levni sheet`). Takes every `draw` option, including depth. Unknown names fall back to `icon`. |
-| `draw` | `x`, `y` (centre of the box), `size`, `paths` [{`d`, `fill`?, `stroke`?, `weight`?, `dash`?, `taper`?, `rule`?}], `rot`?, `flip`?, `overprint`?, `crop`?, `fit`?, `name`? | **Your own drawing** in a 0..100 box as SVG path data. `weight` is output pixels (does not grow with `size`). `dash: [on, off]` for seams and routes; `taper: false` keeps line ends blunt; `rule: "evenodd"` for holes (rings, frames); a zero-length stroke (`M x y h.1`) is a round dot; `fit: true` scales the visible ink to `size` and centres it on `x, y`. |
+| `prop` | `id`?, `in`?, `name` (name or tag, any language), `variant`?, `x`, `y` (centre), `size`, `flip`?, `rot`?, `overprint`?, `diecut`?, `crop`?, `recolor`? (`{"coral":"blue"}`), `palette`? (`"blue"`), `fit`? | **Use this first.** A drawing from the prop library (`levni list`, `levni sheet`). Takes every `draw` option, including depth. Unknown names fall back to `icon`. |
+| `draw` | `x`, `y` (centre of the box), `size`, `paths` [{`d`, `fill`?, `stroke`?, `weight`?, `dash`?, `taper`?, `rule`?}], `rot`?, `flip`?, `overprint`?, `diecut`?, `crop`?, `fit`?, `name`? | **Your own drawing** in a 0..100 box as SVG path data. `weight` is output pixels (does not grow with `size`). `dash: [on, off]` for seams and routes; `taper: false` keeps line ends blunt; `rule: "evenodd"` for holes (rings, frames); a zero-length stroke (`M x y h.1`) is a round dot; `diecut: true` or `{offset, color, line, shadow}` makes it a sticker: a thick paper outline (`offset` default 14 px, clamped 0..60, holes filled, round joins so concave parts stay smooth), hairline ink edge and soft shadow; line art keeps its ink lines on dark grounds; `fit: true` scales the visible ink to `size` and centres it on `x, y`. |
 | depth on `draw`/`prop` | `extrude: {dx, dy, color, steps}` · `shade: {lx, ly, depth, gap, angle, color}` · `shadow: {dx, dy, color, opacity}` (each may be `true`) | Cut-paper thickness, pencil hatching on the side away from the light, a cast shadow. Best on the focal object. |
 | `icon` | `name` (English concept), `x`, `y`, `size`, `color`, `under`?, `overprint`?, `rot`?, `weight`? | A Tabler icon redrawn in the house line. **Needs `@tabler/icons`** (optional peer dependency). |
 | `ascii` | `name`, `x`, `y`, `w`, `h`, `color`, `font`? | An icon drawn in characters (good inside a `window`). Needs `@tabler/icons`. |
@@ -104,6 +104,9 @@ House rule: at most **two main inks plus paper** per scene; a third colour only 
 | `spiro` | `x`, `y`, `size`, `R`?, `r`?, `d`?, `turns`? | hypotrochoid ornament (money, seals) |
 | `flag` | `x`, `y`, `w`, `h`, `stripes` [], `canton`? | waving striped flag; must not imitate a real country's flag by accident |
 | `badge` | `x`, `y`, `size`, `color`?, `fill`?, `weight`? | round badge frame |
+| `ringtext` | `x`, `y` (centre), `r` (baseline radius, default 100), `text`, `size`? (18), `start`? (deg, 0 = top, clockwise), `spacing`? (2 px between glyphs), `side`? (`out`: reads along the top, `in`: reads along the bottom, upside-down-safe), `align`? (`start`/`center`: where `start` sits), `repeat`? (fill the whole ring with `text` + `sep`; spacing is stretched so it closes without gap or overlap, the type shrinks if one unit does not fit), `sep`? (`✦`), `color`? (ink), `upper`? (true), `locale`? (auto `tr` when the text has ı İ ğ ş), `spin`? (turns over `t` 0..1, whole numbers loop) | mono text on a circle. Glyphs are set one by one, each centred on its slot, so M/W and Turkish Ğ Ş İ ö ü ç sit even. The critic box follows the real glyphs (an arc is not a full square) |
+| `seal` | `x`, `y` (centre), `size`? (300, 40..2000), `edge`? (`scallop` default / `perforated` / `zigzag` / `plain`), `bumps`? (24/36/28, 6..120), `depth`? (edge depth as share of the radius, ≤ 0.2), `fill`? (`paper`), `color`? (ink of edge, rings, text), `weight`? (6), `shadow`? (true), `ring`? (true: the two guide rings); ring text: `text` (repeated around, closes exactly) **or** `top` / `bottom` (centred arcs, `spacing`?), plus `sep`?, `textSize`? (never larger than the band allows), `textColor`?, `ringColor`?, `start`?, `locale`?, `upper`?, `spin`? (turns over `t`); centre: `word` (+ `sub`?, `wordSize`?, `wordColor`?) **or** `prop` (a prop name, + `propVariant`?, `propRot`?, `recolor`?; the prop turns with `rot`); `inner`? (0.62, inner ring radius share), `rot`? | sticker or stamp badge. Use `word` or `prop`, not both |
+| `stub` | `x`, `y` (top-left corner), `w`? (300), `h`? (130), `split`? (0.72, 0.1..0.95: where the perforation sits), `notch`? (radius of the exact half-round cut, default 14 % of `h`, max 20), `text`? (main text, left part, shrinks to fit), `stubText`? (rotated, right part), `textSize`?, `textColor`?, `fill`? (`paper`), `color`? (ink), `weight`?, `shadow`?, `locale`?, `rot`? (about the centre) | ticket body with symmetric half-round notches and an evenly spaced dotted perforation |
 | `ticks` | `x`, `y` (corner of an object), `angle`?, `spread`?, `size`?, `colors`?, `count`? | three short coloured dashes radiating from an object; once or twice per scene |
 | `arrow` | `from` [x, y], `to` [x, y], `bend`, `color` | hand-drawn arrow |
 | `line` / `shape` | `points` [[x, y] …], `color` / `fill`, `stroke`, `weight`, `closed`? | free line or shape |
@@ -272,3 +275,19 @@ Examples: [`slots-tv`](../examples/slots-tv.json), [`slots-lens`](../examples/sl
 - On a blue panel, `ink` lines and an `overprint` read almost black: use `paper` for lines and `coral`/`mustard` for the second ink.
 - For a road in perspective use a thick `line` (weight 60–80), not a `shape`.
 - To put the sun behind buildings, write the `disc` before the `skyline`.
+
+### Seal recipes
+
+A stamp, a die-cut sticker and a ticket. All three work on paper and on dark grounds, under `finish: crayon` and `soft`.
+
+```json
+{ "background": "paper", "elements": [
+  { "type": "seal", "x": 400, "y": 340, "size": 440, "edge": "scallop", "fill": "coral",
+    "text": "ortak alan", "word": "2026", "sub": "est.", "wordColor": "paper", "spin": 1 },
+  { "type": "ringtext", "x": 400, "y": 340, "r": 260, "text": "small studio · big habits", "size": 17, "repeat": true, "color": "blue" },
+  { "type": "prop", "name": "rocket", "x": 860, "y": 220, "size": 220, "rot": 15, "diecut": { "offset": 16 } },
+  { "type": "stub", "x": 700, "y": 400, "w": 340, "h": 140, "fill": "tone-mustard", "text": "admit one", "stubText": "no. 07" }
+] }
+```
+
+Keep ring text and other marks at least `size` px away from each other; a `seal` with `prop` or `word` in the centre needs no extra element. Examples: [`seal-est`](../examples/seal-est.json), [`seal-sheet`](../examples/seal-sheet.json), [`seal-loyalty`](../examples/seal-loyalty.json).

@@ -1,0 +1,88 @@
+{
+ "seed": 9,
+ "background": "blue",
+ "elements": [
+  {
+   "type": "seal",
+   "x": 250,
+   "y": 260,
+   "size": 320,
+   "edge": "zigzag",
+   "fill": "mustard",
+   "top": "fresh batch",
+   "bottom": "no. 07",
+   "prop": "coffee-cup",
+   "rot": -10
+  },
+  {
+   "type": "seal",
+   "x": 600,
+   "y": 200,
+   "size": 280,
+   "edge": "perforated",
+   "fill": "paper",
+   "text": "open source",
+   "word": "MIT",
+   "sub": "free",
+   "rot": 7
+  },
+  {
+   "type": "seal",
+   "x": 930,
+   "y": 300,
+   "size": 340,
+   "edge": "scallop",
+   "fill": "coral",
+   "top": "approved",
+   "bottom": "by us",
+   "prop": "star",
+   "rot": 12,
+   "textColor": "paper",
+   "color": "ink"
+  },
+  {
+   "type": "prop",
+   "name": "rocket",
+   "x": 540,
+   "y": 525,
+   "size": 230,
+   "rot": 20,
+   "diecut": {
+    "offset": 16
+   }
+  },
+  {
+   "type": "prop",
+   "name": "heart",
+   "x": 780,
+   "y": 520,
+   "size": 170,
+   "rot": -14,
+   "diecut": true
+  },
+  {
+   "type": "stub",
+   "x": 90,
+   "y": 455,
+   "w": 330,
+   "h": 130,
+   "fill": "tone-green",
+   "split": 0.7,
+   "rot": -6,
+   "text": "admit one",
+   "stubText": "no. 07"
+  },
+  {
+   "type": "prop",
+   "name": "flame",
+   "x": 1070,
+   "y": 530,
+   "size": 150,
+   "rot": 8,
+   "diecut": {
+    "offset": 12,
+    "color": "mustard"
+   }
+  }
+ ]
+}

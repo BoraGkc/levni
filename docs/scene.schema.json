@@ -318,6 +318,9 @@
             "spiro",
             "flag",
             "badge",
+            "ringtext",
+            "seal",
+            "stub",
             "ticks",
             "arrow",
             "line",
@@ -360,6 +363,26 @@
         },
         "crop": {
           "type": "boolean"
+        },
+        "diecut": {
+          "description": "prop/draw: die-cut sticker outline (true, or { offset, color, line, shadow })",
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "edge": {
+          "enum": [
+            "scallop",
+            "perforated",
+            "zigzag",
+            "plain"
+          ],
+          "description": "seal: edge style"
         },
         "name": {
           "type": "string"
