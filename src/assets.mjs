@@ -8,6 +8,7 @@ import { CHART_ASSETS } from './charts.mjs';
 import { PERSON_ASSETS } from './person.mjs';
 import { DITHER_ASSETS } from './dither.mjs';
 import { MESHGRAD_ASSETS } from './meshgrad.mjs';
+import { ENGRAVE_ASSETS } from './engrave.mjs';
 
 const f = (n) => Math.round(n * 10) / 10;
 
@@ -352,3 +353,6 @@ Object.assign(ASSETS, PERSON_ASSETS);
 Object.assign(ASSETS, DITHER_ASSETS);
 // Grainy mesh gradients and blurred orbs (meshgrad): see meshgrad.mjs
 Object.assign(ASSETS, MESHGRAD_ASSETS);
+
+// Line-art landscapes (terrain, ridgelines, engrave): see engrave.mjs
+Object.assign(ASSETS, ENGRAVE_ASSETS);
