@@ -1,7 +1,8 @@
 // Levni as an MCP server over stdio (newline-delimited JSON-RPC 2.0). No SDK dependency: the protocol
 // surface Levni needs is small (initialize, ping, tools/list, tools/call).
 //   npx levni mcp
-// Tools: scene_guide, list_props, render_scene, critique_scene, show_props.
+// Tools: scene_guide, list_props, render_scene, critique_scene, show_props;
+// plus ghost_drafts, ghost_preview, ghost_apply when Ghost credentials are in the environment (mcp-ghost.mjs).
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, resolve, extname } from 'node:path';
 import { createInterface } from 'node:readline';
@@ -11,6 +12,7 @@ import { critique } from './critic.mjs';
 import { loadProps, findProp } from './props.mjs';
 import { toPng, toWebp } from './export.mjs';
 import { CATEGORIES } from './validate.mjs';
+import { GHOST_TOOLS, ghostEnabled, callGhost } from './mcp-ghost.mjs';
 
 const PROTOCOLS = ['2025-06-18', '2025-03-26', '2024-11-05'];
 const VERSION = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8')).version;
@@ -71,6 +73,10 @@ const notesText = (notes) => (notes.length ? notes.map((n) => `- ${n}`).join('\n
 const preview = async (svg, width = 560) => sharp(Buffer.from(svg)).resize(width).png({ compressionLevel: 9, palette: true }).toBuffer();
 
 async function call(name, args = {}) {
+  if (name.startsWith('ghost_')) {
+    if (!ghostEnabled()) throw new Error('Ghost tools need GHOST_ADMIN_API_URL and GHOST_ADMIN_API_KEY in the server environment');
+    return callGhost(name, args);
+  }
   if (name === 'scene_guide') return [text(readFileSync(GUIDE, 'utf8'))];
 
   if (name === 'list_props') {
@@ -144,11 +150,11 @@ export async function handle(msg) {
       protocolVersion: v,
       capabilities: { tools: {} },
       serverInfo: { name: 'levni', version: VERSION },
-      instructions: 'Levni draws hand-inked illustrations from a JSON scene. Read scene_guide once, find drawings with list_props, then render_scene and fix what the critic reports.',
+      instructions: 'Levni draws hand-inked illustrations from a JSON scene. Read scene_guide once, find drawings with list_props, then render_scene and fix what the critic reports.' + (ghostEnabled() ? ' Ghost is connected: ghost_drafts finds imageless drafts, ghost_preview shows a plan with a token, and ghost_apply writes only after the user approves that preview.' : ''),
     });
   }
   if (method === 'ping') return ok({});
-  if (method === 'tools/list') return ok({ tools: TOOLS });
+  if (method === 'tools/list') return ok({ tools: ghostEnabled() ? [...TOOLS, ...GHOST_TOOLS] : TOOLS });
   if (method === 'tools/call') {
     try {
       return ok({ content: await call(params.name, params.arguments) });

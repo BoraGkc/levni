@@ -60,6 +60,10 @@ import { createClient, attachPost, attachPlan, pullDrafts } from 'levni/adapters
 
 `attachPost(client, entry, { apply, baseDir })` returns `{ status, edits, notes }` where status is `planned`, `applied`, `skipped` or `refused`. `createClient({ url, key, fetch })` accepts a custom `fetch` (the tests use a mock; `npm run test:ghost`).
 
+## From an MCP client
+
+With `GHOST_ADMIN_API_URL` and `GHOST_ADMIN_API_KEY` in the MCP server's `env`, `levni mcp` adds `ghost_drafts`, `ghost_preview` and `ghost_apply` (see the README). The plan is the same as one entry of a plan file (`id`, `cover`, `inline`), with scenes inline. `ghost_preview` returns a token made from the plan and the draft's `updated_at`; `ghost_apply` refuses any other plan, and any draft edited since the preview, so an assistant can only write what the user saw.
+
 ## Not verified against a live site
 
 The adapter is tested against a mocked Ghost API (Admin API v5, Lexical editor format). Try a dry run on a test site first. Posts written with the older mobiledoc editor have no `lexical` and are not supported.

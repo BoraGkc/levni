@@ -85,6 +85,15 @@ Claude Desktop, Cursor and other clients (`claude_desktop_config.json`, `.cursor
 
 From a checkout, use `"command": "node", "args": ["/path/to/levni/bin/levni.mjs", "mcp"]`. Files from `render_scene` are written relative to the client's working directory. Agents without MCP can call the CLI the same way.
 
+**Ghost from the agent.** Add your Ghost Admin credentials to the server's `env` and three more tools appear: `ghost_drafts` (read-only: drafts without images, their headings and text), `ghost_preview` (renders the cover and inline images, shows where each goes, returns a token; nothing changes) and `ghost_apply` (writes only with the token from a preview of the same plan on the unchanged draft). The assistant shows you the preview and applies after you say yes. It never publishes, never emails, and skips drafts that already have images.
+
+```json
+{ "mcpServers": { "levni": { "command": "npx", "args": ["-y", "github:BoraGkc/levni", "mcp"],
+  "env": { "GHOST_ADMIN_API_URL": "https://your-site.com", "GHOST_ADMIN_API_KEY": "<id>:<secret>" } } } }
+```
+
+The key stays on your machine, in your MCP client's config; Levni has no server of its own. Without the two variables the Ghost tools do not exist.
+
 ## Ghost adapter
 
 Draw covers and inline images for imageless Ghost drafts: `levni ghost drafts` finds them, a plan file lists a cover scene plus inline scenes after named `h2` headings, `levni ghost attach plan.json` prints the planned edits and `--apply` uploads and places them. Drafts only, never two images in one section, never a newsletter. Needs `GHOST_ADMIN_API_URL` and `GHOST_ADMIN_API_KEY` in the environment. Details and the plan format: [`docs/ghost.md`](docs/ghost.md).
