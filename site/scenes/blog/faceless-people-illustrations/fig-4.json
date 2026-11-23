@@ -1,0 +1,4 @@
+{ "seed": 55, "elements": [
+  { "type": "label", "text": "3 in 10 (sample share)", "x": 600, "y": 100, "anchor": "middle", "size": 20 },
+  { "type": "isotype", "x": 180, "y": 320, "cols": 10, "rows": 2, "size": 150, "color": "tone", "highlight": "coral", "share": 0.3 }
+] }

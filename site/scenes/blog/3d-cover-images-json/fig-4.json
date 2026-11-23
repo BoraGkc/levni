@@ -1,0 +1,4 @@
+{ "finish": "soft", "background": "#F2EEE6",
+  "elements": [{ "type": "soft3d", "preset": "rings", "seed": 2, "titleSpace": "left",
+    "palette": { "background": ["#F2EEE6", "#E4DCCD"], "stops": ["#FFB36B", "#FF5E62", "#8E3BC9"] } }],
+  "title": { "text": "Our pricing, explained in one page", "kicker": "Guide", "position": "left" } }

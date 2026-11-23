@@ -1,0 +1,7 @@
+{ "format": "youtube", "reflow": true, "seed": 42, "background": "blue", "elements": [
+  { "type": "disc", "x": 860, "y": 250, "r": 170, "color": "mustard" },
+  { "type": "prop", "name": "coffee-cup", "x": 860, "y": 275, "size": 260, "shadow": true },
+  { "type": "prop", "name": "sparkle", "x": 1070, "y": 110, "size": 60 },
+  { "type": "prop", "name": "sparkle", "x": 640, "y": 160, "size": 40 }
+],
+  "title": { "text": "Ten habits of calm teams", "kicker": "Work", "brand": "levni.dev" } }

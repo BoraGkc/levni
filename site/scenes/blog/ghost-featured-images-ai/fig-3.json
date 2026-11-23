@@ -1,0 +1,14 @@
+{ "seed": 34, "elements": [
+  { "type": "stack", "x": 200, "y": 300, "w": 200, "h": 200, "count": 4 },
+  { "type": "arrow", "from": [330, 300], "to": [450, 300], "bend": 0.2, "color": "ink" },
+  { "type": "window", "x": 480, "y": 180, "w": 260, "h": 220, "title": "preview" },
+  { "type": "prop", "name": "eye", "x": 610, "y": 300, "size": 120 },
+  { "type": "arrow", "from": [770, 300], "to": [890, 300], "bend": 0.2, "color": "ink" },
+  { "type": "prop", "name": "check", "x": 1010, "y": 300, "size": 200 },
+  { "type": "label", "text": "1 ghost_drafts", "x": 200, "y": 470, "anchor": "middle", "size": 20 },
+  { "type": "label", "text": "2 ghost_preview", "x": 610, "y": 470, "anchor": "middle", "size": 20 },
+  { "type": "label", "text": "3 ghost_apply", "x": 1010, "y": 470, "anchor": "middle", "size": 20 },
+  { "type": "label", "text": "read only", "x": 200, "y": 510, "anchor": "middle", "size": 15 },
+  { "type": "label", "text": "dry run, gives a token", "x": 610, "y": 510, "anchor": "middle", "size": 15 },
+  { "type": "label", "text": "writes, needs the token", "x": 1010, "y": 510, "anchor": "middle", "size": 15 }
+] }

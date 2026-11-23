@@ -1,0 +1,6 @@
+{ "finish": "soft", "background": "#F2EEE6", "elements": [
+  { "type": "extrude3d", "x": 600, "y": 336, "size": 380, "rotate": [-14, -24, 4], "paths": [
+    { "d": "M50 12 L61 38 L89 40 L67 58 L74 86 L50 71 L26 86 L33 58 L11 40 L39 38 Z", "fill": "mustard", "stroke": "ink", "weight": 9 },
+    { "d": "M50 34 L55 47 L68 48 L58 56 L61 69 L50 62 L39 69 L42 56 L32 48 L45 47 Z", "fill": "coral", "stroke": "none" }
+  ] }
+] }

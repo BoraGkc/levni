@@ -1,0 +1,2 @@
+{ "finish": "soft", "background": "#E9EEF7",
+  "elements": [{ "type": "extrude3d", "name": "lightbulb", "x": 600, "y": 336, "size": 380 }] }

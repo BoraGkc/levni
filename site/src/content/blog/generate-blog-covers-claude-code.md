@@ -177,3 +177,5 @@ Want the whole set in other colours, say your brand's? A scene takes one `style`
 ## What to do next
 
 Browse the [Levni library](/library/) to see the drawings your agent will choose from, or jump to a shelf such as [`/library/?c=tech`](/library/?c=tech). To see how the critic works in more detail, read [the agent layout critic](/blog/agent-layout-critic/). To make the matching social card for each post, see [Open Graph images from JSON](/blog/open-graph-images-json/).
+
+Related: for glossy 3D covers with a title and a badge, read [3D cover images without a 3D tool](/blog/3d-cover-images-json/). To let the assistant add covers straight to Ghost drafts, read [add featured images to Ghost drafts](/blog/ghost-featured-images-ai/).

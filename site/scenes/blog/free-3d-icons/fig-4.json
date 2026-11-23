@@ -1,0 +1,5 @@
+{ "finish": "soft", "background": "#E9EEF7", "elements": [
+  { "type": "extrude3d", "name": "rocket", "x": 230, "y": 336, "size": 260, "rotate": [0, 0, 0] },
+  { "type": "extrude3d", "name": "rocket", "x": 600, "y": 336, "size": 260 },
+  { "type": "extrude3d", "name": "rocket", "x": 970, "y": 336, "size": 260, "rotate": [-34, -10, 2], "depth": 0.22 }
+] }

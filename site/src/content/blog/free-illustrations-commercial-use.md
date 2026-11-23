@@ -143,3 +143,5 @@ Before you publish, read the page once as a visitor. Is the credit findable? Doe
 ## What to do next
 
 Browse the [Levni library](/library/) and pick a shelf. To make a cover from those drawings in minutes, read [generate blog covers with Claude Code](/blog/generate-blog-covers-claude-code/). To match the drawings to your brand colours, see [brand colour illustrations](/blog/brand-colour-illustrations/), and to add your own, read [draw SVG icons as JSON](/blog/draw-svg-icons-json/).
+
+Related: the same licence covers the 481 pixel icons in the library, see [free pixel art icons](/blog/free-pixel-art-icons/).

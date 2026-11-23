@@ -1,0 +1,8 @@
+{ "seed": 25, "elements": [
+  { "type": "disc", "x": 560, "y": 330, "r": 250, "color": "tone" },
+  { "type": "prop", "id": "pc", "name": "laptop", "x": 560, "y": 350, "size": 520 },
+  { "type": "prop", "name": "pixel-chart-bar", "variant": 2, "in": { "ref": "pc", "slot": "screen" }, "fit": 0.7 },
+  { "type": "prop", "name": "pixel-heart", "variant": 2, "x": 920, "y": 170, "size": 110, "rot": 10 },
+  { "type": "prop", "name": "pixel-check", "variant": 2, "x": 960, "y": 470, "size": 100 },
+  { "type": "prop", "name": "pixel-coffee", "variant": 0, "x": 190, "y": 470, "size": 120 }
+] }

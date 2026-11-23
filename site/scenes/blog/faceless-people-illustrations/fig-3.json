@@ -1,0 +1,6 @@
+{ "seed": 54, "clip": [60, 52, 1080, 569], "elements": [
+  { "type": "panel", "x": 60, "y": 52, "w": 1080, "h": 569, "color": "blue" },
+  { "type": "panel", "x": 330, "y": 110, "w": 540, "h": 260, "color": "paper" },
+  { "type": "prop", "name": "lightbulb", "x": 600, "y": 240, "size": 190 },
+  { "type": "crowd", "x": 60, "y": 470, "w": 1080, "rows": 3, "size": 130, "highlight": "coral", "share": 0.1 }
+] }

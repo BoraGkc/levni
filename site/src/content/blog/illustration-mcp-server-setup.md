@@ -152,3 +152,5 @@ A JSON typo in the config fails silently in some clients. If no tools appear, va
 ## What to do next
 
 Browse the [Levni library](/library/) to see the 538 drawings your agent will pick from, or open [the agents section](/#agents) for more setups. Once the server works, follow [the Claude Code cover guide](/blog/generate-blog-covers-claude-code/) to make your first real image, and read [how an agent checks its own layout](/blog/agent-layout-critic/) to learn what the critic's notes mean.
+
+Related: if you publish with Ghost, the same server can add images to your drafts, see [add featured images to Ghost drafts with an AI assistant](/blog/ghost-featured-images-ai/).

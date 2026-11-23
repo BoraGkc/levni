@@ -1,0 +1,4 @@
+{ "seed": 33, "elements": [
+  { "type": "label", "text": "Monthly bill, before and after (sample data)", "x": 120, "y": 90, "size": 18 },
+  { "type": "bars", "x": 120, "y": 130, "w": 960, "h": 440, "values": [100, 82], "labels": ["Before", "After"], "highlight": 1, "showValues": true, "prefix": "€", "labelSize": 18, "gap": 0.5 }
+] }

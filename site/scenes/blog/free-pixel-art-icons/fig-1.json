@@ -1,0 +1,10 @@
+{ "seed": 22, "elements": [
+  { "type": "prop", "name": "pixel-chat", "variant": 0, "x": 180, "y": 320, "size": 220 },
+  { "type": "prop", "name": "pixel-chat", "variant": 1, "x": 460, "y": 320, "size": 220 },
+  { "type": "prop", "name": "pixel-chat", "variant": 2, "x": 740, "y": 320, "size": 220 },
+  { "type": "prop", "name": "pixel-chat", "variant": 3, "x": 1020, "y": 320, "size": 220 },
+  { "type": "label", "text": "0 regular", "x": 180, "y": 500, "anchor": "middle", "size": 18 },
+  { "type": "label", "text": "1 thin", "x": 460, "y": 500, "anchor": "middle", "size": 18 },
+  { "type": "label", "text": "2 solid", "x": 740, "y": 500, "anchor": "middle", "size": 18 },
+  { "type": "label", "text": "3 glyph", "x": 1020, "y": 500, "anchor": "middle", "size": 18 }
+] }

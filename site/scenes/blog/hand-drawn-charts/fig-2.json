@@ -1,0 +1,7 @@
+{ "seed": 8, "elements": [
+  { "type": "label", "text": "Two series, sample data", "x": 100, "y": 80, "size": 18 },
+  { "type": "linechart", "x": 100, "y": 120, "w": 1000, "h": 460,
+    "series": [[4, 6, 5, 8, 9, 12, 11, 14], [3, 3, 4, 4, 6, 5, 7, 8]],
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+    "colors": ["coral", "blue"], "dots": true, "area": true, "labelSize": 16 }
+] }

@@ -1,0 +1,5 @@
+{ "seed": 4, "finish": "soft", "background": "#E9EEF7", "elements": [
+  { "type": "prop", "name": "trophy", "x": 330, "y": 336, "size": 330 },
+  { "type": "arrow", "from": [520, 336], "to": [670, 336], "bend": 0.15, "color": "ink" },
+  { "type": "extrude3d", "name": "trophy", "x": 870, "y": 336, "size": 330 }
+] }

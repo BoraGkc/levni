@@ -1,0 +1,9 @@
+{ "seed": 41, "clip": [60, 52, 1080, 569], "elements": [
+  { "type": "panel", "x": 60, "y": 52, "w": 1080, "h": 569, "color": "blue" },
+  { "type": "disc", "x": 520, "y": 320, "r": 230, "color": "tone" },
+  { "type": "prop", "id": "mon", "name": "monitor", "x": 500, "y": 330, "size": 480, "shadow": true },
+  { "type": "prop", "name": "coffee-cup", "in": { "ref": "mon", "slot": "screen" }, "fit": 0.8 },
+  { "type": "prop", "id": "ph", "name": "phone", "x": 880, "y": 380, "size": 300, "rot": 8 },
+  { "type": "prop", "name": "coffee-cup", "in": { "ref": "ph", "slot": "screen" }, "fit": 0.8 },
+  { "type": "prop", "name": "sparkle", "x": 220, "y": 170, "size": 80 }
+] }

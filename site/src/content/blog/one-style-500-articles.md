@@ -113,3 +113,5 @@ Then check the result the way the project does: render, read the critic's notes,
 ## What to do next
 
 Browse the [Levni library](/library/) to see the drawings behind these covers. To try the workflow yourself, follow [the Claude Code guide](/blog/generate-blog-covers-claude-code/). To read why we built the engine in the first place, see [introducing Levni](/blog/introducing-levni/).
+
+Related: the people in these covers are always faceless; [faceless people illustrations](/blog/faceless-people-illustrations/) shows the poses, groups and crowds.

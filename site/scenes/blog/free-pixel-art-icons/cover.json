@@ -1,0 +1,9 @@
+{ "seed": 21, "clip": [60, 52, 1080, 569], "elements": [
+  { "type": "panel", "x": 60, "y": 52, "w": 1080, "h": 569, "color": "blue" },
+  { "type": "disc", "x": 600, "y": 336, "r": 210, "color": "mustard" },
+  { "type": "prop", "name": "pixel-heart", "variant": 2, "x": 600, "y": 340, "size": 330 },
+  { "type": "prop", "name": "pixel-gamepad", "variant": 0, "x": 250, "y": 200, "size": 150, "recolor": { "ink": "paper", "tone-mustard": "mustard" } },
+  { "type": "prop", "name": "pixel-lightbulb", "variant": 0, "x": 960, "y": 190, "size": 140, "recolor": { "ink": "paper", "tone-mustard": "mustard" } },
+  { "type": "prop", "name": "pixel-mail", "variant": 0, "x": 230, "y": 480, "size": 140, "recolor": { "ink": "paper", "tone-mustard": "mustard" } },
+  { "type": "prop", "name": "pixel-coffee", "variant": 0, "x": 970, "y": 480, "size": 150, "recolor": { "ink": "paper", "tone-mustard": "mustard" } }
+] }

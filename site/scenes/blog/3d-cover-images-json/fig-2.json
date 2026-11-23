@@ -1,0 +1,3 @@
+{ "finish": "soft", "background": "#E4EEF9",
+  "elements": [{ "type": "soft3d", "preset": "auto", "seed": 5, "palette": "aqua", "badge": "badge.svg" }],
+  "title": { "text": "How we rebuilt our onboarding in six weeks", "kicker": "Case study", "brand": "levni.dev" } }

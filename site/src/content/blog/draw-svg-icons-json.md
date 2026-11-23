@@ -168,3 +168,5 @@ npm test
 ## What to do next
 
 Browse the [Levni library](/library/) first to see what already exists, so you draw what is missing. Then read [free illustrations for commercial use](/blog/free-illustrations-commercial-use/) for what the licence means for people who use your drawing. To see your icons inside a finished image, follow [generate blog covers with Claude Code](/blog/generate-blog-covers-claude-code/).
+
+Related: any icon you draw this way can also become a 3D icon, see [free 3D icons](/blog/free-3d-icons/). For a ready set in a pixel style, see [free pixel art icons](/blog/free-pixel-art-icons/).
