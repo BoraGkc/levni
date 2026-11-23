@@ -153,4 +153,4 @@ the critic's notes and save features.png.
 
 ## What to do next
 
-See more extruded icons in [the 3D icon gallery](/gallery/#icons3d) and the soft 3D renderer on [the features page](/features/). For abstract 3D covers with a title, read [3D cover images without a 3D tool](/blog/3d-cover-images-json/). Browse [the library](/library/) for drawings to extrude, and find the source on [GitHub](https://github.com/BoraGkc/levni).
+See more extruded icons in [the 3D icon gallery](/gallery/#icons) and the soft 3D renderer on [the features page](/features/). For abstract 3D covers with a title, read [3D cover images without a 3D tool](/blog/3d-cover-images-json/). Browse [the library](/library/) for drawings to extrude, and find the source on [GitHub](https://github.com/BoraGkc/levni).

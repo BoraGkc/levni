@@ -163,4 +163,4 @@ save chart.png.
 
 ## What to do next
 
-See more charts in [the data gallery](/gallery/#data) and the other elements on [the features page](/features/). For a whole cover around a chart, read [generate blog covers with Claude Code](/blog/generate-blog-covers-claude-code/), and to resize a chart for social posts, read [one illustration, every social image size](/blog/social-media-image-sizes/). Browse [the library](/library/) for drawings to use as isotype icons.
+See more charts in [the data gallery](/gallery/#charts) and the other elements on [the features page](/features/). For a whole cover around a chart, read [generate blog covers with Claude Code](/blog/generate-blog-covers-claude-code/), and to resize a chart for social posts, read [one illustration, every social image size](/blog/social-media-image-sizes/). Browse [the library](/library/) for drawings to use as isotype icons.
