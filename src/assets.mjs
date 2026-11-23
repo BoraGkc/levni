@@ -9,6 +9,7 @@ import { PERSON_ASSETS } from './person.mjs';
 import { DITHER_ASSETS } from './dither.mjs';
 import { MESHGRAD_ASSETS } from './meshgrad.mjs';
 import { ENGRAVE_ASSETS } from './engrave.mjs';
+import { SEAL_ASSETS } from './seal.mjs';
 
 const f = (n) => Math.round(n * 10) / 10;
 
@@ -356,3 +357,6 @@ Object.assign(ASSETS, MESHGRAD_ASSETS);
 
 // Line-art landscapes (terrain, ridgelines, engrave): see engrave.mjs
 Object.assign(ASSETS, ENGRAVE_ASSETS);
+
+// Text on a circle, seals, ticket stubs (ringtext, seal, stub): see seal.mjs
+Object.assign(ASSETS, SEAL_ASSETS);
