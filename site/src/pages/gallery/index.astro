@@ -21,6 +21,7 @@ const pixelTiles: Item[] = pixelProps.filter((_, i) => i % 7 === 0).slice(0, 66)
 });
 
 const intro: Record<string, [string, string, string]> = {
+  posters: ['One brand spec, { "brand": { name, tagline, mark, inks, words } }, makes eight portrait posters that share inks, type and a mark: split, map, bauhaus, echo, camo, vertical, summit and launch. The big type is drawn as paths from bundled open fonts. Three fictional brands and some single posters; open one for its scene.', doc('docs/poster.md'), 'Branding posters guide'],
   brand: ['Ordered dither fields, a print pass that reprints any scene as riso, gameboy, blueprint or newsprint, grainy mesh gradients with calm zones for text, and ASCII, block and dot-matrix fills of any drawing. Backgrounds, hero art and dev-tool cards, all from JSON.', doc('docs/scene.md#dither-recipes'), 'Dither, mesh gradient and glyph fill recipes'],
   stickers: ['seal sets a scalloped, perforated or zigzag badge with ring text and a word or drawing in the middle; stub cuts a ticket; diecut gives any drawing a thick paper outline like a printed sticker.', doc('docs/scene.md#seal-recipes'), 'Seal recipes'],
   lines: ['terrain draws wireframe hills with glowing streams, ridgelines stacks profile lines that hide each other, and engrave etches mountains, a moon or a radial field with lines whose thickness follows the tone.', doc('docs/scene.md#line-art-landscape-recipes'), 'Line-art landscape recipes'],
@@ -35,14 +36,14 @@ const intro: Record<string, [string, string, string]> = {
 };
 
 // items shown before "Show more": in the All view, and in a single-section view
-const firstPage: Record<string, number> = { icons: 12, pixel: 18, formats: 6 };
-const tabPage: Record<string, number> = { icons: 18, pixel: 36, formats: 12 };
+const firstPage: Record<string, number> = { posters: 8, icons: 12, pixel: 18, formats: 6 };
+const tabPage: Record<string, number> = { posters: 12, icons: 18, pixel: 36, formats: 12 };
 const groups = (gallery.groups as [string, string][]).map(([key, label]) => {
   const items: Item[] = (gallery.items as Item[]).filter((i) => i.group === key);
   return { key, label, items: key === 'pixel' ? [...items, ...pixelTiles] : items, first: firstPage[key] ?? 6, page: tabPage[key] ?? 12 };
 });
 // the strongest images, in the order they scroll past the title
-const heroIds = ['boards/01-feneri', 'stickers/01-seal-sheet', 'brand/01-dither-sunset', 'boards/03-firin', 'lines/05-engrave-poster', 'stickers/04-diecut-pack', 'brand/10-glyphfill-globe', 'boards/05-lale', 'lines/01-terrain-hero', 'brand/12-glyphfill-og-card', 'boards/02-pusula', 'stickers/05-seal-night'];
+const heroIds = ['posters/01-kumru-split', 'boards/01-feneri', 'posters/06-orbit-launch', 'stickers/01-seal-sheet', 'brand/01-dither-sunset', 'boards/03-firin', 'lines/05-engrave-poster', 'stickers/04-diecut-pack', 'posters/03-zeytin-map', 'brand/10-glyphfill-globe', 'boards/05-lale', 'lines/01-terrain-hero', 'brand/12-glyphfill-og-card', 'boards/02-pusula', 'stickers/05-seal-night'];
 const hero: Item[] = heroIds.map((k) => (gallery.items as Item[]).find((i) => `${i.group}/${i.id}` === k)!).filter(Boolean);
 const total = groups.reduce((n, g) => n + g.items.length, 0);
 const thumb = (i: Item) => i.src || `/g/${i.group}/${i.id}-s.webp`;
@@ -51,12 +52,12 @@ const large = (i: Item) => i.big || (i.src ? i.src : `/g/${i.group}/${i.id}.webp
 const json = (i: Item) => (i.code ? undefined : `/g/${i.group}/${i.id}.json`);
 const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= i.h ? 'square' : 'tall');
 ---
-<Base title="Gallery" description={`${total} images drawn by Levni from a JSON scene: brand boards, seals and stickers, brand assets (dither, mesh gradients), etched terrain, pixel icons, isometric little worlds, hand-inked charts, riso and miniature covers, 3D icons, every social format and soft 3D covers. Open any one to copy its scene.`}>
+<Base title="Gallery" description={`${total} images drawn by Levni from a JSON scene: branding posters, brand boards, seals and stickers, brand assets (dither, mesh gradients), etched terrain, pixel icons, isometric little worlds, hand-inked charts, riso and miniature covers, 3D icons, every social format and soft 3D covers. Open any one to copy its scene.`}>
   <div class="wrap head">
     <div class="head-text">
       <p class="eyebrow">Gallery · every image drawn by Levni</p>
       <h1>What one JSON scene <em class="accent">becomes</em>.</h1>
-      <p class="lede">Brand boards, stickers and brand assets first, then terrain, pixel icons, little worlds and charts. {total} images, no image model. Open one to see it large with the exact scene that drew it, copy the JSON, and change a seed or a palette.</p>
+      <p class="lede">Branding posters, brand boards, stickers and brand assets first, then terrain, pixel icons, little worlds and charts. {total} images, no image model. Open one to see it large with the exact scene that drew it, copy the JSON, and change a seed or a palette.</p>
     </div>
     <div class="show" role="region" aria-label="A few favourites">
       <div class="reel">
@@ -282,6 +283,7 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
   .grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); }
   .grid-icons, .grid-formats { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
   .grid-boards { grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); }
+  .grid-posters { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
   .grid-icons .wide { grid-column: span 2; }
   .grid-pixel { grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 10px; }
   .grid-pixel .wide { grid-column: 1 / -1; }
@@ -336,6 +338,7 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
     .strip { gap: 10px; padding: 10px 10px 10px 0; }
     .reel .strip:first-child { padding-left: 10px; }
     .grid, .grid-boards { grid-template-columns: minmax(0, 1fr); }
+    .grid-posters { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
     .grid-icons, .grid-formats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
     .grid-pixel { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .tabs a { padding: 6px 12px; font-size: 0.9rem; }

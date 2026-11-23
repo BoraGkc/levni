@@ -1,6 +1,6 @@
 {
   "name": "@levni/levni",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "mcpName": "dev.levni/levni",
   "description": "Hand-inked, riso-printed illustrations from JSON scenes. Design assets for agents and publishers. Powered by Ortak Alan.",
   "type": "module",

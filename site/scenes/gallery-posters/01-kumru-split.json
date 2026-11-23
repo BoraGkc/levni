@@ -1,0 +1,106 @@
+{
+ "_meta": {
+  "title": "Kumru: split poster",
+  "alt": "A split poster for Kumru, a coffee roaster, drawn from one brand spec"
+ },
+ "canvas": [
+  1200,
+  1600
+ ],
+ "finish": "soft",
+ "seed": 11,
+ "background": "#CBCEE5",
+ "elements": [
+  {
+   "type": "amtone",
+   "x": 0,
+   "y": 0,
+   "w": 1200,
+   "h": 1150,
+   "source": "radial",
+   "cx": 820,
+   "cy": 330,
+   "radius": 900,
+   "from": 0.9,
+   "to": 0.05,
+   "cell": 14,
+   "angle": 45,
+   "colors": [
+    "#1F3BE0"
+   ]
+  },
+  {
+   "type": "amtone",
+   "source": "prop",
+   "prop": "dove",
+   "x": 560,
+   "y": 600,
+   "size": 760,
+   "cell": 10,
+   "angle": 15,
+   "colors": [
+    "#14181F"
+   ]
+  },
+  {
+   "type": "block",
+   "x": 0,
+   "y": 1150,
+   "w": 1200,
+   "h": 450,
+   "color": "#F0573A"
+  },
+  {
+   "type": "type",
+   "text": "Slow coffee for fast mornings, roasted\nin Izmir",
+   "x": 70,
+   "y": 1205,
+   "size": 22,
+   "leading": 1.35,
+   "color": "#F1EEE6"
+  },
+  {
+   "type": "type",
+   "text": "+ KUMRU**ROAST**",
+   "x": 70,
+   "y": 1300,
+   "size": 40,
+   "weight": 300,
+   "boldFont": "mono",
+   "boldWeight": 800,
+   "color": "#F1EEE6"
+  },
+  {
+   "type": "type",
+   "text": "POUR.",
+   "x": 70,
+   "y": 1380,
+   "w": 840,
+   "font": "pixel",
+   "tracking": -0.04,
+   "color": "#F1EEE6"
+  },
+  {
+   "type": "type",
+   "text": "KU9432",
+   "x": 1130,
+   "y": 1535,
+   "size": 20,
+   "font": "mono",
+   "weight": 800,
+   "align": "right",
+   "color": "#14181F"
+  },
+  {
+   "type": "type",
+   "text": "+",
+   "x": 1130,
+   "y": 1200,
+   "size": 34,
+   "font": "mono",
+   "weight": 800,
+   "align": "right",
+   "color": "#F1EEE6"
+  }
+ ]
+}

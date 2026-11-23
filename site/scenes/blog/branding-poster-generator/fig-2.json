@@ -1,0 +1,7 @@
+{ "seed": 2, "finish": "soft", "background": "#F1EEE6", "elements": [
+ {"type":"type","text":"Slow coffee","x":60,"y":70,"size":110,"font":"grotesk","weight":300,"color":"#14181F"},
+ {"type":"type","text":"SLOW COFFEE","x":60,"y":235,"size":110,"font":"black","color":"#1F3BE0"},
+ {"type":"type","text":"SLOW**COFFEE**","x":60,"y":390,"size":70,"font":"mono","weight":300,"boldWeight":800,"color":"#14181F"},
+ {"type":"type","text":"slow coffee","x":60,"y":505,"size":90,"font":"pixel","color":"#F0573A"},
+ {"type":"type","text":"grotesk / black / mono / pixel","x":1140,"y":620,"size":20,"font":"mono","weight":400,"align":"right","color":"#14181F"}
+]}

@@ -18,6 +18,7 @@ process.chdir(here('..')); // scenes reference files (badges) relative to the re
 
 // tab order on the page
 export const GROUPS = [
+  ['posters', 'Branding posters'],
   ['boards', 'Brand boards'],
   ['stickers', 'Seals & stickers'],
   ['brand', 'Brand assets'],
@@ -100,6 +101,22 @@ if (force || !existsSync(all)) {
     .webp(webp).toFile(all);
   await sharp(all).resize(640).webp({ ...webp, quality: 78 }).toFile(here('public/g/formats/all-s.webp'));
   console.log('formats/all');
+}
+
+// The landing reel's poster cards: three posters of a series side by side on one landscape card
+for (const [name, ids] of [['strip-1', ['01-kumru-split', '03-zeytin-map', '06-orbit-launch']], ['strip-2', ['05-orbit-echo', '04-zeytin-vertical', '02-kumru-camo']]]) {
+  const out = here(`public/g/posters/${name}.webp`);
+  if (!force && existsSync(out)) continue;
+  const [W, H, ph, gap] = [1280, 718, 520, 30];
+  const pw = Math.round((ph * 3) / 4);
+  const left0 = Math.round((W - (pw * 3 + gap * 2)) / 2), top = Math.round((H - ph) / 2);
+  const imgs = await Promise.all(ids.map((id) => sharp(here(`public/g/posters/${id}.webp`)).resize(pw, ph).png().toBuffer()));
+  const frames = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">${ids.map((_, i) => `<rect x="${left0 + i * (pw + gap) - 1}" y="${top - 1}" width="${pw + 2}" height="${ph + 2}" fill="none" stroke="#14181F" stroke-width="2"/>`).join('')}</svg>`);
+  await sharp({ create: { width: W, height: H, channels: 3, background: '#E6E2D8' } })
+    .composite([...imgs.map((input, i) => ({ input, left: left0 + i * (pw + gap), top })), { input: frames, left: 0, top: 0 }])
+    .webp(webp).toFile(out);
+  await sharp(out).resize(640).webp({ ...webp, quality: 78 }).toFile(here(`public/g/posters/${name}-s.webp`));
+  console.log(`posters/${name}`);
 }
 
 mkdirSync(here('src/data'), { recursive: true });

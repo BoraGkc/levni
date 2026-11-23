@@ -1,0 +1,96 @@
+{
+ "_meta": {
+  "title": "Kumru: camo poster",
+  "alt": "A camo poster for Kumru, a coffee roaster, drawn from one brand spec"
+ },
+ "canvas": [
+  1200,
+  1600
+ ],
+ "finish": "soft",
+ "seed": 11,
+ "background": "#F1EEE6",
+ "elements": [
+  {
+   "type": "camo",
+   "x": 0,
+   "y": 0,
+   "w": 590,
+   "h": 1150,
+   "colors": [
+    "#F0573A"
+   ],
+   "ground": "#14181F",
+   "threshold": 0.48,
+   "scale": 0.008
+  },
+  {
+   "type": "dither",
+   "x": 600,
+   "y": 0,
+   "w": 600,
+   "h": 1150,
+   "colors": [
+    "#1F3BE0",
+    "#1B2D93"
+   ],
+   "mode": "radial",
+   "cx": 700,
+   "cy": 450,
+   "radius": 700,
+   "from": 2,
+   "to": 0.1,
+   "cell": 7,
+   "matrix": 8
+  },
+  {
+   "type": "block",
+   "x": 0,
+   "y": 1150,
+   "w": 1200,
+   "h": 450,
+   "color": "#2E8B57"
+  },
+  {
+   "type": "type",
+   "text": "Slow coffee for fast mornings, roasted in\nIzmir",
+   "x": 70,
+   "y": 1205,
+   "size": 22,
+   "leading": 1.35,
+   "color": "#14181F"
+  },
+  {
+   "type": "type",
+   "text": "+ KUMRU**POUR**",
+   "x": 70,
+   "y": 1300,
+   "size": 40,
+   "weight": 300,
+   "boldFont": "mono",
+   "boldWeight": 800,
+   "color": "#14181F"
+  },
+  {
+   "type": "type",
+   "text": "BREW.",
+   "x": 70,
+   "y": 1380,
+   "w": 900,
+   "font": "pixel",
+   "tracking": -0.04,
+   "color": "#14181F"
+  },
+  {
+   "type": "type",
+   "text": "++++",
+   "x": 1130,
+   "y": 1205,
+   "size": 30,
+   "font": "mono",
+   "weight": 800,
+   "align": "right",
+   "color": "#14181F"
+  }
+ ]
+}

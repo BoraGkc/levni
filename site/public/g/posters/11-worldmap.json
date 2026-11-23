@@ -1,0 +1,13 @@
+{
+  "canvas": [1200,1600],
+  "finish": "soft",
+  "seed": 5,
+  "background": "#0B57D0",
+  "grain": 0.12,
+  "elements": [
+    {"type":"shapegrid","x":0,"y":0,"w":1200,"h":300,"cols":1,"rows":1,"gap":0,"cells":[["square","#0A1B3D"]]},
+    {"type":"dotmatrix","x":70,"y":400,"w":1060,"h":720,"mask":"world","cell":13,"dot":0.7,"hollow":0.22,"hollowScale":0.3,"filled":"#F4F2EC","hollowColor":"#F4F2EC","faint":{"color":"#4D86E0","size":0.3},"accent":"#FFB400","accentShare":0.025,"view":[-170,84,180,-60]},
+    {"type":"dotmatrix","x":70,"y":1170,"w":1060,"h":170,"mask":"noise","scale":0.09,"cell":14,"dot":0.7,"hollow":0.3,"filled":"#F4F2EC","faint":{"color":"#4D86E0","size":0.3}},
+    {"type":"furniture","color":"#F4F2EC","border":{"inset":28,"gap":12,"dot":3.4,"fade":"down"},"corners":{"style":"registration","size":22,"inset":52},"tag":{"text":"NT5642","corner":"tr","inset":80,"size":15,"box":"fill","color":"#F4F2EC","textColor":"#0A1B3D"},"plus":{"n":5,"size":14,"gap":14,"at":[100,130]},"rules":[{"y":330,"inset":70,"weight":1.5},{"y":1380,"inset":70,"weight":1.5}],"credits":[{"left":"Structured data modules","right":"Lat 39.9 / Lon 32.8","y":1420,"inset":70,"size":14},{"left":"Infrastructure map","right":"© 2026","edge":"bottom","inset":70,"size":14}]}
+  ]
+}

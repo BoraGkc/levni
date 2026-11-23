@@ -1,0 +1,97 @@
+{
+ "_meta": {
+  "title": "Zeytin Evi: vertical poster",
+  "alt": "A vertical poster for Zeytin Evi, an olive oil maker, drawn from one brand spec"
+ },
+ "canvas": [
+  1200,
+  1600
+ ],
+ "finish": "soft",
+ "seed": 11,
+ "background": "#E8A33D",
+ "elements": [
+  {
+   "type": "spiro",
+   "x": 600,
+   "y": 760,
+   "size": 1300,
+   "R": 5,
+   "r": 3,
+   "d": 5,
+   "turns": 3,
+   "color": "#ECBD75",
+   "weight": 2.5
+  },
+  {
+   "type": "type",
+   "text": "POUR.",
+   "x": 170,
+   "y": 1240,
+   "size": 150,
+   "font": "black",
+   "rotate": -90,
+   "color": "#1E2A1B"
+  },
+  {
+   "type": "type",
+   "text": "TASTE.",
+   "x": 410,
+   "y": 1080,
+   "size": 150,
+   "font": "black",
+   "rotate": -90,
+   "color": "#1E2A1B"
+  },
+  {
+   "type": "type",
+   "text": "SHARE.",
+   "x": 650,
+   "y": 1240,
+   "size": 150,
+   "font": "black",
+   "rotate": -90,
+   "color": "#1E2A1B"
+  },
+  {
+   "type": "type",
+   "text": "PRESS.",
+   "x": 890,
+   "y": 1080,
+   "size": 150,
+   "font": "black",
+   "rotate": -90,
+   "color": "#1E2A1B"
+  },
+  {
+   "type": "block",
+   "x": -40,
+   "y": 1330,
+   "w": 820,
+   "h": 110,
+   "radius": 55,
+   "color": "#EDC585"
+  },
+  {
+   "type": "block",
+   "x": 340,
+   "y": 1450,
+   "w": 900,
+   "h": 110,
+   "radius": 55,
+   "color": "#EBBA6D"
+  },
+  {
+   "type": "type",
+   "text": "ZEYTIN EVI",
+   "x": 1130,
+   "y": 1370,
+   "size": 22,
+   "font": "mono",
+   "weight": 700,
+   "tracking": 0.3,
+   "align": "right",
+   "color": "#1E2A1B"
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+{ "canvas": [1200, 1600], "finish": "soft", "seed": 5, "background": "#F1EEE6", "grain": 0.1, "elements": [
+ {"type":"amtone","x":0,"y":0,"w":1200,"h":1100,"source":"radial","cx":600,"cy":520,"radius":720,"from":0.95,"to":0.05,"cell":12,"angle":45,"colors":["#1F3BE0"]},
+ {"type":"amtone","source":"prop","prop":"lighthouse","x":600,"y":560,"size":700,"cell":9,"angle":15,"colors":["#14181F"]},
+ {"type":"block","x":0,"y":1100,"w":1200,"h":500,"color":"#14181F"},
+ {"type":"type","text":"NIGHT\nFERRY","x":70,"y":1160,"w":1060,"h":330,"fit":"box","font":"black","color":"#F1EEE6"},
+ {"type":"type","text":"Slow ferries across the Bosphorus","x":70,"y":1530,"size":28,"font":"mono","weight":400,"color":"#F0573A"}
+]}

@@ -1,0 +1,72 @@
+{
+ "_meta": {
+  "title": "Orbit: echo poster",
+  "alt": "A echo poster for Orbit, a satellite tracking startup, drawn from one brand spec"
+ },
+ "canvas": [
+  1200,
+  1600
+ ],
+ "finish": "soft",
+ "seed": 11,
+ "background": "#F4F0FF",
+ "elements": [
+  {
+   "type": "type",
+   "text": "TRACK",
+   "x": 70,
+   "y": 80,
+   "w": 1060,
+   "fit": "box",
+   "h": 250,
+   "font": "black",
+   "color": "#12082B"
+  },
+  {
+   "type": "block",
+   "x": 70,
+   "y": 400,
+   "w": 1060,
+   "h": 820,
+   "color": "#12082B"
+  },
+  {
+   "type": "echo",
+   "prop": "satellite",
+   "x": 560,
+   "y": 810,
+   "size": 460,
+   "n": 9,
+   "dx": -26,
+   "dy": 0,
+   "from": "#4B4260",
+   "to": "#F4F0FF",
+   "top": "#F4F0FF",
+   "outline": "#12082B",
+   "weight": 4,
+   "solid": true
+  },
+  {
+   "type": "type",
+   "text": "LAUNCH",
+   "x": 70,
+   "y": 1290,
+   "w": 620,
+   "h": 220,
+   "fit": "box",
+   "font": "black",
+   "color": "#12082B"
+  },
+  {
+   "type": "type",
+   "text": "Small satellites for\npeople who need to\nknow where things are",
+   "x": 1130,
+   "y": 1300,
+   "size": 24,
+   "weight": 400,
+   "leading": 1.3,
+   "align": "right",
+   "color": "#12082B"
+  }
+ ]
+}

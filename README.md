@@ -57,7 +57,7 @@ Node 20+. The only dependency is [sharp](https://sharp.pixelplumbing.com).
 | | |
 | --- | --- |
 | **The Levni Folio** | 1,628 drawings, 3,409 variants (481 of them pixel icons), on 15 shelves, searchable in English and Turkish. CC BY 4.0. [Browse](https://levni.dev/library/) |
-| **Scenes and the critic** | 64 element types on a 1200 × 673 canvas. Pressure-brush ink, riso plate misregistration, paper grain. Same seed, same picture. Every render returns layout notes: off-canvas, accidental crops, lopsided weight, no focal point. |
+| **Scenes and the critic** | 73 element types on a 1200 × 673 canvas. Pressure-brush ink, riso plate misregistration, paper grain. Same seed, same picture. Every render returns layout notes: off-canvas, accidental crops, lopsided weight, no focal point. |
 | **Style packs and your inks** | `riso` (default), `miniature` (Tulip Era colours, with its own tulips, carnations, cypresses and medallion), or your own colour map: every drawing follows your brand. |
 | **Soft 3D finish** | `"finish": "soft"`: clean edges and film grain. A real little 3D renderer (pure JS, no GPU): glossy `ribbon3d` bands (loop, Möbius, spiral, knot), `torus3d`, `sphere3d`, `capsule3d`, `blob3d`, `cubes3d`, interlocking shapes in one `soft3d` scene, `extrude3d` that turns any Folio drawing into a 3D icon, and `soft3d` cover presets (`"preset": "auto"`, five palettes) with room for a title and an `image` badge. [Guide](docs/scene.md#soft-3d-v2-real-3d-shapes-use-with-finish-soft) |
 | **Little 3D worlds** | `iso` dioramas: one line (`"preset": "cafe"`, also `room`, `desk`, `street`, `city`, `office`, `classroom`) lays out a seeded world on a floating slab with soil layers and a soft shadow. 37 object kinds (walls with windows, doors and arches, stairs, roofs, fences, ponds, roads, trees, lamps, furniture, cars, people, posters hung on walls), soft occlusion, painter's order from real 3D boxes, in the riso hand or `"style": "soft"` toy 3D. |
@@ -66,6 +66,7 @@ Node 20+. The only dependency is [sharp](https://sharp.pixelplumbing.com).
 | **Hand-inked data** | `bars`, `linechart`, `pie`, `donut`, `isochart` from plain numbers. |
 | **Every format, plus a title** | cover, og, square, story, youtube: recomposed, not cropped. Optional headline, kicker and brand layer. |
 | **Brand assets** | `dither` fields (Bayer squares, dots, lines, several inks) and a `screen` print pass that turns any scene into a 1-bit, riso, blueprint, Game Boy or newsprint image; grainy `meshgrad` colour fields and orbs; `glyphfill` (ASCII, block and dot-matrix silhouettes, a shaded globe); `seal`, `ringtext`, `stub` tickets and die-cut stickers; wireframe `terrain`, `ridgelines` and `engrave` etchings. Recipes at the end of [`docs/scene.md`](docs/scene.md) |
+| **Branding posters** | `levni poster`: one brand spec (`{ "brand": { name, tagline, mark, inks, words } }`) becomes eight portrait posters (split, map, bauhaus, echo, camo, vertical, summit, launch) and a series sheet. Big type comes from the `type` element, which draws text as paths from bundled open fonts (Space Grotesk, Archivo Black, JetBrains Mono, Departure Mono), so it looks the same everywhere. Also `block`, `amtone`, `camo`, `grain`, `shapegrid`, `echo`, `dotmatrix` and `furniture`. [Guide](docs/poster.md) |
 | **Brand boards** | `levni board`: mark, wordmark, palette, web page, social card, tote, sticker, pattern and business card in one image, from four fields (`{ "brand": { name, tagline, mark, inks } }`). [Guide](docs/board.md) |
 | **Calm images for hard news** | A blue-only pack for loss, disaster, illness, courts and grief. [Guide](docs/sensitive.md) |
 
@@ -85,6 +86,10 @@ Brand assets: dither, screen, mesh gradients, glyph fills, seals, terrain, etchi
 | ![A dithered sunset: blue-to-coral pixel sky, a mustard sun, line-dithered water](examples/dither-sunset.png) | ![Grainy mesh-gradient hero with a mono title](examples/meshgrad-hero.png) | ![A globe drawn in ASCII characters with a lit side and a shadow side](examples/glyphfill-globe.png) |
 | ![A sticker sheet: seals with ring text, a ticket and die-cut stickers](examples/seal-sheet.png) | ![Wireframe terrain at dusk with glowing streams and a rocket on the horizon](examples/engrave-terrain-hero.png) | ![Etched mountains and a sun in blue lines on paper](examples/engrave-etched-poster.png) |
 
+Branding posters: one spec, eight posters in one series (split, map, bauhaus, echo, camo, vertical, summit, launch):
+
+![A series of eight branding posters for a coffee roaster, sharing inks, type and a dove mark](examples/poster-series.png)
+
 ![A brand board for a ferry company made with one brand call: mark, wordmark, web page, palette, social card, tote, sticker, pattern, business card](examples/board-feneri.png)
 
 Full element reference: [`docs/scene.md`](docs/scene.md) · JSON Schema: [`docs/scene.schema.json`](docs/scene.schema.json) · all example scenes: [`examples/`](examples/)
@@ -101,6 +106,7 @@ Full element reference: [`docs/scene.md`](docs/scene.md) · JSON Schema: [`docs/
 | `render_scene` | draw a scene: critic notes, a 560 px preview, and with `out` the full file (.png/.webp/.svg) |
 | `critique_scene` | only the critic's notes, for quick iterations |
 | `render_board` | a brand board from `{ brand: { name, tagline, mark, inks } }` or your own tiles; `guide: true` returns [`docs/board.md`](docs/board.md) |
+| `render_poster` | eight branding posters and a series sheet from `{ brand: { name, tagline, mark, inks, words } }`; `scenes: true` returns the scenes to edit, `guide: true` returns [`docs/poster.md`](docs/poster.md) |
 
 From a checkout, use `"command": "node", "args": ["/path/to/levni/bin/levni.mjs", "mcp"]`. Files from `render_scene` are written relative to the client's working directory. Agents without MCP can use the CLI the same way.
 
@@ -129,6 +135,7 @@ The assistant shows you the preview and applies after you say yes. Drafts only: 
 | `levni list [query]` | search props |
 | `levni sheet <out.png> [prop …]` | contact sheet, every variant on paper and on blue (`--recolor`) |
 | `levni board <spec.json> <out.png>` | brand board: `{"brand": {name, tagline, mark, inks}}` makes a nine-tile board in one call; or place tiles yourself, with browser/card/tote/phone mockups ([docs](docs/board.md)) |
+| `levni poster <spec.json> <out-dir>` | branding posters: `{"brand": {name, tagline, mark, inks, words}}` makes eight 1200 × 1600 posters and `series.png` ([docs](docs/poster.md)) |
 | `levni add <file> [--sheet out.png]` | import props a chat model wrote: check, write, draw ([prompt](docs/prop-prompt.md)) |
 | `levni check [prop …]` | measure props for agents that cannot see images |
 | `levni mcp` | the MCP server |

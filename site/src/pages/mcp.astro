@@ -9,6 +9,7 @@ const json = (env) => JSON.stringify({ mcpServers: { levni: { command: 'npx', ar
 
 const tools: [string, string, string, string][] = [
   ['scene_guide', 'Nothing.', 'The whole scene format as text: canvas, every element type with its fields (drawings, dither, mesh gradients, glyph fills, seals, terrain, engraving), colours, style packs, formats, the critic. Long, so the agent reads it once per session.', 'Read first'],
+  ['render_poster', 'spec (a brand shortcut, { brand: { name, tagline, mark, inks, words } }, with optional only and count), out_dir (optional folder), scenes (true also returns each poster as editable scene JSON), preview (default true), guide (true returns the poster format instead).', 'A text line with the poster count, a contact-sheet preview of the series and with out_dir eight PNGs (poster-01-split.png and so on, 1200 by 1600) plus series.png. With scenes: true, each poster as a scene for render_scene.', 'A poster series'],
   ['render_board', 'spec (a brand shortcut or a board of your own tiles), out (optional .png path), preview (default true), guide (true returns the board format instead).', 'A text line with the board size, a 900 px preview and with out the full PNG. The shortest spec is { "brand": { name, tagline, mark, inks } }, which makes nine tiles: mark, wordmark, web page, palette, social card, tote, sticker, pattern and business card.', 'Brand board'],
   ['list_props', 'query (words in English or Turkish), category (one shelf), limit (default 40, up to 500).', 'Matching drawings with their name, variant count, shelf, tags and what each variant shows, plus the line to paste into a scene. The agent picks real names instead of guessing.', 'Search'],
   ['show_props', 'names: up to 12 drawing names from list_props.', 'A contact sheet image of up to 18 variants, each labelled “name number”, so the agent can choose a variant by eye. Unknown names are reported, not fatal.', 'Choose by eye'],
@@ -17,6 +18,8 @@ const tools: [string, string, string, string][] = [
 ];
 const prompts: [string, string][] = [
   ['A brand board for my product', 'Make a brand board for [product], [one line about what it does]. Pick a mark from the library that suits it, use these inks: [four hex colours], and a serif wordmark. Render it with render_board, save board.png, then tell me which tile you would change.'],
+  ['A poster series for my brand', 'Make a poster series for my brand [name], [one line about what it does]. Pick a mark from the library that suits it, use these inks: [three or four hex colours], and these headline words: [four words]. Render it with render_poster into a folder called posters, look at the contact sheet, and tell me which two posters work best and why.'],
+  ['One poster, then a tweak', 'Run render_poster for [brand] with scenes: true and only ["launch"]. Show me the poster, then change its headline word and the accent ink in the returned scene, render it with render_scene, and save it as launch.png.'],
   ['A sticker sheet', 'Draw a sticker sheet on a blue ground: six library drawings that fit [theme], each die-cut with a thick paper outline in alternating colours and tilted a little, plus two round seals with ring text. Check the critic, then save stickers.png.'],
   ['A dithered hero', 'Write a 1200 by 673 hero in ordered dither: a sky fading from blue to coral in square cells, a dithered sun low on the right, a dark band with line dither at the bottom. Keep the left third calm for a headline. Save hero.png.'],
   ['An ASCII OG card', 'Make an ASCII-style OG card on a dark ground: a rocket filled with dots on the right, “JSON in. Illustration out.” on the left, and a command line in small mono type at the bottom. Save og-ascii.png.'],
@@ -29,12 +32,12 @@ const prompts: [string, string][] = [
   ['Fix a scene without redrawing it', 'Run critique_scene on scene.json and fix each note by moving or resizing elements, not by changing the look. Tell me what you changed.'],
 ];
 const strip = [
+  ['posters', 'strip-1', 'Branding posters', 'render_poster, one brand spec'],
   ['boards', '01-feneri', 'Brand board', 'render_board, four fields'],
   ['stickers', '01-seal-sheet', 'Sticker sheet', 'Seals and die-cut drawings'],
   ['brand', '01-dither-sunset', 'Dithered sunset', 'Dither fields in a scene'],
   ['brand', '12-glyphfill-og-card', 'ASCII OG card', 'Glyph fills and mono type'],
   ['lines', '05-engrave-poster', 'Etched poster', 'Engraving in blue ink'],
-  ['soft3d', 'auto-01', 'Soft 3D cover', 'Glossy 3D shapes'],
 ].map(([g, id, label, note]) => ({ g, id, label, note, alt: (showcase.items as { group: string; id: string; alt: string }[]).find((i) => i.group === g && i.id === id)?.alt ?? label }));
 const ghostTools = [
   ['ghost_drafts', 'Read-only. Drafts without images, their h2 headings and, for one draft, the full text.'],
@@ -45,7 +48,7 @@ const faq = [
   { q: 'Do I need an API key for Levni?', a: 'No. Levni runs on your own machine through npx: no account, no key, no cost per image. Your assistant writes the scene; Levni draws it locally.' },
   { q: 'Where do my Ghost keys go?', a: 'Into the env block of your MCP client config, on your machine. Levni has no server of its own and never sees them. Without the two variables the Ghost tools do not even appear.' },
   { q: 'Can the assistant publish a post by mistake?', a: 'No. The Ghost tools only edit drafts, never change their status, never send a newsletter, and skip drafts that already have images. Writing needs the token from a preview the user has seen.' },
-  { q: 'Can it make brand assets, not only illustrations?', a: 'Yes. Scenes can hold dither fields, mesh gradients, ASCII fills, seals, stickers, terrain and etching, and render_board turns a name, tagline, mark and inks into a nine-tile brand board. The agent reads the format with scene_guide or render_board guide: true.' },
+  { q: 'Can it make brand assets, not only illustrations?', a: 'Yes. Scenes can hold dither fields, mesh gradients, ASCII fills, seals, stickers, terrain and etching, and render_board turns a name, tagline, mark and inks into a nine-tile brand board, and render_poster makes eight branding posters from one brand spec. The agent reads the format with scene_guide or render_board guide: true.' },
   { q: 'Which clients work?', a: 'Any MCP client that runs local stdio servers: Claude Code, Claude Desktop, Cursor, Windsurf, Cline and others. Agents without MCP can call the same features through the levni CLI.' },
 ];
 const jsonld = [
@@ -53,17 +56,17 @@ const jsonld = [
   { '@type': 'FAQPage', mainEntity: faq.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
 ];
 ---
-<Base title="MCP server: give your agent a design studio" description="Connect Levni to Claude, Cursor or any MCP client: the agent draws illustrations, covers, icons, charts, brand assets and whole brand boards, reads the layout critic and saves the files. Free and local." jsonld={jsonld}>
+<Base title="MCP server: give your agent a design studio" description="Connect Levni to Claude, Cursor or any MCP client: the agent draws illustrations, covers, icons, charts, brand assets, brand boards and branding posters, reads the layout critic and saves the files. Free and local." jsonld={jsonld}>
   <article class="wrap page">
     <p class="eyebrow">Levni for agents</p>
     <h1>Give your agent a <em class="accent">design studio</em>.</h1>
-    <p class="lede">With Levni connected, an assistant can make a whole brand board from a name, tagline, mark and four colours, a sheet of seals and stickers, a dithered or mesh-gradient hero, an ASCII Open Graph card, an etched poster, 3D and pixel icons, charts and article covers. It searches the library, writes the scene, reads the critic’s notes, fixes them and saves the file. Free, no image model, and everything runs on your machine.</p>
+    <p class="lede">With Levni connected, an assistant can make a series of branding posters or a whole brand board from a name, tagline, mark and four colours, a sheet of seals and stickers, a dithered or mesh-gradient hero, an ASCII Open Graph card, an etched poster, 3D and pixel icons, charts and article covers. It searches the library, writes the scene, reads the critic’s notes, fixes them and saves the file. Free, no image model, and everything runs on your machine.</p>
 
     <h2 id="makes">What your agent can make</h2>
     <ul class="strip">{strip.map((t) => (
       <li><a href={`/gallery/#${t.g}`}><img src={`/g/${t.g}/${t.id}-s.webp`} width="640" height="359" alt={t.alt} loading="lazy" decoding="async" /></a><strong>{t.label}</strong><span>{t.note}</span></li>
     ))}</ul>
-    <p class="small">Start with <code>render_board</code> for brand boards, or paste one of the <a href="#prompts">brand-asset prompts</a>. Every tile links to its gallery tab.</p>
+    <p class="small">Start with <code>render_poster</code> for poster series or <code>render_board</code> for brand boards, or paste one of the <a href="#prompts">brand-asset prompts</a>. Every tile links to its gallery tab.</p>
 
     <h2 id="setup">Set it up</h2>
     <div class="setup">
@@ -77,7 +80,7 @@ const jsonld = [
     <ol class="prompts">{prompts.map(([t, p]) => (<li><h3>{t}</h3><p>{p}</p></li>))}</ol>
 
     <h2 id="tools">What the agent can do</h2>
-    <p>Six tools, <code>render_board</code> among them. Each takes plain JSON and returns text, an image or both, so a client that can show images lets the agent look at its own work. Nothing leaves your machine.</p>
+    <p>Seven tools, <code>render_poster</code> and <code>render_board</code> among them. Each takes plain JSON and returns text, an image or both, so a client that can show images lets the agent look at its own work. Nothing leaves your machine.</p>
     <ul class="tool-list">{tools.map(([n, input, back, tag]) => (
       <li>
         <h3><code>{n}</code> <span class="tag">{tag}</span></h3>
@@ -85,7 +88,7 @@ const jsonld = [
         <p><strong>Comes back.</strong> {back}</p>
       </li>
     ))}</ul>
-    <p class="small">With Ghost credentials in the environment, three more tools appear (<a href="#ghost">below</a>). Agents without MCP use the same features through the <code>levni</code> CLI: <code>levni render</code> and <code>levni board</code>.</p>
+    <p class="small">With Ghost credentials in the environment, three more tools appear (<a href="#ghost">below</a>). Agents without MCP use the same features through the <code>levni</code> CLI: <code>levni render</code>, <code>levni board</code> and <code>levni poster</code>.</p>
 
     <h2 id="session">How a session goes</h2>
     <ol class="session">

@@ -1,0 +1,11 @@
+{
+  "canvas": [1200,1600],
+  "finish": "soft",
+  "seed": 11,
+  "background": "#EFE9DC",
+  "grain": 0.1,
+  "elements": [
+    {"type":"shapegrid","x":70,"y":110,"w":1060,"h":1200,"cols":5,"rows":6,"gap":14,"seed":4,"colors":["#14181F","#F2603F"],"weights":[10,2],"spans":[{"col":0,"row":3,"cols":5,"rows":3,"module":"blank"}]},
+    {"type":"furniture","color":"#14181F","corners":{"style":"squares","size":12,"inset":36},"plus":{"n":4,"size":14,"gap":14,"edge":"top","inset":64,"align":"end"},"tag":{"text":"NT5642","corner":"tl","inset":54,"size":14,"box":"outline"},"rules":[{"y":1340,"inset":70,"weight":1.5}],"credits":{"left":"Levni / Poster 01","center":"Bauhaus module grid","right":"© 2026","edge":"bottom","inset":60,"size":14}}
+  ]
+}

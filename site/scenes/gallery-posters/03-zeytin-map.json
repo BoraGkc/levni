@@ -1,0 +1,102 @@
+{
+ "_meta": {
+  "title": "Zeytin Evi: map poster",
+  "alt": "A map poster for Zeytin Evi, an olive oil maker, drawn from one brand spec"
+ },
+ "canvas": [
+  1200,
+  1600
+ ],
+ "finish": "soft",
+ "seed": 11,
+ "background": "#5E7F3A",
+ "elements": [
+  {
+   "type": "block",
+   "x": 0,
+   "y": 0,
+   "w": 1200,
+   "h": 300,
+   "color": "#1E2A1B"
+  },
+  {
+   "type": "block",
+   "x": 70,
+   "y": 70,
+   "w": 44,
+   "h": 26,
+   "radius": 13,
+   "color": "#F3EEDD"
+  },
+  {
+   "type": "block",
+   "x": 100,
+   "y": 70,
+   "w": 26,
+   "h": 26,
+   "radius": 13,
+   "outline": true,
+   "weight": 6,
+   "color": "#F3EEDD"
+  },
+  {
+   "type": "type",
+   "text": "What is new?",
+   "x": 70,
+   "y": 150,
+   "size": 104,
+   "weight": 400,
+   "color": "#F3EEDD"
+  },
+  {
+   "type": "dotmatrix",
+   "x": 70,
+   "y": 380,
+   "w": 1060,
+   "h": 620,
+   "mask": "world",
+   "cell": 15,
+   "dot": 0.6,
+   "hollow": 0,
+   "filled": "#F3EEDD",
+   "faint": {
+    "color": "#839B63",
+    "size": 0.5
+   }
+  },
+  {
+   "type": "type",
+   "text": "+ PRESS**POUR**",
+   "x": 70,
+   "y": 1080,
+   "size": 34,
+   "font": "mono",
+   "weight": 300,
+   "boldWeight": 800,
+   "color": "#F3EEDD"
+  },
+  {
+   "type": "type",
+   "text": "Zeytin Evi",
+   "x": 70,
+   "y": 1150,
+   "w": 1060,
+   "h": 200,
+   "fit": "box",
+   "weight": 400,
+   "tracking": -0.03,
+   "color": "#F3EEDD"
+  },
+  {
+   "type": "type",
+   "text": "Cold-pressed olive oil from one family grove",
+   "x": 70,
+   "y": 1400,
+   "size": 26,
+   "font": "mono",
+   "weight": 300,
+   "leading": 1.4,
+   "color": "#F3EEDD"
+  }
+ ]
+}

@@ -21,8 +21,10 @@ const item = (group: string, id: string, label: string) => {
   const it = (showcase.items as { group: string; id: string; alt: string }[]).find((i) => i.group === group && i.id === id);
   return { group, label, src: `/g/${group}/${id}-s.webp`, alt: it?.alt ?? label };
 };
+const poster = (id: string) => ({ group: 'posters', label: 'Branding posters', src: `/g/posters/${id}-s.webp`, alt: 'Three branding posters from one brand spec, sharing inks, type and a mark' });
 const reel = [
   item('boards', '01-feneri', 'Brand board'),
+  poster('strip-1'),
   item('stickers', '01-seal-sheet', 'Seals and stickers'),
   item('soft3d', 'auto-01', 'Soft 3D cover'),
   item('boards', '03-firin', 'Brand board'),
@@ -36,6 +38,7 @@ const reel = [
   item('charts', 'bars', 'Hand-inked data'),
   item('brand', '07-meshgrad-hero', 'Mesh gradient'),
   item('pixel', 'grid-riso', 'Pixel icons'),
+  poster('strip-2'),
   item('stickers', '02-seal-loyalty', 'Seals and stickers'),
   item('lines', '01-terrain-hero', 'Terrain'),
   item('soft3d', 'auto-03', 'Soft 3D cover'),
@@ -56,8 +59,8 @@ const boardAlt = (showcase.items as { group: string; id: string; alt: string }[]
 
 // What it makes: one tile per kind, each to its gallery tab (the gallery filters by #group)
 const makes = [
-  ['covers', 'cover-riso', 'Covers', 'Article and social covers in a set size.'],
-  ['covers', 'spot-riso', 'Spot illustrations', 'A few drawings composed on a disc or panel.'],
+  ['posters', 'strip-1', 'Branding posters', 'Eight posters from one brand spec.'],
+  ['covers', 'cover-riso', 'Covers and spots', 'Article covers and drawings on a disc or panel.'],
   ['icons', 'row', '3D icons', 'Any library drawing extruded and lit.'],
   ['pixel', 'grid-riso', 'Pixel icons', 'Icon sets on a pixel grid.'],
   ['worlds', 'cafe-riso-2', 'Little worlds', 'Isometric rooms, streets and cities.'],
@@ -68,7 +71,7 @@ const makes = [
   ['brand', '10-glyphfill-globe', 'ASCII art', 'Shapes filled with characters or dots.'],
   ['lines', '05-engrave-poster', 'Terrain and etching', 'Wireframe hills and pen-hatched plates.'],
   ['boards', '03-firin', 'Brand boards', 'Nine tiles from four fields.'],
-].map(([group, id, label, text]) => ({ ...item(group, id, label), text }));
+].map(([group, id, label, text]) => ({ ...(group === 'posters' ? poster(id) : item(group, id, label)), label, text }));
 
 // The recolour demo: real per-variant SVGs from /props-svg, recoloured in the browser like a style pack
 const demo = [
@@ -156,7 +159,7 @@ const gallery = [
 ];
 
 const faq = [
-  { q: 'What is Levni?', a: `An open illustration library (${SITE.props} hand-inked drawings and growing) and the open-source engine that composes them into covers, spot illustrations, icons, social images, stickers, brand assets and whole brand boards, in one consistent style. It runs on Node with sharp; there is no image model and no API key.` },
+  { q: 'What is Levni?', a: `An open illustration library (${SITE.props} hand-inked drawings and growing) and the open-source engine that composes them into covers, spot illustrations, icons, social images, stickers, brand assets, brand boards and branding posters, in one consistent style. It runs on Node with sharp; there is no image model and no API key.` },
   { q: 'Can I use the drawings on their own?', a: 'Yes. Browse the Library, pick a drawing and place it in a scene by name. The drawings are CC BY 4.0: free for commercial work with credit “drawings by Ortak Alan”.' },
   { q: 'How do AI agents use it?', a: 'An agent writes the scene JSON, renders it, and reads the layout critic’s notes (off-canvas elements, accidental crops, lopsided weight, no focal point) before a person looks. Because it is JSON in and image out, it maps directly onto an MCP tool.' },
   { q: 'What does it cost?', a: 'Nothing per image. Levni is MIT-licensed code that runs on your own machine or in CI. The Levni Folio drawings are CC BY 4.0: credit “drawings by Ortak Alan”.' },
@@ -189,7 +192,7 @@ const star = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
     <div class="wrap hero-head">
       <p class="pill"><span class="dot" aria-hidden="true"></span> Open source · MCP-ready · free</p>
       <h1>Your agent’s <em>design studio</em>.</h1>
-      <p class="lede">Illustrations, covers, 3D and pixel icons, charts, brand assets and whole brand boards, drawn from a few lines of JSON. Free, local, no image model and no API key, with an MCP server so Claude, Codex or Cursor can run it.</p>
+      <p class="lede">Illustrations, covers, 3D and pixel icons, charts, brand assets, brand boards and branding posters, drawn from a few lines of JSON. Free, local, no image model and no API key, with an MCP server so Claude, Codex or Cursor can run it.</p>
       <div class="ctas">
         <a class="btn btn-primary" href="#boards">See a brand board</a>
         <a class="btn" href="/mcp/">Add it to Claude</a>

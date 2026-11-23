@@ -1,0 +1,86 @@
+{
+ "_meta": {
+  "title": "Orbit: launch poster",
+  "alt": "A launch poster for Orbit, a satellite tracking startup, drawn from one brand spec"
+ },
+ "canvas": [
+  1200,
+  1600
+ ],
+ "finish": "soft",
+ "seed": 11,
+ "background": "#12082B",
+ "elements": [
+  {
+   "type": "amtone",
+   "x": 600,
+   "y": 700,
+   "r": 470,
+   "source": "radial",
+   "cell": 12,
+   "angle": 30,
+   "colors": [
+    "#C6F432"
+   ]
+  },
+  {
+   "type": "amtone",
+   "source": "prop",
+   "prop": "satellite",
+   "x": 600,
+   "y": 700,
+   "size": 560,
+   "cell": 9,
+   "angle": 75,
+   "colors": [
+    "#F4F0FF"
+   ]
+  },
+  {
+   "type": "type",
+   "text": "LAUNCH",
+   "x": 70,
+   "y": 1230,
+   "w": 760,
+   "h": 150,
+   "fit": "box",
+   "font": "black",
+   "color": "#F4F0FF"
+  },
+  {
+   "type": "type",
+   "text": "Small satellites for people who need to\nknow where things are",
+   "x": 70,
+   "y": 1455,
+   "size": 26,
+   "font": "mono",
+   "weight": 300,
+   "leading": 1.4,
+   "color": "#F4F0FF"
+  },
+  {
+   "type": "furniture",
+   "color": "#F4F0FF",
+   "credits": {
+    "left": "© 2026",
+    "centre": "Orbit",
+    "right": "orbit.com"
+   },
+   "tag": {
+    "text": "OR1710",
+    "corner": "tr",
+    "box": "outline"
+   }
+  },
+  {
+   "type": "grain",
+   "mode": "toner",
+   "colors": [
+    "#F4F0FF",
+    "#C6F432"
+   ],
+   "opacity": 0.5,
+   "density": 1.2
+  }
+ ]
+}
