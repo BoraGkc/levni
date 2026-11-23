@@ -9,6 +9,7 @@
   ],
   "variants": [
     {
+      "slots": { "screen": [15, 25, 54, 55] },
       "note": "harvested from .cache/cizim-drafts/junji-ito-canli/kapak.json",
       "paths": [
         {

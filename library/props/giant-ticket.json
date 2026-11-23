@@ -10,6 +10,7 @@
   ],
   "variants": [
     {
+      "slots": { "body": [8, 28, 60, 44], "stub": [76, 28, 17, 44] },
       "note": "harvested from .cache/cizim-drafts/nathan-fielder-elizabeth/ici-1-r0.json",
       "paths": [
         {

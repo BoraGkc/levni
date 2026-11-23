@@ -10,6 +10,7 @@
   ],
   "variants": [
     {
+      "slots": { "lens": [33, 18, 34, 34] },
       "note": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/kapak.json",
       "paths": [
         {

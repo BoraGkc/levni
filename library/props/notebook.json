@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "cover": [32, 18, 46, 70], "label": [39, 36, 28, 19] },
    "note": "closed spiral notebook, coral cover with label",
    "paths": [
     {

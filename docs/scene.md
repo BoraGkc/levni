@@ -56,7 +56,7 @@ House rule: at most **two main inks plus paper** per scene; a third colour only 
 
 | type | fields | notes |
 | --- | --- | --- |
-| `prop` | `name` (name or tag, any language), `variant`?, `x`, `y` (centre), `size`, `flip`?, `rot`?, `overprint`?, `crop`?, `recolor`? (`{"coral":"blue"}`), `palette`? (`"blue"`), `fit`? | **Use this first.** A drawing from the prop library (`levni list`, `levni sheet`). Takes every `draw` option, including depth. Unknown names fall back to `icon`. |
+| `prop` | `id`?, `in`?, `name` (name or tag, any language), `variant`?, `x`, `y` (centre), `size`, `flip`?, `rot`?, `overprint`?, `crop`?, `recolor`? (`{"coral":"blue"}`), `palette`? (`"blue"`), `fit`? | **Use this first.** A drawing from the prop library (`levni list`, `levni sheet`). Takes every `draw` option, including depth. Unknown names fall back to `icon`. |
 | `draw` | `x`, `y` (centre of the box), `size`, `paths` [{`d`, `fill`?, `stroke`?, `weight`?, `dash`?, `taper`?, `rule`?}], `rot`?, `flip`?, `overprint`?, `crop`?, `fit`?, `name`? | **Your own drawing** in a 0..100 box as SVG path data. `weight` is output pixels (does not grow with `size`). `dash: [on, off]` for seams and routes; `taper: false` keeps line ends blunt; `rule: "evenodd"` for holes (rings, frames); a zero-length stroke (`M x y h.1`) is a round dot; `fit: true` scales the visible ink to `size` and centres it on `x, y`. |
 | depth on `draw`/`prop` | `extrude: {dx, dy, color, steps}` · `shade: {lx, ly, depth, gap, angle, color}` · `shadow: {dx, dy, color, opacity}` (each may be `true`) | Cut-paper thickness, pencil hatching on the side away from the light, a cast shadow. Best on the focal object. |
 | `icon` | `name` (English concept), `x`, `y`, `size`, `color`, `under`?, `overprint`?, `rot`?, `weight`? | A Tabler icon redrawn in the house line. **Needs `@tabler/icons`** (optional peer dependency). |
@@ -158,6 +158,25 @@ Limits: a cluster that is wide and shallow leaves empty ground above and below o
 | `band` | colour of a backing band (full width for `top`/`bottom`, a column for `left`) |
 
 The title is plain SVG text above everything, outside the crayon filter, with safe margins (about 5.5 % of the short side; on `story` also 10 % at the top and 14 % at the bottom for app bars). Without a band the text gets a thin halo in the background colour; on dark art use `band` or `color`. Line breaks come from an approximate character-width model (average width per family), so exotic fonts may need `width`. No font is shipped: the stacks use fonts most systems have. A `font.file` is embedded as a base64 `@font-face`, which browsers honour in `.svg` output; the PNG/WebP rasteriser (sharp/librsvg) uses system fonts and ignores `@font-face`, so for raster output install the font on the machine.
+
+## Slots (fusion)
+
+A prop can name places inside its own 0..100 box where something else belongs: a TV has a `screen`, a magnifier a `lens`, a trophy a `top`. Another element can then be put **in** that slot; Levni positions and scales it, whatever the host's `x`, `y`, `size`, `flip` and `rot`.
+
+```json
+{ "type": "prop", "id": "tv1", "name": "old-crt-tv-long-shadow", "x": 460, "y": 340, "size": 520 },
+{ "type": "prop", "name": "chart-board", "in": { "ref": "tv1", "slot": "screen" }, "fit": 0.92 }
+```
+
+- **Host.** Give the host an `id` (any string on any element), or skip it and use `"in": { "prop": "radio", "slot": "dial" }`, which means the most recent earlier element of that prop name. The child must come **after** the host in `elements` (it is drawn on top).
+- **Rect slots** `[x, y, w, h]` are areas to fill. A `prop` or `draw` child is scaled to fit inside (its visible ink, aspect kept) and centred; `fit` is the fill factor, default `0.9` (above 1 lets it overflow). `icon` is centred at the largest square that fits; `label` is centred and sized to the slot unless `size` is set; `glyphs` and `panel` get `x, y, w, h` from the slot. A fifth number tilts a rect slot (degrees, e.g. a credit card's number line).
+- **Point slots** `[x, y]` are places where something stands. The child's bottom-centre lands on the point; its size is its own `size` (default 30 % of the host), times `fit` when given. `label` is centred on the point.
+- **Children**: `prop`, `draw`, `icon`, `glyphs`, `label`, `panel`. Their own `x`, `y` are ignored; `dx`, `dy` nudge the result in pixels; `rot` adds to the host's rotation; `flip` is the child's own.
+- A host can be a child too: put a TV in a TV by giving the inner one an `id` and an `in`.
+- **Errors.** An unknown slot lists the host's slots (`host "phone" has no slot "lens". Available slots: screen (rect)`); an unknown `ref` lists the earlier ids; a host variant without slots says so.
+- **Authoring slots.** Add `"slots": { "screen": [22, 23, 60, 36], "top": [50, 8] }` to a prop variant (any variant, coordinates in its 0..100 box, all inside 0..100; `npm test` checks this). To check the numbers, draw the host with a translucent rect on each slot and look at it. 64 library props have slots on their first variant: monitor, old-crt-tv-long-shadow, mini-flat-screen, tv-face, stage-tv, curtain-tv, falling-ratings-tv, spiral-tv, tv-planter-screen-leaves, tv-apple-antenna, phone, radio, laptop, book, pulse-hand-mirror, door, code-window, shopping-bag, coffee-cup, package, ticket, giant-ticket, warning-sign, dashboard, pill-bottle, stone-suitcase, magnifier, globe, envelope, newspaper, calendar, clapperboard, chart-board, easel, notebook, wallet, credit-card, trophy, trophy-tumbler, briefcase, money-bag, bucket, jug, pitch-deck, paper, stopwatch, clock, film-camera, microphone, lightbulb, sticky-notes, witness-stand-mic, vault-hatch, camera, receipt, map, ballot-box, server-rack, file-cabinet, bench, talk-desk-mic-chat, podium-black-ball, wine-bottle-price-tag, book-stack. Look up a prop's slots in `library/props/<name>.json`.
+
+Examples: [`slots-tv`](../examples/slots-tv.json), [`slots-lens`](../examples/slots-lens.json).
 
 ## The critic
 

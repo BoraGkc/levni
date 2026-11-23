@@ -99,6 +99,22 @@ for (let i = 0; i < list.length; i += 24) {
   const { svg } = await compose({ seed: 1, elements: [{ type: 'people', x: 100, y: 500, w: 800, n: 7, size: 200 }] });
   if (/NaN|undefined|Infinity/.test(svg)) fail('people', 'SVG contains NaN/undefined/Infinity');
 }
+// 3b. Slots: a child lands inside the host's slot, errors name the available slots
+{
+  const host = { type: 'prop', id: 'h', name: 'monitor', x: 400, y: 300, size: 300 };
+  const inkBox = async (els) => (await compose({ seed: 1, elements: els })).used.filter((u) => u.type === 'draw').pop();
+  const child = await inkBox([host, { type: 'prop', name: 'tulip', in: { ref: 'h', slot: 'screen' } }]);
+  // monitor screen is [22, 23, 60, 36] of a 300 box at (400, 300): x 316..496, y 219..327
+  if (!(child.x >= 316 && child.x + child.w <= 496 && child.y >= 219 && child.y + child.h <= 327)) fail('slots', `child outside the screen slot: ${JSON.stringify(child)}`);
+  const flipped = await inkBox([{ ...host, flip: true }, { type: 'prop', name: 'tulip', in: { prop: 'monitor', slot: 'screen' } }]);
+  if (!(flipped.x >= 304 && flipped.x + flipped.w <= 484)) fail('slots', 'flipped host: child outside the mirrored slot');
+  for (const [els, want] of [
+    [[host, { type: 'prop', name: 'tulip', in: { ref: 'h', slot: 'nope' } }], /Available slots: screen/],
+    [[host, { type: 'prop', name: 'tulip', in: { ref: 'zz', slot: 'screen' } }], /matches no earlier element id/],
+  ]) {
+    try { await compose({ seed: 1, elements: els }); fail('slots', `expected an error ${want}`); } catch (err) { if (!want.test(err.message)) fail('slots', `wrong error: ${err.message}`); }
+  }
+}
 
 // 4. Every example scene renders (small, fast)
 const { readdirSync, readFileSync } = await import('node:fs');

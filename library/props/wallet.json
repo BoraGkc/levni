@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "band": [12, 43, 48, 20], "flap": [65, 48, 28, 15] },
    "note": "closed, flap with mustard clasp",
    "paths": [
     {

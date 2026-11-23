@@ -42,5 +42,5 @@ export function expandProp(e) {
   const v = p.variants[Math.min(p.variants.length - 1, e.variant ?? 0)];
   const map = { ...(e.palette === 'blue' ? BLUE : {}), ...(e.recolor || {}) };
   const re = (col) => (col && map[col]) || col;
-  return { ...e, type: 'draw', paths: v.paths.map((x) => ({ ...x, fill: re(x.fill), stroke: re(x.stroke) })) };
+  return { ...e, type: 'draw', _prop: p.name, _slots: v.slots, paths: v.paths.map((x) => ({ ...x, fill: re(x.fill), stroke: re(x.stroke) })) };
 }

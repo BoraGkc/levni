@@ -10,6 +10,7 @@
  ],
  "variants": [
   {
+   "slots": { "front": [30, 45, 38, 36] },
    "note": "three overlapping notes, mustard front, curled corner",
    "paths": [
     {

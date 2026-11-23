@@ -10,6 +10,7 @@
  ],
  "variants": [
   {
+   "slots": { "board": [18, 15, 65, 47], "top": [50, 12] },
    "note": "easel with board, three coral bars",
    "paths": [
     {

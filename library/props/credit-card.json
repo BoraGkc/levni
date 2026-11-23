@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "chip": [21, 57, 15, 14, -6], "number": [44, 58, 38, 8, -6] },
    "note": "tilted card, dark stripe and mustard chip",
    "paths": [
     {

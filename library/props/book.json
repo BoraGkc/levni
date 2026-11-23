@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "cover": [32, 13, 42, 68] },
    "note": "closed book, front cover, blue cover offset",
    "paths": [
     {

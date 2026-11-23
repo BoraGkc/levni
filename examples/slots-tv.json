@@ -1,0 +1,9 @@
+{ "seed": 4, "background": "paper", "elements": [
+  { "type": "panel", "x": 60, "y": 52, "w": 1080, "h": 569, "color": "blue" },
+  { "type": "prop", "id": "tv1", "name": "old-crt-tv-long-shadow", "x": 460, "y": 340, "size": 520, "shadow": true },
+  { "type": "prop", "name": "chart-board", "in": { "ref": "tv1", "slot": "screen" }, "fit": 0.92 },
+  { "type": "prop", "id": "radio1", "name": "radio", "x": 940, "y": 440, "size": 250, "rot": -6 },
+  { "type": "label", "text": "on air", "in": { "ref": "radio1", "slot": "screen" } },
+  { "type": "prop", "name": "heart", "in": { "prop": "radio", "slot": "dial" }, "size": 60 },
+  { "type": "marks", "area": [720, 90, 380, 140], "count": 5, "colors": ["mustard", "coral"] }
+] }

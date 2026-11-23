@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "cup": [34, 20, 34, 28], "plinth": [33, 78, 34, 10], "top": [50, 15] },
    "note": "cup with handles and base, mustard",
    "paths": [
     {

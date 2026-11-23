@@ -10,6 +10,7 @@
  ],
  "variants": [
   {
+   "slots": { "screen": [12, 17, 78, 58] },
    "note": "monitor with a half gauge, coral needle and three bars",
    "paths": [
     {

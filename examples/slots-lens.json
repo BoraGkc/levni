@@ -1,0 +1,9 @@
+{ "seed": 7, "background": "paper", "elements": [
+  { "type": "disc", "x": 470, "y": 340, "r": 270, "color": "tone-mustard" },
+  { "type": "prop", "id": "glass", "name": "magnifier", "x": 470, "y": 340, "size": 500, "flip": true },
+  { "type": "prop", "name": "tulip", "in": { "ref": "glass", "slot": "lens" }, "fit": 1.2 },
+  { "type": "prop", "id": "env", "name": "envelope", "x": 930, "y": 260, "size": 230, "rot": 8 },
+  { "type": "prop", "name": "tulip", "in": { "ref": "env", "slot": "front" }, "fit": 0.8 },
+  { "type": "prop", "name": "trophy", "id": "tr", "x": 930, "y": 520, "size": 230 },
+  { "type": "prop", "name": "star", "in": { "ref": "tr", "slot": "top" }, "size": 70 }
+] }

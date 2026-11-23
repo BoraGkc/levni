@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "face": [36, 44, 28, 30], "top": [50, 12] },
    "note": "triangle with mustard fill and exclamation",
    "paths": [
     {

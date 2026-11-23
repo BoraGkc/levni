@@ -12,6 +12,7 @@
  ],
  "variants": [
   {
+   "slots": { "front": [22, 46, 56, 38], "slot": [50, 37] },
    "note": "box with slot lid and ballot dropping in",
    "paths": [
     {

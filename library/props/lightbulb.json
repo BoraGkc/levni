@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "glass": [36, 18, 30, 28], "top": [50, 9] },
    "note": "bulb with mustard glow and rays",
    "paths": [
     {

@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "front": [16, 32, 70, 50], "clasp": [44, 48, 13, 14], "top": [50, 12] },
    "note": "front, handle, band and mustard clasp",
    "paths": [
     {

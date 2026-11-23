@@ -10,6 +10,15 @@ export function validateProp(p) {
   if (!Array.isArray(p?.variants) || !p.variants.length) return [...errs, 'needs at least one variant'];
   p.variants.forEach((v, i) => {
     const at = `variant ${i}`;
+    if (v.slots != null) {
+      if (typeof v.slots !== 'object' || Array.isArray(v.slots)) errs.push(`${at}: slots must be an object`);
+      else for (const [n, s] of Object.entries(v.slots)) {
+        const w = `${at} slot "${n}"`;
+        if (!Array.isArray(s) || (s.length !== 2 && s.length !== 4 && s.length !== 5) || !s.every(Number.isFinite)) errs.push(`${w}: must be [x, y], [x, y, w, h] or [x, y, w, h, rotDegrees] numbers`);
+        else if (s.slice(0, 4).some((q) => q < 0 || q > 100)) errs.push(`${w}: must stay inside 0..100`);
+        else if (s.length >= 4 && (!(s[2] > 0) || !(s[3] > 0) || s[0] + s[2] > 100 || s[1] + s[3] > 100)) errs.push(`${w}: rect needs w, h > 0 and x+w, y+h <= 100`);
+      }
+    }
     if (!Array.isArray(v.paths) || !v.paths.length) return errs.push(`${at}: no paths`);
     v.paths.forEach((path, j) => {
       const w = `${at} path ${j}`;

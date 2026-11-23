@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "body": [29, 10, 42, 48] },
    "note": "long paper, zigzag bottom, coral total bar",
    "paths": [
     {

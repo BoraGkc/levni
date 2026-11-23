@@ -7,6 +7,7 @@
   ],
   "variants": [
     {
+      "slots": { "screen": [13, 65, 57, 23] },
       "note": "harvested from .cache/cizim-drafts/sopranosun-etkisi-21/ici-2.json",
       "paths": [
         {

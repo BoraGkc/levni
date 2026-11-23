@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "page": [28, 16, 38, 62] },
    "note": "document sheet with text lines and coral stamp",
    "paths": [
     {

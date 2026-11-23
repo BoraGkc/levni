@@ -10,6 +10,7 @@
   ],
   "variants": [
     {
+      "slots": { "top": [50, 46], "front": [14, 66, 72, 32] },
       "note": "harvested from .cache/cizim-drafts/jimmy-kimmel-trump/ici-1.json",
       "paths": [
         {

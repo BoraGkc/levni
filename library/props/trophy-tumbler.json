@@ -6,6 +6,7 @@
   ],
   "variants": [
     {
+      "slots": { "contents": [30, 36, 40, 32] },
       "note": "harvested from .cache/cizim-drafts/michael-douglas-ve/ici-1-alt.json",
       "paths": [
         {

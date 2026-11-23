@@ -346,6 +346,20 @@
           "type": "string",
           "description": "person with pose holding: name of a library prop drawn at the hands"
         },
+        "id": {
+          "type": "string",
+          "description": "a handle other elements can point at with in.ref"
+        },
+        "in": {
+          "type": "object",
+          "description": "place this element in a named slot of an earlier prop (docs/scene.md, Slots)",
+          "properties": {
+            "ref": { "type": "string", "description": "id of an earlier element" },
+            "prop": { "type": "string", "description": "name of a prop; the most recent one is used" },
+            "slot": { "type": "string" }
+          },
+          "required": ["slot"]
+        },
         "paths": {
           "type": "array",
           "items": {

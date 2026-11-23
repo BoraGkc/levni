@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "head": [40, 12, 20, 28], "top": [50, 9] },
    "note": "studio mic on stand, coral grille",
    "paths": [
     {

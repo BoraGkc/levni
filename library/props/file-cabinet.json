@@ -10,6 +10,7 @@
   ],
   "variants": [
     {
+      "slots": { "drawer1": [24, 17, 38, 20], "drawer2": [24, 44, 38, 20], "drawer3": [24, 71, 38, 20] },
       "note": "harvested from .cache/cizim-drafts/askeri-sir-yapay/kapak.json",
       "paths": [
         {
