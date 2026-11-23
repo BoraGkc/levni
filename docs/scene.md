@@ -71,6 +71,7 @@ House rule: at most **two main inks plus paper** per scene; a third colour only 
 | `panel` | `x`, `y`, `w`, `h`, `color`, `rot`?, `outline`? | colour block; dark panels flip line art to paper |
 | `disc` | `x`, `y`, `r`, `ry`?, `color`, `outline`? | sun, highlight circle |
 | `glyphs` | `x`, `y`, `w`, `h`, `color`, `mode` (`flat`/`radial`/`fade-down`/`fade-up`), `level`, `cx`?, `cy`?, `ramp`? | character texture, glow |
+| `glyphfill` | Silhouette: `prop` (+ `variant`?, `paths`? = indices of the prop's paths to keep, `flip`?, `fit`?) or `shape` = `circle` (default) / `sphere` / `ring` (`hole`? 0.62) / `rect` / `star` (`points`? 5, `inner`? 0.45); `x`, `y` (centre), `size` (default 400, 8..4000), `w`?, `h`? for primitives. Look: `mode` `glyph` (default) / `block` / `dot`; `cell` px (default 9; grids over 30k cells are coarsened); `chars`? ramp light to dense (default `" .:-=+*#%@"`); `color` (default paper-ish; light colours glow, dense = bright, dark colours ink, dense = shadow; force with `shade`: `glow`/`ink`); `tone`? `prop` (paint sets density) or `flat`; `gamma`? 1, `jitter`? 0.03 (ordered dither), `steps`? 5, `gap`? 0.12 (block/dot), `aspect`? 1.75 (glyph cell height), `font`?. Light: `light` = on a `sphere` `{angle, elev}` (`angle` 225 = where the light comes from, degrees, 270 = top; `elev` 30) with a terminator, core shadow and rim light; on anything else a ramp `{mode: radial/linear, cx, cy, radius, angle, from 1, to 0.25}`; `land`? 0..1 (sphere continents, default 0), `spin`? (rotation, radians). Outline: `outline`? true (inked strokes and rims are drawn with `- \ | /` by local stroke angle, `+` at junctions; `lineChars`? 5 chars to change them), `rim`? (silhouette rim, default on for primitives), `lines`? 0.35 (extra density of inked lines), `minLine`? 0.9 (cells, min outline width), `edge`? 0.2 (0 on a sphere), `field`? 0..1 (faint ambient glyphs outside). Accents: `accent` colour, `accentShare`? 0.05, `accentMax`? 14, `accentGap`? 6 (min cells between two accents). `t` 0..1 spins a sphere's land and sweeps the light. | A silhouette filled with characters, blocks or dots whose density follows tone (ASCII hero art, dev-tool OG cards, stickers). Glyph text is drawn above the crayon filter so the grid stays exact at any zoom. Synchronous, needs no icon package. |
 | `waves` | `x`, `y`, `w`, `h`, `gap`?, `amp`?, `color` | water, wind, fields, text lines |
 | `hills` | `base`, `height`, `color`, `x`?, `w`?, `step`?, `period`? | hills, mountains |
 | `skyline` | `x0`, `x1`, `base`, `minH`, `maxH`, `colors`? | procedural buildings (40–160 heights read calmer) |
@@ -347,3 +348,15 @@ A stamp, a die-cut sticker and a ticket. All three work on paper and on dark gro
 ```
 
 Keep ring text and other marks at least `size` px away from each other; a `seal` with `prop` or `word` in the centre needs no extra element. Examples: [`seal-est`](../examples/seal-est.json), [`seal-sheet`](../examples/seal-sheet.json), [`seal-loyalty`](../examples/seal-loyalty.json).
+### Glyphfill recipes
+
+A shaded globe in text, ink on paper (lit side sparse, shadow side dense), and a dot-matrix rocket on dark:
+
+```json
+{ "background": "paper", "finish": "soft", "elements": [
+  { "type": "glyphfill", "shape": "sphere", "x": 850, "y": 336, "size": 540, "cell": 7, "color": "ink", "accent": "coral", "land": 0.42, "light": { "angle": 215, "elev": 28 } },
+  { "type": "glyphfill", "prop": "rocket", "x": 300, "y": 340, "size": 360, "mode": "dot", "cell": 11, "color": "tone", "accent": "coral" }
+]}
+```
+
+Examples: [`glyphfill-globe`](../examples/glyphfill-globe.json), [`glyphfill-og-card`](../examples/glyphfill-og-card.json), [`glyphfill-coffee`](../examples/glyphfill-coffee.json).

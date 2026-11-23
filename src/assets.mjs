@@ -1,6 +1,7 @@
 // Procedural assets: everything here is drawn from math (noise, recursion, polar curves, sampling),
 // then finished by the same crayon filter as the rest of the engine. Each asset is a compose element type.
 // Every asset takes `t` (0..1, default 0) so the animation renderer can move it deterministically.
+import { GLYPHFILL_ASSETS } from './glyphfill.mjs';
 import { box, ellipse } from './pen.mjs';
 import { SOFT_ASSETS } from './ribbon.mjs';
 import { SOFT3D_ASSETS } from './soft3d.mjs';
@@ -360,3 +361,6 @@ Object.assign(ASSETS, ENGRAVE_ASSETS);
 
 // Text on a circle, seals, ticket stubs (ringtext, seal, stub): see seal.mjs
 Object.assign(ASSETS, SEAL_ASSETS);
+
+// Character-grid silhouettes (prop or primitive filled with glyphs/blocks/dots): see glyphfill.mjs
+Object.assign(ASSETS, GLYPHFILL_ASSETS);
