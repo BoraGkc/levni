@@ -1,0 +1,127 @@
+{
+ "seed": 8,
+ "finish": "soft",
+ "background": "paper",
+ "canvas": [
+  1200,
+  1600
+ ],
+ "grain": 0.1,
+ "elements": [
+  {
+   "type": "amtone",
+   "source": "flat",
+   "level": 0.5,
+   "x": 40,
+   "y": 40,
+   "w": 1120,
+   "h": 14,
+   "cell": 14,
+   "angle": 0,
+   "color": "ink"
+  },
+  {
+   "type": "amtone",
+   "source": "flat",
+   "level": 0.5,
+   "x": 40,
+   "y": 1546,
+   "w": 1120,
+   "h": 14,
+   "cell": 14,
+   "angle": 0,
+   "color": "ink"
+  },
+  {
+   "type": "amtone",
+   "source": "flat",
+   "level": 0.5,
+   "x": 40,
+   "y": 54,
+   "w": 14,
+   "h": 1492,
+   "cell": 14,
+   "angle": 0,
+   "color": "ink"
+  },
+  {
+   "type": "amtone",
+   "source": "flat",
+   "level": 0.5,
+   "x": 1146,
+   "y": 54,
+   "w": 14,
+   "h": 1492,
+   "cell": 14,
+   "angle": 0,
+   "color": "ink"
+  },
+  {
+   "type": "panel",
+   "x": 160,
+   "y": 370,
+   "w": 880,
+   "h": 860,
+   "color": "coral",
+   "rot": -5
+  },
+  {
+   "type": "amtone",
+   "source": "terrain",
+   "x": 124.2,
+   "y": 410,
+   "w": 880,
+   "h": 860,
+   "rot": -5,
+   "cell": 8,
+   "color": "dark",
+   "light": 290,
+   "scale": 0.003,
+   "seed": 5,
+   "relief": 3,
+   "elev": 26,
+   "rough": 0.3,
+   "gamma": 1.7
+  },
+  {
+   "type": "label",
+   "text": "SUMMIT / FIELD NOTES",
+   "x": 130,
+   "y": 130,
+   "size": 22,
+   "color": "dark"
+  },
+  {
+   "type": "label",
+   "text": "\u00a9 2026",
+   "x": 1070,
+   "y": 130,
+   "size": 22,
+   "color": "dark",
+   "anchor": "end"
+  },
+  {
+   "type": "label",
+   "text": "NT5642 - 46.5N 7.9E",
+   "x": 130,
+   "y": 1420,
+   "size": 22,
+   "color": "dark"
+  },
+  {
+   "type": "label",
+   "text": "+",
+   "x": 1070,
+   "y": 1426,
+   "size": 44,
+   "color": "coral",
+   "anchor": "end"
+  },
+  {
+   "type": "grain",
+   "color": "dark",
+   "density": 5,
+   "opacity": 0.25
+  }
+ ]
+}

@@ -12,6 +12,7 @@ import { TYPE_ASSETS } from './type.mjs';
 import { MESHGRAD_ASSETS } from './meshgrad.mjs';
 import { ENGRAVE_ASSETS } from './engrave.mjs';
 import { SEAL_ASSETS } from './seal.mjs';
+import { PRINT_ASSETS } from './print.mjs';
 
 const f = (n) => Math.round(n * 10) / 10;
 
@@ -367,3 +368,6 @@ Object.assign(ASSETS, SEAL_ASSETS);
 Object.assign(ASSETS, GLYPHFILL_ASSETS);
 // Display type from bundled fonts, drawn as paths: see type.mjs
 Object.assign(ASSETS, TYPE_ASSETS);
+
+// Print textures (amtone halftone, camo blobs, grain): see print.mjs
+Object.assign(ASSETS, PRINT_ASSETS);
