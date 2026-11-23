@@ -11,6 +11,7 @@ import { compose } from './compose.mjs';
 import { critique } from './critic.mjs';
 import { loadProps, findProp } from './props.mjs';
 import { toPng, toWebp } from './export.mjs';
+import { screenRaster } from './dither.mjs';
 import { CATEGORIES } from './validate.mjs';
 import { GHOST_TOOLS, ghostEnabled, callGhost } from './mcp-ghost.mjs';
 
@@ -18,7 +19,7 @@ const PROTOCOLS = ['2025-06-18', '2025-03-26', '2024-11-05'];
 const VERSION = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8')).version;
 const GUIDE = new URL('../docs/scene.md', import.meta.url);
 
-const scene = { type: 'object', description: 'A Levni scene: { seed?, style?, background?, elements: [...] }. Canvas is 1200 x 673. `style` is \"riso\", \"miniature\" or your own inks, e.g. {\"blue\":\"#6A1B9A\",\"mustard\":\"#00BFA5\"}. Call scene_guide for every element type.' };
+const scene = { type: 'object', description: 'A Levni scene: { seed?, style?, background?, elements: [...] }. Canvas is 1200 x 673. Besides drawings (props) it makes brand assets: dither fields, grainy mesh gradients, ASCII/glyph fills, seals and stickers with ring text, wireframe terrain and engravings, and a `screen` print pass (1bit, riso, blueprint, gameboy, newsprint). `style` is \"riso\", \"miniature\" or your own inks, e.g. {\"blue\":\"#6A1B9A\",\"mustard\":\"#00BFA5\"}. Call scene_guide for every element type.' };
 export const TOOLS = [
   {
     name: 'scene_guide',
@@ -70,7 +71,11 @@ const text = (t) => ({ type: 'text', text: t });
 const image = (buf) => ({ type: 'image', data: buf.toString('base64'), mimeType: 'image/png' });
 const asScene = (s) => (typeof s === 'string' ? JSON.parse(s) : s);
 const notesText = (notes) => (notes.length ? notes.map((n) => `- ${n}`).join('\n') : '- critic: no layout problems found');
-const preview = async (svg, width = 560) => sharp(Buffer.from(svg)).resize(width).png({ compressionLevel: 9, palette: true }).toBuffer();
+// the preview shows the scene as it will be written: with its `screen` print pass when it has one
+const preview = async (svg, width = 560, screen) => {
+  const full = screen ? await screenRaster(await sharp(Buffer.from(svg)).png().toBuffer(), screen) : Buffer.from(svg);
+  return sharp(full).resize(width).png({ compressionLevel: 9, palette: true }).toBuffer();
+};
 
 async function call(name, args = {}) {
   if (name.startsWith('ghost_')) {
@@ -110,7 +115,7 @@ async function call(name, args = {}) {
       else await toPng(svg, file, { screen: scene.screen });
       out.push(text(`wrote ${file}`));
     }
-    if (args.preview !== false) out.push(image(await preview(svg)));
+    if (args.preview !== false) out.push(image(await preview(svg, 560, scene.screen)));
     return out;
   }
 
@@ -151,7 +156,7 @@ export async function handle(msg) {
       protocolVersion: v,
       capabilities: { tools: {} },
       serverInfo: { name: 'levni', version: VERSION },
-      instructions: 'Levni draws hand-inked illustrations from a JSON scene. Read scene_guide once, find drawings with list_props, then render_scene and fix what the critic reports.' + (ghostEnabled() ? ' Ghost is connected: ghost_drafts finds imageless drafts, ghost_preview shows a plan with a token, and ghost_apply writes only after the user approves that preview.' : ''),
+      instructions: 'Levni draws hand-inked illustrations from a JSON scene. Read scene_guide once, find drawings with list_props, then render_scene and fix what the critic reports. scene_guide ends with recipes for brand assets (dither, meshgrad, terrain/engrave, seal, glyphfill).' + (ghostEnabled() ? ' Ghost is connected: ghost_drafts finds imageless drafts, ghost_preview shows a plan with a token, and ghost_apply writes only after the user approves that preview.' : ''),
     });
   }
   if (method === 'ping') return ok({});
