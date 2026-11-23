@@ -7,6 +7,7 @@
 // Output is committed, so the Pages build needs no sharp.
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import sharp from 'sharp';
+import { rasterize } from '../../src/raster.mjs';
 import { compose, resolveCanvas, renderBoard } from '../../src/index.mjs';
 import { screenRaster } from '../../src/dither.mjs';
 import { tmpdir } from 'node:os';
@@ -68,7 +69,7 @@ for (const [group] of GROUPS) {
         png = readFileSync(tmp);
       } else {
         const { svg } = await compose(scene);
-        png = await sharp(Buffer.from(svg), { density: 72 * Math.max(1, lw / cw) }).png().toBuffer();
+        png = await rasterize(svg, { density: 72 * Math.max(1, lw / cw) });
         if (scene.screen) png = await screenRaster(png, scene.screen); // the print pass is raster: the CLI applies it on export
       }
       await sharp(png).resize(lw).webp(webp).toFile(big);

@@ -12,6 +12,7 @@ import { critique } from './critic.mjs';
 import { loadProps, findProp } from './props.mjs';
 import { toPng, toWebp } from './export.mjs';
 import { screenRaster } from './dither.mjs';
+import { rasterize } from './raster.mjs';
 import { CATEGORIES } from './validate.mjs';
 import { GHOST_TOOLS, ghostEnabled, callGhost } from './mcp-ghost.mjs';
 
@@ -102,7 +103,7 @@ const asScene = (s) => (typeof s === 'string' ? JSON.parse(s) : s);
 const notesText = (notes) => (notes.length ? notes.map((n) => `- ${n}`).join('\n') : '- critic: no layout problems found');
 // the preview shows the scene as it will be written: with its `screen` print pass when it has one
 const preview = async (svg, width = 560, screen) => {
-  const full = screen ? await screenRaster(await sharp(Buffer.from(svg)).png().toBuffer(), screen) : Buffer.from(svg);
+  const full = screen ? await screenRaster(await rasterize(svg), screen) : await rasterize(svg);
   return sharp(full).resize(width).png({ compressionLevel: 9, palette: true }).toBuffer();
 };
 
@@ -180,7 +181,7 @@ async function call(name, args = {}) {
       const list = expandPosters(spec);
       out.push(text(`${list.length} posters: ${list.map((p) => p.template).join(', ')} (pass out_dir to write them)`));
       if (args.preview !== false) {
-        const thumbs = await Promise.all(list.slice(0, 8).map(async (p) => sharp(Buffer.from((await compose(p.scene)).svg)).resize(225).png().toBuffer()));
+        const thumbs = await Promise.all(list.slice(0, 8).map(async (p) => sharp(await rasterize((await compose(p.scene)).svg)).resize(225).png().toBuffer()));
         const sheet = await sharp({ create: { width: 225 * Math.min(4, thumbs.length), height: 300 * Math.ceil(thumbs.length / 4), channels: 3, background: '#E9E6DE' } })
           .composite(thumbs.map((input, i) => ({ input, left: (i % 4) * 225, top: Math.floor(i / 4) * 300 }))).png({ palette: true }).toBuffer();
         out.push(image(sheet));

@@ -9,6 +9,7 @@
 // Prints the layout critic's notes per scene, so whoever wrote the scene can fix it.
 import { readFileSync, readdirSync, mkdirSync, existsSync, statSync } from 'node:fs';
 import sharp from 'sharp';
+import { rasterize } from '../../src/raster.mjs';
 import { compose, critique, screenRaster } from '../../src/index.mjs';
 import { renderBoard } from '../../src/board.mjs';
 
@@ -39,7 +40,7 @@ for (const slug of readdirSync(root).filter((d) => !d.startsWith('.'))) {
     process.chdir(src.slice(0, src.lastIndexOf('/')));
     let svg, used;
     try { ({ svg, used } = await compose(spec)); } finally { process.chdir(cwd); }
-    let png = await sharp(Buffer.from(svg)).png().toBuffer();
+    let png = await rasterize(svg);
     if (spec.screen) png = await screenRaster(png, spec.screen);
     const { width, height } = await sharp(png).metadata();
     await sharp(png).resize(height >= width ? Math.min(640, width) : 1200).webp({ quality: 82, effort: 6 }).toFile(out);

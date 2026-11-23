@@ -1,6 +1,7 @@
 // Images for /features/ and /mcp/, drawn by Levni from the repo's example scenes. Run: node scripts/render-features.mjs
 import { readFileSync, mkdirSync } from 'node:fs';
 import sharp from 'sharp';
+import { rasterize } from '../../src/raster.mjs';
 import { compose } from '../../src/index.mjs';
 
 const here = (p) => new URL(`../${p}`, import.meta.url).pathname;
@@ -10,7 +11,7 @@ process.chdir(here('..')); // example scenes reference files relative to the rep
 
 async function out(spec, name, width = 800) {
   const { svg } = await compose(spec);
-  await sharp(Buffer.from(svg)).resize(width).webp({ quality: 82, effort: 6, smartSubsample: true }).toFile(here(`public/features/${name}.webp`));
+  await sharp(await rasterize(svg)).resize(width).webp({ quality: 82, effort: 6, smartSubsample: true }).toFile(here(`public/features/${name}.webp`));
   console.log(name);
 }
 

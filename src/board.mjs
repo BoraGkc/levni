@@ -8,6 +8,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import sharp from 'sharp';
+import { rasterize } from './raster.mjs';
 import { compose, COLORS } from './compose.mjs';
 import { resolveCanvas } from './formats.mjs';
 import { findProp } from './props.mjs';
@@ -62,7 +63,7 @@ async function sceneAt(scene, w, h, tileSeed, overrides = {}, fit = 'auto') {
     spec.reflowFrom = scene.reflowFrom ?? [authored.w, authored.h];
   }
   const { svg } = await compose(spec);
-  const img = sharp(Buffer.from(svg));
+  const img = sharp(await rasterize(svg));
   const [ow, oh] = [Math.max(1, Math.round(w)), Math.max(1, Math.round(h))];
   return (ow === W && oh === H ? img : img.resize(ow, oh)).png().toBuffer(); // tiny tiles: the 64 px floor is scaled down
 }

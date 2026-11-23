@@ -3,10 +3,11 @@
 import { writeFileSync } from 'node:fs';
 import sharp from 'sharp';
 import { screenRaster } from './dither.mjs';
+import { rasterize } from './raster.mjs';
 
 export async function toWebp(input, out, { budgetKB = 110, startQ = 84, minQ = 68, step = 4, screen } = {}) {
   const src = typeof input === 'string' && input.trim().startsWith('<svg') ? Buffer.from(input) : input;
-  let png = await sharp(src).png().toBuffer(); // render the SVG once
+  let png = typeof input === 'string' && input.trim().startsWith('<svg') ? await rasterize(input) : await sharp(src).png().toBuffer(); // render the SVG once (fast path, raster.mjs)
   if (screen) png = await screenRaster(png, screen); // spec.screen: ordered-dither print pass (dither.mjs)
   let q = startQ, buf;
   for (;;) {
@@ -22,7 +23,7 @@ export async function toWebp(input, out, { budgetKB = 110, startQ = 84, minQ = 6
 // PNG export; `preview` also writes a small JPEG next to it (cheap for an agent to look at).
 export async function toPng(input, out, { preview = false, previewWidth = 560, screen } = {}) {
   const src = typeof input === 'string' && input.trim().startsWith('<svg') ? Buffer.from(input) : input;
-  let png = await sharp(src).png().toBuffer();
+  let png = typeof input === 'string' && input.trim().startsWith('<svg') ? await rasterize(input) : await sharp(src).png().toBuffer();
   if (screen) png = await screenRaster(png, screen);
   if (out) writeFileSync(out, png);
   if (out && preview) await sharp(png).resize(previewWidth).jpeg({ quality: 80 }).toFile(out.replace(/\.png$/i, '') + '.prev.jpg');

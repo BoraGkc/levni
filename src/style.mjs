@@ -109,15 +109,15 @@ export function frame(body, { seed = 1, background = PALETTE.paper, ascii = fals
 </filter></defs>
 <rect width="${W}" height="${H}" fill="${background}"/>
 ${body}
-<rect width="${W}" height="${H}" filter="url(#grain)" opacity="${grain}"/>
+<!--levni:grain--><rect width="${W}" height="${H}" filter="url(#grain)" opacity="${grain}"/><!--/levni:grain-->
 </svg>`;
   }
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
 <defs>${filterDefs(seed, W, H)}${ascii ? asciiPatterns(seed) : ''}</defs>
 <rect width="${W}" height="${H}" fill="${background}"/>
 <rect width="${W}" height="${H}" filter="url(#paper)"/>
-<g filter="url(#crayon)">
+<!--levni:body--><g filter="url(#crayon)">
 ${body}
-</g>
+</g><!--/levni:body-->
 </svg>`;
 }

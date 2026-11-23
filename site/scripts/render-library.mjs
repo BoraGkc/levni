@@ -5,6 +5,7 @@
 // Output is committed (public/props/*.webp, src/data/props.json), so the Pages build needs no sharp.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import sharp from 'sharp';
+import { rasterize } from '../../src/raster.mjs';
 import { compose, loadProps, CATEGORIES, STYLES } from '../../src/index.mjs';
 import { HOUSE } from '../../src/styles.mjs';
 
@@ -55,7 +56,7 @@ for (let s = 0; s < todo.length; s += COLS * ROWS) {
   }));
   const { svg } = await compose({ seed: 3, style: 'riso', elements });
   // decode the sheet once, then cut tiles from the raw pixels
-  const { data, info } = await sharp(Buffer.from(svg), { density: DENSITY }).raw().toBuffer({ resolveWithObject: true });
+  const { data, info } = await rasterize(svg, { density: DENSITY, raw: true });
   await Promise.all(batch.map((t, k) => {
     const left = (k % COLS) * CELL * k2, top = (36 + Math.floor(k / COLS) * CELL) * k2;
     return sharp(data, { raw: info }).extract({ left, top, width: CELL * k2, height: CELL * k2 })

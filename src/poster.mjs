@@ -8,6 +8,7 @@ import { join } from 'node:path';
 import sharp from 'sharp';
 import { compose } from './compose.mjs';
 import { findProp } from './props.mjs';
+import { rasterize } from './raster.mjs';
 
 export const TEMPLATES = ['split', 'map', 'bauhaus', 'echo', 'camo', 'vertical', 'summit', 'launch'];
 const W = 1200, H = 1600;
@@ -155,7 +156,7 @@ export async function renderPosters(spec, outDir) {
   const files = [], thumbs = [];
   for (const [i, p] of list.entries()) {
     const { svg } = await compose(p.scene);
-    const png = await sharp(Buffer.from(svg)).png().toBuffer();
+    const png = await rasterize(svg);
     const file = join(outDir, `poster-${String(i + 1).padStart(2, '0')}-${p.template}.png`);
     writeFileSync(file, png);
     files.push(file);

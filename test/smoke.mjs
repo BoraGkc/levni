@@ -4,7 +4,7 @@
 import { mkdirSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import sharp from 'sharp';
-import { compose, loadProps } from '../src/index.mjs';
+import { compose, loadProps, rasterize } from '../src/index.mjs';
 import { LIBRARY_DIR } from '../src/props.mjs';
 import { validateProp } from '../src/validate.mjs';
 
@@ -61,7 +61,7 @@ for (let i = 0; i < list.length; i += 24) {
   });
   try {
     const { svg } = await compose({ seed: 3, elements });
-    const img = sharp(Buffer.from(svg), { density: outDir ? 72 : 36 });
+    const img = sharp(await rasterize(svg, { density: outDir ? 72 : 36 }));
     const { width, height } = await img.metadata();
     if (!width || !height) fail(`tile ${tiles}`, 'raster has no size');
     if (outDir) await img.png().toFile(join(outDir, `props-${String(tiles).padStart(3, '0')}.png`));
@@ -134,7 +134,7 @@ for (const f of readdirSync(exDir).filter((n) => n.endsWith('.json'))) {
   try {
     const { svg } = await compose(JSON.parse(readFileSync(new URL(f, exDir), 'utf8')));
     if (/NaN|undefined|Infinity/.test(svg)) fail(`examples/${f}`, 'SVG contains NaN/undefined/Infinity');
-    await sharp(Buffer.from(svg), { density: 24 }).png().toBuffer();
+    await rasterize(svg, { density: 24 });
   } catch (err) { fail(`examples/${f}`, err.message); }
 }
 

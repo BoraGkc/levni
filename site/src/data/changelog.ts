@@ -18,6 +18,7 @@ export const RELEASES: Release[] = [
     note: 'Not on npm yet: 0.2.0 is the published version. To try 0.3.0 now, run npm install github:BoraGkc/levni.',
     summary: 'Levni can set type itself and turns one brand spec into a series of eight posters.',
     items: [
+      { text: 'Faster renders: the crayon finish is now applied to the pixels in JavaScript instead of by the SVG renderer, about seven times faster for the default look (about 1 s down to 0.15 s for a cover), with the same picture. Set LEVNI_RASTER=rsvg to use the old path.' },
       { text: 'The type element draws text as paths from bundled open fonts (Space Grotesk, Archivo Black, JetBrains Mono, Departure Mono), so a poster looks the same on every machine.' },
       { text: 'The block element, for tight stacks of big words.' },
       { text: 'Poster formats, so a scene can start from a portrait poster size.' },

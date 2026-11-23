@@ -3,11 +3,12 @@
 // The output is committed, so the Cloudflare Pages build only runs `astro build` and needs no sharp.
 import { readFileSync, readdirSync, mkdirSync } from 'node:fs';
 import sharp from 'sharp';
+import { rasterize } from '../../src/raster.mjs';
 import { compose } from '../../src/index.mjs';
 
 const here = (p) => new URL(`../${p}`, import.meta.url).pathname;
 const scene = (p) => JSON.parse(readFileSync(here(p), 'utf8'));
-const png = async (spec) => sharp(Buffer.from((await compose(spec)).svg)).png().toBuffer();
+const png = async (spec) => rasterize((await compose(spec)).svg);
 for (const d of ['public/img', 'public/og', 'public/gallery', '../docs/img']) mkdirSync(here(d), { recursive: true });
 
 async function webp(buf, out, width) {

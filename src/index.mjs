@@ -9,6 +9,7 @@ export { expandIso } from './iso.mjs';
 export { ASSETS } from './assets.mjs';
 export { FORMATS, resolveCanvas } from './formats.mjs';
 export { toWebp, toPng } from './export.mjs';
+export { rasterize } from './raster.mjs';
 export { bayer, screenRaster, SCREEN_PRESETS } from './dither.mjs';
 export { renderPosters, expandPosters, TEMPLATES as POSTER_TEMPLATES } from './poster.mjs';
 export { FONTS, layoutType } from './type.mjs';

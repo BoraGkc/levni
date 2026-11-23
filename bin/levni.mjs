@@ -9,6 +9,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import sharp from 'sharp';
+import { rasterize } from '../src/raster.mjs';
 import { score as judgeScore, pick as judgePick, openrouter } from '../src/judge/index.mjs';
 import { render, compose, loadProps, findProp, addPropDir, LIBRARY_DIR, validateProp, lintProp, parseProps, measureVariant } from '../src/index.mjs';
 
@@ -184,7 +185,7 @@ export async function sheet(out, names = [], recolor) {
       }
     });
     const { svg } = await compose({ seed: 3, elements });
-    tiles.push(await sharp(Buffer.from(svg)).png().toBuffer());
+    tiles.push(await rasterize(svg));
   }
   if (!tiles.length) throw new Error('no props found');
   await sharp({ create: { width: 1200, height: 673 * tiles.length, channels: 3, background: '#F4F2EC' } })
