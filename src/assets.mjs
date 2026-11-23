@@ -13,6 +13,7 @@ import { MESHGRAD_ASSETS } from './meshgrad.mjs';
 import { ENGRAVE_ASSETS } from './engrave.mjs';
 import { SEAL_ASSETS } from './seal.mjs';
 import { PRINT_ASSETS } from './print.mjs';
+import { SHAPES_ASSETS } from './shapes.mjs';
 
 const f = (n) => Math.round(n * 10) / 10;
 
@@ -371,3 +372,6 @@ Object.assign(ASSETS, TYPE_ASSETS);
 
 // Print textures (amtone halftone, camo blobs, grain): see print.mjs
 Object.assign(ASSETS, PRINT_ASSETS);
+
+// Poster shape kits (shapegrid, echo, dotmatrix, furniture): see shapes.mjs
+Object.assign(ASSETS, SHAPES_ASSETS);

@@ -43,7 +43,7 @@ function segDist2(px, py, [ax, ay], [bx, by]) {
 
 // ---------- silhouette sources: each returns { hit(x, y) -> null | {lum, line?, ang?, score?, shade?}, box: [x, y, w, h] } ----------
 
-function propSource(e, c, size, cell) {
+export function propSource(e, c, size, cell) {
   const p = findProp(e.prop);
   if (!p) throw new Error(`glyphfill: no prop "${e.prop}" (levni list)`);
   const v = p.variants[Math.min(p.variants.length - 1, Math.max(0, Math.floor(num(e.variant, 0, 0, 99))))];
