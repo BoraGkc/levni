@@ -2,6 +2,7 @@
 title: "Add Featured Images to Ghost Drafts with an AI Assistant"
 description: "Let an AI assistant add featured images to Ghost drafts: Levni's MCP tools read drafts, preview the images and write only after you approve."
 date: 2026-11-23
+updated: 2026-11-24
 category: agents
 kind: Guide
 featured: true
@@ -150,3 +151,5 @@ A plan file has a `posts` list, and each entry has the same shape as above. Scen
 ## What to do next
 
 To see the kind of covers an assistant draws, read [generate blog covers with Claude Code](/blog/generate-blog-covers-claude-code/) and [how an agent checks its own layout](/blog/agent-layout-critic/). For charts inside posts, read [hand-drawn charts from data](/blog/hand-drawn-charts/). Look at the styles in [the gallery](/gallery/#formats), browse [the library](/library/), and see everything else on [the features page](/features/).
+
+**Reference and examples.** Read the [MCP guide](/docs/mcp/) (every tool and field), the [CLI reference](/docs/cli/) (every command); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

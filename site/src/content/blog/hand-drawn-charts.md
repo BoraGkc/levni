@@ -2,6 +2,7 @@
 title: "Hand-Drawn Charts from Data: Bars, Lines, Pies, Isotype"
 description: "Make hand-drawn charts from your own numbers: bar, line, pie, donut and isotype charts in a sketchy riso style, from a few lines of JSON, free and offline."
 date: 2026-11-23
+updated: 2026-11-24
 category: covers
 kind: Guide
 featured: true
@@ -164,3 +165,5 @@ save chart.png.
 ## What to do next
 
 See more charts in [the data gallery](/gallery/#charts) and the other elements on [the features page](/features/). For a whole cover around a chart, read [generate blog covers with Claude Code](/blog/generate-blog-covers-claude-code/), and to resize a chart for social posts, read [one illustration, every social image size](/blog/social-media-image-sizes/). Browse [the library](/library/) for drawings to use as isotype icons.
+
+**Reference and examples.** Read the [scene elements reference](/docs/elements/) (every element and field); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

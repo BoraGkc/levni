@@ -1,11 +1,11 @@
 # How to write a Levni blog post
 
 Read this whole file before writing. Posts live in `site/src/content/blog/<slug>.md`; their images are Levni scenes in `site/scenes/blog/<slug>/`.
-(This brief lives in `site/BLOG-BRIEF.md`, outside the content folder.)
+(This brief lives in `site/BLOG-BRIEF.md`, outside the content folder.) SEO rules every post must meet: [`site/SEO.md`](SEO.md).
 
 ## Facts: only these sources
 Read before writing, and claim nothing they do not support: `README.md`, `docs/scene.md`, `CONTRIBUTING.md`, `docs/prop-prompt.md`, `src/mcp.mjs` (MCP tool names and fields), `site/src/pages/index.astro`, `site/src/pages/library/index.astro`, the existing posts in this folder.
-- Version 0.2.0. Install: `npm install @levni/levni` (CLI `npx @levni/levni …`, or `levni` once installed). CLI: `levni render | board | sheet | list | add | check | mcp`.
+- Live on npm: 0.2.0 (`@levni/levni`). Posters and the type engine are 0.3.0, not published yet: `npm install github:BoraGkc/levni` until then, and say so in posts that use them. Install: `npm install @levni/levni` (CLI `npx @levni/levni …`, or `levni` once installed). CLI: `levni render | board | poster | sheet | list | add | check | mcp`.
 - MCP tools: `scene_guide`, `list_props`, `show_props`, `render_scene`, `critique_scene`, `render_board` (`render_board` takes `spec` or `{ brand }`, `out`, `preview`, `guide: true` returns docs/board.md); `render_scene` previews include the `screen` pass. Claude Code: `claude mcp add levni -- npx -y @levni/levni mcp`. Ghost tools (`ghost_drafts`, `ghost_preview`, `ghost_apply`) appear only with Ghost credentials in the environment.
 - Library: 1,577 drawings (481 pixel icons), 3,356 variants, 15 shelves, CC BY 4.0 (“drawings by Ortak Alan”). Code MIT. 64 element types. No image model, no API key, zero cost per image. (Check `README.md` if these look stale.)
 - Brand assets (0.2): `dither`, scene-level `screen` (`1bit`, `riso`, `blueprint`, `gameboy`, `newsprint` or an object), `meshgrad`, `glyphfill`, `ringtext`, `seal`, `stub`, `diecut` on `prop`/`draw`, `terrain`, `ridgelines`, `engrave`. Field names and recipes: `docs/scene.md` (sections “… recipes”). The `screen` pass is a raster step applied on PNG/WebP export (CLI `render`, MCP `render_scene` with `out`), not inside `compose()`.
@@ -19,8 +19,8 @@ Read before writing, and claim nothing they do not support: `README.md`, `docs/s
 Frontmatter:
 ```yaml
 ---
-title: "Verb-first title with the main keyword, under 65 characters"
-description: "One sentence, 140-165 characters, keyword early. It is the meta description and the subtitle."
+title: "Verb-first title with the main keyword, 60 characters or fewer"
+description: "One sentence, 140-160 characters, keyword early. It is the meta description and the subtitle."
 date: 2026-11-22
 category: agents | covers | library | brand | stories
 kind: Guide | Explainer | Comparison | Story

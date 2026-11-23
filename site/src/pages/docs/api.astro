@@ -1,0 +1,132 @@
+---
+import Docs from '../../layouts/Docs.astro';
+
+const toc = [
+  { id: 'import', text: 'Import', level: 2 as const },
+  { id: 'render', text: 'Render a scene', level: 2 as const },
+  { id: 'compose', text: 'Compose and critique', level: 2 as const },
+  { id: 'props', text: 'Work with drawings', level: 2 as const },
+  { id: 'brand', text: 'Boards and posters', level: 2 as const },
+  { id: 'export', text: 'Export and print passes', level: 2 as const },
+  { id: 'exports', text: 'All exports', level: 2 as const },
+  { id: 'subpaths', text: 'Subpath imports', level: 2 as const },
+];
+const exportsRows: [string, string][] = [
+  ['compose(scene)', 'async. Returns { svg, used, canvas, xf }.'],
+  ['render(scene, out, opts?)', 'async. Writes .png, .webp or .svg and returns { notes, svg }.'],
+  ['critique(used, canvas?)', 'The layout critic: an array of at most six strings.'],
+  ['COLORS, PALETTE', 'House colour names and hex values.'],
+  ['W, H, rng, frame', 'Default canvas size, the seeded random generator, and the helper that wraps drawn markup in a canvas with paper and grain.'],
+  ['loadProps()', 'All drawings as an object keyed by name.'],
+  ['findProp(nameOrTag)', 'One drawing by name or tag, or null.'],
+  ['expandProp(element)', 'Turns a prop element into a draw element (what compose does).'],
+  ['addPropDir(dir)', 'Add a folder of drawings.'],
+  ['LIBRARY_DIR', 'Path of the bundled library.'],
+  ['validateProp(prop)', 'Array of problems; empty when valid.'],
+  ['parseProps(text)', 'Parses one drawing, an array, or a chat answer with json blocks.'],
+  ['measureVariant(variant)', '{ size, cx, cy, colors, warnings }.'],
+  ['CATEGORIES', 'The shelf keys and their labels.'],
+  ['FORMATS, resolveCanvas(spec)', 'Named canvases (cover, og, square, story, youtube, poster, poster-tall, a4) and the resolver.'],
+  ['STYLES, applyStyle(svg, name)', 'Style packs (riso, miniature).'],
+  ['toPng(input, out, opts?)', 'async. PNG with optional preview and screen pass.'],
+  ['toWebp(input, out, opts?)', 'async. WebP under a size budget.'],
+  ['bayer, screenRaster, SCREEN_PRESETS', 'Ordered dither and the screen print presets (1bit, riso, blueprint, gameboy, newsprint).'],
+  ['expandIso(element)', 'Expands an iso element into a list of drawable elements.'],
+  ['ASSETS', 'The generators behind the built-in element types.'],
+  ['FONTS, layoutType', 'The bundled font stacks, and the layout the type element uses to turn text into paths.'],
+  ['iconsAvailable(), resolveIcon(name)', 'The optional Tabler icon bridge.'],
+  ['renderBoard(spec, out, opts?)', 'async. Renders a brand board PNG.'],
+  ['expandBrand(brand)', 'Turns a brand shortcut into a full board spec.'],
+  ['renderPosters(spec, outDir)', 'async. Renders the poster series. 0.3.0.'],
+  ['expandPosters(spec)', 'The posters as [{ template, scene }]. 0.3.0.'],
+  ['POSTER_TEMPLATES', 'The eight template names. 0.3.0.'],
+];
+---
+<Docs
+  title="Levni Node API: compose, render, critique, boards and posters"
+  description="Use Levni from JavaScript: compose a scene to SVG, render it to PNG or WebP, read the layout critic, search the library, and make brand boards and posters, with examples."
+  toc={toc}
+>
+  <p class="eyebrow">Use Levni</p>
+  <h1>Node API</h1>
+  <p class="lede">Everything the CLI does is a function. Use it in a build step, a CMS hook, a script or your own MCP server. Node.js 20 or newer, ES modules.</p>
+
+  <h2 id="import">Import</h2>
+  <pre><code class="language-bash">npm install @levni/levni</code></pre>
+  <pre><code class="language-js">{`import { compose, critique, render } from '@levni/levni';`}</code></pre>
+  <p>The package is ESM only. From a CommonJS file, use <code>await import('@levni/levni')</code>. Boards need nothing extra; posters and the type engine arrive with 0.3.0 (see <a href="/docs/getting-started/#install">install</a>).</p>
+
+  <h2 id="render">Render a scene</h2>
+  <p><code>render(scene, out, opts?)</code> draws a scene and writes the file. The extension picks the format. It returns the critic’s notes and the SVG.</p>
+  <pre><code class="language-js">{`import { render } from '@levni/levni';
+
+const scene = {
+  seed: 4,
+  elements: [{ type: 'prop', name: 'rocket', x: 600, y: 336, size: 360, shadow: true }],
+};
+
+const { notes } = await render(scene, 'rocket.png');           // or .webp, .svg
+if (notes.length) console.warn(notes.join('\\n'));              // the critic
+await render(scene, 'rocket.png', { preview: true });          // also rocket.prev.jpg (560 px)`}</code></pre>
+  <p>Options: <code>preview</code> (PNG only) writes a small JPEG next to the file; <code>webp</code> is passed to the WebP encoder (<code>budgetKB</code>, <code>startQ</code>, <code>minQ</code>, <code>step</code>).</p>
+
+  <h2 id="compose">Compose and critique</h2>
+  <p><code>compose(scene)</code> returns the picture as an SVG string without writing anything, plus <code>used</code>, the boxes of everything it drew, and the <code>canvas</code>. <code>critique(used, canvas)</code> turns those boxes into layout notes.</p>
+  <pre><code class="language-js">{`import { compose, critique } from '@levni/levni';
+import sharp from 'sharp';
+
+const { svg, used, canvas } = await compose(scene);
+const notes = critique(used, canvas);          // [] when the layout is fine
+const png = await sharp(Buffer.from(svg)).png().toBuffer();`}</code></pre>
+  <p>Scenes are plain objects, so build them in code. The same <code>seed</code> always gives the same picture, which makes renders safe to cache by scene hash.</p>
+  <pre><code class="language-js">{`const sizes = { og: 'og', square: 'square', story: 'story' };
+for (const [name, format] of Object.entries(sizes)) {
+  await render({ ...scene, format, reflow: true }, \`cover-\${name}.webp\`);
+}`}</code></pre>
+  <p><code>format</code> with <code>reflow: true</code> recomposes the scene for another canvas instead of cropping it. See <a href="/docs/scenes/#formats-and-reflow">Formats and reflow</a>.</p>
+
+  <h2 id="props">Work with drawings</h2>
+  <pre><code class="language-js">{`import { loadProps, findProp, validateProp, measureVariant, addPropDir } from '@levni/levni';
+
+const all = loadProps();                       // { rocket: { name, category, tags, variants }, ... }
+const rocket = findProp('roket');              // names and tags match, in any language
+console.log(rocket.name, rocket.variants.length);
+
+addPropDir('./my-drawings');                   // include your own folder
+const problems = validateProp(myProp);         // [] when it is valid
+const { size, warnings } = measureVariant(myProp.variants[0]);`}</code></pre>
+
+  <h2 id="brand">Boards and posters</h2>
+  <pre><code class="language-js">{`import { renderBoard, expandBrand, renderPosters, expandPosters } from '@levni/levni';
+
+// one call, nine tiles
+const brand = { name: 'Feneri', tagline: 'Slow ferries across the Bosphorus', mark: 'lighthouse',
+                inks: ['#14213D', '#FCA311', '#3A86A8', '#EFEAE0'] };
+const { width, height, bytes } = await renderBoard({ brand }, 'board.png');
+
+const spec = expandBrand(brand);               // the full board spec, to print and edit
+
+// eight posters and series.png (0.3.0)
+const { files } = await renderPosters({ brand: { ...brand, words: ['Sail', 'Drift', 'Land', 'Return'] } }, 'posters/');
+const list = expandPosters({ brand });         // [{ template, scene }, ...]: edit a scene, then render(scene, ...)`}</code></pre>
+  <p>Formats: <a href="/docs/boards/">Brand boards</a> and <a href="/docs/posters/">Branding posters</a>. <code>renderBoard</code> takes <code>{`{ baseDir }`}</code> to resolve scene paths in a spec.</p>
+
+  <h2 id="export">Export and print passes</h2>
+  <p>If you hold an SVG already, <code>toPng</code> and <code>toWebp</code> rasterise it. A scene’s <code>screen</code> field runs an ordered-dither print pass after the raster; <code>screenRaster</code> exposes it.</p>
+  <pre><code class="language-js">{`import { compose, toWebp, toPng } from '@levni/levni';
+
+const { svg } = await compose({ ...scene, screen: 'gameboy' });
+await toWebp(svg, 'out.webp', { budgetKB: 80, screen: 'gameboy' });
+await toPng(svg, 'out.png', { screen: 'gameboy' });`}</code></pre>
+
+  <h2 id="exports">All exports</h2>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="Exports, scrolls sideways"><table>
+    <thead><tr><th>Export</th><th>What it is</th></tr></thead>
+    <tbody>{exportsRows.map(([a, b]) => <tr><td><code>{a}</code></td><td>{b}</td></tr>)}</tbody>
+  </table></div>
+
+  <h2 id="subpaths">Subpath imports</h2>
+  <p>The package also exposes narrower entry points: <code>@levni/levni/props</code>, <code>/critic</code>, <code>/board</code>, <code>/poster</code>, <code>/judge</code> and <code>/mcp</code>.</p>
+  <pre><code class="language-js">{`import { critique } from '@levni/levni/critic';
+import { serve } from '@levni/levni/mcp';     // run the MCP server from your own process`}</code></pre>
+</Docs>

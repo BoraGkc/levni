@@ -1,0 +1,132 @@
+---
+import Docs from '../../layouts/Docs.astro';
+
+const pkg = '@levni/levni';
+const json = JSON.stringify({ mcpServers: { levni: { command: 'npx', args: ['-y', pkg, 'mcp'] } } }, null, 2);
+const checkout = JSON.stringify({ mcpServers: { levni: { command: 'node', args: ['/path/to/levni/bin/levni.mjs', 'mcp'] } } }, null, 2);
+const ghost = JSON.stringify({ mcpServers: { levni: { command: 'npx', args: ['-y', pkg, 'mcp'], env: { GHOST_ADMIN_API_URL: 'https://your-site.com', GHOST_ADMIN_API_KEY: '<id>:<secret>' } } } }, null, 2);
+
+const toc = [
+  { id: 'setup', text: 'Set it up', level: 2 as const },
+  { id: 'workflow', text: 'How an agent works with it', level: 2 as const },
+  { id: 'tools', text: 'Tools', level: 2 as const },
+  { id: 'session', text: 'A sample session', level: 2 as const },
+  { id: 'prompts', text: 'Prompts to start with', level: 2 as const },
+  { id: 'ghost', text: 'Ghost tools', level: 2 as const },
+  { id: 'trouble', text: 'Troubleshooting', level: 2 as const },
+];
+
+type Tool = { name: string; does: string; input: [string, string][]; output: string };
+const tools: Tool[] = [
+  { name: 'scene_guide', does: 'Returns the whole scene format as text: canvas, every element type and its fields, colours, style packs, formats, the critic and recipes. It is long, so the agent reads it once per session.', input: [], output: 'The text of the scene reference.' },
+  { name: 'list_props', does: 'Searches the Levni Folio by word, tag (English or Turkish) or variant note.', input: [['query', 'words such as "cat" or "film camera". Empty lists everything.'], ['category', 'one shelf, for example food or tech.'], ['limit', 'maximum results; default 40, up to 500.']], output: 'The number of matches, then each drawing with its name, variant count, shelf, tags and what every variant shows, and the line to paste into a scene.' },
+  { name: 'show_props', does: 'Draws a contact sheet so the agent can choose a drawing by eye.', input: [['names', 'up to 12 drawing names from list_props (required).']], output: 'An image of up to 18 variants, each labelled "name number". Unknown names are reported, not fatal.' },
+  { name: 'render_scene', does: 'Draws a scene.', input: [['scene', 'the scene JSON (required).'], ['out', 'a .png, .webp or .svg path, relative to the working directory of the client.'], ['preview', 'return a 560 px preview; default true. Set false for agents that cannot see images.']], output: 'The critic’s notes, the preview image, and with out the full-size file. The preview includes the scene’s screen print pass, so a gameboy or blueprint scene previews as it will be saved. WebP output stays under a size budget.' },
+  { name: 'critique_scene', does: 'Only the critic’s notes, no image. Quick and cheap while iterating.', input: [['scene', 'the scene JSON (required).']], output: 'Notes such as an element cut by the frame, or "critic: no layout problems found".' },
+  { name: 'render_board', does: 'Makes a brand board.', input: [['spec', 'a brand shortcut { brand: { name, tagline, mark, inks } } or a board of your own tiles.'], ['out', 'a PNG path.'], ['preview', 'a 900 px preview; default true.'], ['guide', 'true returns the board format instead of rendering.']], output: 'A line with the board size, the preview and, with out, the PNG. The shortest spec makes nine tiles.' },
+  { name: 'render_poster', does: 'Makes a series of eight branding posters (1200 by 1600). Needs Levni 0.3.0.', input: [['spec', '{ brand: { name, tagline, mark, inks, words }, only?, count? }.'], ['out_dir', 'a folder for poster-01-split.png and so on, plus series.png.'], ['scenes', 'true also returns each poster as editable scene JSON.'], ['preview', 'a contact sheet of the series; default true.'], ['guide', 'true returns the poster format instead.']], output: 'The poster count, the contact sheet and, with out_dir, the files.' },
+];
+---
+<Docs
+  title="Levni MCP server: setup for Claude, Cursor and Codex, every tool"
+  description="Connect Levni to Claude Code, Claude Desktop, Cursor or Codex. Reference for scene_guide, list_props, show_props, render_scene, critique_scene, render_board and render_poster, with a sample session."
+  toc={toc}
+>
+  <p class="eyebrow">Use Levni</p>
+  <h1>MCP server</h1>
+  <p class="lede">Connect Levni to your assistant and it can search the library, draw, read the critic and save files on its own. The server runs on your machine over stdio: no account, no key, no cost per image.</p>
+
+  <h2 id="setup">Set it up</h2>
+  <p>You need Node.js 20 or newer. The client starts the server with <code>npx</code> the first time it needs it, so there is nothing to install by hand.</p>
+
+  <h3 id="claude-code">Claude Code</h3>
+  <pre><code class="language-bash">claude mcp add levni -- npx -y {pkg} mcp</code></pre>
+
+  <h3 id="claude-desktop">Claude Desktop</h3>
+  <p>Open <strong>Settings, Developer, Edit Config</strong> (the file is <code>claude_desktop_config.json</code>), add the server, then restart the app.</p>
+  <pre><code class="language-json">{json}</code></pre>
+
+  <h3 id="cursor">Cursor</h3>
+  <p>Put the same block in <code>.cursor/mcp.json</code> in your project, or in <code>~/.cursor/mcp.json</code> for every project. Windsurf, Cline and other clients that run local stdio servers take the same <code>mcpServers</code> block in their own settings file.</p>
+
+  <h3 id="codex">Codex</h3>
+  <pre><code class="language-bash">codex mcp add levni -- npx -y {pkg} mcp</code></pre>
+  <p>Or edit <code>~/.codex/config.toml</code> yourself:</p>
+  <pre><code class="language-toml">{`[mcp_servers.levni]
+command = "npx"
+args = ["-y", "${pkg}", "mcp"]`}</code></pre>
+
+  <h3 id="checkout">From a checkout</h3>
+  <p>If you cloned the repository (or want the 0.3.0 posters before they reach npm), point the client at the file:</p>
+  <pre><code class="language-json">{checkout}</code></pre>
+
+  <div class="callout">
+    <strong>Working folder</strong>
+    <p>Files from <code>render_scene</code>, <code>render_board</code> and <code>render_poster</code> are written relative to the working directory of your client. Start the client inside the project where the images should land.</p>
+  </div>
+
+  <h2 id="workflow">How an agent works with it</h2>
+  <ol class="steps">
+    <li><strong>Read the format once.</strong> <code>scene_guide</code> returns the scene reference. Most agents call it first and keep it in context.</li>
+    <li><strong>Find drawings.</strong> <code>list_props</code> with a word, then <code>show_props</code> to choose a variant by eye. Real names, no guessing.</li>
+    <li><strong>Draw.</strong> <code>render_scene</code> returns critic notes and a preview. <code>critique_scene</code> is the cheap check between attempts.</li>
+    <li><strong>Fix and save.</strong> The agent moves what the critic flagged, then renders again with <code>out</code> set. For brand work it starts with <code>render_board</code> or <code>render_poster</code> instead.</li>
+  </ol>
+
+  <h2 id="tools">Tools</h2>
+  <p>Seven tools, all running locally. Inputs marked required must be given; everything else is optional.</p>
+  {tools.map((t) => (
+    <section class="tooldef" aria-labelledby={`t-${t.name}`}>
+      <h3 id={`t-${t.name}`}>{t.name}</h3>
+      <p>{t.does}</p>
+      <dl>
+        <dt>Input</dt>
+        <dd>{t.input.length ? <ul>{t.input.map(([k, v]) => <li><code>{k}</code>: {v}</li>)}</ul> : 'None.'}</dd>
+        <dt>Output</dt>
+        <dd>{t.output}</dd>
+      </dl>
+    </section>
+  ))}
+  <p>The guide for boards and posters is also available as <code>guide: true</code> on their tools, so an agent can read the format it needs without loading the whole scene reference.</p>
+
+  <h2 id="session">A sample session</h2>
+  <p>An illustration of the loop, shortened; the details will differ every time. The assistant calls the tools; you only talk to it.</p>
+  <div class="chat" role="group" aria-label="Sample conversation">
+    <div class="you"><span class="who">You</span><p>Make a 1200 by 630 cover for my article “Why every newsroom wants a data desk”. Leave room on the left for the title.</p></div>
+    <div class="tool"><span class="who">Tool: scene_guide</span><p>Returns the scene format. The assistant reads it once.</p></div>
+    <div class="tool"><span class="who">Tool: list_props</span><p><code>{`{ "query": "data chart newsroom" }`}</code></p><pre><code class="language-text">{`N of 1628 props match.
+…each with its name, shelf, tags and what every variant shows
+Place one with { "type": "prop", "name": "<name>", "variant": <n>, "x": 600, "y": 336, "size": 300 }.`}</code></pre></div>
+    <div class="tool"><span class="who">Tool: show_props</span><p>The assistant gets a contact sheet image and picks a variant by eye.</p></div>
+    <div class="tool"><span class="who">Tool: render_scene</span><p>The first attempt puts the drawing too far right:</p><pre><code class="language-text">- draw "…" (ink box …) is cut by the frame, 71% shows: pull it in, or set "crop": true if the cut is deliberate</code></pre></div>
+    <div class="tool"><span class="who">Tool: render_scene</span><p>Second attempt with the object pulled in, <code>out: "cover.webp"</code>.</p><pre><code class="language-text">- critic: no layout problems found</code></pre></div>
+    <div class="you"><span class="who">Assistant</span><p>Saved <code>cover.webp</code>. I used the chart drawing in coral on a blue panel and left the left third empty for your title.</p></div>
+  </div>
+
+  <h2 id="prompts">Prompts to start with</h2>
+  <p>Paste any of these and swap in your own words. The <a href="/mcp/">MCP page</a> has thirteen prompts, from sticker sheets to etched posters.</p>
+  <ul>
+    <li><strong>Brand board.</strong> <q>Make a brand board for [product], [one line about what it does]. Pick a mark from the library that suits it, use these inks: [four hex colours], and a serif wordmark. Render it with render_board, save board.png, then tell me which tile you would change.</q></li>
+    <li><strong>Poster series.</strong> <q>Make a poster series for my brand [name], [one line]. Pick a mark from the library, use these inks: [three or four hex colours] and these headline words: [four words]. Render it with render_poster into a folder called posters and tell me which two posters work best and why.</q></li>
+    <li><strong>Article cover.</strong> <q>Draw a cover for my article “[title]”. Search the library for two or three fitting drawings, show me a contact sheet, then compose a riso scene with room on the left for a title. Fix every critic note and save it as cover.webp.</q></li>
+    <li><strong>Fix without redrawing.</strong> <q>Run critique_scene on scene.json and fix each note by moving or resizing elements, not by changing the look. Tell me what you changed.</q></li>
+  </ul>
+
+  <h2 id="ghost">Ghost tools</h2>
+  <p>If you publish with Ghost, add your Admin API credentials to the server’s <code>env</code> and three more tools appear. Without both variables they do not exist.</p>
+  <pre><code class="language-json">{ghost}</code></pre>
+  <ul>
+    <li><code>ghost_drafts</code>: read-only. Drafts without images, their h2 headings and, for one draft, the full text.</li>
+    <li><code>ghost_preview</code>: a dry run. Renders the cover and inline images, shows where each goes and returns a token. Nothing changes.</li>
+    <li><code>ghost_apply</code>: writes, only with the token from a preview of the same plan on the unchanged draft.</li>
+  </ul>
+  <p>Drafts only: nothing is published or emailed, a draft that already has images is skipped, and there is at most one image per section. The key stays in your MCP config. The same flow works from the terminal with <code>levni ghost</code>; see <a href="/docs/cli/#ghost">the CLI page</a>.</p>
+
+  <h2 id="trouble">Troubleshooting</h2>
+  <ul>
+    <li><strong>The tools do not show up.</strong> Restart the client after editing its config, and check that <code>npx -y {pkg} mcp</code> starts when you run it in a terminal. Node.js 20 or newer is required.</li>
+    <li><strong><code>render_poster</code> is missing or errors.</strong> Posters arrived in 0.3.0, which is not on npm yet. Use the checkout config above, or <code>npm install github:BoraGkc/levni</code> and point the client at <code>node_modules/@levni/levni/bin/levni.mjs</code>.</li>
+    <li><strong>Files land in the wrong folder.</strong> Paths are relative to the client’s working directory. Use absolute paths in <code>out</code> if in doubt.</li>
+    <li><strong>The agent cannot see images.</strong> Ask it to pass <code>preview: false</code> and rely on <code>critique_scene</code>, or on <code>levni check</code> for drawings.</li>
+  </ul>
+</Docs>

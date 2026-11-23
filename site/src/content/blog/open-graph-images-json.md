@@ -1,7 +1,8 @@
 ---
 title: "Create Open Graph Images from a JSON Scene"
-description: "Generate an Open Graph image from a JSON scene: the 1200x630 social share size, a safe area that survives cropping, the og:image and twitter:card tags, and PNG export."
+description: "Generate an Open Graph image from a JSON scene: the 1200x630 share size, a safe area that survives cropping, the og:image and twitter:card tags, and PNG export."
 date: 2026-11-14
+updated: 2026-11-24
 category: covers
 kind: Guide
 coverAlt: "A megaphone on a yellow sunburst, with a framed camera card at the left and a small flag at the right, all on a blue card"
@@ -160,3 +161,5 @@ The same scenes give you a cover for the page and a card for the share. Because 
 If you want the cards in your brand colours, a scene takes a `style` field with your own inks: see [brand-colour illustrations](/blog/brand-colour-illustrations/). For the full cover workflow, read [how to generate blog covers with Claude Code](/blog/generate-blog-covers-claude-code/), and browse the [Levni library](/library/) to see the props your cards can use.
 
 Related: to render the same scene as a square post, a story and a YouTube thumbnail as well as the share card, read [one illustration, every social image size](/blog/social-media-image-sizes/).
+
+**Reference and examples.** Read the [CLI reference](/docs/cli/) (every command); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

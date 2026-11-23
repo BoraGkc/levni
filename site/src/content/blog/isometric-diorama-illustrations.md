@@ -1,7 +1,8 @@
 ---
 title: "Isometric Diorama Illustrations in One Line of JSON"
-description: "Make isometric diorama illustrations from one line of JSON: seven presets from room to city, floating island bases and a soft toy style."
+description: "Make isometric diorama illustrations from one line of JSON: seven presets from room to city, floating island bases, a soft toy style and a layout critic check."
 date: 2026-11-23
+updated: 2026-11-24
 category: covers
 kind: Guide
 featured: true
@@ -177,3 +178,5 @@ if it helps, and save it as cover.png.
 ## What to do next
 
 See more worlds in [the diorama gallery](/gallery/#worlds) and the full engine on [the features page](/features/). To build a room yourself, object by object, read [isometric room illustrations from JSON](/blog/isometric-illustrations-json/). To fill a diorama with your own people, read [faceless people illustrations](/blog/faceless-people-illustrations/). For other things to place in a world, browse [the library](/library/).
+
+**Reference and examples.** Read the [scene elements reference](/docs/elements/) (every element and field); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

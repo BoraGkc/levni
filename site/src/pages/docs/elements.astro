@@ -1,0 +1,52 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { readDoc, render, splitAt, resetIds } from '../../components/docs/md';
+
+resetIds();
+const { sections } = readDoc('scene.md');
+const get = (t: string) => {
+  const s = sections.find((x) => x.title === t);
+  if (!s) throw new Error(`docs/scene.md has no section "${t}"`);
+  return s;
+};
+const el = get('Elements');
+const iso = get('Little 3D worlds (`iso`)');
+const recipes = splitAt(get('Known limits').md, '### ')[1];
+const parts = [
+  render(el.md, { title: 'Elements', id: el.id }),
+  render(iso.md, { title: iso.title, id: iso.id }),
+  render(recipes, { title: 'Recipes', id: 'recipes' }),
+];
+const toc = parts.flatMap((p) => p.toc);
+const shots = [
+  ['/docs/ex-dither.webp', 'A dithered sunset in blue and coral pixel cells', 'dither fields and the screen pass'],
+  ['/docs/ex-mesh.webp', 'A grainy mesh gradient hero with a mono title', 'meshgrad'],
+  ['/docs/ex-glyphfill.webp', 'A globe drawn in ASCII characters', 'glyphfill'],
+  ['/docs/ex-seals.webp', 'A sticker sheet with seals, a ticket and die-cut stickers', 'seals, ringtext and die-cut stickers'],
+  ['/docs/ex-terrain.webp', 'Wireframe terrain at dusk with a rocket on the horizon', 'terrain'],
+  ['/docs/ex-iso.webp', 'An isometric cafe diorama', 'iso worlds'],
+  ['/docs/ex-soft3d.webp', 'Five library drawings as glossy 3D icons', 'soft 3D and extrude3d'],
+  ['/docs/ex-chart.webp', 'Hand-drawn bar, line and donut charts', 'data charts'],
+  ['/docs/ex-slots.webp', 'A chart drawn inside an old TV screen', 'fusion slots'],
+];
+---
+<Docs
+  title="Levni element reference: drawings, grounds, charts, 3D, dither, seals and recipes"
+  description="Every Levni scene element with its fields: props, grounds and textures, people, charts, soft 3D, little iso worlds, dither, mesh gradients, glyph fills, seals, terrain, engraving, plus copyable recipes."
+  toc={toc}
+>
+  <p class="eyebrow">Reference</p>
+  <h1>Elements</h1>
+  <p class="lede">The building blocks of a scene. Start with <code>prop</code> (a drawing from the library); reach for the rest when you need a ground, a chart, a 3D world or a brand texture. The scene fields and the critic are on <a href="/docs/scenes/">Scenes</a>.</p>
+
+  <div class="shots">
+    {shots.map(([src, alt, cap]) => (
+      <figure><img src={src} width="900" height="505" alt={alt} loading="lazy" decoding="async" /><figcaption>{cap}</figcaption></figure>
+    ))}
+  </div>
+  <p>Every picture above is a scene of a few elements; the recipes at the end of this page show how to write them. The tables list each element’s fields, with <code>?</code> marking optional ones.</p>
+
+  {parts.map((p) => <Fragment set:html={p.html} />)}
+
+  <p>Next: <a href="/docs/boards/">brand boards</a> and <a href="/docs/posters/">branding posters</a> use these same elements.</p>
+</Docs>

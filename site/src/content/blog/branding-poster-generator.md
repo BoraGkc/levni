@@ -30,7 +30,13 @@ You need Node 20 or newer and about ten minutes. The brand is made up: **Kumru**
 npm install @levni/levni
 ```
 
-The command you will use is `levni poster <spec.json> <out-dir>`. It is deterministic: the same spec gives the same posters, speck for speck.
+Posters and the `type` element arrived in Levni 0.3.0. The npm package is still at 0.2.0, which has no `levni poster` command, so until 0.3.0 is published install straight from GitHub:
+
+```bash
+npm install github:BoraGkc/levni
+```
+
+Once 0.3.0 is on npm, the first command is all you need. The command you will use is `levni poster <spec.json> <out-dir>`. It is deterministic: the same spec gives the same posters, speck for speck.
 
 ## Pick a mark and four inks
 
@@ -141,11 +147,13 @@ Open `launch.json`, change a word or an ink, and render it with `npx levni rende
 
 ## Ask an agent to make the series
 
-The `render_poster` tool in the Levni MCP server takes the same spec. Add the server once:
+The `render_poster` tool in the Levni MCP server takes the same spec. Add the server once. `render_poster` needs 0.3.0, so until it is on npm point the client at the GitHub version:
 
 ```bash
-claude mcp add levni -- npx -y @levni/levni mcp
+claude mcp add levni -- npx -y github:BoraGkc/levni mcp
 ```
+
+Once 0.3.0 is on npm, `claude mcp add levni -- npx -y @levni/levni mcp` is enough.
 
 The tool takes `spec`, an `out_dir` for the files, `scenes: true` to return each poster as scene JSON, `preview` for a contact sheet image, and `guide: true` to return the poster format instead of rendering. A good agent reads the guide first, searches the library for a mark, renders, looks at the contact sheet and fixes what it sees. Paste this into Claude or Codex:
 
@@ -172,3 +180,5 @@ When a poster is wrong, fix it in its scene and not in the image. Because the re
 ## What to do next
 
 Put the same brand on a single sheet with [a brand board](/blog/brand-board-generator/), add [seals and stickers](/blog/seal-badge-sticker-generator/) to match, or read the [launch post for the 0.2 brand assets](/blog/levni-brand-assets/) for the dither and gradient pieces. See more posters in the [gallery](/gallery/#posters), and browse the [Levni library](/library/) for a mark.
+
+**Reference and examples.** Read the [poster reference](/docs/posters/) (layouts and type); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

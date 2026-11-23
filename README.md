@@ -50,7 +50,7 @@ const { notes } = await render(scene, 'rocket.png');   // writes the file, retur
 const { svg, used } = await compose(scene);            // or just the SVG
 ```
 
-Node 20+. The only dependency is [sharp](https://sharp.pixelplumbing.com).
+Node 20+. Two dependencies: [sharp](https://sharp.pixelplumbing.com) (SVG to PNG and WebP) and [fontkit](https://github.com/foliojs/fontkit) (reads the bundled OFL fonts for posters and display type).
 
 ## What it draws
 

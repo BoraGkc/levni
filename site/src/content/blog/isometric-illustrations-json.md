@@ -2,6 +2,7 @@
 title: "Build Isometric Room Illustrations from JSON"
 description: "Build an isometric room illustration from JSON with Levni's iso element: floor, walls, boxes and props. Four steps, working code and an image for each."
 date: 2026-11-08
+updated: 2026-11-24
 category: covers
 kind: Guide
 coverAlt: "An isometric room with a coral desk, a yellow shelf, a green stool and a floor lamp inside a yellow circle"
@@ -130,3 +131,5 @@ Since this guide was written, the `iso` element has grown presets. `{ "type": "i
 ## What to do next
 
 Try the `oblique` projection by changing one word, and compare. Browse [the Levni library](/library/) for more furniture and desk props, or look under [`/library/?c=tech`](/library/?c=tech). For the first-cover workflow end to end, read [generate blog covers with Claude Code](/blog/generate-blog-covers-claude-code/). To print the same room in other inks, see [style packs](/blog/style-packs/).
+
+**Reference and examples.** Read the [scene elements reference](/docs/elements/) (every element and field); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

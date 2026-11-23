@@ -1,0 +1,42 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { readDoc, render, splitAt, resetIds } from '../../components/docs/md';
+
+resetIds();
+const { intro, sections } = readDoc('scene.md');
+const keep = ['Scene fields', 'Canvas and colours', 'Composition rules that work', 'Formats and reflow', 'Title layer', 'Slots (fusion)', 'The critic', 'Known limits'];
+const head = render(intro);
+const body = keep.map((t) => {
+  const s = sections.find((x) => x.title === t);
+  if (!s) throw new Error(`docs/scene.md has no section "${t}"`);
+  const md = t === 'Known limits' ? splitAt(s.md, '### ')[0] : s.md;
+  return render(md, { title: t, id: s.id });
+});
+const toc = [...body.flatMap((b) => b.toc)];
+---
+<Docs
+  title="Levni scene format: canvas, colours, formats, slots and the critic"
+  description="The Levni scene format: one JSON object with elements drawn in order. Fields, canvas and colours, composition rules, formats and reflow, the title layer, fusion slots and the layout critic."
+  toc={toc}
+>
+  <p class="eyebrow">Reference</p>
+  <h1>Scenes</h1>
+  <p class="lede">A scene is one JSON object. Elements are drawn in order, each on top of the last. This page is the format itself; every element type is on <a href="/docs/elements/">Elements</a>.</p>
+
+  <Fragment set:html={head.html} />
+
+  <div class="pair two">
+    <figure>
+      <img src="/docs/first-scene.webp" width="1200" height="673" alt="A rocket tilted over a mustard disc, with a small blue label" loading="lazy" decoding="async" />
+      <figcaption>A disc, a drawing and a label: three elements, drawn in that order.</figcaption>
+    </figure>
+    <figure>
+      <img src="/docs/recolor.webp" width="1200" height="673" alt="The same rocket three times with different colour swaps" loading="lazy" decoding="async" />
+      <figcaption><code>recolor</code> swaps house colours per element; a <code>style</code> on the scene re-inks everything.</figcaption>
+    </figure>
+  </div>
+
+  {body.map((b) => <Fragment set:html={b.html} />)}
+
+  <p>Next: <a href="/docs/elements/">every element type and the recipes</a>.</p>
+</Docs>

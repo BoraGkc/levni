@@ -1,7 +1,8 @@
 ---
 title: "How an AI Agent Checks Its Own Illustration Layout"
-description: "How an AI agent checks its illustration layout without seeing it: off-canvas, accidental crops, lopsided weight, focal point and overlaps, with real critic output."
+description: "How an AI agent checks its illustration layout without seeing it: off-canvas items, crops, lopsided weight, focal point and overlaps, with real critic output."
 date: 2026-11-17
+updated: 2026-11-24
 category: agents
 kind: Explainer
 coverAlt: "A large magnifying glass over a browser window, with a small robot and a green tick beside it on a blue card"
@@ -158,3 +159,5 @@ The report is the useful part. It shows whether the agent really read the notes 
 ## What to do next
 
 Read [the Claude Code cover guide](/blog/generate-blog-covers-claude-code/) to watch the critic work inside a full cover task. Browse the [Levni library](/library/) for props that already pass `levni check`, and see [Open Graph images from JSON](/blog/open-graph-images-json/) to make the share card that goes with each cover.
+
+**Reference and examples.** Read the [CLI reference](/docs/cli/) (every command), the [MCP guide](/docs/mcp/) (every tool and field); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

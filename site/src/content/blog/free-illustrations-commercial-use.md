@@ -2,6 +2,7 @@
 title: "Free Illustrations for Commercial Use: What CC BY 4.0 Allows"
 description: "Free illustrations for commercial use: what CC BY 4.0 permits, what it requires, and an attribution example for a blog, a site footer and a slide."
 date: 2026-11-12
+updated: 2026-11-24
 category: library
 kind: Explainer
 coverAlt: "A stack of banknotes on a yellow sun, a small shop on the left and a book on the right, on a blue panel"
@@ -18,7 +19,7 @@ faq:
     a: "No. The code is MIT licensed. The drawings in the library are CC BY 4.0, credited to Ortak Alan, and contributors are credited in their prop files."
 ---
 
-You need a picture for a landing page, a newsletter or a pitch deck. The search box says "free", but free can mean many things. Some images are free to look at. Some are free only for personal projects. Some are free for anything, if you say who made them. Mixing those up is how a small business ends up with an awkward email.
+You need a picture for a landing page, a newsletter or a pitch deck. The search box says "free", but free can mean many things. Some images are free to look at. Some are free only for personal projects. Some are free for anything, if you say who made them. Mixing those up is how a small business ends up with an awkward email. This guide explains what the free illustrations in the Levni library allow for commercial use under CC BY 4.0.
 
 This guide explains one common licence, **Creative Commons Attribution 4.0 (CC BY 4.0)**, in plain English. It is the licence on the Levni library, a set of 538 hand-drawn props in 848 variants across 15 categories. You will see what it permits and requires, how to credit a drawing in a blog, a footer and a slide, and a checklist you can apply to any free illustration source.
 
@@ -145,3 +146,5 @@ Before you publish, read the page once as a visitor. Is the credit findable? Doe
 Browse the [Levni library](/library/) and pick a shelf. To make a cover from those drawings in minutes, read [generate blog covers with Claude Code](/blog/generate-blog-covers-claude-code/). To match the drawings to your brand colours, see [brand colour illustrations](/blog/brand-colour-illustrations/), and to add your own, read [draw SVG icons as JSON](/blog/draw-svg-icons-json/).
 
 Related: the same licence covers the 481 pixel icons in the library, see [free pixel art icons](/blog/free-pixel-art-icons/).
+
+**Reference and examples.** Read the [Getting started](/docs/getting-started/) (install and a first render); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

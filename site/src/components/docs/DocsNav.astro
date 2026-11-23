@@ -1,0 +1,17 @@
+---
+import { DOC_GROUPS } from './nav';
+interface Props { current: string; idPrefix?: string }
+const { current, idPrefix = 'nav' } = Astro.props;
+---
+<nav class="dnav" aria-label="Docs">
+  {DOC_GROUPS.map((g, i) => (
+    <div class="dnav-group">
+      <p class="dnav-label" id={`${idPrefix}-g${i}`}>{g.label}</p>
+      <ul aria-labelledby={`${idPrefix}-g${i}`}>
+        {g.pages.map((p) => (
+          <li><a href={p.href} aria-current={p.href === current ? 'page' : undefined}>{p.title}</a></li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</nav>

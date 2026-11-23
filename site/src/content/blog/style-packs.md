@@ -1,10 +1,20 @@
 ---
 title: "Style packs: one scene, many inks"
-description: "Levni style packs print the same scene with a different set of inks and paper. The first two: Ortak Alan riso and a miniature pack inspired by Tulip Era painting."
+description: "Levni style packs print one scene with a different set of inks and paper. The first two are Ortak Alan riso and a miniature pack inspired by Tulip Era painting."
 date: 2026-11-22
+updated: 2026-11-24
 og: /og/style-packs.png
 category: brand
 kind: Explainer
+faq:
+  - q: "What is a Levni style pack?"
+    a: "A style pack is a map from Levni's colour names to hex values, plus paper and texture settings. Switching the pack reprints the same scene in different inks."
+  - q: "Which style packs ship with Levni?"
+    a: "Two: riso, the Ortak Alan house look of cobalt, coral and mustard, and miniature, inspired by Ottoman Tulip Era court painting."
+  - q: "How do I use a style pack?"
+    a: "Set `style` on the scene to the pack name, for example `\"style\": \"miniature\"`. You can also pass your own inks as an object of colour names and hex values."
+  - q: "Do style packs change the scene itself?"
+    a: "No. The elements, positions and seed stay as written. Only the inks, paper and textures change, so you can compare packs on the same layout."
 coverAlt: "A small isometric room drawn by Levni"
 ---
 
@@ -32,3 +42,7 @@ These are new drawings in that spirit, not copies of historical works. That is t
 ## Make your own
 
 A style pack is a map from Levni's colour names to hex values. See `src/styles.mjs` in the repository; contributions are welcome.
+
+Next, see how [brand colour illustrations](/blog/brand-colour-illustrations/) swap in your own inks, how [one style held across 500 articles](/blog/one-style-500-articles/), and the [launch post](/blog/introducing-levni/).
+
+**Reference and examples.** Read the [scene elements reference](/docs/elements/) (every element and field); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

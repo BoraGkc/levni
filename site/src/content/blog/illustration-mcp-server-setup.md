@@ -1,7 +1,8 @@
 ---
 title: "Add an Illustration MCP Server to Claude, Cursor and VS Code"
-description: "Add an MCP server for images to Claude Desktop, Cursor, VS Code or Claude Code. Exact config for each client, what the five tools return, and a first test prompt."
+description: "Add an illustration MCP server to Claude Desktop, Cursor, VS Code or Claude Code. Exact config for each client, what the tools return, and a first test prompt."
 date: 2026-11-20
+updated: 2026-11-24
 category: agents
 kind: Guide
 coverAlt: "A laptop on the left, a robot on the right and a power plug in the middle on a yellow disc, all on a blue card"
@@ -18,7 +19,7 @@ faq:
     a: "Node 20 or newer. If your client starts the server with an older Node, it will fail before it answers, so check node --version in the same shell the client uses."
 ---
 
-You can give an AI agent a drawing tool in about two minutes. The Model Context Protocol, or MCP, lets a client such as Claude Desktop, Cursor or VS Code start a small program and call the tools it offers. If one of those tools draws pictures, your agent can make a cover image without leaving the chat.
+You can give an AI agent a drawing tool in about two minutes. The Model Context Protocol, or MCP, lets a client such as Claude Desktop, Cursor or VS Code start a small program and call the tools it offers. If one of those tools draws pictures, your agent can make a cover image without leaving the chat. This guide sets up an illustration MCP server in four clients.
 
 This guide adds **Levni** as that tool. Levni is an open-source illustration engine: the agent writes a short JSON scene, Levni draws it in a hand-inked riso style and sends back layout notes and a preview. It is not an image model, so there is no API key and no cost per image.
 
@@ -154,3 +155,5 @@ A JSON typo in the config fails silently in some clients. If no tools appear, va
 Browse the [Levni library](/library/) to see the 538 drawings your agent will pick from, or open [the agents section](/#agents) for more setups. Once the server works, follow [the Claude Code cover guide](/blog/generate-blog-covers-claude-code/) to make your first real image, and read [how an agent checks its own layout](/blog/agent-layout-critic/) to learn what the critic's notes mean.
 
 Related: if you publish with Ghost, the same server can add images to your drafts, see [add featured images to Ghost drafts with an AI assistant](/blog/ghost-featured-images-ai/).
+
+**Reference and examples.** Read the [MCP guide](/docs/mcp/) (every tool and field), the [Getting started](/docs/getting-started/) (install and a first render); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

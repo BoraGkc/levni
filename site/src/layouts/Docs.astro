@@ -1,0 +1,264 @@
+---
+import Base from './Base.astro';
+import DocsNav from '../components/docs/DocsNav.astro';
+import { DOC_PAGES, docPage } from '../components/docs/nav';
+import { SITE } from '../site';
+
+interface Props {
+  title: string;
+  description: string;
+  toc?: { id: string; text: string; level: 2 | 3 }[];
+  og?: string;
+}
+const { title, description, toc = [], og } = Astro.props;
+const path = Astro.url.pathname;
+const here = docPage(path);
+const idx = DOC_PAGES.findIndex((p) => p.href === path);
+const prev = idx > 0 ? DOC_PAGES[idx - 1] : undefined;
+const next = idx >= 0 && idx < DOC_PAGES.length - 1 ? DOC_PAGES[idx + 1] : undefined;
+const source = `${SITE.github}/tree/main/docs`;
+const jsonld = [
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Docs', item: `${SITE.url}/docs/` },
+      ...(path !== '/docs/' ? [{ '@type': 'ListItem', position: 2, name: here?.title ?? title, item: `${SITE.url}${path}` }] : []),
+    ],
+  },
+];
+---
+<Base title={title} description={description} og={og} jsonld={jsonld}>
+  <div class="docs">
+    <div class="docs-bar">
+      <details class="docs-menu">
+        <summary><span>Docs menu</span><b>{here?.title ?? 'Docs'}</b></summary>
+        <DocsNav current={path} idPrefix="m" />
+      </details>
+    </div>
+    <div class="docs-grid">
+      <aside class="docs-side" aria-label="Docs navigation">
+        <a class="docs-home" href="/docs/">Docs</a>
+        <DocsNav current={path} idPrefix="d" />
+        <p class="docs-side-foot"><a href={SITE.github}>Source on GitHub</a></p>
+      </aside>
+
+      <div class="docs-main">
+        {toc.length > 1 && (
+          <details class="docs-toc-inline">
+            <summary>On this page</summary>
+            <ul>{toc.map((h) => <li class={`l${h.level}`}><a href={`#${h.id}`}>{h.text}</a></li>)}</ul>
+          </details>
+        )}
+        <article class="prose" id="docs-article">
+          <slot />
+        </article>
+        <nav class="docs-pager" aria-label="Previous and next">
+          {prev ? <a class="prev" href={prev.href} rel="prev"><small>Previous</small><span>{prev.title}</span></a> : <span />}
+          {next ? <a class="next" href={next.href} rel="next"><small>Next</small><span>{next.title}</span></a> : <span />}
+        </nav>
+        <p class="docs-foot">Found a mistake? These pages come from <a href={source}>the docs folder</a> and the CLI help; fix it there and open a pull request.</p>
+      </div>
+
+      {toc.length > 1 && (
+        <aside class="docs-toc" aria-label="On this page">
+          <p class="dnav-label">On this page</p>
+          <ul>{toc.map((h) => <li class={`l${h.level}`}><a href={`#${h.id}`}>{h.text}</a></li>)}</ul>
+        </aside>
+      )}
+    </div>
+  </div>
+</Base>
+
+<script>
+  // copy buttons on every code block
+  document.querySelectorAll<HTMLPreElement>('.prose pre').forEach((pre) => {
+    const wrap = document.createElement('div');
+    wrap.className = 'codeblock';
+    pre.parentNode?.insertBefore(wrap, pre);
+    wrap.appendChild(pre);
+    const code = pre.querySelector('code');
+    const lang = code?.className.match(/language-(\w+)/)?.[1];
+    if (lang) wrap.dataset.lang = lang;
+    pre.tabIndex = 0;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'copy';
+    btn.textContent = 'Copy';
+    btn.setAttribute('aria-label', 'Copy code');
+    btn.addEventListener('click', async () => {
+      const text = (code ?? pre).textContent ?? '';
+      try { await navigator.clipboard.writeText(text.replace(/\n$/, '')); btn.textContent = 'Copied'; }
+      catch { btn.textContent = 'Press Ctrl+C'; const r = document.createRange(); r.selectNodeContents(code ?? pre); const s = getSelection(); s?.removeAllRanges(); s?.addRange(r); }
+      setTimeout(() => { btn.textContent = 'Copy'; }, 1800);
+    });
+    wrap.appendChild(btn);
+  });
+
+  // highlight the heading in view in the right-hand contents
+  const links = new Map<string, HTMLAnchorElement>();
+  document.querySelectorAll<HTMLAnchorElement>('.docs-toc a').forEach((a) => links.set(a.getAttribute('href')!.slice(1), a));
+  if (links.size && 'IntersectionObserver' in window) {
+    const heads = [...links.keys()].map((id) => document.getElementById(id)).filter(Boolean) as HTMLElement[];
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (!e.isIntersecting) continue;
+        links.forEach((a) => a.removeAttribute('aria-current'));
+        links.get(e.target.id)?.setAttribute('aria-current', 'true');
+      }
+    }, { rootMargin: '-72px 0px -70% 0px' });
+    heads.forEach((h) => io.observe(h));
+  }
+  // close the mobile menu after choosing a page section on the same page
+  document.querySelectorAll('.docs-toc-inline a').forEach((a) => a.addEventListener('click', () => a.closest('details')?.removeAttribute('open')));
+</script>
+
+<style is:global>
+  .docs { --side: 15.5rem; --toc: 13.5rem; padding-bottom: 24px; }
+  .docs-bar { border-bottom: 1px solid var(--rule); background: var(--paper-2); }
+  .docs-menu { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+  .docs-menu summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; list-style: none; cursor: pointer; padding: 12px 0; min-height: 48px; font-size: 0.95rem; }
+  .docs-menu summary::-webkit-details-marker { display: none; }
+  .docs-menu summary span { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); }
+  .docs-menu summary b { font-weight: 600; display: inline-flex; align-items: center; gap: 8px; }
+  .docs-menu summary b::after { content: ''; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-2px); transition: transform .15s; }
+  .docs-menu[open] summary b::after { transform: rotate(225deg); }
+  .docs-menu .dnav { padding: 4px 0 18px; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 4px 24px; }
+
+  .docs-grid { max-width: 1280px; margin: 0 auto; padding: 0 20px; display: block; }
+  .docs-side, .docs-toc { display: none; }
+  .docs-main { min-width: 0; padding-top: 28px; }
+
+  .dnav { display: block; font-size: inherit; }
+  .dnav-label { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin: 14px 0 4px; }
+  .dnav ul, .docs-toc ul, .docs-toc-inline ul { list-style: none; margin: 0; padding: 0; }
+  .dnav a { display: block; padding: 7px 10px; margin-left: -10px; border-radius: 6px; color: var(--ink); text-decoration: none; font-size: 0.98rem; line-height: 1.35; }
+  .dnav a:hover { background: var(--paper-2); color: var(--accent-text); }
+  .dnav a[aria-current='page'] { background: var(--ink); color: var(--paper); font-weight: 600; }
+
+  .docs-toc-inline { border: 1px solid var(--rule); background: var(--paper-2); border-radius: 8px; margin: 0 0 22px; }
+  .docs-toc-inline summary { cursor: pointer; padding: 11px 14px; font-weight: 600; font-size: 0.95rem; min-height: 44px; }
+  .docs-toc-inline ul { padding: 0 14px 12px; columns: 2 220px; }
+  .docs-toc-inline li { break-inside: avoid; }
+  .docs-toc-inline li.l3 { padding-left: 14px; }
+  .docs-toc-inline a { display: block; padding: 5px 0; font-size: 0.93rem; text-decoration: none; color: var(--ink-soft); }
+  .docs-toc-inline a:hover { color: var(--accent-text); }
+
+  /* prose */
+  .prose { max-width: 46rem; font-size: 1.04rem; overflow-wrap: break-word; }
+  .prose > *:first-child { margin-top: 0; }
+  .prose h1 { font-size: clamp(2.3rem, 6vw, 3.4rem); margin-bottom: 0.3em; letter-spacing: -0.01em; }
+  .prose .eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 10px; }
+  .prose .lede { font-size: 1.22rem; line-height: 1.5; color: var(--ink); margin: 0 0 1.4em; max-width: 40rem; }
+  .prose h2 { font-size: clamp(1.7rem, 3.4vw, 2.15rem); margin: 2.2em 0 0.55em; padding-top: 0.9em; border-top: 2px solid var(--ink); scroll-margin-top: 16px; }
+  .prose h3 { font-size: 1.4rem; margin: 1.9em 0 0.45em; scroll-margin-top: 16px; }
+  .prose h4 { font-family: var(--mono); font-size: 0.86rem; letter-spacing: 0.06em; text-transform: uppercase; margin: 1.6em 0 0.4em; }
+  .prose h2 + h3 { margin-top: 1em; }
+  .prose p, .prose ul, .prose ol { margin: 0 0 1em; }
+  .prose li { margin: 0.25em 0; }
+  .prose ul, .prose ol { padding-left: 1.3em; }
+  .prose a.anchor { margin-left: 0.4em; font-family: var(--mono); font-size: 0.7em; font-weight: 400; text-decoration: none; color: var(--ink-soft); opacity: 0; transition: opacity .15s; }
+  .prose :is(h2, h3, h4):hover a.anchor, .prose a.anchor:focus-visible { opacity: 1; }
+  .prose :not(pre) > code { background: var(--paper-2); border: 1px solid var(--rule); border-radius: 4px; padding: 0.05em 0.35em; font-size: 0.84em; overflow-wrap: anywhere; }
+  .prose pre { margin: 0 0 1.2em; border: 1px solid var(--ink); border-radius: 8px; background: #14181f; color: #eceae2; padding: 1rem 1.1rem; font-size: 0.84rem; line-height: 1.55; tab-size: 2; }
+  .prose pre code { background: none; border: 0; padding: 0; font-size: inherit; overflow-wrap: normal; }
+  .codeblock { position: relative; margin: 0 0 1.2em; }
+  .codeblock pre { margin: 0; padding-right: 4.6rem; }
+  .codeblock[data-lang]::before { content: attr(data-lang); position: absolute; left: 12px; top: -9px; background: var(--paper); border: 1px solid var(--ink); border-radius: 4px; padding: 0 6px; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.5; }
+  .codeblock .copy { position: absolute; top: 8px; right: 8px; font: inherit; font-family: var(--mono); font-size: 0.74rem; background: #2a303b; color: #eceae2; border: 1px solid #4a5160; border-radius: 6px; padding: 5px 10px; min-height: 30px; cursor: pointer; }
+  .codeblock .copy:hover { background: #3a4150; }
+  .codeblock .copy:focus-visible { outline-color: var(--mustard); }
+  .prose blockquote { margin: 1.2em 0; padding: 0.2em 1em; border-left: 4px solid var(--accent); background: var(--paper-2); }
+  .prose hr { border: 0; border-top: 1px solid var(--rule); margin: 2em 0; }
+  .prose strong { font-weight: 700; }
+
+  .table-wrap { overflow-x: auto; margin: 0 0 1.4em; border: 1px solid var(--rule); border-radius: 8px; background: var(--paper-2); -webkit-overflow-scrolling: touch; }
+  .table-wrap:focus-visible { outline-offset: 0; }
+  .prose table { border-collapse: collapse; width: 100%; font-size: 0.9rem; line-height: 1.45; min-width: 36rem; }
+  .prose th, .prose td { text-align: left; vertical-align: top; padding: 9px 12px; border-bottom: 1px solid var(--rule); }
+  .prose th { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.06em; text-transform: uppercase; background: var(--paper); border-bottom: 2px solid var(--ink); white-space: nowrap; position: sticky; top: 0; }
+  .prose tr:last-child td { border-bottom: 0; }
+  .prose td:first-child { white-space: nowrap; }
+  .prose td code { font-size: 0.8em; }
+
+  .prose figure { margin: 1.6em 0; }
+  .prose figure img { width: 100%; border: 2px solid var(--ink); background: var(--paper-2); box-shadow: 5px 5px 0 var(--accent); }
+  .prose figcaption { font-size: 0.9rem; color: var(--ink-soft); margin-top: 12px; line-height: 1.45; }
+  .pair { display: grid; gap: 18px; margin: 1.6em 0; align-items: start; }
+  .pair > * { min-width: 0; }
+  .pair figure, .pair .codeblock, .pair pre { margin: 0; }
+  .shots { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr)); margin: 1.6em 0; }
+  .shots figure { margin: 0; }
+  .shots figure img { box-shadow: 3px 3px 0 var(--accent); }
+  .shots figcaption { font-size: 0.85rem; }
+
+  .prose ul.cols { columns: 2 14rem; column-gap: 24px; list-style: none; padding: 0; font-size: 0.95rem; }
+  .prose ul.cols li { break-inside: avoid; }
+  .callout { border: 2px solid var(--ink); border-left-width: 8px; border-left-color: var(--mustard); background: var(--paper-2); padding: 0.8em 1.1em; margin: 1.4em 0; border-radius: 4px; }
+  .callout > :last-child { margin-bottom: 0; }
+  .callout strong:first-child { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; display: block; margin-bottom: 4px; }
+
+  .cards { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); margin: 1.6em 0; padding: 0; list-style: none; }
+  .cards li { margin: 0; }
+  .cards a { display: flex; flex-direction: column; height: 100%; text-decoration: none; color: var(--ink); border: 2px solid var(--ink); background: var(--paper-2); padding: 18px 18px 16px; box-shadow: 5px 5px 0 var(--accent); transition: transform .12s, box-shadow .12s; }
+  .cards a:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--coral); color: var(--ink); }
+  .cards .k { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-text); }
+  .cards strong { font-family: var(--display); font-size: 1.55rem; line-height: 1.1; font-weight: 600; margin: 6px 0 8px; }
+  .cards span:not(.k) { font-size: 0.97rem; line-height: 1.45; color: var(--ink-soft); }
+  .cards .go { margin-top: auto; padding-top: 14px; font-weight: 600; color: var(--accent-text); }
+
+  .tooldef { border: 1px solid var(--rule); border-radius: 8px; background: var(--paper-2); margin: 1.2em 0; padding: 1px 16px 4px; }
+  .tooldef h3 { margin-top: 0.8em; font-family: var(--mono); font-size: 1.05rem; font-weight: 600; }
+  .tooldef dl { display: grid; gap: 2px 14px; margin: 0 0 12px; }
+  .tooldef dt { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin-top: 8px; }
+  .tooldef dd { margin: 0; }
+  .steps { counter-reset: step; list-style: none; padding: 0 !important; }
+  .steps > li { counter-increment: step; position: relative; padding-left: 2.6rem; margin: 0 0 1.1em; }
+  .steps > li::before { content: counter(step); position: absolute; left: 0; top: 0.05em; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--ink); color: var(--paper); font-family: var(--mono); font-size: 0.85rem; display: grid; place-items: center; }
+  .chat { border: 2px solid var(--ink); border-radius: 8px; background: var(--paper-2); margin: 1.4em 0; overflow: hidden; }
+  .chat > div { padding: 12px 16px; border-bottom: 1px solid var(--rule); }
+  .chat > div:last-child { border-bottom: 0; }
+  .chat .who { display: block; font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 4px; }
+  .chat .you { background: var(--paper); }
+  .chat .tool .who { color: var(--accent-text); }
+  .chat p { margin: 0 0 0.4em; font-size: 0.97rem; }
+  .chat code { font-size: 0.82rem; }
+  .chat pre { margin: 6px 0 0; font-size: 0.78rem; }
+
+  .docs-pager { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 46rem; margin: 3rem 0 1.2rem; }
+  .docs-pager a { display: block; border: 2px solid var(--ink); background: var(--paper-2); padding: 12px 16px; text-decoration: none; color: var(--ink); min-height: 64px; }
+  .docs-pager a:hover { background: var(--ink); color: var(--paper); }
+  .docs-pager small { display: block; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; }
+  .docs-pager span { font-family: var(--display); font-size: 1.25rem; font-weight: 600; }
+  .docs-pager .next { text-align: right; grid-column: 2; }
+  .docs-pager .prev { grid-column: 1; }
+  .docs-foot { font-size: 0.9rem; color: var(--ink-soft); max-width: 46rem; }
+
+  @media (max-width: 520px) {
+    .docs-pager { grid-template-columns: 1fr; }
+    .docs-pager .next, .docs-pager .prev { grid-column: 1; text-align: left; }
+    .prose pre { font-size: 0.8rem; }
+  }
+  @media (min-width: 760px) {
+    .pair.two { grid-template-columns: 1fr 1fr; }
+    .tooldef dl { grid-template-columns: 7.5rem 1fr; }
+    .tooldef dt { margin-top: 0; padding-top: 0.4em; }
+    .tooldef dd { margin-bottom: 6px; }
+  }
+  @media (min-width: 960px) {
+    .docs-bar { display: none; }
+    .docs-grid { display: grid; grid-template-columns: var(--side) minmax(0, 1fr); gap: 0 48px; }
+    .docs-side { display: block; position: sticky; top: 0; align-self: start; max-height: 100vh; overflow-y: auto; padding: 28px 0 24px; }
+    .docs-home { display: block; font-family: var(--display); font-style: italic; font-size: 1.7rem; font-weight: 600; text-decoration: none; color: var(--ink); }
+    .docs-side-foot { font-size: 0.9rem; margin-top: 24px; }
+    .docs-toc-inline { display: block; }
+  }
+  @media (min-width: 1240px) {
+    .docs-grid { grid-template-columns: var(--side) minmax(0, 1fr) var(--toc); }
+    .docs-toc { display: block; position: sticky; top: 0; align-self: start; max-height: 100vh; overflow-y: auto; padding: 28px 0 24px; font-size: 0.9rem; }
+    .docs-toc li.l3 { padding-left: 12px; }
+    .docs-toc a { display: block; padding: 4px 0 4px 10px; border-left: 2px solid var(--rule); color: var(--ink-soft); text-decoration: none; line-height: 1.35; }
+    .docs-toc a:hover { color: var(--accent-text); border-left-color: var(--accent); }
+    .docs-toc a[aria-current='true'] { color: var(--ink); border-left-color: var(--coral); font-weight: 600; }
+    .docs-toc-inline { display: none; }
+  }
+</style>

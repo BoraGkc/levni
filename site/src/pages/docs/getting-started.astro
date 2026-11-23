@@ -1,0 +1,115 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { SITE } from '../../site';
+
+const toc = [
+  { id: 'requirements', text: 'Requirements', level: 2 as const },
+  { id: 'install', text: 'Install', level: 2 as const },
+  { id: 'first-render', text: 'Your first render', level: 2 as const },
+  { id: 'critic', text: 'Read the critic', level: 2 as const },
+  { id: 'where', text: 'Where files go', level: 2 as const },
+  { id: 'next', text: 'Where next', level: 2 as const },
+];
+const scene = `{ "seed": 5, "elements": [
+  { "type": "disc", "x": 600, "y": 336, "r": 250, "color": "mustard" },
+  { "type": "prop", "name": "rocket", "x": 600, "y": 336, "size": 380, "rot": 20, "shadow": true },
+  { "type": "label", "text": "Launch / Day one", "x": 80, "y": 90, "color": "ink" }
+] }`;
+const bad = `{ "seed": 2, "elements": [
+  { "type": "prop", "name": "rocket", "x": 1150, "y": 336, "size": 380 },
+  { "type": "prop", "name": "lighthouse", "x": 200, "y": 560, "size": 200 }
+] }`;
+---
+<Docs
+  title="Getting started with Levni: install and draw your first image"
+  description="Install Levni from npm or GitHub, write a JSON scene, render it to PNG and read the layout critic. Takes two minutes, needs only Node.js 20."
+  toc={toc}
+>
+  <p class="eyebrow">Start</p>
+  <h1>Getting started</h1>
+  <p class="lede">Install Levni, draw one picture, learn to read its critic. Two minutes, no account and no key.</p>
+
+  <h2 id="requirements">Requirements</h2>
+  <p>Node.js 20 or newer. Levni has two dependencies, <a href="https://sharp.pixelplumbing.com">sharp</a> (SVG to PNG and WebP) and <a href="https://github.com/foliojs/fontkit">fontkit</a> (reads the bundled fonts), which npm installs for you. Everything runs locally.</p>
+
+  <h2 id="install">Install</h2>
+  <p>Pick the route that matches how you will use it.</p>
+  <ol class="steps">
+    <li>
+      <strong>For an agent over MCP: nothing to install.</strong> Your client runs Levni through <code>npx</code>. Jump to <a href="/docs/mcp/">MCP server</a> for the one-line setup.
+    </li>
+    <li>
+      <strong>For the CLI or Node API: install from npm.</strong>
+      <pre><code class="language-bash">npm install @levni/levni
+npx levni list coffee</code></pre>
+      <p>The <code>levni</code> command is now available through <code>npx</code> inside that project. Install globally with <code>npm install -g @levni/levni</code> if you want it everywhere.</p>
+    </li>
+    <li>
+      <strong>For the newest features: install from GitHub.</strong> Branding posters and the type engine are in 0.3.0, which is not published to npm yet.
+      <pre><code class="language-bash">npm install github:BoraGkc/levni</code></pre>
+      <p>Or work from a checkout, which is also how you contribute drawings:</p>
+      <pre><code class="language-bash">git clone {SITE.github}.git
+cd levni && npm install
+node bin/levni.mjs list coffee</code></pre>
+    </li>
+  </ol>
+
+  <h2 id="first-render">Your first render</h2>
+  <p>A scene is a JSON object. <code>elements</code> are drawn in order, each on top of the last, on a 1200 by 673 canvas. Save this as <code>scene.json</code>:</p>
+  <div class="pair two">
+    <pre><code class="language-json">{scene}</code></pre>
+    <figure>
+      <img src="/docs/first-scene.webp" width="1200" height="673" alt="A rocket tilted over a mustard disc, with a small blue label reading Launch / Day one" loading="lazy" decoding="async" />
+      <figcaption>The result: <code>rocket</code> is a drawing from the library, <code>shadow</code> adds a cast shadow, <code>rot</code> tilts it.</figcaption>
+    </figure>
+  </div>
+  <p>Render it:</p>
+  <pre><code class="language-bash">npx levni render scene.json out.png</code></pre>
+  <p>The output extension picks the format: <code>.png</code>, <code>.webp</code> or <code>.svg</code>. Add <code>--preview</code> to also write a 560 px <code>out.png.prev.jpg</code>, and <code>--format og</code> (or <code>cover</code>, <code>square</code>, <code>story</code>, <code>youtube</code>) to recompose the scene for another canvas.</p>
+  <p>Not sure which drawing to use? Search the library, then look at it:</p>
+  <pre><code class="language-bash">npx levni list lighthouse               # names, variant counts, tags
+npx levni sheet look.png rocket dove    # every variant, on paper and on blue</code></pre>
+  <figure>
+    <img src="/docs/sheet.webp" width="1200" height="1346" alt="A contact sheet: every variant of rocket, lighthouse and dove, drawn on paper and on a blue panel, each labelled with its name and variant number" loading="lazy" decoding="async" style="max-width: 640px" />
+    <figcaption>A contact sheet. The label under each drawing, such as <code>rocket 1</code>, is the name and <code>variant</code> number to put in a scene.</figcaption>
+  </figure>
+  <p>Drawings can be recoloured per element, so one library matches your brand:</p>
+  <div class="pair two">
+    <pre><code class="language-json">{`{ "type": "prop", "name": "rocket",
+  "x": 600, "y": 336, "size": 330,
+  "recolor": { "coral": "blue" } }`}</code></pre>
+    <figure>
+      <img src="/docs/recolor.webp" width="1200" height="673" alt="Three rockets side by side: the original, one with the coral parts turned blue, one with coral turned mustard and blue turned green" loading="lazy" decoding="async" />
+      <figcaption>The same drawing three times: as drawn, <code>coral</code> to <code>blue</code>, and two swaps at once.</figcaption>
+    </figure>
+  </div>
+
+  <h2 id="critic">Read the critic</h2>
+  <p>Every render ends with notes from the layout critic. It is cheap, quick and blind to meaning, so look at the picture too. With nothing to report it prints <code>critic: no layout problems found</code>. Here is a scene with a rocket pushed too far right:</p>
+  <div class="pair two">
+    <pre><code class="language-json">{bad}</code></pre>
+    <figure>
+      <img src="/docs/critic.webp" width="1000" height="561" alt="A rocket cut off by the right edge of the canvas and a small lighthouse at the lower left" loading="lazy" decoding="async" />
+      <figcaption>The rocket runs off the right edge.</figcaption>
+    </figure>
+  </div>
+  <pre><code class="language-text">- draw "rocket" (ink box 983,188 305×315) is cut by the frame, 71% shows: pull it in, or set "crop": true if the cut is deliberate</code></pre>
+  <p>The critic reports at most six notes: elements off the canvas, accidental crops, lopsided weight, no clear focal symbol, icons overlapping. Fix them by moving or resizing, or set <code>"crop": true</code> when the cut is on purpose. An agent does exactly this loop over MCP.</p>
+
+  <h2 id="where">Where files go</h2>
+  <ul>
+    <li><strong>Output.</strong> Wherever you point it. <code>levni render scene.json out.png</code> writes <code>out.png</code> in the current folder. <code>levni poster</code> writes a whole folder.</li>
+    <li><strong>MCP files.</strong> <code>out</code> and <code>out_dir</code> are relative to the working directory of your MCP client, so launch the client in your project folder.</li>
+    <li><strong>The library.</strong> Drawings live in <code>library/props/</code> as one JSON file each. <code>levni add</code> writes into the library of the checkout it runs from, or into <code>--dir</code>. To use your own folder of drawings without touching the library, set <code>LEVNI_PROPS=/path/to/props</code> (several folders separated by <code>:</code>).</li>
+    <li><strong>Optional icons.</strong> The <code>icon</code> and <code>ascii</code> elements use Tabler Icons when <code>@tabler/icons</code> is installed (or <code>LEVNI_ICONS=/path</code>). Nothing else needs it.</li>
+    <li><strong>Keys.</strong> Drawing needs none. The Ghost adapter and the judge take their keys from your environment.</li>
+  </ul>
+
+  <h2 id="next">Where next</h2>
+  <ul>
+    <li>Using an agent: <a href="/docs/mcp/">MCP server</a>, with every tool and a sample session.</li>
+    <li>Writing scenes by hand: <a href="/docs/scenes/">Scenes</a> and <a href="/docs/elements/">Elements</a>.</li>
+    <li>Brand work: <a href="/docs/boards/">Brand boards</a> and <a href="/docs/posters/">Branding posters</a>.</li>
+    <li>Every command: <a href="/docs/cli/">Command line</a>. From code: <a href="/docs/api/">Node API</a>.</li>
+  </ul>
+</Docs>

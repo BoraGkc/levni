@@ -2,6 +2,7 @@
 title: "Generate a Brand Board from Four Fields of JSON"
 description: "Generate a brand board from a name, a tagline, a mark and inks: wordmark, palette, web page, tote, sticker and card. Place tiles by hand or ask an agent."
 date: 2026-11-23
+updated: 2026-11-24
 category: brand
 kind: Guide
 coverAlt: "A yellow board of tiles: a blue tile with a bicycle in a white circle, a cream tile with scattered marks, coral and green colour tiles with a sailboat, and a tilted cream tile with a red seal above a second bicycle"
@@ -195,3 +196,5 @@ When a tile is wrong, fix it in the full spec and not in the image. Because the 
 ## What to do next
 
 Put a seal or a sticker on the board's pieces: [seals, badges and stickers from a JSON scene](/blog/seal-badge-sticker-generator/) covers both. For line-art landscapes behind a hero or a poster, read [wireframe terrain and engraved landscapes](/blog/wireframe-terrain-engraving/). To keep illustrations in your brand colours across a whole site, see [brand colour illustrations](/blog/brand-colour-illustrations/), and browse the [Levni library](/library/) for a mark.
+
+**Reference and examples.** Read the [brand board reference](/docs/boards/) (tiles, mockups and specs); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

@@ -1,7 +1,8 @@
 ---
 title: "How Ortak Alan Illustrated 500 Articles in One Style"
-description: "Ortak Alan drew about 500 article covers in one hand-inked style with Levni. Here is the approach: a house palette, a growing prop library, a critic and style packs."
+description: "Ortak Alan drew about 500 article covers in one hand-inked style with Levni. The method: a house palette, a growing prop library, a critic and style packs."
 date: 2026-11-10
+updated: 2026-11-24
 category: stories
 kind: Story
 coverAlt: "A stack of books on a yellow sun, on a blue panel between a coral card with scales and a green card with a camera"
@@ -16,7 +17,7 @@ faq:
     a: "Yes. Levni is open source (MIT) and the drawings are CC BY 4.0, so you can build a house style of your own. Install it from npm (`@levni/levni`), pick your inks with a style pack, and add props as your stories need them."
 ---
 
-A publication that runs hundreds of articles needs hundreds of pictures. Stock photos make every site look the same, and a fresh illustration for each story is slow and expensive, with a different hand every time. [Ortak Alan](https://ortakalan.io), a Turkish publication, wanted something else: a cover for every article, all recognisably theirs.
+A publication that runs hundreds of articles needs hundreds of pictures. Stock photos make every site look the same, and a fresh illustration for each story is slow and expensive, with a different hand every time. [Ortak Alan](https://ortakalan.io), a Turkish publication, wanted something else: a cover for every article, all recognisably theirs. This is how Ortak Alan illustrated 500 articles in one style.
 
 They drew about 500 article covers in one style. This is the story of how that worked, told from what the project and the tool show: the covers, the library and the scenes behind them. It does not give internal figures, because we have none to quote, and we will not guess them.
 
@@ -115,3 +116,5 @@ Then check the result the way the project does: render, read the critic's notes,
 Browse the [Levni library](/library/) to see the drawings behind these covers. To try the workflow yourself, follow [the Claude Code guide](/blog/generate-blog-covers-claude-code/). To read why we built the engine in the first place, see [introducing Levni](/blog/introducing-levni/).
 
 Related: the people in these covers are always faceless; [faceless people illustrations](/blog/faceless-people-illustrations/) shows the poses, groups and crowds.
+
+**Reference and examples.** Read the [Getting started](/docs/getting-started/) (install and a first render); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

@@ -1,0 +1,133 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { SITE } from '../../site';
+
+const toc = [
+  { id: 'overview', text: 'Overview', level: 2 as const },
+  { id: 'render', text: 'render', level: 2 as const },
+  { id: 'sheet', text: 'sheet', level: 2 as const },
+  { id: 'list', text: 'list', level: 2 as const },
+  { id: 'check', text: 'check', level: 2 as const },
+  { id: 'add', text: 'add', level: 2 as const },
+  { id: 'board', text: 'board', level: 2 as const },
+  { id: 'poster', text: 'poster', level: 2 as const },
+  { id: 'mcp', text: 'mcp', level: 2 as const },
+  { id: 'ghost', text: 'ghost', level: 2 as const },
+  { id: 'judge', text: 'judge', level: 2 as const },
+  { id: 'env', text: 'Environment variables', level: 2 as const },
+];
+const rows: [string, string][] = [
+  ['levni render <scene.json> <out>', 'draw a scene, print the critic’s notes'],
+  ['levni sheet <out.png> [prop …]', 'contact sheet of drawings'],
+  ['levni list [query]', 'search the library'],
+  ['levni check [prop …]', 'measure drawings without looking at them'],
+  ['levni add <file>', 'import drawings written elsewhere'],
+  ['levni board <spec.json> <out.png>', 'a brand board'],
+  ['levni poster <spec.json> <out-dir>', 'branding posters (0.3.0)'],
+  ['levni mcp', 'run the MCP server'],
+  ['levni ghost drafts | attach', 'illustrate Ghost drafts'],
+  ['levni judge score | pick', 'rate renders with a judge model'],
+];
+---
+<Docs
+  title="Levni CLI reference: render, sheet, list, check, add, board, poster, mcp, ghost"
+  description="Every levni command with its arguments, flags and examples: render scenes, search and import drawings, make brand boards and posters, run the MCP server."
+  toc={toc}
+>
+  <p class="eyebrow">Use Levni</p>
+  <h1>Command line</h1>
+  <p class="lede">The <code>levni</code> command draws scenes, searches and checks the library, and makes boards and posters. Everything is deterministic: the same input gives the same file.</p>
+
+  <h2 id="overview">Overview</h2>
+  <p>After <code>npm install @levni/levni</code>, run commands with <code>npx levni …</code>. From a checkout, use <code>node bin/levni.mjs …</code>. Running <code>levni</code> with no command, or with <code>help</code>, prints the usage text. An unknown command prints it and exits with code 1.</p>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="Commands, scrolls sideways"><table>
+    <thead><tr><th>Command</th><th>What it does</th></tr></thead>
+    <tbody>{rows.map(([c, d]) => <tr><td><code>{c}</code></td><td>{d}</td></tr>)}</tbody>
+  </table></div>
+  <p>Errors print as <code>levni: message</code> and exit with code 1.</p>
+
+  <h2 id="render">render</h2>
+  <pre><code class="language-bash">levni render &lt;scene.json&gt; &lt;out.png|out.webp|out.svg&gt; [--preview] [--format cover|og|square|story|youtube]</code></pre>
+  <p>Draws a scene and prints the output path, then the layout critic’s notes (or <code>critic: no layout problems found</code>).</p>
+  <ul>
+    <li><code>--preview</code> also writes <code>&lt;out&gt;.prev.jpg</code>, 560 px wide.</li>
+    <li><code>--format</code> recomposes a 1200 by 673 scene for another canvas by setting <code>format</code> and <code>reflow</code> on the scene. See <a href="/docs/scenes/#formats-and-reflow">Formats and reflow</a>.</li>
+    <li>A <code>.webp</code> output is compressed under a size budget; <code>.svg</code> writes the vector source.</li>
+  </ul>
+  <pre><code class="language-bash">npx levni render scene.json cover.webp
+npx levni render scene.json og.png --format og
+npx levni render scene.json out.png --preview</code></pre>
+
+  <h2 id="sheet">sheet</h2>
+  <pre><code class="language-bash">levni sheet &lt;out.png&gt; [prop ...] [--recolor coral=blue,mustard=tone]</code></pre>
+  <p>A contact sheet of drawings: every variant, on paper and on a blue panel, labelled <code>name number</code>. With no names it draws the whole library (a long sheet). <code>--recolor</code> applies a colour swap to every drawing, using the house colour names.</p>
+  <pre><code class="language-bash">npx levni sheet look.png rocket lighthouse dove
+npx levni sheet recolour.png rocket --recolor coral=blue</code></pre>
+  <p>Prints how many variants it drew. The result looks like the sheet in <a href="/docs/getting-started/#first-render">Getting started</a>.</p>
+
+  <h2 id="list">list</h2>
+  <pre><code class="language-bash">levni list [query]</code></pre>
+  <p>Lists drawings as <code>name  (variants)  tags</code>. With a query, only those whose name or tags contain it (case-insensitive, English or Turkish). Ends with a count.</p>
+  <pre><code class="language-text">$ npx levni list lighthouse
+building-lighthouse  (1)  building lighthouse
+lighthouse  (3)  deniz feneri, fener, lighthouse, beacon, coast, kıyı, sea, deniz, istanbul
+2 props</code></pre>
+
+  <h2 id="check">check</h2>
+  <pre><code class="language-bash">levni check [prop ...]</code></pre>
+  <p>For agents that cannot see images. Validates drawings and measures each variant: how much of the 0 to 100 box it fills, its centre, its colours, and what to fix. With names it prints a line for each variant; with none it checks the whole library and prints only problems, ending with <code>all ok</code> or <code>N thing(s) to fix</code>.</p>
+  <pre><code class="language-text">$ npx levni check rocket
+rocket#0  size 83  centre (46,53)  colours tone-coral,paper,ink,tone,coral,mustard  ok
+rocket#1  size 77  centre (51,44)  colours paper,ink,tone-coral,tone,coral,mustard  ok
+all ok</code></pre>
+
+  <h2 id="add">add</h2>
+  <pre><code class="language-bash">levni add &lt;file&gt; [--dir &lt;props folder&gt;] [--sheet out.png]</code></pre>
+  <p>Imports drawings written elsewhere. The file can hold one drawing, an array, or a chat answer with <code>```json</code> blocks. Each drawing is validated and test-drawn. New drawings are written as <code>&lt;name&gt;.json</code>; a drawing that already exists gains its new variants; broken ones are skipped with the reason, and the command exits 1 if any were skipped.</p>
+  <ul>
+    <li><code>--dir</code> chooses the folder. The default is the library of the checkout you run it from.</li>
+    <li><code>--sheet</code> draws the imported drawings so you can look at them.</li>
+  </ul>
+  <pre><code class="language-bash">npx levni add my-props.json --sheet check.png</code></pre>
+  <p>The drawing format and the review rules are in <a href="/docs/library/#submit">the library guide</a>.</p>
+
+  <h2 id="board">board</h2>
+  <pre><code class="language-bash">levni board &lt;spec.json&gt; &lt;out.png&gt;</code></pre>
+  <p>Makes a brand board. The shortest spec is <code>{`{ "brand": { name, tagline, mark, inks } }`}</code>, which gives nine tiles; or place scene, palette and type tiles yourself, with browser, card, tote and phone mockups. Prints the size and file weight. Full format: <a href="/docs/boards/">Brand boards</a>.</p>
+  <pre><code class="language-bash">npx levni board board.json board.png</code></pre>
+
+  <h2 id="poster">poster</h2>
+  <pre><code class="language-bash">levni poster &lt;spec.json&gt; &lt;out-dir&gt;</code></pre>
+  <p>Makes a series of 1200 by 1600 posters from one brand: <code>poster-01-split.png</code> to <code>poster-08-launch.png</code> and <code>series.png</code>. Needs Levni 0.3.0. Full format: <a href="/docs/posters/">Branding posters</a>.</p>
+  <pre><code class="language-bash">npx levni poster brand.json posters/</code></pre>
+
+  <h2 id="mcp">mcp</h2>
+  <pre><code class="language-bash">levni mcp</code></pre>
+  <p>Runs Levni as an MCP server over stdio. You normally do not run it yourself; your client does. See <a href="/docs/mcp/">MCP server</a> for client setup and every tool.</p>
+
+  <h2 id="ghost">ghost</h2>
+  <pre><code class="language-bash">levni ghost drafts [--dir &lt;folder&gt;] [--apply]
+levni ghost attach &lt;plan.json&gt; [--apply]</code></pre>
+  <p>The Ghost adapter: it finds drafts that have no images and attaches a cover and inline images. It is a dry run unless you pass <code>--apply</code>, only touches drafts, never publishes or sends a newsletter, and skips drafts that already have images. Needs <code>GHOST_ADMIN_API_URL</code> and <code>GHOST_ADMIN_API_KEY</code> in the environment (Ghost Admin, Settings, Integrations, a custom integration); without them it prints usage and exits 1.</p>
+  <ul>
+    <li><code>drafts</code> lists imageless drafts; with <code>--apply</code> it also pulls each one to <code>./levni-drafts/&lt;name&gt;/</code> as <code>article.md</code> and <code>meta.json</code>.</li>
+    <li><code>attach</code> reads a plan file naming each draft, its cover scene and the inline images with the heading each goes after.</li>
+  </ul>
+  <p>Details and the plan file format: <a href={`${SITE.github}/blob/main/docs/ghost.md`}>docs/ghost.md</a>.</p>
+
+  <h2 id="judge">judge</h2>
+  <pre><code class="language-bash">levni judge score &lt;image&gt; --brief "..." [--model &lt;id&gt;]
+levni judge pick &lt;image&gt; &lt;image&gt; [...] --brief "..." [--model &lt;id&gt;]</code></pre>
+  <p>Optional. Asks a judge model on OpenRouter to rate images from 0 to 3 for a brief and prints JSON. <code>pick</code> scores every image twice in shuffled order and averages; gaps under 0.15 count as ties. Needs your own <code>OPENROUTER_API_KEY</code>. Details: <a href={`${SITE.github}/blob/main/docs/judge.md`}>docs/judge.md</a>.</p>
+
+  <h2 id="env">Environment variables</h2>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="Environment variables, scrolls sideways"><table>
+    <thead><tr><th>Variable</th><th>Used by</th><th>Meaning</th></tr></thead>
+    <tbody>
+      <tr><td><code>LEVNI_PROPS</code></td><td>all</td><td>Extra folders of drawings, separated by <code>:</code>.</td></tr>
+      <tr><td><code>LEVNI_ICONS</code></td><td><code>icon</code>, <code>ascii</code></td><td>Path to Tabler Icons, if you did not install <code>@tabler/icons</code>.</td></tr>
+      <tr><td><code>GHOST_ADMIN_API_URL</code>, <code>GHOST_ADMIN_API_KEY</code></td><td><code>ghost</code>, MCP</td><td>Your Ghost Admin credentials. Never read from files.</td></tr>
+      <tr><td><code>OPENROUTER_API_KEY</code></td><td><code>judge</code></td><td>Your own OpenRouter key.</td></tr>
+    </tbody>
+  </table></div>
+</Docs>

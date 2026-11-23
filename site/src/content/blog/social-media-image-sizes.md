@@ -1,7 +1,8 @@
 ---
 title: "Social Media Image Sizes: One Illustration, Every Format"
-description: "Fit one illustration to every social media image size: Open Graph, square, story and YouTube thumbnail, recomposed from one JSON scene."
+description: "Fit one illustration to every social media image size: Open Graph, square, story and YouTube thumbnail, recomposed from a single JSON scene with one flag each."
 date: 2026-11-23
+updated: 2026-11-24
 category: covers
 kind: Guide
 featured: true
@@ -153,3 +154,5 @@ the previews and tell me if any format needs its own tall version.
 ## What to do next
 
 Compare all five formats side by side in [the formats gallery](/gallery/#formats), and see the title layer on [the features page](/features/). For covers that already leave room for a title, read [3D cover images without a 3D tool](/blog/3d-cover-images-json/). For the cover itself, start with [generate blog covers with Claude Code](/blog/generate-blog-covers-claude-code/), and find drawings for it in [the library](/library/).
+
+**Reference and examples.** Read the [CLI reference](/docs/cli/) (every command); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

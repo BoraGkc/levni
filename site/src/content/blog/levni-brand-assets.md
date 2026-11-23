@@ -2,6 +2,7 @@
 title: "Levni 0.2: Brand Assets, Dither, Seals and Boards"
 description: "Levni 0.2 adds brand assets: dither and screen prints, mesh gradients, ASCII fills, seals and stickers, wireframe terrain, engravings and one-call brand boards."
 date: 2026-11-23
+updated: 2026-11-24
 category: brand
 kind: Story
 coverAlt: "A blue dithered background with a coral scalloped seal holding a star, a perforated coffee seal, die-cut rocket and heart stickers and a ticket"
@@ -124,3 +125,5 @@ If something is off, change one number and render again. Because the output is d
 ## What to do next
 
 Pick the piece you need first. For a landing page start with [mesh gradient backgrounds](/blog/mesh-gradient-backgrounds/) or [dithered pixel art backgrounds](/blog/dither-pixel-art-backgrounds/). For a shop or a community, try [seals and stickers](/blog/seal-badge-sticker-generator/). For a developer tool, [ASCII art illustrations](/blog/ascii-art-illustrations/) and [terrain and engraving](/blog/wireframe-terrain-engraving/) give you a hero. Then pull it together with [a brand board](/blog/brand-board-generator/). If you are new here, [the introduction](/blog/introducing-levni/) and [the MCP setup guide](/blog/illustration-mcp-server-setup/) come first.
+
+**Reference and examples.** Read the [Getting started](/docs/getting-started/) (install and a first render), the [brand board reference](/docs/boards/) (tiles, mockups and specs); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

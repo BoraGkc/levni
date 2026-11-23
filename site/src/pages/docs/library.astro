@@ -1,0 +1,107 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { SITE } from '../../site';
+import categories from '../../data/categories.json';
+
+const toc = [
+  { id: 'what', text: 'What the Folio is', level: 2 as const },
+  { id: 'find', text: 'Find a drawing', level: 2 as const },
+  { id: 'variants', text: 'Variants', level: 2 as const },
+  { id: 'recolour', text: 'Recolour', level: 2 as const },
+  { id: 'licence', text: 'Licence and credit', level: 2 as const },
+  { id: 'submit', text: 'Submit a drawing', level: 2 as const },
+  { id: 'many', text: 'Many drawings at once', level: 2 as const },
+];
+const shelves = Object.entries(categories as Record<string, string>);
+const sample = `{
+  "name": "watering-can",
+  "category": "home",
+  "tags": ["garden", "water", "sulama"],
+  "author": "Your Name",
+  "variants": [
+    { "note": "side view, spout to the right", "paths": [
+      { "d": "M20 40 L70 40 L66 86 L24 86 Z", "fill": "tone", "stroke": "ink", "weight": 9 },
+      { "d": "M70 52 L92 30", "stroke": "ink", "weight": 9 }
+    ] }
+  ]
+}`;
+---
+<Docs
+  title="The Levni Folio: find, recolour and contribute drawings"
+  description="How to use the Levni Folio, the open library of hand-inked drawings: search by word, choose variants, recolour with style packs, the CC BY 4.0 licence, and how to submit your own drawing."
+  toc={toc}
+>
+  <p class="eyebrow">Library</p>
+  <h1>The Levni Folio</h1>
+  <p class="lede">{SITE.props.toLocaleString('en')} drawn objects in {SITE.variants.toLocaleString('en')} variants, one JSON file each. Scenes place them by name; style packs recolour them; anyone can add to them.</p>
+
+  <h2 id="what">What the Folio is</h2>
+  <p>A drawing (a <em>prop</em>) is a few SVG paths in a 0 to 100 box, with colour <em>names</em> instead of hex values. Names let a style pack or your own inks recolour every drawing at once. Drawings are grouped on fifteen shelves:</p>
+  <ul class="cols">{shelves.map(([k, v]) => <li><code>{k}</code> {v}</li>)}</ul>
+  <figure>
+    <img src="/docs/sheet.webp" width="1200" height="1346" alt="A contact sheet of the rocket, lighthouse and dove drawings: each variant on paper and on a blue panel" loading="lazy" decoding="async" style="max-width: 560px" />
+    <figcaption>A contact sheet made with <code>levni sheet look.png rocket lighthouse dove</code>.</figcaption>
+  </figure>
+
+  <h2 id="find">Find a drawing</h2>
+  <ul>
+    <li><strong>On the web.</strong> <a href="/library/">Browse the library</a> and search in English or Turkish.</li>
+    <li><strong>From the CLI.</strong> <code>npx levni list coffee</code> lists names, variant counts and tags. <code>npx levni sheet look.png coffee-cup</code> shows them.</li>
+    <li><strong>From an agent.</strong> <code>list_props</code> takes a query and an optional shelf and describes every variant in words; <code>show_props</code> returns a contact sheet image. See <a href="/docs/mcp/#tools">MCP tools</a>.</li>
+    <li><strong>From code.</strong> <code>findProp('telefon')</code> matches names and tags in any language. See the <a href="/docs/api/#props">Node API</a>.</li>
+  </ul>
+  <p>A name that is not in the library falls back to the <code>icon</code> element, which needs the optional <code>@tabler/icons</code>. Search first so you place real names.</p>
+
+  <h2 id="variants">Variants</h2>
+  <p>A second angle or state of an object is another <em>variant</em> of the same drawing. Choose one with <code>variant</code>, counting from 0:</p>
+  <pre><code class="language-json">{`{ "type": "prop", "name": "lighthouse", "variant": 2, "x": 600, "y": 336, "size": 320 }`}</code></pre>
+  <p>If the number is too high, the last variant is used. The label under each drawing on a contact sheet (<code>lighthouse 2</code>) is the name and variant to write.</p>
+
+  <h2 id="recolour">Recolour</h2>
+  <p>Three levels, from small to large:</p>
+  <ol>
+    <li><strong>One element.</strong> <code>"recolor": {`{ "coral": "blue" }`}</code> swaps house colours on that drawing. <code>"palette": "blue"</code> folds every accent into the blue family, which the calm pack for sensitive stories uses.</li>
+    <li><strong>The whole scene.</strong> <code>"style": "miniature"</code> picks a style pack, or <code>"style": {`{ "blue": "#6A1B9A", "mustard": "#00BFA5" }`}</code> gives your own inks for the house colour names.</li>
+    <li><strong>A brand.</strong> A <a href="/docs/boards/">board</a> or <a href="/docs/posters/">poster</a> spec takes four <code>inks</code> and re-inks everything it draws.</li>
+  </ol>
+  <p>The house colour names are <code>ink</code>, <code>blue</code>, <code>tone</code>, <code>coral</code>, <code>tone-coral</code>, <code>mustard</code>, <code>tone-mustard</code>, <code>green</code>, <code>tone-green</code>, <code>paper</code>, <code>white</code> and <code>dark</code>.</p>
+  <figure>
+    <img src="/docs/recolor.webp" width="1200" height="673" alt="The rocket drawing three times: as drawn, with coral turned blue, and with coral turned mustard and blue turned green" loading="lazy" decoding="async" />
+    <figcaption>One drawing, three <code>recolor</code> maps.</figcaption>
+  </figure>
+
+  <h2 id="licence">Licence and credit</h2>
+  <p>The Folio is <a href={`${SITE.github}/blob/main/library/LICENSE`}>CC BY 4.0</a>. Use it anywhere, commercially too, and credit it, for example “drawings by Ortak Alan (CC BY 4.0)”. The engine and code are MIT. Images you render are yours; the credit applies when they contain library drawings. Origins and flagged drawings are in <a href={`${SITE.github}/blob/main/library/NOTICE.md`}>NOTICE.md</a>.</p>
+
+  <h2 id="submit">Submit a drawing</h2>
+  <p>The Folio grows by contribution, and drawings are the most welcome kind. Each prop is one JSON file in <code>library/props/</code>:</p>
+  <pre><code class="language-json">{sample}</code></pre>
+
+  <h3 id="format">Format</h3>
+  <ul>
+    <li><code>name</code> is the file name: lowercase English, <code>a-z0-9</code> and hyphens. <code>tags</code> can be in any language. <code>category</code> is one of the shelf keys above.</li>
+    <li>Draw in a 0 to 100 box (y grows downward), centred, with the object filling 70 to 85 of it.</li>
+    <li>Colours are <strong>names</strong>, never hex: <code>ink</code> (outlines), <code>blue</code>, <code>tone</code>, <code>coral</code>, <code>tone-coral</code>, <code>mustard</code>, <code>tone-mustard</code>, <code>green</code>, <code>tone-green</code>, <code>paper</code>, <code>white</code>, <code>dark</code>.</li>
+    <li><code>weight</code> is the line width in output pixels: 8 to 10 for outlines, 4 to 6 for details.</li>
+    <li>A second angle or state of the same object is another variant, not another prop.</li>
+  </ul>
+
+  <h3 id="check">Check it</h3>
+  <pre><code class="language-bash">git clone {SITE.github}.git && cd levni && npm install
+npx levni add my-props.json --sheet check.png   # validates, writes to library/props/, draws them
+npm test                                        # validates and renders the whole Folio</code></pre>
+  <p>Open <code>check.png</code>: every variant on paper and on a blue panel. <code>levni check name</code> measures a drawing in numbers, for agents that cannot see.</p>
+
+  <h3 id="rules">Review rules</h3>
+  <ol>
+    <li><strong>Own work only.</strong> Drawn by you. Drawing in the spirit of a style or tradition is welcome; tracing a specific work, photo, stock image or icon set is not. AI-assisted path code is accepted when you directed and checked it: say so in the pull request.</li>
+    <li><strong>No faces, no hands.</strong> People only as faceless pictograms.</li>
+    <li><strong>No logos or trademarks</strong>, and nothing that reads as one.</li>
+    <li><strong>One object, one idea.</strong> No text inside drawings, no scenes.</li>
+    <li><strong>House style.</strong> Simple shapes, two inks plus paper, readable at 120 px.</li>
+  </ol>
+  <p>By submitting you release the drawing under CC BY 4.0 and are credited in its <code>author</code> field. Then open a pull request. The full guide is <a href={`${SITE.github}/blob/main/CONTRIBUTING.md`}>CONTRIBUTING.md</a>.</p>
+
+  <h2 id="many">Many drawings at once</h2>
+  <p>You can have a chat model write several drawings in one go. <a href={`${SITE.github}/blob/main/docs/prop-prompt.md`}>docs/prop-prompt.md</a> holds a prompt to copy. Paste the answer into a file and run <code>levni add</code>: it accepts a chat answer with <code>```json</code> blocks, checks each drawing, skips the broken ones with a reason and draws the rest for you to look at.</p>
+</Docs>

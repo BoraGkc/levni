@@ -2,6 +2,7 @@
 title: "Free 3D Icons: Turn Any Flat Icon into a 3D Icon"
 description: "Make free 3D icons from flat drawings: one extrude3d line turns any Levni library icon or your own SVG paths into a lit, rounded 3D icon you can recolour."
 date: 2026-11-23
+updated: 2026-11-24
 category: library
 kind: Guide
 featured: true
@@ -154,3 +155,5 @@ the critic's notes and save features.png.
 ## What to do next
 
 See more extruded icons in [the 3D icon gallery](/gallery/#icons) and the soft 3D renderer on [the features page](/features/). For abstract 3D covers with a title, read [3D cover images without a 3D tool](/blog/3d-cover-images-json/). Browse [the library](/library/) for drawings to extrude, and find the source on [GitHub](https://github.com/BoraGkc/levni).
+
+**Reference and examples.** Read the [scene elements reference](/docs/elements/) (every element and field); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

@@ -1,0 +1,85 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { SITE } from '../../site';
+import { DOC_GROUPS } from '../../components/docs/nav';
+
+const toc = [
+  { id: 'what', text: 'What Levni is', level: 2 as const },
+  { id: 'paths', text: 'Pick your path', level: 2 as const },
+  { id: 'inside', text: 'What is inside', level: 2 as const },
+  { id: 'map', text: 'The docs at a glance', level: 2 as const },
+];
+const paths = [
+  ['With an agent', '/docs/mcp/', 'MCP', 'Connect Levni to Claude, Cursor or Codex. The agent searches the library, writes scenes, reads the critic and saves files. One line to install.'],
+  ['From the terminal', '/docs/cli/', 'CLI', 'Write a JSON scene, run levni render, get a PNG, WebP or SVG. Also boards, posters and a prop search. Good for scripts and for agents without MCP.'],
+  ['From code', '/docs/api/', 'Node API', 'compose, render and critique as functions, for build steps, CMS hooks and your own tools. Node 20 or newer.'],
+];
+---
+<Docs
+  title="Levni documentation: MCP, CLI, Node API and the scene format"
+  description="How to use Levni: connect it to an agent over MCP, run the levni CLI, call the Node API, and write scenes, brand boards and branding posters in JSON."
+  toc={toc}
+>
+  <p class="eyebrow">Documentation</p>
+  <h1>Learn <em class="accent">Levni</em></h1>
+  <p class="lede">Levni draws hand-inked, riso-printed images from a short JSON description. These pages show you how to drive it: from an AI agent, from the terminal or from your own code.</p>
+
+  <h2 id="what">What Levni is</h2>
+  <p>Levni is an open library of drawings (the Levni Folio: {SITE.props.toLocaleString('en')} objects in {SITE.variants.toLocaleString('en')} variants) and the engine that composes them. You describe a picture as a <em>scene</em>: a list of elements drawn in order. Levni renders it as PNG, WebP or SVG. The same scene and seed always give the same picture.</p>
+  <p>There is no image model, no account and no cost per image. It runs on your machine, and an agent can drive it through MCP. After every render, a layout critic tells you what looks wrong: elements off the canvas, accidental crops, lopsided weight, no clear focal point.</p>
+
+  <div class="pair two">
+    <div class="codeblock-static">
+      <pre><code class="language-json">{`{ "seed": 5, "elements": [
+  { "type": "disc", "x": 600, "y": 336,
+    "r": 250, "color": "mustard" },
+  { "type": "prop", "name": "rocket",
+    "x": 600, "y": 336, "size": 380,
+    "rot": 20, "shadow": true },
+  { "type": "label", "text": "Launch / Day one",
+    "x": 80, "y": 90, "color": "ink" }
+] }`}</code></pre>
+    </div>
+    <figure>
+      <img src="/docs/first-scene.webp" width="1200" height="673" alt="A rocket tilted over a mustard disc, with a small blue label reading Launch / Day one" loading="lazy" decoding="async" />
+      <figcaption>Fifteen lines of JSON in, one picture out.</figcaption>
+    </figure>
+  </div>
+
+  <h2 id="paths">Pick your path</h2>
+  <ul class="cards">
+    {paths.map(([title, href, k, text]) => (
+      <li><a href={href}><span class="k">{k}</span><strong>{title}</strong><span>{text}</span><span class="go">Open guide →</span></a></li>
+    ))}
+  </ul>
+  <p>New here? Do <a href="/docs/getting-started/">Getting started</a> first. It takes two minutes and works for all three paths.</p>
+
+  <h2 id="inside">What is inside</h2>
+  <ul>
+    <li><strong>The Levni Folio.</strong> Drawn objects on 15 shelves, searchable in English and Turkish, recolourable by style packs. <a href="/docs/library/">Library guide</a>.</li>
+    <li><strong>Scenes and elements.</strong> Drawings, panels, charts, little 3D worlds, dither and mesh gradients, ASCII fills, seals and stickers, terrain and engraving. <a href="/docs/scenes/">Scene format</a>, <a href="/docs/elements/">element reference</a>.</li>
+    <li><strong>The critic.</strong> Cheap layout notes after every render, so an agent can fix its own work.</li>
+    <li><strong>Brand boards.</strong> A mark, wordmark, palette, web page, social card, tote, sticker, pattern and business card in one image. <a href="/docs/boards/">Boards</a>.</li>
+    <li><strong>Branding posters.</strong> Eight portrait posters that share inks, type and a mark. <a href="/docs/posters/">Posters</a>.</li>
+  </ul>
+
+  <div class="shots">
+    <figure><img src="/docs/board.webp" width="1500" height="1000" alt="A brand board for a ferry company: mark, wordmark, web page, palette, social card, tote bag, sticker, pattern and business card" loading="lazy" decoding="async" /><figcaption>A brand board from four fields.</figcaption></figure>
+    <figure><img src="/docs/ex-dither.webp" width="900" height="505" alt="A dithered sunset in blue and coral pixel cells with a mustard sun" loading="lazy" decoding="async" /><figcaption>Ordered dither as a background.</figcaption></figure>
+    <figure><img src="/docs/ex-iso.webp" width="900" height="505" alt="An isometric cafe diorama with counter, barista and guests" loading="lazy" decoding="async" /><figcaption>A little 3D world in one line.</figcaption></figure>
+  </div>
+
+  <div class="callout">
+    <strong>Versions</strong>
+    <p>Install from npm: <code>@levni/levni</code>. The branding posters and the type engine are new in 0.3.0, which is not on npm yet; until it is, use <code>npm install github:BoraGkc/levni</code> to get them. Everything else works with the published package.</p>
+  </div>
+
+  <h2 id="map">The docs at a glance</h2>
+  {DOC_GROUPS.map((g) => (
+    <>
+      <h3>{g.label}</h3>
+      <ul>{g.pages.map((p) => <li><a href={p.href}>{p.title}</a>: {p.blurb}</li>)}</ul>
+    </>
+  ))}
+  <p>Levni is powered by <a href={SITE.ortakAlan}>Ortak Alan</a>. Code is MIT; the Levni Folio drawings are CC BY 4.0.</p>
+</Docs>

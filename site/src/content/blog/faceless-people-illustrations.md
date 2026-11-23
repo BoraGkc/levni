@@ -2,6 +2,7 @@
 title: "Faceless People Illustrations for Articles, from JSON"
 description: "Draw faceless people illustrations for articles from JSON: 15 poses, groups, crowds and isotype shares, in a hand-inked style that never draws a real face."
 date: 2026-11-23
+updated: 2026-11-24
 category: library
 kind: Guide
 featured: true
@@ -158,3 +159,5 @@ notes and save cover.png.
 ## What to do next
 
 See people in context in [the dioramas gallery](/gallery/#worlds), where they stand in cafes and streets, and read [isometric diorama illustrations](/blog/isometric-diorama-illustrations/) to place them in a world. The full list of elements is on [the features page](/features/), the drawings they can hold are in [the library](/library/), and the code is on [GitHub](https://github.com/BoraGkc/levni).
+
+**Reference and examples.** Read the [scene elements reference](/docs/elements/) (every element and field); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

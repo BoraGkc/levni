@@ -2,6 +2,7 @@
 title: "Draw SVG Icons as JSON and Add Them to an Open Library"
 description: "Create SVG icons with AI: write each icon as JSON path data, check it with one command and add it to the open Levni library by pull request."
 date: 2026-11-16
+updated: 2026-11-24
 category: library
 kind: Guide
 coverAlt: "A large battery with three green bars on a yellow sun, a wifi symbol at the left and a pencil at the right, on a coral panel"
@@ -18,7 +19,7 @@ faq:
     a: "CC BY 4.0. You are credited in the prop file's `author` field, and anyone can use the drawing, including commercially, as long as they credit it."
 ---
 
-Icon sets are usually closed. You can use them, but you cannot easily add the one icon you are missing, and an AI that writes SVG by hand tends to produce shapes that float, overflow or clash with everything around them.
+Icon sets are usually closed. You can use them, but you cannot easily add the one icon you are missing, and an AI that writes SVG by hand tends to produce shapes that float, overflow or clash with everything around them. This guide shows how to draw SVG icons as JSON props and add them to an open library.
 
 There is a way to make that work. In **Levni**, a drawing is a small JSON file: SVG path data in a 100 by 100 box, with colours given as names. Levni inks the drawing by hand and recolours it for any style. A chat model can write that JSON, one command checks it, and a pull request puts it in the shared library. The library is CC BY 4.0, so what you add is free for everyone to use with credit.
 
@@ -170,3 +171,5 @@ npm test
 Browse the [Levni library](/library/) first to see what already exists, so you draw what is missing. Then read [free illustrations for commercial use](/blog/free-illustrations-commercial-use/) for what the licence means for people who use your drawing. To see your icons inside a finished image, follow [generate blog covers with Claude Code](/blog/generate-blog-covers-claude-code/).
 
 Related: any icon you draw this way can also become a 3D icon, see [free 3D icons](/blog/free-3d-icons/). For a ready set in a pixel style, see [free pixel art icons](/blog/free-pixel-art-icons/).
+
+**Reference and examples.** Read the [CLI reference](/docs/cli/) (every command), the [scene elements reference](/docs/elements/) (every element and field); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

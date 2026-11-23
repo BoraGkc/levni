@@ -1,7 +1,8 @@
 ---
 title: "Draw ASCII Art Illustrations and Globes from JSON"
-description: "Draw ASCII art illustrations from JSON with Levni's glyphfill: a shaded ASCII globe, a dot-matrix rocket and a developer-tool Open Graph card, all from a short scene."
+description: "Draw ASCII art illustrations from JSON with Levni's glyphfill: a shaded ASCII globe, a dot-matrix rocket and a developer-tool Open Graph card from short scenes."
 date: 2026-11-23
+updated: 2026-11-24
 category: brand
 kind: Guide
 coverAlt: "A globe drawn entirely in text characters, with a lit side, a shadow side and a few coral accent characters"
@@ -134,3 +135,5 @@ Check these things:
 ## What to do next
 
 Browse [the library](/library/) for silhouettes worth filling: simple, bold shapes work best. If you want a crisper, pixel-style look, try [dithered backgrounds](/blog/dither-pixel-art-backgrounds/). For the full list of what arrived with this element, see [the Levni 0.2 tour](/blog/levni-brand-assets/).
+
+**Reference and examples.** Read the [scene elements reference](/docs/elements/) (every element and field); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

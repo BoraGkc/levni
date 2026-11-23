@@ -2,6 +2,7 @@
 title: "3D Cover Images Without a 3D Tool: Write One Line of JSON"
 description: "Make 3D cover images for blog posts from one line of JSON: soft 3D ribbons, rings and blobs, five palettes, a seed per layout, a title and a badge."
 date: 2026-11-23
+updated: 2026-11-24
 category: covers
 kind: Guide
 featured: true
@@ -54,7 +55,7 @@ Three things make it work. `"finish": "soft"` switches the whole scene from the 
 
 ## Know what the renderer draws
 
-The 3D part is real geometry, not a flat gradient pretending. Each shape is cut into small quads, lit by a key light from the upper left with ambient light, a glossy highlight and a rim, coloured through a ramp per material (cool shadow, base, pale highlight) and painted back to front. A ribbon can pass behind itself, and interlocking rings really interlock. There is no GPU and no dependency beyond sharp, which turns the SVG into PNG or WebP.
+The 3D part is real geometry, not a flat gradient pretending. Each shape is cut into small quads, lit by a key light from the upper left with ambient light, a glossy highlight and a rim, coloured through a ramp per material (cool shadow, base, pale highlight) and painted back to front. A ribbon can pass behind itself, and interlocking rings really interlock. There is no GPU and no graphics library: sharp turns the SVG into PNG or WebP.
 
 These are the presets you can name:
 
@@ -162,3 +163,5 @@ The assistant calls `render_scene`, reads the notes and shows you small previews
 ## What to do next
 
 See every preset and palette side by side in [the soft 3D gallery](/gallery/#soft3d), and the rest of the engine on [the features page](/features/). To turn a library drawing into a 3D object instead of an abstract shape, read [turn any icon into a 3D icon](/blog/free-3d-icons/). To reuse this cover as a social card, square post and story, read [one illustration, every social image size](/blog/social-media-image-sizes/). The code is on [GitHub](https://github.com/BoraGkc/levni), and the hand-inked side of Levni is in [the library](/library/) and the guide to [generating blog covers with Claude Code](/blog/generate-blog-covers-claude-code/).
+
+**Reference and examples.** Read the [scene elements reference](/docs/elements/) (every element and field); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

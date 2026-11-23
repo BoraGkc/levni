@@ -2,6 +2,7 @@
 title: "Draw Wireframe Terrain and Engraved Landscapes"
 description: "Generate a wireframe terrain with glowing streams, a Joy Division ridgeline card and an etched mountain poster from a JSON scene, with no image model."
 date: 2026-11-23
+updated: 2026-11-24
 category: brand
 kind: Guide
 coverAlt: "A dark wireframe landscape of blue grid hills with yellow glowing streams in the valleys, a red sunset glow behind the far ridge and a yellow crescent moon"
@@ -141,3 +142,5 @@ Look at the picture for three things. First, hatch lines that merge into a solid
 ## What to do next
 
 Line art makes good brand backgrounds, and a badge looks better on top of it: see [seals, badges and stickers from a JSON scene](/blog/seal-badge-sticker-generator/). To put a landscape into a full identity next to a mark, a palette and a web page, read [the brand board guide](/blog/brand-board-generator/). The [Levni library](/library/) has the drawings for the small prop that gives a wide landscape its focal point.
+
+**Reference and examples.** Read the [scene elements reference](/docs/elements/) (every element and field); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

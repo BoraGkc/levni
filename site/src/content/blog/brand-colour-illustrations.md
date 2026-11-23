@@ -2,6 +2,7 @@
 title: "Recolour an Illustration Library in Your Brand Colours"
 description: "Make on-brand illustrations: recolour a whole SVG-style illustration library with one style object, then pick ink and paper pairs with enough contrast."
 date: 2026-11-19
+updated: 2026-11-24
 category: brand
 kind: Guide
 coverAlt: "A large paint palette on a coral sun over a blue panel, with a potted plant on the left and a pencil on the right"
@@ -162,3 +163,5 @@ Render, read the critic, and look at the picture. The critic checks layout, not 
 Browse the [Levni library](/library/) and try your palette on a few shelves. To make the first cover, follow [generate blog covers with Claude Code](/blog/generate-blog-covers-claude-code/). To keep a whole publication in one look, read [style packs](/blog/style-packs/), and to use the drawings commercially, see [free illustrations for commercial use](/blog/free-illustrations-commercial-use/).
 
 Related: to recolour 3D icons, see [free 3D icons](/blog/free-3d-icons/). For 3D covers in your own colours, see [3D cover images without a 3D tool](/blog/3d-cover-images-json/).
+
+**Reference and examples.** Read the [scene elements reference](/docs/elements/) (every element and field); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

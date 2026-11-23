@@ -1,0 +1,30 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { readDoc, render, resetIds } from '../../components/docs/md';
+
+resetIds();
+const { intro, sections } = readDoc('board.md');
+const head = render(intro);
+const parts = sections.map((s) => render(s.md, { title: s.title, id: s.id }));
+const toc = parts.flatMap((p) => p.toc);
+---
+<Docs
+  title="Levni brand boards: one call makes a nine-tile board"
+  description="Make a brand board with levni board or the render_board MCP tool: mark, wordmark, palette, web page, social card, tote, sticker, pattern and business card from four fields. Full tile and field reference."
+  toc={toc}
+>
+  <p class="eyebrow">Reference</p>
+  <h1>Brand boards</h1>
+  <Fragment set:html={head.html} />
+
+  <figure>
+    <img src="/docs/board.webp" width="1500" height="1000" alt="A brand board for a ferry company called Feneri: lighthouse mark, wordmark, web page in a browser, palette, social card, tote bag, sticker, pattern and a tilted business card" loading="lazy" decoding="async" />
+    <figcaption>The board from the six-line spec <code>examples/board-feneri.json</code>: a name, a tagline, a mark from the library and four inks.</figcaption>
+  </figure>
+  <div class="callout">
+    <strong>From an agent</strong>
+    <p>The MCP tool <code>render_board</code> takes the same spec, returns a 900 px preview and, with <code>out</code>, the PNG. <code>guide: true</code> returns this format as text. See <a href="/docs/mcp/#t-render_board">MCP server</a>.</p>
+  </div>
+
+  {parts.map((p) => <Fragment set:html={p.html} />)}
+</Docs>

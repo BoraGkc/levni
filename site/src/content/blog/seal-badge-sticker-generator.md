@@ -2,6 +2,7 @@
 title: "Make Seals, Badges and Stickers from a JSON Scene"
 description: "Generate a seal, badge, die-cut sticker or ticket stub from a JSON scene: ring text that closes, four edge styles, a loyalty card, and no image model."
 date: 2026-11-23
+updated: 2026-11-24
 category: brand
 kind: Guide
 coverAlt: "A red scalloped seal with a coffee cup in the middle on a blue panel, with a heart, a rocket and a star as white-edged stickers and a yellow ticket stub around it"
@@ -172,3 +173,5 @@ Then look at the picture. Ring text that is too long for its ring shrinks, so ve
 ## What to do next
 
 Put the same seal into a full identity: [the brand board guide](/blog/brand-board-generator/) shows how one call turns a name and a drawing into a mark, a web page, a tote and a business card. For line-art backgrounds to put behind a badge, read [wireframe terrain and engraved landscapes](/blog/wireframe-terrain-engraving/). And browse the [Levni library](/library/) for drawings to put in the middle of a seal.
+
+**Reference and examples.** Read the [scene elements reference](/docs/elements/) (every element and field); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

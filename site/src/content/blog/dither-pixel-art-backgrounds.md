@@ -1,7 +1,8 @@
 ---
 title: "Make Dithered Pixel Art Backgrounds from JSON"
-description: "Make dithered pixel art backgrounds from JSON with Levni: Bayer dither fields, four cell patterns, and a screen pass that prints any scene in 1-bit, riso or Game Boy."
+description: "Make dithered pixel art backgrounds from JSON with Levni: Bayer dither fields, four cell patterns and a screen pass for 1-bit, riso or Game Boy prints."
 date: 2026-11-23
+updated: 2026-11-24
 category: brand
 kind: Guide
 coverAlt: "A rocket flying over a dithered sunset: a blue-to-coral pixel sky, a mustard sun and line-dithered water"
@@ -154,3 +155,5 @@ Look at the image at full size, not just the thumbnail. Dither shows its flaws u
 ## What to do next
 
 Browse the library at [/library/](/library/) for props to put on your pixel sky, and see [the pixel icon guide](/blog/free-pixel-art-icons/) for the small ones. If you want grainy colour instead of crisp dots, read [the mesh gradient guide](/blog/mesh-gradient-backgrounds/). And [the Levni 0.2 tour](/blog/levni-brand-assets/) shows dither next to everything else that arrived in the same release.
+
+**Reference and examples.** Read the [scene elements reference](/docs/elements/) (every element and field); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

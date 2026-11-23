@@ -2,6 +2,7 @@
 title: "Generate Grainy Mesh Gradient Backgrounds from JSON"
 description: "Generate grainy mesh gradient backgrounds from JSON with Levni: colour stops, grain, glowing orbs, feature tiles and a calm zone that keeps room for your title."
 date: 2026-11-23
+updated: 2026-11-24
 category: brand
 kind: Guide
 coverAlt: "A dark mesh gradient in coral, violet and cyan with a large glowing orange orb and two smaller orbs"
@@ -137,3 +138,5 @@ Check three things. First, is the title readable at thumbnail size? If not, enla
 ## What to do next
 
 Put a headline on your gradient with the title layer, as in [Open Graph images from JSON](/blog/open-graph-images-json/), and see [brand colour illustrations](/blog/brand-colour-illustrations/) for matching the drawings to your palette. For crisp dots instead of soft colour, read [dithered pixel art backgrounds](/blog/dither-pixel-art-backgrounds/). The whole 0.2 release is in [the launch tour](/blog/levni-brand-assets/).
+
+**Reference and examples.** Read the [scene elements reference](/docs/elements/) (every element and field); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

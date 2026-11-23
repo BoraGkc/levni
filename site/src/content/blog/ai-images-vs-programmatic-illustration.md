@@ -1,7 +1,8 @@
 ---
 title: "AI Image Generators vs Programmatic Blog Cover Illustration"
-description: "AI generated blog cover images or programmatic illustration? Compare consistency, control, cost, licensing, text errors, speed and offline use, and see where each wins."
+description: "AI image generators or programmatic illustration for blog covers? Compare consistency, control, cost, licensing, text errors and speed, and see where each wins."
 date: 2026-11-18
+updated: 2026-11-24
 category: covers
 kind: Comparison
 coverAlt: "A small robot, a palette on a yellow sun and a die on a blue panel"
@@ -114,3 +115,5 @@ Then render it, read the critic's notes, and look at the picture. If the cover r
 ## What to do next
 
 Browse [the Levni library](/library/) to see the drawings your covers will be built from, and try [the Claude Code guide](/blog/generate-blog-covers-claude-code/) for a ten-minute first cover. To keep the same look in your own colours, read [brand-colour illustrations](/blog/brand-colour-illustrations/).
+
+**Reference and examples.** Read the [Getting started](/docs/getting-started/) (install and a first render); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

@@ -1,0 +1,165 @@
+---
+import { SITE } from '../site';
+const path = Astro.url.pathname;
+const here = (p: string) => path === p || path.startsWith(p);
+const makes: [string, string, string][] = [
+  ['Illustrations and covers', 'Scenes, styles, the critic', '/features/#scenes'],
+  ['Brand boards', 'Nine tiles from one spec', '/features/#boards'],
+  ['Branding posters', 'Eight posters in one series', '/features/#posters'],
+  ['Seals and stickers', 'Ring text, tickets, die-cuts', '/features/#seals'],
+  ['Dither and mesh gradients', 'Backgrounds with a grain', '/features/#dither'],
+  ['ASCII and dot-matrix art', 'Glyph fills from any drawing', '/features/#glyphfill'],
+  ['Terrain and etching', 'Wireframes, ridgelines, engraving', '/features/#terrain'],
+  ['3D and pixel icons', 'Soft 3D, extruded, pixel grids', '/features/#icons3d'],
+  ['Little 3D worlds', 'Iso dioramas from a preset', '/features/#iso'],
+  ['Charts', 'Hand-inked bars, lines, donuts', '/features/#charts'],
+];
+---
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="wordmark" href="/" aria-label="Levni home">
+      <img src="/props/pencil-0.webp" alt="" width="40" height="40" />
+      <span>Levni</span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <span class="menu-icon" aria-hidden="true"></span><span class="menu-label">Menu</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="nav-main">
+        <li class="has-mega">
+          <a href="/features/" aria-current={path.startsWith('/features') ? 'page' : undefined}>What it makes</a>
+          <button class="mega-toggle" type="button" aria-expanded="false" aria-controls="mega" aria-label="Show what Levni makes" hidden>
+            <svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+          <div class="mega" id="mega">
+            <ul>
+              {makes.map(([t, d, h]) => <li><a href={h}><span class="m-t">{t}</span><span class="m-d">{d}</span></a></li>)}
+            </ul>
+            <p class="mega-foot"><a href="/features/">All features</a><a href="/gallery/">Browse the gallery</a><a href="/library/">The library</a></p>
+          </div>
+        </li>
+        <li><a href="/gallery/" aria-current={here('/gallery') ? 'page' : undefined}>Gallery</a></li>
+        <li><a href="/library/" aria-current={here('/library') ? 'page' : undefined}>Library</a></li>
+        <li><a href="/docs/" aria-current={here('/docs') ? 'page' : undefined}>Docs</a></li>
+        <li><a href="/blog/" aria-current={here('/blog') ? 'page' : undefined}>Blog</a></li>
+        <li class="nav-agent"><a class="agent-link" href="/mcp/" aria-current={here('/mcp') ? 'page' : undefined}>Use with your agent</a></li>
+      </ul>
+      <ul class="nav-side">
+        <li><a class="side-link" href={SITE.github} aria-label="Star Levni on GitHub"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z" fill="currentColor"/></svg><span>Star<span class="long"> on GitHub</span></span></a></li>
+        <li><a class="side-link" href={SITE.npm}><span>npm</span></a></li>
+        <li><a class="ver" href="/changelog/" aria-label={`Version ${SITE.version}, see the changelog`}>v{SITE.version}</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script is:inline>
+  (function () {
+    var root = document.documentElement;
+    root.classList.add('js');
+    var header = document.querySelector('.site-header');
+    var btn = header.querySelector('.menu-btn');
+    var nav = header.querySelector('#site-nav');
+    var tog = header.querySelector('.mega-toggle');
+    var grp = header.querySelector('.has-mega');
+    btn.hidden = false; tog.hidden = false;
+    var mq = window.matchMedia('(max-width: 62rem)');
+    function setMenu(open, refocus) {
+      btn.setAttribute('aria-expanded', String(open));
+      nav.classList.toggle('open', open);
+      btn.querySelector('.menu-label').textContent = open ? 'Close' : 'Menu';
+      if (!open && refocus) btn.focus();
+    }
+    function setMega(open, refocus) {
+      tog.setAttribute('aria-expanded', String(open));
+      grp.classList.toggle('open', open);
+      if (!open && refocus) tog.focus();
+    }
+    btn.addEventListener('click', function () { setMenu(btn.getAttribute('aria-expanded') !== 'true'); });
+    tog.addEventListener('click', function () { setMega(tog.getAttribute('aria-expanded') !== 'true'); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        if (grp.classList.contains('open')) { setMega(false, true); }
+        else if (nav.classList.contains('open')) { setMenu(false, true); }
+        return;
+      }
+      if (e.key === 'Tab' && mq.matches && nav.classList.contains('open')) {
+        var f = Array.prototype.filter.call(header.querySelectorAll('a[href], button'), function (el) { return el.offsetParent !== null; });
+        var first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+    document.addEventListener('click', function (e) {
+      if (!grp.contains(e.target)) setMega(false);
+      if (nav.classList.contains('open') && !header.contains(e.target)) setMenu(false);
+    });
+    nav.addEventListener('click', function (e) {
+      if (e.target.closest && e.target.closest('a') && nav.classList.contains('open')) setMenu(false);
+    });
+    var onChange = function () { setMenu(false); setMega(false); };
+    if (mq.addEventListener) mq.addEventListener('change', onChange);
+  })();
+</script>
+
+<style is:global>
+  .site-header { position: relative; z-index: 20; }
+  .site-header .header-row { flex-wrap: nowrap; gap: 20px; }
+  .site-nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; gap: 20px; font-size: 1rem; flex-wrap: nowrap; }
+  .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 4px 6px; }
+  .site-nav a { color: var(--ink); text-decoration: none; padding: 10px 10px; border-radius: 6px; white-space: nowrap; }
+  .site-nav a:hover { color: var(--accent-text); background: rgba(11, 87, 208, 0.07); }
+  .site-nav a[aria-current='page'] { box-shadow: inset 0 -2px 0 var(--coral); border-radius: 0; }
+  .site-nav .agent-link { background: var(--ink); color: var(--paper-2); font-weight: 600; margin-left: 6px; padding: 8px 14px; border-radius: 999px; box-shadow: 3px 3px 0 var(--accent); }
+  .site-nav .agent-link:hover { background: var(--accent-text); color: #fff; }
+  .site-nav .agent-link[aria-current='page'] { box-shadow: 3px 3px 0 var(--coral); }
+  .nav-side { gap: 2px 4px; padding-left: 16px; border-left: 1px solid var(--rule); }
+  .site-nav .side-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.92rem; padding: 10px 8px; color: var(--ink-soft); }
+  .site-nav .ver { font-family: var(--mono); font-size: 0.78rem; border: 1.5px solid var(--ink); padding: 3px 8px; color: var(--ink); }
+  .site-nav .ver:hover { background: var(--mustard); color: var(--ink); }
+
+  .has-mega { position: relative; display: flex; align-items: center; }
+  .mega-toggle { appearance: none; border: 0; background: none; color: var(--ink); width: 28px; height: 36px; margin-left: -8px; cursor: pointer; border-radius: 6px; display: inline-grid; place-items: center; }
+  .mega-toggle svg { transition: transform 0.15s; }
+  .has-mega.open .mega-toggle svg { transform: rotate(180deg); }
+  .mega { display: none; position: absolute; top: 100%; left: -10px; width: min(560px, calc(100vw - 40px)); background: var(--paper-2); border: 2px solid var(--ink); box-shadow: 6px 6px 0 var(--accent); padding: 14px; z-index: 30; }
+  .has-mega:hover .mega, .has-mega:focus-within .mega, .has-mega.open .mega { display: block; }
+  .mega ul { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 10px; }
+  .mega li a { display: flex; flex-direction: column; white-space: normal; padding: 8px 10px; }
+  .mega .m-t { font-weight: 600; line-height: 1.25; }
+  .mega .m-d { font-size: 0.82rem; color: var(--ink-soft); line-height: 1.35; }
+  .mega-foot { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 10px 0 0; padding: 10px 10px 0; border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 0.8rem; }
+  .site-nav .mega-foot a { padding: 4px 0; color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
+  .menu-btn { display: none; }
+
+  /* medium widths: drop the long labels */
+  @media (max-width: 75rem) { .site-nav .long { display: none; } .site-nav a { padding-left: 7px; padding-right: 7px; } }
+
+  /* compact: a button and a panel. Without JS the links simply wrap under the wordmark. */
+  @media (max-width: 62rem) {
+    .site-header .header-row { flex-wrap: wrap; gap: 0 12px; min-height: 0; padding-top: 8px; padding-bottom: 8px; }
+    .site-nav { flex-basis: 100%; padding-top: 6px; flex-direction: column; align-items: stretch; gap: 0; font-size: 1.02rem; }
+    .site-nav ul { flex-direction: column; align-items: stretch; }
+    .site-nav li a { display: block; padding: 12px 4px; border-bottom: 1px solid var(--rule); border-radius: 0; }
+    .site-nav a[aria-current='page'] { box-shadow: inset 3px 0 0 var(--coral); padding-left: 10px; }
+    .site-nav .agent-link { margin: 12px 0; text-align: center; border-bottom: 0; border-radius: 999px; }
+    .site-nav .agent-link[aria-current='page'] { padding-left: 14px; }
+    .site-nav .nav-side { flex-direction: row; flex-wrap: wrap; padding: 6px 0 10px; border-left: 0; gap: 4px 12px; }
+    .site-nav .nav-side li a { display: inline-flex; border-bottom: 0; padding: 8px 4px; }
+    .site-nav .nav-side li a.ver { display: inline-block; }
+    .site-nav .nav-side .ver { padding: 3px 8px; }
+    .site-nav .nav-side .long { display: inline; }
+    .has-mega { display: block; }
+    .mega-toggle { display: none; }
+    .mega { display: block; position: static; width: auto; border: 0; box-shadow: none; background: none; padding: 0 0 6px 12px; }
+    .site-nav .mega li a { display: block; padding: 9px 4px; border-bottom: 0; }
+    .mega .m-d { display: none; }
+    .mega-foot { display: none; }
+    .js .menu-btn { display: inline-flex; align-items: center; gap: 10px; margin-left: auto; appearance: none; background: var(--paper-2); border: 2px solid var(--ink); color: var(--ink); font: inherit; font-weight: 600; padding: 8px 14px; cursor: pointer; min-height: 44px; }
+    .menu-icon, .menu-icon::before { display: block; width: 18px; height: 2px; background: currentColor; position: relative; }
+    .menu-icon::before { content: ''; top: 6px; box-shadow: 0 -12px 0 currentColor; }
+    .js .site-nav:not(.open) { display: none; }
+    .js .site-nav.open { padding-bottom: 8px; max-height: calc(100vh - 64px); overflow-y: auto; }
+  }
+  @media (max-width: 62rem) { .wordmark img { width: 32px; height: 32px; } .wordmark span { font-size: 1.45rem; } }
+</style>

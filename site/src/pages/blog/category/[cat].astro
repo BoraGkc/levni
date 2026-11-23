@@ -3,6 +3,7 @@ import Base from '../../../layouts/Base.astro';
 import PostCard from '../../../components/PostCard.astro';
 import { getCollection } from 'astro:content';
 import { CATEGORIES, type Category } from '../../../blog';
+import { SITE } from '../../../site';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -13,8 +14,18 @@ export async function getStaticPaths() {
 const { cat } = Astro.params as { cat: Category };
 const { posts } = Astro.props;
 const c = CATEGORIES[cat];
+const url = `${SITE.url}/blog/category/${cat}/`;
+const jsonld = [
+  { '@type': 'CollectionPage', name: c.title, description: c.description, url, inLanguage: 'en-GB', isPartOf: { '@id': `${SITE.url}/#website` },
+    mainEntity: { '@type': 'ItemList', numberOfItems: posts.length, itemListElement: posts.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: `${SITE.url}/blog/${p.id}/`, name: p.data.title })) } },
+  { '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Levni', item: `${SITE.url}/` },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.url}/blog/` },
+    { '@type': 'ListItem', position: 3, name: c.label, item: url },
+  ] },
+];
 ---
-<Base title={`${c.label} · Blog`} description={`${c.blurb} Guides and stories from the Levni blog.`}>
+<Base title={c.title} description={c.description} jsonld={jsonld}>
   <section class="wrap head">
     <p class="crumbs"><a href="/blog/">Blog</a> / {c.label}</p>
     <h1>{c.label}</h1>

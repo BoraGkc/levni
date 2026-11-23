@@ -2,6 +2,7 @@
 title: "Free Pixel Art Icons: 481 Icons in Four Cuts, CC BY 4.0"
 description: "Free pixel art icons for commercial use: 481 icons in four cuts each (regular, thin, solid, glyph), CC BY 4.0, recolourable and ready to use in scenes."
 date: 2026-11-23
+updated: 2026-11-24
 category: library
 kind: Guide
 featured: true
@@ -166,3 +167,5 @@ lay them out in a row with render_scene and save icons.svg.
 ## What to do next
 
 See the pixel icons on screens and stickers in [the pixel gallery](/gallery/#pixel), and everything else Levni draws on [the features page](/features/). Turn any of them into a 3D icon with [the 3D icon guide](/blog/free-3d-icons/), or draw your own icon as JSON and add it with [the SVG icon guide](/blog/draw-svg-icons-json/). Browse [the library](/library/) and star the project on [GitHub](https://github.com/BoraGkc/levni).
+
+**Reference and examples.** Read the [scene elements reference](/docs/elements/) (every element and field); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

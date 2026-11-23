@@ -1,0 +1,43 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { readDoc, render, resetIds } from '../../components/docs/md';
+
+resetIds();
+const { intro, sections } = readDoc('poster.md');
+const head = render(intro);
+const parts = sections.map((s) => render(s.md, { title: s.title, id: s.id }));
+const toc = parts.flatMap((p) => p.toc);
+const iTemplates = sections.findIndex((s) => s.title === 'Templates');
+const before = parts.slice(0, iTemplates + 1);
+const after = parts.slice(iTemplates + 1);
+---
+<Docs
+  title="Levni branding posters: eight posters from one brand spec"
+  description="Make a branding poster series with levni poster or the render_poster MCP tool: one brand spec becomes eight 1200 by 1600 posters that share inks, type and a mark. Spec fields and the eight templates."
+  toc={toc}
+>
+  <p class="eyebrow">Reference</p>
+  <h1>Branding posters</h1>
+  <p class="callout"><strong>Needs Levni 0.3.0</strong> Posters and the type engine are not on npm yet. Use <code>npm install github:BoraGkc/levni</code>, or a checkout, until 0.3.0 is published.</p>
+  <Fragment set:html={head.html} />
+
+  <figure>
+    <img src="/docs/poster-series.webp" width="1560" height="1032" alt="A series of eight branding posters for a coffee roaster called Kumru, sharing inks, type and a dove mark" loading="lazy" decoding="async" />
+    <figcaption>One spec, eight posters, drawn locally, no image model. The spec is the one in the next section.</figcaption>
+  </figure>
+
+  {before.map((p) => <Fragment set:html={p.html} />)}
+
+  <div class="shots">
+    <figure><img src="/docs/poster-split.webp" width="600" height="800" alt="The split poster: a blue halftone dove above a coral block with the word POUR in pixel type" loading="lazy" decoding="async" /><figcaption><code>split</code></figcaption></figure>
+    <figure><img src="/docs/poster-bauhaus.webp" width="600" height="800" alt="The bauhaus poster: a grid of black and coral half-circles and pills with the word SHARE" loading="lazy" decoding="async" /><figcaption><code>bauhaus</code></figcaption></figure>
+    <figure><img src="/docs/poster-launch.webp" width="600" height="800" alt="The launch poster: a dark poster with a halftoned coral glow, a white dove and the word BREW" loading="lazy" decoding="async" /><figcaption><code>launch</code></figcaption></figure>
+  </div>
+
+  {after.map((p) => <Fragment set:html={p.html} />)}
+
+  <div class="callout">
+    <strong>From an agent</strong>
+    <p><code>render_poster</code> takes this spec and returns a contact sheet; <code>scenes: true</code> also returns each poster as scene JSON to edit and pass to <code>render_scene</code>. See <a href="/docs/mcp/#t-render_poster">MCP server</a>.</p>
+  </div>
+</Docs>

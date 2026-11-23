@@ -2,6 +2,7 @@
 title: "Generate Blog Cover Images with Claude Code and Levni"
 description: "Generate a blog cover image with Claude Code: add Levni as an MCP server, let the agent draw, read the layout critic and export a small WebP. No API key needed."
 date: 2026-11-22
+updated: 2026-11-24
 category: agents
 kind: Guide
 featured: true
@@ -179,3 +180,5 @@ Want the whole set in other colours, say your brand's? A scene takes one `style`
 Browse the [Levni library](/library/) to see the drawings your agent will choose from, or jump to a shelf such as [`/library/?c=tech`](/library/?c=tech). To see how the critic works in more detail, read [the agent layout critic](/blog/agent-layout-critic/). To make the matching social card for each post, see [Open Graph images from JSON](/blog/open-graph-images-json/).
 
 Related: for glossy 3D covers with a title and a badge, read [3D cover images without a 3D tool](/blog/3d-cover-images-json/). To let the assistant add covers straight to Ghost drafts, read [add featured images to Ghost drafts](/blog/ghost-featured-images-ai/).
+
+**Reference and examples.** Read the [MCP guide](/docs/mcp/) (every tool and field), the [Getting started](/docs/getting-started/) (install and a first render); see finished work on [the features page](/features/) and in [the gallery](/gallery/).
