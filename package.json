@@ -20,7 +20,8 @@
   "exports": {
     ".": "./src/index.mjs",
     "./props": "./src/props.mjs",
-    "./critic": "./src/critic.mjs"
+    "./critic": "./src/critic.mjs",
+    "./judge": "./src/judge/index.mjs"
   },
   "bin": {
     "levni": "./bin/levni.mjs"
@@ -39,7 +40,7 @@
     "node": ">=20"
   },
   "scripts": {
-    "test": "node test/smoke.mjs",
+    "test": "node test/smoke.mjs && node test/judge.mjs",
     "examples": "node examples/render-all.mjs"
   },
   "dependencies": {

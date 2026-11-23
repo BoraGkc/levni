@@ -68,6 +68,10 @@ Your own prop folders: set `LEVNI_PROPS=/path/to/props` (several, separated by `
 
 Canvas 1200 × 673. 39 element types: library props and your own path drawings (with extrusion, hatch shading and cast shadows), small isometric worlds, panels, glyph fields, halftones, flow fields, faceless crowds and isotype grids, bubbles, trees, flags, arrows, labels. Full reference: [`docs/scene.md`](docs/scene.md); JSON Schema: [`docs/scene.schema.json`](docs/scene.schema.json).
 
+## Judge
+
+An optional, pluggable judge rates renders against a brief, so an agent can pick the best of several seeds. `levni judge score cover.png --brief "why remote work stalls"` prints `{score 0..3, notes}`; `levni judge pick a.png b.png c.png --brief "..."` scores every image twice in shuffled order, averages, and calls gaps under 0.15 ties. The first adapter uses OpenRouter (`OPENROUTER_API_KEY`, model via `--model` or `LEVNI_JUDGE_MODEL`); writing your own is a single function. Details and lessons: [`docs/judge.md`](docs/judge.md).
+
 ## Licensing
 
 - **Code** (`src/`, `bin/`, `test/`): [MIT](LICENSE).
