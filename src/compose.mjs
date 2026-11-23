@@ -16,6 +16,7 @@ import { expandIso } from './iso.mjs';
 import { flattenPath, inkLine, plateOffsets } from './ink.mjs';
 import { applyStyle } from './styles.mjs';
 import { resolveSlots } from './slots.mjs';
+import { printScreen } from './print.mjs';
 
 export const COLORS = { blue: P.blue, ink: P.ink, coral: P.coral, mustard: P.mustard, green: P.green, paper: P.paper, white: P.white, dark: P.dark, tone: '#7FA6F2', 'tone-coral': '#FFB49A', 'tone-green': '#86C796', 'tone-mustard': '#FFE08A', none: 'none' };
 const c = (name, fallback = P.ink) => (name == null ? fallback : COLORS[name] || (/^#[0-9a-f]{6}$/i.test(name) ? name : fallback));
@@ -63,6 +64,7 @@ async function composeOnce(spec, canvas, lay) {
     const t = e.type;
     cur = e;
     const m0 = lay?.start(out, used);
+    const out0 = out.length, used0 = used.length; // for the element-level `screen`
     if ((t === 'icon' || t === 'ascii') && !iconsAvailable()) {
       throw new Error(`"${t}" element "${e.name}" needs Tabler icons: npm install @tabler/icons (or set LEVNI_ICONS). If you meant a prop, check its name with: levni list`);
     }
@@ -260,6 +262,12 @@ async function composeOnce(spec, canvas, lay) {
     } else if (t === 'label') {
       // label colour follows the ground unless set: paper on dark panels, ink elsewhere
       out.push(`<text x="${e.x}" y="${e.y}" ${MONO} font-size="${e.size ?? 16}" fill="${e.color ? c(e.color) : inDark(e.x, e.y) ? P.paper : P.ink}" text-anchor="${e.anchor ?? 'start'}" letter-spacing="1">${esc(e.upper === false ? e.text : String(e.text).toLocaleUpperCase(spec.locale || 'en'))}</text>`);
+    }
+    // element-level screen: this element alone is printed as a dither (print.mjs), the rest of the scene is untouched
+    if (e.screen && out.length > out0) {
+      const bb = used.length > used0 ? used[used.length - 1] : null;
+      const img = await printScreen(out.splice(out0).join(''), e.screen, canvas, bb ? [bb.x, bb.y, bb.w, bb.h] : null);
+      if (img) out.push(img);
     }
     lay?.end(e, m0, out, used);
   }

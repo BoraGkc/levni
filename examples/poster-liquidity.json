@@ -1,0 +1,109 @@
+{
+ "seed": 12,
+ "finish": "soft",
+ "background": "paper",
+ "canvas": [
+  1200,
+  1600
+ ],
+ "elements": [
+  {
+   "type": "camo",
+   "x": 0,
+   "y": 0,
+   "w": 600,
+   "h": 1600,
+   "colors": [
+    "coral",
+    "dark",
+    "mustard"
+   ],
+   "ground": "paper",
+   "threshold": 0.42,
+   "levelStep": 0.2,
+   "scale": 0.0045,
+   "speckle": 0.6,
+   "seed": 3
+  },
+  {
+   "type": "meshgrad",
+   "x": 600,
+   "y": 0,
+   "w": 600,
+   "h": 1600,
+   "colors": [
+    "dark",
+    "blue",
+    "tone",
+    "paper",
+    "blue"
+   ],
+   "grain": 0.1,
+   "screen": {
+    "cell": 6,
+    "matrix": 8,
+    "inks": [
+     "#0B57D0",
+     "#14181F"
+    ],
+    "paper": "#F4F2EC"
+   },
+   "shape": "rect",
+   "count": 6,
+   "blur": 260
+  },
+  {
+   "type": "shape",
+   "points": [
+    [
+     596,
+     0
+    ],
+    [
+     604,
+     0
+    ],
+    [
+     604,
+     1600
+    ],
+    [
+     596,
+     1600
+    ]
+   ],
+   "fill": "dark",
+   "stroke": "none",
+   "offset": 0,
+   "amp": 0
+  },
+  {
+   "type": "label",
+   "text": "LIQUIDITY / 01",
+   "x": 640,
+   "y": 80,
+   "size": 22,
+   "color": "dark"
+  },
+  {
+   "type": "label",
+   "text": "DRY / WET",
+   "x": 1160,
+   "y": 1540,
+   "size": 22,
+   "color": "dark",
+   "anchor": "end"
+  },
+  {
+   "type": "grain",
+   "mode": "toner",
+   "color": "dark",
+   "density": 2,
+   "opacity": 0.6,
+   "x": 0,
+   "y": 0,
+   "w": 600,
+   "h": 1600
+  }
+ ]
+}

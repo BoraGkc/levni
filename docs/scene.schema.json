@@ -312,6 +312,9 @@
             "skyline",
             "halftone",
             "dither",
+            "amtone",
+            "camo",
+            "grain",
             "meshgrad",
             "flowfield",
             "hatch",
@@ -378,6 +381,10 @@
         },
         "rot": {
           "type": "number"
+        },
+        "screen": {
+          "type": ["object", "string"],
+          "description": "any element: print just this element as an ordered dither (same options as the scene-level screen)"
         },
         "crop": {
           "type": "boolean"
