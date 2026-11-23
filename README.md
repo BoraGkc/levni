@@ -4,6 +4,8 @@
 
 **An open illustration library and the engine that draws it.** Levni turns a short JSON scene into a hand-inked, riso-printed image: covers, spot illustrations, icons, charts and social images in one consistent house style. No image model, no account, no API key, no cost per image. It runs on your machine, and your AI assistant can drive it through MCP.
 
+[![Levni MCP server](https://glama.ai/mcp/servers/BoraGkc/levni/badges/score.svg)](https://glama.ai/mcp/servers/BoraGkc/levni) [![npm](https://img.shields.io/npm/v/@levni/levni)](https://www.npmjs.com/package/@levni/levni)
+
 **[levni.dev](https://levni.dev)** · [Features](https://levni.dev/features/) · [Library](https://levni.dev/library/) · [MCP guide](https://levni.dev/mcp/) · Powered by [Ortak Alan](https://ortakalan.io)
 
 Named after Levni, the 18th-century Ottoman painter of the Tulip Era, whose colours still look alive.
