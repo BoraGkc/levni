@@ -40,7 +40,7 @@ House rule: at most **two main inks plus paper** per scene; a third colour only 
 - **One focus.** One element clearly the largest (≥ 220 px); everything else serves it.
 - **Full but breathing.** Fill the frame, keep air around the focus.
 - **Bleeding off the edge is fine** when bold (a giant symbol cropped by a panel, a crowd cut at the bottom); set `"crop": true` so the critic knows it is on purpose.
-- **No faces, no hands.** People appear only as faceless pictograms (`crowd`, `isotype`). Do not draw real people; draw an object that stands for them.
+- **No faces, no hands.** People appear only as faceless pictograms (`crowd`, `isotype`, `person`, `people`). Do not draw real people; draw an object that stands for them.
 - **Scale contrast.** Giant object with small people, or a big panel with small stickers.
 - **Rhythm.** Waves, glyph fields and pictogram rows fill empty space.
 - **Pick an idea first.** Before drawing, write three object metaphors for the story ("a dumbbell whose weights are hearts") and keep the sharpest. Alone, a heart, bulb, gear, globe, handshake or rocket is a cliché.
@@ -80,6 +80,8 @@ House rule: at most **two main inks plus paper** per scene; a third colour only 
 | --- | --- | --- |
 | `crowd` | `x`, `y`, `w`, `rows`, `size`, `color`?, `back`?, `highlight`?, `share`? | audience from behind. `y` is the back row's base; each row steps `size × 0.45` down, so to sit on the bottom use `y ≈ 673 − (rows − 1) × size × 0.45` |
 | `isotype` | `x`, `y`, `cols`, `rows`, `size`, `color`, `highlight`, `share` | pictogram grid; take the share from the story, never invent numbers |
+| `person` | `x`, `y` (feet, centre), `size` (height), `pose`, `facing`? (`right` default, `left` flips), `color`? (body, default white), `outline`?, `accent`? (colour of a scarf, or a bag with `accentKind: "bag"`), `hold`?, `itemColor`?, `phone`? | one full-body faceless figure: round head with nothing on it, rounded torso, limbs as thick inked tubes, mitten ends. Poses: `standing`, `walking`, `running`, `sitting` (on an implied seat: the hip floats, draw the chair yourself), `pointing`, `waving`, `raising-arm`, `holding` (give `hold` a prop name to draw it small at the hands), `carrying` (a box, coloured by `itemColor`), `reading` (a book), `phone` (arm to the ear; `phone: false` hides the handset), `thinking` (hand at the chin), `cheering`, `kneeling`, `leaning` (leans back on an implied wall; draw the wall yourself). Feet always land on `y`. On a blue panel use `color: "paper"` or a tone; the far arm and leg are tinted so the pose reads. Weakest at small sizes: `leaning`, `thinking` |
+| `people` | `x`, `y` (baseline), `w`, `n`, `size`, `poses`? (list, cycled), `colors`? (cycled), `accents`?, `facing`? (`left`/`right`/`alternate`; default: left half faces right, right half faces left, so they face each other), `hold`?, `vary`? | `n` persons spread along a line from `x` to `x + w` with slight height and position variation; use for groups, queues, conversations. Reads best at `size` 160–320 |
 
 ### Things and marks
 

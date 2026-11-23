@@ -30,6 +30,7 @@ The `soft` finish:
 - **Style packs.** The same scene printed with other inks and paper: `riso` (Ortak Alan's house look, default) and `miniature`, inspired by Tulip Era Ottoman painting, with its own tulips, carnations, cypresses and gilded medallion. Levni does not have to invent every look itself: it can take a tradition as its reference and then draw in it consistently. Set `"style": "miniature"` on a scene; a pack is a colour map in `src/styles.mjs`.
 - **A soft 3D finish.** `"finish": "soft"` swaps the crayon for clean edges and film grain, with twisting gradient `ribbon`s, shaded `tube`s and an `image` badge for a logo you own. Good for tech and guide covers. Examples: [`ribbon-loop`](examples/ribbon-loop.json), [`ribbon-s`](examples/ribbon-s.json), [`ribbon-rings`](examples/ribbon-rings.json).
 - **Data charts.** `bars`, `linechart`, `pie`, `donut` and `isochart` take plain numbers and draw them with the same wobbly ink, flat riso fills and plate misregistration as everything else; values print only with `showValues`. Example: [`chart-inflation`](examples/chart-inflation.json) (sample data).
+- **Faceless people.** `person` draws a full-body pictogram in 15 poses (walking, pointing, reading, on the phone, cheering, ...), `people` a row of them; round head with nothing on it, limbs in hand-inked tubes. Example: [`people`](examples/people.json).
 - **MCP-ready.** The API is three calls (`compose`, `critique`, `render`) over JSON in, image out, so it maps directly onto MCP tools. An MCP server is planned.
 
 ## Install and use
@@ -71,7 +72,7 @@ Draw covers and inline images for imageless Ghost drafts: `levni ghost drafts` f
 ] }
 ```
 
-Canvas 1200 × 673. 39 element types: library props and your own path drawings (with extrusion, hatch shading and cast shadows), small isometric worlds, panels, glyph fields, halftones, flow fields, faceless crowds and isotype grids, bubbles, trees, flags, arrows, labels. Full reference: [`docs/scene.md`](docs/scene.md); JSON Schema: [`docs/scene.schema.json`](docs/scene.schema.json).
+Canvas 1200 × 673. 41 element types: library props and your own path drawings (with extrusion, hatch shading and cast shadows), small isometric worlds, panels, glyph fields, halftones, flow fields, faceless crowds and isotype grids, full-body pictogram people in 15 poses (`person`, `people`), bubbles, trees, flags, arrows, labels. Full reference: [`docs/scene.md`](docs/scene.md); JSON Schema: [`docs/scene.schema.json`](docs/scene.schema.json).
 
 ## Judge
 

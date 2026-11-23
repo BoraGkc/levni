@@ -4,6 +4,7 @@
 import { box, ellipse } from './pen.mjs';
 import { SOFT_ASSETS } from './ribbon.mjs';
 import { CHART_ASSETS } from './charts.mjs';
+import { PERSON_ASSETS } from './person.mjs';
 
 const f = (n) => Math.round(n * 10) / 10;
 
@@ -340,3 +341,5 @@ Object.assign(ASSETS, SOFT_ASSETS);
 
 // Data charts (bars, linechart, pie, donut, isochart): see charts.mjs
 Object.assign(ASSETS, CHART_ASSETS);
+// Faceless pictogram people (person, people): see person.mjs
+Object.assign(ASSETS, PERSON_ASSETS);

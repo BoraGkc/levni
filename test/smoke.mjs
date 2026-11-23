@@ -86,6 +86,19 @@ for (let i = 0; i < list.length; i += 24) {
     } catch (err) { fail(`charts ${type}`, err.message); }
   }
 }
+// 3b. Every person pose composes without NaN, facing both ways; `people` too
+{
+  const { POSE_NAMES } = await import('../src/person.mjs');
+  for (const facing of ['right', 'left']) for (const pose of POSE_NAMES) {
+    try {
+      const { svg, used } = await compose({ seed: 1, elements: [{ type: 'person', x: 300, y: 500, size: 300, pose, facing, accent: 'coral', hold: 'lightbulb' }] });
+      if (/NaN|undefined|Infinity/.test(svg)) fail(`person ${pose}/${facing}`, 'SVG contains NaN/undefined/Infinity');
+      if (!used.some((u) => u.type === 'person' && [u.x, u.y, u.w, u.h].every(Number.isFinite))) fail(`person ${pose}/${facing}`, 'no valid box');
+    } catch (err) { fail(`person ${pose}/${facing}`, err.message); }
+  }
+  const { svg } = await compose({ seed: 1, elements: [{ type: 'people', x: 100, y: 500, w: 800, n: 7, size: 200 }] });
+  if (/NaN|undefined|Infinity/.test(svg)) fail('people', 'SVG contains NaN/undefined/Infinity');
+}
 
 // 4. Every example scene renders (small, fast)
 const { readdirSync, readFileSync } = await import('node:fs');
