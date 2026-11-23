@@ -1,0 +1,41 @@
+{
+ "name": "exchange-coins",
+ "tags": [
+  "takas",
+  "dönüşüm",
+  "currency exchange",
+  "swap",
+  "döviz bozdurma"
+ ],
+ "variants": [
+  {
+   "note": "two coins with swap arrows",
+   "paths": [
+    {
+     "d": "M8 34 A22 22 0 1 0 52 34 A22 22 0 1 0 8 34 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M48 66 A22 22 0 1 0 92 66 A22 22 0 1 0 48 66 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M52 18 Q82 8 90 36 M82 26 L90 38 L76 38",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 8
+    },
+    {
+     "d": "M48 82 Q18 92 10 64 M18 74 L10 62 L24 62",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

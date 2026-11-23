@@ -1,0 +1,53 @@
+{
+ "name": "gas-burner",
+ "tags": [
+  "ocak",
+  "doğalgaz",
+  "gas burner",
+  "stove",
+  "alev"
+ ],
+ "variants": [
+  {
+   "note": "burner ring with crown of blue flames",
+   "paths": [
+    {
+     "d": "M12 72 A38 14 0 1 0 88 72 A38 14 0 1 0 12 72 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M32 72 A18 6 0 1 0 68 72 A18 6 0 1 0 32 72 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M22 62 Q16 40 26 30 Q30 46 36 56 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M40 60 Q34 34 50 14 Q66 34 60 60 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M78 62 Q84 40 74 30 Q70 46 64 56 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 58 Q44 44 50 32 Q56 44 50 58 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

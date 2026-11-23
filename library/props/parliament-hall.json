@@ -1,0 +1,59 @@
+{
+ "name": "parliament-hall",
+ "tags": [
+  "meclis",
+  "parlamento",
+  "parliament",
+  "dome",
+  "kubbe"
+ ],
+ "variants": [
+  {
+   "note": "central dome with two wings and steps",
+   "paths": [
+    {
+     "d": "M30 44 Q30 14 50 14 Q70 14 70 44 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 14 V6",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M26 44 H74 V74 H26 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M6 56 H28 V78 H6 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M72 56 H94 V78 H72 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M38 52 V74 M50 52 V74 M62 52 V74",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M6 80 H94 V90 H6 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

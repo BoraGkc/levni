@@ -1,0 +1,57 @@
+{
+ "name": "stock-ticker-board",
+ "tags": [
+  "borsa",
+  "hisse",
+  "ticker",
+  "stock market",
+  "chart",
+  "endeks"
+ ],
+ "variants": [
+  {
+   "note": "board with zigzag line and three bars",
+   "paths": [
+    {
+     "d": "M8 14 H92 V80 H8 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M16 62 L34 44 L48 54 L66 28 L82 36",
+     "fill": "none",
+     "stroke": "green",
+     "weight": 8
+    },
+    {
+     "d": "M18 66 H28 V74 H18 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M38 60 H48 V74 H38 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M58 52 H68 V74 H58 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M14 74 H86",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M32 80 V92 M68 80 V92 M22 92 H78",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

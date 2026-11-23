@@ -199,6 +199,47 @@
      "weight": 4
     }
    ]
+  },
+  {
+   "note": "pig facing right, ear, snout, coin dropping into slot",
+   "paths": [
+    {
+     "d": "M51 12 A7 7 0 1 0 65 12 A7 7 0 1 0 51 12 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M44 40 H60",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M14 56 Q14 36 44 36 Q74 36 78 54 Q80 70 68 74 L68 84 H58 V76 H36 V84 H26 V72 Q14 70 14 56 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M60 38 L66 24 L74 40 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M76 50 H92 V64 H76 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M14 52 Q6 46 10 40",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
   }
  ]
 }

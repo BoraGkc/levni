@@ -1,0 +1,62 @@
+{
+ "name": "battery-pack",
+ "tags": [
+  "akü",
+  "depolama",
+  "battery pack",
+  "storage",
+  "lityum",
+  "enerji depolama"
+ ],
+ "variants": [
+  {
+   "note": "four cells in a case with terminals and charge bars",
+   "paths": [
+    {
+     "d": "M8 28 H92 V84 H8 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M50 28 V84 M29 28 V84 M71 28 V84",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M18 18 H32 V28 H18 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M68 18 H82 V28 H68 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M14 50 H24 V74 H14 Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M33 56 H43 V74 H33 Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M56 62 H66 V74 H56 Z",
+     "fill": "green",
+     "stroke": "none"
+    },
+    {
+     "d": "M75 68 H85 V74 H75 Z",
+     "fill": "green",
+     "stroke": "none"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "name": "calculator",
+ "tags": [
+  "hesap makinesi",
+  "calculator",
+  "toplama",
+  "accounting",
+  "muhasebe"
+ ],
+ "variants": [
+  {
+   "note": "body with blank screen and button grid",
+   "paths": [
+    {
+     "d": "M24 8 H76 V92 H24 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M32 16 H68 V32 H32 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M32 42 H41 V51 H32 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M45 42 H54 V51 H45 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M58 42 H67 V51 H58 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M32 56 H41 V65 H32 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M45 56 H54 V65 H45 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M58 56 H67 V65 H58 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M32 70 H41 V79 H32 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M45 70 H54 V79 H45 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M58 70 H67 V82 H58 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

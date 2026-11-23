@@ -1,0 +1,60 @@
+{
+ "name": "coin-pile",
+ "tags": [
+  "bozuk para",
+  "kumbara",
+  "coins",
+  "savings",
+  "tasarruf",
+  "coin stacks"
+ ],
+ "variants": [
+  {
+   "note": "three coin stacks of different height",
+   "paths": [
+    {
+     "d": "M10 88 V64 H36 V88 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M10 72 H36 M10 80 H36",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M40 88 V36 H66 V88 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M40 46 H66 M40 56 H66 M40 66 H66 M40 76 H66",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M70 88 V52 H92 V88 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M70 62 H92 M70 72 H92",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M40 36 A13 5 0 1 0 66 36 A13 5 0 1 0 40 36 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  }
+ ]
+}

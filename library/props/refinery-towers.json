@@ -1,0 +1,66 @@
+{
+ "name": "refinery-towers",
+ "tags": [
+  "rafineri",
+  "kule",
+  "refinery",
+  "distillation",
+  "petrol",
+  "energy"
+ ],
+ "variants": [
+  {
+   "note": "three towers with bands, tall stack with flame",
+   "paths": [
+    {
+     "d": "M8 34 H28 V90 H8 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M8 50 H28 M8 66 H28",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M36 18 H58 V90 H36 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M36 36 H58 M36 54 H58 M36 72 H58",
+     "fill": "none",
+     "stroke": "paper",
+     "weight": 5
+    },
+    {
+     "d": "M66 44 H82 V90 H66 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M88 90 V30",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M88 28 Q80 18 88 6 Q96 18 88 28 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M4 90 H94",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

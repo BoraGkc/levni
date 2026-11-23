@@ -1,0 +1,35 @@
+{
+ "name": "prison-bars",
+ "tags": [
+  "cezaevi",
+  "parmaklık",
+  "prison",
+  "bars",
+  "hapis"
+ ],
+ "variants": [
+  {
+   "note": "window frame with vertical bars",
+   "paths": [
+    {
+     "d": "M12 10 H88 V90 H12 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M30 10 V90 M50 10 V90 M70 10 V90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M12 50 H88",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

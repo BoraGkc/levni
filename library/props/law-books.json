@@ -1,0 +1,53 @@
+{
+ "name": "law-books",
+ "tags": [
+  "hukuk kitapları",
+  "kanun",
+  "law books",
+  "statute",
+  "kitap yığını"
+ ],
+ "variants": [
+  {
+   "note": "three stacked books with spine bands",
+   "paths": [
+    {
+     "d": "M12 66 H88 V88 H12 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M24 66 V88 M76 66 V88",
+     "fill": "none",
+     "stroke": "paper",
+     "weight": 5
+    },
+    {
+     "d": "M18 42 H82 V64 H18 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 42 V64 M70 42 V64",
+     "fill": "none",
+     "stroke": "paper",
+     "weight": 5
+    },
+    {
+     "d": "M24 18 H76 V40 H24 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M34 18 V40 M66 18 V40",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

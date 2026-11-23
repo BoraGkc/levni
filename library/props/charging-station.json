@@ -1,0 +1,41 @@
+{
+ "name": "charging-station",
+ "tags": [
+  "şarj istasyonu",
+  "elektrikli araç",
+  "ev charger",
+  "charging station",
+  "şarj"
+ ],
+ "variants": [
+  {
+   "note": "post with screen, bolt and coiled cable",
+   "paths": [
+    {
+     "d": "M26 8 H64 V92 H26 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M34 16 H56 V38 H34 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M47 44 L38 58 H46 L42 72 L56 54 H48 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M64 52 Q92 52 88 78 Q84 90 74 84",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

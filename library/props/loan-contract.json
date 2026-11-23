@@ -1,0 +1,42 @@
+{
+ "name": "loan-contract",
+ "tags": [
+  "kredi",
+  "sözleşme",
+  "borç",
+  "loan",
+  "contract",
+  "agreement"
+ ],
+ "variants": [
+  {
+   "note": "paper with lines, coral stamp circle, scribble signature",
+   "paths": [
+    {
+     "d": "M20 8 H72 L80 16 V92 H20 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 24 H66 M30 36 H66 M30 48 H56",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M52 62 A10 10 0 1 0 72 62 A10 10 0 1 0 52 62 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M28 78 Q34 68 38 78 T48 78 T58 78",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

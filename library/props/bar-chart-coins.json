@@ -1,0 +1,59 @@
+{
+ "name": "bar-chart-coins",
+ "tags": [
+  "büyüme",
+  "yatırım grafiği",
+  "investment",
+  "growth",
+  "gelir"
+ ],
+ "variants": [
+  {
+   "note": "three rising bars built from coin stacks and baseline",
+   "paths": [
+    {
+     "d": "M10 64 H30 V88 H10 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M10 76 H30",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M40 42 H60 V88 H40 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M40 54 H60 M40 66 H60 M40 78 H60",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M70 18 H90 V88 H70 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M70 30 H90 M70 42 H90 M70 54 H90 M70 66 H90 M70 78 H90",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M4 92 H96",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

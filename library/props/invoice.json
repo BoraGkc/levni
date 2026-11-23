@@ -1,0 +1,35 @@
+{
+ "name": "invoice",
+ "tags": [
+  "fatura",
+  "tahsilat",
+  "invoice",
+  "bill",
+  "ödeme"
+ ],
+ "variants": [
+  {
+   "note": "paper bill with line items and total box",
+   "paths": [
+    {
+     "d": "M18 8 H82 V86 L74 92 L66 86 L58 92 L50 86 L42 92 L34 86 L26 92 L18 86 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M28 24 H72 M28 36 H72 M28 48 H60",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M52 60 H72 V74 H52 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

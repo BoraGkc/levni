@@ -1,0 +1,56 @@
+{
+ "name": "transformer-box",
+ "tags": [
+  "trafo",
+  "transformatör",
+  "transformer",
+  "substation",
+  "trafo merkezi"
+ ],
+ "variants": [
+  {
+   "note": "tank with fins and three insulator tops",
+   "paths": [
+    {
+     "d": "M24 30 V14 M50 30 V14 M76 30 V14",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M24 10 h.1",
+     "stroke": "ink",
+     "weight": 12
+    },
+    {
+     "d": "M50 10 h.1",
+     "stroke": "ink",
+     "weight": 12
+    },
+    {
+     "d": "M76 10 h.1",
+     "stroke": "ink",
+     "weight": 12
+    },
+    {
+     "d": "M10 30 H90 V82 H10 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M24 36 V76 M37 36 V76 M50 36 V76 M63 36 V76 M76 36 V76",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M16 82 V92 M84 82 V92",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

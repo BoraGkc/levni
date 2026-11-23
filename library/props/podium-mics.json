@@ -1,0 +1,46 @@
+{
+ "name": "podium-mics",
+ "tags": [
+  "kürsü",
+  "konuşma",
+  "podium",
+  "lectern",
+  "mikrofon",
+  "speech"
+ ],
+ "variants": [
+  {
+   "note": "lectern with two mic stems and fronted panel",
+   "paths": [
+    {
+     "d": "M40 38 Q38 20 30 14 M60 38 Q62 20 70 14",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M30 12 h.1",
+     "stroke": "ink",
+     "weight": 12
+    },
+    {
+     "d": "M70 12 h.1",
+     "stroke": "ink",
+     "weight": 12
+    },
+    {
+     "d": "M18 38 H82 L74 90 H26 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M36 52 H64 V74 H36 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

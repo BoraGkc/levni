@@ -1,0 +1,41 @@
+{
+ "name": "judge-bench",
+ "tags": [
+  "hakim kürsüsü",
+  "mahkeme",
+  "judge bench",
+  "courtroom",
+  "kürsü"
+ ],
+ "variants": [
+  {
+   "note": "raised bench front with panel and gavel on top",
+   "paths": [
+    {
+     "d": "M8 40 H92 V88 H8 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M20 50 H80 V78 H20 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M32 28 H68 V40 H32 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M40 20 H60 V28 H40 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "name": "gold-bar",
+ "tags": [
+  "altın",
+  "külçe",
+  "gold",
+  "ingot",
+  "bullion",
+  "yatırım"
+ ],
+ "variants": [
+  {
+   "note": "ingot with lighter top face",
+   "paths": [
+    {
+     "d": "M10 80 L22 40 H78 L90 80 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M22 40 L28 22 H72 L78 40 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M36 56 H64",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

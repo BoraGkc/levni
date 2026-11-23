@@ -1,0 +1,41 @@
+{
+ "name": "id-card",
+ "tags": [
+  "kimlik",
+  "nüfus cüzdanı",
+  "id card",
+  "identity",
+  "kart"
+ ],
+ "variants": [
+  {
+   "note": "blank card, photo placeholder block, chip and lines",
+   "paths": [
+    {
+     "d": "M8 22 H92 V78 H8 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M16 32 H42 V60 H16 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M52 36 H82 M52 48 H82 M52 60 H72",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M16 66 H30 V72 H16 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

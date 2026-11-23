@@ -1,0 +1,41 @@
+{
+ "name": "document-seal",
+ "tags": [
+  "mühür",
+  "resmi belge",
+  "document seal",
+  "official",
+  "onay"
+ ],
+ "variants": [
+  {
+   "note": "page with text lines and wax seal at the foot",
+   "paths": [
+    {
+     "d": "M20 8 H80 V84 H20 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 24 H70 M30 36 H70 M30 48 H56",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M48 72 A14 14 0 1 0 76 72 A14 14 0 1 0 48 72 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M56 72 A6 6 0 1 0 68 72 A6 6 0 1 0 56 72 Z",
+     "fill": "none",
+     "stroke": "paper",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

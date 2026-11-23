@@ -86,6 +86,41 @@
      "weight": 8
     }
    ]
+  },
+  {
+   "note": "balanced scales, coin on one pan, feather-light other",
+   "paths": [
+    {
+     "d": "M50 14 V86 M32 90 L68 90 M14 34 L86 18",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M14 34 L6 60 M14 34 L28 60 M86 18 L72 44 M86 18 L94 44",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M6 62 Q18 80 32 62 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M70 46 Q84 62 96 46 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M14 56 A5 5 0 1 0 24 56 A5 5 0 1 0 14 56 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
   }
  ]
 }

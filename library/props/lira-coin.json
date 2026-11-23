@@ -1,0 +1,65 @@
+{
+ "name": "lira-coin",
+ "tags": [
+  "lira",
+  "kuruş",
+  "madeni para",
+  "coin",
+  "turkish lira",
+  "finance",
+  "para"
+ ],
+ "variants": [
+  {
+   "note": "front, mustard coin, double ring and diamond",
+   "paths": [
+    {
+     "d": "M10 50 A40 40 0 1 0 90 50 A40 40 0 1 0 10 50 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M21 50 A29 29 0 1 0 79 50 A29 29 0 1 0 21 50 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 33 L64 50 L50 67 L36 50 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "tilted coin on edge with face ellipse",
+   "paths": [
+    {
+     "d": "M22 30 L78 30 L78 38 L22 38 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M18 50 A32 38 0 1 0 82 50 A32 38 0 1 0 18 50 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M28 50 A22 28 0 1 0 72 50 A22 28 0 1 0 28 50 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 50 h.1",
+     "stroke": "ink",
+     "weight": 12
+    }
+   ]
+  }
+ ]
+}

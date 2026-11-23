@@ -1,0 +1,47 @@
+{
+ "name": "reactor-dome",
+ "tags": [
+  "nükleer",
+  "reaktör",
+  "nuclear plant",
+  "reactor",
+  "atom"
+ ],
+ "variants": [
+  {
+   "note": "rounded containment dome with tall stack and ring band",
+   "paths": [
+    {
+     "d": "M10 88 V58 Q10 22 44 22 Q78 22 78 58 V88 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M10 62 H78",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M78 42 H92 V88 H78 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M85 34 V42",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M26 80 H62",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

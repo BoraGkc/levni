@@ -1,0 +1,35 @@
+{
+ "name": "protest-sign",
+ "tags": [
+  "pankart",
+  "eylem",
+  "protest sign",
+  "placard",
+  "miting"
+ ],
+ "variants": [
+  {
+   "note": "blank placard on a stick with bold bars",
+   "paths": [
+    {
+     "d": "M50 54 V94",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M10 8 H90 V56 H10 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M24 24 H76 M24 40 H60",
+     "fill": "none",
+     "stroke": "coral",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

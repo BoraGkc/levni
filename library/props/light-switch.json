@@ -1,0 +1,45 @@
+{
+ "name": "light-switch",
+ "tags": [
+  "anahtar",
+  "priz",
+  "light switch",
+  "wall switch",
+  "aydınlatma"
+ ],
+ "variants": [
+  {
+   "note": "wall plate with rocker, two screws",
+   "paths": [
+    {
+     "d": "M26 8 H74 V92 H26 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M38 28 H62 V72 H38 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M38 28 H62 V50 H38 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 17 h.1",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 83 h.1",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

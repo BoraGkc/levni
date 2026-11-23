@@ -1,0 +1,41 @@
+{
+ "name": "passport-booklet",
+ "tags": [
+  "pasaport",
+  "seyahat",
+  "passport",
+  "booklet",
+  "vize"
+ ],
+ "variants": [
+  {
+   "note": "closed booklet with diamond mark and band",
+   "paths": [
+    {
+     "d": "M22 8 H78 V92 H22 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M50 28 L62 42 L50 56 L38 42 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M32 72 H68",
+     "fill": "none",
+     "stroke": "paper",
+     "weight": 7
+    },
+    {
+     "d": "M26 8 V92",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}
