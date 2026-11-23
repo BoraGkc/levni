@@ -1,0 +1,8 @@
+{ "seed": 52, "clip": [60, 52, 1080, 569], "elements": [
+  { "type": "panel", "x": 60, "y": 52, "w": 1080, "h": 569, "color": "blue" },
+  { "type": "disc", "x": 600, "y": 300, "r": 190, "color": "mustard" },
+  { "type": "prop", "name": "newspaper", "x": 600, "y": 290, "size": 250, "rot": -6 },
+  { "type": "person", "x": 300, "y": 590, "size": 340, "pose": "reading", "color": "paper", "accent": "coral" },
+  { "type": "person", "x": 880, "y": 590, "size": 320, "pose": "pointing", "facing": "left", "color": "coral" },
+  { "type": "hills", "base": 621, "height": 50, "color": "tone", "period": 300 }
+] }

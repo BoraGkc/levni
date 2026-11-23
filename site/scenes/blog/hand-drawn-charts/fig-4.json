@@ -1,0 +1,4 @@
+{ "seed": 10, "elements": [
+  { "type": "label", "text": "One icon = 10 people (sample data)", "x": 140, "y": 90, "size": 18 },
+  { "type": "isochart", "x": 220, "y": 150, "values": [80, 55, 25], "unit": 10, "size": 110, "labels": ["Walk", "Bus", "Car"], "colors": ["blue", "coral", "mustard"], "labelSize": 18 }
+] }

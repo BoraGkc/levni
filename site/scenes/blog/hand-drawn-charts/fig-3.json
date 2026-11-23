@@ -1,0 +1,4 @@
+{ "seed": 9, "elements": [
+  { "type": "pie", "x": 280, "y": 336, "r": 180, "values": [45, 30, 25], "labels": ["Search", "Social", "Direct"], "colors": ["coral", "tone", "blue"], "labelSize": 18 },
+  { "type": "donut", "x": 920, "y": 336, "r": 180, "values": [62, 38], "labels": ["Read", "Skimmed"], "colors": ["mustard", "tone"], "showValues": true, "suffix": "%", "labelSize": 18 }
+] }

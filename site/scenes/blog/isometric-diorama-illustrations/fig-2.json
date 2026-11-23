@@ -1,0 +1,8 @@
+{ "seed": 2, "background": "paper", "elements": [
+  { "type": "iso", "preset": "desk", "seed": 1, "fit": [20, 20, 370, 300] },
+  { "type": "iso", "preset": "street", "seed": 1, "fit": [415, 20, 370, 300] },
+  { "type": "iso", "preset": "office", "seed": 1, "fit": [810, 20, 370, 300] },
+  { "type": "iso", "preset": "classroom", "seed": 1, "fit": [20, 350, 370, 300] },
+  { "type": "iso", "preset": "cafe", "seed": 1, "fit": [415, 350, 370, 300] },
+  { "type": "iso", "preset": "room", "seed": 1, "fit": [810, 350, 370, 300] }
+] }

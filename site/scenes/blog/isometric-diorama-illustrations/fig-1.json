@@ -1,0 +1,3 @@
+{ "seed": 1, "background": "paper", "elements": [
+  { "type": "iso", "preset": "room", "seed": 3 }
+] }

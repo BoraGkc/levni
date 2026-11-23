@@ -1,0 +1,3 @@
+{ "seed": 6, "background": "paper", "elements": [
+  { "type": "iso", "preset": "office", "seed": 2, "palette": "blue" }
+] }

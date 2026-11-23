@@ -1,0 +1,4 @@
+{ "seed": 11, "elements": [
+  { "type": "prop", "id": "tv", "name": "old-crt-tv-long-shadow", "x": 600, "y": 340, "size": 640 },
+  { "type": "prop", "name": "chart-board", "in": { "ref": "tv", "slot": "screen" }, "fit": 0.92 }
+] }

@@ -1,0 +1,6 @@
+{ "seed": 9, "finish": "soft", "background": "#E9EEF7", "elements": [
+  { "type": "extrude3d", "name": "megaphone", "x": 330, "y": 350, "size": 330, "rotate": [-14, 24, -6] },
+  { "type": "extrude3d", "name": "camera", "x": 760, "y": 230, "size": 250, "rotate": [-18, -28, 4] },
+  { "type": "extrude3d", "name": "chat-bubbles", "x": 880, "y": 490, "size": 220, "rotate": [-10, -20, 6] },
+  { "type": "extrude3d", "name": "pixel-heart", "variant": 2, "x": 560, "y": 540, "size": 130, "rotate": [-12, 20, -8] }
+] }

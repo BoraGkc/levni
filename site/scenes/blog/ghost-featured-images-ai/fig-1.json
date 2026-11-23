@@ -1,0 +1,7 @@
+{ "seed": 32, "clip": [60, 52, 1080, 569], "elements": [
+  { "type": "panel", "x": 60, "y": 52, "w": 1080, "h": 569, "color": "tone" },
+  { "type": "disc", "x": 600, "y": 320, "r": 220, "color": "mustard" },
+  { "type": "prop", "name": "plug", "x": 600, "y": 330, "size": 400, "rot": -12, "shadow": true },
+  { "type": "prop", "name": "lightbulb", "x": 930, "y": 220, "size": 170 },
+  { "type": "ticks", "x": 1000, "y": 150, "angle": -40, "size": 40 }
+] }

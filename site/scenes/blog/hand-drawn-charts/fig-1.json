@@ -1,0 +1,7 @@
+{ "seed": 7, "elements": [
+  { "type": "label", "text": "Visitors per day (sample data)", "x": 100, "y": 80, "size": 18 },
+  { "type": "bars", "x": 100, "y": 120, "w": 1000, "h": 460,
+    "values": [120, 180, 150, 210, 260, 90, 70],
+    "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "highlight": 4, "showValues": true, "labelSize": 16 }
+] }

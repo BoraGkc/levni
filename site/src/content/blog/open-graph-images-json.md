@@ -158,3 +158,5 @@ The same scenes give you a cover for the page and a card for the share. Because 
 ## What to do next
 
 If you want the cards in your brand colours, a scene takes a `style` field with your own inks: see [brand-colour illustrations](/blog/brand-colour-illustrations/). For the full cover workflow, read [how to generate blog covers with Claude Code](/blog/generate-blog-covers-claude-code/), and browse the [Levni library](/library/) to see the props your cards can use.
+
+Related: to render the same scene as a square post, a story and a YouTube thumbnail as well as the share card, read [one illustration, every social image size](/blog/social-media-image-sizes/).

@@ -160,3 +160,5 @@ Render, read the critic, and look at the picture. The critic checks layout, not 
 ## What to do next
 
 Browse the [Levni library](/library/) and try your palette on a few shelves. To make the first cover, follow [generate blog covers with Claude Code](/blog/generate-blog-covers-claude-code/). To keep a whole publication in one look, read [style packs](/blog/style-packs/), and to use the drawings commercially, see [free illustrations for commercial use](/blog/free-illustrations-commercial-use/).
+
+Related: to recolour 3D icons, see [free 3D icons](/blog/free-3d-icons/). For 3D covers in your own colours, see [3D cover images without a 3D tool](/blog/3d-cover-images-json/).

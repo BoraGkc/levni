@@ -1,0 +1,4 @@
+{ "seed": 4, "background": "paper", "elements": [
+  { "type": "disc", "x": 600, "y": 330, "r": 300, "color": "tone-mustard" },
+  { "type": "iso", "preset": "city", "seed": 3, "base": { "shape": "island" } }
+] }

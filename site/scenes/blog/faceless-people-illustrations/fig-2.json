@@ -1,0 +1,7 @@
+{ "seed": 53, "elements": [
+  { "type": "bubble", "x": 380, "y": 90, "w": 200, "h": 120, "tail": "left", "content": "lines" },
+  { "type": "bubble", "x": 640, "y": 110, "w": 180, "h": 110, "tail": "right", "content": "heart", "color": "tone-coral" },
+  { "type": "people", "x": 160, "y": 600, "w": 880, "n": 5, "size": 260,
+    "poses": ["phone", "pointing", "standing", "waving", "holding"],
+    "colors": ["tone", "coral", "paper", "mustard", "tone"], "accents": ["blue"], "hold": "coffee-cup" }
+] }

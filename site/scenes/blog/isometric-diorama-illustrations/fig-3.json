@@ -1,0 +1,5 @@
+{ "seed": 3, "background": "paper", "elements": [
+  { "type": "iso", "preset": "cafe", "seed": 1, "fit": [20, 90, 370, 500] },
+  { "type": "iso", "preset": "cafe", "seed": 2, "fit": [415, 90, 370, 500] },
+  { "type": "iso", "preset": "cafe", "seed": 3, "fit": [810, 90, 370, 500] }
+] }

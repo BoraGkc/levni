@@ -1,0 +1,6 @@
+{ "seed": 24, "style": { "ink": "#2B1B5A", "tone-mustard": "#9BE3C8", "mustard": "#3FBF9A" }, "elements": [
+  { "type": "prop", "name": "pixel-home", "variant": 0, "x": 200, "y": 336, "size": 220 },
+  { "type": "prop", "name": "pixel-mail", "variant": 2, "x": 470, "y": 336, "size": 220 },
+  { "type": "prop", "name": "pixel-calendar", "variant": 0, "x": 740, "y": 336, "size": 220 },
+  { "type": "prop", "name": "pixel-gift", "variant": 2, "x": 1010, "y": 336, "size": 220 }
+] }

@@ -123,6 +123,10 @@ Because the room is data, variations are cheap. Add `"projection": "oblique"` to
 
 Keep a note of what you changed and render each variant to its own file, so you can compare them side by side before choosing one for the post.
 
+## New in v2: whole dioramas in one line
+
+Since this guide was written, the `iso` element has grown presets. `{ "type": "iso", "preset": "cafe", "seed": 2 }` lays out a whole world: walls with windows and sunlight, furniture, props, trees, roads and faceless people on a floating base with soil layers and a soft shadow. There are seven presets (`room`, `desk`, `street`, `city`, `cafe`, `office`, `classroom`), round and island bases, a smooth `"style": "soft"` look and id overrides for single objects. The scenes in this guide still work unchanged. Read [isometric diorama illustrations in one line of JSON](/blog/isometric-diorama-illustrations/) for the presets.
+
 ## What to do next
 
 Try the `oblique` projection by changing one word, and compare. Browse [the Levni library](/library/) for more furniture and desk props, or look under [`/library/?c=tech`](/library/?c=tech). For the first-cover workflow end to end, read [generate blog covers with Claude Code](/blog/generate-blog-covers-claude-code/). To print the same room in other inks, see [style packs](/blog/style-packs/).

@@ -1,0 +1,5 @@
+{ "finish": "soft", "background": "#E9EEF7", "elements": [
+  { "type": "extrude3d", "name": "heart", "x": 230, "y": 336, "size": 250 },
+  { "type": "extrude3d", "name": "heart", "x": 600, "y": 336, "size": 250, "recolor": { "coral": "mustard" } },
+  { "type": "extrude3d", "name": "heart", "x": 970, "y": 336, "size": 250, "palette": "blue" }
+] }
