@@ -1,6 +1,7 @@
 {
   "name": "levni",
   "version": "0.1.0",
+  "mcpName": "dev.levni/levni",
   "description": "Hand-inked, riso-printed illustrations from JSON scenes. Design assets for agents and publishers. Powered by Ortak Alan.",
   "type": "module",
   "license": "MIT",
@@ -28,15 +29,18 @@
     "levni": "./bin/levni.mjs"
   },
   "files": [
-    "src/",
-    "bin/",
+    "LICENSE",
+    "README.md",
     "adapters/",
-    "library/",
+    "bin/",
+    "docs/ghost.md",
+    "docs/judge.md",
+    "docs/prop-prompt.md",
     "docs/scene.md",
     "docs/scene.schema.json",
-    "docs/prop-prompt.md",
-    "LICENSE",
-    "README.md"
+    "docs/sensitive.md",
+    "library/",
+    "src/"
   ],
   "engines": {
     "node": ">=20"

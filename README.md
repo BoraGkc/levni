@@ -32,7 +32,7 @@ Then ask: *"Illustrate this article with Levni and fix what the critic reports."
 **From the terminal.**
 
 ```bash
-npm install github:BoraGkc/levni           # not on npm yet
+npm install levni
 npx levni render scene.json out.png        # or .webp / .svg; --format og|square|story|youtube; --preview
 npx levni list coffee                      # search the library
 npx levni sheet props.png rocket phone     # contact sheet of props, every variant
