@@ -1,0 +1,58 @@
+{
+ "canvas": [
+  1200,
+  1600
+ ],
+ "finish": "soft",
+ "seed": 3,
+ "background": "#EFE9DC",
+ "grain": 0.1,
+ "elements": [
+  {
+   "type": "echo",
+   "d": "M8 100C8 78 26 70 40 66L40 58C32 54 28 46 28 36C28 20 38 8 50 8C62 8 72 20 72 36C72 46 68 54 60 58L60 66C74 70 92 78 92 100Z",
+   "x": 560,
+   "y": 980,
+   "size": 640,
+   "n": 12,
+   "dx": -26,
+   "dy": 58,
+   "from": "#F6D3C8",
+   "to": "#F2603F",
+   "steps": 12,
+   "outline": "#14181F",
+   "weight": 5,
+   "top": "#EFE9DC"
+  },
+  {
+   "type": "furniture",
+   "color": "#14181F",
+   "corners": {
+    "style": "squares",
+    "size": 12,
+    "inset": 36
+   },
+   "plus": {
+    "n": 4,
+    "size": 14,
+    "gap": 14,
+    "edge": "top",
+    "inset": 64,
+    "align": "center"
+   },
+   "tag": {
+    "text": "NT5642",
+    "corner": "tr",
+    "inset": 54,
+    "size": 14
+   },
+   "credits": {
+    "left": "Echo / head stack",
+    "right": "\u00a9 2026",
+    "edge": "bottom",
+    "inset": 60,
+    "size": 14
+   }
+  }
+ ]
+}

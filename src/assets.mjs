@@ -11,6 +11,7 @@ import { DITHER_ASSETS } from './dither.mjs';
 import { MESHGRAD_ASSETS } from './meshgrad.mjs';
 import { ENGRAVE_ASSETS } from './engrave.mjs';
 import { SEAL_ASSETS } from './seal.mjs';
+import { SHAPES_ASSETS } from './shapes.mjs';
 
 const f = (n) => Math.round(n * 10) / 10;
 
@@ -364,3 +365,6 @@ Object.assign(ASSETS, SEAL_ASSETS);
 
 // Character-grid silhouettes (prop or primitive filled with glyphs/blocks/dots): see glyphfill.mjs
 Object.assign(ASSETS, GLYPHFILL_ASSETS);
+
+// Poster shape kits (shapegrid, echo, dotmatrix, furniture): see shapes.mjs
+Object.assign(ASSETS, SHAPES_ASSETS);
