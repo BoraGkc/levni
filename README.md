@@ -78,6 +78,10 @@ Canvas 1200 × 673. 41 element types: library props and your own path drawings (
 
 An optional, pluggable judge rates renders against a brief, so an agent can pick the best of several seeds. `levni judge score cover.png --brief "why remote work stalls"` prints `{score 0..3, notes}`; `levni judge pick a.png b.png c.png --brief "..."` scores every image twice in shuffled order, averages, and calls gaps under 0.15 ties. The first adapter uses OpenRouter (`OPENROUTER_API_KEY`, model via `--model` or `LEVNI_JUDGE_MODEL`); writing your own is a single function. Details and lessons: [`docs/judge.md`](docs/judge.md).
 
+## Formats and titles
+
+One scene, several canvases: `levni render scene.json out.png --format og|square|story|youtube` (or `"format"` / `"canvas": [w, h]` in the scene). A scene written for 1200×673 is recomposed, not cropped: grounds stretch, objects keep their shape and move as one cluster into the free area (upper part on `story`). A `"title": { "text", "kicker", "position", "font", "band", "brand" }` adds a crisp headline layer above the art. Rules and limits: [docs/scene.md](docs/scene.md#formats-and-reflow).
+
 ## Licensing
 
 - **Code** (`src/`, `bin/`, `test/`): [MIT](LICENSE).

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Levni scene",
-  "description": "A scene is an ordered list of elements drawn on a 1200x673 canvas. Full field reference: docs/scene.md",
+  "description": "A scene is an ordered list of elements drawn on a canvas (default 1200x673, see format/canvas). Full field reference: docs/scene.md",
   "type": "object",
   "properties": {
     "seed": {
@@ -58,6 +58,106 @@
     "grain": {
       "type": "number",
       "default": 0.16
+    },
+    "format": {
+      "enum": [
+        "cover",
+        "og",
+        "square",
+        "story",
+        "youtube"
+      ],
+      "default": "cover"
+    },
+    "canvas": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 64,
+        "maximum": 8192
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "reflow": {
+      "type": "boolean",
+      "default": false
+    },
+    "reflowFrom": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "default": [
+        1200,
+        673
+      ]
+    },
+    "title": {
+      "type": "object",
+      "required": [
+        "text"
+      ],
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "kicker": {
+          "type": "string"
+        },
+        "brand": {
+          "type": "string"
+        },
+        "position": {
+          "enum": [
+            "bottom",
+            "top",
+            "left",
+            "band"
+          ],
+          "default": "bottom"
+        },
+        "font": {
+          "anyOf": [
+            {
+              "enum": [
+                "serif",
+                "sans",
+                "mono"
+              ]
+            },
+            {
+              "type": "object",
+              "required": [
+                "file"
+              ],
+              "properties": {
+                "file": {
+                  "type": "string"
+                },
+                "weight": {
+                  "type": "number"
+                },
+                "width": {
+                  "type": "number"
+                }
+              }
+            }
+          ],
+          "default": "serif"
+        },
+        "color": {
+          "$ref": "#/$defs/color"
+        },
+        "kickerColor": {
+          "$ref": "#/$defs/color"
+        },
+        "band": {
+          "$ref": "#/$defs/color"
+        }
+      }
     }
   },
   "required": [

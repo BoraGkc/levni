@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Levni CLI.
-//   levni render <scene.json> <out.png|out.webp|out.svg> [--preview]
+//   levni render <scene.json> <out.png|out.webp|out.svg> [--preview] [--format cover|og|square|story|youtube]
 //   levni sheet <out.png> [prop ...] [--recolor coral=blue,mustard=tone]
 //   levni list [query]
 //   levni ghost drafts|attach ...   (Ghost adapter, see docs/ghost.md)
@@ -13,12 +13,13 @@ import { render, compose, loadProps, findProp, addPropDir, LIBRARY_DIR, validate
 const [cmd, ...rest] = process.argv.slice(2);
 const flag = (name) => rest.includes(`--${name}`);
 const opt = (name) => { const i = rest.indexOf(`--${name}`); return i >= 0 ? rest[i + 1] : undefined; };
-const positional = rest.filter((a, i) => !a.startsWith('--') && !(i > 0 && ['--recolor', '--dir', '--sheet', '--brief', '--model'].includes(rest[i - 1])));
+const positional = rest.filter((a, i) => !a.startsWith('--') && !(i > 0 && ['--recolor', '--dir', '--sheet', '--brief', '--model', '--format'].includes(rest[i - 1])));
 
 const USAGE = `levni: hand-inked illustrations from JSON scenes
 
-  levni render <scene.json> <out.png|out.webp|out.svg> [--preview]
+  levni render <scene.json> <out.png|out.webp|out.svg> [--preview] [--format cover|og|square|story|youtube]
       Draw a scene. Prints the layout critic's notes. --preview also writes <out>.prev.jpg (560 px).
+      --format recomposes a 1200x673 scene for another canvas (sets "format" and "reflow": see docs/scene.md).
   levni sheet <out.png> [prop ...] [--recolor coral=blue,mustard=tone]
       Contact sheet of props (all when none named): every variant on paper and on blue.
   levni list [query]
@@ -47,6 +48,7 @@ async function main() {
     const [file, out] = positional;
     if (!file || !out) throw new Error('usage: levni render <scene.json> <out.png|out.webp|out.svg>');
     const scene = JSON.parse(readFileSync(file, 'utf8'));
+    if (opt('format')) Object.assign(scene, { format: opt('format'), reflow: true });
     const { notes } = await render(scene, out, { preview: flag('preview') });
     console.log(out);
     console.log(notes.length ? notes.map((n) => `- ${n}`).join('\n') : '- critic: no layout problems found');

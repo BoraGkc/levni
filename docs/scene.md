@@ -26,10 +26,15 @@ A machine-readable outline is in [`scene.schema.json`](scene.schema.json).
 | `style` | string | `riso` | style pack: `riso` or `miniature` (recolours inks and paper, see `src/styles.mjs`) |
 | `finish` | string | `crayon` | `crayon`: hand-inked lines, riso plates, paper grain. `soft`: clean edges and a fine film grain, for the ribbon look |
 | `grain` | number | `0.16` | strength of the film grain in the `soft` finish |
+| `format` | string | `cover` | canvas preset: `cover` 1200×673, `og` 1200×630, `square` 1080×1080, `story` 1080×1920, `youtube` 1280×720 |
+| `canvas` | `[w, h]` | none | explicit canvas size (64..8192 each); wins over `format` |
+| `reflow` | boolean | `false` | recompose a scene authored for 1200×673 onto the chosen canvas (below). `levni render --format <name>` sets `format` and `reflow` |
+| `reflowFrom` | `[w, h]` | `[1200, 673]` | the canvas the scene was authored for |
+| `title` | object | none | headline layer drawn above everything (below) |
 
 ## Canvas and colours
 
-The canvas is **1200 × 673** px (social / Open Graph ratio). Coordinates are pixels from the top left.
+The default canvas is **1200 × 673** px (`cover`). Other sizes: see "Formats and reflow". Coordinates are pixels from the top left. Without `format` or `canvas` a scene renders exactly as before.
 
 Colour names: `blue` (panels), `ink` (lines), `coral`, `mustard`, `green`, `paper` (cream), `white`, `dark`, `tone` (light blue), `tone-coral`, `tone-green`, `tone-mustard`, `none`. Any `#rrggbb` also works.
 
@@ -124,9 +129,39 @@ Charts are drawn with the hand pen from numbers you give; nothing else is invent
 | `tube` | `points` or `circle` [cx, cy, r] (or [cx, cy, rx, ry, rotation]), `width`, `color`, `light`? | a round tube shaded from a dark rim to a light core; three circles make interlocking rings |
 | `image` | `src` (local png, jpg, svg or webp), `x`, `y` (centre), `size`, `card`?, `cardColor`?, `radius`? | a picture on a rounded card, e.g. a product logo you have the right to show. Logos never go into the Folio |
 
+## Formats and reflow
+
+`format` / `canvas` set the canvas; the frame, filters and critic follow it. A scene whose coordinates are written for another size simply sets `format` and uses its own coordinates. To **reuse** a 1200×673 scene on another canvas set `"reflow": true` (or `levni render scene.json out.png --format story`). It is a recomposition, not a crop:
+
+1. **Grounds stretch.** Full-bleed elements (`panel`, `glyphs`, `waves`, `halftone`, `flowfield`, `hatch`, `confetti` spanning at least 80 % of the width or height, and `hills`) and `clip` are stretched to the new canvas. Hills stay on the bottom edge and keep their proportions. A radial `glyphs` glow follows the moved objects.
+2. **Everything else is one object cluster.** Its internal layout and relative positions are kept; it scales by `min(sx, sy)` (never distorted, never cropped: it is shrunk further if it does not fit), and keeps ink widths and the hand look.
+3. **Placement.** Wide canvases (`og`, `youtube`) keep the cluster's relative position. Square and tall canvases centre it in the free area; on a tall canvas (`story`) that area is the upper part (top 10 % and bottom 26 % kept clear of app bars and for the title).
+4. **Title-aware.** With a `title`, the free area excludes the title block or band (plus a gap), so objects never sit under the text.
+
+Limits: a cluster that is wide and shallow leaves empty ground above and below on tall canvases (it is not re-spread); objects that sit on a ground edge on purpose (a crowd at the panel's bottom, `crop: true` bleeds) float or end short after scaling; `marks` and small satellites move with the cluster and can end close to the edge. For those scenes author the tall version directly (`"format": "story"` with its own coordinates). Cost: a reflow composes twice (measure, then draw).
+
+## Title layer
+
+```json
+{ "title": { "text": "Why every newsroom wants a data desk", "kicker": "Analysis", "position": "bottom",
+             "font": "serif", "brand": "levni.dev", "band": "blue", "color": "paper" } }
+```
+
+| field | meaning |
+| --- | --- |
+| `text` | the headline; word-wrapped, at most 3 lines (an ellipsis if it still does not fit), the largest font size that fits |
+| `position` | `bottom` (default), `top`, `left` (a column, ~42 % of the width), `band` (a full-width colour band at the bottom, `blue` unless `band` is set) |
+| `font` | `serif` (Georgia), `sans` (Helvetica Neue), `mono` (Menlo), or `{ "file": "/path/font.ttf" }` (also `.otf`, `.woff`, `.woff2`; optional `width` per-em character width, default 0.6) |
+| `kicker` | small upper-case mono line above the title |
+| `brand` | small mono line below it, e.g. `levni.dev` |
+| `color`, `kickerColor` | text colours (names or `#rrggbb`); default ink on light grounds, paper on dark grounds or bands |
+| `band` | colour of a backing band (full width for `top`/`bottom`, a column for `left`) |
+
+The title is plain SVG text above everything, outside the crayon filter, with safe margins (about 5.5 % of the short side; on `story` also 10 % at the top and 14 % at the bottom for app bars). Without a band the text gets a thin halo in the background colour; on dark art use `band` or `color`. Line breaks come from an approximate character-width model (average width per family), so exotic fonts may need `width`. No font is shipped: the stacks use fonts most systems have. A `font.file` is embedded as a base64 `@font-face`, which browsers honour in `.svg` output; the PNG/WebP rasteriser (sharp/librsvg) uses system fonts and ignores `@font-face`, so for raster output install the font on the machine.
+
 ## The critic
 
-`compose()` also returns the box of everything it drew; `critique(used)` turns that into at most six notes: elements running off the canvas, objects cut by the frame by accident, lopsided weight, no clear focal symbol, icons overlapping. It is cheap and blind to meaning: look at the picture too.
+`compose()` also returns the box of everything it drew; `critique(used, canvas)` turns that into at most six notes: elements running off the canvas, objects cut by the frame by accident, lopsided weight, no clear focal symbol, icons overlapping. It is cheap and blind to meaning: look at the picture too.
 
 ## Known limits
 

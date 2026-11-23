@@ -1,8 +1,10 @@
 // Composition: a scene is an ordered list of elements placed by a director (a person or an agent),
 // drawn with the engine's brushes, palette and crayon finish.
-// Canvas 1200x673. Colours by name: blue, ink, coral, mustard, green, paper, white, tone (light blue), dark.
+// Canvas 1200x673 by default (formats.mjs has the other sizes). Colours by name: blue, ink, coral, mustard, green, paper, white, tone (light blue), dark.
 // Element reference: docs/scene.md
-import { PALETTE as P, W, H, rng, frame } from './style.mjs';
+import { PALETTE as P, rng, frame } from './style.mjs';
+import { resolveCanvas, planLayout, safeInsets } from './formats.mjs';
+import { layoutTitle } from './title.mjs';
 import { makePen, box, ellipse } from './pen.mjs';
 import { icon, resolveIcon, iconsAvailable } from './icon.mjs';
 import { glyphField, iconMask, peep } from './glyphs.mjs';
@@ -25,7 +27,16 @@ const DENSITY = {
   'fade-up': (lv, e) => (x, y) => lv * ((y - e.y) / e.h),
 };
 
+// Canvas and layout: `format` / `canvas` pick the size; with `reflow` the scene (authored for 1200x673) is recomposed
+// for it (formats.mjs). A reflow draws once to measure the object cluster, then again with its final place known.
 export async function compose(spec) {
+  const canvas = resolveCanvas(spec);
+  let lay = planLayout(spec, canvas);
+  if (lay) { await composeOnce(lay.spec, canvas, lay); lay = planLayout(spec, canvas, lay.xf); }
+  return composeOnce(lay ? lay.spec : spec, canvas, lay);
+}
+
+async function composeOnce(spec, canvas, lay) {
   const seed = spec.seed ?? 1;
   const r = rng(seed);
   const soft = spec.finish === 'soft'; // soft finish: clean edges and film grain instead of crayon and riso plates
@@ -37,7 +48,7 @@ export async function compose(spec) {
   const out = [];
   const used = []; // bounding boxes for the critic
   // dark areas (blue/ink panels, dark background): line-only drawings inside them switch to paper so they stay visible
-  const darkAreas = ['blue', 'ink', 'dark'].includes(spec.background) ? [[0, 0, W, H]] : [];
+  const darkAreas = ['blue', 'ink', 'dark'].includes(spec.background) ? [[0, 0, lay ? 1e5 : canvas.w, lay ? 1e5 : canvas.h]] : [];
   const inDark = (x, y) => darkAreas.some(([ax, ay, aw, ah]) => x >= ax && x <= ax + aw && y >= ay && y <= ay + ah);
   let cur = null; // the element being drawn: its crop flag and name travel with its box to the critic
   const note = (type, x, y, w, h) => used.push({ type, x, y, w, h, crop: !!cur?.crop, name: cur?.name || null });
@@ -47,6 +58,7 @@ export async function compose(spec) {
   for (const e of (spec.elements || []).flatMap(expandIso).map(expandProp)) {
     const t = e.type;
     cur = e;
+    const m0 = lay?.start(out, used);
     if ((t === 'icon' || t === 'ascii') && !iconsAvailable()) {
       throw new Error(`"${t}" element "${e.name}" needs Tabler icons: npm install @tabler/icons (or set LEVNI_ICONS). If you meant a prop, check its name with: levni list`);
     }
@@ -60,7 +72,8 @@ export async function compose(spec) {
       Object.assign(e, { size: s1, x: e.x - (cx - 50) * k1, y: e.y - (cy - 50) * k1 });
     }
     if (t === 'panel') {
-      if (['blue', 'ink', 'dark'].includes(e.color ?? 'blue')) darkAreas.push([e.x, e.y, e.w, e.h]); else darkAreas.splice(0, darkAreas.length, ...darkAreas.filter(([ax, ay, aw, ah]) => !(e.x <= ax && e.y <= ay && e.x + e.w >= ax + aw && e.y + e.h >= ay + ah)));
+      const [px, py, pw, ph] = e._orig || [e.x, e.y, e.w, e.h]; // a reflowed ground keeps its authored box for dark-area checks
+      if (['blue', 'ink', 'dark'].includes(e.color ?? 'blue')) darkAreas.push([px, py, pw, ph]); else darkAreas.splice(0, darkAreas.length, ...darkAreas.filter(([ax, ay, aw, ah]) => !(px <= ax && py <= ay && px + pw >= ax + aw && py + ph >= ay + ah)));
       const pts = box(e.x, e.y, e.x + e.w, e.y + e.h, 40);
       const g = e.rot ? `<g transform="rotate(${e.rot} ${e.x + e.w / 2} ${e.y + e.h / 2})">` : '<g>';
       out.push(g + pen.shape(pts, { fill: c(e.color, P.blue), stroke: e.outline ? c(e.outline) : null, w: e.weight ?? 8, offset: 0 }) + '</g>');
@@ -106,9 +119,9 @@ export async function compose(spec) {
       for (let y = e.y; y < e.y + e.h; y += e.gap ?? 26) out.push(wave(pen, e.x + r.range(-10, 30), e.x + e.w - r.range(0, 40), y + r.jitter(3), e.amp ?? 5, e.len ?? 64, c(e.color, P.blue), e.weight ?? 5));
       note(t, e.x, e.y, e.w, e.h);
     } else if (t === 'hills') {
-      const pts = [[e.x ?? 0, H]];
-      for (let x = e.x ?? 0; x <= (e.x ?? 0) + (e.w ?? W); x += e.step ?? 80) pts.push([x, e.base - e.height * (0.4 + 0.6 * Math.abs(Math.sin(x / (e.period ?? 170) + seed + e.base)))]);
-      pts.push([(e.x ?? 0) + (e.w ?? W), H]);
+      const pts = [[e.x ?? 0, canvas.h]];
+      for (let x = e.x ?? 0; x <= (e.x ?? 0) + (e.w ?? canvas.w); x += e.step ?? 80) pts.push([x, e.base - e.height * (0.4 + 0.6 * Math.abs(Math.sin(x / (e.period ?? 170) + seed + e.base)))]);
+      pts.push([(e.x ?? 0) + (e.w ?? canvas.w), canvas.h]);
       out.push(pen.shape(pts, { fill: c(e.color, P.green), stroke: e.outline ? c(e.outline) : null, w: 7, offset: 0, amp: 4 }));
     } else if (t === 'arrow') {
       out.push(arrow(pen, r, e.from, e.to, c(e.color, P.ink), e.bend ?? 40));
@@ -231,16 +244,20 @@ export async function compose(spec) {
       // label colour follows the ground unless set: paper on dark panels, ink elsewhere
       out.push(`<text x="${e.x}" y="${e.y}" ${MONO} font-size="${e.size ?? 16}" fill="${e.color ? c(e.color) : inDark(e.x, e.y) ? P.paper : P.ink}" text-anchor="${e.anchor ?? 'start'}" letter-spacing="1">${esc(e.upper === false ? e.text : String(e.text).toLocaleUpperCase(spec.locale || 'en'))}</text>`);
     }
+    lay?.end(e, m0, out, used);
   }
   // spec.clip = [x, y, w, h]: everything stays inside the panel, like a printed card
-  let body = out.join('\n');
+  let body = lay ? lay.finish(out, used) : out.join('\n');
   if (spec.clip) {
     const [x, y, w, h] = spec.clip;
     body = `<clipPath id="card"><path d="${pen.d(box(x, y, x + w, y + h, 40), { amp: 0, closed: true })}"/></clipPath><g clip-path="url(#card)">${body}</g>`;
   }
   // boil: the crayon filter's own seed; the animator steps it a few times a second for a hand-drawn shimmer
   // spec.style picks a style pack (styles.mjs): the same drawing printed with other inks
-  return { svg: applyStyle(frame(body, { seed: spec.boil ?? seed, background: c(spec.background, P.paper), finish: soft ? 'soft' : 'crayon', grain: spec.grain }), spec.style), used };
+  let svg = frame(body, { seed: spec.boil ?? seed, background: c(spec.background, P.paper), finish: soft ? 'soft' : 'crayon', grain: spec.grain, w: canvas.w, h: canvas.h });
+  // the title layer sits above everything, outside the crayon filter (title.mjs)
+  if (spec.title) svg = svg.replace(/<\/svg>\s*$/, `${layoutTitle(spec.title, canvas, safeInsets(canvas)).draw(c, c(spec.background, P.paper))}\n</svg>`);
+  return { svg: applyStyle(svg, spec.style), used, canvas, xf: lay?.xf };
 }
 
 // dash: [on, off] in 0..100 box units; cuts each polyline into short hand-inked strokes (marking lines, seams, paths)
