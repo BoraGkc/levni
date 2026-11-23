@@ -6,6 +6,7 @@ import { SOFT_ASSETS } from './ribbon.mjs';
 import { SOFT3D_ASSETS } from './soft3d.mjs';
 import { CHART_ASSETS } from './charts.mjs';
 import { PERSON_ASSETS } from './person.mjs';
+import { ENGRAVE_ASSETS } from './engrave.mjs';
 
 const f = (n) => Math.round(n * 10) / 10;
 
@@ -346,3 +347,6 @@ Object.assign(ASSETS, SOFT3D_ASSETS);
 Object.assign(ASSETS, CHART_ASSETS);
 // Faceless pictogram people (person, people): see person.mjs
 Object.assign(ASSETS, PERSON_ASSETS);
+
+// Line-art landscapes (terrain, ridgelines, engrave): see engrave.mjs
+Object.assign(ASSETS, ENGRAVE_ASSETS);

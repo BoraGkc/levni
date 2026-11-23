@@ -74,6 +74,9 @@ House rule: at most **two main inks plus paper** per scene; a third colour only 
 | `hills` | `base`, `height`, `color`, `x`?, `w`?, `step`?, `period`? | hills, mountains |
 | `skyline` | `x0`, `x1`, `base`, `minH`, `maxH`, `colors`? | procedural buildings (40–160 heights read calmer) |
 | `halftone` | `x`, `y`, `w`, `h`, `color`, `mode` (`radial`/`linear`), `gap`?, `level`? | riso halftone dots |
+| `terrain` | `x`?, `y`?, `w`?, `h`? (0,0,1200,673), `horizon`? (0.4), `rows`? (26, max 80), `cols`? (44, max 120), `height`? (0.3 of `h`), `skyline`? (0.45: how far the far rows rise into a ridge against the sky), `freq`?, `valley`?, `converge`?, `spread`?, `color`, `ground` (the background colour, hides lines behind hills), `flow`? (0, max 12: glowing streams that follow the valleys), `flowColor`? (mustard), `glow`? (horizon colour), `glowHeight`?, `glowLevel`?, `fog`? (far-line opacity), `weight`?, `seed`? | wireframe perspective terrain with a silhouette ridge and depth fade, hidden lines removed; synthwave / tech hero |
+| `ridgelines` | `x`, `y`, `w`, `h`, `lines`? (34, max 120), `points`? (110, max 400), `height`? (0.42), `peaks`? (`center`/`noise`), `center`?, `spreadX`?, `drift`?, `fade`? (false = no depth fade), `color`, `ground`, `weight`? (2), `seed`? | stacked profile lines, each hides the ones behind (Joy Division) |
+| `engrave` | `mode` (`landscape` default, `globe`, `radial`, `noise`), `x`, `y`, `w`, `h` (`globe`: `x`, `y` centre, `r`), `color` (ink), `ground` (paper colour), `gap`? (6; min 3), `weight`? (0.78: line thickness as a share of `gap`), `seed`?; landscape: `sun` {`x`,`y`,`r`}, `layers`? (3, max 5), `relief`?, `angles`?, `bend`?, `ripple`?, `rays`? (28, max 120), `cross`?, `frame`? (true: hairline plate frame), `outline`?; globe: `tilt`?, `lightAngle`?, `craters`? (9, max 40; lit rim, shadowed bowl); radial/noise: `cx`, `cy`, `radius`, `scale`, `angle`, `bend`, `falloff` | pen-hatch engraving: lines whose thickness follows a tone field (etched mountains and sun, a latitude-hatched moon) |
 | `flowfield` | `x`, `y`, `w`, `h`, `colors`?, `spacing`?, `length`?, `scale`?, `turn`?, `weight`? | noise flow lines (wind, water, data) |
 | `hatch` | `x, y, w, h` or `x, y, r` or `points`; `color`, `angle`?, `gap`?, `cross`?, `outline`? | hand hatching instead of a flat fill |
 | `confetti` | `x`, `y`, `w`, `h`, `kind` (`confetti`/`rain`/`stars`), `spacing`?, `colors`? | Poisson-spread confetti, rain, stars |
@@ -272,3 +275,25 @@ Examples: [`slots-tv`](../examples/slots-tv.json), [`slots-lens`](../examples/sl
 - On a blue panel, `ink` lines and an `overprint` read almost black: use `paper` for lines and `coral`/`mustard` for the second ink.
 - For a road in perspective use a thick `line` (weight 60–80), not a `shape`.
 - To put the sun behind buildings, write the `disc` before the `skyline`.
+
+### Line-art landscape recipes
+
+Terrain hero on dark (glowing streams, sunset glow behind the far ridge):
+
+```json
+{ "background": "dark", "elements": [
+  { "type": "terrain", "horizon": 0.42, "height": 0.24, "freq": 1.6, "color": "tone", "ground": "dark", "flow": 5, "flowColor": "mustard", "glow": "coral", "seed": 2 },
+  { "type": "label", "text": "Ortak Alan / Atölye", "x": 64, "y": 70, "color": "paper" }
+] }
+```
+
+Etched plate and moon (use `color: "ink"`, `ground: "paper"` on a paper background):
+
+```json
+{ "background": "paper", "elements": [
+  { "type": "engrave", "x": 70, "y": 70, "w": 1060, "h": 533, "color": "ink", "ground": "paper", "sun": { "x": 760, "y": 200, "r": 62 } },
+  { "type": "engrave", "mode": "globe", "x": 600, "y": 336, "r": 250, "craters": 9, "color": "ink", "ground": "paper", "seed": 3 }
+] }
+```
+
+Ridgelines on dark: `{ "type": "ridgelines", "x": 60, "y": 150, "w": 1080, "h": 440, "lines": 34, "color": "paper", "ground": "dark" }`. Examples: `examples/engrave-*.json`.

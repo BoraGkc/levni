@@ -1,0 +1,5 @@
+{ "seed": 3, "background": "paper", "elements": [
+  { "type": "engrave", "mode": "landscape", "x": 70, "y": 70, "w": 1060, "h": 533, "gap": 6, "color": "ink", "ground": "paper", "sun": { "x": 760, "y": 200, "r": 62 }, "seed": 1 },
+  { "type": "label", "text": "Plate 04 / Summit and sun", "x": 70, "y": 50, "color": "ink" },
+  { "type": "label", "text": "Etched in lines", "x": 1130, "y": 640, "anchor": "end", "color": "ink" }
+] }
