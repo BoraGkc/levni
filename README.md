@@ -56,6 +56,10 @@ Requires Node 20+. The only dependency is [sharp](https://sharp.pixelplumbing.co
 
 Your own prop folders: set `LEVNI_PROPS=/path/to/props` (several, separated by `:`), or call `addPropDir()`.
 
+## Ghost adapter
+
+Draw covers and inline images for imageless Ghost drafts: `levni ghost drafts` finds them, a plan file lists a cover scene plus inline scenes after named `h2` headings, `levni ghost attach plan.json` prints the planned edits and `--apply` uploads and places them. Drafts only, never two images in one section, never a newsletter. Needs `GHOST_ADMIN_API_URL` and `GHOST_ADMIN_API_KEY` in the environment. Details and the plan format: [`docs/ghost.md`](docs/ghost.md).
+
 ## Scene format
 
 ```json

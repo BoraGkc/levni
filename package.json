@@ -28,6 +28,7 @@
   "files": [
     "src/",
     "bin/",
+    "adapters/",
     "library/",
     "docs/scene.md",
     "docs/scene.schema.json",
@@ -39,7 +40,8 @@
     "node": ">=20"
   },
   "scripts": {
-    "test": "node test/smoke.mjs",
+    "test": "node test/smoke.mjs && node test/ghost.test.mjs",
+    "test:ghost": "node test/ghost.test.mjs",
     "examples": "node examples/render-all.mjs"
   },
   "dependencies": {

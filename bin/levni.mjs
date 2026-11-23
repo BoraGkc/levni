@@ -3,6 +3,7 @@
 //   levni render <scene.json> <out.png|out.webp|out.svg> [--preview]
 //   levni sheet <out.png> [prop ...] [--recolor coral=blue,mustard=tone]
 //   levni list [query]
+//   levni ghost drafts|attach ...   (Ghost adapter, see docs/ghost.md)
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import sharp from 'sharp';
@@ -28,6 +29,11 @@ const USAGE = `levni: hand-inked illustrations from JSON scenes
   levni check [prop ...]
       Measure props without looking at them (for agents that cannot see images): how much of the
       box each variant fills, its centre, colours, and what to fix. All props when none named.
+
+  levni ghost drafts [--dir <folder>] [--apply]
+  levni ghost attach <plan.json> [--apply]
+      Ghost adapter: pull imageless drafts, attach a cover and inline images (dry run unless --apply).
+      Needs GHOST_ADMIN_API_URL and GHOST_ADMIN_API_KEY in the environment. See docs/ghost.md.
 
 Scene format: docs/scene.md`;
 
@@ -111,6 +117,9 @@ async function main() {
       console.log(`look at: ${opt('sheet')} (${n} variants)`);
     }
     if (skipped) process.exitCode = 1;
+  } else if (cmd === 'ghost') {
+    const { ghostCli } = await import('../adapters/ghost/index.mjs');
+    process.exitCode = await ghostCli(rest);
   } else {
     console.log(USAGE);
     if (cmd && cmd !== 'help' && cmd !== '--help') process.exitCode = 1;
