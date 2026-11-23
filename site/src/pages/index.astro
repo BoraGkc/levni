@@ -16,22 +16,26 @@ const rowA = ['cat', 'rocket', 'bicycle', 'coffee-cup', 'person-laptop', 'piggy-
 const rowB = ['battery', 'globe', 'stethoscope', 'house', 'two-people', 'pie-chart', 'film-reel', 'tulip', 'airplane', 'laptop', 'rainbow', 'scales', 'bell', 'potted-plant', 'dna', 'megaphone', 'tea-glass', 'location-pin'];
 const shelfCount = Object.keys(CATEGORIES).length;
 
-// The hero showcase: one strong image per look, each linking to its gallery tab (images from scripts/render-gallery.mjs)
-const look = (group: string, id: string, label: string, note: string) => {
+// The hero reel: real outputs of every look, each card links to its gallery tab (images from scripts/render-gallery.mjs)
+const item = (group: string, id: string, label: string) => {
   const it = (showcase.items as { group: string; id: string; alt: string }[]).find((i) => i.group === group && i.id === id);
-  return { group, label, note, big: `/g/${group}/${id}.webp`, small: `/g/${group}/${id}-s.webp`, alt: it?.alt ?? label };
+  return { group, label, src: `/g/${group}/${id}-s.webp`, alt: it?.alt ?? label };
 };
-const slides = [
-  look('covers', 'cover-riso', 'Riso cover', 'hand-inked, misregistered plates'),
-  look('soft3d', 'auto-01', 'Soft 3D cover', 'aqua, with a title and badge'),
-  look('icons', 'row', '3D icons', 'any Folio drawing, extruded'),
-  look('worlds', 'cafe-riso-2', 'Little world', 'one line: "preset": "cafe"'),
-  look('pixel', 'grid-riso', 'Pixel icons', `${folio.filter((p) => p.name.startsWith('pixel-')).length} in four weights`),
-  look('soft3d', 'auto-03', 'Soft 3D cover', 'mint night palette'),
-  look('charts', 'bars', 'Hand-inked data', 'bars, lines, pies from numbers'),
-  look('covers', 'garden-miniature', 'Miniature pack', 'Tulip Era colours'),
-  look('worlds', 'city-soft', 'Little world, soft', 'toy 3D, pastel palette'),
-  { group: 'formats', label: 'Every format', note: 'story, og, square, YouTube', big: '/g/formats/all.webp', small: '/g/formats/all-s.webp', alt: 'One scene recomposed as a tall story, an Open Graph card, a square post and a YouTube thumbnail, each with the headline “Launch week, in one picture”' },
+const reel = [
+  item('soft3d', 'auto-01', 'Soft 3D cover'),
+  item('worlds', 'cafe-riso-2', 'Little world'),
+  item('covers', 'cover-riso', 'Riso cover'),
+  item('icons', 'row', '3D icons'),
+  item('soft3d', 'auto-03', 'Soft 3D cover'),
+  item('charts', 'bars', 'Hand-inked data'),
+  item('worlds', 'city-soft', 'Little world, soft'),
+  item('pixel', 'grid-riso', 'Pixel icons'),
+  item('covers', 'garden-miniature', 'Miniature pack'),
+  item('soft3d', 'preset-mobius', 'Möbius ribbon'),
+  item('worlds', 'room-riso-2', 'Little world'),
+  item('charts', 'donut', 'Hand-inked data'),
+  item('covers', 'slots-tv', 'Slots'),
+  item('soft3d', 'auto-06', 'Soft 3D cover'),
 ];
 
 // The recolour demo: real per-variant SVGs from /props-svg, recoloured in the browser like a style pack
@@ -147,46 +151,26 @@ const jsonld = [
 const star = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z" fill="currentColor"/></svg>`;
 ---
 <Base title="Levni" description={SITE.description} jsonld={jsonld}>
-  <!-- 1. Hero: the promise and the picture -->
-  <section class="hero wrap">
-    <div class="hero-text">
-      <h1>An open library of <em>hand-inked</em> illustrations.</h1>
-      <p class="lede">
-        {SITE.props.toLocaleString('en')} drawings in one hand, and an engine that turns a short JSON scene into riso covers,
-        soft 3D covers and icons, little isometric worlds, pixel icons and hand-inked charts, in every social format.
-        Your agent writes the scene. Levni draws it.
-      </p>
+  <!-- 1. Hero: the promise, then a slow reel of real outputs -->
+  <section class="hero">
+    <div class="wrap hero-head">
+      <p class="pill"><span class="dot" aria-hidden="true"></span> Open source · MCP-ready · free</p>
+      <h1>Illustrations your <em>agent</em> can draw.</h1>
+      <p class="lede">{SITE.props.toLocaleString('en')} hand-inked drawings and an engine that turns a few lines of JSON into covers, 3D icons, little isometric worlds and charts. No image model, no API key.</p>
       <div class="ctas">
-        <a class="btn btn-primary" href="/library/">Browse {SITE.props.toLocaleString('en')} drawings</a>
-        <a class="btn" href="#agents">Add it to Claude</a>
+        <a class="btn btn-primary" href="/gallery/">See what it draws</a>
+        <a class="btn" href="/mcp/">Add it to Claude</a>
       </div>
-      <ul class="facts">
-        <li>No image model, no API key</li>
-        <li>MIT code, CC BY 4.0 drawings</li>
-        <li>Works with Claude, Codex, Cursor</li>
-      </ul>
+      <p class="facts">MIT code · CC BY 4.0 drawings · Claude, Codex, Cursor · <a href="/library/">Browse {SITE.props.toLocaleString('en')} drawings</a></p>
     </div>
-    <div class="show" id="show" aria-roledescription="carousel" aria-label="What Levni draws">
-      <div class="show-stage">
-        {slides.map((sl, i) => (
-          <figure class="slide" data-i={i} aria-roledescription="slide" aria-label={`${i + 1} of ${slides.length}: ${sl.label}`} data-active={i === 0 ? '' : undefined}>
-            <div class="ph">{i === 0 ? (
-              <img src={sl.big} srcset={`${sl.small} 640w, ${sl.big} 1200w`} sizes="(max-width: 960px) calc(100vw - 40px), 620px" width="1200" height="673" alt={sl.alt} fetchpriority="high" />
-            ) : (
-              <img data-srcset={`${sl.small} 640w, ${sl.big} 1200w`} sizes="(max-width: 960px) calc(100vw - 40px), 620px" width="1200" height="673" alt={sl.alt} decoding="async" />
-            )}</div>
-            <figcaption><a href={`/gallery/#${sl.group}`}>{sl.label}</a> <span>{sl.note}</span></figcaption>
-          </figure>
+    <div class="reel" aria-label="What Levni draws">
+      <div class="reel-track">
+        {[...reel, ...reel].map((r, i) => (
+          <a class="card" href={`/gallery/#${r.group}`} tabindex={i >= reel.length ? -1 : undefined} aria-hidden={i >= reel.length ? 'true' : undefined}>
+            <img src={r.src} width="640" height="359" alt={i < reel.length ? r.alt : ''} loading={i < 4 ? 'eager' : 'lazy'} decoding="async" fetchpriority={i === 0 ? 'high' : undefined} />
+            <span class="card-label">{r.label}</span>
+          </a>
         ))}
-      </div>
-      <div class="show-ctrl">
-        <button type="button" class="show-play" aria-label="Pause the slideshow" data-playing="true"><span aria-hidden="true"></span></button>
-        <div class="dots">
-          {slides.map((sl, i) => (
-            <button type="button" aria-label={`Show ${sl.label}${sl.note ? `: ${sl.note}` : ''}`} aria-current={i === 0 ? 'true' : undefined} data-go={i}></button>
-          ))}
-        </div>
-        <a class="show-all" href="/gallery/">Open the gallery</a>
       </div>
     </div>
   </section>
@@ -342,46 +326,6 @@ const star = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
 </Base>
 
 <script>
-  // --- hero showcase: cross-fade every 3.5 s, pause on hover or focus, dots and a pause button; reduced motion gets a static grid (CSS)
-  {
-    const root = document.getElementById('show')!;
-    const slides = [...root.querySelectorAll<HTMLElement>('.slide')];
-    const dots = [...root.querySelectorAll<HTMLButtonElement>('.dots button')];
-    const play = root.querySelector<HTMLButtonElement>('.show-play')!;
-    const still = matchMedia('(prefers-reduced-motion: reduce)');
-    const load = (k: number) => {
-      const img = slides[k % slides.length].querySelector('img')!;
-      if (img.dataset.srcset) { img.srcset = img.dataset.srcset; delete img.dataset.srcset; }
-    };
-    let at = 0, timer = 0, hold = false, paused = false;
-    const go = (k: number) => {
-      at = (k + slides.length) % slides.length;
-      load(at); load(at + 1);
-      slides.forEach((s, i) => { s.toggleAttribute('data-active', i === at); s.inert = i !== at; });
-      dots.forEach((d, i) => (i === at ? d.setAttribute('aria-current', 'true') : d.removeAttribute('aria-current')));
-    };
-    const tick = () => {
-      clearTimeout(timer);
-      if (!hold && !paused && !still.matches && !document.hidden) timer = window.setTimeout(() => { go(at + 1); tick(); }, 3500);
-    };
-    root.classList.add('js');
-    if (still.matches) slides.forEach((_, i) => load(i));
-    else { go(0); tick(); }
-    dots.forEach((d) => d.addEventListener('click', () => { go(Number(d.dataset.go)); tick(); }));
-    play.addEventListener('click', () => {
-      paused = !paused;
-      play.dataset.playing = String(!paused);
-      play.setAttribute('aria-label', paused ? 'Play the slideshow' : 'Pause the slideshow');
-      tick();
-    });
-    root.addEventListener('pointerenter', () => { hold = true; tick(); });
-    root.addEventListener('pointerleave', () => { hold = false; tick(); });
-    root.addEventListener('focusin', () => { hold = true; tick(); });
-    root.addEventListener('focusout', (e) => { if (!root.contains(e.relatedTarget as Node)) { hold = false; tick(); } });
-    document.addEventListener('visibilitychange', tick);
-    still.addEventListener('change', () => { if (still.matches) slides.forEach((s, i) => { load(i); s.inert = false; }); else go(at); tick(); });
-  }
-
   // --- inks demo: same swap the engine does, on the per-variant SVGs
   const inks = await fetch('/inks.json').then((r) => r.json()).catch(() => null) as null | { house: Record<string, string>; packs: Record<string, Record<string, string>> };
   const presets: Record<string, Record<string, string>> = {
@@ -467,53 +411,33 @@ const star = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
   .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
   .text-link { font-weight: 600; }
 
-  /* hero */
-  .hero { margin-top: clamp(40px, 6vw, 72px); display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.25fr); gap: clamp(32px, 5vw, 64px); align-items: center; }
-  .hero h1 { font-size: clamp(2.8rem, 6.2vw, 5.4rem); line-height: 0.98; letter-spacing: -0.035em; text-wrap: balance; margin-bottom: 24px; }
+  /* hero: centred promise, then a slow reel of real outputs */
+  .hero { margin-top: clamp(44px, 7vw, 88px); }
+  .hero-head { text-align: center; max-width: 880px; }
+  .pill { display: inline-flex; align-items: center; gap: 8px; font-size: 0.88rem; font-weight: 500; color: var(--ink-soft); border: 1px solid var(--rule); background: var(--paper-2); border-radius: 999px; padding: 6px 14px; margin: 0 0 22px; }
+  .pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 3px rgba(30, 120, 63, 0.18); }
+  .hero h1 { font-size: clamp(2.6rem, 6.4vw, 5.2rem); line-height: 1.02; letter-spacing: -0.03em; text-wrap: balance; margin: 0 auto 20px; }
   .hero h1 em { font-style: italic; color: var(--accent); }
-  .lede { font-size: clamp(1.1rem, 1.5vw, 1.28rem); color: var(--ink-soft); margin: 0 0 30px; max-width: 46ch; }
-  .facts { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 0.95rem; color: var(--ink-soft); }
-  .facts li { display: inline-flex; align-items: center; gap: 8px; }
-  .facts li::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--coral); }
-  /* hero showcase: stacked slides in a fixed 1200:673 frame, cross-fading; no JS shows the first slide */
-  .show { min-width: 0; }
-  .show-stage { position: relative; aspect-ratio: 1200 / 673; border: 2px solid var(--ink); box-shadow: 10px 10px 0 var(--coral); background: var(--paper-2); }
-  .slide { position: absolute; inset: 0; margin: 0; opacity: 0; visibility: hidden; transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.9s; }
-  .ph { position: absolute; inset: 0; overflow: hidden; }
-  .slide img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.03); transition: transform 4.4s cubic-bezier(0.16, 1, 0.3, 1); }
-  .slide[data-active] { opacity: 1; visibility: visible; transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1); z-index: 1; }
-  .slide[data-active] img { transform: scale(1); }
-  /* the caption sits under the frame, so it never covers a title in the picture */
-  .slide figcaption {
-    position: absolute; left: 0; right: 0; top: calc(100% + 18px); display: flex; align-items: baseline; gap: 10px;
-    font-size: 0.95rem; line-height: 1.4; white-space: nowrap;
-  }
-  .slide figcaption a { font-weight: 600; color: var(--ink); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 4px; }
-  .slide figcaption a::after { content: ' →'; color: var(--accent); }
-  .slide figcaption a:hover { color: var(--accent-text); text-decoration-color: currentColor; }
-  .slide figcaption span { font-family: var(--mono); font-size: 0.8rem; color: var(--ink-soft); overflow: hidden; text-overflow: ellipsis; min-width: 0; }
-  .show-ctrl { display: flex; align-items: center; gap: 10px; margin-top: 52px; min-height: 40px; }
-  .show:not(.js) .show-play, .show:not(.js) .dots { visibility: hidden; }
-  .dots { display: flex; flex-wrap: wrap; gap: 0; flex: 1; }
-  .dots button { width: 26px; height: 32px; padding: 0; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
-  .dots button::before { content: ''; width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid var(--ink); background: transparent; transition: background-color 0.2s, width 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
-  .dots button[aria-current]::before { width: 20px; border-radius: 6px; background: var(--ink); }
-  .dots button:hover::before { background: var(--rule); }
-  .dots button[aria-current]:hover::before { background: var(--ink); }
-  .show-play { width: 36px; height: 36px; flex: none; border: 1.5px solid var(--ink); border-radius: 50%; background: var(--paper-2); cursor: pointer; display: grid; place-items: center; padding: 0; }
-  .show-play span { width: 10px; height: 12px; border-inline: 3px solid var(--ink); }
-  .show-play[data-playing='false'] span { width: 0; height: 0; border: 0; border-left: 11px solid var(--ink); border-block: 7px solid transparent; margin-left: 3px; }
-  .show-all { font-weight: 600; font-size: 0.95rem; white-space: nowrap; }
+  .hero .lede { font-size: clamp(1.08rem, 1.6vw, 1.25rem); color: var(--ink-soft); max-width: 640px; margin: 0 auto 28px; text-wrap: pretty; }
+  .ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .hero .facts { margin: 22px auto 0; font-size: 0.92rem; color: var(--ink-soft); }
+  .hero .facts a { font-weight: 600; }
+  .reel { margin-top: clamp(40px, 6vw, 64px); overflow: hidden; padding: 6px 0 22px;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+  .reel-track { display: flex; gap: 22px; width: max-content; animation: reel 70s linear infinite; }
+  .reel:hover .reel-track, .reel:focus-within .reel-track { animation-play-state: paused; }
+  @keyframes reel { to { transform: translateX(calc(-50% - 11px)); } }
+  .card { position: relative; display: block; width: clamp(260px, 30vw, 420px); flex: none; border: 2px solid var(--ink); background: var(--paper-2); box-shadow: 6px 6px 0 var(--accent); text-decoration: none; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+  .card:hover, .card:focus-visible { transform: translateY(-4px); box-shadow: 8px 10px 0 var(--accent); }
+  .card img { width: 100%; height: auto; aspect-ratio: 640 / 359; object-fit: cover; }
+  .card-label { position: absolute; left: 10px; bottom: 10px; font-size: 0.8rem; font-weight: 600; color: var(--ink); background: rgba(251, 250, 246, 0.94); border: 1px solid var(--ink); border-radius: 999px; padding: 3px 10px; }
+  @media (max-width: 400px) { .pill { font-size: 0.8rem; padding: 5px 11px; } }
   @media (prefers-reduced-motion: reduce) {
-    /* no movement: every look at once, as a grid */
-    .show-stage { aspect-ratio: auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; padding: 10px; overflow: visible; }
-    .slide { position: relative; inset: auto; opacity: 1; visibility: visible; transition: none; }
-    .ph { position: relative; inset: auto; aspect-ratio: 1200 / 673; border: 1.5px solid var(--ink); }
-    .slide img { transform: none; transition: none; }
-    .slide figcaption { position: static; padding: 4px 0 0; font-size: 0.82rem; flex-wrap: wrap; gap: 0 6px; white-space: normal; }
-    .show-ctrl { margin-top: 18px; }
-    .slide figcaption span { white-space: normal; }
-    .show-play, .dots { display: none; }
+    .reel { overflow-x: auto; -webkit-mask-image: none; mask-image: none; scroll-snap-type: x mandatory; }
+    .reel-track { animation: none; padding: 0 20px; }
+    .card { scroll-snap-align: start; }
+    .card[aria-hidden='true'] { display: none; }
   }
 
   /* marquee: the authored motion moment */
@@ -617,18 +541,12 @@ const star = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
   .faq details p { margin: 10px 0 0; color: var(--ink-soft); }
 
   @media (max-width: 960px) {
-    .hero, .inks, .how-grid, .agents, .close { grid-template-columns: minmax(0, 1fr); }
-    .show { order: -1; }
+    .inks, .how-grid, .agents, .close { grid-template-columns: minmax(0, 1fr); }
     .cards { grid-template-columns: minmax(0, 1fr); }
     .faq-cols { grid-template-columns: minmax(0, 1fr); }
     .mosaic { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
   @media (max-width: 520px) {
-    .show-stage { box-shadow: 6px 6px 0 var(--coral); }
-    .slide figcaption { font-size: 0.9rem; top: calc(100% + 14px); }
-    .dots button { width: 20px; }
-    .show-all { display: none; }
-    .show-ctrl { gap: 8px; }
     .track a { width: 96px; }
     .how-code pre, .critic { font-size: 0.74rem; }
     .close-art { display: none; }
