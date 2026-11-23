@@ -254,15 +254,20 @@ async function composeOnce(spec, canvas, lay) {
   }
   // spec.clip = [x, y, w, h]: everything stays inside the panel, like a printed card
   let body = lay ? lay.finish(out, used) : out.join('\n');
+  // text that must stay exact (glyphfill grids) is marked <!--crisp-->…<!--/crisp--> and drawn above the crayon filter
+  let crisp = '';
+  if (!soft && !lay) body = body.replace(/<!--crisp-->[\s\S]*?<!--\/crisp-->/g, (m) => { crisp += m; return ''; });
   if (spec.clip) {
     const [x, y, w, h] = spec.clip;
     body = `<clipPath id="card"><path d="${pen.d(box(x, y, x + w, y + h, 40), { amp: 0, closed: true })}"/></clipPath><g clip-path="url(#card)">${body}</g>`;
+    if (crisp) crisp = `<g clip-path="url(#card)">${crisp}</g>`;
   }
   // boil: the crayon filter's own seed; the animator steps it a few times a second for a hand-drawn shimmer
   // spec.style picks a style pack (styles.mjs): the same drawing printed with other inks
   // the critic measures crops against the card when there is one, else the canvas
   used.frame = spec.clip ? [...spec.clip] : [0, 0, canvas.w, canvas.h];
   let svg = frame(body, { seed: spec.boil ?? seed, background: c(spec.background, P.paper), finish: soft ? 'soft' : 'crayon', grain: spec.grain, w: canvas.w, h: canvas.h });
+  if (crisp) svg = svg.replace(/<\/svg>\s*$/, `${crisp}\n</svg>`);
   // the title layer sits above everything, outside the crayon filter (title.mjs)
   if (spec.title) svg = svg.replace(/<\/svg>\s*$/, `${layoutTitle(spec.title, canvas, safeInsets(canvas)).draw(c, c(spec.background, P.paper))}\n</svg>`);
   return { svg: applyStyle(svg, spec.style), used, canvas, xf: lay?.xf };
