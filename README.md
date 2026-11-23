@@ -75,6 +75,8 @@ Canvas 1200 × 673. 39 element types: library props and your own path drawings (
 - **Tabler Icons** are MIT (Paweł Kuna), an optional peer dependency, not shipped in this package.
 - Images you render are yours; the CC BY credit applies when they contain library props.
 
+Sensitive stories (loss, disaster, illness, courts, grief): a calm blue-palette prop pack and how to use it is in [`docs/sensitive.md`](docs/sensitive.md).
+
 ## Submit to the Folio
 
 Short version below; the full guide is [CONTRIBUTING.md](CONTRIBUTING.md).

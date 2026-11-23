@@ -1,0 +1,100 @@
+{
+  "name": "empty-bench",
+  "tags": [
+    "sensitive",
+    "bench",
+    "bank",
+    "empty",
+    "boş",
+    "park",
+    "absence",
+    "loss",
+    "kayıp",
+    "lonely",
+    "grief",
+    "yas"
+  ],
+  "variants": [
+    {
+      "note": "park bench, front view",
+      "paths": [
+        {
+          "d": "M16 30 L16 90",
+          "stroke": "ink",
+          "weight": 9
+        },
+        {
+          "d": "M84 30 L84 90",
+          "stroke": "ink",
+          "weight": 9
+        },
+        {
+          "d": "M22 66 L22 90",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M78 66 L78 90",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M10 22 L90 22 L90 34 L10 34 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 7
+        },
+        {
+          "d": "M10 38 L90 38 L90 50 L10 50 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 7
+        },
+        {
+          "d": "M8 58 L92 58 L92 68 L8 68 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 8
+        }
+      ]
+    },
+    {
+      "note": "side view with a long shadow",
+      "paths": [
+        {
+          "d": "M8 92 Q50 98 94 92 Q50 88 8 92Z",
+          "fill": "tone",
+          "stroke": "none"
+        },
+        {
+          "d": "M24 62 L22 90",
+          "stroke": "ink",
+          "weight": 9
+        },
+        {
+          "d": "M78 62 L80 90",
+          "stroke": "ink",
+          "weight": 9
+        },
+        {
+          "d": "M18 16 L26 16 L30 58 L22 58 Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M20 58 L84 58 L84 66 L20 66 Z",
+          "fill": "tone",
+          "stroke": "ink",
+          "weight": 8
+        },
+        {
+          "d": "M84 66 L84 52",
+          "stroke": "ink",
+          "weight": 8
+        }
+      ]
+    }
+  ],
+  "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "stone-single",
+  "tags": [
+    "sensitive",
+    "stone",
+    "taş",
+    "pebble",
+    "çakıl",
+    "memorial",
+    "anma",
+    "weight",
+    "ağırlık",
+    "loss",
+    "kayıp",
+    "grief",
+    "quiet"
+  ],
+  "variants": [
+    {
+      "note": "one smooth stone with a shadow",
+      "paths": [
+        {
+          "d": "M14 88 Q50 96 88 88 Q50 82 14 88Z",
+          "fill": "tone",
+          "stroke": "none"
+        },
+        {
+          "d": "M14 82 Q10 54 40 40 Q66 30 84 54 Q92 70 84 82 Q50 90 14 82Z",
+          "fill": "paper",
+          "stroke": "ink",
+          "weight": 9
+        },
+        {
+          "d": "M34 54 Q44 46 56 46",
+          "stroke": "ink",
+          "weight": 3
+        },
+        {
+          "d": "M60 74 Q70 72 76 66",
+          "stroke": "ink",
+          "weight": 3
+        }
+      ]
+    }
+  ],
+  "author": "Ortak Alan (AI-assisted, directed and checked)"
+}
