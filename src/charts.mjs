@@ -1,7 +1,7 @@
 // Data charts drawn with the hand pen: bars, linechart, pie / donut, isochart.
 // Numbers come only from the data; every value is scaled to pixels here and nothing else is invented.
 // Elements get the same pen, rng and colour resolver as the other assets (see assets.mjs).
-// On a dark panel pass "ink": "paper" so axes and labels stay visible.
+// On a dark panel (blue/ink/dark) compose switches ink to paper and the series to light colours unless set.
 import { box, ellipse } from './pen.mjs';
 import { peep } from './glyphs.mjs';
 import { findProp } from './props.mjs';

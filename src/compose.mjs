@@ -20,6 +20,8 @@ const c = (name, fallback = P.ink) => (name == null ? fallback : COLORS[name] ||
 const esc = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const MONO = `font-family="Menlo, 'Courier New', monospace" font-weight="700"`;
 
+const CHARTS = new Set(['bars', 'linechart', 'pie', 'donut', 'isochart']);
+
 const DENSITY = {
   flat: (lv) => () => lv,
   radial: (lv, e) => (x, y) => Math.max(0.05, lv - Math.hypot(x - (e.cx ?? e.x + e.w / 2), (y - (e.cy ?? e.y + e.h / 2)) * 1.3) / (e.radius ?? 480)),
@@ -237,7 +239,10 @@ async function composeOnce(spec, canvas, lay) {
     } else if (ASSETS[t]) {
       // procedural assets get their own RNG per element, so animating one does not reshuffle the others
       const er = rng(seed * 31 + (e.seed ?? used.length + 1));
-      const { svg, bbox } = ASSETS[t](e, { pen: makePen(er, { hand }), r: er, c, noise, t: time });
+      // charts on a dark panel: paper axes and labels, light series colours, unless the scene says otherwise
+      const onDark = CHARTS.has(t) && inDark(e.x ?? 0, e.y ?? 0);
+      const ee = onDark ? { ...e, ink: e.ink ?? 'paper', colors: e.colors ?? ['tone', 'mustard', 'coral', 'paper'] } : e;
+      const { svg, bbox } = ASSETS[t](ee, { pen: makePen(er, { hand }), r: er, c, noise, t: time });
       out.push(e.rot ? `<g transform="rotate(${e.rot} ${e.x} ${e.y})">${svg}</g>` : svg);
       if (bbox) note(t, ...bbox);
     } else if (t === 'label') {
