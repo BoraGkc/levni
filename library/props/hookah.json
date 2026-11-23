@@ -1,0 +1,54 @@
+{
+ "name": "hookah",
+ "category": "home",
+ "tags": [
+  "nargile",
+  "hookah",
+  "water pipe",
+  "ottoman",
+  "tütün",
+  "smoke"
+ ],
+ "variants": [
+  {
+   "note": "water pipe with bowl and hose",
+   "paths": [
+    {
+     "d": "M46 60 L46 34 L54 34 L54 60 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M38 60 L62 60 C70 68 70 86 62 92 L38 92 C30 86 30 68 38 60 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M42 76 Q50 72 58 76 L58 86 Q50 90 42 86 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M38 34 L62 34",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M42 34 Q50 24 58 34 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M54 58 C72 60 78 74 66 84 L62 90",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

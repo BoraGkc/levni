@@ -1,0 +1,47 @@
+{
+ "name": "turkish-coffee-cup",
+ "category": "food",
+ "tags": [
+  "fincan",
+  "coffee cup",
+  "turkish coffee",
+  "kahve",
+  "ottoman",
+  "cup"
+ ],
+ "variants": [
+  {
+   "note": "small tulip cup on saucer",
+   "paths": [
+    {
+     "d": "M22 82 Q50 74 78 82 Q84 86 78 90 L22 90 Q16 86 22 82 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M32 40 L68 40 C66 54 62 66 56 70 C52 72 48 72 44 70 C38 66 34 54 32 40 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M36 44 L64 44",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M37 45 Q50 51 63 45 Q50 49 37 45 Z",
+     "fill": "dark",
+     "stroke": "none"
+    },
+    {
+     "d": "M68 48 C78 48 78 60 68 60",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

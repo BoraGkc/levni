@@ -1,0 +1,41 @@
+{
+ "name": "bath-kese",
+ "category": "home",
+ "tags": [
+  "kese",
+  "bath mitt",
+  "hamam",
+  "ottoman",
+  "scrub",
+  "cloth"
+ ],
+ "variants": [
+  {
+   "note": "scrub mitt with loop",
+   "paths": [
+    {
+     "d": "M30 40 C20 52 22 74 36 82 C50 90 64 86 70 72 C76 58 70 42 58 36 C50 32 38 34 30 40 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M30 40 L46 30 Q54 28 58 36",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M46 30 C44 20 58 20 56 30",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M42 54 h0.1 M52 62 h0.1 M60 52 h0.1 M48 72 h0.1",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

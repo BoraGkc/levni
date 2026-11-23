@@ -1,0 +1,53 @@
+{
+ "name": "divit",
+ "category": "books",
+ "tags": [
+  "divit",
+  "pen case",
+  "inkwell",
+  "calligraphy",
+  "hat",
+  "ottoman",
+  "hokka"
+ ],
+ "variants": [
+  {
+   "note": "long pen box with attached inkwell and reed pen",
+   "paths": [
+    {
+     "d": "M30 38 L92 38 L92 42 L30 42 Z",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M28 44 L86 44 Q90 44 90 48 L90 64 Q90 68 86 68 L28 68 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M28 56 L88 56",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M10 46 Q10 42 14 42 L28 42 L28 68 L14 68 Q10 68 10 64 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M14 44 Q19 41 24 44 Q19 47 14 44 Z",
+     "fill": "dark",
+     "stroke": "none"
+    },
+    {
+     "d": "M40 50 L56 50",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

@@ -1,0 +1,41 @@
+{
+ "name": "fig",
+ "category": "food",
+ "tags": [
+  "incir",
+  "fig",
+  "fruit",
+  "ottoman",
+  "miniature"
+ ],
+ "variants": [
+  {
+   "note": "fig cut open with seeds",
+   "paths": [
+    {
+     "d": "M50 22 C36 28 32 48 38 64 C44 80 58 88 66 82 C78 74 78 52 66 38 C60 30 55 24 50 22 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 30 C42 34 40 48 44 60 C48 70 54 74 58 72 C64 66 64 52 58 42 C55 35 52 32 50 30 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M48 42 h0.1 M54 48 h0.1 M50 56 h0.1 M56 60 h0.1 M46 52 h0.1",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 22 L50 14",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

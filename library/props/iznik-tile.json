@@ -1,0 +1,74 @@
+{
+ "name": "iznik-tile",
+ "category": "home",
+ "tags": [
+  "çini karo",
+  "cini",
+  "iznik tile",
+  "tile",
+  "ottoman",
+  "çini",
+  "karo"
+ ],
+ "variants": [
+  {
+   "note": "square iznik tile, corner blossoms and rosette",
+   "paths": [
+    {
+     "d": "M16 16 L84 16 L84 84 L16 84 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M18 18 Q30 18 30 30 Q18 30 18 18 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M82 18 Q70 18 70 30 Q82 30 82 18 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M18 82 Q30 82 30 70 Q18 70 18 82 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M82 82 Q70 82 70 70 Q82 70 82 82 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M20 20 L80 20 L80 80 L20 80 Z",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 32 Q44 42 50 48 Q56 42 50 32 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 68 Q44 58 50 52 Q56 58 50 68 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M42 50 A8 8 0 1 0 58 50 A8 8 0 1 0 42 50 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

@@ -1,0 +1,41 @@
+{
+ "name": "grape-bunch",
+ "category": "food",
+ "tags": [
+  "üzüm",
+  "grapes",
+  "fruit",
+  "ottoman",
+  "miniature"
+ ],
+ "variants": [
+  {
+   "note": "bunch with a leaf and tendril",
+   "paths": [
+    {
+     "d": "M50 30 L50 24",
+     "stroke": "green",
+     "weight": 5
+    },
+    {
+     "d": "M50 30 Q34 22 26 28 Q36 38 50 36 Q64 38 74 28 Q66 22 50 30 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 30 C58 22 66 24 64 32 C62 38 56 36 58 30",
+     "stroke": "green",
+     "weight": 4
+    },
+    {
+     "d": "M38 42 A6 6 0 1 0 50 42 A6 6 0 1 0 38 42 Z M50 42 A6 6 0 1 0 62 42 A6 6 0 1 0 50 42 Z M34 54 A6 6 0 1 0 46 54 A6 6 0 1 0 34 54 Z M44 54 A6 6 0 1 0 56 54 A6 6 0 1 0 44 54 Z M54 54 A6 6 0 1 0 66 54 A6 6 0 1 0 54 54 Z M38 66 A6 6 0 1 0 50 66 A6 6 0 1 0 38 66 Z M50 66 A6 6 0 1 0 62 66 A6 6 0 1 0 50 66 Z M44 76 A6 6 0 1 0 56 76 A6 6 0 1 0 44 76 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

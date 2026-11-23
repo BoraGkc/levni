@@ -1,0 +1,43 @@
+{
+ "name": "divan-seat",
+ "category": "home",
+ "tags": [
+  "divan",
+  "divan seat",
+  "ottoman",
+  "mobilya",
+  "bench",
+  "couch"
+ ],
+ "variants": [
+  {
+   "note": "low divan with bolster",
+   "paths": [
+    {
+     "d": "M16 64 L84 64 L84 82 L16 82 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M14 56 L86 56 L86 66 L14 66 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M60 56 A8 10 0 1 0 76 56 A8 10 0 1 0 60 56 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M22 82 L22 90 M40 82 L40 90 M70 82 L70 90",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

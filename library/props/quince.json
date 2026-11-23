@@ -1,0 +1,46 @@
+{
+ "name": "quince",
+ "category": "food",
+ "tags": [
+  "ayva",
+  "quince",
+  "fruit",
+  "ottoman",
+  "miniature"
+ ],
+ "variants": [
+  {
+   "note": "lumpy quince with stem and leaf",
+   "paths": [
+    {
+     "d": "M50 40 C34 40 26 54 28 70 C30 84 40 90 50 90 C60 90 70 84 72 70 C74 54 66 40 50 40 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M44 40 Q50 34 56 40",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 38 L52 28",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M52 28 Q64 22 70 30 Q60 34 52 30 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 46 Q47 66 50 86",
+     "stroke": "tone-mustard",
+     "weight": 5
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

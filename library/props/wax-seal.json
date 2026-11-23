@@ -1,0 +1,65 @@
+{
+ "name": "wax-seal",
+ "category": "symbols",
+ "tags": [
+  "mühür",
+  "wax seal",
+  "seal",
+  "stamp",
+  "ottoman",
+  "muhr",
+  "mühür"
+ ],
+ "variants": [
+  {
+   "note": "seal stamp, knob and die",
+   "paths": [
+    {
+     "d": "M50 8 C40 8 34 16 40 24 C44 30 56 30 60 24 C66 16 60 8 50 8 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M44 28 L44 56 L56 56 L56 28 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M30 58 L70 58 L68 74 L32 74 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M32 70 L68 70",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  },
+  {
+   "note": "wax seal impression with rosette",
+   "paths": [
+    {
+     "d": "M50 24 C30 26 20 44 28 62 C34 76 50 86 66 76 C82 66 82 46 70 34 C64 28 58 24 50 24 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M40 52 A10 10 0 1 0 60 52 A10 10 0 1 0 40 52 Z",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 46 L50 50",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

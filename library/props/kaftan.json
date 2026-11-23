@@ -1,0 +1,40 @@
+{
+ "name": "kaftan",
+ "category": "home",
+ "tags": [
+  "kaftan",
+  "robe",
+  "ottoman",
+  "clothing",
+  "entari"
+ ],
+ "variants": [
+  {
+   "note": "long open kaftan, front view",
+   "paths": [
+    {
+     "d": "M36 22 L64 22 L70 40 L78 44 L82 62 L74 64 L74 88 L26 88 L26 64 L18 62 L22 44 L30 40 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 24 L50 88",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M38 24 L50 44 L62 24",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M28 62 L72 62",
+     "stroke": "mustard",
+     "weight": 6
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

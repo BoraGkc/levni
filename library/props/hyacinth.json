@@ -1,0 +1,42 @@
+{
+ "name": "hyacinth",
+ "category": "nature",
+ "tags": [
+  "sümbül",
+  "hyacinth",
+  "ottoman",
+  "flower",
+  "miniature"
+ ],
+ "variants": [
+  {
+   "note": "spike of bells on a stem",
+   "paths": [
+    {
+     "d": "M50 88 Q48 60 50 34",
+     "stroke": "green",
+     "weight": 7
+    },
+    {
+     "d": "M50 84 Q32 74 36 54 Q44 68 50 78 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 80 Q68 70 64 50 Q56 64 50 74 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M46 9 A4 5 0 1 0 54 9 A4 5 0 1 0 46 9 Z M38 15 A4 5 0 1 0 46 15 A4 5 0 1 0 38 15 Z M54 15 A4 5 0 1 0 62 15 A4 5 0 1 0 54 15 Z M42 21 A4 5 0 1 0 50 21 A4 5 0 1 0 42 21 Z M50 21 A4 5 0 1 0 58 21 A4 5 0 1 0 50 21 Z M46 27 A4 5 0 1 0 54 27 A4 5 0 1 0 46 27 Z M40 31 A4 5 0 1 0 48 31 A4 5 0 1 0 40 31 Z M52 31 A4 5 0 1 0 60 31 A4 5 0 1 0 52 31 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

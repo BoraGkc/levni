@@ -1,0 +1,45 @@
+{
+ "name": "fritillaria",
+ "category": "nature",
+ "tags": [
+  "ters lale",
+  "fritillaria",
+  "ottoman",
+  "flower"
+ ],
+ "variants": [
+  {
+   "note": "nodding bell flower on a bent stem",
+   "paths": [
+    {
+     "d": "M44 88 Q50 66 60 52",
+     "stroke": "green",
+     "weight": 7
+    },
+    {
+     "d": "M46 84 Q34 72 38 58 Q44 70 48 78 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M56 36 Q50 44 54 54 Q60 62 70 56 Q78 48 70 40 Q66 34 56 36 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M56 36 Q62 30 70 40",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M60 30 L56 24 M64 32 L64 24 M68 34 L72 26",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

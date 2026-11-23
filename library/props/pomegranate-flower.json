@@ -1,0 +1,59 @@
+{
+ "name": "pomegranate-flower",
+ "category": "nature",
+ "tags": [
+  "nar çiçeği",
+  "pomegranate flower",
+  "ottoman",
+  "flower"
+ ],
+ "variants": [
+  {
+   "note": "pointed crumpled blossom",
+   "paths": [
+    {
+     "d": "M50 54 Q44 40 48 26 Q54 40 50 54 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 54 Q36 44 30 34 Q42 42 50 54 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 54 Q64 44 70 34 Q58 42 50 54 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 54 Q38 56 28 62 Q40 60 50 54 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 54 Q62 56 72 62 Q60 60 50 54 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M44 54 A6 6 0 1 0 56 54 A6 6 0 1 0 44 54 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M46 60 L50 72 L54 60",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

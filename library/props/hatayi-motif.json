@@ -1,0 +1,59 @@
+{
+ "name": "hatayi-motif",
+ "category": "symbols",
+ "tags": [
+  "hatayi",
+  "hatayı",
+  "motif",
+  "palmette",
+  "lotus",
+  "ottoman",
+  "tezhip",
+  "çiçek"
+ ],
+ "variants": [
+  {
+   "note": "symmetric lotus palmette",
+   "paths": [
+    {
+     "d": "M50 84 C30 80 20 62 22 44 C24 30 36 18 50 12 C64 18 76 30 78 44 C80 62 70 80 50 84 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 78 L50 26",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 70 Q38 60 34 44",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 70 Q62 60 66 44",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 56 Q42 50 40 36",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 56 Q58 50 60 36",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 84 Q46 90 50 94 Q54 90 50 84 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

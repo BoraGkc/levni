@@ -1,0 +1,58 @@
+{
+ "name": "kohl-flask",
+ "category": "home",
+ "tags": [
+  "sürmedan",
+  "kohl",
+  "surme",
+  "ottoman",
+  "eyeliner",
+  "flask"
+ ],
+ "variants": [
+  {
+   "note": "kohl container with wand",
+   "paths": [
+    {
+     "d": "M44 44 L44 34 L56 34 L56 44 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M36 44 C30 56 32 74 44 78 L56 78 C68 74 70 56 64 44 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M42 34 L58 34",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M58 34 L74 30",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M74 30 h0.1",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M44 78 L42 86 L58 86 L56 78 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 56 h0.1",
+     "stroke": "blue",
+     "weight": 8
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

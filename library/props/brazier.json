@@ -1,0 +1,75 @@
+{
+ "name": "brazier",
+ "category": "home",
+ "tags": [
+  "mangal",
+  "brazier",
+  "coal",
+  "ottoman",
+  "ateş",
+  "köz",
+  "metal"
+ ],
+ "variants": [
+  {
+   "note": "shallow coal brazier on three legs",
+   "paths": [
+    {
+     "d": "M20 50 Q50 66 80 50 L76 64 Q50 78 24 64 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 50 Q50 66 80 50",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M38 50 A6 5 0 1 0 48 50 A6 5 0 1 0 38 50 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M52 52 A6 5 0 1 0 62 52 A6 5 0 1 0 52 52 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M45 46 A5 4 0 1 0 53 46 A5 4 0 1 0 45 46 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M34 72 L28 92",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M66 72 L72 92",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 78 L50 92",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M18 52 A4 4 0 1 0 22 52 A4 4 0 1 0 18 52 Z",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M78 52 A4 4 0 1 0 82 52 A4 4 0 1 0 78 52 Z",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

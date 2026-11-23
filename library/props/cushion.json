@@ -1,0 +1,47 @@
+{
+ "name": "cushion",
+ "category": "home",
+ "tags": [
+  "minder",
+  "cushion",
+  "pillow",
+  "ottoman",
+  "divan",
+  "textile"
+ ],
+ "variants": [
+  {
+   "note": "tufted square cushion with tassels",
+   "paths": [
+    {
+     "d": "M22 26 Q50 20 78 26 L78 74 Q50 80 22 74 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M22 26 L50 50 M78 26 L50 50 M22 74 L50 50 M78 74 L50 50",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M44 50 A6 6 0 1 0 56 50 A6 6 0 1 0 44 50 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M20 24 L14 18 M80 24 L86 18 M20 76 L14 82 M80 76 L86 82",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M14 18 h0.1 M86 18 h0.1 M14 82 h0.1 M86 82 h0.1",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

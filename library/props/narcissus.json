@@ -1,0 +1,60 @@
+{
+ "name": "narcissus",
+ "category": "nature",
+ "tags": [
+  "nergis",
+  "narcissus",
+  "ottoman",
+  "flower",
+  "miniature"
+ ],
+ "variants": [
+  {
+   "note": "white petals with a coral cup",
+   "paths": [
+    {
+     "d": "M50 88 Q54 66 48 46",
+     "stroke": "green",
+     "weight": 7
+    },
+    {
+     "d": "M52 84 Q66 66 60 46 Q54 62 52 74 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M48 42 Q42 30 48 18 Q54 30 48 42 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M48 42 Q34 40 26 42 Q36 48 48 44 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M48 42 Q62 40 70 42 Q60 48 48 44 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M48 42 Q44 54 48 58 Q52 54 48 42 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M42 42 A6 6 0 1 0 54 42 A6 6 0 1 0 42 42 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

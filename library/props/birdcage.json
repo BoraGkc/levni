@@ -1,0 +1,57 @@
+{
+ "name": "birdcage",
+ "category": "home",
+ "tags": [
+  "kafes",
+  "birdcage",
+  "cage",
+  "ottoman",
+  "kuş",
+  "ornate"
+ ],
+ "variants": [
+  {
+   "note": "dome-topped cage with ring hanger",
+   "paths": [
+    {
+     "d": "M44 8 A6 6 0 1 0 56 8 A6 6 0 1 0 44 8 Z",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M28 34 Q50 14 72 34 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M28 34 L28 82 Q28 90 36 90 L64 90 Q72 90 72 82 L72 34",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24 82 L76 82 L76 90 L24 90 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M38 34 L38 90 M50 34 L50 90 M62 34 L62 90",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M28 58 L72 58",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M38 74 L62 74",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

@@ -1,0 +1,59 @@
+{
+ "name": "pen-case",
+ "category": "books",
+ "tags": [
+  "kalemlik",
+  "pen holder",
+  "pencil cup",
+  "kalem",
+  "ottoman",
+  "office"
+ ],
+ "variants": [
+  {
+   "note": "cup holding two brushes",
+   "paths": [
+    {
+     "d": "M42 46 L34 20",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M34 20 Q31 14 37 14 Q41 17 34 20 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M56 46 L64 24",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M64 24 Q68 18 64 15 Q59 18 64 24 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M30 46 Q50 54 70 46 Q50 38 30 46 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M30 48 L70 48 L64 92 L36 92 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33 66 L67 66",
+     "stroke": "blue",
+     "weight": 6
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

@@ -1,0 +1,54 @@
+{
+ "name": "firman-scroll",
+ "category": "books",
+ "tags": [
+  "ferman",
+  "firman",
+  "scroll",
+  "edict",
+  "ottoman",
+  "belge"
+ ],
+ "variants": [
+  {
+   "note": "rolled edict with cord and seal",
+   "paths": [
+    {
+     "d": "M22 34 C14 34 14 66 22 66 L22 34 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M78 34 C86 34 86 66 78 66 L78 34 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M22 40 L78 40 L78 60 L22 60 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M30 46 L60 46 M30 54 L50 54",
+     "stroke": "mustard",
+     "weight": 4
+    },
+    {
+     "d": "M70 60 L70 72",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M64 78 A6 6 0 1 0 76 78 A6 6 0 1 0 64 78 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

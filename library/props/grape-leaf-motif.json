@@ -1,0 +1,39 @@
+{
+ "name": "grape-leaf-motif",
+ "category": "symbols",
+ "tags": [
+  "asma yaprağı",
+  "vine leaf",
+  "motif",
+  "ottoman"
+ ],
+ "variants": [
+  {
+   "note": "stylised vine leaf motif with veins",
+   "paths": [
+    {
+     "d": "M50 22 L66 30 L74 46 L66 62 L50 78 L34 62 L26 46 L34 30 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 30 L50 70",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 46 L38 38 M50 46 L62 38 M50 58 L40 52 M50 58 L60 52",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 78 L50 88",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

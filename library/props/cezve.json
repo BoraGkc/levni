@@ -1,0 +1,48 @@
+{
+ "name": "cezve",
+ "category": "food",
+ "tags": [
+  "cezve",
+  "coffee pot",
+  "turkish coffee",
+  "kahve",
+  "ottoman",
+  "copper"
+ ],
+ "variants": [
+  {
+   "note": "long-handled cezve",
+   "paths": [
+    {
+     "d": "M38 34 Q50 28 62 34 Q50 40 38 34 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M38 34 L62 34 L70 86 Q71 90 66 90 L34 90 Q29 90 30 86 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M62 34 L69 30 L64 42 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M38 36 C20 40 16 62 26 80",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33 70 Q50 64 67 70",
+     "stroke": "blue",
+     "weight": 5
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

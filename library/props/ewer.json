@@ -1,0 +1,65 @@
+{
+ "name": "ewer",
+ "category": "home",
+ "tags": [
+  "ibrik",
+  "ewer",
+  "pitcher",
+  "ottoman",
+  "miniature",
+  "metal",
+  "testi"
+ ],
+ "variants": [
+  {
+   "note": "ottoman ewer, spout left, S handle right",
+   "paths": [
+    {
+     "d": "M42 56 L42 32 Q50 28 58 32 L58 56 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M38 32 Q50 20 62 32 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 14 L50 20",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 54 C36 54 26 64 26 78 C26 90 37 92 50 92 C63 92 74 90 74 78 C74 64 64 54 50 54 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M34 62 Q24 58 18 46 Q26 46 31 52 Q35 58 40 60 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M72 62 C84 60 86 44 74 38",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M30 76 Q50 70 70 76",
+     "stroke": "blue",
+     "weight": 6
+    },
+    {
+     "d": "M44 84 L56 84",
+     "stroke": "blue",
+     "weight": 6
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

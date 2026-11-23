@@ -1,0 +1,42 @@
+{
+ "name": "ottoman-rose",
+ "category": "nature",
+ "tags": [
+  "gül",
+  "rose",
+  "ottoman",
+  "flower",
+  "miniature"
+ ],
+ "variants": [
+  {
+   "note": "layered rose with two leaves",
+   "paths": [
+    {
+     "d": "M24 66 Q14 72 16 82 Q24 76 26 70 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M70 70 Q80 76 80 86 Q72 80 70 74 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 78 C30 78 20 64 24 48 C28 34 42 26 54 30 C66 34 74 46 70 60 C68 68 62 74 56 76 C60 70 60 60 54 56 C48 52 40 56 40 64 C40 72 46 78 50 78 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M52 62 C46 62 44 56 48 52 C52 48 58 50 60 54",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

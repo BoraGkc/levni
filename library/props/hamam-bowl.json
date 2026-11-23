@@ -1,0 +1,42 @@
+{
+ "name": "hamam-bowl",
+ "category": "home",
+ "tags": [
+  "hamam tası",
+  "bath bowl",
+  "hamam",
+  "ottoman",
+  "bowl",
+  "tas"
+ ],
+ "variants": [
+  {
+   "note": "scalloped bath bowl with boss",
+   "paths": [
+    {
+     "d": "M20 44 Q50 70 80 44 L76 58 Q50 84 24 58 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 44 Q23 38 27 44 Q31 38 35 44 Q39 38 43 44 Q47 38 51 44 Q55 38 59 44 Q63 38 67 44 Q71 38 75 44 Q78 40 80 44",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M28 52 Q50 68 72 52",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M42 58 A8 5 0 1 0 58 58 A8 5 0 1 0 42 58 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

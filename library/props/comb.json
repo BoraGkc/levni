@@ -1,0 +1,30 @@
+{
+ "name": "comb",
+ "category": "home",
+ "tags": [
+  "tarak",
+  "comb",
+  "ottoman",
+  "hair",
+  "bakım"
+ ],
+ "variants": [
+  {
+   "note": "half-moon comb with teeth",
+   "paths": [
+    {
+     "d": "M20 40 Q50 26 80 40 L78 48 Q50 36 22 48 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M24 46 L24 74 M30 45 L30 74 M36 44 L36 74 M42 44 L42 74 M48 43 L48 74 M54 43 L54 74 M60 44 L60 74 M66 44 L66 74 M72 45 L72 74 M76 46 L76 74",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

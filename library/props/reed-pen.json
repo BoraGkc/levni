@@ -1,0 +1,42 @@
+{
+ "name": "reed-pen",
+ "category": "books",
+ "tags": [
+  "kamış kalem",
+  "reed pen",
+  "qalam",
+  "calligraphy",
+  "hat",
+  "ottoman"
+ ],
+ "variants": [
+  {
+   "note": "angled reed calligraphy pen",
+   "paths": [
+    {
+     "d": "M22 82 L68 24 L76 30 L30 88 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M22 82 L18 92 L30 88 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M24 80 L29 76",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M42 62 L50 68",
+     "stroke": "coral",
+     "weight": 6
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

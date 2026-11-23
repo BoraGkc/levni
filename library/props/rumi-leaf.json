@@ -1,0 +1,36 @@
+{
+ "name": "rumi-leaf",
+ "category": "symbols",
+ "tags": [
+  "rumi yaprak",
+  "rumi leaf",
+  "motif",
+  "ottoman",
+  "tezhip"
+ ],
+ "variants": [
+  {
+   "note": "curled rumi leaf pair",
+   "paths": [
+    {
+     "d": "M50 64 C30 70 16 56 20 36 C24 20 42 18 50 30 C40 30 32 38 34 48 C36 56 46 56 50 48 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 64 C70 70 84 56 80 36 C76 20 58 18 50 30 C60 30 68 38 66 48 C64 56 54 56 50 48 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 64 L50 88",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

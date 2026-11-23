@@ -1,0 +1,48 @@
+{
+ "name": "oud",
+ "category": "music",
+ "tags": [
+  "ud",
+  "oud",
+  "lute",
+  "music",
+  "ottoman",
+  "enstrüman"
+ ],
+ "variants": [
+  {
+   "note": "pear-bodied lute with pegbox",
+   "paths": [
+    {
+     "d": "M46 46 L44 24 L52 20 L58 42 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M44 24 L40 14 L54 12 L56 20 Z",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M46 46 C28 54 26 82 46 88 C66 94 78 74 70 58 C66 50 58 44 46 46 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M52 66 A6 6 0 1 0 64 66 A6 6 0 1 0 52 66 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M48 30 L56 78 M52 30 L60 78 M56 30 L64 78",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

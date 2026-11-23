@@ -1,0 +1,49 @@
+{
+ "name": "rosewater-flask",
+ "category": "home",
+ "tags": [
+  "gülsuyu",
+  "rosewater",
+  "flask",
+  "bottle",
+  "ottoman",
+  "parfum"
+ ],
+ "variants": [
+  {
+   "note": "stoppered rosewater bottle",
+   "paths": [
+    {
+     "d": "M44 46 L44 28 L56 28 L56 46 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M42 28 L42 20 Q50 14 58 20 L58 28 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M34 46 C24 56 24 76 38 82 L62 82 C76 76 76 56 66 46 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M38 50 Q50 56 62 50",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 58 L56 66 L50 74 L44 66 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

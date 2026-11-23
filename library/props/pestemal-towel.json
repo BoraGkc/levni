@@ -1,0 +1,46 @@
+{
+ "name": "pestemal-towel",
+ "category": "home",
+ "tags": [
+  "peştemal",
+  "towel",
+  "hamam",
+  "ottoman",
+  "textile",
+  "havlu"
+ ],
+ "variants": [
+  {
+   "note": "hanging towel with stripes and fringe",
+   "paths": [
+    {
+     "d": "M24 14 L76 14",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M28 20 L72 20 L72 72 L28 72 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M28 60 L72 60 M28 64 L72 64",
+     "stroke": "coral",
+     "weight": 5
+    },
+    {
+     "d": "M50 20 L50 60",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M30 72 L30 80 M38 72 L38 80 M46 72 L46 80 M54 72 L54 80 M62 72 L62 80 M70 72 L70 80",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

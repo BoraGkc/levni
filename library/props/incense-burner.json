@@ -1,0 +1,58 @@
+{
+ "name": "incense-burner",
+ "category": "home",
+ "tags": [
+  "buhurdan",
+  "incense burner",
+  "incense",
+  "ottoman",
+  "tütsü",
+  "smoke"
+ ],
+ "variants": [
+  {
+   "note": "lidded burner on a foot with smoke",
+   "paths": [
+    {
+     "d": "M30 50 Q50 60 70 50 L66 66 Q50 74 34 66 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M30 50 Q50 60 70 50",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M34 50 Q50 38 66 50 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 38 L50 34",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 30 C46 22 54 18 50 10",
+     "stroke": "blue",
+     "weight": 4
+    },
+    {
+     "d": "M57 28 C55 22 59 18 56 12",
+     "stroke": "blue",
+     "weight": 4
+    },
+    {
+     "d": "M42 74 L38 90 L62 90 L58 74 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

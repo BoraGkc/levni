@@ -1,0 +1,55 @@
+{
+ "name": "penc-motif",
+ "category": "symbols",
+ "tags": [
+  "penç",
+  "penc",
+  "motif",
+  "ottoman",
+  "tezhip"
+ ],
+ "variants": [
+  {
+   "note": "five-lobed penç flower",
+   "paths": [
+    {
+     "d": "M50 50 Q43 30 50 10 Q57 30 50 50 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 50 Q68 40 86 42 Q72 54 50 50 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 50 Q70 64 78 82 Q60 70 50 50 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 50 Q30 64 22 82 Q40 70 50 50 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 50 Q32 40 14 42 Q28 54 50 50 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M42 50 A8 8 0 1 0 58 50 A8 8 0 1 0 42 50 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

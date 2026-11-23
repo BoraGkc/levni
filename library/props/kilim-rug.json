@@ -1,0 +1,59 @@
+{
+ "name": "kilim-rug",
+ "category": "home",
+ "tags": [
+  "kilim",
+  "rug",
+  "carpet",
+  "halı",
+  "ottoman",
+  "textile"
+ ],
+ "variants": [
+  {
+   "note": "flat rug with diamond motif and fringe",
+   "paths": [
+    {
+     "d": "M20 26 L20 30 M28 26 L28 30 M36 26 L36 30 M44 26 L44 30 M52 26 L52 30 M60 26 L60 30 M68 26 L68 30 M76 26 L76 30",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M20 70 L20 74 M28 70 L28 74 M36 70 L36 74 M44 70 L44 74 M52 70 L52 74 M60 70 L60 74 M68 70 L68 74 M76 70 L76 74",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M16 30 L84 30 L84 70 L16 70 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M22 36 L78 36 L78 64 L22 64 Z",
+     "stroke": "paper",
+     "weight": 5
+    },
+    {
+     "d": "M50 40 L60 50 L50 60 L40 50 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M30 44 L34 50 L30 56 L26 50 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M70 44 L74 50 L70 56 L66 50 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

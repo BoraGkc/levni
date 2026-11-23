@@ -1,0 +1,37 @@
+{
+ "name": "rumi-motif",
+ "category": "symbols",
+ "tags": [
+  "rumi",
+  "motif",
+  "scrool",
+  "ottoman",
+  "tezhip",
+  "ornament",
+  "süsleme"
+ ],
+ "variants": [
+  {
+   "note": "curled scroll with leaf body",
+   "paths": [
+    {
+     "d": "M30 76 C18 64 18 44 32 30 C48 16 70 20 78 36 C68 34 58 38 52 46 C46 54 46 66 54 72 C46 80 38 82 30 76 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M72 36 C62 36 56 44 58 54 C60 64 72 66 76 58 C79 51 74 46 70 48",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M34 70 C40 62 44 52 42 42",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

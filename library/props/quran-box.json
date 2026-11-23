@@ -1,0 +1,52 @@
+{
+ "name": "quran-box",
+ "category": "books",
+ "tags": [
+  "Kur'an mahfazası",
+  "quran box",
+  "ottoman",
+  "case",
+  "mahfaza"
+ ],
+ "variants": [
+  {
+   "note": "book case with domed lid",
+   "paths": [
+    {
+     "d": "M20 48 L80 48 L80 80 L20 80 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20 48 Q50 24 80 48 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M20 48 L80 48",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M20 72 L80 72",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 54 L60 62 L50 70 L40 62 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M26 80 L26 88 M74 80 L74 88",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

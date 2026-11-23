@@ -1,0 +1,54 @@
+{
+ "name": "hamam-clog",
+ "category": "home",
+ "tags": [
+  "nalın",
+  "bath clog",
+  "hamam",
+  "ottoman",
+  "sandalet",
+  "wood"
+ ],
+ "variants": [
+  {
+   "note": "wooden bath clog with stilts",
+   "paths": [
+    {
+     "d": "M16 56 Q50 48 84 56 L84 60 L16 60 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M20 56 L80 56 L80 66 L20 66 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M28 66 L28 82 L40 82 L40 66 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M60 66 L60 82 L72 82 L72 66 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M32 56 Q50 40 68 56",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 42 h0.1",
+     "stroke": "coral",
+     "weight": 8
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

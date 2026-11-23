@@ -1,0 +1,35 @@
+{
+ "name": "saz-leaf-motif",
+ "category": "symbols",
+ "tags": [
+  "saz yaprağı",
+  "saz leaf",
+  "motif",
+  "ottoman",
+  "tezhip"
+ ],
+ "variants": [
+  {
+   "note": "long curved saz leaf motif",
+   "paths": [
+    {
+     "d": "M16 78 C16 44 46 16 86 14 C88 18 84 24 76 26 C52 34 34 48 30 72 C28 84 22 86 16 78 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M24 72 C40 46 58 32 80 24",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M44 64 L36 62 M54 50 L47 45 M66 38 L62 32",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

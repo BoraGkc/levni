@@ -1,0 +1,46 @@
+{
+ "name": "prayer-rug",
+ "category": "home",
+ "tags": [
+  "seccade",
+  "prayer rug",
+  "ottoman",
+  "textile",
+  "halı"
+ ],
+ "variants": [
+  {
+   "note": "prayer rug with mihrab arch",
+   "paths": [
+    {
+     "d": "M18 18 L82 18 L82 84 L18 84 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24 24 L76 24 L76 78 L24 78 Z",
+     "stroke": "paper",
+     "weight": 4
+    },
+    {
+     "d": "M34 78 L34 46 Q34 34 50 30 Q66 34 66 46 L66 78 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M40 78 L40 48 Q40 40 50 36 Q60 40 60 48 L60 78",
+     "stroke": "blue",
+     "weight": 4
+    },
+    {
+     "d": "M50 42 h0.1",
+     "stroke": "blue",
+     "weight": 7
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

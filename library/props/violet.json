@@ -1,0 +1,41 @@
+{
+ "name": "violet",
+ "category": "nature",
+ "tags": [
+  "menekşe",
+  "violet",
+  "ottoman",
+  "flower",
+  "miniature"
+ ],
+ "variants": [
+  {
+   "note": "five-lobed violet with a leaf",
+   "paths": [
+    {
+     "d": "M50 60 Q50 74 48 84",
+     "stroke": "green",
+     "weight": 6
+    },
+    {
+     "d": "M48 74 Q34 74 32 64 Q42 68 48 70 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 30 C42 30 38 36 40 42 C34 42 30 48 34 54 C38 60 46 58 50 54 C54 58 62 60 66 54 C70 48 66 42 60 42 C62 36 58 30 50 30 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 40 L50 50 M44 44 L50 50 M56 44 L50 50",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

@@ -1,0 +1,36 @@
+{
+ "name": "prayer-beads",
+ "category": "symbols",
+ "tags": [
+  "tesbih",
+  "prayer beads",
+  "ottoman",
+  "tasbih",
+  "beads"
+ ],
+ "variants": [
+  {
+   "note": "bead loop with imam bead and tassel",
+   "paths": [
+    {
+     "d": "M45 14 A5 5 0 1 0 55 14 A5 5 0 1 0 45 14 Z M61 20 A5 5 0 1 0 71 20 A5 5 0 1 0 61 20 Z M73 32 A5 5 0 1 0 83 32 A5 5 0 1 0 73 32 Z M77 48 A5 5 0 1 0 87 48 A5 5 0 1 0 77 48 Z M71 64 A5 5 0 1 0 81 64 A5 5 0 1 0 71 64 Z M57 76 A5 5 0 1 0 67 76 A5 5 0 1 0 57 76 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M47 80 Q50 76 53 80 L53 88 Q50 92 47 88 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 88 L50 92",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

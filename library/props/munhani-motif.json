@@ -1,0 +1,35 @@
+{
+ "name": "munhani-motif",
+ "category": "symbols",
+ "tags": [
+  "münhani",
+  "munhani",
+  "motif",
+  "ottoman",
+  "tezhip"
+ ],
+ "variants": [
+  {
+   "note": "curved double-arc munhani motif",
+   "paths": [
+    {
+     "d": "M24 76 Q24 26 74 14 Q44 38 44 76 Q32 72 24 76 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M36 68 Q40 40 68 24",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M44 76 C38 86 52 92 60 84",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

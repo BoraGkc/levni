@@ -1,0 +1,40 @@
+{
+ "name": "sash-belt",
+ "category": "home",
+ "tags": [
+  "kuşak",
+  "sash",
+  "belt",
+  "ottoman",
+  "clothing"
+ ],
+ "variants": [
+  {
+   "note": "wide folded sash with tassel",
+   "paths": [
+    {
+     "d": "M12 36 Q50 30 88 36 L88 48 Q50 54 12 48 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M12 40 Q50 34 88 40 M12 44 Q50 38 88 44",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M84 46 L90 56",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M86 58 L86 70 M90 58 L90 70",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

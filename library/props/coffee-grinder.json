@@ -1,0 +1,53 @@
+{
+ "name": "coffee-grinder",
+ "category": "food",
+ "tags": [
+  "kahve değirmeni",
+  "coffee grinder",
+  "grinder",
+  "kahve",
+  "ottoman",
+  "kitchen"
+ ],
+ "variants": [
+  {
+   "note": "box grinder with crank and drawer",
+   "paths": [
+    {
+     "d": "M38 44 L62 44 L58 32 L42 32 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 32 L50 24 L64 20",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M64 20 L69 18",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M30 44 L70 44 L70 86 L30 86 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M36 66 L64 66 L64 82 L36 82 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 74 h0.1",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}

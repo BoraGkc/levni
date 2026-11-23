@@ -1,0 +1,49 @@
+{
+ "name": "oil-lamp",
+ "category": "home",
+ "tags": [
+  "kandil",
+  "oil lamp",
+  "mosque lamp",
+  "ottoman",
+  "lamp",
+  "lamba",
+  "camii"
+ ],
+ "variants": [
+  {
+   "note": "hanging mosque kandil with flame",
+   "paths": [
+    {
+     "d": "M50 10 L50 24",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M38 32 Q50 22 62 32 L58 38 L42 38 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M40 38 C32 48 30 64 38 76 L50 92 L62 76 C70 64 68 48 60 38 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M45 44 C39 52 39 64 44 74 L50 84 L56 74 C61 64 61 52 55 44 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 70 C46 64 48 56 50 50 C52 56 54 64 50 70 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
+}
