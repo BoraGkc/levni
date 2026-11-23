@@ -4,12 +4,13 @@ import PostCard from '../../components/PostCard.astro';
 import { getCollection } from 'astro:content';
 import { CATEGORIES, type Category } from '../../blog';
 
-const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => +b.data.date - +a.data.date);
-// featured guides (frontmatter `featured: true`) come first, newest first; the rest follow as "Latest"
-const featured = posts.filter((p) => p.data.featured);
-const lead = featured[0] ?? posts[0];
-const guides = featured.filter((p) => p !== lead);
-const rest = posts.filter((p) => p !== lead && !guides.includes(p));
+// newest first; on the same day a Story (a release post) leads its guides
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => +b.data.date - +a.data.date || Number(b.data.kind === 'Story') - Number(a.data.kind === 'Story'));
+// the newest post leads, the next six follow as "Latest"; feature guides (frontmatter `featured: true`) not shown yet come after
+const lead = posts[0];
+const latest = posts.slice(1, 7);
+const guides = posts.filter((p) => p.data.featured && p !== lead && !latest.includes(p));
 const shelves = (Object.keys(CATEGORIES) as Category[])
   .map((key) => ({ key, ...CATEGORIES[key], posts: posts.filter((p) => p.data.category === key) }))
   .filter((s) => s.posts.length > 0);
@@ -18,24 +19,26 @@ const shelves = (Object.keys(CATEGORIES) as Category[])
   <section class="wrap head">
     <p class="eyebrow">Levni blog</p>
     <h1>Illustration for agents and publishers</h1>
-    <p class="lede">Guides for drawing covers, icons and social images from JSON, with Claude, Codex or by hand. Every image on these pages was drawn by Levni.</p>
+    <p class="lede">Guides for drawing covers, icons, stickers, brand assets and whole brand boards from JSON, with Claude, Codex or by hand. Every image on these pages was drawn by Levni.</p>
     <nav class="shelves" aria-label="Categories">
       {shelves.map((s) => <a href={`/blog/category/${s.key}/`}>{s.label} <small>{s.posts.length}</small></a>)}
     </nav>
   </section>
 
   {lead && (
-    <section class="wrap featured" aria-labelledby="featured-title">
-      <h2 id="featured-title" class="block-title">Feature guides</h2>
+    <section class="wrap featured" aria-labelledby="latest-title">
+      <h2 id="latest-title" class="block-title">Latest</h2>
       <PostCard post={lead} big />
-      {guides.length > 0 && <div class="cards">{guides.map((p) => <PostCard post={p} />)}</div>}
+      {latest.length > 0 && <div class="cards">{latest.map((p) => <PostCard post={p} />)}</div>}
     </section>
   )}
 
-  <section class="wrap latest" aria-labelledby="latest-title">
-    <h2 id="latest-title">Latest</h2>
-    <div class="cards">{rest.slice(0, 6).map((p) => <PostCard post={p} />)}</div>
-  </section>
+  {guides.length > 0 && (
+    <section class="wrap latest" aria-labelledby="guides-title">
+      <h2 id="guides-title">Feature guides</h2>
+      <div class="cards">{guides.slice(0, 6).map((p) => <PostCard post={p} />)}</div>
+    </section>
+  )}
 
   {shelves.map((s) => (
     <section class="wrap shelf" aria-labelledby={`shelf-${s.key}`}>

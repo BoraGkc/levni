@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import { SITE } from '../site';
+import showcase from '../data/gallery.json';
 
 const repo = SITE.github.replace('https://github.com/', '');
 const pkg = '@levni/levni';
@@ -8,25 +9,33 @@ const json = (env) => JSON.stringify({ mcpServers: { levni: { command: 'npx', ar
 
 const tools: [string, string, string, string][] = [
   ['scene_guide', 'Nothing.', 'The whole scene format as text: canvas, every element type with its fields (drawings, dither, mesh gradients, glyph fills, seals, terrain, engraving), colours, style packs, formats, the critic. Long, so the agent reads it once per session.', 'Read first'],
+  ['render_board', 'spec (a brand shortcut or a board of your own tiles), out (optional .png path), preview (default true), guide (true returns the board format instead).', 'A text line with the board size, a 900 px preview and with out the full PNG. The shortest spec is { "brand": { name, tagline, mark, inks } }, which makes nine tiles: mark, wordmark, web page, palette, social card, tote, sticker, pattern and business card.', 'Brand board'],
   ['list_props', 'query (words in English or Turkish), category (one shelf), limit (default 40, up to 500).', 'Matching drawings with their name, variant count, shelf, tags and what each variant shows, plus the line to paste into a scene. The agent picks real names instead of guessing.', 'Search'],
   ['show_props', 'names: up to 12 drawing names from list_props.', 'A contact sheet image of up to 18 variants, each labelled “name number”, so the agent can choose a variant by eye. Unknown names are reported, not fatal.', 'Choose by eye'],
   ['render_scene', 'scene (the JSON), out (optional .png, .webp or .svg path), preview (default true).', 'The critic’s notes as text, a 560 px preview image, and with out the full-size file. The preview includes the scene’s screen print pass, so a gameboy or blueprint scene is previewed as it will be saved.', 'Draw and check'],
   ['critique_scene', 'scene (the JSON).', 'Only the critic’s notes: elements off the canvas, accidental crops, lopsided weight, no focal point, or “no layout problems found”. No image, so it is quick and cheap.', 'Iterate'],
-  ['render_board', 'spec (a brand shortcut or a board of your own tiles), out (optional .png path), preview (default true), guide (true returns the board format instead).', 'A text line with the board size, a 900 px preview and with out the full PNG. The shortest spec is { "brand": { name, tagline, mark, inks } }, which makes nine tiles: mark, wordmark, web page, palette, social card, tote, sticker, pattern and business card.', 'Brand board'],
 ];
 const prompts: [string, string][] = [
-  ['An article cover', 'Draw a cover for my article “Why every newsroom wants a data desk”. Search the library for two or three fitting drawings, show me a contact sheet, then compose a riso scene with room on the left for a title. Fix every critic note and save it as cover.webp.'],
-  ['An Open Graph card in my colours', 'Make a 1200 by 630 Open Graph card for this post, with the title as the headline. Use my inks, { "blue": "#6A1B9A", "mustard": "#00BFA5" }. Show me the preview, fix what the critic reports, and save og.png.'],
   ['A brand board for my product', 'Make a brand board for [product], [one line about what it does]. Pick a mark from the library that suits it, use these inks: [four hex colours], and a serif wordmark. Render it with render_board, save board.png, then tell me which tile you would change.'],
-  ['A dithered hero', 'Write a 1200 by 673 hero in ordered dither: a sky fading from blue to coral in square cells, a dithered sun low on the right, a dark band with line dither at the bottom. Keep the left third calm for a headline. Save hero.png.'],
   ['A sticker sheet', 'Draw a sticker sheet on a blue ground: six library drawings that fit [theme], each die-cut with a thick paper outline in alternating colours and tilted a little, plus two round seals with ring text. Check the critic, then save stickers.png.'],
+  ['A dithered hero', 'Write a 1200 by 673 hero in ordered dither: a sky fading from blue to coral in square cells, a dithered sun low on the right, a dark band with line dither at the bottom. Keep the left third calm for a headline. Save hero.png.'],
   ['An ASCII OG card', 'Make an ASCII-style OG card on a dark ground: a rocket filled with dots on the right, “JSON in. Illustration out.” on the left, and a command line in small mono type at the bottom. Save og-ascii.png.'],
   ['An etched poster', 'Make an etched poster: an engraved mountain landscape with a sun in blue ink on cream paper, a small caption “Plate 04 / Summit and sun” top left. Try two seeds, show me both and keep the better one as poster.png.'],
   ['A mesh gradient background', 'Make a mesh gradient background for my landing page in [three colours], with a calm zone on the left where the headline goes. Then draw six squircle tiles in matching blends for the feature icons, on one sheet.'],
   ['A wireframe terrain hero', 'Draw a wireframe terrain hero for a developer tools site: dark ground, light lines, a coral glow on the horizon, a few mustard streams in the valleys and a small rocket above the ridge. Save terrain.png.'],
+  ['An article cover', 'Draw a cover for my article “Why every newsroom wants a data desk”. Search the library for two or three fitting drawings, show me a contact sheet, then compose a riso scene with room on the left for a title. Fix every critic note and save it as cover.webp.'],
+  ['An Open Graph card in my colours', 'Make a 1200 by 630 Open Graph card for this post, with the title as the headline. Use my inks, { "blue": "#6A1B9A", "mustard": "#00BFA5" }. Show me the preview, fix what the critic reports, and save og.png.'],
   ['A print look for an existing scene', 'Take scene.json and render it three times with the gameboy, blueprint and newsprint screens. Show me all three and save the one that reads best.'],
   ['Fix a scene without redrawing it', 'Run critique_scene on scene.json and fix each note by moving or resizing elements, not by changing the look. Tell me what you changed.'],
 ];
+const strip = [
+  ['boards', '01-feneri', 'Brand board', 'render_board, four fields'],
+  ['stickers', '01-seal-sheet', 'Sticker sheet', 'Seals and die-cut drawings'],
+  ['brand', '01-dither-sunset', 'Dithered sunset', 'Dither fields in a scene'],
+  ['brand', '12-glyphfill-og-card', 'ASCII OG card', 'Glyph fills and mono type'],
+  ['lines', '05-engrave-poster', 'Etched poster', 'Engraving in blue ink'],
+  ['soft3d', 'auto-01', 'Soft 3D cover', 'Glossy 3D shapes'],
+].map(([g, id, label, note]) => ({ g, id, label, note, alt: (showcase.items as { group: string; id: string; alt: string }[]).find((i) => i.group === g && i.id === id)?.alt ?? label }));
 const ghostTools = [
   ['ghost_drafts', 'Read-only. Drafts without images, their h2 headings and, for one draft, the full text.'],
   ['ghost_preview', 'Dry run. Renders the cover and inline images, shows where each goes, returns a token. Nothing changes.'],
@@ -44,21 +53,31 @@ const jsonld = [
   { '@type': 'FAQPage', mainEntity: faq.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
 ];
 ---
-<Base title="MCP server: give your agent an illustrator" description="Connect Levni to Claude, Cursor or any MCP client: the agent searches the illustration library, writes scenes, renders brand boards, reads the layout critic and saves covers. Optional Ghost tools attach images to drafts." jsonld={jsonld}>
+<Base title="MCP server: give your agent a design studio" description="Connect Levni to Claude, Cursor or any MCP client: the agent draws illustrations, covers, icons, charts, brand assets and whole brand boards, reads the layout critic and saves the files. Free and local." jsonld={jsonld}>
   <article class="wrap page">
     <p class="eyebrow">Levni for agents</p>
-    <h1>Give your agent an <em class="accent">illustrator</em>.</h1>
-    <p class="lede">Levni’s MCP server lets an assistant draw covers, spot illustrations, social images, brand assets and whole brand boards in one hand-inked style. It searches the library, writes a scene, reads the critic’s notes, fixes them, and saves the file. Everything runs on your machine.</p>
+    <h1>Give your agent a <em class="accent">design studio</em>.</h1>
+    <p class="lede">With Levni connected, an assistant can make a whole brand board from a name, tagline, mark and four colours, a sheet of seals and stickers, a dithered or mesh-gradient hero, an ASCII Open Graph card, an etched poster, 3D and pixel icons, charts and article covers. It searches the library, writes the scene, reads the critic’s notes, fixes them and saves the file. Free, no image model, and everything runs on your machine.</p>
+
+    <h2 id="makes">What your agent can make</h2>
+    <ul class="strip">{strip.map((t) => (
+      <li><a href={`/gallery/#${t.g}`}><img src={`/g/${t.g}/${t.id}-s.webp`} width="640" height="359" alt={t.alt} loading="lazy" decoding="async" /></a><strong>{t.label}</strong><span>{t.note}</span></li>
+    ))}</ul>
+    <p class="small">Start with <code>render_board</code> for brand boards, or paste one of the <a href="#prompts">brand-asset prompts</a>. Every tile links to its gallery tab.</p>
 
     <h2 id="setup">Set it up</h2>
     <div class="setup">
       <div><h3>Claude Code</h3><pre><code>{`claude mcp add levni -- npx -y ${pkg} mcp`}</code></pre></div>
       <div><h3>Claude Desktop, Cursor and others</h3><p class="small">In <code>claude_desktop_config.json</code>, <code>.cursor/mcp.json</code> or your client’s MCP settings:</p><pre><code>{json()}</code></pre></div>
     </div>
-    <p>Then ask: <q>Illustrate this article with Levni, show me two options, and fix what the critic reports.</q> Node.js 20 or newer is the only requirement. More ideas <a href="#prompts">below</a>.</p>
+    <p>Then ask: <q>Illustrate this article with Levni, show me two options, and fix what the critic reports.</q> Node.js 20 or newer is the only requirement. The best first prompts are <a href="#prompts">just below</a>.</p>
+
+    <h2 id="prompts">Things to ask your agent</h2>
+    <p>Paste any of these into Claude Code, Claude Desktop, Cursor or another client with Levni connected. Swap in your own title, product or colours.</p>
+    <ol class="prompts">{prompts.map(([t, p]) => (<li><h3>{t}</h3><p>{p}</p></li>))}</ol>
 
     <h2 id="tools">What the agent can do</h2>
-    <p>Six tools. Each takes plain JSON and returns text, an image or both, so a client that can show images lets the agent look at its own work. Nothing leaves your machine.</p>
+    <p>Six tools, <code>render_board</code> among them. Each takes plain JSON and returns text, an image or both, so a client that can show images lets the agent look at its own work. Nothing leaves your machine.</p>
     <ul class="tool-list">{tools.map(([n, input, back, tag]) => (
       <li>
         <h3><code>{n}</code> <span class="tag">{tag}</span></h3>
@@ -87,10 +106,6 @@ const jsonld = [
         <figcaption>A scene an agent can write in one go: dither fields and a sun.</figcaption>
       </figure>
     </div>
-
-    <h2 id="prompts">Things to ask your agent</h2>
-    <p>Paste any of these into Claude Code, Claude Desktop, Cursor or another client with Levni connected. Swap in your own title, product or colours.</p>
-    <ol class="prompts">{prompts.map(([t, p]) => (<li><h3>{t}</h3><p>{p}</p></li>))}</ol>
 
     <h2 id="ghost">Ghost: images for your drafts</h2>
     <p>Add your Ghost Admin credentials to the server’s <code>env</code> and three more tools appear. The assistant finds drafts without images, designs a cover and up to one image per section, shows you the plan with previews, and writes only after you say yes.</p>
@@ -137,6 +152,12 @@ const jsonld = [
   .session { padding-left: 1.3em; }
   .session li { margin-bottom: 10px; color: var(--ink-soft); }
   .session li strong { color: var(--ink); }
+  .strip { list-style: none; padding: 0; margin: 20px 0 14px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 14px; }
+  .strip li { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+  .strip img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border: 2px solid var(--ink); background: var(--paper-2); display: block; margin-bottom: 6px; }
+  .strip a:hover img { box-shadow: 4px 4px 0 var(--accent); }
+  .strip strong { font-size: 0.98rem; }
+  .strip span { font-size: 0.86rem; color: var(--ink-soft); }
   .shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin: 24px 0; align-items: start; }
   .shots .shot { margin: 0; }
   .shots img { width: 100%; height: auto; }
@@ -154,5 +175,5 @@ const jsonld = [
   details p { margin: 8px 0 0; color: var(--ink-soft); }
   .next { margin-top: 40px; }
   .text-link { font-weight: 600; }
-  @media (max-width: 720px) { .shots { grid-template-columns: minmax(0, 1fr); } .setup { grid-template-columns: minmax(0, 1fr); } .tools { grid-template-columns: minmax(0, 1fr); gap: 2px 0; } .tools dd { margin-bottom: 10px; } }
+  @media (max-width: 720px) { .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } .shots { grid-template-columns: minmax(0, 1fr); } .setup { grid-template-columns: minmax(0, 1fr); } .tools { grid-template-columns: minmax(0, 1fr); gap: 2px 0; } .tools dd { margin-bottom: 10px; } }
 </style>

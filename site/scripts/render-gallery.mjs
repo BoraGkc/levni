@@ -18,17 +18,17 @@ process.chdir(here('..')); // scenes reference files (badges) relative to the re
 
 // tab order on the page
 export const GROUPS = [
-  ['brand', 'Brand assets'],
-  ['stickers', 'Seals & stickers'],
-  ['lines', 'Terrain & etching'],
   ['boards', 'Brand boards'],
-  ['soft3d', 'Soft 3D covers'],
-  ['icons', '3D icons'],
-  ['worlds', 'Little worlds'],
+  ['stickers', 'Seals & stickers'],
+  ['brand', 'Brand assets'],
+  ['lines', 'Terrain & etching'],
   ['pixel', 'Pixel icons'],
+  ['worlds', 'Little worlds'],
   ['charts', 'Hand-inked data'],
   ['covers', 'Riso & miniature'],
+  ['icons', '3D icons'],
   ['formats', 'Formats'],
+  ['soft3d', 'Soft 3D covers'],
 ];
 
 // large / thumbnail widths by shape

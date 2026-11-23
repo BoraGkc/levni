@@ -3,7 +3,7 @@ import folio from './data/props.json';
 export const SITE = {
   name: 'Levni',
   url: 'https://levni.dev',
-  tagline: 'An open illustration library',
+  tagline: 'Your agent’s design studio',
   description:
     'Levni is an open library of hand-inked illustrations and the engine that composes them: covers, icons, spot illustrations and social images from a JSON scene, in one consistent style. Free for agents and publishers.',
   github: 'https://github.com/BoraGkc/levni',

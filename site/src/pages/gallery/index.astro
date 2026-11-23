@@ -34,21 +34,47 @@ const intro: Record<string, [string, string, string]> = {
   formats: ['One scene, recomposed rather than cropped for cover, og, square, story and YouTube, with an optional title layer: headline, kicker and brand line.', doc('docs/scene.md#formats-and-reflow'), 'Formats and titles'],
 };
 
+// items shown before "Show more": in the All view, and in a single-section view
+const firstPage: Record<string, number> = { icons: 12, pixel: 18, formats: 6 };
+const tabPage: Record<string, number> = { icons: 18, pixel: 36, formats: 12 };
 const groups = (gallery.groups as [string, string][]).map(([key, label]) => {
   const items: Item[] = (gallery.items as Item[]).filter((i) => i.group === key);
-  return { key, label, items: key === 'pixel' ? [...items, ...pixelTiles] : items };
+  return { key, label, items: key === 'pixel' ? [...items, ...pixelTiles] : items, first: firstPage[key] ?? 6, page: tabPage[key] ?? 12 };
 });
+// the strongest images, in the order they scroll past the title
+const heroIds = ['boards/01-feneri', 'stickers/01-seal-sheet', 'brand/01-dither-sunset', 'boards/03-firin', 'lines/05-engrave-poster', 'stickers/04-diecut-pack', 'brand/10-glyphfill-globe', 'boards/05-lale', 'lines/01-terrain-hero', 'brand/12-glyphfill-og-card', 'boards/02-pusula', 'stickers/05-seal-night'];
+const hero: Item[] = heroIds.map((k) => (gallery.items as Item[]).find((i) => `${i.group}/${i.id}` === k)!).filter(Boolean);
 const total = groups.reduce((n, g) => n + g.items.length, 0);
 const thumb = (i: Item) => i.src || `/g/${i.group}/${i.id}-s.webp`;
+const heroImg = (i: Item) => i.src || `/g/${i.group}/${i.id}.webp`;
 const large = (i: Item) => i.big || (i.src ? i.src : `/g/${i.group}/${i.id}.webp`);
 const json = (i: Item) => (i.code ? undefined : `/g/${i.group}/${i.id}.json`);
 const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= i.h ? 'square' : 'tall');
 ---
-<Base title="Gallery" description={`${total} images drawn by Levni from a JSON scene: brand assets and brand boards, dither, mesh gradients, seals and stickers, etched terrain, soft 3D covers, 3D icons, isometric little worlds, pixel icons, hand-inked charts, riso and miniature covers, every social format. Open any one to copy its scene.`}>
+<Base title="Gallery" description={`${total} images drawn by Levni from a JSON scene: brand boards, seals and stickers, brand assets (dither, mesh gradients), etched terrain, pixel icons, isometric little worlds, hand-inked charts, riso and miniature covers, 3D icons, every social format and soft 3D covers. Open any one to copy its scene.`}>
   <div class="wrap head">
-    <p class="eyebrow">Gallery · every image drawn by Levni</p>
-    <h1>What one JSON scene <em class="accent">becomes</em>.</h1>
-    <p class="lede">{total} images, no image model. Open one to see it large with the exact scene that drew it, copy the JSON, and change a seed or a palette.</p>
+    <div class="head-text">
+      <p class="eyebrow">Gallery · every image drawn by Levni</p>
+      <h1>What one JSON scene <em class="accent">becomes</em>.</h1>
+      <p class="lede">Brand boards, stickers and brand assets first, then terrain, pixel icons, little worlds and charts. {total} images, no image model. Open one to see it large with the exact scene that drew it, copy the JSON, and change a seed or a palette.</p>
+    </div>
+    <div class="show" role="region" aria-label="A few favourites">
+      <div class="reel">
+        {[false, true].map((dup) => (
+          <ul class="strip" aria-hidden={dup ? 'true' : undefined}>
+            {hero.map((i, n) => (
+              <li class={n >= 6 ? 'extra' : undefined}>
+                <a class="item" href={large(i)} data-big={large(i)} data-json={json(i)} data-code={i.code} data-w={i.w} data-h={i.h} data-dup={dup ? '' : undefined} tabindex={dup ? -1 : undefined}>
+                  <img src={heroImg(i)} width={i.w} height={i.h} alt={dup ? '' : i.alt} loading="lazy" decoding="async" style={`aspect-ratio:${i.w}/${i.h}`} />
+                  <span class="cap sr">{i.title}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        ))}
+      </div>
+      <button type="button" class="pause" aria-pressed="false">Pause</button>
+    </div>
   </div>
 
   <nav class="tabs" aria-label="Gallery sections">
@@ -60,14 +86,14 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
 
   <div class="wrap">
     {groups.map((g) => (
-      <section id={g.key} class="group" data-group={g.key} aria-labelledby={`h-${g.key}`}>
+      <section id={g.key} class="group" data-group={g.key} data-first={g.first} data-page={g.page} aria-labelledby={`h-${g.key}`}>
         <div class="group-head">
           <h2 id={`h-${g.key}`}>{g.label}</h2>
           <p>{intro[g.key][0]} <a href={intro[g.key][1]}>{intro[g.key][2]}</a></p>
         </div>
         <ul class={`grid grid-${g.key}`}>
-          {g.items.map((i) => (
-            <li class={shape(i)}>
+          {g.items.map((i, n) => (
+            <li class={shape(i)} hidden={n >= g.first}>
               <a class="item" href={large(i)} data-big={large(i)} data-json={json(i)} data-code={i.code} data-w={i.w} data-h={i.h}>
                 <img src={thumb(i)} width={i.tw} height={i.th} alt={i.alt} loading="lazy" decoding="async" />
                 <span class="cap">{i.title}</span>
@@ -75,9 +101,15 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
             </li>
           ))}
         </ul>
+        <div class="more" hidden={g.items.length <= g.first}>
+          <button type="button" class="more-btn" data-more>Show more</button>
+          <p class="count" role="status" aria-live="polite"></p>
+        </div>
       </section>
     ))}
   </div>
+
+  <noscript><style>.grid > li[hidden] { display: list-item; }</style></noscript>
 
   <dialog id="g-dlg" aria-labelledby="g-title">
     <div class="dlg-bar">
@@ -103,17 +135,49 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
   const tabs = [...document.querySelectorAll<HTMLAnchorElement>('.tabs a')];
   const sections = [...document.querySelectorAll<HTMLElement>('.group')];
   const keys = new Set(sections.map((s) => s.dataset.group!));
+  // pagination: a first page in the All view, bigger pages inside one section; "Show more" reveals the next page
+  const shown = new Map<string, number>();
+  const sizes = (s: HTMLElement) => ({ first: Number(s.dataset.first), page: Number(s.dataset.page) });
+  function paint(s: HTMLElement) {
+    const lis = [...s.querySelectorAll<HTMLElement>('ul.grid > li')];
+    const n = shown.get(s.dataset.group!)!;
+    lis.forEach((li, i) => (li.hidden = i >= n));
+    const more = s.querySelector<HTMLElement>('.more')!;
+    more.hidden = n >= lis.length;
+    s.querySelector<HTMLElement>('.count')!.textContent = `Showing ${Math.min(n, lis.length)} of ${lis.length}`;
+  }
+  let mode = '';
   function show(scroll: boolean) {
     const h = location.hash.slice(1);
     const key = keys.has(h) ? h : 'all';
+    if ((key === 'all') !== (mode === 'all') || mode === '') {
+      sections.forEach((s) => { shown.set(s.dataset.group!, key === 'all' ? sizes(s).first : sizes(s).page); paint(s); });
+    }
+    mode = key;
     sections.forEach((s) => (s.hidden = key !== 'all' && s.dataset.group !== key));
     tabs.forEach((t) => (t.dataset.tab === key ? t.setAttribute('aria-current', 'true') : t.removeAttribute('aria-current')));
     tabs.find((t) => t.dataset.tab === key)?.scrollIntoView({ block: 'nearest', inline: 'center' });
     if (scroll) document.querySelector('.tabs')!.scrollIntoView({ block: 'start' });
   }
+  document.querySelectorAll<HTMLButtonElement>('[data-more]').forEach((b) => b.addEventListener('click', () => {
+    const s = b.closest<HTMLElement>('.group')!;
+    const before = shown.get(s.dataset.group!)!;
+    shown.set(s.dataset.group!, before + (mode === 'all' ? sizes(s).first : sizes(s).page));
+    paint(s);
+    s.querySelectorAll<HTMLElement>('ul.grid > li')[before]?.querySelector<HTMLElement>('a')?.focus();
+  }));
   window.addEventListener('hashchange', () => show(true));
   show(false);
   if (keys.has(location.hash.slice(1))) requestAnimationFrame(() => document.querySelector('.tabs')!.scrollIntoView({ block: 'start' }));
+
+  // --- hero reel: a button to stop it (it also pauses on hover and focus in CSS)
+  const reel = document.querySelector<HTMLElement>('.show')!;
+  const pause = reel.querySelector<HTMLButtonElement>('.pause')!;
+  pause.addEventListener('click', () => {
+    const on = reel.classList.toggle('paused');
+    pause.setAttribute('aria-pressed', String(on));
+    pause.textContent = on ? 'Play' : 'Pause';
+  });
 
   // --- dialog: the large image and the scene that drew it
   const dlg = document.getElementById('g-dlg') as HTMLDialogElement;
@@ -124,7 +188,8 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
   let at = 0;
   const cache = new Map<string, string>();
   async function open(a: HTMLAnchorElement) {
-    at = list.indexOf(a);
+    at = list.findIndex((x) => x.dataset.big === a.dataset.big);
+    a = list[at] ?? a;
     const d = a.dataset;
     img.src = d.big!;
     img.width = Number(d.w);
@@ -150,7 +215,7 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
     const a = (e.target as HTMLElement).closest<HTMLAnchorElement>('a.item');
     if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;
     e.preventDefault();
-    list = [...a.closest('ul')!.querySelectorAll<HTMLAnchorElement>('a.item')];
+    list = [...a.closest('ul')!.parentElement!.querySelectorAll<HTMLAnchorElement>('a.item')].filter((x) => !x.hasAttribute('data-dup') && !x.closest('[hidden]'));
     open(a);
   });
   const step = (n: number) => list.length && open(list[(at + n + list.length) % list.length]);
@@ -168,7 +233,8 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
 </script>
 
 <style>
-  .head { margin-top: 48px; }
+  .head { margin-top: 48px; display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr); gap: 28px 40px; align-items: center; }
+  .head-text { min-width: 0; }
   .eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-text); margin: 0 0 12px; }
   .head h1 { max-width: 16ch; text-wrap: balance; }
   .lede { font-size: 1.2rem; color: var(--ink-soft); max-width: 720px; margin: 0 0 8px; }
@@ -184,6 +250,28 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
   .tabs a:hover { border-color: var(--ink); color: var(--ink); }
   .tabs a[aria-current] { background: var(--ink); border-color: var(--ink); color: var(--paper-2); }
   .tabs small { font-family: var(--mono); font-size: 0.74rem; opacity: 0.75; }
+
+  /* hero showcase: a slow reel of the strongest images; the track is a fixed height, so nothing shifts as images load */
+  .show { position: relative; min-width: 0; height: 330px; overflow: hidden; border: 2px solid var(--ink); background: var(--paper-2); box-shadow: 6px 6px 0 var(--accent); }
+  .reel { display: flex; width: max-content; height: 100%; animation: reel 100s linear infinite; }
+  .show:hover .reel, .show:focus-within .reel, .show.paused .reel { animation-play-state: paused; }
+  .strip { list-style: none; margin: 0; padding: 14px 14px 14px 0; display: flex; gap: 14px; height: 100%; }
+  .reel .strip:first-child { padding-left: 14px; }
+  .strip li { height: 100%; flex: none; }
+  .strip .item { height: 100%; }
+  .strip .item img { height: 100%; width: auto; max-width: none; border-width: 1.5px; }
+  .strip .item:hover img, .strip .item:focus-visible img { transform: translateY(-4px); box-shadow: 0 6px 0 var(--accent); }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; margin: 0; }
+  .pause { position: absolute; right: 10px; bottom: 10px; z-index: 1; font: inherit; font-family: var(--mono); font-size: 0.74rem; color: var(--ink); background: var(--paper); border: 1.5px solid var(--ink); border-radius: 999px; padding: 4px 12px; cursor: pointer; }
+  .pause:hover { background: var(--ink); color: var(--paper); }
+  @keyframes reel { to { transform: translateX(-50%); } }
+
+  .more { display: flex; align-items: center; gap: 14px; margin-top: 20px; }
+  .more[hidden] { display: none; }
+  .more-btn { font: inherit; font-size: 0.95rem; color: var(--paper-2); background: var(--ink); border: 2px solid var(--ink); border-radius: 999px; padding: 8px 20px; cursor: pointer; }
+  .more-btn:hover { background: var(--accent); border-color: var(--accent); }
+  .count { margin: 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink-soft); }
+  .grid > li[hidden] { display: none; }
 
   .group { padding-top: 40px; scroll-margin-top: 64px; }
   .group[hidden] { display: none; }
@@ -233,6 +321,10 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
   .dlg-run { font-size: 0.86rem; color: var(--ink-soft); margin: 10px 0 0; }
   .dlg-run code { overflow-wrap: anywhere; }
 
+  @media (max-width: 900px) {
+    .head { grid-template-columns: minmax(0, 1fr); }
+    .show { height: 260px; }
+  }
   @media (max-width: 860px) {
     .group-head { grid-template-columns: minmax(0, 1fr); }
     .dlg-body { grid-template-columns: minmax(0, 1fr); padding: 14px; }
@@ -240,10 +332,24 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
     dialog pre { max-height: 40dvh; }
   }
   @media (max-width: 520px) {
+    .show { height: 200px; }
+    .strip { gap: 10px; padding: 10px 10px 10px 0; }
+    .reel .strip:first-child { padding-left: 10px; }
     .grid, .grid-boards { grid-template-columns: minmax(0, 1fr); }
     .grid-icons, .grid-formats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
     .grid-pixel { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .tabs a { padding: 6px 12px; font-size: 0.9rem; }
   }
-  @media (prefers-reduced-motion: reduce) { .item img { transition: none; } .item:hover img { transform: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    .item img { transition: none; } .item:hover img { transform: none; }
+    /* no moving reel: the first six favourites sit in a still grid */
+    .show { height: auto; }
+    .pause, .strip[aria-hidden], .strip .extra { display: none; }
+    .reel { animation: none; width: auto; height: auto; }
+    .strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); height: auto; padding: 14px; }
+    .strip li { height: auto; }
+    .strip .item, .strip .item img { height: auto; width: 100%; }
+    .strip .item:hover img { transform: none; box-shadow: none; }
+  }
+  @media (prefers-reduced-motion: reduce) and (max-width: 520px) { .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 </style>
