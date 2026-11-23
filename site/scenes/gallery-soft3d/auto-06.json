@@ -1,0 +1,22 @@
+{
+ "_meta": {
+  "title": "auto, seed 6, aqua",
+  "alt": "A soft 3D cover in the aqua palette: a glossy knot shape, the title “Sleep, light and the long winter”"
+ },
+ "seed": 6,
+ "finish": "soft",
+ "background": "#E4EEF9",
+ "elements": [
+  {
+   "type": "soft3d",
+   "preset": "auto",
+   "seed": 6,
+   "palette": "aqua"
+  }
+ ],
+ "title": {
+  "text": "Sleep, light and the long winter",
+  "kicker": "Health",
+  "brand": "levni.dev"
+ }
+}

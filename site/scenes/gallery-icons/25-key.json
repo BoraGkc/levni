@@ -1,0 +1,22 @@
+{
+ "_meta": {
+  "title": "key",
+  "alt": "The Folio drawing “key” as a thick, lit 3D icon"
+ },
+ "seed": 3,
+ "finish": "soft",
+ "canvas": [
+  600,
+  600
+ ],
+ "background": "#F5F0DF",
+ "elements": [
+  {
+   "type": "extrude3d",
+   "name": "key",
+   "x": 300,
+   "y": 300,
+   "size": 360
+  }
+ ]
+}

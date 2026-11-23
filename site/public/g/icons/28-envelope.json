@@ -1,0 +1,9 @@
+{
+  "seed": 3,
+  "finish": "soft",
+  "canvas": [600,600],
+  "background": "#EAF3EC",
+  "elements": [
+    {"type":"extrude3d","name":"envelope","x":300,"y":300,"size":360,"rotate":[-10,34,-4]}
+  ]
+}

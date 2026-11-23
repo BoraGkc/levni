@@ -1,0 +1,15 @@
+{
+ "_meta": {
+  "title": "\"street\", blue only",
+  "alt": "A calm isometric street diorama in blues only, for hard news"
+ },
+ "seed": 3,
+ "elements": [
+  {
+   "type": "iso",
+   "preset": "street",
+   "seed": 3,
+   "palette": "blue"
+  }
+ ]
+}

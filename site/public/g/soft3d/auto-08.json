@@ -1,0 +1,9 @@
+{
+  "seed": 8,
+  "finish": "soft",
+  "background": "#140A35",
+  "elements": [
+    {"type":"soft3d","preset":"auto","seed":8,"palette":"mint-night"}
+  ],
+  "title": {"text":"Ten charts that explain the year","kicker":"Data","brand":"levni.dev"}
+}

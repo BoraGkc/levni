@@ -1,0 +1,17 @@
+{
+ "_meta": {
+  "title": "auto, seed 2, sunset",
+  "alt": "A soft 3D cover in the sunset palette: a glossy orbit shape, room left for a title"
+ },
+ "seed": 2,
+ "finish": "soft",
+ "background": "#FCEDE2",
+ "elements": [
+  {
+   "type": "soft3d",
+   "preset": "auto",
+   "seed": 2,
+   "palette": "sunset"
+  }
+ ]
+}

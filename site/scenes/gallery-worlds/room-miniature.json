@@ -1,0 +1,15 @@
+{
+ "_meta": {
+  "title": "\"room\", miniature pack",
+  "alt": "A hand-inked isometric room in the miniature pack’s Tulip Era colours"
+ },
+ "seed": 6,
+ "style": "miniature",
+ "elements": [
+  {
+   "type": "iso",
+   "preset": "room",
+   "seed": 6
+  }
+ ]
+}

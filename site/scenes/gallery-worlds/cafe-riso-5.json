@@ -1,0 +1,14 @@
+{
+ "_meta": {
+  "title": "\"cafe\", seed 5",
+  "alt": "A hand-inked isometric cafe diorama on a floating slab, riso colours, seed 5"
+ },
+ "seed": 5,
+ "elements": [
+  {
+   "type": "iso",
+   "preset": "cafe",
+   "seed": 5
+  }
+ ]
+}

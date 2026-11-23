@@ -1,0 +1,88 @@
+{
+ "_meta": {
+  "title": "Folio mix, riso",
+  "alt": "A rocket on a coral sun, surrounded by a cat, a light bulb, headphones, a camera, a bicycle and a coffee cup on a blue riso panel"
+ },
+ "seed": 11,
+ "style": "riso",
+ "elements": [
+  {
+   "type": "panel",
+   "x": 40,
+   "y": 40,
+   "w": 1120,
+   "h": 593,
+   "color": "blue"
+  },
+  {
+   "type": "disc",
+   "x": 610,
+   "y": 300,
+   "r": 205,
+   "color": "coral"
+  },
+  {
+   "type": "prop",
+   "name": "rocket",
+   "x": 600,
+   "y": 300,
+   "size": 330
+  },
+  {
+   "type": "prop",
+   "name": "cat",
+   "x": 190,
+   "y": 470,
+   "size": 200
+  },
+  {
+   "type": "prop",
+   "name": "lightbulb",
+   "x": 200,
+   "y": 190,
+   "size": 170
+  },
+  {
+   "type": "prop",
+   "name": "headphones",
+   "x": 400,
+   "y": 520,
+   "size": 150
+  },
+  {
+   "type": "prop",
+   "name": "camera",
+   "x": 1000,
+   "y": 190,
+   "size": 170
+  },
+  {
+   "type": "prop",
+   "name": "bicycle",
+   "x": 990,
+   "y": 480,
+   "size": 220
+  },
+  {
+   "type": "prop",
+   "name": "coffee-cup",
+   "x": 800,
+   "y": 530,
+   "size": 140
+  },
+  {
+   "type": "prop",
+   "name": "star",
+   "x": 390,
+   "y": 140,
+   "size": 80
+  },
+  {
+   "type": "prop",
+   "name": "sparkle",
+   "x": 820,
+   "y": 120,
+   "size": 80
+  }
+ ]
+}

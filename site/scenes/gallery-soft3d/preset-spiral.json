@@ -1,0 +1,17 @@
+{
+ "_meta": {
+  "title": "\"spiral\", aqua",
+  "alt": "Soft 3D cover, a ribbon spiral in the aqua palette"
+ },
+ "seed": 5,
+ "finish": "soft",
+ "background": "#E4EEF9",
+ "elements": [
+  {
+   "type": "soft3d",
+   "preset": "spiral",
+   "seed": 5,
+   "palette": "aqua"
+  }
+ ]
+}

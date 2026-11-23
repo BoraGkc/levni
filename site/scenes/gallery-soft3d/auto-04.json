@@ -1,0 +1,17 @@
+{
+ "_meta": {
+  "title": "auto, seed 4, lilac",
+  "alt": "A soft 3D cover in the lilac palette: a glossy spiral shape, room left for a title"
+ },
+ "seed": 4,
+ "finish": "soft",
+ "background": "#EEE9FA",
+ "elements": [
+  {
+   "type": "soft3d",
+   "preset": "auto",
+   "seed": 4,
+   "palette": "lilac"
+  }
+ ]
+}

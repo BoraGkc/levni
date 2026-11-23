@@ -1,0 +1,8 @@
+{
+  "seed": 7,
+  "background": "paper",
+  "elements": [
+    {"type":"iso","x":600,"y":250,"scale":0.92,"objects":[{"kind":"floor","x":0,"y":0,"w":360,"d":360,"color":"paper","pattern":"boards"},{"kind":"wall","axis":"x","x":0,"y":0,"w":360,"h":220,"color":"tone","window":[0.55,0.25,0.3,0.4]},{"kind":"wall","axis":"y","x":0,"y":0,"d":360,"h":220,"color":"blue"},{"kind":"box","x":60,"y":60,"w":170,"d":90,"h":80,"color":"coral"},{"kind":"prop","name":"laptop","x":150,"y":112,"z":80,"size":120},{"kind":"prop","name":"floor-lamp","x":300,"y":60,"size":160},{"kind":"cylinder","x":120,"y":250,"r":34,"h":50,"color":"mustard"}]},
+    {"type":"label","text":"Remote work","x":70,"y":90}
+  ]
+}

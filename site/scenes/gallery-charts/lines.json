@@ -1,0 +1,62 @@
+{
+ "_meta": {
+  "title": "two lines, area",
+  "alt": "A hand-inked line chart with two sample series, the first with a shaded area and dots"
+ },
+ "seed": 9,
+ "elements": [
+  {
+   "type": "label",
+   "text": "Two sample series",
+   "x": 90,
+   "y": 80,
+   "size": 18
+  },
+  {
+   "type": "linechart",
+   "x": 90,
+   "y": 120,
+   "w": 1020,
+   "h": 470,
+   "series": [
+    [
+     3,
+     5,
+     4,
+     7,
+     9,
+     8,
+     12,
+     14
+    ],
+    [
+     2,
+     2.5,
+     3.5,
+     3,
+     4.5,
+     6,
+     5.5,
+     7
+    ]
+   ],
+   "labels": [
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "colors": [
+    "blue",
+    "coral"
+   ],
+   "area": true,
+   "dots": true,
+   "labelSize": 15
+  }
+ ]
+}

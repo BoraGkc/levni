@@ -1,0 +1,46 @@
+{
+ "_meta": {
+  "title": "bars, a highlight",
+  "alt": "A hand-inked bar chart of sample values per year, one bar in coral, values printed above the bars"
+ },
+ "seed": 7,
+ "elements": [
+  {
+   "type": "label",
+   "text": "Readers per year, thousands (sample data)",
+   "x": 90,
+   "y": 80,
+   "size": 18
+  },
+  {
+   "type": "bars",
+   "x": 90,
+   "y": 120,
+   "w": 1020,
+   "h": 470,
+   "values": [
+    12,
+    18,
+    15,
+    24,
+    31,
+    29,
+    42,
+    47
+   ],
+   "labels": [
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "highlight": 7,
+   "showValues": true,
+   "labelSize": 16
+  }
+ ]
+}

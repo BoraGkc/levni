@@ -1,0 +1,17 @@
+{
+ "_meta": {
+  "title": "\"orbit\", sunset",
+  "alt": "Soft 3D cover, a sphere in an orbit ring in the sunset palette"
+ },
+ "seed": 7,
+ "finish": "soft",
+ "background": "#FCEDE2",
+ "elements": [
+  {
+   "type": "soft3d",
+   "preset": "orbit",
+   "seed": 7,
+   "palette": "sunset"
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "_meta": {
+  "title": "auto, seed 10, mono blue",
+  "alt": "A soft 3D cover in the mono blue palette: a glossy ribbon shape, room left for a title"
+ },
+ "seed": 10,
+ "finish": "soft",
+ "background": "#071A5C",
+ "elements": [
+  {
+   "type": "soft3d",
+   "preset": "auto",
+   "seed": 10,
+   "palette": "mono-blue"
+  }
+ ]
+}

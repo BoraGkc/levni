@@ -1,0 +1,8 @@
+{
+  "seed": 5,
+  "finish": "soft",
+  "background": "#E4EEF9",
+  "elements": [
+    {"type":"soft3d","preset":"spiral","seed":5,"palette":"aqua"}
+  ]
+}

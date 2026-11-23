@@ -1,0 +1,17 @@
+{
+ "_meta": {
+  "title": "\"stack\", aqua",
+  "alt": "Soft 3D cover, stacked rounded blocks in the aqua palette"
+ },
+ "seed": 9,
+ "finish": "soft",
+ "background": "#E4EEF9",
+ "elements": [
+  {
+   "type": "soft3d",
+   "preset": "stack",
+   "seed": 9,
+   "palette": "aqua"
+  }
+ ]
+}

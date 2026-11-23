@@ -1,0 +1,241 @@
+---
+import Base from '../../layouts/Base.astro';
+import { SITE } from '../../site';
+import gallery from '../../data/gallery.json';
+import props from '../../data/props.json';
+
+// Every image here was drawn by Levni from the scene shown in its dialog (scripts/render-gallery.mjs).
+type Item = { group: string; id: string; title: string; alt: string; w: number; h: number; tw: number; th: number; src?: string; code?: string; big?: string; tile?: boolean };
+const doc = (p: string) => `${SITE.github}/blob/main/${p}`;
+
+// pixel icons: three drawn covers, then a sample of Folio tiles (already drawn for the Library)
+const pixelProps = props.filter((p) => p.name.startsWith('pixel-'));
+const pixelTiles: Item[] = pixelProps.filter((_, i) => i % 7 === 0).slice(0, 66).map((p, k) => {
+  const v = k % p.variants.length;
+  return {
+    group: 'pixel', id: `${p.name}-${v}`, title: `${p.name}, ${['regular', 'thin', 'solid', 'glyph'][v] || `variant ${v}`}`,
+    alt: p.variants[v] || p.name.replace(/-/g, ' '), w: 520, h: 520, tw: 240, th: 240, tile: true,
+    src: `/props/${p.name}-${v}.webp`, big: `/props-svg/${p.name}-${v}.svg`,
+    code: `{ "type": "prop", "name": "${p.name}",${v ? ` "variant": ${v},` : ''} "x": 600, "y": 336, "size": 320 }`,
+  };
+});
+
+const intro: Record<string, [string, string, string]> = {
+  soft3d: ['A real little 3D renderer in plain JavaScript. "preset": "auto" with a seed composes a whole cover in one of five palettes (or yours), with room for a title and a badge. Neighbouring seeds always differ.', doc('docs/scene.md#soft-3d-v2-real-3d-shapes-use-with-finish-soft'), 'Soft 3D reference'],
+  icons: ['extrude3d turns any of the Folio drawings into a thick, lit 3D icon: front colours kept, sides rounded and shaded, ink lines raised into a rim. Rotate it, recolour it, change its depth.', doc('docs/scene.md#soft-3d-v2-real-3d-shapes-use-with-finish-soft'), 'The extrude3d element'],
+  worlds: ['One line, "preset": "cafe", lays out a seeded isometric world on a floating slab. Seven presets (room, desk, street, city, cafe, office, classroom), hand-inked or "style": "soft", in four palettes and every style pack.', doc('docs/scene.md#little-3d-worlds-iso'), 'Little 3D worlds reference'],
+  pixel: [`${pixelProps.length} pixel icons in four weights (regular, thin, solid, glyph), ready for interfaces and social cards, recoloured by any style pack like the rest of the Folio.`, '/library/?q=pixel', 'All pixel icons in the Library'],
+  charts: ['bars, linechart, pie, donut and isochart draw plain numbers in the same wobbly ink and flat riso fills. Values print only when you ask. Every number on this page is sample data.', doc('docs/scene.md#data-charts'), 'Data charts reference'],
+  covers: ['The house look: pressure-brush ink, misregistered riso plates and paper grain, or the miniature pack’s Tulip Era colours. Faceless people, fusion slots, and real covers Ortak Alan publishes.', '/features/#styles', 'Style packs and inks'],
+  formats: ['One scene, recomposed rather than cropped for cover, og, square, story and YouTube, with an optional title layer: headline, kicker and brand line.', doc('docs/scene.md#formats-and-reflow'), 'Formats and titles'],
+};
+
+const groups = (gallery.groups as [string, string][]).map(([key, label]) => {
+  const items: Item[] = (gallery.items as Item[]).filter((i) => i.group === key);
+  return { key, label, items: key === 'pixel' ? [...items, ...pixelTiles] : items };
+});
+const total = groups.reduce((n, g) => n + g.items.length, 0);
+const thumb = (i: Item) => i.src || `/g/${i.group}/${i.id}-s.webp`;
+const large = (i: Item) => i.big || (i.src ? i.src : `/g/${i.group}/${i.id}.webp`);
+const json = (i: Item) => (i.code ? undefined : `/g/${i.group}/${i.id}.json`);
+const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= i.h ? 'square' : 'tall');
+---
+<Base title="Gallery" description={`${total} images drawn by Levni from a JSON scene: soft 3D covers, 3D icons, isometric little worlds, pixel icons, hand-inked charts, riso and miniature covers, every social format. Open any one to copy its scene.`}>
+  <div class="wrap head">
+    <p class="eyebrow">Gallery · every image drawn by Levni</p>
+    <h1>What one JSON scene <em class="accent">becomes</em>.</h1>
+    <p class="lede">{total} images, no image model. Open one to see it large with the exact scene that drew it, copy the JSON, and change a seed or a palette.</p>
+  </div>
+
+  <nav class="tabs" aria-label="Gallery sections">
+    <div class="wrap tabs-row">
+      <a href="#all" data-tab="all" aria-current="true">All <small>{total}</small></a>
+      {groups.map((g) => <a href={`#${g.key}`} data-tab={g.key}>{g.label} <small>{g.items.length}</small></a>)}
+    </div>
+  </nav>
+
+  <div class="wrap">
+    {groups.map((g) => (
+      <section id={g.key} class="group" data-group={g.key} aria-labelledby={`h-${g.key}`}>
+        <div class="group-head">
+          <h2 id={`h-${g.key}`}>{g.label}</h2>
+          <p>{intro[g.key][0]} <a href={intro[g.key][1]}>{intro[g.key][2]}</a></p>
+        </div>
+        <ul class={`grid grid-${g.key}`}>
+          {g.items.map((i) => (
+            <li class={shape(i)}>
+              <a class="item" href={large(i)} data-big={large(i)} data-json={json(i)} data-code={i.code} data-w={i.w} data-h={i.h}>
+                <img src={thumb(i)} width={i.tw} height={i.th} alt={i.alt} loading="lazy" decoding="async" />
+                <span class="cap">{i.title}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+
+  <dialog id="g-dlg" aria-labelledby="g-title">
+    <div class="dlg-bar">
+      <button type="button" class="nav-btn" data-step="-1" aria-label="Previous image">←</button>
+      <button type="button" class="nav-btn" data-step="1" aria-label="Next image">→</button>
+      <form method="dialog"><button class="close" aria-label="Close">×</button></form>
+    </div>
+    <div class="dlg-body">
+      <figure class="dlg-fig"><img id="g-img" alt="" /></figure>
+      <div class="dlg-side">
+        <h2 id="g-title"></h2>
+        <p id="g-alt" class="dlg-alt"></p>
+        <div class="code-head"><span>scene.json</span><button type="button" id="g-copy" class="copy">Copy</button></div>
+        <pre><code id="g-code"></code></pre>
+        <p class="dlg-run">Render it: <code>npx levni render scene.json out.png</code></p>
+      </div>
+    </div>
+  </dialog>
+</Base>
+
+<script>
+  // --- filter tabs: #soft3d shows one section, #all (or no hash) shows every section
+  const tabs = [...document.querySelectorAll<HTMLAnchorElement>('.tabs a')];
+  const sections = [...document.querySelectorAll<HTMLElement>('.group')];
+  const keys = new Set(sections.map((s) => s.dataset.group!));
+  function show(scroll: boolean) {
+    const h = location.hash.slice(1);
+    const key = keys.has(h) ? h : 'all';
+    sections.forEach((s) => (s.hidden = key !== 'all' && s.dataset.group !== key));
+    tabs.forEach((t) => (t.dataset.tab === key ? t.setAttribute('aria-current', 'true') : t.removeAttribute('aria-current')));
+    tabs.find((t) => t.dataset.tab === key)?.scrollIntoView({ block: 'nearest', inline: 'center' });
+    if (scroll) document.querySelector('.tabs')!.scrollIntoView({ block: 'start' });
+  }
+  window.addEventListener('hashchange', () => show(true));
+  show(false);
+  if (keys.has(location.hash.slice(1))) requestAnimationFrame(() => document.querySelector('.tabs')!.scrollIntoView({ block: 'start' }));
+
+  // --- dialog: the large image and the scene that drew it
+  const dlg = document.getElementById('g-dlg') as HTMLDialogElement;
+  const img = document.getElementById('g-img') as HTMLImageElement;
+  const code = document.getElementById('g-code')!;
+  const copy = document.getElementById('g-copy') as HTMLButtonElement;
+  let list: HTMLAnchorElement[] = [];
+  let at = 0;
+  const cache = new Map<string, string>();
+  async function open(a: HTMLAnchorElement) {
+    at = list.indexOf(a);
+    const d = a.dataset;
+    img.src = d.big!;
+    img.width = Number(d.w);
+    img.height = Number(d.h);
+    const thumb = a.querySelector('img')!;
+    img.alt = thumb.alt;
+    img.className = d.big!.endsWith('.svg') ? 'vector' : '';
+    document.getElementById('g-title')!.textContent = a.querySelector('.cap')!.textContent;
+    document.getElementById('g-alt')!.textContent = thumb.alt;
+    if (d.code) code.textContent = d.code;
+    else {
+      code.textContent = '…';
+      if (!cache.has(d.json!)) cache.set(d.json!, await fetch(d.json!).then((r) => r.text()).catch(() => 'Could not load the scene.'));
+      if (list[at] === a) code.textContent = cache.get(d.json!)!;
+    }
+    copy.textContent = 'Copy';
+    if (!dlg.open) dlg.showModal();
+  }
+  document.querySelector('main')!.addEventListener('click', (e) => {
+    const a = (e.target as HTMLElement).closest<HTMLAnchorElement>('a.item');
+    if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault();
+    list = [...a.closest('ul')!.querySelectorAll<HTMLAnchorElement>('a.item')];
+    open(a);
+  });
+  const step = (n: number) => list.length && open(list[(at + n + list.length) % list.length]);
+  dlg.querySelectorAll<HTMLButtonElement>('[data-step]').forEach((b) => b.addEventListener('click', () => step(Number(b.dataset.step))));
+  dlg.addEventListener('keydown', (e) => {
+    if ((e.target as HTMLElement).closest('pre')) return;
+    if (e.key === 'ArrowRight') step(1);
+    if (e.key === 'ArrowLeft') step(-1);
+  });
+  dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener('close', () => list[at]?.focus());
+  copy.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(code.textContent || ''); copy.textContent = 'Copied'; } catch { copy.textContent = 'Select and copy'; }
+  });
+</script>
+
+<style>
+  .head { margin-top: 48px; }
+  .eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-text); margin: 0 0 12px; }
+  .head h1 { max-width: 16ch; text-wrap: balance; }
+  .lede { font-size: 1.2rem; color: var(--ink-soft); max-width: 720px; margin: 0 0 8px; }
+
+  /* sticky filter tabs; the row scrolls sideways on small screens, the page never does */
+  .tabs { position: sticky; top: 0; z-index: 5; background: var(--paper); border-block: 2px solid var(--ink); margin-top: 28px; }
+  .tabs-row { display: flex; gap: 6px; overflow-x: auto; padding-block: 10px; scrollbar-width: none; }
+  .tabs-row::-webkit-scrollbar { display: none; }
+  .tabs a {
+    flex: none; display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border-radius: 999px; border: 1.5px solid var(--rule);
+    background: var(--paper-2); color: var(--ink); text-decoration: none; font-size: 0.95rem; white-space: nowrap;
+  }
+  .tabs a:hover { border-color: var(--ink); color: var(--ink); }
+  .tabs a[aria-current] { background: var(--ink); border-color: var(--ink); color: var(--paper-2); }
+  .tabs small { font-family: var(--mono); font-size: 0.74rem; opacity: 0.75; }
+
+  .group { padding-top: 40px; scroll-margin-top: 64px; }
+  .group[hidden] { display: none; }
+  .group-head { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 8px 40px; align-items: end; margin-bottom: 20px; }
+  .group-head h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin: 0; }
+  .group-head p { margin: 0; color: var(--ink-soft); }
+
+  .grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); }
+  .grid-icons, .grid-formats { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+  .grid-icons .wide { grid-column: span 2; }
+  .grid-pixel { grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 10px; }
+  .grid-pixel .wide { grid-column: 1 / -1; }
+  @media (min-width: 700px) { .grid-pixel .wide { grid-column: span 4; } }
+  .grid-formats { align-items: end; }
+  .grid-formats .wide { grid-column: span 2; }
+  .item { display: block; position: relative; color: var(--ink); text-decoration: none; }
+  .item img {
+    width: 100%; height: auto; border: 2px solid var(--ink); background: var(--paper-2);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .tile .item img { border: 1px solid var(--rule); background: #f4f2ec; }
+  .item:hover img, .item:focus-visible img { transform: translate(-3px, -3px); box-shadow: 6px 6px 0 var(--accent); }
+  .cap { display: block; margin-top: 6px; font-family: var(--mono); font-size: 0.78rem; color: var(--ink-soft); overflow-wrap: anywhere; }
+  .tile .cap { font-size: 0.7rem; text-align: center; }
+
+  dialog {
+    width: min(1100px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); border: 2px solid var(--ink); border-radius: 0;
+    background: var(--paper); color: var(--ink); padding: 0; box-shadow: 8px 8px 0 var(--accent);
+  }
+  dialog::backdrop { background: rgba(20, 24, 31, 0.55); }
+  .dlg-bar { display: flex; justify-content: flex-end; gap: 4px; padding: 6px 8px; border-bottom: 1.5px solid var(--rule); position: sticky; top: 0; background: var(--paper); z-index: 1; }
+  .dlg-bar form { margin: 0; }
+  .nav-btn, .close { font: inherit; font-size: 1.3rem; line-height: 1; background: none; border: 1.5px solid transparent; border-radius: 999px; cursor: pointer; color: var(--ink); min-width: 40px; min-height: 40px; }
+  .nav-btn:hover, .close:hover { border-color: var(--ink); }
+  .close { font-size: 1.7rem; }
+  .dlg-body { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 22px; padding: 18px 20px 20px; align-items: start; }
+  .dlg-fig { margin: 0; display: flex; justify-content: center; background: var(--paper-2); border: 1.5px solid var(--rule); }
+  .dlg-fig img { width: auto; max-width: 100%; max-height: min(70dvh, 640px); height: auto; object-fit: contain; }
+  .dlg-fig img.vector { width: 100%; max-width: 420px; background: #f4f2ec; }
+  .dlg-side h2 { font-size: 1.5rem; margin: 0 0 6px; overflow-wrap: anywhere; }
+  .dlg-alt { color: var(--ink-soft); font-size: 0.96rem; margin: 0 0 14px; }
+  .code-head { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 0.78rem; color: var(--ink-soft); margin-bottom: 6px; }
+  .copy { font: inherit; font-size: 0.82rem; color: #fff; background: var(--accent); border: 0; border-radius: 6px; padding: 6px 14px; cursor: pointer; }
+  .copy:hover { background: var(--ink); }
+  dialog pre { margin: 0; max-height: 46dvh; overflow: auto; font-size: 0.74rem; background: var(--ink); color: #e9ecf4; border-color: var(--ink); white-space: pre-wrap; overflow-wrap: anywhere; }
+  .dlg-run { font-size: 0.86rem; color: var(--ink-soft); margin: 10px 0 0; }
+  .dlg-run code { overflow-wrap: anywhere; }
+
+  @media (max-width: 860px) {
+    .group-head { grid-template-columns: minmax(0, 1fr); }
+    .dlg-body { grid-template-columns: minmax(0, 1fr); padding: 14px; }
+    .dlg-fig img { max-height: 48dvh; }
+    dialog pre { max-height: 40dvh; }
+  }
+  @media (max-width: 520px) {
+    .grid { grid-template-columns: minmax(0, 1fr); }
+    .grid-icons, .grid-formats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .grid-pixel { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .tabs a { padding: 6px 12px; font-size: 0.9rem; }
+  }
+  @media (prefers-reduced-motion: reduce) { .item img { transition: none; } .item:hover img { transform: none; } }
+</style>

@@ -1,0 +1,27 @@
+{
+ "_meta": {
+  "title": "bicycle, rotated",
+  "alt": "The Folio drawing “bicycle” as a thick, lit 3D icon (rotated)"
+ },
+ "seed": 3,
+ "finish": "soft",
+ "canvas": [
+  600,
+  600
+ ],
+ "background": "#EAF3EC",
+ "elements": [
+  {
+   "type": "extrude3d",
+   "name": "bicycle",
+   "x": 300,
+   "y": 300,
+   "size": 360,
+   "rotate": [
+    -10,
+    34,
+    -4
+   ]
+  }
+ ]
+}

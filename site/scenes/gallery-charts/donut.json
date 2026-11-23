@@ -1,0 +1,43 @@
+{
+ "_meta": {
+  "title": "donut and a number",
+  "alt": "A large hand-inked donut chart with one coral slice pulled out, a short label beside it"
+ },
+ "seed": 5,
+ "elements": [
+  {
+   "type": "donut",
+   "x": 420,
+   "y": 336,
+   "r": 230,
+   "values": [
+    46,
+    28,
+    16,
+    10
+   ],
+   "highlight": 0,
+   "labels": [
+    "mobile",
+    "desktop",
+    "tablet",
+    "other"
+   ],
+   "labelSize": 17
+  },
+  {
+   "type": "label",
+   "text": "46%",
+   "x": 760,
+   "y": 300,
+   "size": 64
+  },
+  {
+   "type": "label",
+   "text": "of sample visits are mobile",
+   "x": 760,
+   "y": 350,
+   "size": 18
+  }
+ ]
+}

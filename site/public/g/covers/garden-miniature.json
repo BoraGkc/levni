@@ -1,0 +1,27 @@
+{
+  "seed": 18,
+  "style": "miniature",
+  "elements": [
+    {"type":"panel","x":24,"y":24,"w":1152,"h":625,"color":"mustard"},
+    {"type":"panel","x":46,"y":46,"w":1108,"h":581,"color":"coral"},
+    {"type":"panel","x":56,"y":56,"w":1088,"h":561,"color":"paper"},
+    {"type":"hills","base":560,"height":110,"color":"tone-green","x":56,"w":1088,"period":210},
+    {"type":"prop","name":"rosette","x":960,"y":170,"size":170,"shadow":true},
+    {"type":"prop","name":"blossom-sprig","x":190,"y":160,"size":210,"flip":true},
+    {"type":"prop","name":"arch-gate","x":610,"y":360,"size":300},
+    {"type":"prop","name":"cypress","x":250,"y":400,"size":300},
+    {"type":"prop","name":"cypress","x":340,"y":440,"size":220},
+    {"type":"prop","name":"cypress","x":880,"y":430,"size":240},
+    {"type":"panel","x":56,"y":556,"w":1088,"h":61,"color":"green"},
+    {"type":"prop","name":"tulip","x":470,"y":540,"size":130},
+    {"type":"prop","name":"tulip","variant":1,"x":545,"y":550,"size":110},
+    {"type":"prop","name":"tulip","x":680,"y":540,"size":130,"flip":true},
+    {"type":"prop","name":"tulip","variant":1,"x":755,"y":550,"size":110,"flip":true},
+    {"type":"prop","name":"carnation","x":1040,"y":530,"size":150},
+    {"type":"prop","name":"carnation","x":140,"y":535,"size":140},
+    {"type":"panel","x":24,"y":627,"w":1152,"h":22,"color":"mustard"},
+    {"type":"panel","x":46,"y":617,"w":1108,"h":10,"color":"coral"},
+    {"type":"panel","x":24,"y":24,"w":22,"h":625,"color":"mustard"},
+    {"type":"panel","x":1154,"y":24,"w":22,"h":625,"color":"mustard"}
+  ]
+}

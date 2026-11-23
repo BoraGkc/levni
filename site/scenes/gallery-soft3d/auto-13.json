@@ -1,0 +1,22 @@
+{
+ "_meta": {
+  "title": "auto, seed 13, mint night",
+  "alt": "A soft 3D cover in the mint night palette: a glossy spiral shape, the title “A field guide to open licences”"
+ },
+ "seed": 13,
+ "finish": "soft",
+ "background": "#140A35",
+ "elements": [
+  {
+   "type": "soft3d",
+   "preset": "auto",
+   "seed": 13,
+   "palette": "mint-night"
+  }
+ ],
+ "title": {
+  "text": "A field guide to open licences",
+  "kicker": "Guide",
+  "brand": "levni.dev"
+ }
+}

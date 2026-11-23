@@ -1,0 +1,22 @@
+{
+ "_meta": {
+  "title": "laptop",
+  "alt": "The Folio drawing “laptop” as a thick, lit 3D icon"
+ },
+ "seed": 3,
+ "finish": "soft",
+ "canvas": [
+  600,
+  600
+ ],
+ "background": "#E9EEF7",
+ "elements": [
+  {
+   "type": "extrude3d",
+   "name": "laptop",
+   "x": 300,
+   "y": 300,
+   "size": 360
+  }
+ ]
+}

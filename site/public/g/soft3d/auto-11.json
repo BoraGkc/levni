@@ -1,0 +1,9 @@
+{
+  "seed": 11,
+  "finish": "soft",
+  "background": "#E4EEF9",
+  "elements": [
+    {"type":"soft3d","preset":"auto","seed":11,"palette":"aqua"}
+  ],
+  "title": {"text":"The return of the corner shop","kicker":"Cities","brand":"levni.dev"}
+}

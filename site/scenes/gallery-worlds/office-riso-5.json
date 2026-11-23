@@ -1,0 +1,14 @@
+{
+ "_meta": {
+  "title": "\"office\", seed 5",
+  "alt": "A hand-inked isometric office diorama on a floating slab, riso colours, seed 5"
+ },
+ "seed": 5,
+ "elements": [
+  {
+   "type": "iso",
+   "preset": "office",
+   "seed": 5
+  }
+ ]
+}

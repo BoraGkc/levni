@@ -1,0 +1,18 @@
+{
+ "_meta": {
+  "title": "\"desk\", soft, warm",
+  "alt": "A smooth toy-like isometric desk diorama in warm colours"
+ },
+ "seed": 4,
+ "finish": "soft",
+ "background": "paper",
+ "elements": [
+  {
+   "type": "iso",
+   "preset": "desk",
+   "seed": 4,
+   "style": "soft",
+   "palette": "warm"
+  }
+ ]
+}

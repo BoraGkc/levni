@@ -1,0 +1,8 @@
+{
+  "seed": 3,
+  "finish": "soft",
+  "background": "#FCEDE2",
+  "elements": [
+    {"type":"soft3d","preset":"mobius","seed":3,"palette":"sunset"}
+  ]
+}

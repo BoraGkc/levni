@@ -1,0 +1,18 @@
+{
+ "_meta": {
+  "title": "\"room\", soft, pastel",
+  "alt": "A smooth toy-like isometric room diorama in pastel colours"
+ },
+ "seed": 3,
+ "finish": "soft",
+ "background": "paper",
+ "elements": [
+  {
+   "type": "iso",
+   "preset": "room",
+   "seed": 3,
+   "style": "soft",
+   "palette": "pastel"
+  }
+ ]
+}

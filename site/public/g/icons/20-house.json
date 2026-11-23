@@ -1,0 +1,9 @@
+{
+  "seed": 3,
+  "finish": "soft",
+  "canvas": [600,600],
+  "background": "#F5F0DF",
+  "elements": [
+    {"type":"extrude3d","name":"house","x":300,"y":300,"size":360}
+  ]
+}

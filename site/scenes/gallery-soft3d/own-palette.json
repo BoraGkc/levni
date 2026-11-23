@@ -1,0 +1,31 @@
+{
+ "_meta": {
+  "title": "your own palette",
+  "alt": "A soft 3D ribbon in a custom peach, coral and violet palette on warm cream, with a title"
+ },
+ "seed": 6,
+ "finish": "soft",
+ "background": "#F2EEE6",
+ "elements": [
+  {
+   "type": "soft3d",
+   "preset": "ribbon",
+   "seed": 6,
+   "palette": {
+    "background": [
+     "#F2EEE6",
+     "#E4DCCD"
+    ],
+    "stops": [
+     "#FFB36B",
+     "#FF5E62",
+     "#8E3BC9"
+    ]
+   }
+  }
+ ],
+ "title": {
+  "text": "Brand colours, one line of JSON",
+  "kicker": "Your palette"
+ }
+}

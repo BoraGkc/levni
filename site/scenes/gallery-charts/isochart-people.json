@@ -1,0 +1,36 @@
+{
+ "_meta": {
+  "title": "isochart, people",
+  "alt": "Rows of faceless pictogram people counting sample values, one row per group"
+ },
+ "seed": 3,
+ "elements": [
+  {
+   "type": "label",
+   "text": "One figure = 10 people (sample)",
+   "x": 90,
+   "y": 90,
+   "size": 18
+  },
+  {
+   "type": "isochart",
+   "x": 260,
+   "y": 150,
+   "values": [
+    80,
+    55,
+    32,
+    12.5
+   ],
+   "unit": 10,
+   "size": 92,
+   "labels": [
+    "city",
+    "suburbs",
+    "towns",
+    "villages"
+   ],
+   "labelSize": 17
+  }
+ ]
+}

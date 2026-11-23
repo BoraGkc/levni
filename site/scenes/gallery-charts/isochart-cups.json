@@ -1,0 +1,39 @@
+{
+ "_meta": {
+  "title": "isochart, any prop",
+  "alt": "Rows of coffee cups counting sample values per weekday"
+ },
+ "seed": 3,
+ "elements": [
+  {
+   "type": "label",
+   "text": "Cups of coffee per day (sample)",
+   "x": 90,
+   "y": 90,
+   "size": 18
+  },
+  {
+   "type": "isochart",
+   "x": 240,
+   "y": 150,
+   "values": [
+    6,
+    4.5,
+    5,
+    3,
+    7
+   ],
+   "unit": 1,
+   "icon": "coffee-cup",
+   "size": 86,
+   "labels": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri"
+   ],
+   "labelSize": 17
+  }
+ ]
+}

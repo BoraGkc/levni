@@ -1,0 +1,60 @@
+{
+ "_meta": {
+  "title": "spot, miniature pack",
+  "alt": "The same spot illustration in miniature colours"
+ },
+ "seed": 11,
+ "elements": [
+  {
+   "type": "disc",
+   "x": 600,
+   "y": 340,
+   "r": 250,
+   "color": "tone-mustard"
+  },
+  {
+   "type": "prop",
+   "name": "book-stack",
+   "x": 470,
+   "y": 380,
+   "size": 300,
+   "extrude": true
+  },
+  {
+   "type": "prop",
+   "name": "coffee-cup",
+   "x": 760,
+   "y": 410,
+   "size": 220,
+   "shade": true
+  },
+  {
+   "type": "prop",
+   "name": "lightbulb",
+   "x": 640,
+   "y": 170,
+   "size": 170
+  },
+  {
+   "type": "ticks",
+   "x": 700,
+   "y": 120,
+   "angle": -40
+  },
+  {
+   "type": "marks",
+   "area": [
+    120,
+    80,
+    960,
+    520
+   ],
+   "count": 7,
+   "colors": [
+    "coral",
+    "blue"
+   ]
+  }
+ ],
+ "style": "miniature"
+}

@@ -1,0 +1,46 @@
+{
+ "_meta": {
+  "title": "a row of 3D icons",
+  "alt": "Five Folio drawings extruded into thick, lit 3D icons in a row: a camera, a globe, a cup of Turkish coffee, a trophy and a rocket"
+ },
+ "seed": 4,
+ "finish": "soft",
+ "background": "#E9EEF7",
+ "elements": [
+  {
+   "type": "extrude3d",
+   "name": "camera",
+   "x": 140,
+   "y": 336,
+   "size": 190
+  },
+  {
+   "type": "extrude3d",
+   "name": "globe",
+   "x": 370,
+   "y": 336,
+   "size": 200
+  },
+  {
+   "type": "extrude3d",
+   "name": "turkish-coffee-cup",
+   "x": 600,
+   "y": 336,
+   "size": 190
+  },
+  {
+   "type": "extrude3d",
+   "name": "trophy",
+   "x": 830,
+   "y": 336,
+   "size": 200
+  },
+  {
+   "type": "extrude3d",
+   "name": "rocket",
+   "x": 1060,
+   "y": 336,
+   "size": 210
+  }
+ ]
+}

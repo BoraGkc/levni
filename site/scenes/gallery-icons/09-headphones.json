@@ -1,0 +1,22 @@
+{
+ "_meta": {
+  "title": "headphones",
+  "alt": "The Folio drawing “headphones” as a thick, lit 3D icon"
+ },
+ "seed": 3,
+ "finish": "soft",
+ "canvas": [
+  600,
+  600
+ ],
+ "background": "#EFEAF8",
+ "elements": [
+  {
+   "type": "extrude3d",
+   "name": "headphones",
+   "x": 300,
+   "y": 300,
+   "size": 360
+  }
+ ]
+}

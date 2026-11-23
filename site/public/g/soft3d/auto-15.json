@@ -1,0 +1,9 @@
+{
+  "seed": 15,
+  "finish": "soft",
+  "background": "#071A5C",
+  "elements": [
+    {"type":"soft3d","preset":"auto","seed":15,"palette":"mono-blue"}
+  ],
+  "title": {"text":"Notes on a slower internet","kicker":"Essay","brand":"levni.dev"}
+}

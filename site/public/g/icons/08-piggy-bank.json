@@ -1,0 +1,9 @@
+{
+  "seed": 3,
+  "finish": "soft",
+  "canvas": [600,600],
+  "background": "#EAF3EC",
+  "elements": [
+    {"type":"extrude3d","name":"piggy-bank","x":300,"y":300,"size":360,"rotate":[-24,-10,6],"recolor":{"coral":"green","mustard":"coral"}}
+  ]
+}
