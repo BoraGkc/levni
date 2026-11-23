@@ -4,6 +4,7 @@
 // and paper grain. Coordinates are world units (≈ px at scale 1): x to the lower right, y to the lower left, z up.
 import { findProp } from './props.mjs';
 import { flattenPath } from './ink.mjs';
+import { wantsKit, expandKit } from './iso-kit.mjs';
 
 const C30 = Math.cos(Math.PI / 6), S30 = 0.5;
 
@@ -34,6 +35,8 @@ const tones = (name) => TONES[name] || [name, name, name];
 
 export function expandIso(e) {
   if (e.type !== 'iso') return [e];
+  // diorama bases, presets, the soft style and the newer object kinds live in the iso kit (iso-kit.mjs)
+  if (wantsKit(e)) return expandKit(e);
   const s = e.scale ?? 1, ox = e.x ?? 600, oy = e.y ?? 400, lw = e.weight ?? 7;
   // projection: 'iso' (30° isometric, default) or 'oblique' (cabinet: front face flat, depth at 45° and half scale).
   // One projection per scene (research: never mix). In oblique, y is depth going back, x to the right.

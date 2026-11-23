@@ -58,18 +58,19 @@ Node 20+. The only dependency is [sharp](https://sharp.pixelplumbing.com).
 | **Scenes and the critic** | 55 element types on a 1200 × 673 canvas. Pressure-brush ink, riso plate misregistration, paper grain. Same seed, same picture. Every render returns layout notes: off-canvas, accidental crops, lopsided weight, no focal point. |
 | **Style packs and your inks** | `riso` (default), `miniature` (Tulip Era colours, with its own tulips, carnations, cypresses and medallion), or your own colour map: every drawing follows your brand. |
 | **Soft 3D finish** | `"finish": "soft"`: clean edges and film grain. A real little 3D renderer (pure JS, no GPU): glossy `ribbon3d` bands (loop, Möbius, spiral, knot), `torus3d`, `sphere3d`, `capsule3d`, `blob3d`, `cubes3d`, interlocking shapes in one `soft3d` scene, `extrude3d` that turns any Folio drawing into a 3D icon, and `soft3d` cover presets (`"preset": "auto"`, five palettes) with room for a title and an `image` badge. [Guide](docs/scene.md#soft-3d-v2-real-3d-shapes-use-with-finish-soft) |
-| **Little 3D worlds** | `iso` rooms, desks, stages and streets from floors, walls, boxes and cylinders, with props standing inside. |
+| **Little 3D worlds** | `iso` dioramas: one line (`"preset": "cafe"`, also `room`, `desk`, `street`, `city`, `office`, `classroom`) lays out a seeded world on a floating slab with soil layers and a soft shadow. 37 object kinds (walls with windows, doors and arches, stairs, roofs, fences, ponds, roads, trees, lamps, furniture, cars, people, posters hung on walls), soft occlusion, painter's order from real 3D boxes, in the riso hand or `"style": "soft"` toy 3D. |
 | **Faceless people** | `person` in 15 poses (walking, pointing, reading, phone, cheering, …), `people` in a row. Round heads, no faces, by design. |
 | **Fusion slots** | Put any drawing inside another: a chart on a TV screen, a tulip in a magnifier's lens. 64 hosts have slots. |
 | **Hand-inked data** | `bars`, `linechart`, `pie`, `donut`, `isochart` from plain numbers. |
 | **Every format, plus a title** | cover, og, square, story, youtube: recomposed, not cropped. Optional headline, kicker and brand layer. |
 | **Calm images for hard news** | A blue-only pack for loss, disaster, illness, courts and grief. [Guide](docs/sensitive.md) |
 
-The `miniature` pack, the `soft` finish and soft 3D, people, slots and charts:
+The `miniature` pack, the `soft` finish and soft 3D, iso dioramas, people, slots and charts:
 
 | | | |
 | --- | --- | --- |
 | ![The isometric room in miniature colours](examples/room-miniature.png) | ![A blue-teal gradient ribbon arching across a pale background](examples/ribbon-loop.png) | ![Three mint tube rings on deep purple](examples/ribbon-rings.png) |
+| ![A floating island city in riso colours: towers, gabled houses, roads and a park](examples/iso-city.png) | ![An isometric cafe diorama with a counter, a barista and guests at round tables](examples/iso-cafe.png) | ![A pastel street diorama in the soft style: houses, a road, lamp posts and trees](examples/iso-soft.png) |
 | ![Pictogram people walking, cheering and handing over an object](examples/people.png) | ![A chart drawn inside an old TV screen](examples/slots-tv.png) | ![Hand-drawn bar, line and donut charts with sample data](examples/chart-inflation.png) |
 | ![A soft 3D cover: a glossy teal-to-indigo ribbon loop on pale blue, a title and a badge](examples/soft3d-auto-aqua.png) | ![A chain of four interlocking glossy mint and violet rings on deep purple](examples/soft3d-tori.png) | ![Five library drawings as 3D icons: rocket, light bulb, tulip, trophy, heart](examples/soft3d-icons.png) |
 
