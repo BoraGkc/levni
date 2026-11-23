@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "screen": [23, 22, 53, 36] },
    "note": "open laptop, glowing blue screen",
    "paths": [
     {

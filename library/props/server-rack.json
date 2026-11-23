@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "unit1": [31, 17, 28, 15], "unit2": [31, 40, 28, 15], "unit3": [31, 63, 28, 15] },
    "note": "front, tall rack with three units and LEDs, green tint",
    "paths": [
     {

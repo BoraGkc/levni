@@ -10,6 +10,7 @@
   ],
   "variants": [
     {
+      "slots": { "front": [14, 34, 72, 50], "top": [50, 8] },
       "note": "harvested from .cache/cizim-drafts/chris-rock-affetme/ici-1.json",
       "paths": [
         {

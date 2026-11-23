@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "left": [12, 30, 22, 42], "right": [42, 30, 44, 40], "pin": [63, 59] },
    "note": "folded map with coral pin",
    "paths": [
     {

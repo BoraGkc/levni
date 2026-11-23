@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "lens": [26, 23, 35, 35] },
    "note": "magnifier, tone lens, handle bottom right",
    "paths": [
     {

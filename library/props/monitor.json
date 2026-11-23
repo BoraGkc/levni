@@ -10,6 +10,7 @@
  ],
  "variants": [
   {
+   "slots": { "screen": [22, 23, 60, 36] },
    "note": "desktop monitor on stand, blue screen with bars",
    "paths": [
     {

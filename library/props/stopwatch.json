@@ -10,6 +10,7 @@
  ],
  "variants": [
   {
+   "slots": { "face": [28, 34, 45, 45], "top": [50, 7] },
    "note": "front, crown button, hand, four ticks",
    "paths": [
     {

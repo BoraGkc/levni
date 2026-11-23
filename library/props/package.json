@@ -10,6 +10,7 @@
  ],
  "variants": [
   {
+   "slots": { "front": [17, 54, 28, 28], "top": [50, 38] },
    "note": "cardboard box, three-quarter, tape strip",
    "paths": [
     {

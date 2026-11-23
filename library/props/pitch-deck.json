@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "board": [15, 15, 72, 45] },
    "note": "screen on tripod stand, rising bars and line",
    "paths": [
     {

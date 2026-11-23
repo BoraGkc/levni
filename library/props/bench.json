@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "seat": [50, 55] },
    "note": "front view, slatted back",
    "paths": [
     {

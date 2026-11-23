@@ -12,6 +12,7 @@ import { expandProp } from './props.mjs';
 import { expandIso } from './iso.mjs';
 import { flattenPath, inkLine, plateOffsets } from './ink.mjs';
 import { applyStyle } from './styles.mjs';
+import { resolveSlots } from './slots.mjs';
 
 export const COLORS = { blue: P.blue, ink: P.ink, coral: P.coral, mustard: P.mustard, green: P.green, paper: P.paper, white: P.white, dark: P.dark, tone: '#7FA6F2', 'tone-coral': '#FFB49A', 'tone-green': '#86C796', 'tone-mustard': '#FFE08A', none: 'none' };
 const c = (name, fallback = P.ink) => (name == null ? fallback : COLORS[name] || (/^#[0-9a-f]{6}$/i.test(name) ? name : fallback));
@@ -44,7 +45,7 @@ export async function compose(spec) {
   let clip = 0;
 
   // props (library/props/*.json) are pre-drawn `draw` elements and `iso` is a macro: expand them first
-  for (const e of (spec.elements || []).flatMap(expandIso).map(expandProp)) {
+  for (const e of resolveSlots((spec.elements || []).flatMap(expandIso).map(expandProp))) {
     const t = e.type;
     cur = e;
     if ((t === 'icon' || t === 'ascii') && !iconsAvailable()) {

@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "body": [22, 37, 50, 24], "reel-left": [23, 8, 19, 21], "reel-right": [47, 10, 19, 21], "lens": [77, 38, 13, 23] },
    "note": "cinema camera on tripod, two reels, coral lens",
    "paths": [
     {

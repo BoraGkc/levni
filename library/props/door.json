@@ -7,6 +7,7 @@
   ],
   "variants": [
     {
+      "slots": { "panel": [32, 24, 36, 68], "knob": [61, 83] },
       "note": "harvested from .cache/cizim-compose/ice/ici-1.json",
       "paths": [
         {

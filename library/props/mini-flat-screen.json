@@ -6,6 +6,7 @@
   ],
   "variants": [
     {
+      "slots": { "screen": [8, 12, 84, 48] },
       "note": "harvested from .cache/cizim-drafts/sopranosun-etkisi-21/kapak.json",
       "paths": [
         {

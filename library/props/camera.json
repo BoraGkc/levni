@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "lens": [37, 45, 29, 29], "top": [43, 24] },
    "note": "front view, coral grip stripe, big lens",
    "paths": [
     {

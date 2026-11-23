@@ -10,6 +10,7 @@
  ],
  "variants": [
   {
+   "slots": { "grid": [14, 42, 72, 43], "header": [14, 21, 72, 14] },
    "note": "front, mustard header, rings and date dots",
    "paths": [
     {

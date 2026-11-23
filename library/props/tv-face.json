@@ -6,6 +6,7 @@
   ],
   "variants": [
     {
+      "slots": { "screen": [5, 8, 62, 84] },
       "note": "harvested from .cache/cizim-drafts/trump-tv-basarisizligi/kapak-3d.json",
       "paths": [
         {

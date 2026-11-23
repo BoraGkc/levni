@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "belly": [28, 50, 44, 32], "top": [50, 8] },
    "note": "tied sack, coral knot band",
    "paths": [
     {

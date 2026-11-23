@@ -7,6 +7,7 @@
   ],
   "variants": [
     {
+      "slots": { "body": [30, 48, 40, 36], "opening": [50, 38] },
       "note": "harvested from .cache/cizim-drafts/gentle-monster-kum/kapak-v2.json",
       "paths": [
         {

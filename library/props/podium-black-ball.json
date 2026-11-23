@@ -6,6 +6,7 @@
   ],
   "variants": [
     {
+      "slots": { "first": [50, 44], "second": [21, 61], "third": [79, 71] },
       "note": "harvested from .cache/cizim-drafts/la-bola-negra/ici-2.json",
       "paths": [
         {

@@ -8,6 +8,7 @@
   ],
   "variants": [
     {
+      "slots": { "screen": [21, 41, 30, 39], "dial": [72, 70], "top": [50, 25] },
       "note": "harvested from .cache/cizim-drafts/de-gaulle-direnisi/kapak.json",
       "paths": [
         {

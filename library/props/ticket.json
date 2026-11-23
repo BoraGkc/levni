@@ -10,6 +10,7 @@
  ],
  "variants": [
   {
+   "slots": { "body": [16, 38, 44, 26], "stub": [70, 34, 18, 26] },
    "note": "ticket with perforation and star, coral stub",
    "paths": [
     {

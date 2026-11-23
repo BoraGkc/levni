@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "left": [14, 35, 34, 40], "right": [53, 35, 34, 40], "photo": [18, 36, 27, 14] },
    "note": "folded open newspaper, tone headline block",
    "paths": [
     {

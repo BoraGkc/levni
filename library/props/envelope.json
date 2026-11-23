@@ -10,6 +10,7 @@
  ],
  "variants": [
   {
+   "slots": { "front": [12, 46, 76, 28], "top": [50, 27] },
    "note": "closed envelope with flap and coral seal",
    "paths": [
     {

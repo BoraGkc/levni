@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "board": [17, 45, 66, 38] },
    "note": "closed slate, tone stripes, coral top",
    "paths": [
     {

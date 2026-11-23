@@ -14,6 +14,7 @@
   ],
   "variants": [
     {
+      "slots": { "screen": [17, 34, 48, 44] },
       "note": "harvested from .cache/cizim-drafts/other-desert-cities/ici-2-alt.json",
       "paths": [
         {

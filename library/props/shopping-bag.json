@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "front": [22, 40, 58, 46], "top": [50, 8] },
    "note": "paper bag with handles",
    "paths": [
     {

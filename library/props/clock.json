@@ -9,6 +9,7 @@
  ],
  "variants": [
   {
+   "slots": { "face": [22, 20, 56, 56] },
    "note": "round wall clock with hands, coral face offset",
    "paths": [
     {
