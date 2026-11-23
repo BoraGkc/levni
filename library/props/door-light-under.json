@@ -1,65 +1,66 @@
 {
-  "name": "door-light-under",
-  "tags": [
-    "sensitive",
-    "door",
-    "kapı",
-    "closed",
-    "kapalı",
-    "light",
-    "ışık",
-    "waiting",
-    "bekleme",
-    "hospital",
-    "verdict",
-    "home",
-    "ev"
-  ],
-  "variants": [
+ "name": "door-light-under",
+ "category": "home",
+ "tags": [
+  "sensitive",
+  "door",
+  "kapı",
+  "closed",
+  "kapalı",
+  "light",
+  "ışık",
+  "waiting",
+  "bekleme",
+  "hospital",
+  "verdict",
+  "home",
+  "ev"
+ ],
+ "variants": [
+  {
+   "note": "closed door with a line of light beneath",
+   "paths": [
     {
-      "note": "closed door with a line of light beneath",
-      "paths": [
-        {
-          "d": "M26 6 L74 6 L74 80 L26 80 Z",
-          "fill": "blue",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M33 14 L67 14 L67 40 L33 40 Z",
-          "fill": "blue",
-          "stroke": "tone",
-          "weight": 4
-        },
-        {
-          "d": "M33 46 L67 46 L67 72 L33 72 Z",
-          "fill": "blue",
-          "stroke": "tone",
-          "weight": 4
-        },
-        {
-          "d": "M66 52 h.1",
-          "stroke": "paper",
-          "weight": 9
-        },
-        {
-          "d": "M26 80 L74 80 L74 85 L26 85 Z",
-          "fill": "white",
-          "stroke": "ink",
-          "weight": 4
-        },
-        {
-          "d": "M28 86 L72 86 L90 96 L10 96 Z",
-          "fill": "tone",
-          "stroke": "none"
-        },
-        {
-          "d": "M6 85 L94 85",
-          "stroke": "ink",
-          "weight": 7
-        }
-      ]
+     "d": "M26 6 L74 6 L74 80 L26 80 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M33 14 L67 14 L67 40 L33 40 Z",
+     "fill": "blue",
+     "stroke": "tone",
+     "weight": 4
+    },
+    {
+     "d": "M33 46 L67 46 L67 72 L33 72 Z",
+     "fill": "blue",
+     "stroke": "tone",
+     "weight": 4
+    },
+    {
+     "d": "M66 52 h.1",
+     "stroke": "paper",
+     "weight": 9
+    },
+    {
+     "d": "M26 80 L74 80 L74 85 L26 85 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M28 86 L72 86 L90 96 L10 96 Z",
+     "fill": "tone",
+     "stroke": "none"
+    },
+    {
+     "d": "M6 85 L94 85",
+     "stroke": "ink",
+     "weight": 7
     }
-  ],
-  "author": "Ortak Alan (AI-assisted, directed and checked)"
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
 }

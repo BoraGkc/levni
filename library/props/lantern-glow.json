@@ -1,64 +1,65 @@
 {
-  "name": "lantern-glow",
-  "tags": [
-    "sensitive",
-    "lantern",
-    "fener",
-    "light",
-    "ışık",
-    "vigil",
-    "nöbet",
-    "hope",
-    "umut",
-    "night",
-    "gece",
-    "memorial"
-  ],
-  "variants": [
+ "name": "lantern-glow",
+ "category": "home",
+ "tags": [
+  "sensitive",
+  "lantern",
+  "fener",
+  "light",
+  "ışık",
+  "vigil",
+  "nöbet",
+  "hope",
+  "umut",
+  "night",
+  "gece",
+  "memorial"
+ ],
+ "variants": [
+  {
+   "note": "hanging lantern with a small flame",
+   "paths": [
     {
-      "note": "hanging lantern with a small flame",
-      "paths": [
-        {
-          "d": "M42 12 Q50 0 58 12",
-          "stroke": "ink",
-          "weight": 5
-        },
-        {
-          "d": "M36 24 L64 24 L58 14 L42 14 Z",
-          "fill": "blue",
-          "stroke": "ink",
-          "weight": 6
-        },
-        {
-          "d": "M36 24 L64 24 Q70 50 64 74 L36 74 Q30 50 36 24Z",
-          "fill": "white",
-          "stroke": "ink",
-          "weight": 7
-        },
-        {
-          "d": "M44 24 Q40 50 44 74",
-          "stroke": "ink",
-          "weight": 3
-        },
-        {
-          "d": "M56 24 Q60 50 56 74",
-          "stroke": "ink",
-          "weight": 3
-        },
-        {
-          "d": "M50 42 Q42.8 53.2 50 61.2 Q57.2 53.2 50 42Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 5
-        },
-        {
-          "d": "M34 74 L66 74 L62 84 L38 84 Z",
-          "fill": "blue",
-          "stroke": "ink",
-          "weight": 6
-        }
-      ]
+     "d": "M42 12 Q50 0 58 12",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M36 24 L64 24 L58 14 L42 14 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M36 24 L64 24 Q70 50 64 74 L36 74 Q30 50 36 24Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M44 24 Q40 50 44 74",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M56 24 Q60 50 56 74",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M50 42 Q42.8 53.2 50 61.2 Q57.2 53.2 50 42Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M34 74 L66 74 L62 84 L38 84 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 6
     }
-  ],
-  "author": "Ortak Alan (AI-assisted, directed and checked)"
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
 }

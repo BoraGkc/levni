@@ -1,108 +1,109 @@
 {
-  "name": "window-night-light",
-  "tags": [
-    "sensitive",
-    "window",
-    "pencere",
-    "night",
-    "gece",
-    "light",
-    "ışık",
-    "home",
-    "ev",
-    "vigil",
-    "waiting",
-    "bekleme",
-    "loneliness"
-  ],
-  "variants": [
+ "name": "window-night-light",
+ "category": "home",
+ "tags": [
+  "sensitive",
+  "window",
+  "pencere",
+  "night",
+  "gece",
+  "light",
+  "ışık",
+  "home",
+  "ev",
+  "vigil",
+  "waiting",
+  "bekleme",
+  "loneliness"
+ ],
+ "variants": [
+  {
+   "note": "one lit window in a dark wall",
+   "paths": [
     {
-      "note": "one lit window in a dark wall",
-      "paths": [
-        {
-          "d": "M10 8 L90 8 L90 92 L10 92 Z",
-          "fill": "blue",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M28 20 L72 20 L72 70 L28 70 Z",
-          "fill": "white",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M50 20 L50 70",
-          "stroke": "ink",
-          "weight": 6
-        },
-        {
-          "d": "M28 45 L72 45",
-          "stroke": "ink",
-          "weight": 6
-        },
-        {
-          "d": "M24 70 L76 70 L76 77 L24 77 Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 6
-        },
-        {
-          "d": "M18 16 h.1",
-          "stroke": "paper",
-          "weight": 5
-        },
-        {
-          "d": "M82 24 h.1",
-          "stroke": "paper",
-          "weight": 4
-        },
-        {
-          "d": "M84 84 h.1",
-          "stroke": "paper",
-          "weight": 5
-        },
-        {
-          "d": "M16 82 h.1",
-          "stroke": "paper",
-          "weight": 4
-        }
-      ]
+     "d": "M10 8 L90 8 L90 92 L10 92 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 8
     },
     {
-      "note": "lit window with a drawn curtain edge",
-      "paths": [
-        {
-          "d": "M10 8 L90 8 L90 92 L10 92 Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M28 20 L72 20 L72 70 L28 70 Z",
-          "fill": "white",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M50 20 L50 70",
-          "stroke": "ink",
-          "weight": 6
-        },
-        {
-          "d": "M28 20 L44 20 Q40 44 44 70 L28 70 Z",
-          "fill": "blue",
-          "stroke": "ink",
-          "weight": 5
-        },
-        {
-          "d": "M24 70 L76 70 L76 77 L24 77 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 6
-        }
-      ]
+     "d": "M28 20 L72 20 L72 70 L28 70 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 20 L50 70",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M28 45 L72 45",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M24 70 L76 70 L76 77 L24 77 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M18 16 h.1",
+     "stroke": "paper",
+     "weight": 5
+    },
+    {
+     "d": "M82 24 h.1",
+     "stroke": "paper",
+     "weight": 4
+    },
+    {
+     "d": "M84 84 h.1",
+     "stroke": "paper",
+     "weight": 5
+    },
+    {
+     "d": "M16 82 h.1",
+     "stroke": "paper",
+     "weight": 4
     }
-  ],
-  "author": "Ortak Alan (AI-assisted, directed and checked)"
+   ]
+  },
+  {
+   "note": "lit window with a drawn curtain edge",
+   "paths": [
+    {
+     "d": "M10 8 L90 8 L90 92 L10 92 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M28 20 L72 20 L72 70 L28 70 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 20 L50 70",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M28 20 L44 20 Q40 44 44 70 L28 70 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M24 70 L76 70 L76 77 L24 77 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
 }

@@ -1,112 +1,113 @@
 {
-  "name": "memorial-candle",
-  "tags": [
-    "sensitive",
-    "candle",
-    "mum",
-    "anma",
-    "memorial",
-    "grief",
-    "yas",
-    "loss",
-    "kayıp",
-    "remembrance"
-  ],
-  "variants": [
+ "name": "memorial-candle",
+ "category": "home",
+ "tags": [
+  "sensitive",
+  "candle",
+  "mum",
+  "anma",
+  "memorial",
+  "grief",
+  "yas",
+  "loss",
+  "kayıp",
+  "remembrance"
+ ],
+ "variants": [
+  {
+   "note": "glass jar candle, small white flame",
+   "paths": [
     {
-      "note": "glass jar candle, small white flame",
-      "paths": [
-        {
-          "d": "M30 48 L30 88 Q30 92 34 92 L66 92 Q70 92 70 88 L70 48 Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M34 58 L66 58 L66 88 L34 88 Z",
-          "fill": "paper",
-          "stroke": "none"
-        },
-        {
-          "d": "M28 48 L72 48",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M50 48 L50 58",
-          "stroke": "ink",
-          "weight": 5
-        },
-        {
-          "d": "M50 20 Q40.1 35.400000000000006 50 46.400000000000006 Q59.9 35.400000000000006 50 20Z",
-          "fill": "white",
-          "stroke": "ink",
-          "weight": 5
-        },
-        {
-          "d": "M40 66 L40 82",
-          "stroke": "white",
-          "weight": 4
-        }
-      ]
+     "d": "M30 48 L30 88 Q30 92 34 92 L66 92 Q70 92 70 88 L70 48 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
     },
     {
-      "note": "tall taper in a low holder",
-      "paths": [
-        {
-          "d": "M40 34 L60 34 L60 74 L40 74 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M50 34 L50 29",
-          "stroke": "ink",
-          "weight": 5
-        },
-        {
-          "d": "M50 4 Q40.1 19.400000000000002 50 30.400000000000002 Q59.9 19.400000000000002 50 4Z",
-          "fill": "white",
-          "stroke": "ink",
-          "weight": 5
-        },
-        {
-          "d": "M24 74 L76 74 L70 86 L30 86 Z",
-          "fill": "blue",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M18 86 L82 86 L82 94 L18 94 Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 7
-        }
-      ]
+     "d": "M34 58 L66 58 L66 88 L34 88 Z",
+     "fill": "paper",
+     "stroke": "none"
     },
     {
-      "note": "tealight in a cup",
-      "paths": [
-        {
-          "d": "M14 52 L86 52 L78 88 L22 88 Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M20 52 Q50 42 80 52 Q50 60 20 52Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 6
-        },
-        {
-          "d": "M50 14 Q38.3 32.2 50 45.2 Q61.7 32.2 50 14Z",
-          "fill": "white",
-          "stroke": "ink",
-          "weight": 5
-        }
-      ]
+     "d": "M28 48 L72 48",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 48 L50 58",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 20 Q40.1 35.400000000000006 50 46.400000000000006 Q59.9 35.400000000000006 50 20Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M40 66 L40 82",
+     "stroke": "white",
+     "weight": 4
     }
-  ],
-  "author": "Ortak Alan (AI-assisted, directed and checked)"
+   ]
+  },
+  {
+   "note": "tall taper in a low holder",
+   "paths": [
+    {
+     "d": "M40 34 L60 34 L60 74 L40 74 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 34 L50 29",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 4 Q40.1 19.400000000000002 50 30.400000000000002 Q59.9 19.400000000000002 50 4Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M24 74 L76 74 L70 86 L30 86 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M18 86 L82 86 L82 94 L18 94 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  },
+  {
+   "note": "tealight in a cup",
+   "paths": [
+    {
+     "d": "M14 52 L86 52 L78 88 L22 88 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20 52 Q50 42 80 52 Q50 60 20 52Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M50 14 Q38.3 32.2 50 45.2 Q61.7 32.2 50 14Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
 }

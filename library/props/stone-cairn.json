@@ -1,65 +1,66 @@
 {
-  "name": "stone-cairn",
-  "tags": [
-    "sensitive",
-    "cairn",
-    "stones",
-    "taş",
-    "stack",
-    "memorial",
-    "anma",
-    "path",
-    "yol",
-    "balance",
-    "denge",
-    "grief",
-    "remembrance"
-  ],
-  "variants": [
+ "name": "stone-cairn",
+ "category": "nature",
+ "tags": [
+  "sensitive",
+  "cairn",
+  "stones",
+  "taş",
+  "stack",
+  "memorial",
+  "anma",
+  "path",
+  "yol",
+  "balance",
+  "denge",
+  "grief",
+  "remembrance"
+ ],
+ "variants": [
+  {
+   "note": "four balanced stones",
+   "paths": [
     {
-      "note": "four balanced stones",
-      "paths": [
-        {
-          "d": "M6 92 L94 92",
-          "stroke": "ink",
-          "weight": 5
-        },
-        {
-          "d": "M14 90 Q10 70 34 66 L66 66 Q90 70 86 90 Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M24 66 Q22 52 38 50 L62 50 Q78 52 76 66 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M34 50 Q34 40 44 38 L58 38 Q68 40 66 50 Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M42 38 Q42 28 50 26 Q58 28 58 38 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M22 80 Q30 76 38 80",
-          "stroke": "ink",
-          "weight": 3
-        },
-        {
-          "d": "M60 58 Q66 56 70 58",
-          "stroke": "ink",
-          "weight": 3
-        }
-      ]
+     "d": "M6 92 L94 92",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M14 90 Q10 70 34 66 L66 66 Q90 70 86 90 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24 66 Q22 52 38 50 L62 50 Q78 52 76 66 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M34 50 Q34 40 44 38 L58 38 Q68 40 66 50 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M42 38 Q42 28 50 26 Q58 28 58 38 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M22 80 Q30 76 38 80",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M60 58 Q66 56 70 58",
+     "stroke": "ink",
+     "weight": 3
     }
-  ],
-  "author": "Ortak Alan (AI-assisted, directed and checked)"
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
 }

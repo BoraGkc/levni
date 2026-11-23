@@ -1,59 +1,60 @@
 {
-  "name": "path-into-distance",
-  "tags": [
-    "sensitive",
-    "path",
-    "yol",
-    "distance",
-    "uzaklık",
-    "future",
-    "gelecek",
-    "hope",
-    "umut",
-    "journey",
-    "yolculuk",
-    "recovery",
-    "iyileşme"
-  ],
-  "variants": [
+ "name": "path-into-distance",
+ "category": "places",
+ "tags": [
+  "sensitive",
+  "path",
+  "yol",
+  "distance",
+  "uzaklık",
+  "future",
+  "gelecek",
+  "hope",
+  "umut",
+  "journey",
+  "yolculuk",
+  "recovery",
+  "iyileşme"
+ ],
+ "variants": [
+  {
+   "note": "a path narrowing to the horizon",
+   "paths": [
     {
-      "note": "a path narrowing to the horizon",
-      "paths": [
-        {
-          "d": "M6 44 L94 44 L94 92 L6 92 Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 6
-        },
-        {
-          "d": "M6 44 Q26 30 48 40 Q70 28 94 44 Z",
-          "fill": "blue",
-          "stroke": "ink",
-          "weight": 6
-        },
-        {
-          "d": "M46 44 L54 44 L84 92 L16 92 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 7
-        },
-        {
-          "d": "M50 52 L50 55",
-          "stroke": "ink",
-          "weight": 4
-        },
-        {
-          "d": "M50 64 L50 70",
-          "stroke": "ink",
-          "weight": 4
-        },
-        {
-          "d": "M50 78 L50 86",
-          "stroke": "ink",
-          "weight": 5
-        }
-      ]
+     "d": "M6 44 L94 44 L94 92 L6 92 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M6 44 Q26 30 48 40 Q70 28 94 44 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M46 44 L54 44 L84 92 L16 92 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 52 L50 55",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 64 L50 70",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M50 78 L50 86",
+     "stroke": "ink",
+     "weight": 5
     }
-  ],
-  "author": "Ortak Alan (AI-assisted, directed and checked)"
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
 }

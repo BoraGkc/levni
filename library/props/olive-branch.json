@@ -1,95 +1,96 @@
 {
-  "name": "olive-branch",
-  "tags": [
-    "sensitive",
-    "olive",
-    "zeytin",
-    "branch",
-    "dal",
-    "peace",
-    "barış",
-    "hope",
-    "umut",
-    "reconciliation",
-    "uzlaşma"
-  ],
-  "variants": [
+ "name": "olive-branch",
+ "category": "nature",
+ "tags": [
+  "sensitive",
+  "olive",
+  "zeytin",
+  "branch",
+  "dal",
+  "peace",
+  "barış",
+  "hope",
+  "umut",
+  "reconciliation",
+  "uzlaşma"
+ ],
+ "variants": [
+  {
+   "note": "curved olive twig, paired leaves, two olives",
+   "paths": [
     {
-      "note": "curved olive twig, paired leaves, two olives",
-      "paths": [
-        {
-          "d": "M14 84 Q40 54 86 28",
-          "stroke": "ink",
-          "weight": 7
-        },
-        {
-          "d": "M20.5 76.9 Q23 64.6 34.7 60 Q32.2 72.3 20.5 76.9Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 4
-        },
-        {
-          "d": "M20.5 76.9 Q33.1 77.2 39.6 87.9 Q27.1 87.6 20.5 76.9Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 4
-        },
-        {
-          "d": "M31.4 66.4 Q32.8 53.9 44 48.3 Q42.6 60.8 31.4 66.4Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 4
-        },
-        {
-          "d": "M31.4 66.4 Q43.9 65.6 51.3 75.7 Q38.8 76.4 31.4 66.4Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 4
-        },
-        {
-          "d": "M45 55 Q45.3 42.5 56 35.9 Q55.7 48.5 45 55Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 4
-        },
-        {
-          "d": "M45 55 Q57.4 53.1 65.7 62.5 Q53.3 64.4 45 55Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 4
-        },
-        {
-          "d": "M60.2 44 Q59.4 31.5 69.5 24 Q70.3 36.5 60.2 44Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 4
-        },
-        {
-          "d": "M60.2 44 Q72.4 41 81.5 49.7 Q69.3 52.6 60.2 44Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 4
-        },
-        {
-          "d": "M73.5 35.4 Q73.5 27.3 80.5 23.2 Q80.5 31.3 73.5 35.4Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 4
-        },
-        {
-          "d": "M38 62.6 q-3 8 0 12 q5 0 5 -8Z",
-          "fill": "blue",
-          "stroke": "ink",
-          "weight": 4
-        },
-        {
-          "d": "M53.9 50.3 q-3 8 0 12 q5 0 5 -8Z",
-          "fill": "blue",
-          "stroke": "ink",
-          "weight": 4
-        }
-      ]
+     "d": "M14 84 Q40 54 86 28",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M20.5 76.9 Q23 64.6 34.7 60 Q32.2 72.3 20.5 76.9Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M20.5 76.9 Q33.1 77.2 39.6 87.9 Q27.1 87.6 20.5 76.9Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M31.4 66.4 Q32.8 53.9 44 48.3 Q42.6 60.8 31.4 66.4Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M31.4 66.4 Q43.9 65.6 51.3 75.7 Q38.8 76.4 31.4 66.4Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M45 55 Q45.3 42.5 56 35.9 Q55.7 48.5 45 55Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M45 55 Q57.4 53.1 65.7 62.5 Q53.3 64.4 45 55Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M60.2 44 Q59.4 31.5 69.5 24 Q70.3 36.5 60.2 44Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M60.2 44 Q72.4 41 81.5 49.7 Q69.3 52.6 60.2 44Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M73.5 35.4 Q73.5 27.3 80.5 23.2 Q80.5 31.3 73.5 35.4Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M38 62.6 q-3 8 0 12 q5 0 5 -8Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M53.9 50.3 q-3 8 0 12 q5 0 5 -8Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 4
     }
-  ],
-  "author": "Ortak Alan (AI-assisted, directed and checked)"
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
 }

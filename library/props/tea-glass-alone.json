@@ -1,70 +1,71 @@
 {
-  "name": "tea-glass-alone",
-  "tags": [
-    "sensitive",
-    "tea",
-    "çay",
-    "glass",
-    "bardak",
-    "table",
-    "masa",
-    "alone",
-    "yalnız",
-    "waiting",
-    "bekleme",
-    "loneliness",
-    "missing",
-    "loss"
-  ],
-  "variants": [
+ "name": "tea-glass-alone",
+ "category": "home",
+ "tags": [
+  "sensitive",
+  "tea",
+  "çay",
+  "glass",
+  "bardak",
+  "table",
+  "masa",
+  "alone",
+  "yalnız",
+  "waiting",
+  "bekleme",
+  "loneliness",
+  "missing",
+  "loss"
+ ],
+ "variants": [
+  {
+   "note": "one tulip tea glass on a small table",
+   "paths": [
     {
-      "note": "one tulip tea glass on a small table",
-      "paths": [
-        {
-          "d": "M44 22 Q40 14 44 8",
-          "stroke": "tone",
-          "weight": 4
-        },
-        {
-          "d": "M56 22 Q52 14 56 8",
-          "stroke": "tone",
-          "weight": 4
-        },
-        {
-          "d": "M36 30 Q32 44 38 58 Q42 66 50 66 Q58 66 62 58 Q68 44 64 30 Z",
-          "fill": "white",
-          "stroke": "ink",
-          "weight": 7
-        },
-        {
-          "d": "M36 40 Q35 50 39 58 Q43 64 50 64 Q57 64 61 58 Q65 50 64 40Z",
-          "fill": "coral",
-          "stroke": "none"
-        },
-        {
-          "d": "M28 66 Q50 76 72 66 Q50 70 28 66Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 6
-        },
-        {
-          "d": "M12 76 L88 76 L88 84 L12 84 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M20 84 L20 92",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M80 84 L80 92",
-          "stroke": "ink",
-          "weight": 8
-        }
-      ]
+     "d": "M44 22 Q40 14 44 8",
+     "stroke": "tone",
+     "weight": 4
+    },
+    {
+     "d": "M56 22 Q52 14 56 8",
+     "stroke": "tone",
+     "weight": 4
+    },
+    {
+     "d": "M36 30 Q32 44 38 58 Q42 66 50 66 Q58 66 62 58 Q68 44 64 30 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M36 40 Q35 50 39 58 Q43 64 50 64 Q57 64 61 58 Q65 50 64 40Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M28 66 Q50 76 72 66 Q50 70 28 66Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M12 76 L88 76 L88 84 L12 84 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M20 84 L20 92",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M80 84 L80 92",
+     "stroke": "ink",
+     "weight": 8
     }
-  ],
-  "author": "Ortak Alan (AI-assisted, directed and checked)"
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
 }

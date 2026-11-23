@@ -1,47 +1,48 @@
 {
-  "name": "mended-pot",
-  "tags": [
-    "sensitive",
-    "pot",
-    "çömlek",
-    "kintsugi",
-    "mended",
-    "onarım",
-    "repair",
-    "healing",
-    "iyileşme",
-    "resilience",
-    "dayanıklılık",
-    "recovery",
-    "vase"
-  ],
-  "variants": [
+ "name": "mended-pot",
+ "category": "home",
+ "tags": [
+  "sensitive",
+  "pot",
+  "çömlek",
+  "kintsugi",
+  "mended",
+  "onarım",
+  "repair",
+  "healing",
+  "iyileşme",
+  "resilience",
+  "dayanıklılık",
+  "recovery",
+  "vase"
+ ],
+ "variants": [
+  {
+   "note": "clay pot mended with a bright seam",
+   "paths": [
     {
-      "note": "clay pot mended with a bright seam",
-      "paths": [
-        {
-          "d": "M36 18 L64 18 L66 28 Q86 38 78 62 Q72 86 50 88 Q28 86 22 62 Q14 38 34 28 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M46 20 L53 34 L43 46 L55 58 L46 72 L52 88",
-          "stroke": "ink",
-          "weight": 11
-        },
-        {
-          "d": "M46 20 L53 34 L43 46 L55 58 L46 72 L52 88",
-          "stroke": "mustard",
-          "weight": 5
-        },
-        {
-          "d": "M30 34 Q22 50 28 68",
-          "stroke": "ink",
-          "weight": 3
-        }
-      ]
+     "d": "M36 18 L64 18 L66 28 Q86 38 78 62 Q72 86 50 88 Q28 86 22 62 Q14 38 34 28 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M46 20 L53 34 L43 46 L55 58 L46 72 L52 88",
+     "stroke": "ink",
+     "weight": 11
+    },
+    {
+     "d": "M46 20 L53 34 L43 46 L55 58 L46 72 L52 88",
+     "stroke": "mustard",
+     "weight": 5
+    },
+    {
+     "d": "M30 34 Q22 50 28 68",
+     "stroke": "ink",
+     "weight": 3
     }
-  ],
-  "author": "Ortak Alan (AI-assisted, directed and checked)"
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
 }

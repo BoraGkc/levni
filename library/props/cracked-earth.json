@@ -1,80 +1,81 @@
 {
-  "name": "cracked-earth",
-  "tags": [
-    "sensitive",
-    "earth",
-    "toprak",
-    "cracked",
-    "çatlak",
-    "drought",
-    "kuraklık",
-    "earthquake",
-    "deprem",
-    "disaster",
-    "afet",
-    "climate",
-    "iklim"
-  ],
-  "variants": [
+ "name": "cracked-earth",
+ "category": "nature",
+ "tags": [
+  "sensitive",
+  "earth",
+  "toprak",
+  "cracked",
+  "çatlak",
+  "drought",
+  "kuraklık",
+  "earthquake",
+  "deprem",
+  "disaster",
+  "afet",
+  "climate",
+  "iklim"
+ ],
+ "variants": [
+  {
+   "note": "dry ground cut into plates, seen from above",
+   "paths": [
     {
-      "note": "dry ground cut into plates, seen from above",
-      "paths": [
-        {
-          "d": "M16.8 14.6 L30.3 13.5 L39.8 16.3 L34.7 33.7 L14.4 38 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 6
-        },
-        {
-          "d": "M14.3 41.4 L26.5 37.2 L34.6 37.1 L38.9 57.7 L16.4 62.9 Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 6
-        },
-        {
-          "d": "M16.4 66.3 L29.6 61.7 L38.9 61.1 L33.7 83.7 L14.6 85.7 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 6
-        },
-        {
-          "d": "M43.1 16.2 L54.6 13.1 L62 14.1 L56.9 34.4 L38 33.5 Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 6
-        },
-        {
-          "d": "M38 36.8 L49.4 35.2 L56.9 37.6 L62.9 58.3 L42.3 57.4 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 6
-        },
-        {
-          "d": "M42.3 60.9 L54.6 59.4 L62.9 61.8 L58.6 85.2 L37.1 83.5 Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 6
-        },
-        {
-          "d": "M65.3 14.4 L77.5 13.6 L85.6 16.8 L83.2 39.8 L60.2 34.7 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 6
-        },
-        {
-          "d": "M60.2 38 L73.7 38.6 L83.2 43.2 L85 62.1 L66.2 58.7 Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 6
-        },
-        {
-          "d": "M66.3 62.1 L77.6 61.8 L85 65.5 L83 85.8 L62 85.5 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 6
-        }
-      ]
+     "d": "M16.8 14.6 L30.3 13.5 L39.8 16.3 L34.7 33.7 L14.4 38 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M14.3 41.4 L26.5 37.2 L34.6 37.1 L38.9 57.7 L16.4 62.9 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M16.4 66.3 L29.6 61.7 L38.9 61.1 L33.7 83.7 L14.6 85.7 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M43.1 16.2 L54.6 13.1 L62 14.1 L56.9 34.4 L38 33.5 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M38 36.8 L49.4 35.2 L56.9 37.6 L62.9 58.3 L42.3 57.4 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M42.3 60.9 L54.6 59.4 L62.9 61.8 L58.6 85.2 L37.1 83.5 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M65.3 14.4 L77.5 13.6 L85.6 16.8 L83.2 39.8 L60.2 34.7 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M60.2 38 L73.7 38.6 L83.2 43.2 L85 62.1 L66.2 58.7 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M66.3 62.1 L77.6 61.8 L85 65.5 L83 85.8 L62 85.5 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
     }
-  ],
-  "author": "Ortak Alan (AI-assisted, directed and checked)"
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
 }

@@ -1,78 +1,79 @@
 {
-  "name": "stretcher-empty",
-  "tags": [
-    "sensitive",
-    "stretcher",
-    "sedye",
-    "ambulance",
-    "ambulans",
-    "emergency",
-    "acil",
-    "rescue",
-    "kurtarma",
-    "empty",
-    "boş",
-    "disaster",
-    "afet"
-  ],
-  "variants": [
+ "name": "stretcher-empty",
+ "category": "health",
+ "tags": [
+  "sensitive",
+  "stretcher",
+  "sedye",
+  "ambulance",
+  "ambulans",
+  "emergency",
+  "acil",
+  "rescue",
+  "kurtarma",
+  "empty",
+  "boş",
+  "disaster",
+  "afet"
+ ],
+ "variants": [
+  {
+   "note": "empty stretcher on a trolley, side view",
+   "paths": [
     {
-      "note": "empty stretcher on a trolley, side view",
-      "paths": [
-        {
-          "d": "M8 38 L92 38 Q94 38 94 42 L94 50 L8 50 Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M46 38 L92 38 Q94 38 94 42 L94 50 L46 50 Z",
-          "fill": "blue",
-          "stroke": "ink",
-          "weight": 6
-        },
-        {
-          "d": "M64 38 L64 50",
-          "stroke": "paper",
-          "weight": 4
-        },
-        {
-          "d": "M24 52 L34 80",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M44 52 L34 80",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M58 52 L70 80",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M82 52 L70 80",
-          "stroke": "ink",
-          "weight": 8
-        },
-        {
-          "d": "M30 72 L74 72",
-          "stroke": "ink",
-          "weight": 5
-        },
-        {
-          "d": "M34 87 h.1",
-          "stroke": "ink",
-          "weight": 9
-        },
-        {
-          "d": "M70 87 h.1",
-          "stroke": "ink",
-          "weight": 9
-        }
-      ]
+     "d": "M8 38 L92 38 Q94 38 94 42 L94 50 L8 50 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M46 38 L92 38 Q94 38 94 42 L94 50 L46 50 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M64 38 L64 50",
+     "stroke": "paper",
+     "weight": 4
+    },
+    {
+     "d": "M24 52 L34 80",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M44 52 L34 80",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M58 52 L70 80",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M82 52 L70 80",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M30 72 L74 72",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M34 87 h.1",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M70 87 h.1",
+     "stroke": "ink",
+     "weight": 9
     }
-  ],
-  "author": "Ortak Alan (AI-assisted, directed and checked)"
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
 }

@@ -1,85 +1,86 @@
 {
-  "name": "hospital-bed-empty",
-  "tags": [
-    "sensitive",
-    "hospital",
-    "hastane",
-    "bed",
-    "yatak",
-    "empty",
-    "boş",
-    "illness",
-    "hastalık",
-    "care",
-    "sağlık",
-    "ward"
-  ],
-  "variants": [
+ "name": "hospital-bed-empty",
+ "category": "health",
+ "tags": [
+  "sensitive",
+  "hospital",
+  "hastane",
+  "bed",
+  "yatak",
+  "empty",
+  "boş",
+  "illness",
+  "hastalık",
+  "care",
+  "sağlık",
+  "ward"
+ ],
+ "variants": [
+  {
+   "note": "empty hospital bed, side view",
+   "paths": [
     {
-      "note": "empty hospital bed, side view",
-      "paths": [
-        {
-          "d": "M8 28 L16 28 L16 82 L8 82 Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 7
-        },
-        {
-          "d": "M84 46 L92 46 L92 82 L84 82 Z",
-          "fill": "tone",
-          "stroke": "ink",
-          "weight": 7
-        },
-        {
-          "d": "M16 66 L84 66 L84 72 L16 72 Z",
-          "fill": "blue",
-          "stroke": "ink",
-          "weight": 7
-        },
-        {
-          "d": "M16 50 L84 50 L84 66 L16 66 Z",
-          "fill": "white",
-          "stroke": "ink",
-          "weight": 7
-        },
-        {
-          "d": "M20 40 L40 40 Q46 44 40 50 L20 50 Q14 44 20 40Z",
-          "fill": "paper",
-          "stroke": "ink",
-          "weight": 6
-        },
-        {
-          "d": "M52 50 L52 66",
-          "stroke": "ink",
-          "weight": 4
-        },
-        {
-          "d": "M64 50 L64 66",
-          "stroke": "ink",
-          "weight": 4
-        },
-        {
-          "d": "M24 72 L24 82",
-          "stroke": "ink",
-          "weight": 7
-        },
-        {
-          "d": "M76 72 L76 82",
-          "stroke": "ink",
-          "weight": 7
-        },
-        {
-          "d": "M24 88 h.1",
-          "stroke": "ink",
-          "weight": 9
-        },
-        {
-          "d": "M76 88 h.1",
-          "stroke": "ink",
-          "weight": 9
-        }
-      ]
+     "d": "M8 28 L16 28 L16 82 L8 82 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M84 46 L92 46 L92 82 L84 82 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M16 66 L84 66 L84 72 L16 72 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M16 50 L84 50 L84 66 L16 66 Z",
+     "fill": "white",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M20 40 L40 40 Q46 44 40 50 L20 50 Q14 44 20 40Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M52 50 L52 66",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M64 50 L64 66",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M24 72 L24 82",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M76 72 L76 82",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M24 88 h.1",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M76 88 h.1",
+     "stroke": "ink",
+     "weight": 9
     }
-  ],
-  "author": "Ortak Alan (AI-assisted, directed and checked)"
+   ]
+  }
+ ],
+ "author": "Ortak Alan (AI-assisted, directed and checked)"
 }
