@@ -1,0 +1,67 @@
+{
+ "canvas": [
+  864,
+  564
+ ],
+ "style": {
+  "blue": "#2D4A7C",
+  "coral": "#E8734A",
+  "mustard": "#F0B84A",
+  "paper": "#F6F0E4",
+  "tone": "#9FB3D6"
+ },
+ "seed": 7,
+ "background": "mustard",
+ "elements": [
+  {
+   "type": "panel",
+   "x": 560,
+   "y": 0,
+   "w": 304,
+   "h": 568,
+   "color": "blue"
+  },
+  {
+   "type": "prop",
+   "name": "dove",
+   "x": 712,
+   "y": 270,
+   "size": 270,
+   "palette": "paper"
+  },
+  {
+   "type": "label",
+   "text": "Kumru Coffee Roasters",
+   "x": 56,
+   "y": 70,
+   "size": 14,
+   "color": "ink"
+  },
+  {
+   "type": "label",
+   "text": "Good coffee",
+   "x": 56,
+   "y": 300,
+   "size": 46,
+   "color": "ink",
+   "upper": false
+  },
+  {
+   "type": "label",
+   "text": "needs no hurry.",
+   "x": 56,
+   "y": 360,
+   "size": 46,
+   "color": "blue",
+   "upper": false
+  },
+  {
+   "type": "label",
+   "text": "kumru.studio",
+   "x": 56,
+   "y": 500,
+   "size": 14,
+   "color": "ink"
+  }
+ ]
+}

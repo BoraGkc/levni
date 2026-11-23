@@ -1,0 +1,40 @@
+{
+ "canvas": [
+  272,
+  270
+ ],
+ "style": {
+  "blue": "#2D4A7C",
+  "coral": "#E8734A",
+  "mustard": "#F0B84A",
+  "paper": "#F6F0E4",
+  "tone": "#9FB3D6"
+ },
+ "seed": 11,
+ "background": "paper",
+ "elements": [
+  {
+   "type": "disc",
+   "x": 136,
+   "y": 136,
+   "r": 112,
+   "color": "coral",
+   "outline": "ink"
+  },
+  {
+   "type": "badge",
+   "x": 136,
+   "y": 136,
+   "size": 200,
+   "color": "paper"
+  },
+  {
+   "type": "prop",
+   "name": "dove",
+   "x": 136,
+   "y": 132,
+   "size": 130,
+   "palette": "paper"
+  }
+ ]
+}

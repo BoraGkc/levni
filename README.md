@@ -116,6 +116,7 @@ The assistant shows you the preview and applies after you say yes. Drafts only: 
 | `levni render <scene.json> <out>` | draw a scene (`--format`, `--preview`) and print the critic's notes |
 | `levni list [query]` | search props |
 | `levni sheet <out.png> [prop …]` | contact sheet, every variant on paper and on blue (`--recolor`) |
+| `levni board <spec.json> <out.png>` | brand board: `{"brand": {name, tagline, mark, inks}}` makes a nine-tile board in one call; or place tiles yourself, with browser/card/tote/phone mockups ([docs](docs/board.md)) |
 | `levni add <file> [--sheet out.png]` | import props a chat model wrote: check, write, draw ([prompt](docs/prop-prompt.md)) |
 | `levni check [prop …]` | measure props for agents that cannot see images |
 | `levni mcp` | the MCP server |
