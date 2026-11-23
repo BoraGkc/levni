@@ -1,0 +1,42 @@
+{
+ "name": "jersey",
+ "tags": [
+  "forma",
+  "tişört",
+  "jersey",
+  "blank",
+  "sport",
+  "spor",
+  "takım"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "blank shirt, chest band",
+   "paths": [
+    {
+     "d": "M34 12 Q42 22 50 22 Q58 22 66 12 L91 27 L81 46 L70 40 L70 88 L30 88 L30 40 L19 46 L9 27 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 54 H70 V66 H30 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M34 12 Q42 28 50 28 Q58 28 66 12",
+     "stroke": "paper",
+     "weight": 7
+    },
+    {
+     "d": "M13 35 L23 41 M87 35 L77 41",
+     "stroke": "paper",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

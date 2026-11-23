@@ -1,0 +1,56 @@
+{
+ "name": "stopwatch-sprint",
+ "tags": [
+  "kronometre",
+  "sprint",
+  "stopwatch",
+  "sport",
+  "spor",
+  "süre"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "round watch, wedge of time",
+   "paths": [
+    {
+     "d": "M43 14 H57 V24 H43 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M74 26 L84 16",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M16 58 A34 34 0 1 0 84 58 A34 34 0 1 0 16 58 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 58 L50 36 A22 22 0 0 1 69 69 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 58 L50 34",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 28 v5 M50 88 v-5 M22 58 h5 M78 58 h-5",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M50 58 h.1",
+     "stroke": "ink",
+     "weight": 10
+    }
+   ]
+  }
+ ]
+}

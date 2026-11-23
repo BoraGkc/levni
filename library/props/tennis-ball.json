@@ -1,0 +1,35 @@
+{
+ "name": "tennis-ball",
+ "tags": [
+  "tenis",
+  "topu",
+  "ball",
+  "sport",
+  "spor"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "felt ball, two seams",
+   "paths": [
+    {
+     "d": "M12 50 A38 38 0 1 0 88 50 A38 38 0 1 0 12 50 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M25 23 Q47 50 25 77 M75 23 Q53 50 75 77",
+     "stroke": "paper",
+     "weight": 6
+    },
+    {
+     "d": "M12 50 A38 38 0 1 0 88 50 A38 38 0 1 0 12 50 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

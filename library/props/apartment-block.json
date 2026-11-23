@@ -1,0 +1,101 @@
+{
+ "name": "apartment-block",
+ "tags": [
+  "apartman",
+  "bina",
+  "balkon",
+  "apartment",
+  "istanbul"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "six windows with balcony rails, door",
+   "paths": [
+    {
+     "d": "M19 8 L81 8 Q84 8 84 11 L84 89 Q84 92 81 92 L19 92 Q16 92 16 89 L16 11 Q16 8 19 8 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M27 18 L41 18 Q42 18 42 19 L42 27 Q42 28 41 28 L27 28 Q26 28 26 27 L26 19 Q26 18 27 18 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M24 33 H44",
+     "stroke": "coral",
+     "weight": 5
+    },
+    {
+     "d": "M27 40 L41 40 Q42 40 42 41 L42 49 Q42 50 41 50 L27 50 Q26 50 26 49 L26 41 Q26 40 27 40 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M24 55 H44",
+     "stroke": "coral",
+     "weight": 5
+    },
+    {
+     "d": "M27 62 L41 62 Q42 62 42 63 L42 71 Q42 72 41 72 L27 72 Q26 72 26 71 L26 63 Q26 62 27 62 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M24 77 H44",
+     "stroke": "coral",
+     "weight": 5
+    },
+    {
+     "d": "M57 18 L71 18 Q72 18 72 19 L72 27 Q72 28 71 28 L57 28 Q56 28 56 27 L56 19 Q56 18 57 18 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M54 33 H74",
+     "stroke": "coral",
+     "weight": 5
+    },
+    {
+     "d": "M57 40 L71 40 Q72 40 72 41 L72 49 Q72 50 71 50 L57 50 Q56 50 56 49 L56 41 Q56 40 57 40 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M54 55 H74",
+     "stroke": "coral",
+     "weight": 5
+    },
+    {
+     "d": "M57 62 L71 62 Q72 62 72 63 L72 71 Q72 72 71 72 L57 72 Q56 72 56 71 L56 63 Q56 62 57 62 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M54 77 H74",
+     "stroke": "coral",
+     "weight": 5
+    },
+    {
+     "d": "M42 76 L58 76 Q60 76 60 78 L60 90 Q60 92 58 92 L42 92 Q40 92 40 90 L40 78 Q40 76 42 76 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M22 8 V2 M72 8 V2",
+     "stroke": "ink",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

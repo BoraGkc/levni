@@ -1,0 +1,45 @@
+{
+ "name": "doner-skewer",
+ "tags": [
+  "döner",
+  "şiş",
+  "kebab",
+  "spit",
+  "turkish kitchen"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "abstract meat cone on a spit",
+   "paths": [
+    {
+     "d": "M50 8 V90",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M31 22 L69 22 Q80 56 64 84 L36 84 Q20 56 31 22 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 38 Q50 44 70 38 M26 54 Q50 62 74 54 M30 70 Q50 76 70 70",
+     "stroke": "tone-mustard",
+     "weight": 5
+    },
+    {
+     "d": "M44 10 A6 6 0 1 0 56 10 A6 6 0 1 0 44 10 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M30 94 H70",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

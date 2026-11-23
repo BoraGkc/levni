@@ -1,0 +1,31 @@
+{
+ "name": "zodiac-aries",
+ "tags": [
+  "koç",
+  "aries",
+  "burç",
+  "zodiac",
+  "astroloji",
+  "astrology",
+  "sign"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "aries sign ornament on a disc",
+   "paths": [
+    {
+     "d": "M8 50 A42 42 0 1 0 92 50 A42 42 0 1 0 8 50 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 76 L50 46 M50 46 Q50 24 33 25 Q20 28 25 42 M50 46 Q50 24 67 25 Q80 28 75 42",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

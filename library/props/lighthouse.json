@@ -1,0 +1,57 @@
+{
+ "name": "lighthouse",
+ "tags": [
+  "deniz feneri",
+  "fener",
+  "lighthouse",
+  "coast",
+  "istanbul"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "striped tower, lamp room, beams",
+   "paths": [
+    {
+     "d": "M34 28 L8 20 M66 28 L92 20",
+     "stroke": "mustard",
+     "weight": 6
+    },
+    {
+     "d": "M10 92 Q30 80 50 84 Q70 80 90 92 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M34 88 L42 36 L58 36 L66 88 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M37.5 64 L40 50 L60 50 L62.5 64 Z",
+     "fill": "coral",
+     "stroke": "none"
+    },
+    {
+     "d": "M38 64 L62 64 M40 50 L60 50",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M40 24 L60 24 Q62 24 62 26 L62 34 Q62 36 60 36 L40 36 Q38 36 38 34 L38 26 Q38 24 40 24 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M36 24 Q50 4 64 24 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

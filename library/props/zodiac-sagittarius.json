@@ -1,0 +1,31 @@
+{
+ "name": "zodiac-sagittarius",
+ "tags": [
+  "yay",
+  "sagittarius",
+  "burç",
+  "zodiac",
+  "astroloji",
+  "astrology",
+  "sign"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "sagittarius sign ornament on a disc",
+   "paths": [
+    {
+     "d": "M8 50 A42 42 0 1 0 92 50 A42 42 0 1 0 8 50 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M26 76 L74 28 M50 26 H74 V50 M32 50 L52 70",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

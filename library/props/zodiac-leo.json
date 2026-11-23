@@ -1,0 +1,36 @@
+{
+ "name": "zodiac-leo",
+ "tags": [
+  "aslan",
+  "leo",
+  "burç",
+  "zodiac",
+  "astroloji",
+  "astrology",
+  "sign"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "leo sign ornament on a disc",
+   "paths": [
+    {
+     "d": "M8 50 A42 42 0 1 0 92 50 A42 42 0 1 0 8 50 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M26 60 A10 10 0 1 0 46 60 A10 10 0 1 0 26 60 Z",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M44 56 Q48 26 66 28 Q82 32 74 52 Q70 66 76 76 Q80 82 70 80",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

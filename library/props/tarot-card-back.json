@@ -1,0 +1,61 @@
+{
+ "name": "tarot-card-back",
+ "tags": [
+  "tarot",
+  "kart",
+  "fal",
+  "card back",
+  "astroloji"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "pattern only: frame, diamond, corner dots",
+   "paths": [
+    {
+     "d": "M28 6 L72 6 Q78 6 78 12 L78 88 Q78 94 72 94 L28 94 Q22 94 22 88 L22 12 Q22 6 28 6 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M32 13 L68 13 Q71 13 71 16 L71 84 Q71 87 68 87 L32 87 Q29 87 29 84 L29 16 Q29 13 32 13 Z",
+     "stroke": "paper",
+     "weight": 4
+    },
+    {
+     "d": "M50 28 L64 50 L50 72 L36 50 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M44 50 A6 6 0 1 0 56 50 A6 6 0 1 0 44 50 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M36 22 h.1",
+     "stroke": "paper",
+     "weight": 6
+    },
+    {
+     "d": "M64 22 h.1",
+     "stroke": "paper",
+     "weight": 6
+    },
+    {
+     "d": "M36 78 h.1",
+     "stroke": "paper",
+     "weight": 6
+    },
+    {
+     "d": "M64 78 h.1",
+     "stroke": "paper",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

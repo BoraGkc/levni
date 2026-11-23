@@ -1,0 +1,41 @@
+{
+ "name": "goal-net",
+ "tags": [
+  "kale",
+  "ağ",
+  "file",
+  "goal",
+  "net",
+  "futbol",
+  "spor"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "frame with net grid",
+   "paths": [
+    {
+     "d": "M12 28 L88 28 L88 86 L12 86 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M28 28 V86 M44 28 V86 M60 28 V86 M76 28 V86 M12 43 H88 M12 57 H88 M12 71 H88",
+     "stroke": "ink",
+     "weight": 3
+    },
+    {
+     "d": "M12 86 V28 H88 V86",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M5 91 H95",
+     "stroke": "green",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "name": "ping-pong-paddle",
+ "tags": [
+  "masa tenisi",
+  "raket",
+  "ping pong",
+  "table tennis",
+  "sport",
+  "spor"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "round paddle and small ball",
+   "paths": [
+    {
+     "d": "M36 60 L36 90 Q42 95 48 90 L48 60 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M14 36 A28 28 0 1 0 70 36 A28 28 0 1 0 14 36 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M24 28 Q28 18 38 15",
+     "stroke": "paper",
+     "weight": 6
+    },
+    {
+     "d": "M36 62 H48",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M71 78 A9 9 0 1 0 89 78 A9 9 0 1 0 71 78 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

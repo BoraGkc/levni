@@ -1,0 +1,47 @@
+{
+ "name": "pickle-jar",
+ "tags": [
+  "turşu",
+  "kavanoz",
+  "pickle",
+  "jar",
+  "turkish kitchen"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "jar with two cucumbers",
+   "paths": [
+    {
+     "d": "M34 26 L66 26 Q76 26 76 36 L76 80 Q76 90 66 90 L34 90 Q24 90 24 80 L24 36 Q24 26 34 26 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M35.2 61.9 A9 22 -12 1 0 52.8 58.1 A9 22 -12 1 0 35.2 61.9 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M52.2 54.1 A8 20 14 1 0 67.8 57.9 A8 20 14 1 0 52.2 54.1 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M32 10 L68 10 Q72 10 72 14 L72 22 Q72 26 68 26 L32 26 Q28 26 28 22 L28 14 Q28 10 32 10 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M31 38 V80",
+     "stroke": "paper",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

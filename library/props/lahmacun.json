@@ -1,0 +1,69 @@
+{
+ "name": "lahmacun",
+ "tags": [
+  "lahmacun",
+  "turkish pizza",
+  "flatbread",
+  "turkish kitchen"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "round flatbread, mince dots, lemon wedge",
+   "paths": [
+    {
+     "d": "M8 52 A38 38 0 1 0 84 52 A38 38 0 1 0 8 52 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M32 40 h.1",
+     "stroke": "coral",
+     "weight": 9
+    },
+    {
+     "d": "M50 34 h.1",
+     "stroke": "coral",
+     "weight": 9
+    },
+    {
+     "d": "M62 48 h.1",
+     "stroke": "coral",
+     "weight": 9
+    },
+    {
+     "d": "M40 56 h.1",
+     "stroke": "coral",
+     "weight": 9
+    },
+    {
+     "d": "M54 66 h.1",
+     "stroke": "coral",
+     "weight": 9
+    },
+    {
+     "d": "M28 62 h.1",
+     "stroke": "coral",
+     "weight": 8
+    },
+    {
+     "d": "M44 46 h.1",
+     "stroke": "coral",
+     "weight": 6
+    },
+    {
+     "d": "M58 58 h.1",
+     "stroke": "coral",
+     "weight": 6
+    },
+    {
+     "d": "M64 88 A24 24 0 0 1 90 64 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

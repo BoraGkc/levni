@@ -1,0 +1,60 @@
+{
+ "name": "street-cat-bowl",
+ "tags": [
+  "kedi maması",
+  "mama kabı",
+  "sokak kedisi",
+  "cat bowl",
+  "istanbul"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "bowl heaped with kibble on a saucer",
+   "paths": [
+    {
+     "d": "M10 86 A40 6 0 1 0 90 86 A40 6 0 1 0 10 86 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M36 46 h.1",
+     "stroke": "mustard",
+     "weight": 10
+    },
+    {
+     "d": "M50 40 h.1",
+     "stroke": "mustard",
+     "weight": 10
+    },
+    {
+     "d": "M64 46 h.1",
+     "stroke": "mustard",
+     "weight": 10
+    },
+    {
+     "d": "M43 34 h.1",
+     "stroke": "mustard",
+     "weight": 10
+    },
+    {
+     "d": "M58 32 h.1",
+     "stroke": "mustard",
+     "weight": 10
+    },
+    {
+     "d": "M12 52 L88 52 Q86 84 50 84 Q14 84 12 52 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M26 64 Q34 72 46 74",
+     "stroke": "paper",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

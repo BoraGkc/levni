@@ -1,0 +1,78 @@
+{
+ "name": "mahalle-house-cumba",
+ "tags": [
+  "mahalle evi",
+  "cumba",
+  "ahşap ev",
+  "bay window",
+  "house",
+  "istanbul"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "wooden house, projecting upper floor",
+   "paths": [
+    {
+     "d": "M24 64 L76 64 Q78 64 78 66 L78 88 Q78 90 76 90 L24 90 Q22 90 22 88 L22 66 Q22 64 24 64 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M12 38 L88 38 Q90 38 90 40 L90 64 Q90 66 88 66 L12 66 Q10 66 10 64 L10 40 Q10 38 12 38 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M6 40 L50 10 L94 40 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 45 L32 45 Q34 45 34 47 L34 57 Q34 59 32 59 L20 59 Q18 59 18 57 L18 47 Q18 45 20 45 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M44 45 L56 45 Q58 45 58 47 L58 57 Q58 59 56 59 L44 59 Q42 59 42 57 L42 47 Q42 45 44 45 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M68 45 L80 45 Q82 45 82 47 L82 57 Q82 59 80 59 L68 59 Q66 59 66 57 L66 47 Q66 45 68 45 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M10 66 L22 76 M90 66 L78 76",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M46 72 L54 72 Q56 72 56 74 L56 88 Q56 90 54 90 L46 90 Q44 90 44 88 L44 74 Q44 72 46 72 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M29 72 L37 72 Q38 72 38 73 L38 81 Q38 82 37 82 L29 82 Q28 82 28 81 L28 73 Q28 72 29 72 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M63 72 L71 72 Q72 72 72 73 L72 81 Q72 82 71 82 L63 82 Q62 82 62 81 L62 73 Q62 72 63 72 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

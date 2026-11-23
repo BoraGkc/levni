@@ -1,0 +1,70 @@
+{
+ "name": "dolmus-minibus",
+ "tags": [
+  "dolmuş",
+  "minibüs",
+  "minibus",
+  "van",
+  "taşıt",
+  "istanbul"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "side view minibus, roof sign",
+   "paths": [
+    {
+     "d": "M40 20 L60 20 Q62 20 62 22 L62 28 Q62 30 60 30 L40 30 Q38 30 38 28 L38 22 Q38 20 40 20 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M8 42 Q8 32 20 32 L72 32 Q80 32 86 46 L92 54 L92 76 L8 76 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M18 38 L62 38 Q65 38 65 41 L65 51 Q65 54 62 54 L18 54 Q15 54 15 51 L15 41 Q15 38 18 38 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M70 38 L78 38 L86 52 L70 52 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M8 64 H92",
+     "stroke": "coral",
+     "weight": 6
+    },
+    {
+     "d": "M17 78 A11 11 0 1 0 39 78 A11 11 0 1 0 17 78 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M61 78 A11 11 0 1 0 83 78 A11 11 0 1 0 61 78 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M28 78 h.1",
+     "stroke": "paper",
+     "weight": 6
+    },
+    {
+     "d": "M72 78 h.1",
+     "stroke": "paper",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

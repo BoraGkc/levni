@@ -1,0 +1,58 @@
+{
+ "name": "caydanlik",
+ "tags": [
+  "çaydanlık",
+  "double teapot",
+  "çay",
+  "tea",
+  "demlik",
+  "turkish kitchen"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "two stacked kettles, spout and handle",
+   "paths": [
+    {
+     "d": "M26 62 Q4 62 14 86",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M72 64 Q92 62 90 40 L81 42 Q80 54 70 54 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M22 88 Q14 66 28 56 L72 56 Q86 66 78 88 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M34 56 Q32 40 40 33 L60 33 Q68 40 66 56 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M37 34 Q50 20 63 34 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 19 h.1",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M21 74 H79",
+     "stroke": "mustard",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

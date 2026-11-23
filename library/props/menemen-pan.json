@@ -1,0 +1,52 @@
+{
+ "name": "menemen-pan",
+ "tags": [
+  "menemen",
+  "tava",
+  "pan",
+  "egg",
+  "tomato",
+  "turkish kitchen"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "top view, tomato and egg mix, handle",
+   "paths": [
+    {
+     "d": "M75 44 L91 44 Q96 44 96 49 L96 52 Q96 57 91 57 L75 57 Q70 57 70 52 L70 49 Q70 44 75 44 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M10 50 A34 34 0 1 0 78 50 A34 34 0 1 0 10 50 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M44 28 Q64 26 68 44 Q70 66 46 72 Q22 72 20 50 Q20 30 44 28 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M34 40 Q44 34 52 42 Q50 54 38 52 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M50 56 Q60 50 64 60 Q58 68 50 64 Z",
+     "fill": "mustard",
+     "stroke": "none"
+    },
+    {
+     "d": "M30 58 L38 62 M52 36 L58 32",
+     "stroke": "paper",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

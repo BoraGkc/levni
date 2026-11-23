@@ -1,0 +1,74 @@
+{
+ "name": "ferry-twin-funnel",
+ "tags": [
+  "vapur",
+  "feribot",
+  "şehir hatları",
+  "ferry",
+  "boğaz",
+  "istanbul"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "two funnels, cabin deck, waves",
+   "paths": [
+    {
+     "d": "M38 14 L44 14 Q46 14 46 16 L46 34 Q46 36 44 36 L38 36 Q36 36 36 34 L36 16 Q36 14 38 14 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M56 14 L62 14 Q64 14 64 16 L64 34 Q64 36 62 36 L56 36 Q54 36 54 34 L54 16 Q54 14 56 14 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M33 32 L67 32 Q70 32 70 35 L70 43 Q70 46 67 46 L33 46 Q30 46 30 43 L30 35 Q30 32 33 32 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M23 46 L77 46 Q80 46 80 49 L80 61 Q80 64 77 64 L23 64 Q20 64 20 61 L20 49 Q20 46 23 46 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M32 55 h.1",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M44 55 h.1",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M56 55 h.1",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M68 55 h.1",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M6 62 L94 62 Q86 82 72 82 L26 82 Q14 80 6 62 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M8 92 Q20 86 32 92 Q44 98 56 92 Q68 86 80 92 Q86 94 92 92",
+     "stroke": "blue",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

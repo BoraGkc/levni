@@ -1,0 +1,73 @@
+{
+ "name": "salt-pepper",
+ "tags": [
+  "tuz",
+  "biber",
+  "salt",
+  "pepper",
+  "shaker",
+  "turkish kitchen"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "two shakers",
+   "paths": [
+    {
+     "d": "M16 42 L34 42 Q40 42 40 48 L40 82 Q40 88 34 88 L16 88 Q10 88 10 82 L10 48 Q10 42 16 42 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M8 42 Q25 14 42 42 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M19 30 h.1",
+     "stroke": "paper",
+     "weight": 6
+    },
+    {
+     "d": "M31 30 h.1",
+     "stroke": "paper",
+     "weight": 6
+    },
+    {
+     "d": "M25 36 h.1",
+     "stroke": "paper",
+     "weight": 6
+    },
+    {
+     "d": "M66 42 L84 42 Q90 42 90 48 L90 82 Q90 88 84 88 L66 88 Q60 88 60 82 L60 48 Q60 42 66 42 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M58 42 Q75 14 92 42 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M69 30 h.1",
+     "stroke": "paper",
+     "weight": 6
+    },
+    {
+     "d": "M81 30 h.1",
+     "stroke": "paper",
+     "weight": 6
+    },
+    {
+     "d": "M75 36 h.1",
+     "stroke": "paper",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

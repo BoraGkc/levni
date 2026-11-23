@@ -1,0 +1,47 @@
+{
+ "name": "tea-tray-two-glasses",
+ "tags": [
+  "çay tepsisi",
+  "çay",
+  "bardak",
+  "tray",
+  "tea",
+  "istanbul"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "round tray, two tulip glasses",
+   "paths": [
+    {
+     "d": "M6 78 A44 12 0 1 0 94 78 A44 12 0 1 0 6 78 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M18 32 C21 42 23 46 23 56 Q23 68 33 68 Q43 68 43 56 C43 46 45 42 48 32 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M52 32 C55 42 57 46 57 56 Q57 68 67 68 Q77 68 77 56 C77 46 79 42 82 32 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M24 38 H42 M58 38 H76",
+     "stroke": "paper",
+     "weight": 5
+    },
+    {
+     "d": "M30 26 Q26 18 32 12 M66 26 Q62 18 68 12",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

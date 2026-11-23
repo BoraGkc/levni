@@ -1,0 +1,35 @@
+{
+ "name": "borek-tray",
+ "tags": [
+  "börek",
+  "gül böreği",
+  "tray",
+  "pastry",
+  "turkish kitchen"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "round tray, spiral pastry",
+   "paths": [
+    {
+     "d": "M7 50 A43 43 0 1 0 93 50 A43 43 0 1 0 7 50 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M18 50 A32 32 0 1 0 82 50 A32 32 0 1 0 18 50 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 50 Q58 50 58 58 Q58 68 47 68 Q34 68 34 54 Q34 38 52 38 Q70 38 70 58 Q70 76 48 76",
+     "stroke": "ink",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

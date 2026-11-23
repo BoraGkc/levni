@@ -1,0 +1,31 @@
+{
+ "name": "zodiac-aquarius",
+ "tags": [
+  "kova",
+  "aquarius",
+  "burç",
+  "zodiac",
+  "astroloji",
+  "astrology",
+  "sign"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "aquarius sign ornament on a disc",
+   "paths": [
+    {
+     "d": "M8 50 A42 42 0 1 0 92 50 A42 42 0 1 0 8 50 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M20 40 Q28 30 36 40 Q44 50 52 40 Q60 30 68 40 Q76 50 82 40 M20 64 Q28 54 36 64 Q44 74 52 64 Q60 54 68 64 Q76 74 82 64",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

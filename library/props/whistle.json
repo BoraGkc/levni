@@ -1,0 +1,48 @@
+{
+ "name": "whistle",
+ "tags": [
+  "düdük",
+  "hakem",
+  "whistle",
+  "referee",
+  "sport",
+  "spor"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "side view, pea inside",
+   "paths": [
+    {
+     "d": "M42 32 L92 32 L92 50 L52 50 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M12 60 A26 26 0 1 0 64 60 A26 26 0 1 0 12 60 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M29 62 A9 9 0 1 0 47 62 A9 9 0 1 0 29 62 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M30 34 L50 34",
+     "stroke": "paper",
+     "weight": 6
+    },
+    {
+     "d": "M6 34 A7 7 0 1 0 20 34 A7 7 0 1 0 6 34 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  }
+ ]
+}
