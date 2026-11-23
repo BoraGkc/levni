@@ -1,0 +1,27 @@
+{
+ "_meta": {
+  "title": "tulip, rotated",
+  "alt": "The Folio drawing “tulip” as a thick, lit 3D icon (rotated)"
+ },
+ "seed": 3,
+ "finish": "soft",
+ "canvas": [
+  600,
+  600
+ ],
+ "background": "#EAF3EC",
+ "elements": [
+  {
+   "type": "extrude3d",
+   "name": "tulip",
+   "x": 300,
+   "y": 300,
+   "size": 360,
+   "rotate": [
+    8,
+    -38,
+    0
+   ]
+  }
+ ]
+}

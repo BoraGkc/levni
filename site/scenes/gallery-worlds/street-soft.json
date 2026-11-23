@@ -1,0 +1,18 @@
+{
+ "_meta": {
+  "title": "\"street\", soft, pastel",
+  "alt": "A smooth toy-like isometric street diorama in pastel colours"
+ },
+ "seed": 5,
+ "finish": "soft",
+ "background": "paper",
+ "elements": [
+  {
+   "type": "iso",
+   "preset": "street",
+   "seed": 5,
+   "style": "soft",
+   "palette": "pastel"
+  }
+ ]
+}

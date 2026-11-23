@@ -1,0 +1,28 @@
+{
+ "_meta": {
+  "title": "bell, rotated, blue palette",
+  "alt": "The Folio drawing “bell” as a thick, lit 3D icon (rotated, blue palette)"
+ },
+ "seed": 3,
+ "finish": "soft",
+ "canvas": [
+  600,
+  600
+ ],
+ "background": "#EAF3EC",
+ "elements": [
+  {
+   "type": "extrude3d",
+   "name": "bell",
+   "x": 300,
+   "y": 300,
+   "size": 360,
+   "rotate": [
+    -24,
+    -10,
+    6
+   ],
+   "palette": "blue"
+  }
+ ]
+}

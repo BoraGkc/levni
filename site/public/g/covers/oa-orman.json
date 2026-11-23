@@ -1,0 +1,13 @@
+{
+  "seed": 31,
+  "clip": [60,52,1080,569],
+  "elements": [
+    {"type":"panel","x":60,"y":52,"w":1080,"h":569,"color":"blue"},
+    {"type":"glyphs","x":60,"y":52,"w":1080,"h":569,"color":"tone","mode":"fade-up","level":0.8},
+    {"type":"icon","name":"trees","x":220,"y":330,"size":230,"color":"tone"},
+    {"type":"icon","name":"trees","x":980,"y":280,"size":170,"color":"tone"},
+    {"type":"draw","x":620,"y":340,"size":560,"paths":[{"d":"M14 50 L14 78 Q10 92 2 96 L30 94 Q50 100 70 94 L98 96 Q90 92 86 78 L86 50 Z","fill":"paper","stroke":"ink","weight":4},{"d":"M32 80 L32 92 M50 80 L50 96 M66 80 L66 92","stroke":"ink","weight":3},{"d":"M14 50 Q14 28 50 28 Q86 28 86 50 Q86 72 50 72 Q14 72 14 50 Z","fill":"coral","stroke":"ink","weight":4},{"d":"M26 50 Q26 36 50 36 Q74 36 74 50 Q74 64 50 64 Q26 64 26 50 Z","stroke":"paper","weight":3},{"d":"M38 50 Q38 43 50 43 Q62 43 62 50 Q62 57 50 57 Q38 57 38 50 Z","stroke":"paper","weight":3},{"d":"M48 50 L52 50","stroke":"paper","weight":4}]},
+    {"type":"label","text":"Çevre / Politika","x":90,"y":96,"color":"paper"}
+  ],
+  "locale": "tr"
+}

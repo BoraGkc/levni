@@ -1,0 +1,15 @@
+{
+ "_meta": {
+  "title": "\"cafe\", miniature pack",
+  "alt": "An isometric cafe with guests and a counter in Tulip Era colours"
+ },
+ "seed": 4,
+ "style": "miniature",
+ "elements": [
+  {
+   "type": "iso",
+   "preset": "cafe",
+   "seed": 4
+  }
+ ]
+}

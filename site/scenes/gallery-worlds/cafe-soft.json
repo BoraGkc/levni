@@ -1,0 +1,18 @@
+{
+ "_meta": {
+  "title": "\"cafe\", soft, pastel",
+  "alt": "A smooth toy-like isometric cafe diorama in pastel colours"
+ },
+ "seed": 7,
+ "finish": "soft",
+ "background": "paper",
+ "elements": [
+  {
+   "type": "iso",
+   "preset": "cafe",
+   "seed": 7,
+   "style": "soft",
+   "palette": "pastel"
+  }
+ ]
+}

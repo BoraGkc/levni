@@ -1,0 +1,11 @@
+{
+  "seed": 7,
+  "elements": [
+    {"type":"label","text":"Inflation by year, % (sample data, not real figures)","x":70,"y":70,"size":18},
+    {"type":"bars","x":70,"y":110,"w":700,"h":470,"values":[8.5,10.1,6.4,3.9,2.1,1.4,1.2,0.9],"labels":["2018","2019","2020","2021","2022","2023","2024","2025"],"highlight":1,"showValues":true,"labelSize":15,"suffix":"%"},
+    {"type":"linechart","x":830,"y":140,"w":310,"h":190,"values":[8.5,10.1,6.4,3.9,2.1,1.4,1.2,0.9],"area":true,"colors":["coral"],"baseline":true},
+    {"type":"label","text":"same sample, as a line","x":830,"y":370,"size":13},
+    {"type":"donut","x":940,"y":500,"r":70,"values":[60,25,15],"highlight":0,"hole":0.55},
+    {"type":"label","text":"sample split","x":940,"y":620,"size":13,"anchor":"middle"}
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "seed": 5,
+  "finish": "soft",
+  "background": "paper",
+  "elements": [
+    {"type":"iso","preset":"street","seed":5,"style":"soft","palette":"pastel"}
+  ]
+}

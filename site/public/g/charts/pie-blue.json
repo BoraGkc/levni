@@ -1,0 +1,9 @@
+{
+  "seed": 6,
+  "clip": [60,52,1080,569],
+  "elements": [
+    {"type":"panel","x":60,"y":52,"w":1080,"h":569,"color":"blue"},
+    {"type":"pie","x":600,"y":350,"r":210,"values":[35,25,20,20],"highlight":0,"explode":0.08,"colors":["mustard","tone","paper","tone-coral"],"ink":"paper","labels":["rent","food","travel","rest"],"labelSize":17},
+    {"type":"label","text":"A sample budget","x":110,"y":110,"size":18,"color":"paper"}
+  ]
+}

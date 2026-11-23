@@ -1,0 +1,22 @@
+{
+ "_meta": {
+  "title": "phone",
+  "alt": "The Folio drawing “phone” as a thick, lit 3D icon"
+ },
+ "seed": 3,
+ "finish": "soft",
+ "canvas": [
+  600,
+  600
+ ],
+ "background": "#F6ECE2",
+ "elements": [
+  {
+   "type": "extrude3d",
+   "name": "phone",
+   "x": 300,
+   "y": 300,
+   "size": 360
+  }
+ ]
+}

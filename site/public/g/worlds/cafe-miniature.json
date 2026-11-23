@@ -1,0 +1,7 @@
+{
+  "seed": 4,
+  "style": "miniature",
+  "elements": [
+    {"type":"iso","preset":"cafe","seed":4}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+ "_meta": {
+  "title": "auto, seed 12, sunset",
+  "alt": "A soft 3D cover in the sunset palette: a glossy rings shape, room left for a title"
+ },
+ "seed": 12,
+ "finish": "soft",
+ "background": "#FCEDE2",
+ "elements": [
+  {
+   "type": "soft3d",
+   "preset": "auto",
+   "seed": 12,
+   "palette": "sunset"
+  }
+ ]
+}

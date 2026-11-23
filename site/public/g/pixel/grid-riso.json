@@ -1,0 +1,26 @@
+{
+  "seed": 2,
+  "elements": [
+    {"type":"prop","name":"pixel-mail","variant":0,"x":130,"y":150,"size":120},
+    {"type":"prop","name":"pixel-movie","variant":2,"x":287,"y":150,"size":120},
+    {"type":"prop","name":"pixel-cloud-sun","variant":3,"x":444,"y":150,"size":120},
+    {"type":"prop","name":"pixel-power","variant":0,"x":601,"y":150,"size":120},
+    {"type":"prop","name":"pixel-search","variant":2,"x":758,"y":150,"size":120},
+    {"type":"prop","name":"pixel-car","variant":3,"x":915,"y":150,"size":120},
+    {"type":"prop","name":"pixel-luggage","variant":2,"x":1072,"y":150,"size":120},
+    {"type":"prop","name":"pixel-analytics","variant":0,"x":130,"y":340,"size":120},
+    {"type":"prop","name":"pixel-flag","variant":2,"x":287,"y":340,"size":120},
+    {"type":"prop","name":"pixel-human-run","variant":3,"x":444,"y":340,"size":120},
+    {"type":"prop","name":"pixel-link","variant":0,"x":601,"y":340,"size":120},
+    {"type":"prop","name":"pixel-bed","variant":2,"x":758,"y":340,"size":120},
+    {"type":"prop","name":"pixel-trending","variant":3,"x":915,"y":340,"size":120},
+    {"type":"prop","name":"pixel-checklist","variant":2,"x":1072,"y":340,"size":120},
+    {"type":"prop","name":"pixel-calendar-week-begin","variant":0,"x":130,"y":530,"size":120},
+    {"type":"prop","name":"pixel-briefcase","variant":2,"x":287,"y":530,"size":120},
+    {"type":"prop","name":"pixel-message","variant":3,"x":444,"y":530,"size":120},
+    {"type":"prop","name":"pixel-bullseye","variant":0,"x":601,"y":530,"size":120},
+    {"type":"prop","name":"pixel-image-multiple","variant":2,"x":758,"y":530,"size":120},
+    {"type":"prop","name":"pixel-notes-multiple","variant":3,"x":915,"y":530,"size":120},
+    {"type":"prop","name":"pixel-table","variant":2,"x":1072,"y":530,"size":120}
+  ]
+}

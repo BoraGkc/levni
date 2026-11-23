@@ -1,0 +1,14 @@
+{
+ "_meta": {
+  "title": "\"city\", seed 2",
+  "alt": "A hand-inked isometric city diorama on a floating slab, riso colours, seed 2"
+ },
+ "seed": 2,
+ "elements": [
+  {
+   "type": "iso",
+   "preset": "city",
+   "seed": 2
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "_meta": {
+  "title": "cat, blue palette",
+  "alt": "The Folio drawing “cat” as a thick, lit 3D icon (blue palette)"
+ },
+ "seed": 3,
+ "finish": "soft",
+ "canvas": [
+  600,
+  600
+ ],
+ "background": "#EFEAF8",
+ "elements": [
+  {
+   "type": "extrude3d",
+   "name": "cat",
+   "x": 300,
+   "y": 300,
+   "size": 360,
+   "palette": "blue"
+  }
+ ]
+}

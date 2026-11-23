@@ -1,0 +1,9 @@
+{
+  "seed": 3,
+  "finish": "soft",
+  "canvas": [600,600],
+  "background": "#F6ECE2",
+  "elements": [
+    {"type":"extrude3d","name":"microphone","x":300,"y":300,"size":360}
+  ]
+}

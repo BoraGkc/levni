@@ -1,0 +1,18 @@
+{
+ "_meta": {
+  "title": "\"office\", soft, warm",
+  "alt": "A smooth toy-like isometric office diorama in warm colours"
+ },
+ "seed": 8,
+ "finish": "soft",
+ "background": "paper",
+ "elements": [
+  {
+   "type": "iso",
+   "preset": "office",
+   "seed": 8,
+   "style": "soft",
+   "palette": "warm"
+  }
+ ]
+}

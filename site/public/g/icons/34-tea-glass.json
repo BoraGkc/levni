@@ -1,0 +1,9 @@
+{
+  "seed": 3,
+  "finish": "soft",
+  "canvas": [600,600],
+  "background": "#EFEAF8",
+  "elements": [
+    {"type":"extrude3d","name":"tea-glass","x":300,"y":300,"size":360}
+  ]
+}

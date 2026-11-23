@@ -1,0 +1,15 @@
+{
+  "seed": 21,
+  "elements": [
+    {"type":"hatch","points":[[565,345],[870,150],[870,450],[565,360]],"color":"tone","angle":35,"gap":9},
+    {"type":"sheet","x":860,"y":130,"w":270,"h":330,"color":"white","rot":0},
+    {"type":"hatch","x":875,"y":145,"w":240,"h":170,"color":"tone","angle":-20,"gap":11},
+    {"type":"cloud","x":1000,"y":230,"size":110,"color":"white"},
+    {"type":"skyline","x0":880,"x1":1110,"base":440,"minH":70,"maxH":150,"colors":["blue","blue","coral"]},
+    {"type":"draw","x":410,"y":330,"size":430,"paths":[{"d":"M18 38 H70 V72 H18 Z","fill":"white","stroke":"ink","weight":3},{"d":"M18 26 a14 14 0 1 0 28 0 a14 14 0 1 0 -28 0","fill":"white","stroke":"ink","weight":3},{"d":"M46 24 a12 12 0 1 0 24 0 a12 12 0 1 0 -24 0","fill":"white","stroke":"ink","weight":3},{"d":"M32 20 V32 M26 26 H38 M58 18 V30 M52 24 H64","stroke":"ink","weight":2},{"d":"M70 46 L88 40 V70 L70 64 Z","fill":"coral","stroke":"ink","weight":3},{"d":"M44 72 L26 98 M44 72 L62 98 M44 72 V98","stroke":"ink","weight":3.5},{"d":"M24 50 H40 M24 58 H34","stroke":"ink","weight":2.5}],"overprint":"coral"},
+    {"type":"brush","points":[[60,610],[300,598],[560,606],[760,600]],"width":16,"color":"ink"},
+    {"type":"crowd","x":560,"y":660,"w":600,"rows":2,"size":95,"highlight":"coral"},
+    {"type":"label","text":"Belgesel / Sokak","x":70,"y":72,"color":"ink"}
+  ],
+  "locale": "tr"
+}

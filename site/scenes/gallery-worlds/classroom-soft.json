@@ -1,0 +1,18 @@
+{
+ "_meta": {
+  "title": "\"classroom\", soft, pastel",
+  "alt": "A smooth toy-like isometric classroom diorama in pastel colours"
+ },
+ "seed": 9,
+ "finish": "soft",
+ "background": "paper",
+ "elements": [
+  {
+   "type": "iso",
+   "preset": "classroom",
+   "seed": 9,
+   "style": "soft",
+   "palette": "pastel"
+  }
+ ]
+}

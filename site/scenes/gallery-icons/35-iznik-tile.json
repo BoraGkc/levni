@@ -1,0 +1,26 @@
+{
+ "_meta": {
+  "title": "iznik-tile, recoloured",
+  "alt": "The Folio drawing “iznik tile” as a thick, lit 3D icon (recoloured)"
+ },
+ "seed": 3,
+ "finish": "soft",
+ "canvas": [
+  600,
+  600
+ ],
+ "background": "#F5F0DF",
+ "elements": [
+  {
+   "type": "extrude3d",
+   "name": "iznik-tile",
+   "x": 300,
+   "y": 300,
+   "size": 360,
+   "recolor": {
+    "coral": "green",
+    "mustard": "coral"
+   }
+  }
+ ]
+}

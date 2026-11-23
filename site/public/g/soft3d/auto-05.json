@@ -1,0 +1,9 @@
+{
+  "seed": 5,
+  "finish": "soft",
+  "background": "#071A5C",
+  "elements": [
+    {"type":"soft3d","preset":"auto","seed":5,"palette":"mono-blue"}
+  ],
+  "title": {"text":"What we learned shipping every week","kicker":"Engineering","brand":"levni.dev"}
+}

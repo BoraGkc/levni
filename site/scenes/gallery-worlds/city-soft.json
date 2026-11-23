@@ -1,0 +1,18 @@
+{
+ "_meta": {
+  "title": "\"city\", soft, warm",
+  "alt": "A smooth toy-like isometric city diorama in warm colours"
+ },
+ "seed": 6,
+ "finish": "soft",
+ "background": "paper",
+ "elements": [
+  {
+   "type": "iso",
+   "preset": "city",
+   "seed": 6,
+   "style": "soft",
+   "palette": "warm"
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "_meta": {
+  "title": "horizontal bars on blue",
+  "alt": "Horizontal hand-inked bars on a blue riso panel with paper lines and labels"
+ },
+ "seed": 4,
+ "clip": [
+  60,
+  52,
+  1080,
+  569
+ ],
+ "elements": [
+  {
+   "type": "panel",
+   "x": 60,
+   "y": 52,
+   "w": 1080,
+   "h": 569,
+   "color": "blue"
+  },
+  {
+   "type": "label",
+   "text": "Time spent per day, minutes (sample)",
+   "x": 110,
+   "y": 110,
+   "size": 18,
+   "color": "paper"
+  },
+  {
+   "type": "bars",
+   "x": 230,
+   "y": 150,
+   "w": 820,
+   "h": 400,
+   "horizontal": true,
+   "values": [
+    96,
+    74,
+    51,
+    38,
+    22
+   ],
+   "labels": [
+    "video",
+    "news",
+    "music",
+    "games",
+    "books"
+   ],
+   "colors": [
+    "mustard",
+    "tone",
+    "tone",
+    "tone",
+    "tone"
+   ],
+   "ink": "paper",
+   "showValues": true,
+   "labelSize": 17
+  }
+ ]
+}

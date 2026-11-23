@@ -1,0 +1,8 @@
+{
+  "seed": 4,
+  "finish": "soft",
+  "background": "#EEE9FA",
+  "elements": [
+    {"type":"soft3d","preset":"auto","seed":4,"palette":"lilac"}
+  ]
+}

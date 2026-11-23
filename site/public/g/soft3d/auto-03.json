@@ -1,0 +1,9 @@
+{
+  "seed": 3,
+  "finish": "soft",
+  "background": "#140A35",
+  "elements": [
+    {"type":"soft3d","preset":"auto","seed":3,"palette":"mint-night"}
+  ],
+  "title": {"text":"The quiet math of compound interest","kicker":"Money","brand":"levni.dev"}
+}

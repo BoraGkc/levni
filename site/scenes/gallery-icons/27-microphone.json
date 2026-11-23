@@ -1,0 +1,22 @@
+{
+ "_meta": {
+  "title": "microphone",
+  "alt": "The Folio drawing “microphone” as a thick, lit 3D icon"
+ },
+ "seed": 3,
+ "finish": "soft",
+ "canvas": [
+  600,
+  600
+ ],
+ "background": "#F6ECE2",
+ "elements": [
+  {
+   "type": "extrude3d",
+   "name": "microphone",
+   "x": 300,
+   "y": 300,
+   "size": 360
+  }
+ ]
+}

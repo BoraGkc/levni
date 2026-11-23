@@ -1,0 +1,17 @@
+{
+ "_meta": {
+  "title": "\"knot\", mint night",
+  "alt": "Soft 3D cover, a trefoil knot tube in the mint night palette"
+ },
+ "seed": 6,
+ "finish": "soft",
+ "background": "#140A35",
+ "elements": [
+  {
+   "type": "soft3d",
+   "preset": "knot",
+   "seed": 6,
+   "palette": "mint-night"
+  }
+ ]
+}

@@ -14,6 +14,10 @@ const shelves = Object.entries(CATEGORIES as Record<string, string>)
   .sort((a, b) => b.n - a.n);
 
 const total = props.reduce((n, p) => n + p.variants.length, 0);
+// pagination: the page ships the first PER tiles; the script fetches /props-index.json for search, shelves and later pages
+const PER = 120;
+const first = props.slice(0, PER);
+const pages = Math.ceil(props.length / PER);
 const title = 'Library';
 const description = `Browse all ${props.length} drawings in the Levni Folio: icons, objects and spot illustrations in one hand-inked style, free under CC BY 4.0.`;
 ---
@@ -30,7 +34,7 @@ const description = `Browse all ${props.length} drawings in the Levni Folio: ico
         <span class="visually-hidden">Search the library</span>
         <input id="q" type="search" placeholder="Search: cat, money, phone, kedi…" autocomplete="off" />
       </label>
-      <p class="count" aria-live="polite"><span id="shown">{props.length}</span> of {props.length}</p>
+      <p class="count" id="count" aria-live="polite">Showing 1–{Math.min(PER, props.length)} of {props.length.toLocaleString('en')}</p>
     </div>
     <div class="shelves" role="group" aria-label="Categories">
       <button type="button" class="shelf" data-c="" aria-pressed="true"><span>All</span><small>{props.length}</small></button>
@@ -43,11 +47,22 @@ const description = `Browse all ${props.length} drawings in the Levni Folio: ico
     </div>
   </section>
 
-  <section class="wrap">
+  <section class="wrap" id="results" data-per={PER}>
+    <nav class="pager" aria-label="Pages, top" data-pager>
+      <button type="button" class="pg-prev" data-go="prev" disabled>Previous</button>
+      <span class="pg-nums">
+        {Array.from({ length: Math.min(pages, 5) }, (_, i) => (
+          <button type="button" data-go={i + 1} aria-current={i === 0 ? 'page' : undefined} aria-label={`Page ${i + 1}`}>{i + 1}</button>
+        ))}
+        {pages > 5 && <span class="pg-gap" aria-hidden="true">…</span>}
+        {pages > 5 && <button type="button" data-go={pages} aria-label={`Page ${pages}`}>{pages}</button>}
+      </span>
+      <button type="button" class="pg-next" data-go="next" disabled={pages < 2}>Next</button>
+    </nav>
     <ul class="lib" id="lib">
-      {props.map((p) => (
-        <li data-c={p.category} data-q={[p.name, ...p.tags, ...p.variants].join(' ').toLowerCase()}>
-          <button type="button" class="tile" data-name={p.name} data-cat={(CATEGORIES as Record<string, string>)[p.category] || ''} data-n={p.variants.length} data-notes={JSON.stringify(p.variants)}>
+      {first.map((p) => (
+        <li>
+          <button type="button" class="tile" data-name={p.name}>
             <img src={`/props/${p.name}-0.webp`} width="240" height="240" alt="" loading="lazy" decoding="async" />
             <span class="name">{p.name}</span>
             {p.variants.length > 1 && <span class="vars">{p.variants.length} variants</span>}
@@ -56,6 +71,7 @@ const description = `Browse all ${props.length} drawings in the Levni Folio: ico
       ))}
     </ul>
     <p class="empty" id="empty" hidden>Nothing yet. <a href={`${SITE.github}/blob/main/CONTRIBUTING.md`}>Draw it for the Folio</a>.</p>
+    <nav class="pager" aria-label="Pages, bottom" data-pager></nav>
   </section>
 
   <dialog id="detail" aria-labelledby="d-title">
@@ -88,38 +104,104 @@ const description = `Browse all ${props.length} drawings in the Levni Folio: ico
   </section>
 </Base>
 
-<script define:vars={{ inks }}>window.__inks = inks;</script>
+<script define:vars={{ inks, cats: CATEGORIES }}>window.__inks = inks; window.__cats = cats;</script>
 <script>
+  type Prop = { name: string; c: string; q: string; notes: string[] };
+  const CATS = (window as any).__cats as Record<string, string>;
   const q = document.getElementById('q') as HTMLInputElement;
-  const items = [...document.querySelectorAll<HTMLLIElement>('#lib li')];
-  const shown = document.getElementById('shown')!;
+  const list = document.getElementById('lib')!;
+  const results = document.getElementById('results')!;
+  const count = document.getElementById('count')!;
   const empty = document.getElementById('empty')!;
+  const pagers = [...document.querySelectorAll<HTMLElement>('[data-pager]')];
   const chips = [...document.querySelectorAll<HTMLButtonElement>('.shelf')];
-  let cat = '';
-  const filter = () => {
+  const PER = Number(results.dataset.per) || 120;
+  const fmt = (n: number) => n.toLocaleString('en');
+  const esc = (t: string) => t.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+
+  // the full index, fetched once
+  const ready: Promise<Prop[]> = fetch('/props-index.json').then((r) => r.json()).then((rows: [string, string, string[], string[]][]) =>
+    rows.map(([name, c, tags, notes]) => ({ name, c, notes, q: [name, ...tags, ...notes].join(' ').toLowerCase() })));
+  const byName = new Map<string, Prop>();
+  ready.then((all) => all.forEach((p) => byName.set(p.name, p)));
+
+  const params = new URLSearchParams(location.search);
+  let cat = params.get('c') || '';
+  let page = Math.max(1, parseInt(params.get('page') || '1', 10) || 1);
+  if (params.get('q')) q.value = params.get('q')!;
+
+  function syncUrl(push = false) {
+    const url = new URL(location.href);
+    const set = (k: string, v: string) => (v ? url.searchParams.set(k, v) : url.searchParams.delete(k));
+    set('q', q.value.trim());
+    set('c', cat);
+    set('page', page > 1 ? String(page) : '');
+    if (url.href !== location.href) history[push ? 'pushState' : 'replaceState'](null, '', url);
+  }
+
+  // page buttons: first, last, and a window around the current page
+  function pagerHtml(pages: number) {
+    if (pages < 2) return '';
+    const nums = new Set([1, pages, page - 1, page, page + 1].filter((n) => n >= 1 && n <= pages));
+    if (page <= 3) [2, 3, 4].forEach((n) => n <= pages && nums.add(n));
+    if (page >= pages - 2) [pages - 1, pages - 2, pages - 3].forEach((n) => n >= 1 && nums.add(n));
+    const sorted = [...nums].sort((a, b) => a - b);
+    let html = `<button type="button" class="pg-prev" data-go="prev"${page === 1 ? ' disabled' : ''}>Previous</button><span class="pg-nums">`;
+    sorted.forEach((n, i) => {
+      if (i && n - sorted[i - 1] > 1) html += '<span class="pg-gap" aria-hidden="true">…</span>';
+      html += `<button type="button" data-go="${n}" aria-label="Page ${n}"${n === page ? ' aria-current="page"' : ''}>${n}</button>`;
+    });
+    return html + `</span><button type="button" class="pg-next" data-go="next"${page === pages ? ' disabled' : ''}>Next</button>`;
+  }
+
+  // the server already rendered the first page
+  let lastKey = [...list.querySelectorAll<HTMLElement>('.tile')].map((b) => b.dataset.name).join(',');
+  async function render() {
+    const all = await ready;
     const words = q.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
-    let n = 0;
-    for (const li of items) {
-      const hit = (!cat || li.dataset.c === cat) && words.every((w) => li.dataset.q!.includes(w));
-      li.hidden = !hit;
-      if (hit) n++;
+    const hits = all.filter((p) => (!cat || p.c === cat) && words.every((w) => p.q.includes(w)));
+    const pages = Math.max(1, Math.ceil(hits.length / PER));
+    page = Math.min(page, pages);
+    const from = (page - 1) * PER;
+    const slice = hits.slice(from, from + PER);
+    const key = slice.map((p) => p.name).join(',');
+    if (key !== lastKey) {
+      list.innerHTML = slice.map((p) => `<li><button type="button" class="tile" data-name="${esc(p.name)}"><img src="/props/${esc(p.name)}-0.webp" width="240" height="240" alt="" loading="lazy" decoding="async"><span class="name">${esc(p.name)}</span>${p.notes.length > 1 ? `<span class="vars">${p.notes.length} variants</span>` : ''}</button></li>`).join('');
+      lastKey = key;
     }
-    shown.textContent = String(n);
-    empty.hidden = n > 0;
-  };
+    count.textContent = hits.length ? `Showing ${fmt(from + 1)}–${fmt(from + slice.length)} of ${fmt(hits.length)}${hits.length < all.length ? ` (${fmt(all.length)} in all)` : ''}` : `No drawings match (${fmt(all.length)} in all)`;
+    empty.hidden = hits.length > 0;
+    const html = pagerHtml(pages);
+    pagers.forEach((p) => { p.innerHTML = html; p.hidden = !html; });
+  }
+
   const setCat = (c: string) => {
     cat = c;
     chips.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.c === c)));
-    const url = new URL(location.href);
-    if (c) url.searchParams.set('c', c); else url.searchParams.delete('c');
-    history.replaceState(null, '', url);
-    filter();
   };
-  chips.forEach((b) => b.addEventListener('click', () => setCat(b.dataset.c!)));
-  q.addEventListener('input', filter);
-  const params = new URLSearchParams(location.search);
-  if (params.get('q')) q.value = params.get('q')!;
-  if (params.get('c')) setCat(params.get('c')!); else if (params.get('q')) filter();
+  chips.forEach((b) => b.addEventListener('click', () => { setCat(b.dataset.c!); page = 1; syncUrl(); render(); }));
+  q.addEventListener('input', () => { page = 1; syncUrl(); render(); });
+  pagers.forEach((nav, k) => nav.addEventListener('click', (e) => {
+    const b = (e.target as HTMLElement).closest<HTMLButtonElement>('button[data-go]');
+    if (!b || b.disabled) return;
+    const go = b.dataset.go!;
+    page = go === 'prev' ? page - 1 : go === 'next' ? page + 1 : Number(go);
+    syncUrl(true);
+    render().then(() => {
+      if (k === 1 || results.getBoundingClientRect().top < 0) results.scrollIntoView({ block: 'start' });
+      // keep focus on the pager the visitor used
+      (pagers[k].querySelector<HTMLButtonElement>(`button[data-go="${go}"]:not([disabled])`) || pagers[k].querySelector<HTMLButtonElement>('[aria-current]'))?.focus({ preventScroll: k === 0 });
+    });
+  }));
+  window.addEventListener('popstate', () => {
+    const p = new URLSearchParams(location.search);
+    q.value = p.get('q') || '';
+    setCat(p.get('c') || '');
+    page = Math.max(1, parseInt(p.get('page') || '1', 10) || 1);
+    render();
+  });
+  setCat(cat);
+  render();
 
   // --- colours: the dialog loads each variant as SVG and swaps the house hex values, like the engine's style packs
   const { house, packs } = (window as any).__inks as { house: Record<string, string>; packs: Record<string, Record<string, string>> };
@@ -179,13 +261,16 @@ const description = `Browse all ${props.length} drawings in the Levni Folio: ico
     const style = pack === 'riso' ? '' : pack === 'miniature' ? '"miniature"' : JSON.stringify(map);
     code.textContent = style && Object.keys(map).length ? `{ "style": ${style},\n  "elements": [ ${el} ] }` : el;
   }
-  document.getElementById('lib')!.addEventListener('click', (e) => {
+  list.addEventListener('click', async (e) => {
     const b = (e.target as HTMLElement).closest<HTMLButtonElement>('.tile');
     if (!b) return;
     const name = b.dataset.name!;
-    const notes: string[] = JSON.parse(b.dataset.notes!);
+    await ready;
+    const prop = byName.get(name);
+    if (!prop) return;
+    const notes = prop.notes;
     document.getElementById('d-title')!.textContent = name;
-    document.getElementById('d-cat')!.textContent = b.dataset.cat || '';
+    document.getElementById('d-cat')!.textContent = CATS[prop.c] || '';
     vars.replaceChildren(...notes.map((note, i) => {
       const li = document.createElement('li');
       const btn = document.createElement('button');
@@ -236,7 +321,18 @@ const description = `Browse all ${props.length} drawings in the Levni Folio: ico
   .shelf[aria-pressed='true'] small { color: var(--rule); }
   .d-cat { margin: -6px 0 10px; color: var(--ink-soft); font-size: 0.95rem; }
   .lib { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
-  .lib li[hidden] { display: none; }
+  .pager { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px; margin: 0 0 18px; }
+  .pager[hidden] { display: none; }
+  .lib + .empty + .pager { margin: 24px 0 0; }
+  .pg-nums { display: inline-flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .pager button {
+    font: inherit; font-size: 0.92rem; min-width: 40px; min-height: 40px; padding: 6px 12px; cursor: pointer;
+    color: var(--ink); background: var(--paper-2); border: 1.5px solid var(--rule); border-radius: 999px;
+  }
+  .pager button:hover:not([disabled]) { border-color: var(--ink); }
+  .pager button[aria-current='page'] { background: var(--ink); border-color: var(--ink); color: var(--paper-2); }
+  .pager button[disabled] { opacity: 0.45; cursor: default; }
+  .pg-gap { color: var(--ink-soft); padding: 0 2px; }
   .tile {
     width: 100%; display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer;
     background: #f4f2ec; border: 1px solid var(--rule); padding: 6px 6px 10px; font: inherit; color: var(--ink);

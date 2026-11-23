@@ -1,0 +1,9 @@
+{
+  "seed": 1,
+  "finish": "soft",
+  "background": "#E4EEF9",
+  "elements": [
+    {"type":"soft3d","preset":"auto","seed":1,"palette":"aqua","badge":"examples/badge-tulip.svg"}
+  ],
+  "title": {"text":"Why every newsroom wants a data desk","kicker":"Analysis","brand":"levni.dev"}
+}

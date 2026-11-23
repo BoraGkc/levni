@@ -1,0 +1,89 @@
+{
+ "_meta": {
+  "title": "faceless people",
+  "alt": "Pictogram people walking, cheering and handing over a light bulb on a blue panel"
+ },
+ "seed": 8,
+ "clip": [
+  60,
+  52,
+  1080,
+  569
+ ],
+ "elements": [
+  {
+   "type": "panel",
+   "x": 60,
+   "y": 52,
+   "w": 1080,
+   "h": 569,
+   "color": "blue"
+  },
+  {
+   "type": "disc",
+   "x": 820,
+   "y": 230,
+   "r": 120,
+   "color": "mustard"
+  },
+  {
+   "type": "hills",
+   "base": 600,
+   "height": 90,
+   "color": "tone",
+   "period": 230
+  },
+  {
+   "type": "person",
+   "x": 330,
+   "y": 585,
+   "size": 330,
+   "pose": "holding",
+   "hold": "lightbulb",
+   "color": "paper",
+   "accent": "coral"
+  },
+  {
+   "type": "person",
+   "x": 520,
+   "y": 585,
+   "size": 300,
+   "pose": "pointing",
+   "facing": "left",
+   "color": "coral"
+  },
+  {
+   "type": "people",
+   "x": 640,
+   "y": 590,
+   "w": 470,
+   "n": 5,
+   "size": 200,
+   "poses": [
+    "walking",
+    "waving",
+    "reading",
+    "phone",
+    "cheering"
+   ],
+   "colors": [
+    "paper",
+    "tone",
+    "paper",
+    "mustard",
+    "paper"
+   ],
+   "accents": [
+    "coral"
+   ],
+   "facing": "alternate"
+  },
+  {
+   "type": "label",
+   "x": 110,
+   "y": 112,
+   "text": "People / pictograms",
+   "color": "paper"
+  }
+ ]
+}
