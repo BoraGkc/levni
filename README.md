@@ -55,9 +55,9 @@ Node 20+. The only dependency is [sharp](https://sharp.pixelplumbing.com).
 | | |
 | --- | --- |
 | **The Levni Folio** | 1,577 drawings, 3,356 variants (481 of them pixel icons), on 15 shelves, searchable in English and Turkish. CC BY 4.0. [Browse](https://levni.dev/library/) |
-| **Scenes and the critic** | 46 element types on a 1200 × 673 canvas. Pressure-brush ink, riso plate misregistration, paper grain. Same seed, same picture. Every render returns layout notes: off-canvas, accidental crops, lopsided weight, no focal point. |
+| **Scenes and the critic** | 55 element types on a 1200 × 673 canvas. Pressure-brush ink, riso plate misregistration, paper grain. Same seed, same picture. Every render returns layout notes: off-canvas, accidental crops, lopsided weight, no focal point. |
 | **Style packs and your inks** | `riso` (default), `miniature` (Tulip Era colours, with its own tulips, carnations, cypresses and medallion), or your own colour map: every drawing follows your brand. |
-| **Soft 3D finish** | `"finish": "soft"`: clean edges and film grain, twisting gradient `ribbon`s, shaded `tube`s, an `image` badge for a logo you own. |
+| **Soft 3D finish** | `"finish": "soft"`: clean edges and film grain. A real little 3D renderer (pure JS, no GPU): glossy `ribbon3d` bands (loop, Möbius, spiral, knot), `torus3d`, `sphere3d`, `capsule3d`, `blob3d`, `cubes3d`, interlocking shapes in one `soft3d` scene, `extrude3d` that turns any Folio drawing into a 3D icon, and `soft3d` cover presets (`"preset": "auto"`, five palettes) with room for a title and an `image` badge. [Guide](docs/scene.md#soft-3d-v2-real-3d-shapes-use-with-finish-soft) |
 | **Little 3D worlds** | `iso` rooms, desks, stages and streets from floors, walls, boxes and cylinders, with props standing inside. |
 | **Faceless people** | `person` in 15 poses (walking, pointing, reading, phone, cheering, …), `people` in a row. Round heads, no faces, by design. |
 | **Fusion slots** | Put any drawing inside another: a chart on a TV screen, a tulip in a magnifier's lens. 64 hosts have slots. |
@@ -65,12 +65,13 @@ Node 20+. The only dependency is [sharp](https://sharp.pixelplumbing.com).
 | **Every format, plus a title** | cover, og, square, story, youtube: recomposed, not cropped. Optional headline, kicker and brand layer. |
 | **Calm images for hard news** | A blue-only pack for loss, disaster, illness, courts and grief. [Guide](docs/sensitive.md) |
 
-The `miniature` pack, the `soft` finish, people, slots and charts:
+The `miniature` pack, the `soft` finish and soft 3D, people, slots and charts:
 
 | | | |
 | --- | --- | --- |
 | ![The isometric room in miniature colours](examples/room-miniature.png) | ![A blue-teal gradient ribbon arching across a pale background](examples/ribbon-loop.png) | ![Three mint tube rings on deep purple](examples/ribbon-rings.png) |
 | ![Pictogram people walking, cheering and handing over an object](examples/people.png) | ![A chart drawn inside an old TV screen](examples/slots-tv.png) | ![Hand-drawn bar, line and donut charts with sample data](examples/chart-inflation.png) |
+| ![A soft 3D cover: a glossy teal-to-indigo ribbon loop on pale blue, a title and a badge](examples/soft3d-auto-aqua.png) | ![A chain of four interlocking glossy mint and violet rings on deep purple](examples/soft3d-tori.png) | ![Five library drawings as 3D icons: rocket, light bulb, tulip, trophy, heart](examples/soft3d-icons.png) |
 
 Full element reference: [`docs/scene.md`](docs/scene.md) · JSON Schema: [`docs/scene.schema.json`](docs/scene.schema.json) · all example scenes: [`examples/`](examples/)
 

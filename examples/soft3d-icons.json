@@ -1,0 +1,12 @@
+{
+  "seed": 4,
+  "finish": "soft",
+  "background": "#E9EEF7",
+  "elements": [
+    { "type": "extrude3d", "name": "rocket", "x": 140, "y": 336, "size": 200 },
+    { "type": "extrude3d", "name": "lightbulb", "x": 370, "y": 336, "size": 200 },
+    { "type": "extrude3d", "name": "tulip", "x": 600, "y": 336, "size": 220 },
+    { "type": "extrude3d", "name": "trophy", "x": 830, "y": 336, "size": 200 },
+    { "type": "extrude3d", "name": "heart", "x": 1060, "y": 336, "size": 190 }
+  ]
+}

@@ -243,7 +243,7 @@ async function composeOnce(spec, canvas, lay) {
       // charts on a dark panel: paper axes and labels, light series colours, unless the scene says otherwise
       const onDark = CHARTS.has(t) && inDark(e.x ?? 0, e.y ?? 0);
       const ee = onDark ? { ...e, ink: e.ink ?? 'paper', colors: e.colors ?? ['tone', 'mustard', 'coral', 'paper'] } : e;
-      const { svg, bbox } = ASSETS[t](ee, { pen: makePen(er, { hand }), r: er, c, noise, t: time });
+      const { svg, bbox } = ASSETS[t](ee, { pen: makePen(er, { hand }), r: er, c, noise, t: time, canvas });
       out.push(e.rot ? `<g transform="rotate(${e.rot} ${e.x} ${e.y})">${svg}</g>` : svg);
       if (bbox) note(t, ...bbox);
     } else if (t === 'label') {

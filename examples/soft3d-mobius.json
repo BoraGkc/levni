@@ -1,0 +1,8 @@
+{
+  "seed": 2,
+  "finish": "soft",
+  "background": "#ECE7FA",
+  "elements": [
+    { "type": "ribbon3d", "preset": "mobius", "x": 640, "y": 340, "size": 560, "width": 170, "colors": ["#D7C8FF", "#9A86F5", "#5B47D6"], "rotate": [58, -12, 18] }
+  ]
+}
