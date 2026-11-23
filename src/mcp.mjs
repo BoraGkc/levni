@@ -95,7 +95,8 @@ async function call(name, args = {}) {
   }
 
   if (name === 'render_scene' || name === 'critique_scene') {
-    const { svg, used } = await compose(asScene(args.scene));
+    const scene = asScene(args.scene);
+    const { svg, used } = await compose(scene);
     const notes = critique(used);
     const out = [text(notesText(notes))];
     if (name === 'critique_scene') return out;
@@ -105,8 +106,8 @@ async function call(name, args = {}) {
       if (!['.png', '.webp', '.svg'].includes(ext)) throw new Error('out must end in .png, .webp or .svg');
       mkdirSync(dirname(file), { recursive: true });
       if (ext === '.svg') writeFileSync(file, svg);
-      else if (ext === '.webp') await toWebp(svg, file);
-      else await toPng(svg, file);
+      else if (ext === '.webp') await toWebp(svg, file, { screen: scene.screen });
+      else await toPng(svg, file, { screen: scene.screen });
       out.push(text(`wrote ${file}`));
     }
     if (args.preview !== false) out.push(image(await preview(svg)));

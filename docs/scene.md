@@ -26,6 +26,7 @@ A machine-readable outline is in [`scene.schema.json`](scene.schema.json).
 | `style` | string or object | `riso` | style pack: `riso` or `miniature`, or your own inks as `{ "blue": "#123456", "coral": "#FF8800" }` (house colour names: paper, white, ink, blue, coral, green, mustard, dark, tone, tone-coral, tone-green, tone-mustard; the rest keep the house hex). Recolours every prop, panel and texture. |
 | `finish` | string | `crayon` | `crayon`: hand-inked lines, riso plates, paper grain. `soft`: clean edges and a fine film grain, for the ribbon look |
 | `grain` | number | `0.16` | strength of the film grain in the `soft` finish |
+| `screen` | string or object | none | print pass on .png/.webp: the finished picture is averaged into `cell`-px blocks and Bayer-dithered to the nearest of `paper` + `inks`. Presets: `1bit`, `riso`, `blueprint`, `gameboy`, `newsprint`; or `{preset?, cell, matrix, inks, paper, spread}`. Flat paper and flat ink stay solid |
 | `format` | string | `cover` | canvas preset: `cover` 1200×673, `og` 1200×630, `square` 1080×1080, `story` 1080×1920, `youtube` 1280×720 |
 | `canvas` | `[w, h]` | none | explicit canvas size (64..8192 each); wins over `format` |
 | `reflow` | boolean | `false` | recompose a scene authored for 1200×673 onto the chosen canvas (below). `levni render --format <name>` sets `format` and `reflow` |
@@ -74,6 +75,7 @@ House rule: at most **two main inks plus paper** per scene; a third colour only 
 | `hills` | `base`, `height`, `color`, `x`?, `w`?, `step`?, `period`? | hills, mountains |
 | `skyline` | `x0`, `x1`, `base`, `minH`, `maxH`, `colors`? | procedural buildings (40–160 heights read calmer) |
 | `halftone` | `x`, `y`, `w`, `h`, `color`, `mode` (`radial`/`linear`), `gap`?, `level`? | riso halftone dots |
+| `dither` | `x`, `y`, `w`, `h` (or `x`, `y`, `r` for a disc); `color` or `colors` [light → dark inks], `mode` (`linear` default / `radial` / `noise` / `flat`), `from` (1), `to` (0) coverage 0..1, `angle` (90 = top to bottom), `cx`, `cy`, `radius` (radial), `scale` (noise, 0.006), `cell` (12 px, min 3), `matrix` (2 / 4 / 8), `pattern` (`square` / `dot` / `line` / `plus`), `gap` | ordered (Bayer) dither field: pixel skies, 1-bit fades, dithered suns and orbs. With several `colors` the coverage walks through them (paper → first → second). Goes through the crayon finish like everything else; use `"finish": "soft"` for razor-sharp pixels |
 | `flowfield` | `x`, `y`, `w`, `h`, `colors`?, `spacing`?, `length`?, `scale`?, `turn`?, `weight`? | noise flow lines (wind, water, data) |
 | `hatch` | `x, y, w, h` or `x, y, r` or `points`; `color`, `angle`?, `gap`?, `cross`?, `outline`? | hand hatching instead of a flat fill |
 | `confetti` | `x`, `y`, `w`, `h`, `kind` (`confetti`/`rain`/`stars`), `spacing`?, `colors`? | Poisson-spread confetti, rain, stars |
@@ -272,3 +274,18 @@ Examples: [`slots-tv`](../examples/slots-tv.json), [`slots-lens`](../examples/sl
 - On a blue panel, `ink` lines and an `overprint` read almost black: use `paper` for lines and `coral`/`mustard` for the second ink.
 - For a road in perspective use a thick `line` (weight 60–80), not a `shape`.
 - To put the sun behind buildings, write the `disc` before the `skyline`.
+
+### Dither recipes
+
+A dithered sunset (OG card): two-ink sky, a radial sun that fades from mustard to coral, line-dithered water.
+
+```json
+{ "background": "dark", "elements": [
+  { "type": "dither", "x": 0, "y": 0, "w": 1200, "h": 470, "colors": ["blue", "coral"], "from": 0.05, "to": 1.05, "cell": 8, "matrix": 8 },
+  { "type": "dither", "x": 820, "y": 400, "r": 190, "colors": ["coral", "mustard"], "mode": "radial", "cy": 260, "radius": 330, "to": 0.42, "cell": 8, "matrix": 8 },
+  { "type": "dither", "x": 0, "y": 470, "w": 1200, "h": 203, "color": "blue", "from": 0.55, "to": 0, "pattern": "line", "cell": 8 }
+]}
+```
+
+Any scene as a riso print: add `"screen": "riso"` (or `"1bit"`, `"blueprint"`, `"gameboy"`, `"newsprint"`, or `{ "cell": 5, "inks": ["#14181F", "#F2603F"] }`).
+

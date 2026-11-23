@@ -9,6 +9,7 @@ export { expandIso } from './iso.mjs';
 export { ASSETS } from './assets.mjs';
 export { FORMATS, resolveCanvas } from './formats.mjs';
 export { toWebp, toPng } from './export.mjs';
+export { bayer, screenRaster, SCREEN_PRESETS } from './dither.mjs';
 export { STYLES, applyStyle } from './styles.mjs';
 export { validateProp, parseProps, measureVariant, CATEGORIES } from './validate.mjs';
 export { iconsAvailable, resolveIcon } from './icon.mjs';
@@ -22,7 +23,7 @@ import { toPng, toWebp } from './export.mjs';
 export async function render(scene, out, opts = {}) {
   const { svg, used, canvas } = await compose(scene);
   if (/\.svg$/i.test(out)) writeFileSync(out, svg);
-  else if (/\.webp$/i.test(out)) await toWebp(svg, out, opts.webp);
-  else await toPng(svg, out, { preview: !!opts.preview });
+  else if (/\.webp$/i.test(out)) await toWebp(svg, out, { ...opts.webp, screen: scene.screen });
+  else await toPng(svg, out, { preview: !!opts.preview, screen: scene.screen });
   return { notes: critique(used, canvas), svg };
 }
