@@ -61,7 +61,7 @@ House rule: at most **two main inks plus paper** per scene; a third colour only 
 | depth on `draw`/`prop` | `extrude: {dx, dy, color, steps}` · `shade: {lx, ly, depth, gap, angle, color}` · `shadow: {dx, dy, color, opacity}` (each may be `true`) | Cut-paper thickness, pencil hatching on the side away from the light, a cast shadow. Best on the focal object. |
 | `icon` | `name` (English concept), `x`, `y`, `size`, `color`, `under`?, `overprint`?, `rot`?, `weight`? | A Tabler icon redrawn in the house line. **Needs `@tabler/icons`** (optional peer dependency). |
 | `ascii` | `name`, `x`, `y`, `w`, `h`, `color`, `font`? | An icon drawn in characters (good inside a `window`). Needs `@tabler/icons`. |
-| `iso` | `x`, `y` (world origin on the canvas), `scale`, `weight`?, `projection` (`iso` / `oblique`), `objects` [] | **A small 3D world.** Object kinds: `floor` {x, y, w, d, color, pattern: `boards`/`tiles`/`hatch`}, `wall` {axis `x`/`y`, x, y, w or d, h, color, window: [u, v, w, h]}, `box` {x, y, z?, w, d, h, color, windows: [cols, rows], stripe?}, `cylinder` {x, y, z?, r, h, color}, `prop` {name, x, y, z?, size, variant?}, `draw` {paths, x, y, z?, size}. World axes: x to the lower right, y to the lower left, z up; a room has its two walls at x = 0 and y = 0. Objects stand on their lowest drawn point; to put one on a table set `z` to the table height. One projection per scene. |
+| `iso` | `preset`? + `seed`?, or `objects` []; `base`?, `style`?, `palette`?, `x`, `y`, `scale`, `fit`?, `ao`?, `weight`?, `projection`? | **A small 3D world**: rooms, desks, streets, cities, floating dioramas. One line gives a whole scene (`{"type": "iso", "preset": "cafe", "seed": 2}`). Full reference: [Little 3D worlds](#little-3d-worlds-iso) below. |
 
 ### Grounds and textures
 
@@ -128,6 +128,60 @@ Charts are drawn with the hand pen from numbers you give; nothing else is invent
 | `ribbon` | `points` [[x, y] …] or `circle` [cx, cy, r], `width`, `colors` [a, b, …] (gradient along the length), `back`?, `twists`?, `phase`?, `closed`?, `highlight`? | a wide band swept along a smooth line; where it twists it narrows and shows its `back` side. 5–7 points that run off the canvas read best |
 | `tube` | `points` or `circle` [cx, cy, r] (or [cx, cy, rx, ry, rotation]), `width`, `color`, `light`? | a round tube shaded from a dark rim to a light core; three circles make interlocking rings |
 | `image` | `src` (local png, jpg, svg or webp), `x`, `y` (centre), `size`, `card`?, `cardColor`?, `radius`? | a picture on a rounded card, e.g. a product logo you have the right to show. Logos never go into the Folio |
+
+## Little 3D worlds (`iso`)
+
+An `iso` element is a small isometric world built from objects in world units (about a pixel at scale 1). World axes: **x** runs to the lower right, **y** to the lower left, **z** up. A room has its two walls at x = 0 (the left wall, along y) and y = 0 (the right wall, along x); the viewer looks from +x, +y, above. Every object stands on z = 0 unless you give `z` (put a laptop on a 60-high desk with `"z": 60`). Objects are drawn in painter's order from their 3D boxes (far before near, under before on top), so the order you list them in does not matter.
+
+```json
+{ "type": "iso", "preset": "room", "seed": 3 }
+{ "type": "iso", "preset": "city", "seed": 2, "style": "soft", "palette": "pastel" }
+{ "type": "iso", "base": { "shape": "round" }, "objects": [ { "kind": "tree", "x": 0, "y": 0 }, { "kind": "bench", "x": 30, "y": -20 } ] }
+```
+
+**World options**
+
+| field | meaning |
+| --- | --- |
+| `preset` | `room`, `desk`, `street`, `city`, `cafe`, `office`, `classroom`: a seeded generator lays out a plausible scene (walls, windows with sunlight, furniture, props, trees, roads, people) on a diorama base. |
+| `seed` | picks the preset's layout, colours and people (default 1). Same seed, same world. |
+| `objects` | your own objects. With a preset they are **added**; an object with the `id` of a preset object **overrides** its fields (`{"id": "rug", "color": "mustard"}`), and `{"id": "rug", "remove": true}` drops it. Preset ids: `floor`, `wall-back`, `wall-left`, `rug`, `desk`, `sofa`, `shelf`, `plant`, `person`, `counter`, `menu`, `board`, `road`, `car-1`, … (ids follow the kind; see `src/iso-presets.mjs`). |
+| `base` | `true` or `{ shape, depth?, top?, edge?, …}` with `shape` `square` / `round` / `island` and `edge` `grass` / `tile` / `none`; also `{ margin?, lift?, float?: false, shadow?: false, layers?: [{h, color, hatch?}], x?, y?, w?, d? }`: the world sits on a thick slab with visible soil layers and a grass lip (or a tile edge), floating over a soft contact shadow. `island` tapers into a rounded keel. Without `x/y/w/d` the slab follows the objects plus `margin` (26). |
+| `style` | `soft`: smooth gradient shading, no ink outline, a light rim on top faces (pair it with the scene's `"finish": "soft"`). Default: hand-inked faces, three riso tones and hatching on the shaded side. Props and people keep their own line in both styles. |
+| `palette` | colour roles for presets and default object colours: `house` (default), `pastel`, `warm`, `blue` (blue only, for hard news: every accent and every prop folds into the blue family). |
+| `x`, `y`, `scale` | where the world origin lands and how big a world unit is. Leave all three out and the world is **fitted** to the canvas (`fit: [x, y, w, h]` fits it into a box instead). |
+| `ao` | ambient occlusion (default on): a soft dark band where walls meet the floor and in room corners, contact shadows under every object, a faint cast shadow to the lower right. `false` keeps only the cast shadows. |
+| `weight` | outline weight (default 7, thinner at small scales). |
+
+**Object kinds** (all take `x`, `y`, `z`?, `color`?; sizes are `w` along x, `d` along y, `h` up)
+
+| kind | fields | notes |
+| --- | --- | --- |
+| `floor` | `w`, `d`, `pattern`: `boards` / `tiles` / `checker` / `hatch`, `step`? | |
+| `wall` | `axis` `x` / `y`, `w` or `d`, `h`, `t`? (thickness, 14), `windows`: [[u, v, w, h] or {u, v, w, h}], `light`?, `door`: [u, w, h], `arch`: [u, w, h], `cap`? | a thick slab with its cut top showing. Openings are cut in with their reveal (the wall's depth) and what lies beyond; windows get mullions and a sill; `light: true` throws the window's patch of sunlight on the floor. `window: [u, v, w, h]` (one) also works; values ≤ 1 are shares of the wall. |
+| `box` | `w`, `d`, `h`, `windows`: [cols, rows], `stripe`?, `door`?, `roof`?: `gable` / `hip` / `flat`, `roofColor`?, `ridge`? `x`/`y` | |
+| `house` | `w`, `d`, `h`, `ridge`?, `roofColor`?, `doorColor`? | a box with a gable roof, a door and windows |
+| `building` | `w`, `d`, `h`, `lights`? | windows on both faces (`lights: true` lights some of them), a flat roof with a parapet and a roof unit |
+| `roof` | `w`, `d`, `h`, `type` `gable` / `hip` / `flat`, `parapet`?, `overhang`? | on its own, e.g. on top of your own box |
+| `stairs` | `w`, `d`, `h`, `steps`? (5), `dir`: `+x` / `-x` / `+y` / `-y` (the way up) | |
+| `ramp` | `w`, `d`, `h`, `dir` | a wedge rising toward `dir` |
+| `fence`, `lowwall`, `hedge` | `axis`, `w` or `d`, `h`?, `gap`? (fence pickets) | |
+| `pond` / `water` | `w`, `d`, `shape` `round` / `rect`, `rim`?, `lily`? | stone rim, sunken water, ripples |
+| `road` | `w`, `d`, `axis`, `dashes`?, `crossing`? (offset of a zebra crossing) | |
+| `path` | `w`, `d`, `stones`?, `shape`? | pavement, sidewalk or garden path |
+| `rug`, `decal` | `w`, `d`, `shape` `rect` / `round`, `pattern`? `stripes`, `border`? | flat on the floor |
+| `tree` | `r`, `h`, `shape` `ball` / `cone` / `pine`, `trunk`? | |
+| `bush` | `r` | |
+| `lamp` | `h`, `glow`? | a lamp post with a pool of light |
+| `bench`, `chair`, `sofa`, `table` (`shape: "round"`), `desk`, `counter`, `shelf` (with books), `bed` | `w`?, `d`?, `h`?, `facing` `+x` / `-x` / `+y` / `-y` | room-scale furniture (a desk is 60 high, a person 120) |
+| `car` | `axis` | |
+| `cylinder`, `stool`, `pot` | `r`, `h` | `pot` carries a round plant |
+| `person` | `h` (120), `pose`, `facing`, `color`, `accent`? | a faceless `person` standing at a world point (sitting on a chair: same x, y as the chair) |
+| `prop`, `draw` | `name` / `paths`, `size`, `variant`?, `contact`? | stands on its lowest drawn point |
+| `prop` / `draw` with `wall` | `wall` `x` / `y`, along-wall position (`x` on an x wall, `y` on a y wall), `z` (centre height), `size` | **hung on the wall**: the drawing is mapped into the wall plane (a poster, a clock, a calendar) |
+| `frame`, `board`, `clock` | `wall`, position, `z`, `w`, `h` / `r`, `art`: `hills` / `blob` / `chart` / `chalk` / `lines` | a framed picture, a chalk or white board, a wall clock |
+
+The first-generation kinds (`floor`, `wall`, `box`, `cylinder`, `prop`, `draw`) with none of the options above keep the original renderer and draw exactly as before; `projection: "oblique"` works only there. Examples: [`iso-room`](../examples/iso-room.json) (a hand-built diorama), [`iso-city`](../examples/iso-city.json), [`iso-cafe`](../examples/iso-cafe.json) (a preset with an override), [`iso-soft`](../examples/iso-soft.json).
 
 ## Formats and reflow
 

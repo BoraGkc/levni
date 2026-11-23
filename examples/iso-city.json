@@ -1,0 +1,4 @@
+{ "seed": 3, "background": "paper", "elements": [
+  { "type": "iso", "preset": "city", "seed": 1 },
+  { "type": "label", "text": "City desk", "x": 70, "y": 90 }
+] }

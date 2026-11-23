@@ -1,0 +1,19 @@
+{ "seed": 7, "background": "paper", "elements": [
+  { "type": "iso", "base": { "shape": "square", "edge": "tile", "top": "stone", "depth": 32 }, "objects": [
+    { "kind": "floor", "x": 0, "y": 0, "w": 340, "d": 320, "color": "paper", "pattern": "boards" },
+    { "kind": "wall", "axis": "x", "x": 0, "y": 0, "w": 340, "h": 210, "color": "tone", "windows": [{ "u": 120, "v": 70, "w": 100, "h": 90 }], "light": true },
+    { "kind": "wall", "axis": "y", "x": 0, "y": 0, "d": 320, "h": 210, "color": "blue", "arch": [210, 62, 140] },
+    { "kind": "frame", "wall": "y", "y": 100, "z": 140, "w": 74, "h": 50, "art": "hills" },
+    { "kind": "prop", "name": "clock", "wall": "x", "x": 60, "z": 150, "size": 44 },
+    { "kind": "rug", "x": 120, "y": 130, "w": 170, "d": 140, "color": "coral", "pattern": "stripes" },
+    { "kind": "desk", "x": 28, "y": 16, "w": 120, "d": 58 },
+    { "kind": "prop", "name": "laptop", "x": 78, "y": 42, "z": 60, "size": 56, "contact": false },
+    { "kind": "prop", "name": "mug", "x": 124, "y": 36, "z": 60, "size": 22, "contact": false },
+    { "kind": "chair", "x": 70, "y": 94, "facing": "-y" },
+    { "kind": "shelf", "x": 244, "y": 4, "w": 80, "d": 28, "h": 150 },
+    { "kind": "pot", "x": 306, "y": 66, "r": 14, "h": 22, "color": "mustard" },
+    { "kind": "prop", "name": "floor-lamp", "x": 40, "y": 150, "size": 150 },
+    { "kind": "person", "x": 215, "y": 225, "h": 118, "pose": "reading", "facing": "left", "accent": "mustard" }
+  ] },
+  { "type": "label", "text": "Remote work", "x": 70, "y": 90 }
+] }

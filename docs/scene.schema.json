@@ -356,18 +356,41 @@
           "type": "string"
         },
         "pose": {
-          "enum": ["standing","walking","running","sitting","pointing","waving","raising-arm","holding","carrying","reading","phone","thinking","cheering","kneeling","leaning"],
+          "enum": [
+            "standing",
+            "walking",
+            "running",
+            "sitting",
+            "pointing",
+            "waving",
+            "raising-arm",
+            "holding",
+            "carrying",
+            "reading",
+            "phone",
+            "thinking",
+            "cheering",
+            "kneeling",
+            "leaning"
+          ],
           "description": "person: body pose"
         },
         "facing": {
-          "enum": ["left", "right", "alternate"],
+          "enum": [
+            "left",
+            "right",
+            "alternate"
+          ],
           "description": "person: facing (alternate is for people)"
         },
         "accent": {
           "$ref": "#/$defs/color"
         },
         "accentKind": {
-          "enum": ["scarf", "bag"]
+          "enum": [
+            "scarf",
+            "bag"
+          ]
         },
         "hold": {
           "type": "string",
@@ -381,16 +404,167 @@
           "type": "object",
           "description": "place this element in a named slot of an earlier prop (docs/scene.md, Slots)",
           "properties": {
-            "ref": { "type": "string", "description": "id of an earlier element" },
-            "prop": { "type": "string", "description": "name of a prop; the most recent one is used" },
-            "slot": { "type": "string" }
+            "ref": {
+              "type": "string",
+              "description": "id of an earlier element"
+            },
+            "prop": {
+              "type": "string",
+              "description": "name of a prop; the most recent one is used"
+            },
+            "slot": {
+              "type": "string"
+            }
           },
-          "required": ["slot"]
+          "required": [
+            "slot"
+          ]
         },
         "paths": {
           "type": "array",
           "items": {
             "$ref": "#/$defs/path"
+          }
+        },
+        "preset": {
+          "enum": [
+            "room",
+            "desk",
+            "street",
+            "city",
+            "cafe",
+            "office",
+            "classroom"
+          ],
+          "description": "iso: a seeded generator that lays out a whole world (docs/scene.md, Little 3D worlds)"
+        },
+        "seed": {
+          "type": "integer",
+          "description": "iso: preset layout seed"
+        },
+        "palette": {
+          "type": "string",
+          "description": "iso: house, pastel, warm or blue (blue only, for hard news); prop/draw: blue"
+        },
+        "style": {
+          "enum": [
+            "riso",
+            "soft"
+          ],
+          "description": "iso: soft = smooth shading without ink outlines (pair with finish: soft)"
+        },
+        "base": {
+          "description": "iso: a diorama slab under the world",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "shape": {
+                  "enum": [
+                    "square",
+                    "round",
+                    "island"
+                  ]
+                },
+                "depth": {
+                  "type": "number"
+                },
+                "top": {
+                  "$ref": "#/$defs/color"
+                },
+                "edge": {
+                  "enum": [
+                    "grass",
+                    "tile",
+                    "none"
+                  ]
+                },
+                "margin": {
+                  "type": "number"
+                },
+                "lift": {
+                  "type": "number"
+                },
+                "float": {
+                  "type": "boolean"
+                },
+                "shadow": {
+                  "type": "boolean"
+                },
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                },
+                "w": {
+                  "type": "number"
+                },
+                "d": {
+                  "type": "number"
+                },
+                "layers": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "h": {
+                        "type": "number"
+                      },
+                      "color": {
+                        "$ref": "#/$defs/color"
+                      },
+                      "hatch": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "h",
+                      "color"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "fit": {
+          "description": "iso: fit the world into the canvas (true) or a box [x, y, w, h]; on by default when x, y and scale are left out. draw/prop: scale the visible ink to size",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "#/$defs/rect"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        },
+        "ao": {
+          "type": "boolean",
+          "description": "iso: ambient occlusion (default true)"
+        },
+        "scale": {
+          "type": "number",
+          "description": "iso: screen pixels per world unit"
+        },
+        "projection": {
+          "enum": [
+            "iso",
+            "oblique"
+          ],
+          "description": "iso: oblique works with the first-generation kinds only"
+        },
+        "objects": {
+          "type": "array",
+          "description": "iso: world objects",
+          "items": {
+            "$ref": "#/$defs/isoObject"
           }
         }
       },
@@ -398,6 +572,217 @@
         "type"
       ],
       "additionalProperties": true
+    },
+    "isoObject": {
+      "type": "object",
+      "required": [],
+      "additionalProperties": true,
+      "description": "An object in an iso world. World units; x to the lower right, y to the lower left, z up. With a preset, an object whose id matches a preset object overrides it ({id, remove: true} drops it).",
+      "properties": {
+        "kind": {
+          "enum": [
+            "floor",
+            "wall",
+            "box",
+            "house",
+            "building",
+            "roof",
+            "stairs",
+            "ramp",
+            "fence",
+            "lowwall",
+            "hedge",
+            "pond",
+            "water",
+            "road",
+            "path",
+            "rug",
+            "decal",
+            "tree",
+            "bush",
+            "lamp",
+            "lamppost",
+            "bench",
+            "chair",
+            "sofa",
+            "table",
+            "desk",
+            "counter",
+            "shelf",
+            "bed",
+            "car",
+            "cylinder",
+            "stool",
+            "pot",
+            "person",
+            "prop",
+            "draw",
+            "frame",
+            "board",
+            "clock"
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "remove": {
+          "type": "boolean"
+        },
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        },
+        "w": {
+          "type": "number"
+        },
+        "d": {
+          "type": "number"
+        },
+        "h": {
+          "type": "number"
+        },
+        "r": {
+          "type": "number"
+        },
+        "t": {
+          "type": "number"
+        },
+        "color": {
+          "$ref": "#/$defs/color"
+        },
+        "axis": {
+          "enum": [
+            "x",
+            "y"
+          ]
+        },
+        "dir": {
+          "enum": [
+            "+x",
+            "-x",
+            "+y",
+            "-y"
+          ]
+        },
+        "facing": {
+          "enum": [
+            "+x",
+            "-x",
+            "+y",
+            "-y",
+            "left",
+            "right"
+          ]
+        },
+        "wall": {
+          "enum": [
+            "x",
+            "y"
+          ],
+          "description": "prop/draw/frame/board/clock: hang it on the wall along this axis"
+        },
+        "pattern": {
+          "enum": [
+            "boards",
+            "tiles",
+            "checker",
+            "hatch",
+            "stripes"
+          ]
+        },
+        "shape": {
+          "enum": [
+            "rect",
+            "round",
+            "ball",
+            "cone",
+            "pine"
+          ]
+        },
+        "roof": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "enum": [
+                "gable",
+                "hip",
+                "flat"
+              ]
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "gable",
+            "hip",
+            "flat"
+          ]
+        },
+        "windows": {
+          "type": "array"
+        },
+        "window": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "light": {
+          "type": "boolean"
+        },
+        "door": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "arch": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "steps": {
+          "type": "integer"
+        },
+        "crossing": {
+          "type": "number"
+        },
+        "dashes": {
+          "type": "boolean"
+        },
+        "stones": {
+          "type": "boolean"
+        },
+        "art": {
+          "enum": [
+            "hills",
+            "blob",
+            "chart",
+            "chalk",
+            "lines"
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "size": {
+          "type": "number"
+        },
+        "variant": {
+          "type": "integer"
+        },
+        "pose": {
+          "type": "string"
+        }
+      }
     }
   }
 }

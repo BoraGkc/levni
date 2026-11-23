@@ -1,0 +1,7 @@
+{ "seed": 5, "background": "paper", "elements": [
+  { "type": "iso", "preset": "cafe", "seed": 1, "objects": [
+    { "id": "sign", "art": "hills" },
+    { "kind": "person", "x": 300, "y": 280, "h": 112, "pose": "phone", "facing": "left", "color": "mustard" }
+  ] },
+  { "type": "label", "text": "Third places", "x": 70, "y": 90 }
+] }
