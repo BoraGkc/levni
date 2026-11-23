@@ -103,6 +103,17 @@ House rule: at most **two main inks plus paper** per scene; a third colour only 
 | `brush` | `points` [[x, y] …], `width`?, `taper`?, `color` | brush stroke that swells in the middle |
 | `label` | `text`, `x`, `y`, `size`?, `color`?, `anchor`?, `upper`? | small mono label (section / topic). Not for headlines. |
 
+### Data charts
+
+Charts are drawn with the hand pen from numbers you give; nothing else is invented. Values are scaled to the box, zero and negative values are handled (negative bars hang below the baseline), and bad numbers count as 0. Common options: `labels` [text …], `colors`, `highlight` (index, painted `coral` with the rest `tone`), `showValues` (prints the numbers, with `prefix`, `suffix`, `decimals`), `labelSize`, `weight`, and `ink` (axis, outline and label colour; on a dark panel set `"ink": "paper"` and pick `colors` that show on it).
+
+| type | fields | notes |
+| --- | --- | --- |
+| `bars` | `x`, `y`, `w`, `h`, `values`, `horizontal`?, `gap`? (0..0.9), `baseline`? (false hides it), `min`?, `max`? | bars from a zero baseline; a value outside `min`/`max` is clipped to it |
+| `linechart` | `x`, `y`, `w`, `h`, `series` [[…], […]] or `values`, `dots`?, `area`? (fills under the first series), `areaColor`?, `axis`?, `zero`? (false: do not force the scale to include 0), `min`?, `max`? | one line per series; a single value becomes a dot |
+| `pie` / `donut` | `x`, `y` (centre), `r`, `values`, `hole`? (0..0.8; donut default 0.55), `explode`? (fraction of r), `start`? (degrees, default -90) | negatives count as 0; all zeros draws an empty outline; `highlight` also pulls that slice out |
+| `isochart` | `x`, `y` (top-left of first row), `values`, `unit` (value per icon), `icon`? ("person" or a prop name), `size`?, `maxIcons`?, `showUnit`? | one row per value, a part icon is cropped to the remainder (12.5 at unit 10 is 1.25 icons); `unit` is raised if a row would exceed `maxIcons` (24) |
+
 ### Soft 3D look (use with `"finish": "soft"`)
 
 | type | fields | notes |

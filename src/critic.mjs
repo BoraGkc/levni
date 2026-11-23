@@ -21,7 +21,7 @@ export function critique(used) {
   const mass = (x0, x1) => ink.reduce((s, b) => s + Math.max(0, Math.min(b.x + b.w, x1) - Math.max(b.x, x0)) * b.h, 0);
   const L = mass(0, W / 2), R = mass(W / 2, W);
   if (L + R > 0 && Math.min(L, R) / Math.max(L, R) < 0.35) notes.push(`weight is lopsided (${L > R ? 'left' : 'right'} heavy): balance it or make the empty side intentional`);
-  const big = ink.filter((b) => ['icon', 'draw', 'ascii', 'disc', 'shape', 'sheet', 'window', 'crowd', 'isotype', 'skyline'].includes(b.type)).sort((a, b) => area(b) - area(a))[0];
+  const big = ink.filter((b) => ['icon', 'draw', 'ascii', 'disc', 'shape', 'sheet', 'window', 'crowd', 'isotype', 'skyline', 'bars', 'linechart', 'pie', 'donut', 'isochart'].includes(b.type)).sort((a, b) => area(b) - area(a))[0];
   if (!big || area(big) < 200 * 200) notes.push('no clear focal symbol: one element should be at least ~220px');
   const icons = used.filter((b) => b.type === 'icon');
   for (let i = 0; i < icons.length; i++) for (let j = i + 1; j < icons.length; j++) {
