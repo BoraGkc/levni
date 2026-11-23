@@ -1,5 +1,5 @@
 {
-  "name": "levni",
+  "name": "@levni/levni",
   "version": "0.1.0",
   "mcpName": "dev.levni/levni",
   "description": "Hand-inked, riso-printed illustrations from JSON scenes. Design assets for agents and publishers. Powered by Ortak Alan.",
@@ -67,5 +67,8 @@
   },
   "bugs": {
     "url": "https://github.com/BoraGkc/levni/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
