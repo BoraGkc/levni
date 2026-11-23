@@ -1,0 +1,31 @@
+{
+ "name": "zodiac-virgo",
+ "tags": [
+  "başak",
+  "virgo",
+  "burç",
+  "zodiac",
+  "astroloji",
+  "astrology",
+  "sign"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "virgo sign ornament on a disc",
+   "paths": [
+    {
+     "d": "M8 50 A42 42 0 1 0 92 50 A42 42 0 1 0 8 50 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M24 32 V64 M24 40 Q24 32 36 36 Q40 38 40 46 V64 M40 40 Q40 32 52 36 Q56 38 56 46 V66 Q56 74 64 74 Q76 74 76 60 Q76 50 66 52",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+{
+ "name": "stadium-bowl",
+ "tags": [
+  "stadyum",
+  "arena",
+  "stadium",
+  "sport",
+  "spor",
+  "saha"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "top view, seats ring and pitch",
+   "paths": [
+    {
+     "d": "M7 52 A43 34 0 1 0 93 52 A43 34 0 1 0 7 52 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M16 52 A34 25 0 1 0 84 52 A34 25 0 1 0 16 52 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M25 52 A25 17 0 1 0 75 52 A25 17 0 1 0 25 52 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M50 35 V69",
+     "stroke": "paper",
+     "weight": 4
+    },
+    {
+     "d": "M44 52 A6 4.5 0 1 0 56 52 A6 4.5 0 1 0 44 52 Z",
+     "stroke": "paper",
+     "weight": 4
+    },
+    {
+     "d": "M25 44 V60 M75 44 V60",
+     "stroke": "paper",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

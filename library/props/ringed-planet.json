@@ -1,0 +1,77 @@
+{
+ "name": "ringed-planet",
+ "tags": [
+  "gezegen",
+  "halka",
+  "satürn",
+  "ringed planet",
+  "astroloji",
+  "uzay"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "coral planet, one ring",
+   "paths": [
+    {
+     "d": "M8.7 65 A44 12 -20 1 0 91.3 35 A44 12 -20 1 0 8.7 65 Z",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M25 50 A25 25 0 1 0 75 50 A25 25 0 1 0 25 50 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 42 Q50 50 70 40 M27 58 Q50 66 73 56",
+     "stroke": "tone-coral",
+     "weight": 5
+    },
+    {
+     "d": "M8.7 65 A44 12 -20 0 0 91.3 35",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  },
+  {
+   "note": "blue planet, double ring, small moon",
+   "paths": [
+    {
+     "d": "M7.7 65.4 A45 13 -20 1 0 92.3 34.6 A45 13 -20 1 0 7.7 65.4 Z",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M14.3 63 A38 9 -20 1 0 85.7 37 A38 9 -20 1 0 14.3 63 Z",
+     "stroke": "mustard",
+     "weight": 6
+    },
+    {
+     "d": "M28 50 A22 22 0 1 0 72 50 A22 22 0 1 0 28 50 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M7.7 65.4 A45 13 -20 0 0 92.3 34.6",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M14.3 63 A38 9 -20 0 0 85.7 37",
+     "stroke": "mustard",
+     "weight": 6
+    },
+    {
+     "d": "M77 22 A7 7 0 1 0 91 22 A7 7 0 1 0 77 22 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "name": "crystal-ball",
+ "tags": [
+  "kristal küre",
+  "falcı",
+  "crystal ball",
+  "fortune",
+  "astroloji",
+  "mystic"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "sphere on a stand",
+   "paths": [
+    {
+     "d": "M22 92 L30 72 Q50 82 70 72 L78 92 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M17 44 A33 33 0 1 0 83 44 A33 33 0 1 0 17 44 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 31 L53.5 40.5 L63 44 L53.5 47.5 L50 57 L46.5 47.5 L37 44 L46.5 40.5 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M30 30 Q34 22 42 18",
+     "stroke": "paper",
+     "weight": 6
+    },
+    {
+     "d": "M66 60 h.1",
+     "stroke": "paper",
+     "weight": 7
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "name": "ayran-cup",
+ "tags": [
+  "ayran",
+  "bardak",
+  "cup",
+  "yoghurt drink",
+  "turkish kitchen"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "metal cup with foam",
+   "paths": [
+    {
+     "d": "M30 28 L34 86 Q34 91 40 91 L60 91 Q66 91 66 86 L70 28 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M26 30 Q24 16 38 18 Q44 6 56 16 Q74 12 74 30 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M32 56 H68",
+     "stroke": "coral",
+     "weight": 7
+    },
+    {
+     "d": "M33 70 H67",
+     "stroke": "coral",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

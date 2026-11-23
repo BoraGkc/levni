@@ -1,0 +1,52 @@
+{
+ "name": "tennis-racket",
+ "tags": [
+  "tenis",
+  "raket",
+  "racket",
+  "sport",
+  "spor"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "upright racket, string grid",
+   "paths": [
+    {
+     "d": "M50 66 L42 56 L58 56 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M44 62 L44 90 Q50 95 56 90 L56 62 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M26 33 A24 26 0 1 0 74 33 A24 26 0 1 0 26 33 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M40 12 V54 M50 8 V58 M60 12 V54 M30 21 H70 M27 33 H73 M30 45 H70",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M26 33 A24 26 0 1 0 74 33 A24 26 0 1 0 26 33 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M44 72 H56 M44 80 H56",
+     "stroke": "paper",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

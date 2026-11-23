@@ -1,0 +1,52 @@
+{
+ "name": "cezve-copper",
+ "tags": [
+  "cezve",
+  "türk kahvesi",
+  "coffee",
+  "pot",
+  "copper",
+  "turkish kitchen"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "copper cezve, long handle, foam",
+   "paths": [
+    {
+     "d": "M66 44 L95 20",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M31 30 L25 76 Q25 82 33 82 L59 82 Q67 82 65 76 L59 30 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M26 30 L66 30 L60 24 Q46 20 32 24 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M33 25 A13 3.5 0 1 0 59 25 A13 3.5 0 1 0 33 25 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M27 62 H64",
+     "stroke": "mustard",
+     "weight": 6
+    },
+    {
+     "d": "M30 29 L18 22",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "name": "rugby-ball",
+ "tags": [
+  "ragbi",
+  "rugby",
+  "ball",
+  "oval",
+  "sport",
+  "spor"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "oval ball, laces and two bands",
+   "paths": [
+    {
+     "d": "M12.7 73.3 Q28.8 16.1 87.3 26.7 Q71.2 83.9 12.7 73.3 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M34.7 59.5 68",
+     "stroke": "paper",
+     "weight": 5
+    },
+    {
+     "d": "M18.8 53 Q22.9 67 33.7 76.7 M66.3 23.3 Q77.1 33 81.2 47",
+     "stroke": "paper",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

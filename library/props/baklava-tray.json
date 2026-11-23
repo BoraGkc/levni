@@ -1,0 +1,86 @@
+{
+ "name": "baklava-tray",
+ "tags": [
+  "baklava",
+  "tepsi",
+  "tray",
+  "dessert",
+  "fıstık",
+  "turkish kitchen"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "tray cut into diamonds, pistachio dots",
+   "paths": [
+    {
+     "d": "M12 12 L88 12 Q94 12 94 18 L94 82 Q94 88 88 88 L12 88 Q6 88 6 82 L6 18 Q6 12 12 12 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M17 20 L83 20 Q86 20 86 23 L86 77 Q86 80 83 80 L17 80 Q14 80 14 77 L14 23 Q14 20 17 20 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M14 74 L20 80 M14 50 L44 80 M14 26 L68 80 M32 20 L86 74 M56 20 L86 50 M14 36 L30 20 M14 60 L54 20 M18 80 L78 20 M42 80 L86 36 M66 80 L86 60",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M31 55 h.1",
+     "stroke": "green",
+     "weight": 8
+    },
+    {
+     "d": "M43 67 h.1",
+     "stroke": "green",
+     "weight": 8
+    },
+    {
+     "d": "M31 31 h.1",
+     "stroke": "green",
+     "weight": 8
+    },
+    {
+     "d": "M43 43 h.1",
+     "stroke": "green",
+     "weight": 8
+    },
+    {
+     "d": "M55 55 h.1",
+     "stroke": "green",
+     "weight": 8
+    },
+    {
+     "d": "M67 67 h.1",
+     "stroke": "green",
+     "weight": 8
+    },
+    {
+     "d": "M55 31 h.1",
+     "stroke": "green",
+     "weight": 8
+    },
+    {
+     "d": "M67 43 h.1",
+     "stroke": "green",
+     "weight": 8
+    },
+    {
+     "d": "M79 55 h.1",
+     "stroke": "green",
+     "weight": 8
+    },
+    {
+     "d": "M79 31 h.1",
+     "stroke": "green",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

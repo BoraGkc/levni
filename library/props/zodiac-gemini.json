@@ -1,0 +1,31 @@
+{
+ "name": "zodiac-gemini",
+ "tags": [
+  "ikizler",
+  "gemini",
+  "burç",
+  "zodiac",
+  "astroloji",
+  "astrology",
+  "sign"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "gemini sign ornament on a disc",
+   "paths": [
+    {
+     "d": "M8 50 A42 42 0 1 0 92 50 A42 42 0 1 0 8 50 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M30 30 Q50 38 70 30 M30 70 Q50 62 70 70 M41 34 V66 M59 34 V66",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

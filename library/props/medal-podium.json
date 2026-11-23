@@ -1,0 +1,74 @@
+{
+ "name": "medal-podium",
+ "tags": [
+  "podyum",
+  "madalya",
+  "podium",
+  "winner",
+  "sport",
+  "spor",
+  "birinci"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "three steps, one dot, two, three",
+   "paths": [
+    {
+     "d": "M35 40 H65 V90 H35 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M8 56 H35 V90 H8 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M65 66 H92 V90 H65 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 66 h.1",
+     "stroke": "ink",
+     "weight": 10
+    },
+    {
+     "d": "M16 72 h.1",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M27 72 h.1",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M71 78 h.1",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M78.5 78 h.1",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M86 78 h.1",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 9 L54.1 18.3 L64.3 19.4 L56.7 26.2 L58.8 36.1 L50 31 L41.2 36.1 L43.3 26.2 L35.7 19.4 L45.9 18.3 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 7
+    }
+   ]
+  }
+ ]
+}

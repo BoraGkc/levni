@@ -1,0 +1,36 @@
+{
+ "name": "zodiac-taurus",
+ "tags": [
+  "boğa",
+  "taurus",
+  "burç",
+  "zodiac",
+  "astroloji",
+  "astrology",
+  "sign"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "taurus sign ornament on a disc",
+   "paths": [
+    {
+     "d": "M8 50 A42 42 0 1 0 92 50 A42 42 0 1 0 8 50 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M27 26 Q28 46 50 46 Q72 46 73 26 M50 46",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M36 64 A14 14 0 1 0 64 64 A14 14 0 1 0 36 64 Z",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

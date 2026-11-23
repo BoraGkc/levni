@@ -1,0 +1,60 @@
+{
+ "name": "lane-rope",
+ "tags": [
+  "kulvar ipi",
+  "yüzme",
+  "havuz",
+  "lane rope",
+  "swimming",
+  "sport",
+  "spor"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "rope with floats over water",
+   "paths": [
+    {
+     "d": "M6 74 L94 30",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M8 68.5 A9 14 0 1 0 26 68.5 A9 14 0 1 0 8 68.5 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M25 60 A9 14 0 1 0 43 60 A9 14 0 1 0 25 60 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M42 51.5 A9 14 0 1 0 60 51.5 A9 14 0 1 0 42 51.5 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M59 43 A9 14 0 1 0 77 43 A9 14 0 1 0 59 43 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M76 34.5 A9 14 0 1 0 94 34.5 A9 14 0 1 0 76 34.5 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M8 86 Q18 79 28 86 Q38 93 48 86 Q58 79 68 86 Q78 93 88 86",
+     "stroke": "blue",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

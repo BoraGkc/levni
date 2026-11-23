@@ -1,0 +1,31 @@
+{
+ "name": "zodiac-scorpio",
+ "tags": [
+  "akrep",
+  "scorpio",
+  "burç",
+  "zodiac",
+  "astroloji",
+  "astrology",
+  "sign"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "scorpio sign ornament on a disc",
+   "paths": [
+    {
+     "d": "M8 50 A42 42 0 1 0 92 50 A42 42 0 1 0 8 50 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M24 30 V62 M24 38 Q24 30 36 34 Q40 36 40 44 V62 M40 38 Q40 30 52 34 Q56 36 56 44 V64 Q56 72 66 72 L76 62 M76 62 L66 62 M76 62 L76 72",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "constellation-dots",
+ "tags": [
+  "takımyıldız",
+  "yıldız",
+  "constellation",
+  "stars",
+  "astroloji"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "six dots joined by lines",
+   "paths": [
+    {
+     "d": "M16 72 L34 42 L56 54 L74 24 M56 54 L84 76",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M16 72 h.1",
+     "stroke": "ink",
+     "weight": 16
+    },
+    {
+     "d": "M34 42 h.1",
+     "stroke": "ink",
+     "weight": 12
+    },
+    {
+     "d": "M56 54 h.1",
+     "stroke": "mustard",
+     "weight": 18
+    },
+    {
+     "d": "M74 24 h.1",
+     "stroke": "ink",
+     "weight": 14
+    },
+    {
+     "d": "M84 76 h.1",
+     "stroke": "ink",
+     "weight": 12
+    },
+    {
+     "d": "M56 54 h.1",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

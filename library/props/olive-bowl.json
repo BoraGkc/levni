@@ -1,0 +1,58 @@
+{
+ "name": "olive-bowl",
+ "tags": [
+  "zeytin",
+  "kase",
+  "olive",
+  "bowl",
+  "kahvaltı",
+  "turkish kitchen"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "bowl heaped with olives",
+   "paths": [
+    {
+     "d": "M22 44 A12 9 0 1 0 46 44 A12 9 0 1 0 22 44 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M48 44 A12 9 0 1 0 72 44 A12 9 0 1 0 48 44 Z",
+     "fill": "dark",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M35 32 A12 9 0 1 0 59 32 A12 9 0 1 0 35 32 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M30 42 h.1",
+     "stroke": "paper",
+     "weight": 5
+    },
+    {
+     "d": "M56 42 h.1",
+     "stroke": "paper",
+     "weight": 5
+    },
+    {
+     "d": "M10 52 L90 52 Q88 86 50 86 Q12 86 10 52 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M24 64 Q34 74 48 76",
+     "stroke": "paper",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "name": "astrolabe",
+ "tags": [
+  "usturlap",
+  "astrolabe",
+  "astronomi",
+  "navigation",
+  "astroloji"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "ring, plate and pointer",
+   "paths": [
+    {
+     "d": "M43 13 A7 7 0 1 0 57 13 A7 7 0 1 0 43 13 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M12 56 A38 38 0 1 0 88 56 A38 38 0 1 0 12 56 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M23 56 A27 27 0 1 0 77 56 A27 27 0 1 0 23 56 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 29 V83 M23 56 H77",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M38 56 A12 12 0 1 0 62 56 A12 12 0 1 0 38 56 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M32 76 L70 36",
+     "stroke": "coral",
+     "weight": 8
+    },
+    {
+     "d": "M50 56 h.1",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

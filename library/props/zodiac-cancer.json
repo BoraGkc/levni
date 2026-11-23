@@ -1,0 +1,41 @@
+{
+ "name": "zodiac-cancer",
+ "tags": [
+  "yengeç",
+  "cancer",
+  "burç",
+  "zodiac",
+  "astroloji",
+  "astrology",
+  "sign"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "cancer sign ornament on a disc",
+   "paths": [
+    {
+     "d": "M8 50 A42 42 0 1 0 92 50 A42 42 0 1 0 8 50 Z",
+     "fill": "tone",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M33 50 h.1",
+     "stroke": "ink",
+     "weight": 14
+    },
+    {
+     "d": "M67 50 h.1",
+     "stroke": "ink",
+     "weight": 14
+    },
+    {
+     "d": "M28 50 Q34 28 72 34 M72 50 Q66 72 28 66",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

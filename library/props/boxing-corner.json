@@ -1,0 +1,68 @@
+{
+ "name": "boxing-corner",
+ "tags": [
+  "boksör köşesi",
+  "ring",
+  "corner",
+  "boxing",
+  "sport",
+  "spor",
+  "ip"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "corner post, three ropes each side",
+   "paths": [
+    {
+     "d": "M57 22 L92 34 L92 42 L57 30 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M57 40 L92 54 L92 62 L57 48 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M57 58 L92 74 L92 82 L57 66 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M43 22 L8 34 L8 42 L43 30 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M43 40 L8 54 L8 62 L43 48 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M43 58 L8 74 L8 82 L43 66 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M47 10 L53 10 Q58 10 58 15 L58 77 Q58 82 53 82 L47 82 Q42 82 42 77 L42 15 Q42 10 47 10 Z",
+     "fill": "blue",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M34 82 L66 82 L66 90 L34 90 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 8
+    }
+   ]
+  }
+ ]
+}

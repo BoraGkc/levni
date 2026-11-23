@@ -1,0 +1,45 @@
+{
+ "name": "oklava",
+ "tags": [
+  "oklava",
+  "merdane",
+  "rolling pin",
+  "dough",
+  "turkish kitchen"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "long thin pin over a dough disc",
+   "paths": [
+    {
+     "d": "M10 68 A40 18 0 1 0 90 68 A40 18 0 1 0 10 68 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M8.8 51.4 L85.7 29.4 Q91.5 27.7 93.1 33.5 L93.1 33.5 Q94.8 39.2 89 40.9 L12.1 62.9 Q6.3 64.6 4.7 58.8 L4.7 58.8 Q3 53.1 8.8 51.4 Z",
+     "fill": "tone-mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M18.4 48.7 52",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M32 76 h.1",
+     "stroke": "tone",
+     "weight": 6
+    },
+    {
+     "d": "M64 72 h.1",
+     "stroke": "tone",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

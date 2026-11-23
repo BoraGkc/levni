@@ -1,0 +1,46 @@
+{
+ "name": "copper-pot",
+ "tags": [
+  "bakır tencere",
+  "tencere",
+  "pot",
+  "copper",
+  "lid",
+  "turkish kitchen"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "two ears, domed lid",
+   "paths": [
+    {
+     "d": "M18 54 H7 V63 H18 M82 54 H93 V63 H82",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M17 42 L83 42 L80 80 Q79 88 70 88 L30 88 Q21 88 20 80 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M14 42 Q50 16 86 42 Z",
+     "fill": "mustard",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M50 22 h.1",
+     "stroke": "ink",
+     "weight": 12
+    },
+    {
+     "d": "M20 62 H80",
+     "stroke": "mustard",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}

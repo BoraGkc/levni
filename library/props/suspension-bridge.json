@@ -1,0 +1,51 @@
+{
+ "name": "suspension-bridge",
+ "tags": [
+  "asma köprü",
+  "köprü",
+  "bridge",
+  "cables",
+  "boğaz",
+  "istanbul"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "two towers, cable, hangers, water",
+   "paths": [
+    {
+     "d": "M38 43 V66 M50 51 V66 M62 43 V66",
+     "stroke": "ink",
+     "weight": 4
+    },
+    {
+     "d": "M4 60 Q16 24 26 22 Q50 80 74 22 Q84 24 96 60",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M23 18 L29 18 Q31 18 31 20 L31 76 Q31 78 29 78 L23 78 Q21 78 21 76 L21 20 Q21 18 23 18 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M71 18 L77 18 Q79 18 79 20 L79 76 Q79 78 77 78 L71 78 Q69 78 69 76 L69 20 Q69 18 71 18 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 8
+    },
+    {
+     "d": "M2 66 H98",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M8 86 Q20 78 32 86 Q44 94 56 86 Q68 78 80 86 Q88 90 94 86",
+     "stroke": "blue",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

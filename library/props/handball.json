@@ -1,0 +1,41 @@
+{
+ "name": "handball",
+ "tags": [
+  "hentbol",
+  "topu",
+  "ball",
+  "sport",
+  "spor"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "ball with a wide band",
+   "paths": [
+    {
+     "d": "M12 50 A38 38 0 1 0 88 50 A38 38 0 1 0 12 50 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 9
+    },
+    {
+     "d": "M14.4 40 Q50 52 85.6 40 A37 37 0 0 1 85.6 60 Q50 72 14.4 60 A37 37 0 0 1 14.4 40 Z",
+     "fill": "paper",
+     "stroke": "ink",
+     "weight": 6
+    },
+    {
+     "d": "M34 15 Q40 40 36 58 M66 15 Q60 40 64 58",
+     "stroke": "ink",
+     "weight": 5
+    },
+    {
+     "d": "M12 50 A38 38 0 1 0 88 50 A38 38 0 1 0 12 50 Z",
+     "fill": "none",
+     "stroke": "ink",
+     "weight": 9
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,161 @@
+{
+ "name": "lokum",
+ "tags": [
+  "lokum",
+  "turkish delight",
+  "cubes",
+  "dessert",
+  "turkish kitchen"
+ ],
+ "author": "Levni",
+ "variants": [
+  {
+   "note": "three rose cubes",
+   "paths": [
+    {
+     "d": "M8 54 L30 65 L30 87 L8 76 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M52 54 L30 65 L30 87 L52 76 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M8 54 L30 43 L52 54 L30 65 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M48 54 L70 65 L70 87 L48 76 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M92 54 L70 65 L70 87 L92 76 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M48 54 L70 43 L92 54 L70 65 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M28 28 L50 39 L50 61 L28 50 Z",
+     "fill": "coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M72 28 L50 39 L50 61 L72 50 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M28 28 L50 17 L72 28 L50 39 Z",
+     "fill": "tone-coral",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 24 h.1",
+     "stroke": "paper",
+     "weight": 7
+    },
+    {
+     "d": "M30 50 h.1",
+     "stroke": "paper",
+     "weight": 6
+    },
+    {
+     "d": "M70 50 h.1",
+     "stroke": "paper",
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "note": "three pistachio cubes",
+   "paths": [
+    {
+     "d": "M8 54 L30 65 L30 87 L8 76 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M52 54 L30 65 L30 87 L52 76 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M8 54 L30 43 L52 54 L30 65 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M48 54 L70 65 L70 87 L48 76 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M92 54 L70 65 L70 87 L92 76 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M48 54 L70 43 L92 54 L70 65 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M28 28 L50 39 L50 61 L28 50 Z",
+     "fill": "green",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M72 28 L50 39 L50 61 L72 50 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M28 28 L50 17 L72 28 L50 39 Z",
+     "fill": "tone-green",
+     "stroke": "ink",
+     "weight": 7
+    },
+    {
+     "d": "M50 24 h.1",
+     "stroke": "paper",
+     "weight": 7
+    },
+    {
+     "d": "M30 50 h.1",
+     "stroke": "paper",
+     "weight": 6
+    },
+    {
+     "d": "M70 50 h.1",
+     "stroke": "paper",
+     "weight": 6
+    }
+   ]
+  }
+ ]
+}
