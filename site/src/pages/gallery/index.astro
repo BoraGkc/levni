@@ -125,7 +125,7 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
         <p id="g-alt" class="dlg-alt"></p>
         <div class="code-head"><span id="g-file">scene.json</span><button type="button" id="g-copy" class="copy">Copy</button></div>
         <pre><code id="g-code"></code></pre>
-        <p class="dlg-run">Render it: <code id="g-run">npx levni render scene.json out.png</code></p>
+        <p class="dlg-run">Render it: <code id="g-run">npx @levni/levni render scene.json out.png</code></p>
       </div>
     </div>
   </dialog>
@@ -209,7 +209,7 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
     copy.textContent = 'Copy';
     const board = d.big!.includes('/g/boards/');
     document.getElementById('g-file')!.textContent = board ? 'board.json' : 'scene.json';
-    document.getElementById('g-run')!.textContent = board ? 'npx levni board board.json out.png' : 'npx levni render scene.json out.png';
+    document.getElementById('g-run')!.textContent = board ? 'npx @levni/levni board board.json out.png' : 'npx @levni/levni render scene.json out.png';
     if (!dlg.open) dlg.showModal();
   }
   document.querySelector('main')!.addEventListener('click', (e) => {

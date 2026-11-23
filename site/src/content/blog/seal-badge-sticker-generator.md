@@ -31,7 +31,7 @@ Install the package and render a file:
 
 ```bash
 npm install @levni/levni
-npx levni render seal.json seal.png
+npx @levni/levni render seal.json seal.png
 ```
 
 The seal is one element. Put this in `seal.json`:
@@ -43,7 +43,7 @@ The seal is one element. Put this in `seal.json`:
 ] }
 ```
 
-The scene is 1200 by 673 pixels, so `x: 600, y: 336` is the centre. `size` is the width of the whole seal. The `prop` is a drawing from the library, which has 1,577 drawings; search it with `npx levni list coffee`. A seal takes either a `prop` or a `word` in the middle, not both.
+The scene is 1200 by 673 pixels, so `x: 600, y: 336` is the centre. `size` is the width of the whole seal. The `prop` is a drawing from the library, which has 1,577 drawings; search it with `npx @levni/levni list coffee`. A seal takes either a `prop` or a `word` in the middle, not both.
 
 ## Choose an edge
 

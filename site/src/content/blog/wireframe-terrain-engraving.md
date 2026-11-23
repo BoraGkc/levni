@@ -29,7 +29,7 @@ You need Node 20 or newer and about ten minutes. These elements arrived with the
 
 ```bash
 npm install @levni/levni
-npx levni render terrain.json terrain.png
+npx @levni/levni render terrain.json terrain.png
 ```
 
 Line art needs a dark ground to glow. Set `"background": "dark"` on the scene, and give every line-art element a `ground` of the same colour. The `ground` is how the engine hides lines that should sit behind a hill: it paints the hill's body in that colour, so the lines behind it disappear. If the two colours differ you will see a patch.

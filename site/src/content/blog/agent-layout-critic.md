@@ -124,7 +124,7 @@ For icons, the critic compares each pair and flags any two that share more than 
 The critic looks at scenes. A second command looks at the drawings themselves:
 
 ```bash
-npx levni check laptop plug
+npx @levni/levni check laptop plug
 ```
 
 For every variant it prints how much of the 0 to 100 box the ink fills, where its centre sits and which colours it uses, and adds a `fix:` line when something is off:

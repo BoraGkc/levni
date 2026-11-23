@@ -130,7 +130,7 @@ and fix them. Then make three orb avatars from the same colours.
 Render and look:
 
 ```bash
-npx levni render scene.json out.webp --preview
+npx @levni/levni render scene.json out.webp --preview
 ```
 
 Check three things. First, is the title readable at thumbnail size? If not, enlarge the `calm` box or darken the `base`. Second, are there bands in the dark areas? Raise `grain` a little. Third, do the colours fight? Four hues is usually the limit. If the field looks muddy where two stops meet, pick colours that sit close on the wheel, or add a lighter stop between them.

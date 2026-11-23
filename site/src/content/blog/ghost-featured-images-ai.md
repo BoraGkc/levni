@@ -134,9 +134,9 @@ The same adapter works without an assistant:
 ```bash
 export GHOST_ADMIN_API_URL=https://your-site.com
 export GHOST_ADMIN_API_KEY=<id>:<secret>
-npx levni ghost drafts                 # drafts without images
-npx levni ghost attach plan.json       # dry run: print the planned edits
-npx levni ghost attach plan.json --apply
+npx @levni/levni ghost drafts                 # drafts without images
+npx @levni/levni ghost attach plan.json       # dry run: print the planned edits
+npx @levni/levni ghost attach plan.json --apply
 ```
 
 A plan file has a `posts` list, and each entry has the same shape as above. Scenes can be file paths, relative to the plan file. Details are in the [Ghost adapter docs](https://github.com/BoraGkc/levni/blob/main/docs/ghost.md).

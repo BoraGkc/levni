@@ -68,7 +68,7 @@ Why the margin? Platforms and apps crop for different reasons. A chat app may ro
 Once you have your real cover scene, render it with the CLI. The extension picks the format:
 
 ```bash
-npx levni render cover.json public/og/cover.png
+npx @levni/levni render cover.json public/og/cover.png
 ```
 
 The command prints the layout critic's notes. Fix them before you continue. If you work through an agent, call `render_scene` with `out` set to `public/og/cover.png` and it does the same. The setup for that is in [the MCP server guide](/blog/illustration-mcp-server-setup/).

@@ -13,7 +13,7 @@ faq:
   - q: "How many pixel icons are there?"
     a: "481 icons, each in four cuts stored as variants: 0 regular, 1 thin, 2 solid and 3 glyph. That makes 1,924 pixel variants in all."
   - q: "How do I find a pixel icon?"
-    a: "Every pixel icon's name starts with `pixel-`, for example `pixel-heart` or `pixel-calendar`. Run `npx levni list pixel` for all of them, or search the library page for a word plus pixel."
+    a: "Every pixel icon's name starts with `pixel-`, for example `pixel-heart` or `pixel-calendar`. Run `npx @levni/levni list pixel` for all of them, or search the library page for a word plus pixel."
   - q: "Can I change the colours of the pixel icons?"
     a: "Yes. They use the house colour names, so `recolor` on one icon, `\"palette\": \"blue\"`, or a scene-wide `style` with your own hex values recolours them like every other drawing."
   - q: "Can I get the icons as SVG?"
@@ -32,14 +32,14 @@ Every pixel icon's name starts with `pixel-`: `pixel-heart`, `pixel-calendar`, `
 
 ```bash
 npm install @levni/levni
-npx levni list pixel
-npx levni list pixel calendar
+npx @levni/levni list pixel
+npx @levni/levni list pixel calendar
 ```
 
 `list` prints each match with its number of variants (4 for every pixel icon) and its tags. To see them, draw a contact sheet:
 
 ```bash
-npx levni sheet pixel-sheet.png pixel-home pixel-mail pixel-calendar pixel-camera
+npx @levni/levni sheet pixel-sheet.png pixel-home pixel-mail pixel-calendar pixel-camera
 ```
 
 The sheet shows every variant numbered, on paper and on blue, so you can check how an icon reads on a dark card before you use it. You can also browse them on [the library page](/library/): type a word and "pixel" in the search box.

@@ -76,7 +76,7 @@ Pick furniture colours that stand out from the walls: coral and mustard here, wi
 
 ## Put props on the desk with z
 
-Now the details. A `prop` takes a name from the library, so you do not draw anything yourself. Find names with `levni list`, for example `npx levni list laptop`. The desk is 80 high, so the laptop and the cup get `z: 80`. The shelf is 150 high, so the plant gets `z: 150`.
+Now the details. A `prop` takes a name from the library, so you do not draw anything yourself. Find names with `levni list`, for example `npx @levni/levni list laptop`. The desk is 80 high, so the laptop and the cup get `z: 80`. The shelf is 150 high, so the plant gets `z: 150`.
 
 ```json
 { "kind": "prop", "name": "laptop", "x": 110, "y": 112, "z": 80, "size": 170, "flip": true },
@@ -101,7 +101,7 @@ Order matters here: elements are drawn in order, each on top of the last. So the
 Save the scene as `room.json`, then render it:
 
 ```bash
-npx levni render room.json room.webp
+npx @levni/levni render room.json room.webp
 ```
 
 The command prints the layout critic's notes. It checks geometry, not taste: elements off the canvas, objects cut by the frame by accident, lopsided weight, no clear focal point. For a room the usual note is that something is cut by the frame, so lower the `scale` or move the origin. Then look at the picture, because the critic cannot tell you whether a lamp covers the desk.

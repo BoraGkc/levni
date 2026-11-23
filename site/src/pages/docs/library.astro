@@ -46,7 +46,7 @@ const sample = `{
   <h2 id="find">Find a drawing</h2>
   <ul>
     <li><strong>On the web.</strong> <a href="/library/">Browse the library</a> and search in English or Turkish.</li>
-    <li><strong>From the CLI.</strong> <code>npx levni list coffee</code> lists names, variant counts and tags. <code>npx levni sheet look.png coffee-cup</code> shows them.</li>
+    <li><strong>From the CLI.</strong> <code>npx @levni/levni list coffee</code> lists names, variant counts and tags. <code>npx @levni/levni sheet look.png coffee-cup</code> shows them.</li>
     <li><strong>From an agent.</strong> <code>list_props</code> takes a query and an optional shelf and describes every variant in words; <code>show_props</code> returns a contact sheet image. See <a href="/docs/mcp/#tools">MCP tools</a>.</li>
     <li><strong>From code.</strong> <code>findProp('telefon')</code> matches names and tags in any language. See the <a href="/docs/api/#props">Node API</a>.</li>
   </ul>
@@ -88,7 +88,7 @@ const sample = `{
 
   <h3 id="check">Check it</h3>
   <pre><code class="language-bash">git clone {SITE.github}.git && cd levni && npm install
-npx levni add my-props.json --sheet check.png   # validates, writes to library/props/, draws them
+npx @levni/levni add my-props.json --sheet check.png   # validates, writes to library/props/, draws them
 npm test                                        # validates and renders the whole Folio</code></pre>
   <p>Open <code>check.png</code>: every variant on paper and on a blue panel. <code>levni check name</code> measures a drawing in numbers, for agents that cannot see.</p>
 

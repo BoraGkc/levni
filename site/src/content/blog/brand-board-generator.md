@@ -14,7 +14,7 @@ faq:
   - q: "Can I change the layout after using the shortcut?"
     a: "Yes. `expandBrand` turns the `brand` object into a plain board spec that you can print, edit and render. Fields you write next to `brand`, such as `canvas` or `background`, override the generated ones."
   - q: "Which marks can I use?"
-    a: "Any prop name or tag from the library, which has 1,577 drawings. Run `npx levni list bicycle` to search. An unknown name throws an error instead of drawing something else."
+    a: "Any prop name or tag from the library, which has 1,577 drawings. Run `npx @levni/levni list bicycle` to search. An unknown name throws an error instead of drawing something else."
   - q: "Can an AI agent make a board?"
     a: "Yes. The `render_board` tool in the Levni MCP server takes the same spec, writes a PNG and returns a preview. With `guide: true` it returns the board format so the agent can read it first."
 ---
@@ -38,7 +38,7 @@ The command you will use is `levni board <spec.json> <out.png>`. It is determini
 The mark is a drawing from the library, and it is the one thing you must choose well, because it appears on every tile. Search by word:
 
 ```bash
-npx levni list bicycle
+npx @levni/levni list bicycle
 ```
 
 Pick a prop with a clear silhouette that reads at small sizes: a bicycle, a lighthouse, a dove. A prop with fine detail turns to mush on a sticker or a business card. Meltem uses `bicycle`. Some props have several variants, and the `variant` field picks one.
@@ -66,7 +66,7 @@ Write the whole brand in one object. Save it as `meltem.json`:
 Render it:
 
 ```bash
-npx levni board meltem.json meltem.png
+npx @levni/levni board meltem.json meltem.png
 ```
 
 ![A brand board for Meltem in dark green, orange, sage and cream: a bicycle mark in a sage circle, a serif wordmark, a colour strip, a web page in a browser, a social card, a tote bag, a round sticker, a bicycle pattern and a tilted business card](/blog/brand-board-generator/fig-1.webp)

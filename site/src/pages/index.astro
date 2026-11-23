@@ -136,8 +136,8 @@ const clients = [
   }
 }` },
   { id: 'cli', label: 'CLI', file: 'Any agent with a shell', code: `npm install ${pkg}
-npx levni list cat
-npx levni render scene.json cover.png` },
+npx @levni/levni list cat
+npx @levni/levni render scene.json cover.png` },
 ];
 const tools = [
   ['list_props', 'search the library by word, tag or shelf'],
@@ -164,7 +164,7 @@ const faq = [
   { q: 'How do AI agents use it?', a: 'An agent writes the scene JSON, renders it, and reads the layout critic’s notes (off-canvas elements, accidental crops, lopsided weight, no focal point) before a person looks. Because it is JSON in and image out, it maps directly onto an MCP tool.' },
   { q: 'What does it cost?', a: 'Nothing per image. Levni is MIT-licensed code that runs on your own machine or in CI. The Levni Folio drawings are CC BY 4.0: credit “drawings by Ortak Alan”.' },
   { q: 'Can it draw in my brand colours?', a: 'Yes. Set "style" to a map of your own inks, for example { "blue": "#6A1B9A", "mustard": "#00BFA5" }, and every drawing, panel and texture follows. Riso and miniature are the two built-in packs.' },
-  { q: 'Is there an MCP server?', a: 'Yes: run npx levni mcp. It gives assistants six tools: the scene guide, library search, a contact sheet of props, render with preview, brand boards, and the critic. Agents without MCP use the same engine through the CLI.' },
+  { q: 'Is there an MCP server?', a: 'Yes: run npx @levni/levni mcp. It gives assistants six tools: the scene guide, library search, a contact sheet of props, render with preview, brand boards, and the critic. Agents without MCP use the same engine through the CLI.' },
 ];
 
 const jsonld = [
@@ -225,7 +225,7 @@ const star = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
         <pre><code>{boardJson}</code></pre>
         <p class="run-label">Run it two ways</p>
         <pre class="run"><code>{`# command line
-npx levni board brand.json board.png`}</code></pre>
+npx @levni/levni board brand.json board.png`}</code></pre>
         <p class="run-mcp">Or let the agent call <code>render_board</code> over MCP with the same four fields and get a preview back.</p>
         <p><a class="text-link" href="/blog/brand-board-generator/">How the brand board generator works</a> · <a class="text-link" href="/gallery/#boards">More boards</a></p>
       </div>
@@ -246,7 +246,7 @@ npx levni board brand.json board.png`}</code></pre>
         ))}
       </div>
     ))}
-    <p class="marquee-note wrap">{SITE.props} drawings, {SITE.variants} variants, {shelfCount} shelves: tech, money, food, health, people, film, nature and more. <a href="/library/">Open the library</a></p>
+    <p class="marquee-note wrap">{SITE.props.toLocaleString("en")} drawings, {SITE.variants.toLocaleString("en")} variants, {shelfCount} shelves: tech, money, food, health, people, film, nature and more. <a href="/library/">Open the library</a></p>
   </section>
 
   <!-- 3. The one interaction: any drawing, any inks -->
@@ -286,7 +286,7 @@ npx levni board brand.json board.png`}</code></pre>
       </div>
       <div class="how-out">
         <img src="/gallery/cover-riso.webp" width="800" height="449" alt="The rendered cover: a tilted rocket on a mustard sunburst over a blue panel, an audience along the bottom" loading="lazy" />
-        <pre class="critic"><code>$ npx levni render scene.json \
+        <pre class="critic"><code>$ npx @levni/levni render scene.json \
     cover.webp
 - critic: no layout problems found</code></pre>
         <ol class="steps">
@@ -377,7 +377,7 @@ npx levni board brand.json board.png`}</code></pre>
       <h2 id="close-title">Open, and growing every week.</h2>
       <p>
         The code is MIT. The drawings are CC BY 4.0: use them anywhere, commercially too, with credit “drawings by Ortak Alan”.
-        Missing an object? Draw it as one JSON file of paths, check it with <code>npx levni check</code> and open a pull request.
+        Missing an object? Draw it as one JSON file of paths, check it with <code>npx @levni/levni check</code> and open a pull request.
       </p>
       <div class="ctas">
         <a class="btn btn-primary" href={SITE.github}><Fragment set:html={star} /> Star on GitHub</a>

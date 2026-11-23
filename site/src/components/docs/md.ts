@@ -65,6 +65,15 @@ export function render(md: string, opts: { title?: string; id?: string; shift?: 
     if (level === 2 || level === 3) toc.push({ id, text, level });
     return `<h${level} id="${id}">${inner}<a class="anchor" href="#${id}" aria-label="Link to ${text.replace(/"/g, '')}">#</a></h${level}>`;
   });
+  // each cell carries its column name, so a narrow screen can show a row as a labelled card
+  html = html.replace(/<table>([\s\S]*?)<\/table>/g, (whole, body) => {
+    const heads = [...String(body).matchAll(/<th[^>]*>([\s\S]*?)<\/th>/g)].map((m) => m[1].replace(/<[^>]+>/g, '').replace(/"/g, '&quot;').trim());
+    if (!heads.length) return whole;
+    return whole.replace(/<tr>([\s\S]*?)<\/tr>/g, (row, cells) => {
+      let i = 0;
+      return `<tr>${String(cells).replace(/<td(\s[^>]*)?>/g, (_t, attrs) => `<td${attrs || ''} data-label="${heads[i++] ?? ''}">`)}</tr>`;
+    });
+  });
   html = html
     .replace(/<table>/g, '<div class="table-wrap" tabindex="0" role="region" aria-label="Table, scrolls sideways"><table>')
     .replace(/<\/table>/g, '</table></div>')

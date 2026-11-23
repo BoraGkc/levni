@@ -179,6 +179,16 @@ const jsonld = [
   .prose tr:last-child td { border-bottom: 0; }
   .prose td:first-child { white-space: nowrap; }
   .prose td code { font-size: 0.8em; }
+  /* narrow screens: each row becomes a card, each cell labelled with its column */
+  @media (max-width: 700px) {
+    .table-wrap { overflow: visible; border: 0; background: none; }
+    .prose table, .prose tbody, .prose tr, .prose td { display: block; width: 100%; min-width: 0; }
+    .prose thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    .prose tr { border: 1px solid var(--rule); border-radius: 8px; background: var(--paper-2); margin: 0 0 12px; padding: 6px 0; }
+    .prose td { border-bottom: 0; padding: 6px 14px; white-space: normal; overflow-wrap: anywhere; }
+    .prose td:first-child { white-space: normal; font-weight: 600; }
+    .prose td[data-label]:not(:first-child)::before { content: attr(data-label); display: block; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 2px; }
+  }
 
   .prose figure { margin: 1.6em 0; }
   .prose figure img { width: 100%; border: 2px solid var(--ink); background: var(--paper-2); box-shadow: 5px 5px 0 var(--accent); }

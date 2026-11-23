@@ -29,7 +29,7 @@ In this guide you will draw an ASCII globe, compare the character and dot-matrix
 
 ```bash
 npm install @levni/levni
-npx levni render scene.json out.png
+npx @levni/levni render scene.json out.png
 ```
 
 The `glyphfill` element is synchronous and needs no extra packages.
@@ -44,7 +44,7 @@ The shaded globe is the quickest way to see what `glyphfill` does. Set `shape` t
   { "type": "label", "x": 70, "y": 110, "text": "ortakalan / world", "size": 18, "color": "blue" },
   { "type": "label", "x": 70, "y": 330, "text": "one planet,", "size": 64, "color": "ink", "upper": false },
   { "type": "label", "x": 70, "y": 402, "text": "all in text.", "size": 64, "color": "ink", "upper": false },
-  { "type": "label", "x": 70, "y": 590, "text": "$ npx levni render globe.json", "size": 16, "color": "ink", "upper": false }
+  { "type": "label", "x": 70, "y": 590, "text": "$ npx @levni/levni render globe.json", "size": 16, "color": "ink", "upper": false }
 ]}
 ```
 
@@ -122,7 +122,7 @@ If you have not connected the server yet, see [the MCP setup guide](/blog/illust
 Render the scene and look at it at full size:
 
 ```bash
-npx levni render scene.json out.png --preview
+npx @levni/levni render scene.json out.png --preview
 ```
 
 Check these things:

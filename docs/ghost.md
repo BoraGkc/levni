@@ -6,10 +6,10 @@ Attach Levni images to [Ghost](https://ghost.org) **drafts**: a cover (feature i
 export GHOST_ADMIN_API_URL=https://your-site.example
 export GHOST_ADMIN_API_KEY=<id>:<secret>      # Ghost Admin > Settings > Integrations > Custom integration
 
-npx levni ghost drafts                 # list drafts that have no images at all
-npx levni ghost drafts --apply         # also pull them to ./levni-drafts/<name>/ (article.md + meta.json)
-npx levni ghost attach plan.json       # dry run: print the planned edits
-npx levni ghost attach plan.json --apply
+npx @levni/levni ghost drafts                 # list drafts that have no images at all
+npx @levni/levni ghost drafts --apply         # also pull them to ./levni-drafts/<name>/ (article.md + meta.json)
+npx @levni/levni ghost attach plan.json       # dry run: print the planned edits
+npx @levni/levni ghost attach plan.json --apply
 ```
 
 Credentials come from the environment only; nothing is read from or written to files. Without them the command prints usage and exits 1.

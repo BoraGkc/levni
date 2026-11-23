@@ -41,7 +41,7 @@ const bad = `{ "seed": 2, "elements": [
     <li>
       <strong>For the CLI or Node API: install from npm.</strong>
       <pre><code class="language-bash">npm install @levni/levni
-npx levni list coffee</code></pre>
+npx @levni/levni list coffee</code></pre>
       <p>The <code>levni</code> command is now available through <code>npx</code> inside that project. Install globally with <code>npm install -g @levni/levni</code> if you want it everywhere.</p>
     </li>
     <li>
@@ -64,11 +64,11 @@ node bin/levni.mjs list coffee</code></pre>
     </figure>
   </div>
   <p>Render it:</p>
-  <pre><code class="language-bash">npx levni render scene.json out.png</code></pre>
+  <pre><code class="language-bash">npx @levni/levni render scene.json out.png</code></pre>
   <p>The output extension picks the format: <code>.png</code>, <code>.webp</code> or <code>.svg</code>. Add <code>--preview</code> to also write a 560 px <code>out.png.prev.jpg</code>, and <code>--format og</code> (or <code>cover</code>, <code>square</code>, <code>story</code>, <code>youtube</code>) to recompose the scene for another canvas.</p>
   <p>Not sure which drawing to use? Search the library, then look at it:</p>
-  <pre><code class="language-bash">npx levni list lighthouse               # names, variant counts, tags
-npx levni sheet look.png rocket dove    # every variant, on paper and on blue</code></pre>
+  <pre><code class="language-bash">npx @levni/levni list lighthouse               # names, variant counts, tags
+npx @levni/levni sheet look.png rocket dove    # every variant, on paper and on blue</code></pre>
   <figure>
     <img src="/docs/sheet.webp" width="1200" height="1346" alt="A contact sheet: every variant of rocket, lighthouse and dove, drawn on paper and on a blue panel, each labelled with its name and variant number" loading="lazy" decoding="async" style="max-width: 640px" />
     <figcaption>A contact sheet. The label under each drawing, such as <code>rocket 1</code>, is the name and <code>variant</code> number to put in a scene.</figcaption>

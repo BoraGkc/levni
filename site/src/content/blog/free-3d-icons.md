@@ -44,7 +44,7 @@ Save this as `bulb.json`:
 Render it:
 
 ```bash
-npx levni render bulb.json bulb.png
+npx @levni/levni render bulb.json bulb.png
 ```
 
 ![A 3D light bulb icon on a pale blue ground: a pale yellow bulb with a raised blue rim, seen slightly from the side, with a soft shadow](/blog/free-3d-icons/fig-1.webp)
@@ -74,8 +74,8 @@ The extrusion keeps everything that makes the drawing recognisable: the outline,
 Any drawing in [the Levni library](/library/) works, and there are more than 1,500 of them on 15 shelves, searchable in English and Turkish. Search from the terminal:
 
 ```bash
-npx levni list camera
-npx levni sheet icons.png camera megaphone chat-bubbles
+npx @levni/levni list camera
+npx @levni/levni sheet icons.png camera megaphone chat-bubbles
 ```
 
 `list` prints matching names with their variant count. `sheet` draws a contact sheet with every variant numbered, so you can pick one by eye and pass it as `"variant": 1`. The [pixel icons](/blog/free-pixel-art-icons/) extrude well too: the cover of this post has `pixel-heart` among the others.

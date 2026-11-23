@@ -43,7 +43,7 @@ Once 0.3.0 is on npm, the first command is all you need. The command you will us
 The mark is a drawing from the library. It is halftoned, echoed and printed on the posters, so choose a bold silhouette that survives being made of dots. Search by word:
 
 ```bash
-npx levni list dove
+npx @levni/levni list dove
 ```
 
 Kumru uses `dove`. Then choose inks. Give up to six colours as hex. The darkest becomes the ink for type and shapes, the lightest becomes the paper, and the others are accents. Four is plenty: one dark, one light and two that work hard.
@@ -62,7 +62,7 @@ Save this as `kumru.json`:
 ## Render the series
 
 ```bash
-npx levni poster kumru.json posters/
+npx @levni/levni poster kumru.json posters/
 ```
 
 You get `poster-01-split.png` to `poster-08-launch.png` and a contact sheet, `series.png`.
@@ -113,7 +113,7 @@ Nothing else changed, and every poster followed: the halftone, the dot-matrix ma
 
 ## Write one poster by hand
 
-A template is a starting point. Each poster is a normal scene on a 1200 by 1600 canvas, built from elements that you can use yourself: `amtone` for halftone, `block` for flat colour, `type` for words, and `camo`, `grain`, `shapegrid`, `echo`, `dotmatrix` and `furniture` for the rest. This one is a made-up ferry poster written from scratch. Save it as `ferry.json` and run `npx levni render ferry.json ferry.png`:
+A template is a starting point. Each poster is a normal scene on a 1200 by 1600 canvas, built from elements that you can use yourself: `amtone` for halftone, `block` for flat colour, `type` for words, and `camo`, `grain`, `shapegrid`, `echo`, `dotmatrix` and `furniture` for the rest. This one is a made-up ferry poster written from scratch. Save it as `ferry.json` and run `npx @levni/levni render ferry.json ferry.png`:
 
 ```json
 { "canvas": [1200, 1600], "finish": "soft", "seed": 5, "background": "#F1EEE6", "grain": 0.1, "elements": [
@@ -143,7 +143,7 @@ const launch = expandPosters(spec).find((p) => p.template === 'launch').scene;
 writeFileSync('launch.json', JSON.stringify(launch, null, 2));
 ```
 
-Open `launch.json`, change a word or an ink, and render it with `npx levni render launch.json launch.png`.
+Open `launch.json`, change a word or an ink, and render it with `npx @levni/levni render launch.json launch.png`.
 
 ## Ask an agent to make the series
 

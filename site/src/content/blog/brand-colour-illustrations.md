@@ -49,7 +49,7 @@ Here is a small scene: a laptop on a sun, a coffee cup and a plant. It has no `s
 Save it as `scene.json` and render it:
 
 ```bash
-npx levni render scene.json riso.webp
+npx @levni/levni render scene.json riso.webp
 ```
 
 ![A laptop on a yellow sun between a coffee cup and a potted plant, on a blue panel](/blog/brand-colour-illustrations/fig-1a.webp)

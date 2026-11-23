@@ -72,7 +72,7 @@ hourglass-half, "time; wait; zaman", sand timer from the front, half the sand in
 sprout, "plant; growth; filiz", a seedling with two leaves in a small pot
 
 Give each object a simple side or front view. Save the answer to batch-01.txt.
-Then run: npx levni add batch-01.txt --sheet batch-01.png
+Then run: npx @levni/levni add batch-01.txt --sheet batch-01.png
 and tell me which props the check rejected and why.
 ```
 
@@ -81,7 +81,7 @@ Chat models are good at simple objects and weak at complex ones (animals, vehicl
 ## Import the batch and look at it
 
 ```bash
-npx levni add batch-01.txt --sheet batch-01.png
+npx @levni/levni add batch-01.txt --sheet batch-01.png
 ```
 
 `add` checks every prop, writes the good ones to `library/props/`, adds new variants to props that already exist, and lists the broken ones. The `--sheet` option draws everything it imported, every variant on paper and on a blue panel, so you can see it. Open `batch-01.png` and look at each drawing the way a reader would: is the object recognisable at 120 pixels? Do the shapes join? Is anything floating?
@@ -93,7 +93,7 @@ Send the broken or ugly ones back to the same chat with what is wrong ("the hand
 If you work with an agent that cannot see images, or you simply want proof, `check` measures a prop without looking at it:
 
 ```bash
-npx levni check battery wifi
+npx @levni/levni check battery wifi
 ```
 
 For each variant it prints a line like this:
@@ -160,7 +160,7 @@ Run the checks, then send the change:
 
 ```bash
 npm install
-npx levni check my-prop
+npx @levni/levni check my-prop
 npm test
 ```
 

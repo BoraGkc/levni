@@ -67,6 +67,8 @@ const makes: [string, string, string][] = [
     function setMenu(open, refocus) {
       btn.setAttribute('aria-expanded', String(open));
       nav.classList.toggle('open', open);
+      if (open) { nav.style.top = Math.round(header.getBoundingClientRect().bottom) + 'px'; nav.scrollTop = 0; }
+      root.classList.toggle('menu-open', open && mq.matches);
       btn.querySelector('.menu-label').textContent = open ? 'Close' : 'Menu';
       if (!open && refocus) btn.focus();
     }
@@ -138,28 +140,39 @@ const makes: [string, string, string][] = [
   /* compact: a button and a panel. Without JS the links simply wrap under the wordmark. */
   @media (max-width: 62rem) {
     .site-header .header-row { flex-wrap: wrap; gap: 0 12px; min-height: 0; padding-top: 8px; padding-bottom: 8px; }
-    .site-nav { flex-basis: 100%; padding-top: 6px; flex-direction: column; align-items: stretch; gap: 0; font-size: 1.02rem; }
+    .site-nav { flex-basis: 100%; padding-top: 6px; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0; font-size: 1.05rem; }
     .site-nav ul { flex-direction: column; align-items: stretch; }
-    .site-nav li a { display: block; padding: 12px 4px; border-bottom: 1px solid var(--rule); border-radius: 0; }
-    .site-nav a[aria-current='page'] { box-shadow: inset 3px 0 0 var(--coral); padding-left: 10px; }
-    .site-nav .agent-link { margin: 12px 0; text-align: center; border-bottom: 0; border-radius: 999px; }
-    .site-nav .agent-link[aria-current='page'] { padding-left: 14px; }
-    .site-nav .nav-side { flex-direction: row; flex-wrap: wrap; padding: 6px 0 10px; border-left: 0; gap: 4px 12px; }
-    .site-nav .nav-side li a { display: inline-flex; border-bottom: 0; padding: 8px 4px; }
-    .site-nav .nav-side li a.ver { display: inline-block; }
-    .site-nav .nav-side .ver { padding: 3px 8px; }
-    .site-nav .nav-side .long { display: inline; }
-    .has-mega { display: block; }
+    .site-nav li a { display: block; padding: 14px 2px; border-bottom: 1px solid var(--rule); border-radius: 0; }
+    .site-nav a[aria-current='page'] { box-shadow: inset 3px 0 0 var(--coral); padding-left: 12px; }
+    /* "What it makes": a small label over a one-column list with short descriptions */
+    .has-mega { display: block; order: 3; }
+    .site-nav .nav-agent { order: 2; }
+    .has-mega > a { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); padding: 16px 2px 6px; border-bottom: 0; }
     .mega-toggle { display: none; }
-    .mega { display: block; position: static; width: auto; border: 0; box-shadow: none; background: none; padding: 0 0 6px 12px; }
-    .site-nav .mega li a { display: block; padding: 9px 4px; border-bottom: 0; }
-    .mega .m-d { display: none; }
+    .mega { display: block; position: static; width: auto; border: 0; box-shadow: none; background: none; padding: 0 0 8px; }
+    .mega ul { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    .site-nav .mega li a { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; padding: 10px 2px; border-bottom: 1px solid var(--rule); }
+    .mega .m-t { font-weight: 600; }
+    .mega .m-d { display: block; font-size: 0.84rem; }
     .mega-foot { display: none; }
+    .site-nav .agent-link { margin: 18px 0 6px; padding: 14px; text-align: center; border-bottom: 0; border-radius: 999px; }
+    .site-nav .agent-link[aria-current='page'] { padding-left: 14px; }
+    .site-nav .nav-side { flex-direction: row; flex-wrap: wrap; align-items: center; padding: 8px 0 4px; border-left: 0; gap: 6px 16px; }
+    .site-nav .nav-side li a { display: inline-flex; align-items: center; border-bottom: 0; padding: 8px 2px; }
+    .site-nav .nav-side li a.ver { padding: 4px 9px; line-height: 1.3; border: 1.5px solid var(--ink); }
+    .site-nav .nav-side .long { display: inline; }
     .js .menu-btn { display: inline-flex; align-items: center; gap: 10px; margin-left: auto; appearance: none; background: var(--paper-2); border: 2px solid var(--ink); color: var(--ink); font: inherit; font-weight: 600; padding: 8px 14px; cursor: pointer; min-height: 44px; }
+    .js .menu-btn[aria-expanded='true'] { background: var(--ink); color: var(--paper-2); }
     .menu-icon, .menu-icon::before { display: block; width: 18px; height: 2px; background: currentColor; position: relative; }
     .menu-icon::before { content: ''; top: 6px; box-shadow: 0 -12px 0 currentColor; }
     .js .site-nav:not(.open) { display: none; }
-    .js .site-nav.open { padding-bottom: 8px; max-height: calc(100vh - 64px); overflow-y: auto; }
+    /* open: a full-height sheet under the header, the page behind does not scroll */
+    .js .site-nav.open { position: fixed; left: 0; right: 0; bottom: 0; top: 64px; z-index: 40; background: var(--paper); padding: 4px 20px calc(24px + env(safe-area-inset-bottom)); overflow-y: auto; overscroll-behavior: contain; }
+    .js.menu-open, .js.menu-open body { overflow: hidden; }
+  }
+  @media (max-width: 62rem) and (prefers-reduced-motion: no-preference) {
+    .js .site-nav.open { animation: sheet-in 0.16s ease-out; }
+    @keyframes sheet-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
   }
   @media (max-width: 62rem) { .wordmark img { width: 32px; height: 32px; } .wordmark span { font-size: 1.45rem; } }
 </style>

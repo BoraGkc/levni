@@ -17,7 +17,7 @@ faq:
   - q: "Why does my story image have empty space?"
     a: "A scene authored for a wide canvas keeps its own proportions when it is reflowed, so on a tall canvas there is room above and below it. For a story that should be full, author a tall version directly with `\"format\": \"story\"` and its own coordinates."
   - q: "Can I do this from the command line?"
-    a: "Yes. `npx levni render scene.json story.png --format story` sets the format and turns reflow on. The same works with `og`, `square`, `youtube` and `cover`."
+    a: "Yes. `npx @levni/levni render scene.json story.png --format story` sets the format and turns reflow on. The same works with `og`, `square`, `youtube` and `cover`."
 ---
 
 Every post needs the same picture at several social media image sizes: a wide header for the blog, a 1200 by 630 card for link previews, a square for feeds, a tall story, a YouTube thumbnail. Cropping one image into all of them cuts off the subject in at least one. Redrawing it five times is a chore, and with an image model the five versions do not quite match.
@@ -56,7 +56,7 @@ Install Levni from npm and render it:
 
 ```bash
 npm install @levni/levni
-npx levni render habits.json cover.png
+npx @levni/levni render habits.json cover.png
 ```
 
 ![A blue cover with a coffee cup on a yellow disc at the upper right, two small sparkles, and the title Ten habits of calm teams with the kicker Work and the brand levni.dev at the bottom left](/blog/social-media-image-sizes/fig-1.webp)
@@ -69,10 +69,10 @@ Two choices make this scene travel well. The `background` is `blue` on the scene
 The CLI's `--format` flag sets the format and turns reflow on:
 
 ```bash
-npx levni render habits.json og.png --format og
-npx levni render habits.json square.png --format square
-npx levni render habits.json story.png --format story
-npx levni render habits.json youtube.png --format youtube
+npx @levni/levni render habits.json og.png --format og
+npx @levni/levni render habits.json square.png --format square
+npx @levni/levni render habits.json story.png --format story
+npx @levni/levni render habits.json youtube.png --format youtube
 ```
 
 That is the same as adding `"format": "og", "reflow": true` to the scene. Here are the results.

@@ -29,7 +29,7 @@ This post is a tour. Each section is short and links to a longer guide. You need
 
 ```bash
 npm install @levni/levni
-npx levni render scene.json out.png
+npx @levni/levni render scene.json out.png
 ```
 
 To let an assistant drive it, add the MCP server to Claude Code:
@@ -98,7 +98,7 @@ That makes nine tiles: the mark, a wordmark, a web page in a browser window, a p
 The board in the picture used a few more fields than the four above (a font, a URL and a person for the business card), written next to `brand`. Render one yourself:
 
 ```bash
-npx levni board board.json board.png
+npx @levni/levni board board.json board.png
 ```
 
 The board guide covers every tile and field: [brand board generator](/blog/brand-board-generator/).

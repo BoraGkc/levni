@@ -35,9 +35,9 @@ Then ask: *"Illustrate this article with Levni and fix what the critic reports."
 
 ```bash
 npm install @levni/levni
-npx levni render scene.json out.png        # or .webp / .svg; --format og|square|story|youtube; --preview
-npx levni list coffee                      # search the library
-npx levni sheet props.png rocket phone     # contact sheet of props, every variant
+npx @levni/levni render scene.json out.png        # or .webp / .svg; --format og|square|story|youtube; --preview
+npx @levni/levni list coffee                      # search the library
+npx @levni/levni sheet props.png rocket phone     # contact sheet of props, every variant
 ```
 
 **From code.**
@@ -167,7 +167,7 @@ The library grows by contribution: one JSON file per drawing in `library/props/`
 }
 ```
 
-Rules: your own drawing (inspired by a style is fine, tracing a work is not), no faces, no hands, no logos, one object per file, readable at 120 px. Check with `npx levni add my-props.json --sheet check.png`, then open a pull request. Full guide: [CONTRIBUTING.md](CONTRIBUTING.md). Writing many at once with a chat model: [`docs/prop-prompt.md`](docs/prop-prompt.md).
+Rules: your own drawing (inspired by a style is fine, tracing a work is not), no faces, no hands, no logos, one object per file, readable at 120 px. Check with `npx @levni/levni add my-props.json --sheet check.png`, then open a pull request. Full guide: [CONTRIBUTING.md](CONTRIBUTING.md). Writing many at once with a chat model: [`docs/prop-prompt.md`](docs/prop-prompt.md).
 
 ## Licensing
 

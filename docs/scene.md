@@ -6,7 +6,7 @@ A Levni scene is one JSON object. Elements are drawn **in order**, each on top o
 { "seed": 5, "background": "paper", "elements": [ { "type": "prop", "name": "rocket", "x": 600, "y": 336, "size": 360 } ] }
 ```
 
-Render it: `npx levni render scene.json out.png` (or `.webp`, `.svg`). The command prints the layout critic's notes; fix them or ignore them on purpose.
+Render it: `npx @levni/levni render scene.json out.png` (or `.webp`, `.svg`). The command prints the layout critic's notes; fix them or ignore them on purpose.
 
 A machine-readable outline is in [`scene.schema.json`](scene.schema.json).
 

@@ -37,8 +37,8 @@ npm install @levni/levni
 That gives you the `levni` command and the engine. You can already draw by hand: write a scene file and render it.
 
 ```bash
-npx levni list laptop
-npx levni render scene.json cover.webp
+npx @levni/levni list laptop
+npx @levni/levni render scene.json cover.webp
 ```
 
 `levni list` searches the prop library by name or tag, and `levni render` draws a scene to `.png`, `.webp` or `.svg`. You will rarely type these yourself once the agent has the tools, but they are handy for checking a single drawing. The other commands are `sheet`, `add`, `check` and `mcp`.

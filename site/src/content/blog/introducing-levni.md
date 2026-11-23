@@ -32,7 +32,7 @@ Every article needs a picture, and most publishers solve that the same way: a st
 
 ```bash
 npm install @levni/levni
-npx levni render scene.json cover.png
+npx @levni/levni render scene.json cover.png
 ```
 
 ## Why a scene and not a prompt

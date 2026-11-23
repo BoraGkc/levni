@@ -19,14 +19,14 @@ const PER = 120;
 const first = props.slice(0, PER);
 const pages = Math.ceil(props.length / PER);
 const title = 'Library';
-const description = `Browse all ${props.length} drawings in the Levni Folio: icons, objects and spot illustrations in one hand-inked style, free under CC BY 4.0.`;
+const description = `Browse all ${props.length.toLocaleString("en")} drawings in the Levni Folio: icons, objects and spot illustrations in one hand-inked style, free under CC BY 4.0.`;
 ---
 <Base title={title} description={description}>
   <section class="wrap lib-head">
     <p class="eyebrow">The Levni Folio · CC BY 4.0</p>
     <h1>Library</h1>
     <p class="lede">
-      {props.length} drawn objects, {total} variants. Every one can be placed in a scene by name, recoloured by a style pack,
+      {props.length.toLocaleString("en")} drawn objects, {total.toLocaleString("en")} variants. Every one can be placed in a scene by name, recoloured by a style pack,
       and used anywhere with credit “drawings by Ortak Alan”.
     </p>
     <div class="tools">
@@ -111,7 +111,7 @@ const description = `Browse all ${props.length} drawings in the Levni Folio: ico
 
   <section class="wrap cta">
     <h2>Missing something?</h2>
-    <p>The Folio grows with every pull request. Draw one object as SVG paths, check it with <code>npx levni check</code>, and send it.</p>
+    <p>The Folio grows with every pull request. Draw one object as SVG paths, check it with <code>npx @levni/levni check</code>, and send it.</p>
     <a class="btn" href={`${SITE.github}/blob/main/CONTRIBUTING.md`}>Submit to the Folio</a>
   </section>
 </Base>
@@ -321,6 +321,12 @@ const description = `Browse all ${props.length} drawings in the Levni Folio: ico
   .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
   .shelves { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+  /* phones: one row that scrolls sideways, so the drawings start on the first screen */
+  @media (max-width: 700px) {
+    .shelves { flex-wrap: nowrap; overflow-x: auto; margin: 0 0 22px; padding: 2px 0 8px; scroll-snap-type: x proximity; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .shelves::-webkit-scrollbar { display: none; }
+    .shelves > * { flex: 0 0 auto; scroll-snap-align: start; white-space: nowrap; }
+  }
   .shelf {
     display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px 5px 8px; cursor: pointer;
     font: inherit; font-size: 0.92rem; color: var(--ink); background: var(--paper-2); border: 1.5px solid var(--rule); border-radius: 999px;
@@ -336,14 +342,20 @@ const description = `Browse all ${props.length} drawings in the Levni Folio: ico
   .pager { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px; margin: 0 0 18px; }
   .pager[hidden] { display: none; }
   .lib + .empty + .pager { margin: 24px 0 0; }
-  .pg-nums { display: inline-flex; flex-wrap: wrap; gap: 6px; align-items: center; }
-  .pager button {
+  :global(.pg-nums) { display: inline-flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .pager :global(button) {
     font: inherit; font-size: 0.92rem; min-width: 40px; min-height: 40px; padding: 6px 12px; cursor: pointer;
     color: var(--ink); background: var(--paper-2); border: 1.5px solid var(--rule); border-radius: 999px;
   }
-  .pager button:hover:not([disabled]) { border-color: var(--ink); }
-  .pager button[aria-current='page'] { background: var(--ink); border-color: var(--ink); color: var(--paper-2); }
-  .pager button[disabled] { opacity: 0.45; cursor: default; }
+  .pager :global(button:hover:not([disabled])) { border-color: var(--ink); }
+  .pager :global(button[aria-current='page']) { background: var(--ink); border-color: var(--ink); color: var(--paper-2); }
+  .pager :global(button[disabled]) { opacity: 0.45; cursor: default; }
+  /* phones: Previous / Next only (the count above says where you are) */
+  @media (max-width: 480px) {
+    .pager :global(.pg-nums) { display: none; }
+    .pager { justify-content: space-between; }
+    .pager :global(.pg-prev), .pager :global(.pg-next) { flex: 1; }
+  }
   .pg-gap { color: var(--ink-soft); padding: 0 2px; }
   .tile {
     width: 100%; display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer;

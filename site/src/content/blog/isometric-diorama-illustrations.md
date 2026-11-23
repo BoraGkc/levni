@@ -45,7 +45,7 @@ Save this as `room.json`:
 Render it:
 
 ```bash
-npx levni render room.json room.png
+npx @levni/levni render room.json room.png
 ```
 
 ![An isometric room on a floating base: cream and peach walls, a window, a desk with a monitor and chair, a bookshelf, a green rug and a faceless figure standing on it](/blog/isometric-diorama-illustrations/fig-1.webp)

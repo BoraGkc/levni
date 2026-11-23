@@ -9,7 +9,7 @@ News about loss, disaster, illness, courts and grief needs calm pictures: no fac
 - **Calm panel.** `blue` or `tone` panel, `paper` ground, no halftone or glyph fields behind it.
 - **Absence over presence.** An empty chair says more than a crowd. Prefer objects that point to a person (a candle, a bench, a lit window) over the person.
 - **No text in the picture**, no flags of real countries, no logos.
-- Tag filter: every prop of the pack carries the tag `sensitive`; `npx levni list sensitive`.
+- Tag filter: every prop of the pack carries the tag `sensitive`; `npx @levni/levni list sensitive`.
 
 ```json
 { "seed": 3, "elements": [
@@ -18,7 +18,7 @@ News about loss, disaster, illness, courts and grief needs calm pictures: no fac
 ] }
 ```
 
-Check any prop in blue only: `npx levni sheet out.png <names> --recolor coral=blue,mustard=tone,green=tone`.
+Check any prop in blue only: `npx @levni/levni sheet out.png <names> --recolor coral=blue,mustard=tone,green=tone`.
 
 ## Note on automatic image judges
 

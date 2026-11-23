@@ -45,7 +45,7 @@ Make a file called `cover.json`. This is the whole scene:
 Put a small square logo next to it as `badge.svg` (or remove the `badge` field for now), then render:
 
 ```bash
-npx levni render cover.json cover.webp
+npx @levni/levni render cover.json cover.webp
 ```
 
 ![A soft 3D cover: a glossy blue and teal ribbon curling down the right edge, a tulip badge top left and the title How we rebuilt our onboarding in six weeks at the bottom left](/blog/3d-cover-images-json/fig-1.webp)

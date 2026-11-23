@@ -4,8 +4,8 @@ A judge rates an image against a brief. It is optional and separate from renderi
 
 ```bash
 export OPENROUTER_API_KEY=...             # from your environment, never a file in the repo
-npx levni judge score cover.png --brief "why remote teams stall"
-npx levni judge pick a.png b.png c.png --brief "why remote teams stall"
+npx @levni/levni judge score cover.png --brief "why remote teams stall"
+npx @levni/levni judge pick a.png b.png c.png --brief "why remote teams stall"
 ```
 
 Both print JSON. Optional: `--model <id>` or `LEVNI_JUDGE_MODEL` (default `~typesafe/jev-latest`).

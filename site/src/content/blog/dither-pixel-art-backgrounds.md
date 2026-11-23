@@ -31,7 +31,7 @@ Add it to a project, or run it straight from `npx`:
 
 ```bash
 npm install @levni/levni
-npx levni render scene.json out.png
+npx @levni/levni render scene.json out.png
 ```
 
 The same scene always gives the same picture, so a dithered background is safe to commit and regenerate. If you drive Levni from an assistant instead, see [the MCP setup guide](/blog/illustration-mcp-server-setup/).
@@ -147,7 +147,7 @@ a title. Fix anything the critic reports.
 Render the scene and read what the critic says:
 
 ```bash
-npx levni render scene.json out.png --preview
+npx @levni/levni render scene.json out.png --preview
 ```
 
 Look at the image at full size, not just the thumbnail. Dither shows its flaws up close: a ramp that runs out too early leaves a hard band, and a `cell` that is too small turns into grey mush when the picture is shrunk. Raise `cell` before you raise `matrix`. If a text label gets lost in the pattern, put a flat `panel` under it, or make it larger. Remember that the screen pass averages everything, so thin lines and small text can vanish at a large `cell`.

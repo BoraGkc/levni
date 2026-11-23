@@ -9,7 +9,7 @@ The Levni Folio grows fastest when drawings are written in batches by a chat mod
 3. Save the answer as a file (for example `batch-01.txt`). The whole answer is fine, code fences included.
 4. Import and look:
    ```bash
-   npx levni add batch-01.txt --sheet batch-01.png
+   npx @levni/levni add batch-01.txt --sheet batch-01.png
    ```
    `add` checks every prop, writes the good ones to `library/props/`, adds new variants to props that already exist, and lists the broken ones. Open `batch-01.png` to see them all, on paper and on blue.
 5. Send the broken or ugly ones back to the same chat with what is wrong ("the handle floats", "too thin"), import the fix the same way. Delete what you do not want (`library/props/<name>.json`).

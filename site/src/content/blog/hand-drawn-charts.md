@@ -49,7 +49,7 @@ Save this as `bars.json`:
 Render it:
 
 ```bash
-npx levni render bars.json bars.png
+npx @levni/levni render bars.json bars.png
 ```
 
 ![A hand-drawn bar chart titled Visitors per day (sample data): seven light blue bars for Monday to Sunday with their values printed on top, Friday's bar in coral](/blog/hand-drawn-charts/fig-1.webp)
