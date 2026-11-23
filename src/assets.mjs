@@ -3,6 +3,7 @@
 // Every asset takes `t` (0..1, default 0) so the animation renderer can move it deterministically.
 import { box, ellipse } from './pen.mjs';
 import { SOFT_ASSETS } from './ribbon.mjs';
+import { PERSON_ASSETS } from './person.mjs';
 
 const f = (n) => Math.round(n * 10) / 10;
 
@@ -336,3 +337,6 @@ Object.assign(ASSETS, {
 
 // Soft 3D-feel elements (ribbon, tube, image): see ribbon.mjs
 Object.assign(ASSETS, SOFT_ASSETS);
+
+// Faceless pictogram people (person, people): see person.mjs
+Object.assign(ASSETS, PERSON_ASSETS);

@@ -177,6 +177,8 @@
             "marks",
             "crowd",
             "isotype",
+            "person",
+            "people",
             "sheet",
             "window",
             "bubble",
@@ -220,6 +222,24 @@
         },
         "name": {
           "type": "string"
+        },
+        "pose": {
+          "enum": ["standing","walking","running","sitting","pointing","waving","raising-arm","holding","carrying","reading","phone","thinking","cheering","kneeling","leaning"],
+          "description": "person: body pose"
+        },
+        "facing": {
+          "enum": ["left", "right", "alternate"],
+          "description": "person: facing (alternate is for people)"
+        },
+        "accent": {
+          "$ref": "#/$defs/color"
+        },
+        "accentKind": {
+          "enum": ["scarf", "bag"]
+        },
+        "hold": {
+          "type": "string",
+          "description": "person with pose holding: name of a library prop drawn at the hands"
         },
         "paths": {
           "type": "array",
