@@ -30,7 +30,7 @@ export const DOC_GROUPS: DocGroup[] = [
   {
     label: 'Library',
     pages: [
-      { href: '/docs/library/', title: 'The Levni Folio', blurb: 'Find drawings, recolour them, submit your own.' },
+      { href: '/docs/library/', title: 'The Levni Folio', blurb: 'Find drawings, recolour them, name and tag them, submit your own.' },
     ],
   },
 ];

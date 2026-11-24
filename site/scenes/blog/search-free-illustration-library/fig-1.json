@@ -1,0 +1,10 @@
+{ "seed": 32, "elements": [
+  { "type": "prop", "name": "teapot", "x": 180, "y": 300, "size": 210 },
+  { "type": "prop", "name": "tea-glass", "x": 460, "y": 300, "size": 210 },
+  { "type": "prop", "name": "caydanlik", "x": 740, "y": 300, "size": 210 },
+  { "type": "prop", "name": "tea-tray-two-glasses", "x": 1020, "y": 300, "size": 210 },
+  { "type": "label", "text": "teapot", "x": 180, "y": 470, "anchor": "middle", "size": 18 },
+  { "type": "label", "text": "tea-glass", "x": 460, "y": 470, "anchor": "middle", "size": 18 },
+  { "type": "label", "text": "caydanlik", "x": 740, "y": 470, "anchor": "middle", "size": 18 },
+  { "type": "label", "text": "tea-tray-two-glasses", "x": 1020, "y": 470, "anchor": "middle", "size": 18 }
+] }

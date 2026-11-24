@@ -1,0 +1,14 @@
+{ "seed": 33, "elements": [
+  { "type": "prop", "name": "armchair-2", "x": 180, "y": 300, "size": 210 },
+  { "type": "prop", "name": "settings-2", "x": 460, "y": 300, "size": 210 },
+  { "type": "prop", "name": "home-2", "x": 740, "y": 300, "size": 210 },
+  { "type": "prop", "name": "tools-kitchen-2", "x": 1020, "y": 300, "size": 210 },
+  { "type": "label", "text": "armchair-padded", "x": 180, "y": 460, "anchor": "middle", "size": 18 },
+  { "type": "label", "text": "was armchair-2", "x": 180, "y": 492, "anchor": "middle", "size": 15, "color": "blue" },
+  { "type": "label", "text": "hex-nut", "x": 460, "y": 460, "anchor": "middle", "size": 18 },
+  { "type": "label", "text": "was settings-2", "x": 460, "y": 492, "anchor": "middle", "size": 15, "color": "blue" },
+  { "type": "label", "text": "house-window", "x": 740, "y": 460, "anchor": "middle", "size": 18 },
+  { "type": "label", "text": "was home-2", "x": 740, "y": 492, "anchor": "middle", "size": 15, "color": "blue" },
+  { "type": "label", "text": "fork-knife", "x": 1020, "y": 460, "anchor": "middle", "size": 18 },
+  { "type": "label", "text": "was tools-kitchen-2", "x": 1020, "y": 492, "anchor": "middle", "size": 15, "color": "blue" }
+] }

@@ -101,7 +101,7 @@ npx @levni/levni sheet look.png rocket dove    # every variant, on paper and on 
   <ul>
     <li><strong>Output.</strong> Wherever you point it. <code>levni render scene.json out.png</code> writes <code>out.png</code> in the current folder. <code>levni poster</code> writes a whole folder.</li>
     <li><strong>MCP files.</strong> <code>out</code> and <code>out_dir</code> are relative to the working directory of your MCP client, so launch the client in your project folder.</li>
-    <li><strong>The library.</strong> Drawings live in <code>library/props/</code> as one JSON file each. <code>levni add</code> writes into the library of the checkout it runs from, or into <code>--dir</code>. To use your own folder of drawings without touching the library, set <code>LEVNI_PROPS=/path/to/props</code> (several folders separated by <code>:</code>).</li>
+    <li><strong>The library.</strong> Drawings live in <code>library/props/</code> as one JSON file each. <code>levni add</code> writes into the library of the checkout it runs from, or into <code>--dir</code>. New drawings follow the <a href="/docs/library/#names">naming and tagging rules</a>. To use your own folder of drawings without touching the library, set <code>LEVNI_PROPS=/path/to/props</code> (several folders separated by <code>:</code>).</li>
     <li><strong>Optional icons.</strong> The <code>icon</code> and <code>ascii</code> elements use Tabler Icons when <code>@tabler/icons</code> is installed (or <code>LEVNI_ICONS=/path</code>). Nothing else needs it.</li>
     <li><strong>Keys.</strong> Drawing needs none. The Ghost adapter and the judge take their keys from your environment.</li>
   </ul>

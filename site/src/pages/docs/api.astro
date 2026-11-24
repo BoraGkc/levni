@@ -18,11 +18,12 @@ const exportsRows: [string, string][] = [
   ['COLORS, PALETTE', 'House colour names and hex values.'],
   ['W, H, rng, frame', 'Default canvas size, the seeded random generator, and the helper that wraps drawn markup in a canvas with paper and grain.'],
   ['loadProps()', 'All drawings as an object keyed by name.'],
-  ['findProp(nameOrTag)', 'One drawing by name or tag, or null.'],
+  ['findProp(nameOrTag)', 'One drawing by name, old name (aliases) or tag, or null.'],
   ['expandProp(element)', 'Turns a prop element into a draw element (what compose does).'],
   ['addPropDir(dir)', 'Add a folder of drawings.'],
   ['LIBRARY_DIR', 'Path of the bundled library.'],
-  ['validateProp(prop)', 'Array of problems; empty when valid.'],
+  ['validateProp(prop)', 'Array of problems; empty when valid. Also refuses brand names and uppercase or repeated tags.'],
+  ['lintProp(prop)', 'Array of style hints from the Folio guide (tags, names, notes); empty when the drawing follows it. Never blocks.'],
   ['parseProps(text)', 'Parses one drawing, an array, or a chat answer with json blocks.'],
   ['measureVariant(variant)', '{ size, cx, cy, colors, warnings }.'],
   ['CATEGORIES', 'The shelf keys and their labels.'],
@@ -91,6 +92,7 @@ for (const [name, format] of Object.entries(sizes)) {
 
 const all = loadProps();                       // { rocket: { name, category, tags, variants }, ... }
 const rocket = findProp('roket');              // names and tags match, in any language
+const chair = findProp('armchair-2');          // an old name finds the renamed drawing (armchair-padded)
 console.log(rocket.name, rocket.variants.length);
 
 addPropDir('./my-drawings');                   // include your own folder

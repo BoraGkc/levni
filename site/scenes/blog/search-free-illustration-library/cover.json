@@ -1,0 +1,9 @@
+{ "seed": 31, "clip": [60, 52, 1080, 569], "elements": [
+  { "type": "panel", "x": 60, "y": 52, "w": 1080, "h": 569, "color": "blue" },
+  { "type": "disc", "x": 600, "y": 336, "r": 210, "color": "mustard" },
+  { "type": "prop", "name": "magnifier", "x": 600, "y": 336, "size": 320 },
+  { "type": "prop", "name": "teapot", "x": 250, "y": 190, "size": 150 },
+  { "type": "prop", "name": "lighthouse", "x": 960, "y": 200, "size": 160 },
+  { "type": "prop", "name": "umbrella-tilted", "x": 240, "y": 480, "size": 140 },
+  { "type": "prop", "name": "armchair-padded", "x": 970, "y": 480, "size": 150 }
+] }

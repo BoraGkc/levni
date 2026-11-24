@@ -13,11 +13,11 @@ faq:
   - q: "How many pixel icons are there?"
     a: "481 icons, each in four cuts stored as variants: 0 regular, 1 thin, 2 solid and 3 glyph. That makes 1,924 pixel variants in all."
   - q: "How do I find a pixel icon?"
-    a: "Every pixel icon's name starts with `pixel-`, for example `pixel-heart` or `pixel-calendar`. Run `npx @levni/levni list pixel` for all of them, or search the library page for a word plus pixel."
+    a: "Every pixel icon's name starts with `pixel-`, for example `pixel-heart` or `pixel-calendar`, and each carries English and Turkish tags (magnify, yakınlaştır). Run `npx @levni/levni list pixel` for all of them, or search the library page for a word plus pixel."
   - q: "Can I change the colours of the pixel icons?"
     a: "Yes. They use the house colour names, so `recolor` on one icon, `\"palette\": \"blue\"`, or a scene-wide `style` with your own hex values recolours them like every other drawing."
   - q: "Can I get the icons as SVG?"
-    a: "Yes. Render a scene to a `.svg` file. The pixels are stored as rectangles on a quarter-pixel grid, so they stay crisp at any size."
+    a: "Yes. Open the icon in the Library and press Download SVG, in any style pack or your own colours, or render a scene to a `.svg` file. The pixels are stored as rectangles on a quarter-pixel grid, so they stay crisp at any size."
 ---
 
 Pixel art icons have a warmth that thin line icons do not: they look like a game, a handheld screen, a sticker sheet. They suit newsletters, indie products, changelogs and any page that wants to feel a little playful. Most free sets, though, come in one colour, one weight and a licence you have to read twice.

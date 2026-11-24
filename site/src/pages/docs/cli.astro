@@ -67,7 +67,7 @@ npx @levni/levni sheet recolour.png rocket --recolor coral=blue</code></pre>
 
   <h2 id="list">list</h2>
   <pre><code class="language-bash">levni list [query]</code></pre>
-  <p>Lists drawings as <code>name  (variants)  tags</code>. With a query, only those whose name or tags contain it (case-insensitive, English or Turkish). Ends with a count.</p>
+  <p>Lists drawings as <code>name  (variants)  tags</code>. With a query, only those whose name, old name or tags contain it (case-insensitive, English or Turkish). Ends with a count.</p>
   <pre><code class="language-text">$ npx @levni/levni list lighthouse
 building-lighthouse  (1)  building lighthouse
 lighthouse  (3)  deniz feneri, fener, lighthouse, beacon, coast, kıyı, sea, deniz, istanbul
@@ -75,7 +75,7 @@ lighthouse  (3)  deniz feneri, fener, lighthouse, beacon, coast, kıyı, sea, de
 
   <h2 id="check">check</h2>
   <pre><code class="language-bash">levni check [prop ...]</code></pre>
-  <p>For agents that cannot see images. Validates drawings and measures each variant: how much of the 0 to 100 box it fills, its centre, its colours, and what to fix. With names it prints a line for each variant; with none it checks the whole library and prints only problems, ending with <code>all ok</code> or <code>N thing(s) to fix</code>.</p>
+  <p>For agents that cannot see images. Validates drawings and measures each variant: how much of the 0 to 100 box it fills, its centre, its colours, and what to fix. With names it prints a line for each variant, plus <code>note:</code> lines where the name, tags or notes break the <a href={`${SITE.github}/blob/main/docs/folio-guide.md`}>Folio guide</a>; with none it checks the whole library and prints only problems, ending with <code>all ok</code> or <code>N thing(s) to fix</code>.</p>
   <pre><code class="language-text">$ npx @levni/levni check rocket
 rocket#0  size 83  centre (46,53)  colours tone-coral,paper,ink,tone,coral,mustard  ok
 rocket#1  size 77  centre (51,44)  colours paper,ink,tone-coral,tone,coral,mustard  ok
@@ -83,13 +83,15 @@ all ok</code></pre>
 
   <h2 id="add">add</h2>
   <pre><code class="language-bash">levni add &lt;file&gt; [--dir &lt;props folder&gt;] [--sheet out.png]</code></pre>
-  <p>Imports drawings written elsewhere. The file can hold one drawing, an array, or a chat answer with <code>```json</code> blocks. Each drawing is validated and test-drawn. New drawings are written as <code>&lt;name&gt;.json</code>; a drawing that already exists gains its new variants; broken ones are skipped with the reason, and the command exits 1 if any were skipped.</p>
+  <p>Imports drawings written elsewhere. The file can hold one drawing, an array, or a chat answer with <code>```json</code> blocks. Each drawing is validated and test-drawn. New drawings are written as <code>&lt;name&gt;.json</code>; a drawing that already exists gains its new variants; broken ones are skipped with the reason, and the command exits 1 if any were skipped. It also prints <code>note</code> lines for style hints that do not block a drawing: a tag that repeats the name, fewer than three tags, a number in the name that the drawing does not show, a note ending in a full stop.</p>
+  <pre><code class="language-text">note book-2: name "book-2" ends in a number the drawing does not show: name it for what makes it different (book-open, not book-2)
+new  book-2: 1 variant(s)</code></pre>
   <ul>
     <li><code>--dir</code> chooses the folder. The default is the library of the checkout you run it from.</li>
     <li><code>--sheet</code> draws the imported drawings so you can look at them.</li>
   </ul>
   <pre><code class="language-bash">npx @levni/levni add my-props.json --sheet check.png</code></pre>
-  <p>The drawing format and the review rules are in <a href="/docs/library/#submit">the library guide</a>.</p>
+  <p>The drawing format and the review rules are in <a href="/docs/library/#submit">the library guide</a>; naming and tagging in <a href="/docs/library/#names">names, tags and notes</a>.</p>
 
   <h2 id="board">board</h2>
   <pre><code class="language-bash">levni board &lt;spec.json&gt; &lt;out.png&gt;</code></pre>

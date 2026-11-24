@@ -31,7 +31,7 @@ export const TOOLS = [
   },
   {
     name: 'list_props',
-    description: 'Search the Levni Folio, a library of hand-inked drawings (props) that scenes place by name. Matches names, tags (English and Turkish) and variant notes. Returns name, variant count, tags and what each variant shows.',
+    description: 'Search the Levni Folio, a library of hand-inked drawings (props) that scenes place by name. Matches names, old names of renamed props, tags (English and Turkish) and variant notes. Returns name, variant count, tags and what each variant shows.',
     inputSchema: {
       type: 'object',
       properties: {

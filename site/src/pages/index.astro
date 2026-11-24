@@ -160,7 +160,8 @@ const gallery = [
 
 const faq = [
   { q: 'What is Levni?', a: `An open illustration library (${SITE.props} hand-inked drawings and growing) and the open-source engine that composes them into covers, spot illustrations, icons, social images, stickers, brand assets, brand boards and branding posters, in one consistent style. It runs on Node with sharp; there is no image model and no API key.` },
-  { q: 'Can I use the drawings on their own?', a: 'Yes. Browse the Library, pick a drawing and place it in a scene by name. The drawings are CC BY 4.0: free for commercial work with credit “drawings by Ortak Alan”.' },
+  { q: 'Can I use the drawings on their own?', a: 'Yes. Search the Library in English or Turkish, open a drawing and copy its scene code, JavaScript or CLI line, or download it as SVG in any style pack. The drawings are CC BY 4.0: free for commercial work with credit “drawings by Ortak Alan”.' },
+  { q: 'Are there brand logos?', a: 'No, and there will not be. Logos are trademarks that cannot be redrawn in another style, so the Folio draws generic objects instead: a phone, a play button, a speech bubble. Use the brand’s own press kit or Simple Icons for logos.' },
   { q: 'How do AI agents use it?', a: 'An agent writes the scene JSON, renders it, and reads the layout critic’s notes (off-canvas elements, accidental crops, lopsided weight, no focal point) before a person looks. Because it is JSON in and image out, it maps directly onto an MCP tool.' },
   { q: 'How fast is it?', a: 'About 0.15 seconds for a hand-inked cover on a laptop, with no GPU: Levni applies its crayon finish to the pixels itself, about seven times faster than leaving it to the SVG renderer. A batch of hundreds of covers runs in a minute or two, and an agent gets its preview almost at once.' },
   { q: 'What does it cost?', a: 'Nothing per image. Levni is MIT-licensed code that runs on your own machine or in CI. The Levni Folio drawings are CC BY 4.0: credit “drawings by Ortak Alan”.' },
@@ -379,7 +380,9 @@ npx @levni/levni board brand.json board.png`}</code></pre>
       <h2 id="close-title">Open, and growing every week.</h2>
       <p>
         The code is MIT. The drawings are CC BY 4.0: use them anywhere, commercially too, with credit “drawings by Ortak Alan”.
-        Missing an object? Draw it as one JSON file of paths, check it with <code>npx @levni/levni check</code> and open a pull request.
+        Missing an object? Draw it as one JSON file of paths, check it with <code>npx @levni/levni add</code> and open a pull request:
+        the <a href={`${SITE.github}/blob/main/docs/folio-guide.md`}>Folio guide</a> says how to draw, name and tag it, and automatic checks run on every pull request.
+        Cannot draw it yourself? <a href={`${SITE.github}/issues/new?template=prop-request.yml`}>Ask for it</a>.
       </p>
       <div class="ctas">
         <a class="btn btn-primary" href={SITE.github}><Fragment set:html={star} /> Star on GitHub</a>

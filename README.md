@@ -58,7 +58,7 @@ Renders are fast: a hand-inked cover takes about 0.15 s on a laptop (an M4 Mac),
 
 | | |
 | --- | --- |
-| **The Levni Folio** | 1,628 drawings, 3,409 variants (481 of them pixel icons), on 15 shelves, searchable in English and Turkish. CC BY 4.0. [Browse](https://levni.dev/library/) |
+| **The Levni Folio** | 1,628 drawings, 3,409 variants (481 of them pixel icons), on 15 shelves, searchable in English and Turkish through ~11,800 tags. Each drawing in the Library has its tags, related drawings, copy-ready code and an SVG download. Renamed drawings keep their old names. No brand logos. CC BY 4.0. [Browse](https://levni.dev/library/) |
 | **Scenes and the critic** | 73 element types on a 1200 × 673 canvas. Pressure-brush ink, riso plate misregistration, paper grain. Same seed, same picture. Every render returns layout notes: off-canvas, accidental crops, lopsided weight, no focal point. |
 | **Style packs and your inks** | `riso` (default), `miniature` (Tulip Era colours, with its own tulips, carnations, cypresses and medallion), or your own colour map: every drawing follows your brand. |
 | **Soft 3D finish** | `"finish": "soft"`: clean edges and film grain. A real little 3D renderer (pure JS, no GPU): glossy `ribbon3d` bands (loop, Möbius, spiral, knot), `torus3d`, `sphere3d`, `capsule3d`, `blob3d`, `cubes3d`, interlocking shapes in one `soft3d` scene, `extrude3d` that turns any Folio drawing into a 3D icon, and `soft3d` cover presets (`"preset": "auto"`, five palettes) with room for a title and an `image` badge. [Guide](docs/scene.md#soft-3d-v2-real-3d-shapes-use-with-finish-soft) |
@@ -134,12 +134,12 @@ The assistant shows you the preview and applies after you say yes. Drafts only: 
 | command | what it does |
 | --- | --- |
 | `levni render <scene.json> <out>` | draw a scene (`--format`, `--preview`) and print the critic's notes |
-| `levni list [query]` | search props |
+| `levni list [query]` | search props by name, old name or tag (English or Turkish) |
 | `levni sheet <out.png> [prop …]` | contact sheet, every variant on paper and on blue (`--recolor`) |
 | `levni board <spec.json> <out.png>` | brand board: `{"brand": {name, tagline, mark, inks}}` makes a nine-tile board in one call; or place tiles yourself, with browser/card/tote/phone mockups ([docs](docs/board.md)) |
 | `levni poster <spec.json> <out-dir>` | branding posters: `{"brand": {name, tagline, mark, inks, words}}` makes eight 1200 × 1600 posters and `series.png` ([docs](docs/poster.md)) |
-| `levni add <file> [--sheet out.png]` | import props a chat model wrote: check, write, draw ([prompt](docs/prop-prompt.md)) |
-| `levni check [prop …]` | measure props for agents that cannot see images |
+| `levni add <file> [--sheet out.png]` | import props a chat model wrote: check, write, draw, print style notes ([prompt](docs/prop-prompt.md), [guide](docs/folio-guide.md)) |
+| `levni check [prop …]` | measure props for agents that cannot see images; with names, also style notes |
 | `levni mcp` | the MCP server |
 | `levni ghost drafts / attach` | the Ghost adapter ([docs](docs/ghost.md)) |
 | `levni judge score / pick` | optional: rate renders with your own OpenRouter key ([docs](docs/judge.md)) |

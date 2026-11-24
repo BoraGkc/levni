@@ -31,9 +31,10 @@ export const RELEASES: Release[] = [
       { text: 'Better search: about 7,500 new tags, English and Turkish, on 1,090 drawings (the redrawn Tabler icons now carry Tabler’s own search words). Search for a brand to learn why the Folio has no logos.', links: [{ text: 'Library', href: '/library/' }] },
       { text: '31 drawings with numbered names were renamed for what they show (armchair-2 is now armchair-padded, settings-2 is hex-nut); the old names still work in scenes.' },
       { text: 'Library code tabs (Scene, JavaScript, CLI), variant notes under each drawing, an Improve this drawing link, and the / key to jump to search.' },
+      { text: 'Landing, features, MCP page, docs (CLI, API, MCP, library, getting started), footer and README updated for the new Library and the naming rules.' },
       { text: 'Folio guide: how to draw, name and tag a prop, and how to use drawings accessibly; levni add now prints style hints.', links: [{ text: 'Folio guide', href: 'https://github.com/BoraGkc/levni/blob/main/docs/folio-guide.md' }] },
     ],
-    posts: [{ text: 'Branding poster generator', href: '/blog/branding-poster-generator/' }],
+    posts: [{ text: 'Branding poster generator', href: '/blog/branding-poster-generator/' }, { text: 'Search a free illustration library in English and Turkish', href: '/blog/search-free-illustration-library/' }],
   },
   {
     version: '0.2.0',
