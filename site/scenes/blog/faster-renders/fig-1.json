@@ -1,0 +1,12 @@
+{ "seed": 5, "elements": [
+ {"type":"panel","x":30,"y":30,"w":1140,"h":613,"color":"paper","rot":0},
+ {"type":"label","text":"One render, in milliseconds (lower is better)","x":80,"y":80,"size":18},
+ {"type":"bars","x":70,"y":110,"w":600,"h":430,"values":[1050,150,1060,200],
+  "labels":["Cover before","Cover after","City before","City after"],
+  "colors":["tone","coral","tone","coral"],"showValues":true,"suffix":" ms","labelSize":13},
+ {"type":"label","text":"Smoke test, minutes (about)","x":740,"y":80,"size":18},
+ {"type":"bars","x":730,"y":110,"w":400,"h":430,"values":[3.5,0.75],
+  "labels":["before","after"],
+  "colors":["tone","coral"],"showValues":true,"suffix":" min","decimals":2,"labelSize":14},
+ {"type":"label","text":"Sample timings on an M4 Mac; the smoke test is 3,409 variants","x":80,"y":600,"size":14}
+]}

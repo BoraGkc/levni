@@ -124,6 +124,7 @@ levni judge pick &lt;image&gt; &lt;image&gt; [...] --brief "..." [--model &lt;id
   <div class="table-wrap" tabindex="0" role="region" aria-label="Environment variables, scrolls sideways"><table>
     <thead><tr><th>Variable</th><th>Used by</th><th>Meaning</th></tr></thead>
     <tbody>
+      <tr><td><code>LEVNI_RASTER</code></td><td>render, board, poster, sheet, mcp</td><td><code>rsvg</code> hands the crayon finish back to the SVG renderer (slower, about 1 s a cover instead of 0.15 s). Leave unset.</td></tr>
       <tr><td><code>LEVNI_PROPS</code></td><td>all</td><td>Extra folders of drawings, separated by <code>:</code>.</td></tr>
       <tr><td><code>LEVNI_ICONS</code></td><td><code>icon</code>, <code>ascii</code></td><td>Path to Tabler Icons, if you did not install <code>@tabler/icons</code>.</td></tr>
       <tr><td><code>GHOST_ADMIN_API_URL</code>, <code>GHOST_ADMIN_API_KEY</code></td><td><code>ghost</code>, MCP</td><td>Your Ghost Admin credentials. Never read from files.</td></tr>

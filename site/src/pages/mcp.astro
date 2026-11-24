@@ -45,6 +45,7 @@ const ghostTools = [
   ['ghost_apply', 'Writes, only with the token from a preview of the same plan on the unchanged draft.'],
 ];
 const faq = [
+  { q: 'How long does a render take?', a: 'About 0.15 seconds for a hand-inked cover on a laptop, so the preview comes back almost at once and the agent can try several versions in a few seconds. Boards and poster series take a few seconds in all.' },
   { q: 'Do I need an API key for Levni?', a: 'No. Levni runs on your own machine through npx: no account, no key, no cost per image. Your assistant writes the scene; Levni draws it locally.' },
   { q: 'Where do my Ghost keys go?', a: 'Into the env block of your MCP client config, on your machine. Levni has no server of its own and never sees them. Without the two variables the Ghost tools do not even appear.' },
   { q: 'Can the assistant publish a post by mistake?', a: 'No. The Ghost tools only edit drafts, never change their status, never send a newsletter, and skip drafts that already have images. Writing needs the token from a preview the user has seen.' },

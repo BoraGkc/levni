@@ -52,6 +52,8 @@ const { svg, used } = await compose(scene);            // or just the SVG
 
 Node 20+. Two dependencies: [sharp](https://sharp.pixelplumbing.com) (SVG to PNG and WebP) and [fontkit](https://github.com/foliojs/fontkit) (reads the bundled OFL fonts for posters and display type).
 
+Renders are fast: a hand-inked cover takes about 0.15 s on a laptop (an M4 Mac), because Levni applies its crayon finish to the pixels itself instead of asking the SVG renderer to (about seven times faster, same picture). Batches of hundreds of images run in a minute or two, with no GPU. [How it works](https://levni.dev/blog/faster-renders/).
+
 ## What it draws
 
 | | |
@@ -143,6 +145,9 @@ The assistant shows you the preview and applies after you say yes. Drafts only: 
 | `levni judge score / pick` | optional: rate renders with your own OpenRouter key ([docs](docs/judge.md)) |
 
 Optional extras: the `icon` and `ascii` elements use [Tabler Icons](https://tabler.io/icons) when installed (`npm install @tabler/icons`, or `LEVNI_ICONS=/path`). Your own prop folders: `LEVNI_PROPS=/path/to/props` (several, separated by `:`).
+
+
+`LEVNI_RASTER=rsvg` switches back to the SVG renderer's own filter (slower; useful to compare). In code: `import { rasterize } from '@levni/levni'` turns any Levni SVG into a PNG (or raw pixels with `{ raw: true }`, at any `density`).
 
 ## Keys and privacy
 

@@ -22,7 +22,8 @@ for (const slug of readdirSync(root).filter((d) => !d.startsWith('.'))) {
   const dir = `${root}/${slug}`;
   const files = readdirSync(dir, { withFileTypes: true }).flatMap((d) => (d.isDirectory()
     ? readdirSync(`${dir}/${d.name}`).filter((n) => n.endsWith('.json')).map((n) => `${d.name}/${n}`)
-    : d.name.endsWith('.json') ? [d.name] : []));
+    : d.name.endsWith('.json') ? [d.name] : []))
+    .filter((f) => !f.split('/').pop().startsWith('_')); // _name.json: a source scene for a figure made by hand
   for (const f of files) {
     const name = f.split('/').pop().slice(0, -5);
     const src = `${dir}/${f}`;

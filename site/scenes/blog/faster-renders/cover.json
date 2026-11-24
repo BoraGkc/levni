@@ -1,0 +1,9 @@
+{ "seed": 21, "elements": [
+ {"type":"panel","x":60,"y":60,"w":1080,"h":553,"color":"blue","rot":-1},
+ {"type":"glyphs","x":60,"y":60,"w":1080,"h":520,"color":"tone","mode":"radial","level":0.5,"cx":600,"cy":330},
+ {"type":"disc","x":600,"y":335,"r":235,"color":"mustard"},
+ {"type":"prop","name":"stopwatch","x":600,"y":345,"size":380,"shadow":true},
+ {"type":"prop","name":"bolt","x":860,"y":170,"size":150,"rot":12},
+ {"type":"prop","name":"sparkle","x":330,"y":170,"size":90},
+ {"type":"prop","name":"sparkle","x":900,"y":500,"size":60}
+]}

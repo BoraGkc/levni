@@ -28,6 +28,7 @@ const exportsRows: [string, string][] = [
   ['CATEGORIES', 'The shelf keys and their labels.'],
   ['FORMATS, resolveCanvas(spec)', 'Named canvases (cover, og, square, story, youtube, poster, poster-tall, a4) and the resolver.'],
   ['STYLES, applyStyle(svg, name)', 'Style packs (riso, miniature).'],
+  ['rasterize(svg, opts?)', 'async. A Levni SVG to a PNG buffer, or raw RGBA with { raw: true }; density sets the scale (72 = 1 px per unit). Applies the crayon finish and film grain itself: about 0.15 s for a cover.'],
   ['toPng(input, out, opts?)', 'async. PNG with optional preview and screen pass.'],
   ['toWebp(input, out, opts?)', 'async. WebP under a size budget.'],
   ['bayer, screenRaster, SCREEN_PRESETS', 'Ordered dither and the screen print presets (1bit, riso, blueprint, gameboy, newsprint).'],
@@ -112,7 +113,7 @@ const list = expandPosters({ brand });         // [{ template, scene }, ...]: ed
   <p>Formats: <a href="/docs/boards/">Brand boards</a> and <a href="/docs/posters/">Branding posters</a>. <code>renderBoard</code> takes <code>{`{ baseDir }`}</code> to resolve scene paths in a spec.</p>
 
   <h2 id="export">Export and print passes</h2>
-  <p>If you hold an SVG already, <code>toPng</code> and <code>toWebp</code> rasterise it. A scene’s <code>screen</code> field runs an ordered-dither print pass after the raster; <code>screenRaster</code> exposes it.</p>
+  <p>If you hold an SVG already, <code>toPng</code> and <code>toWebp</code> rasterise it, both through <code>rasterize</code>: the picture is drawn in three plain layers and the crayon finish is applied to the pixels in JavaScript, which is about seven times faster than the SVG renderer's own filter with the same result. Use <code>{'rasterize(svg, { density, raw })'}</code> directly for buffers, thumbnails or your own pipeline. A scene’s <code>screen</code> field runs an ordered-dither print pass after the raster; <code>screenRaster</code> exposes it.</p>
   <pre><code class="language-js">{`import { compose, toWebp, toPng } from '@levni/levni';
 
 const { svg } = await compose({ ...scene, screen: 'gameboy' });
