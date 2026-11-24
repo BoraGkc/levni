@@ -2,18 +2,22 @@
 
 ![Levni: a garden in miniature colours, drawn by Levni](docs/img/banner.png)
 
-**An open illustration library and the engine that draws it.** Levni turns a short JSON scene into a hand-inked, riso-printed image: covers, spot illustrations, icons, charts and social images in one consistent house style. No image model, no account, no API key, no cost per image. It runs on your machine, and your AI assistant can drive it through MCP.
+**Your agent's design studio.** Levni turns a few lines of JSON into finished design work: illustrations and article covers, 3D and pixel icons, charts, brand assets (dither, mesh gradients, ASCII art, seals and stickers, etchings), whole brand boards and branding poster series, all in one hand-inked, riso-printed style. No image model, no account, no API key, no cost per image, about 0.15 s a cover on a laptop. It runs on your machine, and Claude, Codex or Cursor can drive it through MCP.
 
-[![Levni MCP server](https://glama.ai/mcp/servers/BoraGkc/levni/badges/score.svg)](https://glama.ai/mcp/servers/BoraGkc/levni) [![npm](https://img.shields.io/npm/v/@levni/levni)](https://www.npmjs.com/package/@levni/levni)
+[![npm](https://img.shields.io/npm/v/@levni/levni?color=F0573A&label=npm)](https://www.npmjs.com/package/@levni/levni) [![MCP Registry](https://img.shields.io/badge/MCP%20Registry-dev.levni%2Flevni-1F3BE0)](https://registry.modelcontextprotocol.io/v0/servers?search=dev.levni/levni) [![Levni MCP server](https://glama.ai/mcp/servers/BoraGkc/levni/badges/score.svg)](https://glama.ai/mcp/servers/BoraGkc/levni) [![Code: MIT](https://img.shields.io/badge/code-MIT-14181F)](LICENSE) [![Drawings: CC BY 4.0](https://img.shields.io/badge/drawings-CC%20BY%204.0-2E8B57)](https://creativecommons.org/licenses/by/4.0/)
 
-**[levni.dev](https://levni.dev)** · [Features](https://levni.dev/features/) · [Library](https://levni.dev/library/) · [MCP guide](https://levni.dev/mcp/) · Powered by [Ortak Alan](https://ortakalan.io)
+**[levni.dev](https://levni.dev)** · [Docs](https://levni.dev/docs/) · [Gallery](https://levni.dev/gallery/) · [Library](https://levni.dev/library/) · [MCP guide](https://levni.dev/mcp/) · [Changelog](https://levni.dev/changelog/) · Powered by [Ortak Alan](https://ortakalan.io)
+
+![Branding posters, a brand board, stickers, a dithered sunset, a soft 3D cover, an isometric city, wireframe terrain, an ASCII card and a riso cover, all drawn by Levni](docs/img/showcase.png)
+
+| make | one line to start |
+| --- | --- |
+| a series of eight branding posters | `npx @levni/levni poster brand.json posters/` |
+| a nine-tile brand board | `npx @levni/levni board brand.json board.png` |
+| a cover, sticker sheet or dithered hero | `npx @levni/levni render scene.json cover.webp` |
+| all of it from your assistant | `claude mcp add levni -- npx -y @levni/levni mcp` |
 
 Named after Levni, the 18th-century Ottoman painter of the Tulip Era, whose colours still look alive.
-
-| cover | spot | little 3D world |
-| --- | --- | --- |
-| ![A rocket in front of a sun on a blue panel, an audience below](examples/cover.png) | ![Books, a coffee cup and a light bulb on a mustard disc](examples/spot.png) | ![Isometric room with a desk, laptop, lamp and stool](examples/room.png) |
-| [`cover.json`](examples/cover.json) | [`spot.json`](examples/spot.json) | [`room.json`](examples/room.json) |
 
 ## Quick start
 
