@@ -26,10 +26,11 @@ export function loadProps() {
   return cache;
 }
 
-// Find a prop by name or by any of its tags (tags are multilingual), e.g. "telefon" -> phone.
+// Find a prop by name, by an old name kept in `aliases` (a renamed prop never breaks a saved scene),
+// or by any of its tags (tags are multilingual), e.g. "telefon" -> phone.
 export function findProp(q) {
-  const all = loadProps(), k = String(q).toLowerCase().trim();
-  return all[k] || Object.values(all).find((p) => (p.tags || []).some((t) => t.toLowerCase() === k)) || null;
+  const all = loadProps(), k = String(q).toLowerCase().trim(), list = Object.values(all);
+  return all[k] || list.find((p) => (p.aliases || []).includes(k)) || list.find((p) => (p.tags || []).some((t) => t.toLowerCase() === k)) || null;
 }
 
 // palette "blue" folds every accent into the blue family (for sensitive subjects); recolor maps single colours

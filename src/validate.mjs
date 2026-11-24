@@ -1,6 +1,11 @@
 // Checks one prop object (the JSON format of library/props/*.json). Returns a list of problems, empty when fine.
 import { COLORS } from './compose.mjs';
 import { flattenPath } from './ink.mjs';
+import { readFileSync } from 'node:fs';
+
+// Brand names a prop may not be named after (tags may still mention them, so "tiktok" can find a phone).
+// Lowercase word -> how the brand writes it. Ambiguous everyday words (apple, windows, zoom) are left out on purpose.
+export const BRAND_WORDS = JSON.parse(readFileSync(new URL('../library/brand-words.json', import.meta.url), 'utf8'));
 
 // Library shelves. A prop names one in `category`; props without one still load and show under "other".
 export const CATEGORIES = {
@@ -15,6 +20,19 @@ export function validateProp(p) {
   const name = p?.name;
   if (typeof name !== 'string' || !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(name)) errs.push(`name "${name}" must be lowercase a-z0-9 and hyphens`);
   if (!Array.isArray(p?.tags)) errs.push('tags must be an array');
+  else {
+    if (!p.tags.length) errs.push('tags: add at least one search word');
+    const low = p.tags.map((t) => String(t).toLocaleLowerCase('tr'));
+    p.tags.forEach((t) => { if (typeof t !== 'string' || !t.trim()) errs.push('tags must be non-empty strings'); else if (/[A-ZÇĞİÖŞÜ]/.test(t)) errs.push(`tag "${t}" must be lowercase`); });
+    const dup = low.find((t, i) => low.indexOf(t) !== i);
+    if (dup) errs.push(`tag "${dup}" is listed twice`);
+  }
+  if (p?.aliases != null) {
+    if (!Array.isArray(p.aliases)) errs.push('aliases must be an array of old names');
+    else for (const a of p.aliases) if (typeof a !== 'string' || !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(a) || a === name) errs.push(`alias "${a}" must be an old name: lowercase a-z0-9 and hyphens, not the current name`);
+  }
+  const brand = typeof name === 'string' && [name, ...(Array.isArray(p?.aliases) ? p.aliases : [])].flatMap((n) => String(n).split('-')).find((w) => w in BRAND_WORDS);
+  if (brand) errs.push(`name "${name}" uses the brand name "${BRAND_WORDS[brand]}": the Folio takes no logos or trademarks (see BRAND_LOGOS.md)`);
   if (p?.category != null && !(p.category in CATEGORIES)) errs.push(`category "${p.category}" must be one of: ${Object.keys(CATEGORIES).join(', ')}`);
   if (!Array.isArray(p?.variants) || !p.variants.length) return [...errs, 'needs at least one variant'];
   p.variants.forEach((v, i) => {
@@ -38,6 +56,24 @@ export function validateProp(p) {
     });
   });
   return errs;
+}
+
+// Style notes from docs/folio-guide.md that are worth fixing but do not block a prop (older props break some of them).
+// Returns a list of short hints, empty when the prop follows the guide.
+export function lintProp(p) {
+  const out = [];
+  const name = String(p?.name || ''), spaced = name.replace(/-/g, ' ');
+  const tags = (p?.tags || []).map((t) => String(t).toLowerCase());
+  if (tags.some((t) => t === name || t === spaced)) out.push(`tags repeat the name "${name}": the name is already searchable, add synonyms and Turkish words instead`);
+  if (tags.length < 3) out.push(`only ${tags.length} tag(s): add synonyms, related words and the Turkish word (aim for 4-8)`);
+  if (/(^|-)\d+$/.test(name) && !/\d/.test((p?.variants || []).map((v) => v.note || '').join(' '))) out.push(`name "${name}" ends in a number the drawing does not show: name it for what makes it different (book-open, not book-2)`);
+  if (/(^|-)(alt|new|v\d+|copy|final)(-|$)/.test(name)) out.push(`name "${name}" uses a version word: name it for what it shows`);
+  if (tags.some((t) => ['icon', 'drawing', 'illustration', 'prop', 'çizim', 'ikon', 'simge'].includes(t))) out.push('generic tags (icon, drawing, prop): every Folio entry is one, drop them');
+  (p?.variants || []).forEach((v, i) => {
+    if (!v.note || !String(v.note).trim()) out.push(`variant ${i}: add a note that says what it shows ("side view, spout to the right")`);
+    else if (/[.!]$/.test(String(v.note).trim())) out.push(`variant ${i}: notes are phrases, drop the final full stop`);
+  });
+  return out;
 }
 
 // Accepts what a chat model returns: one prop, an array of props, or either wrapped in a ```json fence.

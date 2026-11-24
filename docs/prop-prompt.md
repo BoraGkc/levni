@@ -40,6 +40,9 @@ RULES
 - Holes (rings, frames): add "rule": "evenodd" and put both outlines in one d.
 - Draw one object, not a scene. No text or letters, no faces or eyes, no hands, no logos or brand shapes, no flags of real countries.
 - If an object has an obvious second view or state (open/closed, side/front), add it as a second variant of the same prop.
+- Name what the drawing shows, not its use ("floppy-disk", not "save"); group word first, modifier after ("book-open", "heart-broken"); no numbers it does not show ("book-2" is wrong); no brand names.
+- Tags: 4-8 lowercase words, English synonyms plus the Turkish word(s); do not repeat the name; no "icon" or "drawing".
+- Each variant "note" is a short phrase of what it shows, 3-12 words, no final full stop: "side view, spout to the right".
 
 EXAMPLES
 

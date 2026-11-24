@@ -1,10 +1,11 @@
 // Smoke test: every prop variant is validated, composed on its own, and rasterized once.
 // Variants are drawn 24 to a tile (6 x 4) at half resolution, so the whole library takes seconds, not minutes.
 // Usage: node test/smoke.mjs [--out <dir>]   (--out keeps the tiles as a contact sheet for review)
-import { mkdirSync } from 'node:fs';
+import { mkdirSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import sharp from 'sharp';
 import { compose, loadProps } from '../src/index.mjs';
+import { LIBRARY_DIR } from '../src/props.mjs';
 import { validateProp } from '../src/validate.mjs';
 
 const oi = process.argv.indexOf('--out');
@@ -20,6 +21,17 @@ const list = [];
 for (const [name, p] of Object.entries(props)) {
   for (const e of validateProp(p)) fail(name, e);
   (p.variants || []).forEach((v, i) => { if (v.paths?.length) list.push([name, i]); });
+}
+// File name is the prop name; an old name in `aliases` must not shadow a live prop or another alias
+for (const f of readdirSync(LIBRARY_DIR).filter((n) => n.endsWith('.json'))) {
+  const n = JSON.parse(readFileSync(LIBRARY_DIR + f, 'utf8')).name;
+  if (f !== `${n}.json`) fail(f, `file name must be "${n}.json"`);
+}
+const owner = {};
+for (const p of Object.values(props)) for (const a of p.aliases || []) {
+  if (props[a]) fail(p.name, `alias "${a}" is also a live prop name`);
+  else if (owner[a]) fail(p.name, `alias "${a}" is already used by ${owner[a]}`);
+  owner[a] = p.name;
 }
 
 // 2. Each variant on its own: the SVG must be clean and the ink box finite and non-empty
@@ -117,7 +129,6 @@ for (let i = 0; i < list.length; i += 24) {
 }
 
 // 4. Every example scene renders (small, fast)
-const { readdirSync, readFileSync } = await import('node:fs');
 const exDir = new URL('../examples/', import.meta.url);
 for (const f of readdirSync(exDir).filter((n) => n.endsWith('.json'))) {
   try {

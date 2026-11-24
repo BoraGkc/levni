@@ -167,7 +167,7 @@ The library grows by contribution: one JSON file per drawing in `library/props/`
 }
 ```
 
-Rules: your own drawing (inspired by a style is fine, tracing a work is not), no faces, no hands, no logos, one object per file, readable at 120 px. Check with `npx @levni/levni add my-props.json --sheet check.png`, then open a pull request. Full guide: [CONTRIBUTING.md](CONTRIBUTING.md). Writing many at once with a chat model: [`docs/prop-prompt.md`](docs/prop-prompt.md).
+Rules: your own drawing (inspired by a style is fine, tracing a work is not), no faces, no hands, no logos, one object per file, readable at 120 px. Check with `npx @levni/levni add my-props.json --sheet check.png`, then open a pull request. Full guide: [CONTRIBUTING.md](CONTRIBUTING.md), naming and tagging rules: [`docs/folio-guide.md`](docs/folio-guide.md), file schema: [`docs/prop.schema.json`](docs/prop.schema.json), why no logos: [BRAND_LOGOS.md](BRAND_LOGOS.md), [Code of Conduct](CODE_OF_CONDUCT.md). Writing many at once with a chat model: [`docs/prop-prompt.md`](docs/prop-prompt.md).
 
 ## Licensing
 
@@ -184,7 +184,7 @@ Rules: your own drawing (inspired by a style is fine, tracing a work is not), no
 | `bin/levni.mjs` | the CLI |
 | `adapters/ghost/` | the Ghost adapter |
 | `library/` | the Levni Folio and its licence |
-| `docs/` | scene reference and schema, Ghost, judge, sensitive stories, the chat-model prompt |
+| `docs/` | scene reference and schema, prop schema, Ghost, judge, sensitive stories, the chat-model prompt |
 | `examples/` | scenes and their renders |
 | `site/` | [levni.dev](https://levni.dev) (Astro, static, Cloudflare Pages; images drawn by Levni: `npm run assets`, `npm run library`) |
 | `test/` | `npm test` runs every test file: props, MCP, Ghost (mocked), formats, judge, critic (~2 min: it draws every variant) |

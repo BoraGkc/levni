@@ -1,5 +1,7 @@
 # Contributing to Levni
 
+Everyone taking part follows the [Code of Conduct](CODE_OF_CONDUCT.md).
+
 Two kinds of contributions: **drawings for the Levni Folio** (most welcome) and **code** (engine, CLI, style packs).
 
 ## Submit to the Folio
@@ -28,6 +30,9 @@ The Levni Folio is the shared library of drawn objects in `library/props/`. Each
 - Colours are **names**, never hex: `ink` (outlines), `blue`, `tone`, `coral`, `tone-coral`, `mustard`, `tone-mustard`, `green`, `tone-green`, `paper`, `white`, `dark`. Names let style packs recolour your drawing.
 - `weight` is the line width in output pixels: 8–10 outlines, 4–6 details.
 - A second angle or state of the same object is another **variant**, not another prop.
+- Renaming a prop? Keep the old name in `"aliases": ["old-name"]` so saved scenes still find it.
+- Editors and agents can check a file against [`docs/prop.schema.json`](docs/prop.schema.json): add `"$schema": "../../docs/prop.schema.json"` while you work.
+- Naming, tags, notes and the drawing rules in full: [`docs/folio-guide.md`](docs/folio-guide.md).
 - Writing many at once with a chat model: [`docs/prop-prompt.md`](docs/prop-prompt.md) has a copy-paste prompt.
 
 ### Check it
@@ -44,7 +49,7 @@ Look at `check.png`: every variant on paper and on a blue panel.
 
 1. **Own work only.** Drawn by you. Drawing in the spirit of a style or tradition is welcome (a riso poster, a Tulip Era tulip); tracing a specific work, photo, stock image or icon set is not. AI-assisted path code is accepted when you directed and checked it: say so in the pull request.
 2. **No faces, no hands.** People only as faceless pictograms.
-3. **No logos or trademarks**, and nothing that reads as one (a bitten apple, a swoosh, a real country's flag by accident).
+3. **No logos or trademarks**, and nothing that reads as one (a bitten apple, a swoosh, a real country's flag by accident). Names may not use brand names; `npm test` checks this. Why: [BRAND_LOGOS.md](BRAND_LOGOS.md).
 4. **One object, one idea.** No text inside drawings, no scenes.
 5. **House style.** Simple shapes, two inks plus paper, readable at 120 px.
 

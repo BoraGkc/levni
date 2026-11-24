@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://levni.dev/prop.schema.json",
+  "title": "Levni Folio prop",
+  "description": "One drawing in library/props/<name>.json: SVG paths in a 0-100 box with colour names. `npm test` and `levni add` run the full check (src/validate.mjs); this schema is for editors and agents. Guide: CONTRIBUTING.md",
+  "type": "object",
+  "required": ["name", "tags", "variants"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "name": {
+      "description": "Lowercase English, a-z0-9 and hyphens; equals the file name. No brand names (library/brand-words.json).",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "aliases": {
+      "description": "Old names of a renamed prop. Scenes that use an old name keep working.",
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+      "uniqueItems": true
+    },
+    "category": {
+      "description": "One shelf of the Library.",
+      "enum": ["film", "tv", "stage", "music", "books", "tech", "money", "law", "sport", "home", "food", "nature", "places", "health", "symbols"]
+    },
+    "tags": {
+      "description": "Search words in any language (English and Turkish welcome).",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "author": { "type": "string" },
+    "variants": {
+      "description": "A second angle or state of the same object is another variant, not another prop.",
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/variant" }
+    }
+  },
+  "$defs": {
+    "color": {
+      "anyOf": [
+        { "enum": ["blue", "ink", "coral", "mustard", "green", "paper", "white", "dark", "tone", "tone-coral", "tone-green", "tone-mustard", "none"] },
+        { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$", "description": "Hex works but cannot be recoloured by style packs; prefer a name." }
+      ]
+    },
+    "variant": {
+      "type": "object",
+      "required": ["paths"],
+      "properties": {
+        "note": { "type": "string", "description": "What this variant shows, e.g. \"side view, spout to the right\"." },
+        "from": { "type": "string" },
+        "slots": {
+          "type": "object",
+          "description": "Named places other elements can sit in: [x, y], [x, y, w, h] or [x, y, w, h, rotDegrees], all inside 0..100.",
+          "additionalProperties": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 5 }
+        },
+        "paths": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["d"],
+            "properties": {
+              "d": { "type": "string", "pattern": "^\\s*[Mm]" },
+              "fill": { "$ref": "#/$defs/color" },
+              "stroke": { "$ref": "#/$defs/color" },
+              "weight": { "type": "number", "minimum": 0, "description": "Line width in output pixels: 8-10 outlines, 4-6 details." }
+            }
+          }
+        }
+      }
+    }
+  }
+}

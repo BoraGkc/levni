@@ -114,10 +114,10 @@ async function call(name, args = {}) {
   if (name === 'scene_guide') return [text(readFileSync(GUIDE, 'utf8'))];
 
   if (name === 'list_props') {
-    const words = String(args.query || '').toLowerCase().split(/\s+/).filter(Boolean);
+    const words = String(args.query || '').toLocaleLowerCase('tr').split(/\s+/).filter(Boolean);
     const all = Object.values(loadProps()).sort((a, b) => a.name.localeCompare(b.name));
     const hits = all.filter((p) => !args.category || p.category === args.category).filter((p) => {
-      const hay = [p.name, ...(p.tags || []), ...p.variants.map((v) => v.note || '')].join(' ').toLowerCase();
+      const hay = [p.name, ...(p.aliases || []), ...(p.tags || []), ...p.variants.map((v) => v.note || '')].join(' ').toLocaleLowerCase('tr');
       return words.every((w) => hay.includes(w));
     });
     const limit = Math.max(1, Math.min(Number(args.limit) || 40, 500));

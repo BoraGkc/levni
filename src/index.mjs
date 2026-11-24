@@ -13,7 +13,7 @@ export { bayer, screenRaster, SCREEN_PRESETS } from './dither.mjs';
 export { renderPosters, expandPosters, TEMPLATES as POSTER_TEMPLATES } from './poster.mjs';
 export { FONTS, layoutType } from './type.mjs';
 export { STYLES, applyStyle } from './styles.mjs';
-export { validateProp, parseProps, measureVariant, CATEGORIES } from './validate.mjs';
+export { validateProp, lintProp, parseProps, measureVariant, CATEGORIES } from './validate.mjs';
 export { iconsAvailable, resolveIcon } from './icon.mjs';
 export { renderBoard } from './board.mjs';
 export { expandBrand } from './board.mjs';

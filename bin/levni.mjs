@@ -10,7 +10,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import sharp from 'sharp';
 import { score as judgeScore, pick as judgePick, openrouter } from '../src/judge/index.mjs';
-import { render, compose, loadProps, findProp, addPropDir, LIBRARY_DIR, validateProp, parseProps, measureVariant } from '../src/index.mjs';
+import { render, compose, loadProps, findProp, addPropDir, LIBRARY_DIR, validateProp, lintProp, parseProps, measureVariant } from '../src/index.mjs';
 
 const [cmd, ...rest] = process.argv.slice(2);
 const flag = (name) => rest.includes(`--${name}`);
@@ -82,7 +82,7 @@ async function main() {
   } else if (cmd === 'list') {
     const q = (positional[0] || '').toLowerCase();
     const all = Object.values(loadProps()).sort((a, b) => a.name.localeCompare(b.name));
-    const hits = q ? all.filter((p) => p.name.includes(q) || (p.tags || []).some((t) => t.toLowerCase().includes(q))) : all;
+    const hits = q ? all.filter((p) => p.name.includes(q) || (p.aliases || []).some((a) => a.includes(q)) || (p.tags || []).some((t) => t.toLocaleLowerCase('tr').includes(q))) : all;
     for (const p of hits) console.log(`${p.name}  (${p.variants.length})  ${(p.tags || []).join(', ')}`);
     console.log(`${hits.length} props`);
   } else if (cmd === 'check') {
@@ -93,6 +93,7 @@ async function main() {
       const p = findProp(n);
       if (!p) { console.log(`${n}: unknown prop`); bad++; continue; }
       for (const e of validateProp(p)) { console.log(`${p.name}: ${e}`); bad++; }
+      if (positional.length) for (const hint of lintProp(p)) console.log(`${p.name}: note: ${hint}`);
       p.variants.forEach((v, i) => {
         const m = measureVariant(v);
         const head = `${p.name}#${i}  size ${m.size ?? '-'}  centre (${m.cx ?? '-'},${m.cy ?? '-'})  colours ${(m.colors || []).join(',')}`;
@@ -120,6 +121,7 @@ async function main() {
         }
       }
       if (errs.length) { skipped++; console.log(`skip ${p?.name ?? '(no name)'}: ${errs.join('; ')}`); continue; }
+      for (const hint of lintProp(p)) console.log(`note ${p.name}: ${hint}`);
       const target = join(dir, `${p.name}.json`);
       const clean = { name: p.name, ...(p.category ? { category: p.category } : {}), tags: p.tags.map(String), ...(p.author ? { author: p.author } : {}), variants: p.variants.map((v) => ({ ...(v.note ? { note: v.note } : {}), paths: v.paths })) };
       if (existsSync(target)) {
