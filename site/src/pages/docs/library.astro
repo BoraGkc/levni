@@ -9,6 +9,8 @@ const toc = [
   { id: 'variants', text: 'Variants', level: 2 as const },
   { id: 'recolour', text: 'Recolour', level: 2 as const },
   { id: 'licence', text: 'Licence and credit', level: 2 as const },
+  { id: 'names', text: 'Names, tags and notes', level: 2 as const },
+  { id: 'use-well', text: 'Using drawings well', level: 2 as const },
   { id: 'submit', text: 'Submit a drawing', level: 2 as const },
   { id: 'many', text: 'Many drawings at once', level: 2 as const },
 ];
@@ -45,7 +47,7 @@ const sample = `{
 
   <h2 id="find">Find a drawing</h2>
   <ul>
-    <li><strong>On the web.</strong> <a href="/library/">Browse the library</a> and search in English or Turkish.</li>
+    <li><strong>On the web.</strong> <a href="/library/">Browse the library</a> and search in English or Turkish (press <kbd>/</kbd> to jump to the search box). Each drawing opens with its tags, related drawings, copy-ready code for a scene, JavaScript or the CLI, an SVG download, and its own link: <code>/library/?p=lighthouse</code>.</li>
     <li><strong>From the CLI.</strong> <code>npx @levni/levni list coffee</code> lists names, variant counts and tags. <code>npx @levni/levni sheet look.png coffee-cup</code> shows them.</li>
     <li><strong>From an agent.</strong> <code>list_props</code> takes a query and an optional shelf and describes every variant in words; <code>show_props</code> returns a contact sheet image. See <a href="/docs/mcp/#tools">MCP tools</a>.</li>
     <li><strong>From code.</strong> <code>findProp('telefon')</code> matches names and tags in any language. See the <a href="/docs/api/#props">Node API</a>.</li>
@@ -70,6 +72,25 @@ const sample = `{
     <figcaption>One drawing, three <code>recolor</code> maps.</figcaption>
   </figure>
 
+  <h2 id="names">Names, tags and notes</h2>
+  <p>Names say what a drawing <em>shows</em>, not what it is used for, so they stay true in every story: <code>floppy-disk</code>, not <code>save</code>. Related drawings share the group word first (<code>book-hardcover</code>, <code>book-stack</code>), modifiers follow the thing they describe (<code>heart-broken</code>), and numbers appear only when the drawing shows them (<code>dice-5</code>, <code>clock-hour-4</code>).</p>
+  <ul>
+    <li><strong>Renamed drawings keep working.</strong> An old name stays in the prop's <code>aliases</code>, so a scene that says <code>armchair-2</code> still draws <code>armchair-padded</code>.</li>
+    <li><strong>Tags</strong> are lowercase search words in English and Turkish, 4 to 8 per drawing, without repeating the name.</li>
+    <li><strong>Notes</strong> say what each variant shows in a short phrase (<em>side view, spout to the right</em>), so a model that cannot see images can still pick one.</li>
+    <li><strong>No brand names.</strong> The Folio draws no logos (<a href={`${SITE.github}/blob/main/BRAND_LOGOS.md`}>why</a>); <code>npm test</code> refuses names such as <code>youtube-play</code>.</li>
+  </ul>
+  <p>The full rule book, with the drawing rules and a checklist, is <a href={`${SITE.github}/blob/main/docs/folio-guide.md`}>docs/folio-guide.md</a>. Editors and agents can check a file against <a href={`${SITE.github}/blob/main/docs/prop.schema.json`}>prop.schema.json</a>.</p>
+
+  <h2 id="use-well">Using drawings well</h2>
+  <ul>
+    <li><strong>Alt text.</strong> A drawing that carries meaning gets alt text saying what it shows in the story (“a cracked piggy bank next to a falling chart”), not “illustration”. A decorative one gets <code>alt=""</code>.</li>
+    <li><strong>Not colour alone.</strong> If red against green carries the meaning, add a shape or a word too; style packs change colours.</li>
+    <li><strong>Contrast.</strong> On dark or busy backgrounds put the drawing on a paper panel or pick a pack whose ink stays visible.</li>
+    <li><strong>One drawing, one meaning</strong> on a page, and familiar objects over puns that do not travel between languages.</li>
+    <li><strong>Sensitive stories</strong> use <code>"palette": "blue"</code> and the props tagged <code>sensitive</code>.</li>
+  </ul>
+
   <h2 id="licence">Licence and credit</h2>
   <p>The Folio is <a href={`${SITE.github}/blob/main/library/LICENSE`}>CC BY 4.0</a>. Use it anywhere, commercially too, and credit it, for example “drawings by Ortak Alan (CC BY 4.0)”. The engine and code are MIT. Images you render are yours; the credit applies when they contain library drawings. Origins and flagged drawings are in <a href={`${SITE.github}/blob/main/library/NOTICE.md`}>NOTICE.md</a>.</p>
 
@@ -79,7 +100,7 @@ const sample = `{
 
   <h3 id="format">Format</h3>
   <ul>
-    <li><code>name</code> is the file name: lowercase English, <code>a-z0-9</code> and hyphens. <code>tags</code> can be in any language. <code>category</code> is one of the shelf keys above.</li>
+    <li><code>name</code> is the file name: lowercase English, <code>a-z0-9</code> and hyphens, named for what it shows (<a href="#names">rules</a>). <code>tags</code> are lowercase, in English and Turkish. <code>category</code> is one of the shelf keys above.</li>
     <li>Draw in a 0 to 100 box (y grows downward), centred, with the object filling 70 to 85 of it.</li>
     <li>Colours are <strong>names</strong>, never hex: <code>ink</code> (outlines), <code>blue</code>, <code>tone</code>, <code>coral</code>, <code>tone-coral</code>, <code>mustard</code>, <code>tone-mustard</code>, <code>green</code>, <code>tone-green</code>, <code>paper</code>, <code>white</code>, <code>dark</code>.</li>
     <li><code>weight</code> is the line width in output pixels: 8 to 10 for outlines, 4 to 6 for details.</li>
@@ -90,7 +111,7 @@ const sample = `{
   <pre><code class="language-bash">git clone {SITE.github}.git && cd levni && npm install
 npx @levni/levni add my-props.json --sheet check.png   # validates, writes to library/props/, draws them
 npm test                                        # validates and renders the whole Folio</code></pre>
-  <p>Open <code>check.png</code>: every variant on paper and on a blue panel. <code>levni check name</code> measures a drawing in numbers, for agents that cannot see.</p>
+  <p>Open <code>check.png</code>: every variant on paper and on a blue panel. <code>levni add</code> also prints <code>note</code> lines for names, tags and notes that break the guide. <code>levni check name</code> measures a drawing in numbers, for agents that cannot see.</p>
 
   <h3 id="rules">Review rules</h3>
   <ol>
@@ -100,7 +121,7 @@ npm test                                        # validates and renders the whol
     <li><strong>One object, one idea.</strong> No text inside drawings, no scenes.</li>
     <li><strong>House style.</strong> Simple shapes, two inks plus paper, readable at 120 px.</li>
   </ol>
-  <p>By submitting you release the drawing under CC BY 4.0 and are credited in its <code>author</code> field. Then open a pull request. The full guide is <a href={`${SITE.github}/blob/main/CONTRIBUTING.md`}>CONTRIBUTING.md</a>.</p>
+  <p>By submitting you release the drawing under CC BY 4.0 and are credited in its <code>author</code> field. Then open a pull request; automatic checks run on it. The full guide is <a href={`${SITE.github}/blob/main/CONTRIBUTING.md`}>CONTRIBUTING.md</a>, and everyone taking part follows the <a href={`${SITE.github}/blob/main/CODE_OF_CONDUCT.md`}>Code of Conduct</a>. Missing a drawing you cannot draw yourself? <a href={`${SITE.github}/issues/new?template=prop-request.yml`}>Ask for it</a>.</p>
 
   <h2 id="many">Many drawings at once</h2>
   <p>You can have a chat model write several drawings in one go. <a href={`${SITE.github}/blob/main/docs/prop-prompt.md`}>docs/prop-prompt.md</a> holds a prompt to copy. Paste the answer into a file and run <code>levni add</code>: it accepts a chat answer with <code>```json</code> blocks, checks each drawing, skips the broken ones with a reason and draws the rest for you to look at.</p>

@@ -3,7 +3,7 @@
 //   npm run library -- --force (redraws all)
 // Props are laid out 18 to a canvas, rendered once at 2x and cut into tiles: ~40 renders instead of 700.
 // Output is committed (public/props/*.webp, src/data/props.json), so the Pages build needs no sharp.
-import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import sharp from 'sharp';
 import { compose, loadProps, CATEGORIES, STYLES } from '../../src/index.mjs';
 import { HOUSE } from '../../src/styles.mjs';
@@ -19,9 +19,13 @@ const index = props.map((p) => ({
   category: p.category || 'other',
   tags: p.tags || [],
   variants: p.variants.map((v) => v.note || ''),
+  ...(p.aliases?.length ? { aliases: p.aliases } : {}),
+  ...(p.author ? { author: p.author } : {}),
 }));
 writeFileSync(here('src/data/props.json'), JSON.stringify(index));
 writeFileSync(here('src/data/categories.json'), JSON.stringify(CATEGORIES));
+// brand names the Folio refuses: the Library answers a search for one with the no-logos note
+writeFileSync(here('src/data/brand-words.json'), readFileSync(new URL('../../library/brand-words.json', import.meta.url), 'utf8'));
 writeFileSync(here('src/data/inks.json'), JSON.stringify({ house: HOUSE, packs: STYLES }));
 writeFileSync(here('public/inks.json'), JSON.stringify({ house: HOUSE, packs: STYLES }));
 
