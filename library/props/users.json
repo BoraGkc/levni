@@ -2,7 +2,16 @@
  "name": "users",
  "category": "home",
  "tags": [
-  "users"
+  "people",
+  "group",
+  "team",
+  "persons",
+  "accounts",
+  "members",
+  "community",
+  "user",
+  "kullanıcılar",
+  "ekip"
  ],
  "variants": [
   {

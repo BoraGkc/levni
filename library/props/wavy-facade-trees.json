@@ -4,11 +4,14 @@
   "tags": [
     "dalgali cephe agac",
     "wavy facade with trees",
-    "muze mimari"
+    "muze mimari",
+    "dalgalı cephe",
+    "ağaç"
   ],
   "variants": [
     {
-      "note": "wavy building facade with blue wave lines and three green trees", "from": "harvested from .cache/cizim-drafts/ma-yansong-lucas/ici-1-alt.json",
+      "note": "wavy building facade with blue wave lines and three green trees",
+      "from": "harvested from .cache/cizim-drafts/ma-yansong-lucas/ici-1-alt.json",
       "paths": [
         {
           "d": "M10 52 L10 36",
@@ -85,7 +88,8 @@
       ]
     },
     {
-      "note": "wavy facade with blue wave lines, two green trees, variant two", "from": "harvested from .cache/cizim-drafts/ma-yansong-lucas/ici-1-alt2.json",
+      "note": "wavy facade with blue wave lines, two green trees, variant two",
+      "from": "harvested from .cache/cizim-drafts/ma-yansong-lucas/ici-1-alt2.json",
       "paths": [
         {
           "d": "M10 53 L10 42",

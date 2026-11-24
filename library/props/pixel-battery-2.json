@@ -2,9 +2,14 @@
  "name": "pixel-battery-2",
  "category": "home",
  "tags": [
-  "battery 2",
-  "pixel battery 2",
-  "pixel"
+  "pixel",
+  "half power",
+  "charge",
+  "energy",
+  "medium",
+  "pil",
+  "yarım pil",
+  "şarj"
  ],
  "variants": [
   {

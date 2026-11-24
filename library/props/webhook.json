@@ -2,7 +2,14 @@
  "name": "webhook",
  "category": "tech",
  "tags": [
-  "webhook"
+  "api",
+  "integration",
+  "callback",
+  "http",
+  "event",
+  "trigger",
+  "automation",
+  "entegrasyon"
  ],
  "variants": [
   {

@@ -4,11 +4,13 @@
   "tags": [
     "battaniye",
     "blanket",
-    "uyku"
+    "uyku",
+    "örtü"
   ],
   "variants": [
     {
-      "note": "coral-red blanket with wavy top edge and blue outline", "from": "harvested from .cache/cizim-drafts/chris-rock-affetme/ici-2.json",
+      "note": "coral-red blanket with wavy top edge and blue outline",
+      "from": "harvested from .cache/cizim-drafts/chris-rock-affetme/ici-2.json",
       "paths": [
         {
           "d": "M0 30 Q25 18 55 26 Q80 20 100 28 V100 H0Z",

@@ -2,7 +2,16 @@
  "name": "books",
  "category": "books",
  "tags": [
-  "books"
+  "library",
+  "reading",
+  "education",
+  "study",
+  "literature",
+  "bookshelf",
+  "book stack",
+  "reading list",
+  "kitaplar",
+  "kütüphane"
  ],
  "variants": [
   {

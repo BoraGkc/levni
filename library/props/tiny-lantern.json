@@ -3,11 +3,13 @@
   "category": "home",
   "tags": [
     "minik fener",
-    "tiny lantern"
+    "küçük fener",
+    "ışık"
   ],
   "variants": [
     {
-      "note": "small blue lantern with orange glow, tiny", "from": "harvested from .cache/cizim-drafts/lanterns-1-sezon/ici-2-alt.json",
+      "note": "small blue lantern with orange glow, tiny",
+      "from": "harvested from .cache/cizim-drafts/lanterns-1-sezon/ici-2-alt.json",
       "paths": [
         {
           "d": "M42 22 Q50 12 58 22",

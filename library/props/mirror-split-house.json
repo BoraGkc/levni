@@ -6,11 +6,14 @@
     "split",
     "double",
     "mirror",
-    "horror"
+    "horror",
+    "ayna",
+    "ev"
   ],
   "variants": [
     {
-      "note": "blue and orange house split down the middle, front view", "from": "harvested from .cache/cizim-drafts/other-mommy-jessica/kapak.json",
+      "note": "blue and orange house split down the middle, front view",
+      "from": "harvested from .cache/cizim-drafts/other-mommy-jessica/kapak.json",
       "paths": [
         {
           "d": "M16,46 L50,12 V46 Z",

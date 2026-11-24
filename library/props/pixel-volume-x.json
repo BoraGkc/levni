@@ -2,9 +2,14 @@
  "name": "pixel-volume-x",
  "category": "music",
  "tags": [
-  "volume x",
-  "pixel volume x",
-  "pixel"
+  "pixel",
+  "mute",
+  "silent",
+  "no sound",
+  "speaker off",
+  "sessiz",
+  "sesi kapat",
+  "ses yok"
  ],
  "variants": [
   {

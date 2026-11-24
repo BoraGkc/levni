@@ -2,7 +2,15 @@
  "name": "inbox",
  "category": "tech",
  "tags": [
-  "inbox"
+  "mail",
+  "email",
+  "tray",
+  "messages",
+  "received",
+  "incoming",
+  "mailbox",
+  "gelen kutusu",
+  "e-posta"
  ],
  "variants": [
   {

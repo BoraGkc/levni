@@ -1,12 +1,23 @@
 {
- "name": "sailboat-2",
+ "name": "sailboat-square-sail",
+ "aliases": [
+  "sailboat-2"
+ ],
  "category": "places",
  "tags": [
-  "sailboat 2"
+  "boat",
+  "sail",
+  "sailing",
+  "yacht",
+  "ship",
+  "sea",
+  "ocean",
+  "yelkenli",
+  "tekne"
  ],
  "variants": [
   {
-   "note": "sailboat 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "sailboat square sail, line icon redrawn from Tabler Icons (MIT, source name sailboat-2)",
    "paths": [
     {
      "d": "M8 83.6 a10.1 10.1 0 0 0 8.4 4.2 a10.1 10.1 0 0 0 8.4 -4.2 a10.1 10.1 0 0 1 8.4 -4.2 a10.1 10.1 0 0 1 8.4 4.2 a10.1 10.1 0 0 0 8.4 4.2 a10.1 10.1 0 0 0 8.4 -4.2 a10.1 10.1 0 0 1 8.4 -4.2 a10.1 10.1 0 0 1 8.4 4.2 a10.1 10.1 0 0 0 8.4 4.2 a10.1 10.1 0 0 0 8.4 -4.2",

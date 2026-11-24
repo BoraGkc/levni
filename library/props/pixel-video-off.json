@@ -2,9 +2,14 @@
  "name": "pixel-video-off",
  "category": "film",
  "tags": [
-  "video off",
-  "pixel video off",
-  "pixel"
+  "pixel",
+  "camera off",
+  "disabled",
+  "no video",
+  "crossed",
+  "video kapalı",
+  "kamera kapalı",
+  "devre dışı"
  ],
  "variants": [
   {

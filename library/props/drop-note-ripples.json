@@ -9,11 +9,13 @@
     "damlaya damlaya gol",
     "music note",
     "water drop",
-    "ripples"
+    "ripples",
+    "dalga"
   ],
   "variants": [
     {
-      "note": "coral drop forming the head of a blue music note", "from": "harvested from .cache/cizim-drafts/kyle-gordon-parodi/ici-2-alt.json",
+      "note": "coral drop forming the head of a blue music note",
+      "from": "harvested from .cache/cizim-drafts/kyle-gordon-parodi/ici-2-alt.json",
       "paths": [
         {
           "d": "M10,96 a40,9 0 1,0 80,0 a40,9 0 1,0 -80,0",

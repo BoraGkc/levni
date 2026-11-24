@@ -8,11 +8,14 @@
     "isi",
     "thermometer",
     "moon phases",
-    "cycle"
+    "cycle",
+    "ay",
+    "ateş"
   ],
   "variants": [
     {
-      "note": "orange thermometer with blue moon phase circles at the side", "from": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1-alt.json",
+      "note": "orange thermometer with blue moon phase circles at the side",
+      "from": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1-alt.json",
       "paths": [
         {
           "d": "M38,6 Q50,0 62,6 L62,64 a22,22 0 1,1 -24,0 Z",

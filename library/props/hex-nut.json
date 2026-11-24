@@ -1,12 +1,24 @@
 {
- "name": "settings-2",
+ "name": "hex-nut",
+ "aliases": [
+  "settings-2"
+ ],
  "category": "symbols",
  "tags": [
-  "settings 2"
+  "cog",
+  "gear",
+  "preferences",
+  "configuration",
+  "options",
+  "config",
+  "setup",
+  "control",
+  "ayarlar",
+  "düzenle"
  ],
  "variants": [
   {
-   "note": "settings 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "hex nut, line icon redrawn from Tabler Icons (MIT, source name settings-2)",
    "paths": [
     {
      "d": "M86.1 28.9 a9.3 9.3 0 0 1 4.7 8.2 v30.6 c0 3.4 -1.9 6.5 -4.9 8.2 l-28.3 17.9 a9.5 9.5 0 0 1 -9.2 0 l-28.3 -17.9 a9.3 9.3 0 0 1 -4.9 -8.2 v-30.6 c0 -3.4 1.9 -6.5 4.9 -8.2 l28.4 -16.7 a9.8 9.8 0 0 1 9.5 0 l28.4 16.7 h-0.1",

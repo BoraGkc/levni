@@ -2,9 +2,14 @@
  "name": "pixel-info-box",
  "category": "home",
  "tags": [
-  "info box",
-  "pixel info box",
-  "pixel"
+  "pixel",
+  "information",
+  "details",
+  "help",
+  "about",
+  "bilgi kutusu",
+  "bilgi",
+  "ayrıntılar"
  ],
  "variants": [
   {

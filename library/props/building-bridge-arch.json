@@ -1,12 +1,24 @@
 {
- "name": "building-bridge-2",
+ "name": "building-bridge-arch",
+ "aliases": [
+  "building-bridge-2"
+ ],
  "category": "places",
  "tags": [
-  "building bridge 2"
+  "river",
+  "crossing",
+  "overpass",
+  "architecture",
+  "construction",
+  "road",
+  "infrastructure",
+  "landmark",
+  "köprü",
+  "asma köprü"
  ],
  "variants": [
   {
-   "note": "building bridge 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "building bridge arch, line icon redrawn from Tabler Icons (MIT, source name building-bridge-2)",
    "paths": [
     {
      "d": "M27.8 32 h50.4 a8.4 8.4 0 0 1 8.4 8.4 v37.8 a4.2 4.2 0 0 1 -4.2 4.2 h-8.4 a4.2 4.2 0 0 1 -4.2 -4.2 v-8.4 a16.8 16.8 0 0 0 -33.6 0 v8.4 a4.2 4.2 0 0 1 -4.2 4.2 h-8.4 a4.2 4.2 0 0 1 -4.2 -4.2 v-37.8 a8.4 8.4 0 0 1 8.4 -8.4",

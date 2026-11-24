@@ -1,12 +1,24 @@
 {
- "name": "atom-2",
+ "name": "atom-dotted",
+ "aliases": [
+  "atom-2"
+ ],
  "category": "symbols",
  "tags": [
-  "atom 2"
+  "science",
+  "physics",
+  "chemistry",
+  "nuclear",
+  "molecule",
+  "electron",
+  "react",
+  "laboratory",
+  "atom",
+  "bilim"
  ],
  "variants": [
   {
-   "note": "atom 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "atom dotted, line icon redrawn from Tabler Icons (MIT, source name atom-2)",
    "paths": [
     {
      "d": "M40.4 53 a12.6 12.6 0 1 0 25.2 0 a12.6 12.6 0 1 0 -25.2 0",

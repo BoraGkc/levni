@@ -2,9 +2,14 @@
  "name": "pixel-ab-testing",
  "category": "tech",
  "tags": [
-  "ab testing",
-  "pixel ab testing",
-  "pixel"
+  "pixel",
+  "split test",
+  "experiment",
+  "variant",
+  "compare",
+  "deney",
+  "karşılaştırma",
+  "varyant"
  ],
  "variants": [
   {

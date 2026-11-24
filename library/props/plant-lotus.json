@@ -1,12 +1,24 @@
 {
- "name": "plant-2",
+ "name": "plant-lotus",
+ "aliases": [
+  "plant-2"
+ ],
  "category": "home",
  "tags": [
-  "plant 2"
+  "tree",
+  "bonsai",
+  "potted plant",
+  "houseplant",
+  "pot",
+  "leaf",
+  "green",
+  "nature",
+  "bitki",
+  "saksı"
  ],
  "variants": [
   {
-   "note": "plant 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "plant lotus, line icon redrawn from Tabler Icons (MIT, source name plant-2)",
    "paths": [
     {
      "d": "M8 37.4 a42 42 0 1 0 84 0",

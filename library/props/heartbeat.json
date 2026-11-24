@@ -2,7 +2,16 @@
  "name": "heartbeat",
  "category": "health",
  "tags": [
-  "heartbeat"
+  "pulse",
+  "heart rate",
+  "ekg",
+  "ecg",
+  "cardio",
+  "medical",
+  "health",
+  "vitals",
+  "kalp atışı",
+  "nabız"
  ],
  "variants": [
   {

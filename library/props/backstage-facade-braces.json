@@ -5,11 +5,14 @@
     "dekor arkasi",
     "sahte cephe",
     "megadoc",
-    "perde arkasi"
+    "perde arkasi",
+    "sahne arkası",
+    "tiyatro"
   ],
   "variants": [
     {
-      "note": "light blue building facade seen from behind, white wooden support braces, tiny red feet", "from": "harvested from .cache/cizim-drafts/streaming-platformlarinda-sakl/ici-2.json",
+      "note": "light blue building facade seen from behind, white wooden support braces, tiny red feet",
+      "from": "harvested from .cache/cizim-drafts/streaming-platformlarinda-sakl/ici-2.json",
       "paths": [
         {
           "d": "M14 96 L14 32 L26 32 L26 16 L40 16 L40 2 L62 2 L62 22 L76 22 L76 42 L88 42 L88 96 Z",

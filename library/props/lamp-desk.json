@@ -1,12 +1,23 @@
 {
- "name": "lamp-2",
+ "name": "lamp-desk",
+ "aliases": [
+  "lamp-2"
+ ],
  "category": "home",
  "tags": [
-  "lamp 2"
+  "light",
+  "desk lamp",
+  "lighting",
+  "bulb",
+  "room",
+  "furniture",
+  "decoration",
+  "lamba",
+  "aydınlatma"
  ],
  "variants": [
   {
-   "note": "lamp 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "lamp desk, line icon redrawn from Tabler Icons (MIT, source name lamp-2)",
    "paths": [
     {
      "d": "M57.2 61.4 c-9 -9 -9 -24.6 0 -33.6 c8.8 -8.8 24.5 -8.3 33.6 0 l-33.6 33.6",

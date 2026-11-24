@@ -2,7 +2,16 @@
  "name": "news",
  "category": "books",
  "tags": [
-  "news"
+  "newspaper",
+  "article",
+  "press",
+  "journal",
+  "headline",
+  "blog",
+  "magazine",
+  "feed",
+  "haber",
+  "gazete"
  ],
  "variants": [
   {

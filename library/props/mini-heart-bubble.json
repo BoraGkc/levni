@@ -1,7 +1,7 @@
 {
   "name": "mini-heart-bubble",
   "category": "tech",
-  "tags": [],
+  "tags": ["love", "like", "chat", "comment", "beğeni", "sevgi", "yorum", "kalp"],
   "variants": [
     {
       "note": "speech bubble with orange heart, blue outline", "from": "harvested from .cache/cizim-drafts/kopegi-zor-sahiplenmek/ici-1-alt.json",

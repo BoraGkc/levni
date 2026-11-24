@@ -1,12 +1,23 @@
 {
- "name": "map-2",
+ "name": "map-folded-pin",
+ "aliases": [
+  "map-2"
+ ],
  "category": "places",
  "tags": [
-  "map 2"
+  "navigation",
+  "location",
+  "pin",
+  "marker",
+  "travel",
+  "geography",
+  "directions",
+  "harita",
+  "yol"
  ],
  "variants": [
   {
-   "note": "map 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "map folded pin, line icon redrawn from Tabler Icons (MIT, source name map-2)",
    "paths": [
     {
      "d": "M91.3 87.1 a12.6 12.6 0 1 0 -17.8 0 c1.8 1.8 4.7 4.4 8.9 7.9 c4.4 -3.7 7.4 -6.4 8.9 -7.9",

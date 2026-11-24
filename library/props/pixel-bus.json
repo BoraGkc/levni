@@ -2,9 +2,14 @@
  "name": "pixel-bus",
  "category": "places",
  "tags": [
-  "bus",
-  "pixel bus",
-  "pixel"
+  "pixel",
+  "transport",
+  "public transport",
+  "vehicle",
+  "commute",
+  "otobüs",
+  "ulaşım",
+  "toplu taşıma"
  ],
  "variants": [
   {

@@ -2,9 +2,14 @@
  "name": "pixel-cellular-signal-1",
  "category": "tech",
  "tags": [
-  "cellular signal 1",
-  "pixel cellular signal 1",
-  "pixel"
+  "pixel",
+  "weak signal",
+  "reception",
+  "network",
+  "bars",
+  "zayıf sinyal",
+  "şebeke",
+  "çekim gücü"
  ],
  "variants": [
   {

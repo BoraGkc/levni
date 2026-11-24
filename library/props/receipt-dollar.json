@@ -1,12 +1,24 @@
 {
- "name": "receipt-2",
+ "name": "receipt-dollar",
+ "aliases": [
+  "receipt-2"
+ ],
  "category": "money",
  "tags": [
-  "receipt 2"
+  "bill",
+  "invoice",
+  "payment",
+  "purchase",
+  "transaction",
+  "money",
+  "shopping",
+  "paper",
+  "fiş",
+  "makbuz"
  ],
  "variants": [
   {
-   "note": "receipt 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "receipt dollar, line icon redrawn from Tabler Icons (MIT, source name receipt-2)",
    "paths": [
     {
      "d": "M23.6 90.8 v-67.2 a8.4 8.4 0 0 1 8.4 -8.4 h42 a8.4 8.4 0 0 1 8.4 8.4 v67.2 l-12.6 -8.4 l-8.4 8.4 l-8.4 -8.4 l-8.4 8.4 l-8.4 -8.4 l-12.6 8.4",

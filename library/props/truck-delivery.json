@@ -2,7 +2,14 @@
  "name": "truck-delivery",
  "category": "money",
  "tags": [
-  "truck delivery"
+  "shipping",
+  "lorry",
+  "shipment",
+  "order",
+  "courier",
+  "dispatch",
+  "teslimat kamyonu",
+  "kargo"
  ],
  "variants": [
   {

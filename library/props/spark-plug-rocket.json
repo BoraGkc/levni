@@ -5,11 +5,14 @@
     "buji roket",
     "kivilcim",
     "tamirci",
-    "cesaret"
+    "cesaret",
+    "buji",
+    "roket"
   ],
   "variants": [
     {
-      "note": "spark plug body with orange rocket fins and flame, upright", "from": "harvested from .cache/cizim-drafts/stunt-driver-roketli/ici-1.json",
+      "note": "spark plug body with orange rocket fins and flame, upright",
+      "from": "harvested from .cache/cizim-drafts/stunt-driver-roketli/ici-1.json",
       "paths": [
         {
           "d": "M40 80 Q34 92 44 100 Q46 92 50 96 Q54 90 56 100 Q66 92 60 80 Z",

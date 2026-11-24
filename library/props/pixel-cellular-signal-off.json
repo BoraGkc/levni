@@ -2,9 +2,14 @@
  "name": "pixel-cellular-signal-off",
  "category": "tech",
  "tags": [
-  "cellular signal off",
-  "pixel cellular signal off",
-  "pixel"
+  "pixel",
+  "no service",
+  "airplane mode",
+  "reception",
+  "disconnected",
+  "sinyal kapalı",
+  "hizmet yok",
+  "şebeke"
  ],
  "variants": [
   {

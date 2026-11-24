@@ -2,7 +2,16 @@
  "name": "bookmarks",
  "category": "books",
  "tags": [
-  "bookmarks"
+  "save",
+  "saved",
+  "favorite",
+  "read later",
+  "tag",
+  "marker",
+  "collection",
+  "multiple",
+  "yer imleri",
+  "kaydedilenler"
  ],
  "variants": [
   {

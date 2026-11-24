@@ -2,7 +2,15 @@
  "name": "atom",
  "category": "books",
  "tags": [
-  "atom"
+  "science",
+  "physics",
+  "chemistry",
+  "nuclear",
+  "molecule",
+  "electron",
+  "react",
+  "laboratory",
+  "fizik"
  ],
  "variants": [
   {

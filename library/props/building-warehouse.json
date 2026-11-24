@@ -2,7 +2,15 @@
  "name": "building-warehouse",
  "category": "places",
  "tags": [
-  "building warehouse"
+  "storage",
+  "inventory",
+  "logistics",
+  "depot",
+  "stock",
+  "distribution",
+  "storehouse",
+  "depo",
+  "ambar"
  ],
  "variants": [
   {

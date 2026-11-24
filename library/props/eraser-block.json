@@ -3,11 +3,13 @@
   "category": "books",
   "tags": [
     "silgi",
-    "eraser"
+    "eraser",
+    "silmek"
   ],
   "variants": [
     {
-      "note": "rectangular eraser, white half and light blue half, flat view", "from": "harvested from .cache/cizim-drafts/maddie-kowalski-burnerverse/ici-2.json",
+      "note": "rectangular eraser, white half and light blue half, flat view",
+      "from": "harvested from .cache/cizim-drafts/maddie-kowalski-burnerverse/ici-2.json",
       "paths": [
         {
           "d": "M6 30 H94 V76 H6Z",

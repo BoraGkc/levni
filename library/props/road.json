@@ -2,7 +2,15 @@
  "name": "road",
  "category": "places",
  "tags": [
-  "road"
+  "street",
+  "highway",
+  "route",
+  "lane",
+  "travel",
+  "traffic",
+  "way",
+  "yol",
+  "asfalt"
  ],
  "variants": [
   {

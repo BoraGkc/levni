@@ -2,9 +2,14 @@
  "name": "pixel-close-box",
  "category": "home",
  "tags": [
-  "close box",
-  "pixel close box",
-  "pixel"
+  "pixel",
+  "dismiss",
+  "cancel",
+  "x",
+  "square",
+  "kapat",
+  "iptal",
+  "kutu"
  ],
  "variants": [
   {

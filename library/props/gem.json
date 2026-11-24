@@ -2,12 +2,14 @@
   "name": "gem",
   "category": "money",
   "tags": [
-    "gem",
-    "cevher"
+    "cevher",
+    "mücevher",
+    "elmas"
   ],
   "variants": [
     {
-      "note": "orange faceted gem diamond with blue outline", "from": "harvested from .cache/cizim-drafts/streaming-platformlarinda-sakl/kapak.json",
+      "note": "orange faceted gem diamond with blue outline",
+      "from": "harvested from .cache/cizim-drafts/streaming-platformlarinda-sakl/kapak.json",
       "paths": [
         {
           "d": "M20 38 L35 18 H65 L80 38 L50 82 Z",

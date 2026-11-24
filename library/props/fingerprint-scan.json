@@ -2,7 +2,16 @@
  "name": "fingerprint-scan",
  "category": "tech",
  "tags": [
-  "fingerprint scan"
+  "touch id",
+  "biometric",
+  "scanner",
+  "authentication",
+  "identity",
+  "security",
+  "unlock",
+  "verify",
+  "parmak izi tarama",
+  "güvenlik"
  ],
  "variants": [
   {

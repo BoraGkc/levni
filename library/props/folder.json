@@ -2,7 +2,16 @@
  "name": "folder",
  "category": "books",
  "tags": [
-  "folder"
+  "directory",
+  "dir",
+  "files",
+  "archive",
+  "project",
+  "category",
+  "organize",
+  "storage",
+  "klasör",
+  "dosya"
  ],
  "variants": [
   {

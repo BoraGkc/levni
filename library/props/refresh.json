@@ -2,7 +2,16 @@
  "name": "refresh",
  "category": "symbols",
  "tags": [
-  "refresh"
+  "reload",
+  "sync",
+  "update",
+  "reset",
+  "arrows",
+  "loader",
+  "spinner",
+  "restart",
+  "yenile",
+  "güncelle"
  ],
  "variants": [
   {

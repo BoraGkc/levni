@@ -4,11 +4,14 @@
   "tags": [
     "varil roket",
     "tamirci yapimi roket",
-    "nehir atlayisi"
+    "nehir atlayisi",
+    "petrol varili",
+    "roket"
   ],
   "variants": [
     {
-      "note": "blue and orange rocket made from an oil drum", "from": "harvested from .cache/cizim-drafts/stunt-driver-roketli/ici-2.json",
+      "note": "blue and orange rocket made from an oil drum",
+      "from": "harvested from .cache/cizim-drafts/stunt-driver-roketli/ici-2.json",
       "paths": [
         {
           "d": "M42 84 Q36 94 44 102 Q47 94 50 99 Q53 94 56 102 Q64 94 58 84 Z",

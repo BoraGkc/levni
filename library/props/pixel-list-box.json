@@ -2,9 +2,14 @@
  "name": "pixel-list-box",
  "category": "books",
  "tags": [
-  "list box",
-  "pixel list box",
-  "pixel"
+  "pixel",
+  "items",
+  "menu",
+  "options",
+  "select",
+  "liste kutusu",
+  "öğeler",
+  "seçenekler"
  ],
  "variants": [
   {

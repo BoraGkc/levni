@@ -2,9 +2,14 @@
  "name": "pixel-loader",
  "category": "symbols",
  "tags": [
-  "loader",
-  "pixel loader",
-  "pixel"
+  "pixel",
+  "loading",
+  "spinner",
+  "wait",
+  "progress",
+  "yükleniyor",
+  "bekle",
+  "ilerleme"
  ],
  "variants": [
   {

@@ -2,9 +2,14 @@
  "name": "pixel-dollar",
  "category": "money",
  "tags": [
-  "dollar",
-  "pixel dollar",
-  "pixel"
+  "pixel",
+  "money",
+  "currency",
+  "usd",
+  "price",
+  "dolar",
+  "para",
+  "fiyat"
  ],
  "variants": [
   {

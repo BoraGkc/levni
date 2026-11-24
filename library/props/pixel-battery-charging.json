@@ -2,9 +2,14 @@
  "name": "pixel-battery-charging",
  "category": "home",
  "tags": [
-  "battery charging",
-  "pixel battery charging",
-  "pixel"
+  "pixel",
+  "charge",
+  "power",
+  "plug",
+  "energy",
+  "pil",
+  "şarj oluyor",
+  "enerji"
  ],
  "variants": [
   {

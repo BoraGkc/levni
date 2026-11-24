@@ -1,12 +1,24 @@
 {
- "name": "terminal-2",
+ "name": "terminal-dark",
+ "aliases": [
+  "terminal-2"
+ ],
  "category": "tech",
  "tags": [
-  "terminal 2"
+  "console",
+  "command line",
+  "cli",
+  "shell",
+  "prompt",
+  "bash",
+  "cmd",
+  "command",
+  "terminal",
+  "komut satırı"
  ],
  "variants": [
   {
-   "note": "terminal 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "terminal dark, line icon redrawn from Tabler Icons (MIT, source name terminal-2)",
    "paths": [
     {
      "d": "M15.2 27.8 a8.4 8.4 0 0 1 8.4 -8.4 h58.8 a8.4 8.4 0 0 1 8.4 8.4 v50.4 a8.4 8.4 0 0 1 -8.4 8.4 h-58.8 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -50.4",

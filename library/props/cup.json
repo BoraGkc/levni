@@ -2,7 +2,15 @@
  "name": "cup",
  "category": "home",
  "tags": [
-  "cup"
+  "mug",
+  "drink",
+  "tea",
+  "coffee",
+  "beverage",
+  "glass",
+  "water",
+  "fincan",
+  "bardak"
  ],
  "variants": [
   {

@@ -2,9 +2,14 @@
  "name": "pixel-message-clock",
  "category": "home",
  "tags": [
-  "message clock",
-  "pixel message clock",
-  "pixel"
+  "pixel",
+  "scheduled message",
+  "pending chat",
+  "delayed",
+  "time",
+  "mesaj",
+  "zamanlı",
+  "bekleyen"
  ],
  "variants": [
   {

@@ -2,9 +2,13 @@
  "name": "pixel-euro",
  "category": "money",
  "tags": [
-  "euro",
-  "pixel euro",
-  "pixel"
+  "pixel",
+  "money",
+  "currency",
+  "eur",
+  "price",
+  "para",
+  "fiyat"
  ],
  "variants": [
   {

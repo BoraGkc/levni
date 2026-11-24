@@ -2,7 +2,17 @@
  "name": "circle-x",
  "category": "symbols",
  "tags": [
-  "circle x"
+  "close",
+  "cancel",
+  "remove",
+  "delete",
+  "error",
+  "clear",
+  "dismiss",
+  "round",
+  "iptal",
+  "hata",
+  "kapat"
  ],
  "variants": [
   {

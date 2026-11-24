@@ -1,12 +1,24 @@
 {
- "name": "armchair-2",
+ "name": "armchair-padded",
+ "aliases": [
+  "armchair-2"
+ ],
  "category": "home",
  "tags": [
-  "armchair 2"
+  "chair",
+  "furniture",
+  "seat",
+  "sofa",
+  "couch",
+  "living room",
+  "interior",
+  "home",
+  "koltuk",
+  "berjer"
  ],
  "variants": [
   {
-   "note": "armchair 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "armchair padded, line icon redrawn from Tabler Icons (MIT, source name armchair-2)",
    "paths": [
     {
      "d": "M20.6 41.6 v-16.8 a12.6 12.6 0 0 1 12.6 -12.6 h33.6 a12.6 12.6 0 0 1 12.6 12.6 v16.8",

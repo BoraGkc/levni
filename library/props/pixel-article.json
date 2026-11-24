@@ -2,9 +2,14 @@
  "name": "pixel-article",
  "category": "books",
  "tags": [
-  "article",
-  "pixel article",
-  "pixel"
+  "pixel",
+  "news",
+  "post",
+  "blog",
+  "document",
+  "makale",
+  "haber",
+  "yazı"
  ],
  "variants": [
   {

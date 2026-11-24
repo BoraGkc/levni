@@ -2,7 +2,15 @@
  "name": "ice-cream",
  "category": "food",
  "tags": [
-  "ice cream"
+  "gelato",
+  "dessert",
+  "cone",
+  "frozen",
+  "sweet",
+  "popsicle",
+  "summer",
+  "dondurma",
+  "tatlı"
  ],
  "variants": [
   {

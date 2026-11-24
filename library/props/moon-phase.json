@@ -5,8 +5,8 @@
   "ay evresi",
   "dolunay",
   "hilal",
-  "moon phase",
-  "cycle"
+  "cycle",
+  "ay"
  ],
  "variants": [
   {
@@ -94,7 +94,8 @@
    "from": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json"
   },
   {
-   "note": "empty white circle outline, new moon", "from": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json",
+   "note": "empty white circle outline, new moon",
+   "from": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1.json",
    "paths": [
     {
      "d": "M10 50 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0",

@@ -2,9 +2,14 @@
  "name": "pixel-move",
  "category": "symbols",
  "tags": [
-  "move",
-  "pixel move",
-  "pixel"
+  "pixel",
+  "drag",
+  "reposition",
+  "four arrows",
+  "pan",
+  "taşı",
+  "sürükle",
+  "konumlandır"
  ],
  "variants": [
   {

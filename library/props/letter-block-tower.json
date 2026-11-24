@@ -10,11 +10,13 @@
     "tower",
     "blocks",
     "letters",
-    "remove"
+    "remove",
+    "harf blokları"
   ],
   "variants": [
     {
-      "note": "stack of blue letter blocks tower with orange chat bubble", "from": "harvested from .cache/cizim-drafts/openai-arastirmacisi-llm/ici-1.json",
+      "note": "stack of blue letter blocks tower with orange chat bubble",
+      "from": "harvested from .cache/cizim-drafts/openai-arastirmacisi-llm/ici-1.json",
       "paths": [
         {
           "d": "M38 53 L62.5 53 L62.5 61.5 L38 61.5 Z",

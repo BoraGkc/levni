@@ -3,11 +3,14 @@
   "category": "nature",
   "tags": [
     "arka plan cam agaci",
-    "background fir tree"
+    "background fir tree",
+    "çam ağacı",
+    "orman"
   ],
   "variants": [
     {
-      "note": "fir tree filled in light blue, front view", "from": "harvested from .cache/cizim-drafts/kyle-maclachlan-anilari/ici-1.json",
+      "note": "fir tree filled in light blue, front view",
+      "from": "harvested from .cache/cizim-drafts/kyle-maclachlan-anilari/ici-1.json",
       "paths": [
         {
           "d": "M45 78 L55 78 L55 98 L45 98Z",

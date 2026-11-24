@@ -1,12 +1,23 @@
 {
- "name": "mouse-2",
+ "name": "mouse-buttons",
+ "aliases": [
+  "mouse-2"
+ ],
  "category": "tech",
  "tags": [
-  "mouse 2"
+  "computer mouse",
+  "pointer",
+  "click",
+  "cursor",
+  "peripheral",
+  "device",
+  "scroll",
+  "fare",
+  "bilgisayar faresi"
  ],
  "variants": [
   {
-   "note": "mouse 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "mouse buttons, line icon redrawn from Tabler Icons (MIT, source name mouse-2)",
    "paths": [
     {
      "d": "M27.8 32 a16.8 16.8 0 0 1 16.8 -16.8 h16.8 a16.8 16.8 0 0 1 16.8 16.8 v42 a16.8 16.8 0 0 1 -16.8 16.8 h-16.8 a16.8 16.8 0 0 1 -16.8 -16.8 l0 -42",

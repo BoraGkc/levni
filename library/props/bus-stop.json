@@ -2,7 +2,14 @@
  "name": "bus-stop",
  "category": "places",
  "tags": [
-  "bus stop"
+  "station",
+  "public transport",
+  "transit",
+  "transportation",
+  "bus station",
+  "shelter",
+  "otobüs durağı",
+  "durak"
  ],
  "variants": [
   {

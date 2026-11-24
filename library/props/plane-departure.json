@@ -2,7 +2,16 @@
  "name": "plane-departure",
  "category": "places",
  "tags": [
-  "plane departure"
+  "takeoff",
+  "take off",
+  "departures",
+  "airplane",
+  "flight",
+  "airport",
+  "travel",
+  "aircraft",
+  "uçak kalkış",
+  "havalanma"
  ],
  "variants": [
   {

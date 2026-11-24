@@ -2,9 +2,14 @@
  "name": "pixel-map",
  "category": "places",
  "tags": [
-  "map",
-  "pixel map",
-  "pixel"
+  "pixel",
+  "navigation",
+  "location",
+  "atlas",
+  "directions",
+  "harita",
+  "konum",
+  "yol tarifi"
  ],
  "variants": [
   {

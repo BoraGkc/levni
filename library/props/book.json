@@ -5,12 +5,19 @@
   "kitap",
   "roman",
   "okumak",
-  "book",
-  "read"
+  "read",
+  "okuma"
  ],
  "variants": [
   {
-   "slots": { "cover": [32, 13, 42, 68] },
+   "slots": {
+    "cover": [
+     32,
+     13,
+     42,
+     68
+    ]
+   },
    "note": "closed book, front cover, blue cover offset",
    "paths": [
     {

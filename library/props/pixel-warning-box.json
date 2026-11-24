@@ -2,9 +2,14 @@
  "name": "pixel-warning-box",
  "category": "home",
  "tags": [
-  "warning box",
-  "pixel warning box",
-  "pixel"
+  "pixel",
+  "caution",
+  "alert",
+  "danger",
+  "attention",
+  "uyarı kutusu",
+  "dikkat",
+  "tehlike"
  ],
  "variants": [
   {

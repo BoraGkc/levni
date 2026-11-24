@@ -2,7 +2,14 @@
  "name": "car-garage",
  "category": "places",
  "tags": [
-  "car garage"
+  "parking",
+  "car park",
+  "carport",
+  "auto repair",
+  "car service",
+  "vehicle",
+  "garaj",
+  "araba"
  ],
  "variants": [
   {

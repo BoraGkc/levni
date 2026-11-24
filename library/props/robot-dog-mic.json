@@ -5,11 +5,14 @@
     "microphone",
     "robot dog",
     "quadruped",
-    "comedy"
+    "comedy",
+    "robot köpek",
+    "mikrofon"
   ],
   "variants": [
     {
-      "note": "robot dog with legs and a microphone ball head", "from": "harvested from .cache/cizim-drafts/patti-harrison-teknoloji/kapak.json",
+      "note": "robot dog with legs and a microphone ball head",
+      "from": "harvested from .cache/cizim-drafts/patti-harrison-teknoloji/kapak.json",
       "paths": [
         {
           "d": "M44,40 H56 V54 H44 Z",

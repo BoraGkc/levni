@@ -4,14 +4,26 @@
  "tags": [
   "sehpa",
   "resim sehpasi",
-  "easel",
   "tuval",
   "sanat",
-  "canvas"
+  "canvas",
+  "şövale",
+  "resim"
  ],
  "variants": [
   {
-   "slots": { "canvas": [24, 23, 54, 41], "top": [50, 9] },
+   "slots": {
+    "canvas": [
+     24,
+     23,
+     54,
+     41
+    ],
+    "top": [
+     50,
+     9
+    ]
+   },
    "note": "easel with abstract canvas, coral blob and blue line",
    "paths": [
     {

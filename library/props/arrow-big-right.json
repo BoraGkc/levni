@@ -2,7 +2,16 @@
  "name": "arrow-big-right",
  "category": "symbols",
  "tags": [
-  "arrow big right"
+  "large",
+  "bold",
+  "thick",
+  "direction",
+  "east",
+  "next",
+  "forward",
+  "pointer",
+  "sağ ok",
+  "ileri"
  ],
  "variants": [
   {

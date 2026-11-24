@@ -5,11 +5,14 @@
     "film reel",
     "mountains",
     "documentary",
-    "andes"
+    "andes",
+    "dağ",
+    "film makarası"
   ],
   "variants": [
     {
-      "note": "blue circular badge with mountains and stars, reel shape", "from": "harvested from .cache/cizim-drafts/patricio-guzman-silin/kapak-3d.json",
+      "note": "blue circular badge with mountains and stars, reel shape",
+      "from": "harvested from .cache/cizim-drafts/patricio-guzman-silin/kapak-3d.json",
       "paths": [
         {
           "d": "M4,50 a46,46 0 1,0 92,0 a46,46 0 1,0 -92,0",

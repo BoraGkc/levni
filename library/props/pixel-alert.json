@@ -2,9 +2,14 @@
  "name": "pixel-alert",
  "category": "symbols",
  "tags": [
-  "alert",
-  "pixel alert",
-  "pixel"
+  "pixel",
+  "warning",
+  "notification",
+  "attention",
+  "danger",
+  "uyarı",
+  "dikkat",
+  "bildirim"
  ],
  "variants": [
   {

@@ -1,12 +1,24 @@
 {
- "name": "device-gamepad-2",
+ "name": "gamepad-rounded",
+ "aliases": [
+  "device-gamepad-2"
+ ],
  "category": "tech",
  "tags": [
-  "device gamepad 2"
+  "controller",
+  "game controller",
+  "gaming",
+  "joystick",
+  "joypad",
+  "console",
+  "play",
+  "video game",
+  "oyun kolu",
+  "oyun"
  ],
  "variants": [
   {
-   "note": "device gamepad 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "gamepad rounded, line icon redrawn from Tabler Icons (MIT, source name device-gamepad-2)",
    "paths": [
     {
      "d": "M53 23.6 h14.7 a21 21 0 0 1 0 42 h-23.1 l-16.9 17.8 a9.7 9.7 0 0 1 -16.5 -8.5 l6.9 -34.3 a21 21 0 0 1 20.6 -16.9 h14.3",

@@ -2,7 +2,15 @@
  "name": "database-export",
  "category": "tech",
  "tags": [
-  "database export"
+  "backup",
+  "dump",
+  "download",
+  "db",
+  "data",
+  "storage",
+  "sql",
+  "veritabanı dışa aktar",
+  "veri"
  ],
  "variants": [
   {

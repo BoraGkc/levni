@@ -2,9 +2,14 @@
  "name": "pixel-battery",
  "category": "home",
  "tags": [
-  "battery",
-  "pixel battery",
-  "pixel"
+  "pixel",
+  "power",
+  "charge",
+  "energy",
+  "level",
+  "pil",
+  "şarj",
+  "enerji"
  ],
  "variants": [
   {

@@ -3,12 +3,14 @@
   "category": "symbols",
   "tags": [
     "kalp kus kafesi",
-    "heart birdcage",
-    "ask ozgurluk"
+    "ask ozgurluk",
+    "kalp",
+    "kuş kafesi"
   ],
   "variants": [
     {
-      "note": "light-blue heart-shaped hot air balloon with orange bird flying", "from": "harvested from .cache/cizim-drafts/la-bola-negra-2/ici-1.json",
+      "note": "light-blue heart-shaped hot air balloon with orange bird flying",
+      "from": "harvested from .cache/cizim-drafts/la-bola-negra-2/ici-1.json",
       "paths": [
         {
           "d": "M50 92 C6 62 0 28 24 20 C38 16 48 24 50 32 C52 24 62 16 76 20 C100 28 94 62 50 92 Z",

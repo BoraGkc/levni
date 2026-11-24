@@ -2,9 +2,14 @@
  "name": "pixel-scroll-horizontal",
  "category": "symbols",
  "tags": [
-  "scroll horizontal",
-  "pixel scroll horizontal",
-  "pixel"
+  "pixel",
+  "swipe sideways",
+  "pan",
+  "left right",
+  "navigate",
+  "yatay kaydır",
+  "kaydırma",
+  "yan"
  ],
  "variants": [
   {

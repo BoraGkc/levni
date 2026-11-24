@@ -1,12 +1,24 @@
 {
- "name": "puzzle-2",
+ "name": "puzzle-square",
+ "aliases": [
+  "puzzle-2"
+ ],
  "category": "sport",
  "tags": [
-  "puzzle 2"
+  "jigsaw",
+  "extension",
+  "plugin",
+  "add on",
+  "addon",
+  "piece",
+  "solution",
+  "game",
+  "yapboz",
+  "bulmaca"
  ],
  "variants": [
   {
-   "note": "puzzle 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "puzzle square, line icon redrawn from Tabler Icons (MIT, source name puzzle-2)",
    "paths": [
     {
      "d": "M19.4 27.8 a8.4 8.4 0 0 1 8.4 -8.4 h50.4 a8.4 8.4 0 0 1 8.4 8.4 v50.4 a8.4 8.4 0 0 1 -8.4 8.4 h-50.4 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -50.4",

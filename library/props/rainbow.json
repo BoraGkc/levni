@@ -2,7 +2,6 @@
  "name": "rainbow",
  "category": "nature",
  "tags": [
-  "rainbow",
   "gökkuşağı",
   "arc",
   "weather",
@@ -12,7 +11,7 @@
  ],
  "variants": [
   {
-   "note": "Three nested arcs in coral, mustard and blue rising from two small clouds.",
+   "note": "Three nested arcs in coral, mustard and blue rising from two small clouds",
    "paths": [
     {
      "d": "M14 62 A36 36 0 0 1 86 62",

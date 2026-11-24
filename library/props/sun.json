@@ -2,7 +2,6 @@
  "name": "sun",
  "category": "nature",
  "tags": [
-  "sun",
   "güneş",
   "sunny",
   "güneşli",
@@ -13,7 +12,7 @@
  ],
  "variants": [
   {
-   "note": "Round mustard sun with eight short rays.",
+   "note": "Round mustard sun with eight short rays",
    "paths": [
     {
      "d": "M30 50 A20 20 0 1 1 70 50 A20 20 0 1 1 30 50 Z",
@@ -29,7 +28,7 @@
    ]
   },
   {
-   "note": "Sun peeking out half behind a paper cloud.",
+   "note": "Sun peeking out half behind a paper cloud",
    "paths": [
     {
      "d": "M22 40 A16 16 0 1 1 54 40 A16 16 0 1 1 22 40 Z",

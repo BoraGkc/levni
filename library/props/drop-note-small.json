@@ -1,7 +1,7 @@
 {
   "name": "drop-note-small",
   "category": "music",
-  "tags": [],
+  "tags": ["music", "melody", "drop", "müzik", "nota", "damla"],
   "variants": [
     {
       "note": "smaller coral drop with blue music note stem and flag", "from": "harvested from .cache/cizim-drafts/kyle-gordon-parodi/ici-2-alt.json",

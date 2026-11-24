@@ -2,7 +2,16 @@
  "name": "fridge",
  "category": "home",
  "tags": [
-  "fridge"
+  "refrigerator",
+  "freezer",
+  "kitchen",
+  "appliance",
+  "cold",
+  "food",
+  "cooler",
+  "home",
+  "buzdolabı",
+  "mutfak"
  ],
  "variants": [
   {

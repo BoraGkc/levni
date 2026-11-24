@@ -3,11 +3,14 @@
   "category": "home",
   "tags": [
     "dev ingiliz anahtari tamir",
-    "giant wrench repair"
+    "giant wrench repair",
+    "dev ingiliz anahtarı",
+    "anahtar"
   ],
   "variants": [
     {
-      "note": "orange giant wrench lying horizontal with closed blue ring end", "from": "harvested from .cache/cizim-drafts/lanterns-1-sezon/ici-2-alt.json",
+      "note": "orange giant wrench lying horizontal with closed blue ring end",
+      "from": "harvested from .cache/cizim-drafts/lanterns-1-sezon/ici-2-alt.json",
       "paths": [
         {
           "d": "M-6 42 L66 42 L66 58 L-6 58 Z",
@@ -42,7 +45,8 @@
       ]
     },
     {
-      "note": "orange giant wrench horizontal with open jaw and ring end", "from": "harvested from .cache/cizim-drafts/lanterns-1-sezon/ici-2.json",
+      "note": "orange giant wrench horizontal with open jaw and ring end",
+      "from": "harvested from .cache/cizim-drafts/lanterns-1-sezon/ici-2.json",
       "paths": [
         {
           "d": "M-6 42 L66 42 L66 58 L-6 58 Z",

@@ -2,7 +2,16 @@
  "name": "hand-click",
  "category": "home",
  "tags": [
-  "hand click"
+  "tap",
+  "touch",
+  "pointer",
+  "cursor",
+  "finger",
+  "press",
+  "gesture",
+  "select",
+  "tıklama eli",
+  "dokun"
  ],
  "variants": [
   {

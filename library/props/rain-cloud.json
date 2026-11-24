@@ -2,7 +2,6 @@
  "name": "rain-cloud",
  "category": "nature",
  "tags": [
-  "rain cloud",
   "yağmur bulutu",
   "rain",
   "yağmur",
@@ -23,7 +22,7 @@
  ],
  "variants": [
   {
-   "note": "Light blue cloud with four slanted rain drops.",
+   "note": "Light blue cloud with four slanted rain drops",
    "paths": [
     {
      "d": "M24 56 Q8 56 8 44 Q8 34 22 32 Q22 16 40 16 Q50 6 64 16 Q72 12 80 22 Q92 24 92 40 Q92 56 76 56 Z",

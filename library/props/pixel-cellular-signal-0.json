@@ -2,9 +2,14 @@
  "name": "pixel-cellular-signal-0",
  "category": "tech",
  "tags": [
-  "cellular signal 0",
-  "pixel cellular signal 0",
-  "pixel"
+  "pixel",
+  "no signal",
+  "reception",
+  "network",
+  "bars",
+  "sinyal yok",
+  "şebeke",
+  "çekim gücü"
  ],
  "variants": [
   {

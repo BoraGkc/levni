@@ -2,9 +2,14 @@
  "name": "pixel-inbox",
  "category": "home",
  "tags": [
-  "inbox",
-  "pixel inbox",
-  "pixel"
+  "pixel",
+  "mail",
+  "messages",
+  "received",
+  "tray",
+  "gelen kutusu",
+  "mesajlar",
+  "posta"
  ],
  "variants": [
   {

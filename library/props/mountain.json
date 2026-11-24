@@ -2,7 +2,6 @@
  "name": "mountain",
  "category": "nature",
  "tags": [
-  "mountain",
   "dağ",
   "peak",
   "zirve",
@@ -14,7 +13,7 @@
  ],
  "variants": [
   {
-   "note": "Two peaks, a large blue one and a smaller pale one, both with snow caps.",
+   "note": "Two peaks, a large blue one and a smaller pale one, both with snow caps",
    "paths": [
     {
      "d": "M52 84 L72 42 L92 84 Z",

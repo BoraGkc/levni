@@ -1,12 +1,24 @@
 {
- "name": "tools-kitchen-2",
+ "name": "fork-knife",
+ "aliases": [
+  "tools-kitchen-2"
+ ],
  "category": "home",
  "tags": [
-  "tools kitchen 2"
+  "cutlery",
+  "utensils",
+  "fork",
+  "knife",
+  "restaurant",
+  "food",
+  "dining",
+  "eat",
+  "mutfak aletleri",
+  "çatal kaşık"
  ],
  "variants": [
   {
-   "note": "tools kitchen 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "fork knife, line icon redrawn from Tabler Icons (MIT, source name tools-kitchen-2)",
    "paths": [
     {
      "d": "M79.4 12.2 v50.4 h-21 c-0.1 -15.5 0.8 -31.1 21 -50.4 m0 50.4 v25.2 h-4.2 v-12.6 m-42 -58.8 v71.4 m-12.6 -71.4 v12.6 a12.6 12.6 0 1 0 25.2 0 v-12.6",

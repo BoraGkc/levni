@@ -2,7 +2,16 @@
  "name": "article",
  "category": "books",
  "tags": [
-  "article"
+  "post",
+  "blog",
+  "news",
+  "document",
+  "text",
+  "page",
+  "story",
+  "newspaper",
+  "makale",
+  "yazı"
  ],
  "variants": [
   {

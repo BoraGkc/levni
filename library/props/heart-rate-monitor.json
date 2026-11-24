@@ -2,7 +2,16 @@
  "name": "heart-rate-monitor",
  "category": "health",
  "tags": [
-  "heart rate monitor"
+  "heart rate",
+  "ekg",
+  "ecg",
+  "pulse",
+  "cardiogram",
+  "medical",
+  "health",
+  "hospital",
+  "kalp monitörü",
+  "nabız"
  ],
  "variants": [
   {

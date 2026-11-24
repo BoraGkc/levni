@@ -2,9 +2,14 @@
  "name": "pixel-chevron-left",
  "category": "symbols",
  "tags": [
-  "chevron left",
-  "pixel chevron left",
-  "pixel"
+  "pixel",
+  "back",
+  "previous",
+  "caret",
+  "arrow",
+  "sol",
+  "geri",
+  "ok"
  ],
  "variants": [
   {

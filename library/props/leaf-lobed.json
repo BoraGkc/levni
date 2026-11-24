@@ -1,12 +1,24 @@
 {
- "name": "leaf-2",
+ "name": "leaf-lobed",
+ "aliases": [
+  "leaf-2"
+ ],
  "category": "nature",
  "tags": [
-  "leaf 2"
+  "nature",
+  "plant",
+  "eco",
+  "green",
+  "ecology",
+  "environment",
+  "organic",
+  "foliage",
+  "yaprak",
+  "bitki"
  ],
  "variants": [
   {
-   "note": "leaf 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "leaf lobed, line icon redrawn from Tabler Icons (MIT, source name leaf-2)",
    "paths": [
     {
      "d": "M34.1 65.6 q-14.7 0 -18.9 -25.2 a35.3 35.3 0 0 1 14.4 1.7 a50.4 50.4 0 0 1 -0.2 -3.3 c0 -15.1 13.5 -23.6 13.5 -23.6 s8.4 5.3 11.9 14.9 q10.8 -6.5 27.6 -6.5 q1.7 15.9 -6.5 27.6 c9.7 3.5 14.9 11.9 14.9 11.9 s-12.6 10.9 -29.4 10.9 c0 4.2 0 4.2 2.1 12.6 q-25.2 0 -29.4 -21",

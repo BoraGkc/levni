@@ -1,12 +1,24 @@
 {
- "name": "briefcase-2",
+ "name": "briefcase-plain",
+ "aliases": [
+  "briefcase-2"
+ ],
  "category": "money",
  "tags": [
-  "briefcase 2"
+  "business",
+  "work",
+  "job",
+  "portfolio",
+  "bag",
+  "office",
+  "suitcase",
+  "career",
+  "evrak çantası",
+  "iş"
  ],
  "variants": [
   {
-   "note": "briefcase 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "briefcase plain, line icon redrawn from Tabler Icons (MIT, source name briefcase-2)",
    "paths": [
     {
      "d": "M15.2 40.4 a8.4 8.4 0 0 1 8.4 -8.4 h58.8 a8.4 8.4 0 0 1 8.4 8.4 v37.8 a8.4 8.4 0 0 1 -8.4 8.4 h-58.8 a8.4 8.4 0 0 1 -8.4 -8.4 v-37.8",

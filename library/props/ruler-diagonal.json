@@ -1,12 +1,23 @@
 {
- "name": "ruler-2",
+ "name": "ruler-diagonal",
+ "aliases": [
+  "ruler-2"
+ ],
  "category": "books",
  "tags": [
-  "ruler 2"
+  "measure",
+  "measurement",
+  "dimensions",
+  "size",
+  "length",
+  "width",
+  "scale",
+  "cetvel",
+  "ölçü"
  ],
  "variants": [
   {
-   "note": "ruler 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "ruler diagonal, line icon redrawn from Tabler Icons (MIT, source name ruler-2)",
    "paths": [
     {
      "d": "M74 15.2 l16.8 16.8 l-58.8 58.8 l-16.8 -16.8 l58.8 -58.8",

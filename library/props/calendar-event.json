@@ -2,7 +2,16 @@
  "name": "calendar-event",
  "category": "symbols",
  "tags": [
-  "calendar event"
+  "date",
+  "schedule",
+  "day",
+  "planner",
+  "agenda",
+  "today",
+  "selected date",
+  "appointment",
+  "etkinlik",
+  "takvim"
  ],
  "variants": [
   {

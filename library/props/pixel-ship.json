@@ -2,9 +2,14 @@
  "name": "pixel-ship",
  "category": "places",
  "tags": [
-  "ship",
-  "pixel ship",
-  "pixel"
+  "pixel",
+  "boat",
+  "vessel",
+  "sea",
+  "cargo",
+  "gemi",
+  "tekne",
+  "deniz"
  ],
  "variants": [
   {

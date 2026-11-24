@@ -2,11 +2,14 @@
   "name": "bandage",
   "category": "health",
   "tags": [
-    "bandage"
+    "bandage",
+    "yara bandı",
+    "bandaj"
   ],
   "variants": [
     {
-      "note": "flat horizontal bandage strip with small dots, blue outline", "from": "harvested from .cache/cizim-drafts/ted-lasso-4/kapak.json",
+      "note": "flat horizontal bandage strip with small dots, blue outline",
+      "from": "harvested from .cache/cizim-drafts/ted-lasso-4/kapak.json",
       "paths": [
         {
           "d": "M5 38 H95 V62 H5 Z",

@@ -4,11 +4,14 @@
   "tags": [
     "projektor isigi film seridi",
     "sahne spotu",
-    "tarantino tiyatro"
+    "tarantino tiyatro",
+    "spot ışığı",
+    "film şeridi"
   ],
   "variants": [
     {
-      "note": "spotlight beam shaped like a yellow film strip, orange lamp", "from": "harvested from .cache/cizim-drafts/tarantino-popinjay-cavalier/ici-2.json",
+      "note": "spotlight beam shaped like a yellow film strip, orange lamp",
+      "from": "harvested from .cache/cizim-drafts/tarantino-popinjay-cavalier/ici-2.json",
       "paths": [
         {
           "d": "M28 46 L100 22 L100 78 L28 54 Z",

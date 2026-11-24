@@ -5,11 +5,14 @@
     "padlock",
     "envelope",
     "phishing",
-    "security"
+    "security",
+    "kilitli zarf",
+    "güvenli posta"
   ],
   "variants": [
     {
-      "note": "coral envelope with a blue padlock shackle above it, front view", "from": "harvested from .cache/cizim-drafts/parti-daveti-phishing/ici-2.json",
+      "note": "coral envelope with a blue padlock shackle above it, front view",
+      "from": "harvested from .cache/cizim-drafts/parti-daveti-phishing/ici-2.json",
       "paths": [
         {
           "d": "M30,40 V26 Q30,6 50,6 Q70,6 70,26 V40",

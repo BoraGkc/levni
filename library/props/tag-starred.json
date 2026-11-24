@@ -2,7 +2,16 @@
  "name": "tag-starred",
  "category": "symbols",
  "tags": [
-  "tag starred"
+  "label",
+  "price tag",
+  "favorite",
+  "featured",
+  "star",
+  "bookmark",
+  "price",
+  "sale",
+  "yıldızlı etiket",
+  "favori"
  ],
  "variants": [
   {

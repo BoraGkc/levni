@@ -1,12 +1,23 @@
 {
- "name": "umbrella-2",
+ "name": "umbrella-tilted",
+ "aliases": [
+  "umbrella-2"
+ ],
  "category": "home",
  "tags": [
-  "umbrella 2"
+  "rain",
+  "weather",
+  "protection",
+  "insurance",
+  "parasol",
+  "shelter",
+  "rainy",
+  "şemsiye",
+  "yağmur"
  ],
  "variants": [
   {
-   "note": "umbrella 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "umbrella tilted, line icon redrawn from Tabler Icons (MIT, source name umbrella-2)",
    "paths": [
     {
      "d": "M25 33.4 a33.6 33.6 0 1 1 47.5 47.5 l-47.5 -47.5",

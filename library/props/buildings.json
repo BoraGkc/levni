@@ -2,7 +2,15 @@
  "name": "buildings",
  "category": "places",
  "tags": [
-  "buildings"
+  "city",
+  "town",
+  "urban",
+  "office",
+  "architecture",
+  "real estate",
+  "skyline",
+  "binalar",
+  "şehir"
  ],
  "variants": [
   {

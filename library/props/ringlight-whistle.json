@@ -4,11 +4,14 @@
   "tags": [
     "halka isik duduk",
     "ring light whistle",
-    "selfie beden egitimi"
+    "selfie beden egitimi",
+    "ışık halkası",
+    "düdük"
   ],
   "variants": [
     {
-      "note": "top-down ring light with orange whistle in centre, blue halo", "from": "harvested from .cache/cizim-drafts/lanterns-1-sezon/ici-1-alt.json",
+      "note": "top-down ring light with orange whistle in centre, blue halo",
+      "from": "harvested from .cache/cizim-drafts/lanterns-1-sezon/ici-1-alt.json",
       "paths": [
         {
           "d": "M14,50 a36,36 0 1,0 72,0 a36,36 0 1,0 -72,0",
@@ -67,7 +70,8 @@
       ]
     },
     {
-      "note": "ring light with orange whistle in centre, wider blue glow", "from": "harvested from .cache/cizim-drafts/lanterns-1-sezon/ici-1.json",
+      "note": "ring light with orange whistle in centre, wider blue glow",
+      "from": "harvested from .cache/cizim-drafts/lanterns-1-sezon/ici-1.json",
       "paths": [
         {
           "d": "M12,50 a38,38 0 1,0 76,0 a38,38 0 1,0 -76,0",

@@ -9,11 +9,13 @@
     "parodi",
     "phone sleeve",
     "vinyl record",
-    "short video"
+    "short video",
+    "plak kılıfı"
   ],
   "variants": [
     {
-      "note": "vinyl record in blue phone sleeve, text on screen", "from": "harvested from .cache/cizim-drafts/kyle-gordon-parodi/ici-1.json",
+      "note": "vinyl record in blue phone sleeve, text on screen",
+      "from": "harvested from .cache/cizim-drafts/kyle-gordon-parodi/ici-1.json",
       "paths": [
         {
           "d": "M16 34 a34,34 0 1,0 68,0 a34,34 0 1,0 -68,0",

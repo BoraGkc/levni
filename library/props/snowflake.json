@@ -2,7 +2,6 @@
  "name": "snowflake",
  "category": "nature",
  "tags": [
-  "snowflake",
   "kar tanesi",
   "snow",
   "kar",
@@ -14,7 +13,7 @@
  ],
  "variants": [
   {
-   "note": "Six-armed blue snowflake with a small chevron on every arm.",
+   "note": "Six-armed blue snowflake with a small chevron on every arm",
    "paths": [
     {
      "d": "M50 50 L88 50 M50 50 L69 82.9 M50 50 L31 82.9 M50 50 L12 50 M50 50 L31 17.1 M50 50 L69 17.1",

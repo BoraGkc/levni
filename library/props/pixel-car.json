@@ -2,9 +2,14 @@
  "name": "pixel-car",
  "category": "places",
  "tags": [
-  "car",
-  "pixel car",
-  "pixel"
+  "pixel",
+  "vehicle",
+  "automobile",
+  "drive",
+  "transport",
+  "araba",
+  "araç",
+  "otomobil"
  ],
  "variants": [
   {

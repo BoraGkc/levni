@@ -1,12 +1,24 @@
 {
- "name": "sunset-2",
+ "name": "sunset-rays",
+ "aliases": [
+  "sunset-2"
+ ],
  "category": "nature",
  "tags": [
-  "sunset 2"
+  "sun",
+  "evening",
+  "dusk",
+  "night",
+  "horizon",
+  "weather",
+  "sunny",
+  "daylight",
+  "gün batımı",
+  "akşam"
  ],
  "variants": [
   {
-   "note": "sunset 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "sunset rays, line icon redrawn from Tabler Icons (MIT, source name sunset-2)",
    "paths": [
     {
      "d": "M12.2 54.2 h4.2",

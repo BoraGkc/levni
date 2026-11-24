@@ -2,9 +2,14 @@
  "name": "pixel-drag-and-drop",
  "category": "nature",
  "tags": [
-  "drag and drop",
-  "pixel drag and drop",
-  "pixel"
+  "pixel",
+  "move",
+  "drop",
+  "grab",
+  "reorder",
+  "sürükle bırak",
+  "taşı",
+  "sırala"
  ],
  "variants": [
   {

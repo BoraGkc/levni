@@ -2,7 +2,16 @@
  "name": "tag",
  "category": "money",
  "tags": [
-  "tag"
+  "label",
+  "price tag",
+  "price",
+  "sale",
+  "discount",
+  "shopping",
+  "category",
+  "tagging",
+  "etiket",
+  "fiyat"
  ],
  "variants": [
   {

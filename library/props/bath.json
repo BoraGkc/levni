@@ -2,7 +2,16 @@
  "name": "bath",
  "category": "home",
  "tags": [
-  "bath"
+  "bathtub",
+  "bathroom",
+  "shower",
+  "spa",
+  "hotel",
+  "wash",
+  "tub",
+  "bathing",
+  "banyo",
+  "küvet"
  ],
  "variants": [
   {

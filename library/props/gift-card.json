@@ -2,7 +2,16 @@
  "name": "gift-card",
  "category": "money",
  "tags": [
-  "gift card"
+  "voucher",
+  "coupon",
+  "giftcard",
+  "present",
+  "store credit",
+  "prepaid card",
+  "shopping",
+  "reward",
+  "hediye kartı",
+  "kupon"
  ],
  "variants": [
   {

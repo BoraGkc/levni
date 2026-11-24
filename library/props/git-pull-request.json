@@ -2,7 +2,14 @@
  "name": "git-pull-request",
  "category": "tech",
  "tags": [
-  "git pull request"
+  "pull request",
+  "pr",
+  "merge request",
+  "mr",
+  "code review",
+  "version control",
+  "çekme isteği",
+  "git"
  ],
  "variants": [
   {

@@ -1,12 +1,24 @@
 {
- "name": "microphone-2",
+ "name": "microphone-handheld",
+ "aliases": [
+  "microphone-2"
+ ],
  "category": "tech",
  "tags": [
-  "microphone 2"
+  "mic",
+  "karaoke",
+  "sing",
+  "voice",
+  "audio",
+  "sound",
+  "podcast",
+  "recording",
+  "mikrofon",
+  "ses"
  ],
  "variants": [
   {
-   "note": "microphone 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "microphone handheld, line icon redrawn from Tabler Icons (MIT, source name microphone-2)",
    "paths": [
     {
      "d": "M65.6 56.8 l-16.4 -16.4 l-31.6 36.1 a8.4 8.4 0 1 0 11.9 11.9 l36.1 -31.6",

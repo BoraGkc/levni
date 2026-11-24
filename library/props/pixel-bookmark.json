@@ -2,9 +2,14 @@
  "name": "pixel-bookmark",
  "category": "books",
  "tags": [
-  "bookmark",
-  "pixel bookmark",
-  "pixel"
+  "pixel",
+  "save",
+  "favorite",
+  "reading list",
+  "tag",
+  "yer imi",
+  "kaydet",
+  "favori"
  ],
  "variants": [
   {

@@ -2,11 +2,15 @@
  "name": "calculator",
  "category": "money",
  "tags": [
-  "calculator",
   "hesap makinesi",
   "toplama",
   "accounting",
-  "muhasebe"
+  "muhasebe",
+  "math",
+  "calculate",
+  "calculation",
+  "arithmetic",
+  "hesaplama"
  ],
  "variants": [
   {

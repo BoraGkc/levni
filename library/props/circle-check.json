@@ -2,7 +2,17 @@
  "name": "circle-check",
  "category": "symbols",
  "tags": [
-  "circle check"
+  "done",
+  "success",
+  "confirmed",
+  "approved",
+  "tick",
+  "ok",
+  "verified",
+  "complete",
+  "onay",
+  "tamam",
+  "doğru"
  ],
  "variants": [
   {

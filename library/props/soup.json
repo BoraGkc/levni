@@ -2,7 +2,13 @@
  "name": "soup",
  "category": "food",
  "tags": [
-  "soup"
+  "bowl",
+  "food",
+  "meal",
+  "hot",
+  "ramen",
+  "çorba",
+  "yemek"
  ],
  "variants": [
   {

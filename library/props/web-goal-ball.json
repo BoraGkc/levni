@@ -4,11 +4,15 @@
   "tags": [
     "orumcek agi kale",
     "komplo",
-    "futbol topu"
+    "futbol topu",
+    "ağ",
+    "kale",
+    "top"
   ],
   "variants": [
     {
-      "note": "faint outlined goal frame with a small ball in the middle", "from": "harvested from .cache/cizim-drafts/ted-lasso-4/ici-1.json",
+      "note": "faint outlined goal frame with a small ball in the middle",
+      "from": "harvested from .cache/cizim-drafts/ted-lasso-4/ici-1.json",
       "paths": [
         {
           "d": "M50 58 L14 22 M50 58 L50 22 M50 58 L86 22 M50 58 L86 58 M50 58 L86 94 M50 58 L50 94 M50 58 L14 94 M50 58 L14 58",

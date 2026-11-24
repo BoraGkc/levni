@@ -2,9 +2,14 @@
  "name": "pixel-debug-play",
  "category": "music",
  "tags": [
-  "debug play",
-  "pixel debug play",
-  "pixel"
+  "pixel",
+  "run debugger",
+  "continue",
+  "developer",
+  "start",
+  "hata ayıklama",
+  "başlat",
+  "geliştirici"
  ],
  "variants": [
   {

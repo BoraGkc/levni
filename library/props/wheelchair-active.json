@@ -1,12 +1,24 @@
 {
- "name": "disabled-2",
+ "name": "wheelchair-active",
+ "aliases": [
+  "disabled-2"
+ ],
  "category": "home",
  "tags": [
-  "disabled 2"
+  "wheelchair",
+  "accessibility",
+  "accessible",
+  "handicapped",
+  "disability",
+  "a11y",
+  "mobility",
+  "impairment",
+  "engelli",
+  "tekerlekli sandalye"
  ],
  "variants": [
   {
-   "note": "disabled 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "wheelchair active, line icon redrawn from Tabler Icons (MIT, source name disabled-2)",
    "paths": [
     {
      "d": "M65.6 27.8 a8.4 8.4 0 1 0 16.8 0 a8.4 8.4 0 1 0 -16.8 0",

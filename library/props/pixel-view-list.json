@@ -2,9 +2,14 @@
  "name": "pixel-view-list",
  "category": "books",
  "tags": [
-  "view list",
-  "pixel view list",
-  "pixel"
+  "pixel",
+  "rows",
+  "layout",
+  "list mode",
+  "horizontal",
+  "liste görünümü",
+  "satırlar",
+  "düzen"
  ],
  "variants": [
   {

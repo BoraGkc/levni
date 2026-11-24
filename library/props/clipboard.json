@@ -2,7 +2,15 @@
  "name": "clipboard",
  "category": "books",
  "tags": [
-  "clipboard"
+  "paste",
+  "copy",
+  "document",
+  "task",
+  "notes",
+  "checklist",
+  "board",
+  "pano",
+  "kopyala"
  ],
  "variants": [
   {

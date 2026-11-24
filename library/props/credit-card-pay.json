@@ -2,7 +2,16 @@
  "name": "credit-card-pay",
  "category": "money",
  "tags": [
-  "credit card pay"
+  "payment",
+  "transaction",
+  "charge",
+  "transfer",
+  "credit card",
+  "debit card",
+  "bank card",
+  "checkout",
+  "kredi kartı",
+  "ödeme"
  ],
  "variants": [
   {

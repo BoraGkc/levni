@@ -2,7 +2,14 @@
  "name": "disc",
  "category": "stage",
  "tags": [
-  "disc"
+  "cd",
+  "dvd",
+  "disk",
+  "compact disc",
+  "album",
+  "music",
+  "media",
+  "optical"
  ],
  "variants": [
   {

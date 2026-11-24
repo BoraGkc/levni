@@ -2,9 +2,14 @@
  "name": "pixel-missed-call",
  "category": "symbols",
  "tags": [
-  "missed call",
-  "pixel missed call",
-  "pixel"
+  "pixel",
+  "phone",
+  "unanswered",
+  "call",
+  "lost",
+  "cevapsız arama",
+  "telefon",
+  "arama"
  ],
  "variants": [
   {

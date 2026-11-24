@@ -2,7 +2,14 @@
  "name": "map-route",
  "category": "places",
  "tags": [
-  "map route"
+  "path",
+  "directions",
+  "trip",
+  "itinerary",
+  "navigation",
+  "journey",
+  "rota",
+  "harita"
  ],
  "variants": [
   {

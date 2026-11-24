@@ -2,9 +2,14 @@
  "name": "pixel-subscriptions",
  "category": "symbols",
  "tags": [
-  "subscriptions",
-  "pixel subscriptions",
-  "pixel"
+  "pixel",
+  "channel",
+  "follow",
+  "membership",
+  "recurring",
+  "abonelikler",
+  "kanal",
+  "üyelik"
  ],
  "variants": [
   {

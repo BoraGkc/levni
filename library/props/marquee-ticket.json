@@ -7,11 +7,13 @@
     "tabela",
     "marquee",
     "ticket",
-    "broadway"
+    "broadway",
+    "sinema"
   ],
   "variants": [
     {
-      "note": "orange and blue theatre marquee ticket with white curtains", "from": "harvested from .cache/cizim-drafts/off-broadway-kacirilmayacak/kapak.json",
+      "note": "orange and blue theatre marquee ticket with white curtains",
+      "from": "harvested from .cache/cizim-drafts/off-broadway-kacirilmayacak/kapak.json",
       "paths": [
         {
           "d": "M2 14 L98 14 L98 86 L2 86 Z",

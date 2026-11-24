@@ -2,7 +2,14 @@
  "name": "usb",
  "category": "tech",
  "tags": [
-  "usb"
+  "plug",
+  "connector",
+  "cable",
+  "port",
+  "device",
+  "flash drive",
+  "usb port",
+  "bellek"
  ],
  "variants": [
   {

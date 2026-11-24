@@ -2,9 +2,14 @@
  "name": "pixel-pin",
  "category": "places",
  "tags": [
-  "pin",
-  "pixel pin",
-  "pixel"
+  "pixel",
+  "location",
+  "marker",
+  "attach",
+  "thumbtack",
+  "raptiye",
+  "konum",
+  "sabitle"
  ],
  "variants": [
   {

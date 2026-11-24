@@ -5,11 +5,14 @@
     "mirror",
     "corridor",
     "horror",
-    "double"
+    "double",
+    "koridor",
+    "ayna"
   ],
   "variants": [
     {
-      "note": "round hand mirror reflecting a receding corridor, coral frame", "from": "harvested from .cache/cizim-drafts/other-mommy-jessica/kapak-3d.json",
+      "note": "round hand mirror reflecting a receding corridor, coral frame",
+      "from": "harvested from .cache/cizim-drafts/other-mommy-jessica/kapak-3d.json",
       "paths": [
         {
           "d": "M44,70 H56 L58,97 H42 Z",

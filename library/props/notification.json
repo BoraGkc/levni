@@ -2,7 +2,16 @@
  "name": "notification",
  "category": "tech",
  "tags": [
-  "notification"
+  "bell",
+  "alert",
+  "badge",
+  "dot",
+  "reminder",
+  "unread",
+  "inbox",
+  "message",
+  "bildirim",
+  "zil"
  ],
  "variants": [
   {

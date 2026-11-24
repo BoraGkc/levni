@@ -2,9 +2,14 @@
  "name": "pixel-playlist",
  "category": "music",
  "tags": [
-  "playlist",
-  "pixel playlist",
-  "pixel"
+  "pixel",
+  "queue",
+  "songs",
+  "tracks",
+  "media list",
+  "oynatma listesi",
+  "şarkılar",
+  "kuyruk"
  ],
  "variants": [
   {

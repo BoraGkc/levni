@@ -4,11 +4,14 @@
   "tags": [
     "cam agaci",
     "fir pine tree",
-    "twin peaks"
+    "twin peaks",
+    "çam ağacı",
+    "ağaç"
   ],
   "variants": [
     {
-      "note": "outline fir tree, white fill with blue strokes, front view", "from": "harvested from .cache/cizim-drafts/kyle-maclachlan-anilari/ici-1.json",
+      "note": "outline fir tree, white fill with blue strokes, front view",
+      "from": "harvested from .cache/cizim-drafts/kyle-maclachlan-anilari/ici-1.json",
       "paths": [
         {
           "d": "M45 78 L55 78 L55 98 L45 98Z",

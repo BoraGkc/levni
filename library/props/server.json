@@ -1,12 +1,23 @@
 {
- "name": "server-2",
+ "name": "server",
+ "aliases": [
+  "server-2"
+ ],
  "category": "tech",
  "tags": [
-  "server 2"
+  "database",
+  "hosting",
+  "datacenter",
+  "backend",
+  "storage",
+  "rack",
+  "cloud",
+  "sunucu",
+  "veri"
  ],
  "variants": [
   {
-   "note": "server 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "server, line icon redrawn from Tabler Icons (MIT, source name server-2)",
    "paths": [
     {
      "d": "M15.2 32 a12.6 12.6 0 0 1 12.6 -12.6 h50.4 a12.6 12.6 0 0 1 12.6 12.6 v8.4 a12.6 12.6 0 0 1 -12.6 12.6 h-50.4 a12.6 12.6 0 0 1 -12.6 -12.6 v-8.4",

@@ -2,9 +2,14 @@
  "name": "pixel-user",
  "category": "health",
  "tags": [
-  "user",
-  "pixel user",
-  "pixel"
+  "pixel",
+  "person",
+  "profile",
+  "account",
+  "member",
+  "kullanıcı",
+  "kişi",
+  "profil"
  ],
  "variants": [
   {

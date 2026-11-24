@@ -2,9 +2,14 @@
  "name": "pixel-battery-1",
  "category": "home",
  "tags": [
-  "battery 1",
-  "pixel battery 1",
-  "pixel"
+  "pixel",
+  "low power",
+  "charge",
+  "energy",
+  "almost empty",
+  "pil",
+  "düşük pil",
+  "şarj"
  ],
  "variants": [
   {

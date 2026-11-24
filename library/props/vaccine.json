@@ -2,7 +2,15 @@
  "name": "vaccine",
  "category": "health",
  "tags": [
-  "vaccine"
+  "syringe",
+  "injection",
+  "needle",
+  "shot",
+  "vaccination",
+  "medical",
+  "medicine",
+  "aşı",
+  "şırınga"
  ],
  "variants": [
   {

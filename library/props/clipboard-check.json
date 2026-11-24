@@ -2,7 +2,16 @@
  "name": "clipboard-check",
  "category": "books",
  "tags": [
-  "clipboard check"
+  "done",
+  "completed",
+  "approved",
+  "tick",
+  "todo",
+  "task done",
+  "checklist",
+  "paste",
+  "onaylandı",
+  "kontrol listesi"
  ],
  "variants": [
   {

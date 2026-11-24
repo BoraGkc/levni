@@ -2,9 +2,14 @@
  "name": "pixel-power",
  "category": "home",
  "tags": [
-  "power",
-  "pixel power",
-  "pixel"
+  "pixel",
+  "on off",
+  "shutdown",
+  "energy",
+  "switch",
+  "güç",
+  "aç kapat",
+  "kapatma"
  ],
  "variants": [
   {

@@ -2,7 +2,16 @@
  "name": "files",
  "category": "books",
  "tags": [
-  "files"
+  "documents",
+  "multiple",
+  "copy",
+  "duplicate",
+  "pages",
+  "stack",
+  "papers",
+  "collection",
+  "dosyalar",
+  "belgeler"
  ],
  "variants": [
   {

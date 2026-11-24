@@ -2,9 +2,14 @@
  "name": "pixel-bookmarks",
  "category": "books",
  "tags": [
-  "bookmarks",
-  "pixel bookmarks",
-  "pixel"
+  "pixel",
+  "saved",
+  "favorites",
+  "reading list",
+  "collection",
+  "yer imleri",
+  "kaydedilenler",
+  "favoriler"
  ],
  "variants": [
   {

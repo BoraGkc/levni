@@ -2,7 +2,15 @@
  "name": "wheelchair",
  "category": "health",
  "tags": [
-  "wheelchair"
+  "accessibility",
+  "accessible",
+  "disabled",
+  "handicap",
+  "a11y",
+  "wheels",
+  "mobility",
+  "tekerlekli sandalye",
+  "engelli"
  ],
  "variants": [
   {

@@ -4,11 +4,14 @@
   "tags": [
     "balloon",
     "fish hook",
-    "party"
+    "party",
+    "kanca",
+    "balon"
   ],
   "variants": [
     {
-      "note": "single orange balloon with small blue hook tip", "from": "harvested from .cache/cizim-drafts/parti-daveti-phishing/ici-1.json",
+      "note": "single orange balloon with small blue hook tip",
+      "from": "harvested from .cache/cizim-drafts/parti-daveti-phishing/ici-1.json",
       "paths": [
         {
           "d": "M22,32 a28,32 0 1,0 56,0 a28,32 0 1,0 -56,0",

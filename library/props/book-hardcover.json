@@ -1,12 +1,24 @@
 {
- "name": "book-2",
+ "name": "book-hardcover",
+ "aliases": [
+  "book-2"
+ ],
  "category": "books",
  "tags": [
-  "book 2"
+  "read",
+  "reading",
+  "library",
+  "education",
+  "study",
+  "literature",
+  "novel",
+  "ebook",
+  "kitap",
+  "okuma"
  ],
  "variants": [
   {
-   "note": "book 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "book hardcover, line icon redrawn from Tabler Icons (MIT, source name book-2)",
    "paths": [
     {
      "d": "M82.4 19.4 v67.2 h-50.4 a8.4 8.4 0 0 1 -8.4 -8.4 v-50.4 a8.4 8.4 0 0 1 8.4 -8.4 h50.4",

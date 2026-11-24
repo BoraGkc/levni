@@ -2,7 +2,15 @@
  "name": "pizza",
  "category": "food",
  "tags": [
-  "pizza"
+  "pizza slice",
+  "slice",
+  "food",
+  "fast food",
+  "italian",
+  "cheese",
+  "pepperoni",
+  "restaurant",
+  "yemek"
  ],
  "variants": [
   {

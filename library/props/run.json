@@ -2,7 +2,16 @@
  "name": "run",
  "category": "health",
  "tags": [
-  "run"
+  "running",
+  "runner",
+  "jog",
+  "sprint",
+  "exercise",
+  "fitness",
+  "sport",
+  "walk",
+  "koşu",
+  "koşmak"
  ],
  "variants": [
   {

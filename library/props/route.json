@@ -2,7 +2,16 @@
  "name": "route",
  "category": "symbols",
  "tags": [
-  "route"
+  "path",
+  "directions",
+  "journey",
+  "navigation",
+  "map",
+  "trip",
+  "way",
+  "gps",
+  "rota",
+  "güzergah"
  ],
  "variants": [
   {

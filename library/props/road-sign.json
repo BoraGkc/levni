@@ -2,7 +2,13 @@
  "name": "road-sign",
  "category": "places",
  "tags": [
-  "road sign"
+  "traffic sign",
+  "signpost",
+  "street sign",
+  "direction",
+  "warning",
+  "trafik levhası",
+  "yol işareti"
  ],
  "variants": [
   {

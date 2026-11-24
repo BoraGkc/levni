@@ -1,12 +1,24 @@
 {
- "name": "cpu-2",
+ "name": "cpu-corners",
+ "aliases": [
+  "cpu-2"
+ ],
  "category": "tech",
  "tags": [
-  "cpu 2"
+  "processor",
+  "chip",
+  "microchip",
+  "hardware",
+  "computer",
+  "semiconductor",
+  "core",
+  "integrated circuit",
+  "işlemci",
+  "çip"
  ],
  "variants": [
   {
-   "note": "cpu 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "cpu corners, line icon redrawn from Tabler Icons (MIT, source name cpu-2)",
    "paths": [
     {
      "d": "M23.6 27.8 a4.2 4.2 0 0 1 4.2 -4.2 h50.4 a4.2 4.2 0 0 1 4.2 4.2 v50.4 a4.2 4.2 0 0 1 -4.2 4.2 h-50.4 a4.2 4.2 0 0 1 -4.2 -4.2 l0 -50.4",

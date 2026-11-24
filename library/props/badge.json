@@ -2,7 +2,16 @@
  "name": "badge",
  "category": "symbols",
  "tags": [
-  "badge"
+  "label",
+  "tag",
+  "rank",
+  "military",
+  "chevron",
+  "insignia",
+  "rank insignia",
+  "army",
+  "rozet",
+  "nişan"
  ],
  "variants": [
   {

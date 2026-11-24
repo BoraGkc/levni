@@ -2,7 +2,16 @@
  "name": "music",
  "category": "stage",
  "tags": [
-  "music"
+  "song",
+  "audio",
+  "sound",
+  "note",
+  "melody",
+  "track",
+  "mp3",
+  "playlist",
+  "müzik",
+  "nota"
  ],
  "variants": [
   {

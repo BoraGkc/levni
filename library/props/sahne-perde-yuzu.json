@@ -4,11 +4,15 @@
   "tags": [
     "sahne",
     "perde",
-    "ilan"
+    "ilan",
+    "sahne perdesi",
+    "tiyatro",
+    "yüz"
   ],
   "variants": [
     {
-      "note": "theatre stage with curtain and a blue panel holding a note", "from": "harvested from .cache/cizim-drafts/playbill-george-floyd/kapak-3d.json",
+      "note": "theatre stage with curtain and a blue panel holding a note",
+      "from": "harvested from .cache/cizim-drafts/playbill-george-floyd/kapak-3d.json",
       "paths": [
         {
           "d": "M12 30 L88 30 L88 84 L12 84 Z",

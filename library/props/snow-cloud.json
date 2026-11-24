@@ -2,7 +2,6 @@
  "name": "snow-cloud",
  "category": "nature",
  "tags": [
-  "snow cloud",
   "kar bulutu",
   "snow",
   "kar",
@@ -13,7 +12,7 @@
  ],
  "variants": [
   {
-   "note": "Light blue cloud with snowflakes as small crosses and dots.",
+   "note": "Light blue cloud with snowflakes as small crosses and dots",
    "paths": [
     {
      "d": "M24 56 Q8 56 8 44 Q8 34 22 32 Q22 16 40 16 Q50 6 64 16 Q72 12 80 22 Q92 24 92 40 Q92 56 76 56 Z",

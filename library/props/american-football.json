@@ -4,12 +4,13 @@
   "tags": [
     "amerikan futbolu",
     "top",
-    "american football",
-    "nfl"
+    "nfl",
+    "rugby topu"
   ],
   "variants": [
     {
-      "note": "orange-red american football seen from the side with white laces, blue outline", "from": "harvested from .cache/cizim-drafts/madden-filmi-nicolas/kapak-v2.json",
+      "note": "orange-red american football seen from the side with white laces, blue outline",
+      "from": "harvested from .cache/cizim-drafts/madden-filmi-nicolas/kapak-v2.json",
       "paths": [
         {
           "d": "M4 50 C22 10 78 10 96 50 C78 90 22 90 4 50 Z",

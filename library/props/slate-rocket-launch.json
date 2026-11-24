@@ -6,11 +6,13 @@
     "belgesel",
     "roket",
     "clapperboard",
-    "launch"
+    "launch",
+    "fırlatma"
   ],
   "variants": [
     {
-      "note": "clapperboard slate with a small rocket launching from its top", "from": "harvested from .cache/cizim-drafts/elon-muskun-eski/ici-1.json",
+      "note": "clapperboard slate with a small rocket launching from its top",
+      "from": "harvested from .cache/cizim-drafts/elon-muskun-eski/ici-1.json",
       "paths": [
         {
           "d": "M4 42 H96 V94 H4Z",

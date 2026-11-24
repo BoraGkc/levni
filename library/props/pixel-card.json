@@ -2,9 +2,13 @@
  "name": "pixel-card",
  "category": "money",
  "tags": [
-  "card",
-  "pixel card",
-  "pixel"
+  "pixel",
+  "panel",
+  "tile",
+  "box",
+  "container",
+  "kart",
+  "kutu"
  ],
  "variants": [
   {

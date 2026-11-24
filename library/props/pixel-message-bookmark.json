@@ -2,9 +2,14 @@
  "name": "pixel-message-bookmark",
  "category": "books",
  "tags": [
-  "message bookmark",
-  "pixel message bookmark",
-  "pixel"
+  "pixel",
+  "saved message",
+  "favorite chat",
+  "pinned",
+  "keep",
+  "mesaj",
+  "kayıtlı",
+  "sohbet"
  ],
  "variants": [
   {

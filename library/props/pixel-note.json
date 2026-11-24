@@ -2,9 +2,13 @@
  "name": "pixel-note",
  "category": "books",
  "tags": [
-  "note",
-  "pixel note",
-  "pixel"
+  "pixel",
+  "memo",
+  "sticky",
+  "reminder",
+  "paper",
+  "not",
+  "hatırlatıcı"
  ],
  "variants": [
   {

@@ -2,7 +2,16 @@
  "name": "location",
  "category": "symbols",
  "tags": [
-  "location"
+  "navigation",
+  "gps",
+  "arrow",
+  "pointer",
+  "direction",
+  "map",
+  "compass",
+  "position",
+  "konum",
+  "yer"
  ],
  "variants": [
   {

@@ -2,7 +2,16 @@
  "name": "bike",
  "category": "places",
  "tags": [
-  "bike"
+  "bicycle",
+  "cycling",
+  "cycle",
+  "ride",
+  "transport",
+  "vehicle",
+  "bike lane",
+  "mountain bike",
+  "bisiklet",
+  "motosiklet"
  ],
  "variants": [
   {

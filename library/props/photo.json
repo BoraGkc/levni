@@ -2,7 +2,16 @@
  "name": "photo",
  "category": "tech",
  "tags": [
-  "photo"
+  "image",
+  "picture",
+  "gallery",
+  "img",
+  "photography",
+  "media",
+  "thumbnail",
+  "landscape",
+  "fotoğraf",
+  "resim"
  ],
  "variants": [
   {

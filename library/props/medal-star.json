@@ -1,12 +1,24 @@
 {
- "name": "medal-2",
+ "name": "medal-star",
+ "aliases": [
+  "medal-2"
+ ],
  "category": "symbols",
  "tags": [
-  "medal 2"
+  "award",
+  "prize",
+  "badge",
+  "achievement",
+  "winner",
+  "honor",
+  "gold",
+  "first place",
+  "madalya",
+  "ödül"
  ],
  "variants": [
   {
-   "note": "medal 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "medal star, line icon redrawn from Tabler Icons (MIT, source name medal-2)",
    "paths": [
     {
      "d": "M40.4 15.2 h25.2 l12.6 29.4 l-25.2 8.4 l-25.2 -8.4 l12.6 -29.4",

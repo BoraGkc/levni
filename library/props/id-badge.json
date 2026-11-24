@@ -1,12 +1,23 @@
 {
- "name": "id-badge-2",
+ "name": "id-badge",
+ "aliases": [
+  "id-badge-2"
+ ],
  "category": "money",
  "tags": [
-  "id badge 2"
+  "employee",
+  "identity",
+  "identification",
+  "pass",
+  "lanyard",
+  "name tag",
+  "access card",
+  "kimlik kartı",
+  "yaka kartı"
  ],
  "variants": [
   {
-   "note": "id badge 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "id badge, line icon redrawn from Tabler Icons (MIT, source name id-badge-2)",
    "paths": [
     {
      "d": "M32 53 h12.6 v16.8 h-12.6 l0 -16.8",

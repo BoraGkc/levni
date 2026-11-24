@@ -1,12 +1,24 @@
 {
- "name": "hanger-2",
+ "name": "hanger-hook",
+ "aliases": [
+  "hanger-2"
+ ],
  "category": "home",
  "tags": [
-  "hanger 2"
+  "coat hanger",
+  "clothes",
+  "clothing",
+  "wardrobe",
+  "closet",
+  "fashion",
+  "apparel",
+  "cloakroom",
+  "askı",
+  "elbise"
  ],
  "variants": [
   {
-   "note": "hanger 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "hanger hook, line icon redrawn from Tabler Icons (MIT, source name hanger-2)",
    "paths": [
     {
      "d": "M27.8 78.2 a8.4 8.4 0 0 1 8.4 -8.4 h33.6 a8.4 8.4 0 0 1 8.4 8.4 v4.2 a8.4 8.4 0 0 1 -8.4 8.4 h-33.6 a8.4 8.4 0 0 1 -8.4 -8.4 l0 -4.2",

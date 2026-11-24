@@ -2,13 +2,15 @@
   "name": "mousehole",
   "category": "home",
   "tags": [
-    "mousehole",
     "arch",
-    "small"
+    "small",
+    "fare deliği",
+    "fare"
   ],
   "variants": [
     {
-      "note": "solid blue arched mouse hole doorway", "from": "harvested from .cache/cizim-drafts/peppino-mazzullo-topo/kapak.json",
+      "note": "solid blue arched mouse hole doorway",
+      "from": "harvested from .cache/cizim-drafts/peppino-mazzullo-topo/kapak.json",
       "paths": [
         {
           "d": "M20,96 V50 Q20,18 50,18 Q80,18 80,50 V96 Z",

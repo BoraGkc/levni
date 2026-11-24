@@ -2,7 +2,16 @@
  "name": "alert-circle",
  "category": "symbols",
  "tags": [
-  "alert circle"
+  "warning",
+  "error",
+  "info",
+  "danger",
+  "caution",
+  "attention",
+  "exclamation",
+  "notice",
+  "uyarı",
+  "dikkat"
  ],
  "variants": [
   {

@@ -2,9 +2,13 @@
  "name": "pixel-gps",
  "category": "symbols",
  "tags": [
-  "gps",
-  "pixel gps",
-  "pixel"
+  "pixel",
+  "location",
+  "navigation",
+  "position",
+  "locate",
+  "konum",
+  "navigasyon"
  ],
  "variants": [
   {

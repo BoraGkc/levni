@@ -2,7 +2,16 @@
  "name": "eye-closed",
  "category": "health",
  "tags": [
-  "eye closed"
+  "hide",
+  "hidden",
+  "invisible",
+  "visibility off",
+  "sleep",
+  "blink",
+  "password hide",
+  "private",
+  "kapalı göz",
+  "gizle"
  ],
  "variants": [
   {

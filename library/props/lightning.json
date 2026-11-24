@@ -2,7 +2,6 @@
  "name": "lightning",
  "category": "nature",
  "tags": [
-  "lightning",
   "şimşek",
   "bolt",
   "yıldırım",
@@ -13,7 +12,7 @@
  ],
  "variants": [
   {
-   "note": "Bold mustard zig-zag lightning bolt.",
+   "note": "Bold mustard zig-zag lightning bolt",
    "paths": [
     {
      "d": "M58 8 L24 54 L46 54 L38 92 L76 42 L54 42 Z",
@@ -24,7 +23,7 @@
    ]
   },
   {
-   "note": "Blue storm cloud with a mustard bolt striking below.",
+   "note": "Blue storm cloud with a mustard bolt striking below",
    "paths": [
     {
      "d": "M24 54 Q8 54 8 42 Q8 32 22 30 Q22 14 40 14 Q50 4 64 14 Q72 10 80 20 Q92 22 92 38 Q92 54 76 54 Z",

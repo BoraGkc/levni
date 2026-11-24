@@ -2,7 +2,14 @@
  "name": "building-hospital",
  "category": "places",
  "tags": [
-  "building hospital"
+  "clinic",
+  "medical",
+  "health",
+  "healthcare",
+  "emergency",
+  "doctor",
+  "hastane",
+  "sağlık"
  ],
  "variants": [
   {

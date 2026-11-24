@@ -2,7 +2,16 @@
  "name": "temperature",
  "category": "nature",
  "tags": [
-  "temperature"
+  "thermometer",
+  "weather",
+  "celsius",
+  "fahrenheit",
+  "degrees",
+  "heat",
+  "cold",
+  "forecast",
+  "sıcaklık",
+  "termometre"
  ],
  "variants": [
   {

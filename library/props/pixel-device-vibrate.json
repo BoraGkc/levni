@@ -2,9 +2,14 @@
  "name": "pixel-device-vibrate",
  "category": "tech",
  "tags": [
-  "device vibrate",
-  "pixel device vibrate",
-  "pixel"
+  "pixel",
+  "haptic",
+  "buzz",
+  "silent mode",
+  "phone shake",
+  "titreşim",
+  "sessiz mod",
+  "telefon"
  ],
  "variants": [
   {

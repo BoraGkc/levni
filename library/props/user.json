@@ -2,7 +2,16 @@
  "name": "user",
  "category": "home",
  "tags": [
-  "user"
+  "person",
+  "account",
+  "profile",
+  "avatar",
+  "member",
+  "people",
+  "human",
+  "login",
+  "kullanıcı",
+  "profil"
  ],
  "variants": [
   {

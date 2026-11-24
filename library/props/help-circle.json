@@ -2,7 +2,15 @@
  "name": "help-circle",
  "category": "symbols",
  "tags": [
-  "help circle"
+  "question",
+  "support",
+  "faq",
+  "question mark",
+  "info",
+  "assistance",
+  "unknown",
+  "yardım",
+  "soru işareti"
  ],
  "variants": [
   {

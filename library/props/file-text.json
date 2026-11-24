@@ -2,7 +2,16 @@
  "name": "file-text",
  "category": "books",
  "tags": [
-  "file text"
+  "document",
+  "txt",
+  "doc",
+  "article",
+  "page",
+  "notes",
+  "content",
+  "paper",
+  "metin dosyası",
+  "belge"
  ],
  "variants": [
   {

@@ -1,12 +1,23 @@
 {
- "name": "flag-3",
+ "name": "flag-pennant",
+ "aliases": [
+  "flag-3"
+ ],
  "category": "sport",
  "tags": [
-  "flag 3"
+  "pennant",
+  "banner",
+  "report",
+  "milestone",
+  "mark",
+  "goal",
+  "triangle",
+  "bayrak",
+  "flama"
  ],
  "variants": [
   {
-   "note": "flag 3, line icon redrawn from Tabler Icons (MIT)",
+   "note": "flag pennant, line icon redrawn from Tabler Icons (MIT, source name flag-3)",
    "paths": [
     {
      "d": "M20.6 58.4 h58.8 l-18.9 -18.9 l18.9 -18.9 h-58.8 v67.2",

@@ -2,7 +2,16 @@
  "name": "blockquote",
  "category": "books",
  "tags": [
-  "blockquote"
+  "quote",
+  "quotation",
+  "citation",
+  "text",
+  "format",
+  "markdown",
+  "quote block",
+  "pull quote",
+  "alıntı",
+  "tırnak"
  ],
  "variants": [
   {

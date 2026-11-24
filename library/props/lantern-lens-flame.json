@@ -4,11 +4,15 @@
   "tags": [
     "fener selfie mercegi",
     "lantern camera lens flame",
-    "imaj takintisi"
+    "imaj takintisi",
+    "fener",
+    "mercek",
+    "alev"
   ],
   "variants": [
     {
-      "note": "blue lantern with camera lens centre and orange base", "from": "harvested from .cache/cizim-drafts/lanterns-1-sezon/kapak.json",
+      "note": "blue lantern with camera lens centre and orange base",
+      "from": "harvested from .cache/cizim-drafts/lanterns-1-sezon/kapak.json",
       "paths": [
         {
           "d": "M36 20 Q50 -2 64 20",

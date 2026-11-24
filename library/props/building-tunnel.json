@@ -2,7 +2,15 @@
  "name": "building-tunnel",
  "category": "places",
  "tags": [
-  "building tunnel"
+  "underground",
+  "road",
+  "railway",
+  "subway",
+  "passage",
+  "transit",
+  "infrastructure",
+  "tünel",
+  "yol"
  ],
  "variants": [
   {

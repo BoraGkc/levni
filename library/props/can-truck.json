@@ -6,11 +6,13 @@
     "bira kutusu",
     "teslimat",
     "truck",
-    "beer can"
+    "beer can",
+    "konserve"
   ],
   "variants": [
     {
-      "note": "white delivery truck carrying a yellow can, blue cab, side view", "from": "harvested from .cache/cizim-drafts/bud-light-boykotculari/ici-1-alt.json",
+      "note": "white delivery truck carrying a yellow can, blue cab, side view",
+      "from": "harvested from .cache/cizim-drafts/bud-light-boykotculari/ici-1-alt.json",
       "paths": [
         {
           "d": "M4 28 H66 V70 H4 Z",

@@ -2,7 +2,6 @@
  "name": "wind",
  "category": "nature",
  "tags": [
-  "wind",
   "rüzgar",
   "gust",
   "esinti",
@@ -14,7 +13,7 @@
  ],
  "variants": [
   {
-   "note": "Three horizontal gust lines, each ending in a small curl.",
+   "note": "Three horizontal gust lines, each ending in a small curl",
    "paths": [
     {
      "d": "M10 32 L58 32 Q74 32 74 22 Q74 14 66 14 Q60 14 60 20",

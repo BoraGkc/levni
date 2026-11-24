@@ -2,7 +2,15 @@
  "name": "milkshake",
  "category": "food",
  "tags": [
-  "milkshake"
+  "shake",
+  "smoothie",
+  "drink",
+  "dessert",
+  "ice cream",
+  "sweet",
+  "straw",
+  "beverage",
+  "içecek"
  ],
  "variants": [
   {

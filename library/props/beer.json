@@ -2,7 +2,15 @@
  "name": "beer",
  "category": "food",
  "tags": [
-  "beer"
+  "drink",
+  "alcohol",
+  "pub",
+  "bar",
+  "mug",
+  "pint",
+  "brewery",
+  "bira",
+  "içki"
  ],
  "variants": [
   {

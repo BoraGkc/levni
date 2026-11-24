@@ -2,7 +2,16 @@
  "name": "shopping-cart",
  "category": "money",
  "tags": [
-  "shopping cart"
+  "basket",
+  "trolley",
+  "shop",
+  "store",
+  "checkout",
+  "ecommerce",
+  "buy",
+  "purchase",
+  "alışveriş sepeti",
+  "sepet"
  ],
  "variants": [
   {

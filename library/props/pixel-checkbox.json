@@ -2,9 +2,13 @@
  "name": "pixel-checkbox",
  "category": "home",
  "tags": [
-  "checkbox",
-  "pixel checkbox",
-  "pixel"
+  "pixel",
+  "tick box",
+  "unchecked",
+  "empty",
+  "form",
+  "onay kutusu",
+  "boş kutu"
  ],
  "variants": [
   {

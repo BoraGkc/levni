@@ -9,11 +9,14 @@
     "chewed shoe",
     "bite marks",
     "dog",
-    "mess"
+    "mess",
+    "çiğnenmiş ayakkabı",
+    "spor ayakkabı"
   ],
   "variants": [
     {
-      "note": "white sneaker side view with coral bite marks chewed at the toe", "from": "harvested from .cache/cizim-drafts/kopegi-zor-sahiplenmek/ici-2-r0.json",
+      "note": "white sneaker side view with coral bite marks chewed at the toe",
+      "from": "harvested from .cache/cizim-drafts/kopegi-zor-sahiplenmek/ici-2-r0.json",
       "paths": [
         {
           "d": "M6,70 L8,30 Q18,28 26,40 L34,44 L46,26 Q54,24 58,36 Q66,46 80,50 Q96,54 98,70 Z",

@@ -2,7 +2,15 @@
  "name": "package-export",
  "category": "money",
  "tags": [
-  "package export"
+  "box",
+  "parcel",
+  "shipping",
+  "send",
+  "dispatch",
+  "outbound",
+  "arrow",
+  "paket gönder",
+  "kargo"
  ],
  "variants": [
   {

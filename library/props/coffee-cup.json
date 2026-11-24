@@ -7,11 +7,23 @@
   "kupa",
   "coffee",
   "cup",
-  "mug"
+  "mug",
+  "kahve fincanı"
  ],
  "variants": [
   {
-   "slots": { "label": [33, 52, 36, 20], "top": [50, 29] },
+   "slots": {
+    "label": [
+     33,
+     52,
+     36,
+     20
+    ],
+    "top": [
+     50,
+     29
+    ]
+   },
    "note": "takeaway cup, lid and coral sleeve, steam",
    "paths": [
     {

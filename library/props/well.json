@@ -3,11 +3,13 @@
   "category": "home",
   "tags": [
     "kuyu",
-    "well"
+    "well",
+    "su"
   ],
   "variants": [
     {
-      "note": "squat blue well with cylindrical stone walls", "from": "harvested from .cache/cizim-drafts/askeri-sir-yapay/ici-2.json",
+      "note": "squat blue well with cylindrical stone walls",
+      "from": "harvested from .cache/cizim-drafts/askeri-sir-yapay/ici-2.json",
       "paths": [
         {
           "d": "M12 30 L12 80 Q50 96 88 80 L88 30 Z",

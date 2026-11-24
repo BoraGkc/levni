@@ -2,9 +2,14 @@
  "name": "pixel-chess",
  "category": "sport",
  "tags": [
-  "chess",
-  "pixel chess",
-  "pixel"
+  "pixel",
+  "board game",
+  "strategy",
+  "pawn",
+  "knight",
+  "satranç",
+  "strateji",
+  "oyun"
  ],
  "variants": [
   {

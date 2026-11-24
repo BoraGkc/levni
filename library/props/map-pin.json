@@ -2,7 +2,15 @@
  "name": "map-pin",
  "category": "places",
  "tags": [
-  "map pin"
+  "marker",
+  "location",
+  "place",
+  "gps",
+  "point",
+  "poi",
+  "destination",
+  "konum işareti",
+  "yer"
  ],
  "variants": [
   {

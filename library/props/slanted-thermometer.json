@@ -5,11 +5,14 @@
     "termometre",
     "thermometer",
     "ates",
-    "sicaklik"
+    "sicaklik",
+    "eğik termometre",
+    "ateş"
   ],
   "variants": [
     {
-      "note": "tilted red thermometer with orange bulb", "from": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1-v3.json",
+      "note": "tilted red thermometer with orange bulb",
+      "from": "harvested from .cache/cizim-drafts/kate-tolo-kadinlara/ici-1-v3.json",
       "paths": [
         {
           "d": "M40,4 Q50,-1 60,4 L60,66 a20,20 0 1,1 -20,0 Z",

@@ -3,11 +3,14 @@
   "category": "places",
   "tags": [
     "minik figur",
-    "yuzsuz"
+    "yuzsuz",
+    "küçük figür",
+    "insan"
   ],
   "variants": [
     {
-      "note": "tiny orange pawn-like human figure, standing", "from": "harvested from .cache/cizim-drafts/silikon-vadisi-hala/kapak.json",
+      "note": "tiny orange pawn-like human figure, standing",
+      "from": "harvested from .cache/cizim-drafts/silikon-vadisi-hala/kapak.json",
       "paths": [
         {
           "d": "M50 12 a11 11 0 1,0 0.1 0 Z",

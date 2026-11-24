@@ -2,7 +2,16 @@
  "name": "device-sd-card",
  "category": "tech",
  "tags": [
-  "device sd card"
+  "sd card",
+  "memory card",
+  "microsd",
+  "storage",
+  "flash",
+  "camera",
+  "memory",
+  "data",
+  "hafıza kartı",
+  "sd kart"
  ],
  "variants": [
   {

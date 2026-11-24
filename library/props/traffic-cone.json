@@ -2,7 +2,14 @@
  "name": "traffic-cone",
  "category": "places",
  "tags": [
-  "traffic cone"
+  "construction",
+  "roadwork",
+  "maintenance",
+  "under construction",
+  "warning",
+  "road",
+  "trafik konisi",
+  "koni"
  ],
  "variants": [
   {

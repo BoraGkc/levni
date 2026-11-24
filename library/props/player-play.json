@@ -2,7 +2,16 @@
  "name": "player-play",
  "category": "tech",
  "tags": [
-  "player play"
+  "start",
+  "run",
+  "media",
+  "video",
+  "audio",
+  "music",
+  "resume",
+  "triangle",
+  "oynat",
+  "başlat"
  ],
  "variants": [
   {

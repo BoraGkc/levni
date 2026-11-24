@@ -2,7 +2,14 @@
  "name": "device-tablet",
  "category": "tech",
  "tags": [
-  "device tablet"
+  "ipad",
+  "touchscreen",
+  "e reader",
+  "kindle",
+  "portable",
+  "mobile",
+  "tablet",
+  "cihaz"
  ],
  "variants": [
   {

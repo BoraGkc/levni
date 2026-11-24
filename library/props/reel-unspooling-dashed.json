@@ -3,11 +3,14 @@
   "category": "film",
   "tags": [
     "film makarasi acilan serit kesik cizgi",
-    "film reel unspooling dashed ending"
+    "film reel unspooling dashed ending",
+    "film makarası",
+    "şerit"
   ],
   "variants": [
     {
-      "note": "film reel unspooling into a dashed blob trail, variant one", "from": "harvested from .cache/cizim-drafts/la-bola-negra-2/ici-2-alt.json",
+      "note": "film reel unspooling into a dashed blob trail, variant one",
+      "from": "harvested from .cache/cizim-drafts/la-bola-negra-2/ici-2-alt.json",
       "paths": [
         {
           "d": "M-4,40 a26,26 0 1,0 52,0 a26,26 0 1,0 -52,0",
@@ -74,7 +77,8 @@
       ]
     },
     {
-      "note": "film reel unspooling into a large dark blob ring, variant two", "from": "harvested from .cache/cizim-drafts/la-bola-negra-2/ici-2-alt2.json",
+      "note": "film reel unspooling into a large dark blob ring, variant two",
+      "from": "harvested from .cache/cizim-drafts/la-bola-negra-2/ici-2-alt2.json",
       "paths": [
         {
           "d": "M-5,34 a25,25 0 1,0 50,0 a25,25 0 1,0 -50,0",
@@ -153,7 +157,8 @@
       ]
     },
     {
-      "note": "film reel unspooling into a dashed blob trail, variant three", "from": "harvested from .cache/cizim-drafts/la-bola-negra-2/ici-2.json",
+      "note": "film reel unspooling into a dashed blob trail, variant three",
+      "from": "harvested from .cache/cizim-drafts/la-bola-negra-2/ici-2.json",
       "paths": [
         {
           "d": "M-5,34 a25,25 0 1,0 50,0 a25,25 0 1,0 -50,0",

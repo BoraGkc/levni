@@ -8,11 +8,14 @@
     "halloween",
     "film reel",
     "spider web",
-    "horror"
+    "horror",
+    "ağ",
+    "film makarası"
   ],
   "variants": [
     {
-      "note": "film reel with an orange spiderweb and small spider", "from": "harvested from .cache/cizim-drafts/korku-filmleri-halloween/kapak.json",
+      "note": "film reel with an orange spiderweb and small spider",
+      "from": "harvested from .cache/cizim-drafts/korku-filmleri-halloween/kapak.json",
       "paths": [
         {
           "d": "M4.0,50.0 a46,46 0 1,0 92,0 a46,46 0 1,0 -92,0",

@@ -1,12 +1,24 @@
 {
- "name": "home-2",
+ "name": "house-window",
+ "aliases": [
+  "home-2"
+ ],
  "category": "home",
  "tags": [
-  "home 2"
+  "house",
+  "homepage",
+  "main",
+  "start",
+  "dashboard",
+  "building",
+  "residence",
+  "real estate",
+  "ev",
+  "ana sayfa"
  ],
  "variants": [
   {
-   "note": "home 2, line icon redrawn from Tabler Icons (MIT)",
+   "note": "house window, line icon redrawn from Tabler Icons (MIT, source name home-2)",
    "paths": [
     {
      "d": "M44.6 53 h16.8 v16.8 h-16.8 l0 -16.8",

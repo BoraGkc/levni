@@ -2,7 +2,14 @@
  "name": "git-commit",
  "category": "tech",
  "tags": [
-  "git commit"
+  "version control",
+  "vcs",
+  "history",
+  "changes",
+  "repository",
+  "push",
+  "commit",
+  "git"
  ],
  "variants": [
   {
