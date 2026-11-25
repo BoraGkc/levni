@@ -1963,6 +1963,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   .lv-ib:disabled { opacity: .3; }
   .lv-eye[aria-pressed='true'] { opacity: .4; }
   .lv-data { display: grid; gap: 6px; }
+  @media (max-width: 760px) { #shapes .lv-grid-2, #gallery-tpls .lv-grid-2, #templates.lv-grid-2 { grid-template-columns: repeat(3, minmax(0, 1fr)); } #shapes .lv-cap, #gallery-tpls .lv-cap, #templates .lv-cap { font-size: 11px; } }
   .lv-pop { max-height: calc(100% - 90px); overflow-y: auto; overscroll-behavior: contain; }
   .lv-pop-k { margin: 12px 0 4px; font: 600 10px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
   .lv-pop-k:first-child { margin-top: 0; }
