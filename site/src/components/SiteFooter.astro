@@ -65,6 +65,7 @@ const year = new Date().getFullYear();
     </div>
     <div class="f-bottom">
       <p>© {year} Levni. Code MIT, Levni Folio drawings CC BY 4.0, bundled fonts SIL OFL.</p>
+      <p class="f-quip" data-quip>No image model was harmed in the making of this page.</p>
       <p>Powered by <a href={SITE.ortakAlan}>Ortak Alan</a></p>
     </div>
   </div>
@@ -91,4 +92,5 @@ const year = new Date().getFullYear();
     .f-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
   @media (max-width: 400px) { .f-cols { grid-template-columns: minmax(0, 1fr); } .f-cols a { padding: 7px 0; } }
+  .f-quip { color: var(--lime); }
 </style>

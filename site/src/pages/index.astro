@@ -214,7 +214,8 @@ const star = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
       <div class="stage">
         <div class="dotgrid" aria-hidden="true">{Array.from({ length: 21 }, (_, n) => <i style={`background:${['#E8522F','#F28C38','#F7C744','#58C4F6','#E66BF0','#F3C2F5','#F7C744'][(n * 5 + (n >> 2)) % 7]}`} />)}</div>
         <div class="screen" role="img" aria-label="A tulip drawn live in ASCII characters, the way Levni's glyph fill draws">
-          <div class="bar"><span>LEVNI / GLYPHFILL</span><span><b>●</b> <span id="ascii-state">live</span></span></div>
+          <div class="bar"><span>LEVNI / GLYPHFILL · <span id="ascii-mode">"mode": "char"</span></span><span><b>●</b> <span id="ascii-state">live</span></span></div>
+          <button type="button" class="glyph-btn" id="ascii-next" aria-label="Change the glyphs of the ASCII drawing">change glyphs ↻</button>
           <pre id="ascii" aria-hidden="true"></pre>
         </div>
         <div class="block" aria-hidden="true"><Logo size={200} tone="lime" class="block-mark" /></div>
@@ -225,12 +226,16 @@ const star = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
 
   <section class="stats" aria-label="Levni in numbers">
     <div class="wrap stats-row">
-      <div><b>0.15 s</b><span>a cover on a laptop</span></div>
-      <div><b>{SITE.props.toLocaleString('en')}</b><span>drawings in the folio</span></div>
-      <div><b>$0</b><span>per image, forever</span></div>
+      <div><b data-count="0.15" data-dec="2" data-suffix=" s">0.15 s</b><span>a cover on a laptop</span></div>
+      <div><b data-count={SITE.props}>{SITE.props.toLocaleString('en')}</b><span>drawings in the folio</span></div>
+      <div><b>$0</b><span>per image, forever <i class="wink">(we checked)</i></span></div>
       <div><b>MIT</b><span>code · CC BY 4.0 art</span></div>
     </div>
   </section>
+
+  <div class="ticker" aria-hidden="true"><div class="ticker-track">
+    {[0, 1].map(() => ['No image model', 'No API key', 'No credits', '0.15 s a cover', 'MIT code', 'CC BY 4.0 drawings', 'Runs on your laptop', 'Same seed, same picture', 'Zero GPUs consulted'].map((t) => <span>{t}</span>))}
+  </div></div>
 
   <!-- 2. What it makes: the folio, bold -->
   <section id="makes" class="folio-band" aria-labelledby="makes-title">
@@ -518,7 +523,9 @@ npx @levni/levni board brand.json board.png`}</code></pre>
   // --- hero: a tulip drawn live in characters (the same idea as the glyphfill element)
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const pre = document.getElementById('ascii') as HTMLPreElement;
-  const COLS = 46, ROWS = 27, RAMP = ' .:-=+*#%@';
+  const COLS = 46, ROWS = 27;
+  const MODES: [string, string][] = [['char', ' .:-=+*#%@'], ['block', ' ░░▒▒▓▓██'], ['dot', ' .,:;oO0@'], ['binary', ' .01010101'], ['name', ' .levniLEVNI']];
+  let mi = 0, RAMP = MODES[0][1];
   function tulipMask(cols: number, rows: number, aspect: number) {
     const W = cols * 4, H = Math.round(rows * 4 * aspect);
     const c = document.createElement('canvas'); c.width = W; c.height = H;
@@ -564,7 +571,7 @@ npx @levni/levni board brand.json board.png`}</code></pre>
           else {
             const j = Math.max(0, Math.min(1, v + Math.sin(t * 1.6 + x * 0.35 + y * 0.22) * 0.07 + (noise[y][x] - 0.5) * 0.12));
             chr = RAMP[Math.min(RAMP.length - 1, 1 + Math.floor(j * (RAMP.length - 1)))];
-            c = chr === '@' ? 'r' : (j < 0.3 ? 'l' : '');
+            c = j > 0.86 ? 'r' : (j < 0.3 ? 'l' : '');
           }
           if (c !== cls) { if (run) line += cls ? `<span class="${cls}">${run}</span>` : run; run = ''; cls = c; }
           run += chr;
@@ -587,6 +594,27 @@ npx @levni/levni board brand.json board.png`}</code></pre>
       if (reduce) frame(0);
     });
     pre.addEventListener('pointerleave', () => { mx = my = -99; if (reduce) frame(0); });
+    const modeEl = document.getElementById('ascii-mode')!;
+    const next = () => { mi = (mi + 1) % MODES.length; RAMP = MODES[mi][1]; modeEl.textContent = `"mode": "${MODES[mi][0]}"`; frame(performance.now()); };
+    document.getElementById('ascii-next')!.addEventListener('click', next);
+    pre.addEventListener('click', next);
+  }
+
+  // --- numbers count up once, when the strip scrolls into view (the final values are already in the HTML)
+  if (!reduce) {
+    const nums = [...document.querySelectorAll<HTMLElement>('[data-count]')];
+    const io = new IntersectionObserver((es) => es.forEach((e) => {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      const el = e.target as HTMLElement, to = +el.dataset.count!, dec = +(el.dataset.dec || 0), suf = el.dataset.suffix || '', t0 = performance.now();
+      const step = (now: number) => {
+        const p = Math.min(1, (now - t0) / 1100), v = to * (1 - Math.pow(1 - p, 3));
+        el.textContent = (dec ? v.toFixed(dec) : Math.round(v).toLocaleString('en')) + suf;
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }), { threshold: 0.6 });
+    nums.forEach((n) => io.observe(n));
   }
 
   document.querySelectorAll<HTMLButtonElement>('.hcopy').forEach((b) => b.addEventListener('click', async () => {
@@ -926,4 +954,17 @@ npx @levni/levni board brand.json board.png`}</code></pre>
   .pb-burst { position: absolute; right: -40px; bottom: -70px; width: 170px; animation: spin 60s linear infinite; }
   .poster-band .stripes { height: 56px; margin-top: clamp(40px, 5vw, 64px); }
   @media (max-width: 860px) { .pb-wrap { grid-template-columns: minmax(0, 1fr); } .pb-burst { display: none; } }
+
+  .glyph-btn { position: absolute; right: 12px; bottom: 34px; z-index: 2; border: 0; background: var(--indigo); color: #fff; font: 500 0.66rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; padding: 9px 12px; cursor: pointer; }
+  .glyph-btn:hover { background: var(--lime); color: var(--indigo); }
+  .ticker { background: var(--lime); color: var(--indigo); overflow: hidden; font: 600 0.8rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0; }
+  .ticker-track { display: flex; width: max-content; padding: 14px 0; animation: tick 40s linear infinite; }
+  .ticker span { padding: 0 20px; white-space: nowrap; }
+  .ticker span::after { content: '✕'; color: var(--red); margin-left: 40px; }
+  .ticker:hover .ticker-track { animation-play-state: paused; }
+  @keyframes tick { to { transform: translateX(-50%); } }
+  .wink { font-style: normal; opacity: 0.6; }
+  .fcard .fcap b::after { content: ' →'; display: inline-block; opacity: 0; transform: translateX(-6px); transition: opacity 0.2s, transform 0.2s; }
+  .fcard:hover .fcap b::after { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } }
 </style>

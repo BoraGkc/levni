@@ -1,10 +1,43 @@
 ---
 import Base from '../layouts/Base.astro';
+// A wilted ASCII tulip: the page was never drawn.
+const art = String.raw`
+            .        .
+              \  ,  /
+          '-.  \ | /  .-'
+             '. ___ .'
+       ----  ( 4 0 4 )  ----
+             .'‾‾‾'.
+          .-'   |   '-.
+               /
+              /     ,
+         \   (     /
+          '._ \  _/
+             '-\/-'
+                |
+          ~~~~~~|~~~~~~
+`;
 ---
-<Base title="Page not found" description="This page does not exist on levni.dev.">
-  <section class="wrap" style="text-align:center;margin-top:64px">
-    <img src="/props/question-0.webp" alt="" width="160" height="160" style="margin:0 auto" />
-    <h1>Not here</h1>
-    <p>This page does not exist. <a href="/">Back to Levni</a>.</p>
+<Base title="Page not found" description="This page does not exist on levni.dev." noindex>
+  <section class="wrap nf brand-hero no-art">
+    <div class="nf-grid">
+      <div>
+        <p class="eyebrow">Error 404 · not drawn yet</p>
+        <h1>This page was never drawn.</h1>
+        <p class="lede">We checked the scene file. No element at this address, and no image model to blame either. The critic’s note: <code>focal point missing</code>.</p>
+        <p class="nf-links"><a href="/">Back to the homepage →</a> <a href="/gallery/">See what was drawn →</a> <a href="/library/">Search 1,600+ drawings →</a></p>
+      </div>
+      <pre class="nf-art" aria-label="A wilted ASCII tulip with 404 in its cup">{art}</pre>
+    </div>
   </section>
 </Base>
+
+<style>
+  .nf-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 32px; align-items: center; }
+  .nf-art { margin: 0; border: 0; background: #fff; color: var(--indigo); font: 600 clamp(0.72rem, 1.9vw, 1.35rem)/1.15 var(--mono); padding: 28px 24px; text-align: center; overflow-x: auto; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%); }
+  .nf-links { display: flex; flex-wrap: wrap; gap: 8px 22px; font: 500 0.78rem/1.6 var(--mono); text-transform: uppercase; letter-spacing: 0.05em; }
+  .nf-links a { text-decoration: none; }
+  @media (max-width: 860px) { .nf-grid { grid-template-columns: minmax(0, 1fr); } }
+  @media (prefers-reduced-motion: no-preference) { .nf-art { animation: wilt 4s ease-in-out infinite alternate; transform-origin: 50% 100%; } }
+  @keyframes wilt { from { transform: rotate(-1.5deg); } to { transform: rotate(1.5deg); } }
+</style>

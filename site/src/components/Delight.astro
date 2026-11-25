@@ -1,0 +1,136 @@
+---
+// Small surprises, on every page (not the embedded editor). Nothing here loads anything or tracks anything.
+//   • the console prints an ASCII tulip and a hello for the curious
+//   • ↑ ↑ ↓ ↓ ← → ← → B A rains ASCII tulips: "Lale Devri" mode
+//   • typing "levni" anywhere (outside a field) blooms the logo
+//   • clicking the header mark five times shuffles its riso inks
+//   • the footer quip changes on every page load
+---
+<div class="dl-toast" role="status" aria-live="polite" hidden></div>
+<canvas class="dl-rain" aria-hidden="true" hidden></canvas>
+
+<script>
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // --- the console hello
+  const tulip = [
+    '        .   .   .',
+    '       /|\\ /|\\ /|\\',
+    '      ( @@@@@@@@@ )      levni',
+    '       \\@@@@@@@@@/       designed for agents, drawn for people',
+    '        \\@@@@@@@/',
+    '          \\@@@/          no image model was harmed',
+    '            |            in the making of this page.',
+    '       \\\\   |   //',
+    '        \\\\  |  //        try ↑ ↑ ↓ ↓ ← → ← → B A',
+    '         \\\\ | //',
+    '    ~~~~~~~~|~~~~~~~~    github.com/BoraGkc/levni',
+  ].join('\n');
+  console.log(`%c${tulip}`, 'font-family: ui-monospace, monospace; color: #4B2FD6; line-height: 1.25');
+  console.log('%cReading the source? We like you. The engine is MIT, the drawings CC BY 4.0. Pull requests welcome.', 'font: 12px ui-monospace, monospace; background: #D6E521; color: #4B2FD6; padding: 4px 8px');
+
+  // --- toast
+  const toast = document.querySelector<HTMLElement>('.dl-toast')!;
+  let toastTimer: number | undefined;
+  const say = (text: string) => {
+    toast.textContent = text;
+    toast.hidden = false;
+    toast.classList.remove('out');
+    clearTimeout(toastTimer);
+    toastTimer = window.setTimeout(() => { toast.classList.add('out'); setTimeout(() => (toast.hidden = true), 300); }, 3200);
+  };
+
+  // --- Lale Devri: ASCII tulips fall for a few seconds
+  const canvas = document.querySelector<HTMLCanvasElement>('.dl-rain')!;
+  const SPRITES = [[' . . . ', '\\@@@@@/', ' \\@@@/ ', '   |   ', ' \\ | / '], [' ^ ^ ', '(%%%)', ' \\%/ ', '  |  ', ' /|  '], [' .:. ', '(###)', ' \\#/ ', '  |  ']];
+  const INKS = ['#D6E521', '#FF3A44', '#FFFFFF', '#FF39B4', '#58C4F6', '#F7C744'];
+  function rain() {
+    if (reduce) { say('Lale Devri unlocked. (Motion is off, so imagine the tulips.)'); return; }
+    say('Lale Devri unlocked. 1718–1730, and now.');
+    const dpr = Math.min(devicePixelRatio || 1, 2);
+    canvas.width = innerWidth * dpr; canvas.height = innerHeight * dpr;
+    canvas.hidden = false;
+    const g = canvas.getContext('2d')!;
+    g.scale(dpr, dpr);
+    const drops = Array.from({ length: Math.round(innerWidth / 28) }, () => ({
+      x: Math.random() * innerWidth, y: -Math.random() * innerHeight, v: 1.6 + Math.random() * 3.2,
+      s: SPRITES[(Math.random() * SPRITES.length) | 0], c: INKS[(Math.random() * INKS.length) | 0], f: 11 + Math.random() * 9,
+    }));
+    const end = performance.now() + 6500;
+    const tick = (now: number) => {
+      g.clearRect(0, 0, innerWidth, innerHeight);
+      const fade = Math.min(1, (end - now) / 800);
+      g.globalAlpha = Math.max(0, fade);
+      for (const d of drops) {
+        d.y += d.v;
+        if (d.y > innerHeight + 80 && now < end - 1500) d.y = -60;
+        g.font = `600 ${d.f}px "IBM Plex Mono", ui-monospace, monospace`;
+        g.fillStyle = d.c;
+        d.s.forEach((line, i) => g.fillText(line, d.x, d.y + i * d.f * 1.05));
+      }
+      if (now < end) requestAnimationFrame(tick); else { canvas.hidden = true; g.globalAlpha = 1; }
+    };
+    requestAnimationFrame(tick);
+  }
+
+  // --- keys: the Konami code, and "levni" typed anywhere outside a field
+  const KONAMI = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+  let k = 0, typed = '';
+  addEventListener('keydown', (e) => {
+    const t = e.target as HTMLElement;
+    if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+    const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+    k = key === KONAMI[k] ? k + 1 : key === KONAMI[0] ? 1 : 0;
+    if (k === KONAMI.length) { k = 0; rain(); }
+    if (e.key.length === 1) {
+      typed = (typed + e.key.toLowerCase()).slice(-5);
+      if (typed === 'levni') { document.documentElement.classList.add('dl-bloom'); say('You said the name. The tulip heard you.'); setTimeout(() => document.documentElement.classList.remove('dl-bloom'), 1600); }
+    }
+  });
+
+  // --- five clicks on the header mark shuffle its inks
+  const mark = document.querySelector<HTMLAnchorElement>('.site-header .wordmark');
+  if (mark) {
+    let clicks = 0, last = 0;
+    const svg = mark.querySelector('svg');
+    mark.addEventListener('click', (e) => {
+      const now = performance.now();
+      clicks = now - last < 600 ? clicks + 1 : 1; last = now;
+      if (clicks >= 3) e.preventDefault();
+      if (clicks === 5 && svg) {
+        clicks = 0;
+        const [a, b] = [INKS[(Math.random() * INKS.length) | 0], ['#4B2FD6', '#FF3A44', '#1B1340'][(Math.random() * 3) | 0]];
+        svg.querySelector('path')?.setAttribute('fill', a);
+        svg.querySelector('g')?.setAttribute('fill', b);
+        say('New inks. Levni would approve; he changed his palette too.');
+      }
+    });
+  }
+
+  // --- the footer quip
+  const QUIPS = [
+    'No image model was harmed in the making of this page.',
+    'Zero GPUs were consulted.',
+    'Hand-inked by code. The hand is a for-loop.',
+    'Same seed, same picture. Unlike your last meeting.',
+    'Levni painted for a sultan. We draw for your agent.',
+    'Powered by JSON and an unreasonable love of tulips.',
+    'If it renders in 0.15 s, it was not a diffusion model.',
+    'Our only credits are in the changelog.',
+    'Psst: ↑ ↑ ↓ ↓ ← → ← → B A',
+  ];
+  const q = document.querySelector<HTMLElement>('[data-quip]');
+  if (q) q.textContent = QUIPS[(Math.random() * QUIPS.length) | 0];
+</script>
+
+<style is:global>
+  .dl-toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 90; max-width: calc(100vw - 32px); background: var(--lime); color: var(--indigo); font: 600 0.8rem/1.4 var(--mono); letter-spacing: 0.02em; padding: 12px 18px; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%); animation: dl-in 0.25s cubic-bezier(0.2, 0.8, 0.2, 1); }
+  .dl-toast.out { opacity: 0; transform: translate(-50%, 8px); transition: opacity 0.25s, transform 0.25s; }
+  @keyframes dl-in { from { opacity: 0; transform: translate(-50%, 10px); } }
+  .dl-rain { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 80; pointer-events: none; }
+  .dl-bloom .site-header .wordmark svg { animation: dl-bloom 1.4s cubic-bezier(0.3, 1.6, 0.4, 1); }
+  @keyframes dl-bloom { 0% { transform: none; } 30% { transform: scale(1.6) rotate(-12deg); } 60% { transform: scale(0.9) rotate(8deg); } 100% { transform: none; } }
+  .site-header .wordmark svg { transition: transform 0.3s cubic-bezier(0.3, 1.6, 0.4, 1); }
+  .site-header .wordmark:hover svg { transform: rotate(-8deg) scale(1.08); }
+  @media (prefers-reduced-motion: reduce) { .dl-toast, .dl-bloom .site-header .wordmark svg { animation: none; } .site-header .wordmark:hover svg { transform: none; } }
+</style>
