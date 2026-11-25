@@ -6,3 +6,9 @@
   Cache-Control: public, max-age=604800
 /og/*
   Cache-Control: public, max-age=604800
+/gallery/
+  ! Cache-Control
+  Cache-Control: public, max-age=0, must-revalidate
+/gallery/index.html
+  ! Cache-Control
+  Cache-Control: public, max-age=0, must-revalidate
