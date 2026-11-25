@@ -125,7 +125,7 @@ Place one with { "type": "prop", "name": "<name>", "variant": <n>, "x": 600, "y"
   <h2 id="trouble">Troubleshooting</h2>
   <ul>
     <li><strong>The tools do not show up.</strong> Restart the client after editing its config, and check that <code>npx -y {pkg} mcp</code> starts when you run it in a terminal. Node.js 20 or newer is required.</li>
-    <li><strong><code>render_poster</code> is missing or errors.</strong> Posters arrived in 0.3.0, which is not on npm yet. Use the checkout config above, or <code>npm install github:BoraGkc/levni</code> and point the client at <code>node_modules/@levni/levni/bin/levni.mjs</code>.</li>
+    <li><strong><code>render_poster</code> is missing or errors.</strong> Posters arrived in 0.3.0, which is not on npm yet. Use the checkout config above, or <code>npm install github:Levni-Dev/levni</code> and point the client at <code>node_modules/@levni/levni/bin/levni.mjs</code>.</li>
     <li><strong>Files land in the wrong folder.</strong> Paths are relative to the client’s working directory. Use absolute paths in <code>out</code> if in doubt.</li>
     <li><strong>The agent cannot see images.</strong> Ask it to pass <code>preview: false</code> and rely on <code>critique_scene</code>, or on <code>levni check</code> for drawings.</li>
   </ul>

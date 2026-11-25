@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Search the [Library](https://levni.dev/library/) first (names and tags, English and Turkish). No logos, faces or hands: see [BRAND_LOGOS.md](https://github.com/BoraGkc/levni/blob/main/BRAND_LOGOS.md) and [CONTRIBUTING.md](https://github.com/BoraGkc/levni/blob/main/CONTRIBUTING.md).
+        Search the [Library](https://levni.dev/library/) first (names and tags, English and Turkish). No logos, faces or hands: see [BRAND_LOGOS.md](https://github.com/Levni-Dev/levni/blob/main/BRAND_LOGOS.md) and [CONTRIBUTING.md](https://github.com/Levni-Dev/levni/blob/main/CONTRIBUTING.md).
   - type: input
     id: name
     attributes:

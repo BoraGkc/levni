@@ -139,7 +139,7 @@ npx @levni/levni ghost attach plan.json       # dry run: print the planned edits
 npx @levni/levni ghost attach plan.json --apply
 ```
 
-A plan file has a `posts` list, and each entry has the same shape as above. Scenes can be file paths, relative to the plan file. Details are in the [Ghost adapter docs](https://github.com/BoraGkc/levni/blob/main/docs/ghost.md).
+A plan file has a `posts` list, and each entry has the same shape as above. Scenes can be file paths, relative to the plan file. Details are in the [Ghost adapter docs](https://github.com/Levni-Dev/levni/blob/main/docs/ghost.md).
 
 ## Know the limits
 

@@ -13,7 +13,7 @@ faq:
   - q: "How do I get the old renderer back?"
     a: "Set the environment variable `LEVNI_RASTER=rsvg`. Levni then rasterises the whole SVG with librsvg, filter included, exactly as before. Unset it to return to the fast path."
   - q: "Which version has the faster renderer?"
-    a: "It ships in 0.3.0. The npm package is still 0.2.0, so until 0.3.0 is published, install with `npm install github:BoraGkc/levni`."
+    a: "It ships in 0.3.0. The npm package is still 0.2.0, so until 0.3.0 is published, install with `npm install github:Levni-Dev/levni`."
   - q: "Can I call the new renderer from my own code?"
     a: "Yes. Import `rasterize` from `@levni/levni` and call `rasterize(svg, { density, raw })`. It returns a PNG buffer, or raw RGBA pixels with `raw: true`."
 ---
@@ -22,7 +22,7 @@ Levni used to take about a second to draw one cover. That is fine for a single p
 
 This post explains what was slow, the trick that fixed it, and how we checked that the pictures stay the same. It also shows the numbers and what they change if an agent or a script calls Levni. You do not need to change anything to benefit. The faster renderer is the default.
 
-The change ships in Levni 0.3.0. The npm package is still 0.2.0, so until it is published, install the repository version with `npm install github:BoraGkc/levni`.
+The change ships in Levni 0.3.0. The npm package is still 0.2.0, so until it is published, install the repository version with `npm install github:Levni-Dev/levni`.
 
 ## Find what was slow
 

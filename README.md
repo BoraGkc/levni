@@ -49,7 +49,7 @@ We use AI every day. We just do not rent our taste from it. Read the [manifesto]
 
 **Try it in your browser first.** The [Levni editor](https://levni.dev/editor/) runs the same engine in the page: drag drawings onto a canvas, turn them into 3D icons or ASCII, download PNG or SVG. The [README banner maker](https://levni.dev/banner/) turns a GitHub link into a 1280 × 640 banner. Both are free, with no sign-up.
 
-**Free in your agent.** Levni draws on your machine, so the $20 Claude or ChatGPT plan you already have is enough: no image credits, no second bill. If Levni is useful to you, a [star on GitHub](https://github.com/BoraGkc/levni) helps others find it.
+**Free in your agent.** Levni draws on your machine, so the $20 Claude or ChatGPT plan you already have is enough: no image credits, no second bill. If Levni is useful to you, a [star on GitHub](https://github.com/Levni-Dev/levni) helps others find it.
 
 **With an AI assistant (MCP).** Claude Code:
 
@@ -235,10 +235,10 @@ Levni is a commons, and there are five ways in. All of them are open: [levni.dev
 | door | how |
 | --- | --- |
 | **Draw for the Folio** | one JSON file per drawing in `library/props/`, check it with `npx @levni/levni add my-drawing.json --sheet check.png`, open a pull request. Your name goes in the file and the credits. |
-| **Ask for a drawing** | [prop request](https://github.com/BoraGkc/levni/issues/new?template=prop-request.yml): say what scene needs it |
-| **Share a style pack** | [style pack](https://github.com/BoraGkc/levni/issues/new?template=style-pack.yml): the whole library in your palette |
-| **Bring your brand, show your work** | [showcase](https://github.com/BoraGkc/levni/issues/new?template=showcase.yml): a brand.json, a README banner, a poster series, with the scene |
-| **Talk** | [issues](https://github.com/BoraGkc/levni/issues), and the [Code of Conduct](CODE_OF_CONDUCT.md) for everyone |
+| **Ask for a drawing** | [prop request](https://github.com/Levni-Dev/levni/issues/new?template=prop-request.yml): say what scene needs it |
+| **Share a style pack** | [style pack](https://github.com/Levni-Dev/levni/issues/new?template=style-pack.yml): the whole library in your palette |
+| **Bring your brand, show your work** | [showcase](https://github.com/Levni-Dev/levni/issues/new?template=showcase.yml): a brand.json, a README banner, a poster series, with the scene |
+| **Talk** | [issues](https://github.com/Levni-Dev/levni/issues), and the [Code of Conduct](CODE_OF_CONDUCT.md) for everyone |
 
 A drawing looks like this:
 

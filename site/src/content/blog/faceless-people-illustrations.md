@@ -142,7 +142,7 @@ The highlighted ones are scattered by the seed, not grouped. Always take the sha
 
 ## Take care with sensitive stories
 
-For stories about loss, disaster, illness or courts, people in a picture can feel intrusive. Levni's [guide for sensitive stories](https://github.com/BoraGkc/levni/blob/main/docs/sensitive.md) suggests the opposite of a crowd: one quiet object with a lot of space, such as an empty chair, a candle or a lit window, in blues only. An empty room says more than a crowd in distress.
+For stories about loss, disaster, illness or courts, people in a picture can feel intrusive. Levni's [guide for sensitive stories](https://github.com/Levni-Dev/levni/blob/main/docs/sensitive.md) suggests the opposite of a crowd: one quiet object with a lot of space, such as an empty chair, a candle or a lit window, in blues only. An empty room says more than a crowd in distress.
 
 ## Let an assistant cast the scene
 
@@ -158,6 +158,6 @@ notes and save cover.png.
 
 ## What to do next
 
-See people in context in [the dioramas gallery](/gallery/#worlds), where they stand in cafes and streets, and read [isometric diorama illustrations](/blog/isometric-diorama-illustrations/) to place them in a world. The full list of elements is on [the features page](/features/), the drawings they can hold are in [the library](/library/), and the code is on [GitHub](https://github.com/BoraGkc/levni).
+See people in context in [the dioramas gallery](/gallery/#worlds), where they stand in cafes and streets, and read [isometric diorama illustrations](/blog/isometric-diorama-illustrations/) to place them in a world. The full list of elements is on [the features page](/features/), the drawings they can hold are in [the library](/library/), and the code is on [GitHub](https://github.com/Levni-Dev/levni).
 
 **Reference and examples.** Read the [scene elements reference](/docs/elements/) (every element and field); see finished work on [the features page](/features/) and in [the gallery](/gallery/).

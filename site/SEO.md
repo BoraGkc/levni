@@ -14,7 +14,7 @@ Every post in `src/content/blog/` must have this before it ships. The templates 
 - First paragraph names the main keyword naturally.
 - Every image has descriptive alt text and an italic caption on the next line.
 - At least three internal links: related posts, a `/docs/` page (`getting-started`, `mcp`, `cli`, `boards`, `posters`, `elements`) and `/features/` or `/gallery/`. The closing "Reference and examples" line carries the docs, features and gallery links.
-- Install facts: live npm package is `@levni/levni` 0.2.0. Posters and `type` need 0.3.0 (`npm install github:BoraGkc/levni` until it is published): say so in any post that uses them.
+- Install facts: live npm package is `@levni/levni` 0.2.0. Posters and `type` need 0.3.0 (`npm install github:Levni-Dev/levni` until it is published): say so in any post that uses them.
 - Plain British English, no hype words, no em dashes.
 
 ## Added by the templates

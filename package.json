@@ -82,10 +82,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BoraGkc/levni.git"
+    "url": "git+https://github.com/Levni-Dev/levni.git"
   },
   "bugs": {
-    "url": "https://github.com/BoraGkc/levni/issues"
+    "url": "https://github.com/Levni-Dev/levni/issues"
   },
   "publishConfig": {
     "access": "public"

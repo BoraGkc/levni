@@ -117,6 +117,6 @@ and save it as og.png.
 
 Levni draws on your own machine, so the $20 Claude or ChatGPT plan you already have is enough: no image credits and no second bill. Setup takes a minute: [add Levni to Claude Code, Claude Desktop, Codex or Cursor](/mcp/#setup).
 
-If Levni is useful to you, a [star on GitHub](https://github.com/BoraGkc/levni) helps other people find it.
+If Levni is useful to you, a [star on GitHub](https://github.com/Levni-Dev/levni) helps other people find it.
 
 Reference and examples: [getting started](/docs/getting-started/), [the MCP server](/docs/mcp/), [all features](/features/) and [the gallery](/gallery/). For more on the styles in this post, read [3D icons from the library](/blog/free-3d-icons/) and [ASCII art illustrations](/blog/ascii-art-illustrations/).

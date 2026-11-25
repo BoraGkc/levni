@@ -47,7 +47,7 @@ Click a drawing to open it. The panel shows:
 - **Copy link.** Every drawing has its own address, for example [`/library/?p=lighthouse`](/library/?p=lighthouse), handy for a brief or a pull request.
 - **Related drawings.** Ranked by shared tags and the name's group word: open the baklava and the baklava tray and lokum are next to it.
 
-A search with no results offers to [ask for the drawing](https://github.com/BoraGkc/levni/issues/new?template=prop-request.yml). A search for a brand explains why it will never be there.
+A search with no results offers to [ask for the drawing](https://github.com/Levni-Dev/levni/issues/new?template=prop-request.yml). A search for a brand explains why it will never be there.
 
 ## Names that say what they show
 
@@ -71,7 +71,7 @@ The Folio draws no brand logos. Logos are trademarks that may not be changed, an
 
 ## Add a drawing
 
-Missing something? Every drawing is one JSON file of paths in a 0–100 box. The [Folio guide](https://github.com/BoraGkc/levni/blob/main/docs/folio-guide.md) has the drawing, naming and tagging rules and a checklist. Check your file with:
+Missing something? Every drawing is one JSON file of paths in a 0–100 box. The [Folio guide](https://github.com/Levni-Dev/levni/blob/main/docs/folio-guide.md) has the drawing, naming and tagging rules and a checklist. Check your file with:
 
 ```bash
 npx @levni/levni add my-props.json --sheet check.png

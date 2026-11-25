@@ -57,13 +57,13 @@ Search the [Library](/library/) first, in English or Turkish. Then pick one obje
 
 - your own drawing (drawing in the spirit of a style is welcome, tracing a photo or an icon set is not)
 - no faces and no hands: people appear only as faceless pictograms
-- no logos or anything that reads as one (why: [BRAND_LOGOS.md](https://github.com/BoraGkc/levni/blob/main/BRAND_LOGOS.md))
+- no logos or anything that reads as one (why: [BRAND_LOGOS.md](https://github.com/Levni-Dev/levni/blob/main/BRAND_LOGOS.md))
 - no text inside the drawing
 - one object, one idea
 
 ## Step 2: draw it in the house style
 
-The full rule book is the [Folio guide](https://github.com/BoraGkc/levni/blob/main/docs/folio-guide.md). The parts that matter most for a first drawing:
+The full rule book is the [Folio guide](https://github.com/Levni-Dev/levni/blob/main/docs/folio-guide.md). The parts that matter most for a first drawing:
 
 - **Size.** The object fills about 70–85 of the 100 box, centred near (50, 50), inside 4..96.
 - **Line.** Outlines `weight` 8–10, details 4–6. Do not mix many weights.
@@ -71,7 +71,7 @@ The full rule book is the [Folio guide](https://github.com/BoraGkc/levni/blob/ma
 - **Detail.** 2–24 paths. Shrink your drawing to 120 px and squint: if an area goes dark, it is too busy.
 - **Space.** Keep at least one outline-width of paper between separate parts, or they read as a smudge at small sizes.
 
-You can draw the paths by hand in any vector tool and copy the `d` attributes, write them directly, or ask a chat model to draft them from a description. The repository has a [copy-paste prompt](https://github.com/BoraGkc/levni/blob/main/docs/prop-prompt.md) for that. If a model helped, you are still the one who checks every path, and you say so in the pull request.
+You can draw the paths by hand in any vector tool and copy the `d` attributes, write them directly, or ask a chat model to draft them from a description. The repository has a [copy-paste prompt](https://github.com/Levni-Dev/levni/blob/main/docs/prop-prompt.md) for that. If a model helped, you are still the one who checks every path, and you say so in the pull request.
 
 ## Step 3: name it and tag it
 
@@ -86,7 +86,7 @@ Names and tags are how people and agents find your drawing. The Library search, 
 Clone the repository, install, and run the check on your file:
 
 ```bash
-git clone https://github.com/BoraGkc/levni.git && cd levni
+git clone https://github.com/Levni-Dev/levni.git && cd levni
 npm install
 npx levni add my-drawing.json --sheet check.png
 ```
@@ -117,6 +117,6 @@ Your name stays in the drawing's `author` field. It shows up on the drawing's Li
 
 ## If you cannot draw it
 
-That is fine too. Open a [prop request](https://github.com/BoraGkc/levni/issues/new?template=prop-request.yml) and describe the scene that needs the object and the angle you want. Requests decide what gets drawn next, and someone who likes drawing watering cans may pick it up.
+That is fine too. Open a [prop request](https://github.com/Levni-Dev/levni/issues/new?template=prop-request.yml) and describe the scene that needs the object and the angle you want. Requests decide what gets drawn next, and someone who likes drawing watering cans may pick it up.
 
 There are four other ways to add to Levni, from palettes to brand kits, on the [community page](/community/). And if you want to know why we care about this at all, the [manifesto](/blog/post-ai-design-manifesto/) explains it.

@@ -33,7 +33,7 @@ npm install @levni/levni
 Posters and the `type` element arrived in Levni 0.3.0. The npm package is still at 0.2.0, which has no `levni poster` command, so until 0.3.0 is published install straight from GitHub:
 
 ```bash
-npm install github:BoraGkc/levni
+npm install github:Levni-Dev/levni
 ```
 
 Once 0.3.0 is on npm, the first command is all you need. The command you will use is `levni poster <spec.json> <out-dir>`. It is deterministic: the same spec gives the same posters, speck for speck.
@@ -150,7 +150,7 @@ Open `launch.json`, change a word or an ink, and render it with `npx @levni/levn
 The `render_poster` tool in the Levni MCP server takes the same spec. Add the server once. `render_poster` needs 0.3.0, so until it is on npm point the client at the GitHub version:
 
 ```bash
-claude mcp add levni -- npx -y github:BoraGkc/levni mcp
+claude mcp add levni -- npx -y github:Levni-Dev/levni mcp
 ```
 
 Once 0.3.0 is on npm, `claude mcp add levni -- npx -y @levni/levni mcp` is enough.

@@ -88,7 +88,7 @@ You can also try a look in the browser first: the [editor](/editor/) changes the
 
 A pack that works is worth sharing. Someone else is looking for exactly the palette you just tuned: a newspaper's print colours, a 1970s transit map, a night mode for a dark site.
 
-To propose a pack, open a [style pack issue](https://github.com/BoraGkc/levni/issues/new?template=style-pack.yml) on GitHub with:
+To propose a pack, open a [style pack issue](https://github.com/Levni-Dev/levni/issues/new?template=style-pack.yml) on GitHub with:
 
 - a short lowercase name, like `bosphorus-night`
 - the colour map as JSON

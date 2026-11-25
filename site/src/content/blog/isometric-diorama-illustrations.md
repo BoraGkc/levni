@@ -144,7 +144,7 @@ A preset is a starting point, not a locked picture. Objects you list in `objects
 ![The same isometric room as before with a mustard rug and a coral figure reading in the middle](/blog/isometric-diorama-illustrations/fig-5.webp)
 *The seed 3 room with a mustard rug, a coral reader and the plant removed.*
 
-Preset ids follow the kind of object: `floor`, `wall-back`, `wall-left`, `rug`, `desk`, `sofa`, `shelf`, `plant`, `person`, `counter`, `menu`, `board`, `road`, `car-1` and so on. To add something new, write a normal object with a `kind` and a position, for example a wall poster with `{ "kind": "prop", "name": "calendar", "wall": "x", "x": 120, "z": 140, "size": 60 }`. There are 37 object kinds in all, listed in [the scene reference](https://github.com/BoraGkc/levni/blob/main/docs/scene.md#little-3d-worlds-iso).
+Preset ids follow the kind of object: `floor`, `wall-back`, `wall-left`, `rug`, `desk`, `sofa`, `shelf`, `plant`, `person`, `counter`, `menu`, `board`, `road`, `car-1` and so on. To add something new, write a normal object with a `kind` and a position, for example a wall poster with `{ "kind": "prop", "name": "calendar", "wall": "x", "x": 120, "z": 140, "size": 60 }`. There are 37 object kinds in all, listed in [the scene reference](https://github.com/Levni-Dev/levni/blob/main/docs/scene.md#little-3d-worlds-iso).
 
 ## Use the blue palette for hard news
 

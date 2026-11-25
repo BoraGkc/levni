@@ -72,7 +72,7 @@ You do not need code. A good first proposal answers four questions in plain word
 3. **What steps** does it take, in order?
 4. **How** does it know the result is good, and what does it do when it is not?
 
-Add an example if you can: a before and after, a render, or a scene it would produce. Then open a [design skill proposal](https://github.com/BoraGkc/levni/issues/new?template=skill.yml) on GitHub. Rough ideas are welcome. The best skills will come from people who do the work every day and are tired of explaining the same rules in every critique.
+Add an example if you can: a before and after, a render, or a scene it would produce. Then open a [design skill proposal](https://github.com/Levni-Dev/levni/issues/new?template=skill.yml) on GitHub. Rough ideas are welcome. The best skills will come from people who do the work every day and are tired of explaining the same rules in every critique.
 
 ## What happens next
 
