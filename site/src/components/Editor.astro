@@ -6,6 +6,16 @@
 interface Props { embed?: boolean }
 const { embed = false } = Astro.props;
 import { SITE } from '../site';
+import gallery from '../data/gallery.json';
+import { existsSync } from 'node:fs';
+
+// every gallery scene that is a plain scene (boards are board specs, drawn in Node), grouped like the gallery.
+// NODE_ONLY: scenes the browser cannot draw (sharp textures, Tabler icons, image files); checked in the editor, Nov 2026
+const NODE_ONLY = new Set(['posters/08-liquidity', 'covers/oa-orman', 'covers/oa-orna', 'soft3d/auto-01', 'soft3d/auto-09',
+  ...['classroom', 'desk', 'office', 'room'].flatMap((w) => [`worlds/${w}-riso-2`, `worlds/${w}-riso-5`, `worlds/${w}-soft`]), 'worlds/room-miniature']);
+const tplGroups = (gallery.groups as [string, string][]).filter(([g]) => g !== 'boards').map(([g, label]) => [g, label,
+  (gallery.items as { group: string; id: string; title: string }[]).filter((i) => i.group === g && !NODE_ONLY.has(`${g}/${i.id}`) && existsSync(`public/g/${g}/${i.id}.json`))
+    .map((i) => [i.id, i.title, existsSync(`public/g/${g}/${i.id}-s.webp`) ? `${i.id}-s.webp` : `${i.id}.webp`])] as const).filter((x) => x[2].length);
 
 const jsonld = [
   { '@type': 'WebApplication', name: 'Levni editor', applicationCategory: 'DesignApplication', operatingSystem: 'Any (web browser)', url: `${SITE.url}/editor/`, offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, publisher: { '@id': `${SITE.ortakAlan}/#organization` } },
@@ -42,7 +52,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     </div>
 
     <!-- popovers -->
-    <div class="lv-pop" id="pop-size" hidden><p class="lv-pop-h">Resize</p><p class="lv-pop-sub">Everything on the canvas moves and scales with it.</p><div class="lv-list" id="sizes" role="radiogroup" aria-label="Canvas size"></div></div>
+    <div class="lv-pop" id="pop-size" hidden><p class="lv-pop-h">Resize</p><p class="lv-pop-sub">Everything on the canvas moves and scales with it.</p><div class="lv-list" id="sizes" role="radiogroup" aria-label="Canvas size"></div><button type="button" class="lv-allsizes" id="all-sizes"><b>Every size as a page</b><span>Link preview, square, story, YouTube and poster, from this design</span></button></div>
     <div class="lv-pop" id="pop-look" hidden><p class="lv-pop-h">Look</p><p class="lv-pop-sub">Colours and finish for the whole picture.</p><div class="lv-list" id="looks" role="radiogroup" aria-label="Look"></div></div>
     <div class="lv-pop" id="pop-notes" hidden><p class="lv-pop-h">Layout check</p><ul id="notes"></ul></div>
     <div class="lv-pop lv-pop-menu" id="pop-export" hidden>
@@ -50,10 +60,13 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       <button type="button" class="lv-menu" data-out="png2"><b>PNG, 2×</b><span>Sharp on retina screens</span></button>
       <button type="button" class="lv-menu" data-out="svg"><b>SVG</b><span>Vector, opens in Figma or Illustrator</span></button>
       <button type="button" class="lv-menu" data-out="json"><b>Scene JSON</b><span>Render it again with npx @levni/levni</span></button>
+      <button type="button" class="lv-menu" data-out="all-png" data-multi hidden><b>All pages, PNG</b><span>One image per page</span></button>
+      <button type="button" class="lv-menu" data-out="all-json" data-multi hidden><b>All pages, JSON</b><span>Every page as a scene</span></button>
       <a class="lv-menu lv-menu-cta" href="/mcp/"><b>Make the next one from a prompt</b><span>Levni in Claude or Codex, on the plan you already have</span></a>
     </div>
     <div class="lv-pop lv-pop-sm" id="pop-color" hidden></div>
     <div class="lv-pop lv-pop-sm" id="pop-variant" hidden></div>
+    <div class="lv-pop lv-pop-sm" id="pop-style" hidden></div>
 
     <!-- rail -->
     <nav class="lv-rail" aria-label="Editor panels">
@@ -68,7 +81,25 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
         <button type="button" class="lv-x" id="fly-close" aria-label="Close panel" set:html={ico('close', 18)} />
       </div>
       <div class="lv-fly-body">
-        <section data-p="templates" hidden><p class="lv-help">Start from a finished scene. Undo brings yours back.</p><div class="lv-grid lv-grid-2" id="templates"></div></section>
+        <section data-p="templates" hidden>
+          <details class="lv-brandf" id="brandf">
+            <summary><b>Brand → 8 posters</b><span>A poster series from a name, a mark and your inks, added as pages</span></summary>
+            <div class="lv-brandf-body">
+              <label>Name<input id="bf-name" type="text" value="Kumru" maxlength="24" /></label>
+              <label>Tagline<input id="bf-tag" type="text" value="Slow coffee for fast mornings" maxlength="80" /></label>
+              <label>Mark, any drawing<input id="bf-mark" type="text" value="dove" placeholder="dove, tulip, rocket…" /></label>
+              <label>Four words<input id="bf-words" type="text" value="Roast, Pour, Share, Brew" /></label>
+              <span class="lv-brandf-inks" role="group" aria-label="Inks">
+                <input type="color" value="#14181f" aria-label="Ink 1" /><input type="color" value="#1f3be0" aria-label="Ink 2" /><input type="color" value="#f0573a" aria-label="Ink 3" /><input type="color" value="#f1eee6" aria-label="Ink 4" />
+              </span>
+              <button type="button" class="lv-brandf-go" id="bf-go">Make the posters</button>
+            </div>
+          </details>
+          <p class="lv-help">Start from a finished scene: click to put it on this page (Undo brings yours back), or <b>+</b> to add it as a new page.</p>
+          <h3 class="lv-h3">Starters</h3>
+          <div class="lv-grid lv-grid-2" id="templates"></div>
+          <div id="gallery-tpls"></div>
+        </section>
         <section data-p="drawings">
           <p class="lv-replace" id="replace-note" hidden>Pick a drawing to replace <b id="replace-name"></b>. <button type="button" id="replace-cancel">Cancel</button></p>
           <label class="sr" for="q">Search drawings</label>
@@ -124,6 +155,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
           <div class="lv-drop" id="drop" hidden>Drop to add</div>
         </figure>
       </div>
+      {!embed && <div class="lv-pages" id="pages" role="list" aria-label="Pages"></div>}
       <div class="lv-bottom">
         <span class="lv-status" id="status" role="status" aria-live="polite"></span>
         <button type="button" class="lv-fit" id="fit">Fit</button>
@@ -134,6 +166,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     </section>
   </div>
 
+<script type="application/json" id="lv-gallery" set:html={JSON.stringify(tplGroups)}></script>
 <script>
   import { compose, critique, registerProps, registerFont, registerFile, fontsFor, toBlob, COLORS, STYLES } from '../../../src/browser.mjs';
   import CATS from '../data/categories.json';
@@ -289,14 +322,25 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   // ---------- state and history ----------
   const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
   const EMBED = document.getElementById('lv')!.dataset.embed === '1';
-  const persist = () => { if (EMBED) return; try { localStorage.setItem('levni-editor', JSON.stringify(scene)); } catch {} };
+  // a design is one page or several (a carousel, a poster series, every size of one post); `scene` is the open page
   let scene: any = structuredClone(STARTER), sel = -1;
+  let pages: any[] = [scene], page = 0;
+  // what a share link, the saved copy and a JSON download hold: one scene, or { pages } when there are several
+  const docOut = () => { pages[page] = scene; return pages.length > 1 ? { pages, page } : scene; };
+  function loadDoc(d: any) {
+    if (d && Array.isArray(d.pages) && d.pages.length && d.pages.every((p: any) => p && Array.isArray(p.elements))) { pages = d.pages; page = Math.max(0, Math.min(pages.length - 1, d.page | 0)); scene = pages[page]; }
+    else if (d && Array.isArray(d.elements)) { scene = d; pages = [scene]; page = 0; }
+  }
+  const setScene = (next: any) => { scene = next; pages[page] = scene; };
+  const persist = () => { if (EMBED) return; try { localStorage.setItem('levni-editor', JSON.stringify(docOut())); } catch {} };
   const past: string[] = [], future: string[] = [];
   const histUI = () => { $<HTMLButtonElement>('undo').disabled = !past.length; $<HTMLButtonElement>('redo').disabled = !future.length; };
-  function commit() { past.push(JSON.stringify(scene)); if (past.length > 120) past.shift(); future.length = 0; histUI(); }
+  const snap = () => { pages[page] = scene; return JSON.stringify({ pages, page }); };
+  const restore = (t: string) => { const d = JSON.parse(t); pages = d.pages; page = d.page; scene = pages[page]; };
+  function commit() { past.push(snap()); if (past.length > 120) past.shift(); future.length = 0; histUI(); }
   const clampSel = () => { sel = Math.min(sel, (scene.elements?.length ?? 0) - 1); };
-  function undo() { if (!past.length) return; future.push(JSON.stringify(scene)); scene = JSON.parse(past.pop()!); clampSel(); histUI(); refresh(); say('Undone.'); }
-  function redo() { if (!future.length) return; past.push(JSON.stringify(scene)); scene = JSON.parse(future.pop()!); clampSel(); histUI(); refresh(); say('Redone.'); }
+  function undo() { if (!past.length) return; future.push(snap()); restore(past.pop()!); clampSel(); histUI(); refresh(); say('Undone.'); }
+  function redo() { if (!future.length) return; past.push(snap()); restore(future.pop()!); clampSel(); histUI(); refresh(); say('Redone.'); }
   const change = (fn: (s: any) => void) => { commit(); fn(scene); refresh(); };
   const els = () => (scene.elements ||= []) as any[];
   const cur = () => els()[sel];
@@ -374,6 +418,12 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       if (cv.w !== canvas.w || cv.h !== canvas.h) { cv = canvas; layoutStage(); }
       $('err').textContent = '';
       if (fast) return;
+      if (pagesEl) { // the strip keeps its own copy: the canvas URL is revoked on the next draw
+        const old = pageThumbs.get(page)?.url, tu = URL.createObjectURL(new Blob([shownSvg], { type: 'image/svg+xml' }));
+        pageThumbs.set(page, { key: JSON.stringify(vis), url: tu });
+        const pi = pagesEl.querySelector<HTMLImageElement>(`[data-page="${page}"] img`); if (pi) pi.src = tu;
+        if (old) setTimeout(() => URL.revokeObjectURL(old), 2000);
+      }
       boxes = scene.reflow ? [] : await elementBoxes(scene);
       if (my !== token) return;
       const notes = [...(scene.screen ? ['The print screen is applied in Node; the preview shows the scene without it.'] : []), ...overlaps(),
@@ -391,8 +441,72 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     }
   }
   function refresh() {
-    render(); renderCtx(); renderLayers(); renderPanelFor(); syncTop(); syncCode();
+    render(); renderCtx(); renderLayers(); renderPanelFor(); syncTop(); syncCode(); renderPages();
     persist();
+  }
+
+  // ---------- pages ----------
+  const pagesEl = document.getElementById('pages');
+  const pageThumbs = new Map<number, { key: string; url: string }>();
+  let thumbQueue = Promise.resolve();
+  function pageThumb(i: number, im: HTMLImageElement) {
+    const vis = visible(i === page ? scene : pages[i]), key = JSON.stringify(vis);
+    const had = pageThumbs.get(i);
+    if (had && had.key === key) { im.src = had.url; return; }
+    if (i === page && lastUrl) return; // the open page shows the canvas image once it is drawn
+    thumbQueue = thumbQueue.then(async () => { try { const url = await thumbUrl(vis); pageThumbs.set(i, { key, url }); im.src = url; } catch {} });
+  }
+  const pageLabel = (p: any) => { const [w, h] = sizeOf(p); return SIZES.find((z) => z.wh[0] === w && z.wh[1] === h)?.label || `${w}×${h}`; };
+  function goPage(i: number) {
+    if (i === page || i < 0 || i >= pages.length) return;
+    pages[page] = scene; page = i; scene = pages[i]; sel = -1;
+    cv = { w: sizeOf(scene)[0], h: sizeOf(scene)[1] }; layoutStage();
+    refresh(); say(`Page ${i + 1} of ${pages.length}.`);
+  }
+  function pageAct(a: 'add' | 'dup' | 'del' | 'left' | 'right') {
+    commit(); pages[page] = scene;
+    if (a === 'add') { const [w, h] = sizeOf(scene); pages.splice(page + 1, 0, { canvas: [w, h], seed: scene.seed ?? 7, ...(scene.style ? { style: scene.style } : {}), ...(scene.finish ? { finish: scene.finish } : {}), ...(scene.background ? { background: scene.background } : {}), elements: [] }); page += 1; }
+    if (a === 'dup') { pages.splice(page + 1, 0, structuredClone(scene)); page += 1; }
+    if (a === 'del' && pages.length > 1) { pages.splice(page, 1); page = Math.min(page, pages.length - 1); }
+    if (a === 'left' && page > 0) { [pages[page - 1], pages[page]] = [pages[page], pages[page - 1]]; page -= 1; }
+    if (a === 'right' && page < pages.length - 1) { [pages[page + 1], pages[page]] = [pages[page], pages[page + 1]]; page += 1; }
+    pageThumbs.clear(); scene = pages[page]; sel = -1;
+    cv = { w: sizeOf(scene)[0], h: sizeOf(scene)[1] }; layoutStage();
+    refresh();
+    say(({ add: 'New page added.', dup: 'Page duplicated.', del: 'Page deleted. Undo (⌘Z) brings it back.', left: 'Page moved.', right: 'Page moved.' })[a]);
+  }
+  // add finished scenes as new pages after the open one (sizes, poster series, templates)
+  function addPages(list: any[], msg: string) {
+    if (!list.length) return;
+    commit(); pages[page] = scene;
+    pages.splice(page + 1, 0, ...list); page += 1;
+    pageThumbs.clear(); scene = pages[page]; sel = -1;
+    cv = { w: sizeOf(scene)[0], h: sizeOf(scene)[1] }; layoutStage();
+    refresh(); say(msg);
+  }
+  function renderPages() {
+    for (const m of document.querySelectorAll<HTMLElement>('[data-multi]')) m.hidden = pages.length < 2;
+    if (!pagesEl) return;
+    const items: HTMLElement[] = pages.map((p, i) => {
+      const it = document.createElement('div'); it.className = 'lv-page' + (i === page ? ' on' : ''); it.dataset.page = String(i); it.setAttribute('role', 'listitem');
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'lv-page-b'; b.setAttribute('aria-label', `Page ${i + 1}, ${pageLabel(p)}`); b.setAttribute('aria-current', String(i === page));
+      const [w, h] = sizeOf(p);
+      const im = Object.assign(document.createElement('img'), { alt: '', draggable: false }); im.style.aspectRatio = `${w} / ${h}`;
+      b.append(im, Object.assign(document.createElement('span'), { className: 'lv-page-n', textContent: `${i + 1} · ${pageLabel(p)}` }));
+      b.addEventListener('click', () => goPage(i));
+      it.append(b);
+      if (i === page) {
+        const tools = document.createElement('span'); tools.className = 'lv-page-tools';
+        const t = (label: string, txt: string, a: Parameters<typeof pageAct>[0], dis = false) => { const x = Object.assign(document.createElement('button'), { type: 'button', textContent: txt, title: label, disabled: dis }); x.setAttribute('aria-label', label); x.addEventListener('click', () => pageAct(a)); return x; };
+        tools.append(t('Move page left', '←', 'left', i === 0), t('Duplicate page', '⧉', 'dup'), t('Delete page', '×', 'del', pages.length < 2), t('Move page right', '→', 'right', i === pages.length - 1));
+        it.append(tools);
+      }
+      pageThumb(i, im);
+      return it;
+    });
+    const add = Object.assign(document.createElement('button'), { type: 'button', className: 'lv-page-add', textContent: '+ Page', title: 'Add an empty page of the same size' });
+    add.addEventListener('click', () => pageAct('add'));
+    pagesEl.replaceChildren(...items, add);
   }
 
   // ---------- selection on the canvas ----------
@@ -743,14 +857,54 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       if (!load) continue;
       const pic = tile($('templates'), label, async () => {
         const next = structuredClone(await load());
-        change(() => { scene = next; });
+        change(() => { setScene(next); });
         select(-1);
         say(`Template “${label}” loaded. Undo (⌘Z) brings your scene back.`);
       });
       (pic as any)._load = async () => { try { pic.append(Object.assign(document.createElement('img'), { src: await thumbUrl(await load()), alt: '' })); } catch { pic.closest('button')?.remove(); } };
       lazy.observe(pic);
     }
+    if (kind === 'templates') galleryTemplates();
   }
+  const GALLERY = JSON.parse(document.getElementById('lv-gallery')?.textContent || '[]') as [string, string, [string, string, string][]][];
+  function galleryTemplates() {
+    const box = $('gallery-tpls'), out: HTMLElement[] = [];
+    const get = async (g: string, id: string) => (await fetch(`/g/${g}/${id}.json`)).json();
+    for (const [g, label, items] of GALLERY) {
+      out.push(Object.assign(document.createElement('h3'), { className: 'lv-h3', textContent: `${label} (${items.length})` }));
+      const grid = document.createElement('div'); grid.className = 'lv-grid lv-grid-2';
+      for (const [id, title, th] of items) {
+        const cell = document.createElement('div'); cell.className = 'lv-tpl-cell'; grid.append(cell);
+        const pic = tile(cell, title.replace(/^[^:]+:\s*/, ''), async () => {
+          try { const next = await get(g, id); change(() => { setScene(next); }); select(-1); say(`“${title}” loaded. Undo (⌘Z) brings your scene back.`); } catch { say('Could not load that scene.'); }
+        });
+        pic.append(Object.assign(document.createElement('img'), { src: `/g/${g}/${th}`, alt: '', loading: 'lazy', decoding: 'async' }));
+        const plus = Object.assign(document.createElement('button'), { type: 'button', className: 'lv-tpl-add', textContent: '+', title: 'Add as a new page' });
+        plus.setAttribute('aria-label', `Add ${title} as a new page`);
+        plus.addEventListener('click', async (ev) => { ev.stopPropagation(); try { addPages([await get(g, id)], `“${title}” added as page ${page + 2}.`); } catch { say('Could not load that scene.'); } });
+        cell.append(plus);
+      }
+      out.push(grid);
+    }
+    box.replaceChildren(...out);
+  }
+  $('bf-go').addEventListener('click', async () => {
+    const go = $<HTMLButtonElement>('bf-go'), val = (id: string) => $<HTMLInputElement>(id).value.trim();
+    await indexReady;
+    const mark = fileFor(val('bf-mark'));
+    if (!mark) return say(`No drawing called “${val('bf-mark')}”. Try dove, tulip, rocket, coffee-cup…`);
+    if (!val('bf-name')) return say('Give the brand a name.');
+    go.disabled = true; go.textContent = 'Drawing…';
+    try {
+      const { expandPosters } = await import('../../../src/poster.mjs');
+      await ensureAssets({ elements: [{ type: 'prop', name: mark }] });
+      const inks = [...document.querySelectorAll<HTMLInputElement>('.lv-brandf-inks input')].map((i) => i.value.toUpperCase());
+      const words = val('bf-words').split(/[,\n]/).map((w) => w.trim()).filter(Boolean).slice(0, 8);
+      const list = expandPosters({ brand: { name: val('bf-name'), tagline: val('bf-tag'), mark, inks, words } }).map((p: any) => p.scene);
+      addPages(list, `${list.length} posters for ${val('bf-name')} added as pages. Click one in the strip below.`);
+    } catch (e: any) { say(`Could not make the posters: ${String(e?.message || e)}`); }
+    go.disabled = false; go.textContent = 'Make the posters';
+  });
 
   const ICON_DICE = '<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><circle cx="8.5" cy="8.5" r="1.2" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.2" fill="currentColor"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg>';
 
@@ -787,6 +941,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       parts.push(Object.assign(document.createElement('span'), { className: 'lv-ctx-t', textContent: 'Canvas' }));
       parts.push(colorButton('background', 'scene', 'Background'));
       parts.push(ctxButton('Re-ink', () => { change((s) => { s.seed = Math.floor(Math.random() * 9000) + 1; }); say('Re-inked: same layout, a new hand.'); }, { title: 'Same layout, a new hand: the ink wobble, plates and grain change', html: `${ICON_DICE}Re-ink` }));
+      if (els().some((x) => drawingName(x))) parts.push(ctxButton('Draw all as…', (b) => openStyleAll(b), { title: 'Turn every drawing on this page into ink, 3D, ASCII, dots or echo' }));
       parts.push(sep(), ctxButton('Layers', () => openPanel('layers')));
       parts.push(Object.assign(document.createElement('span'), { className: 'lv-ctx-hint', textContent: 'Click a part to edit it' }));
       return ctx.replaceChildren(...parts);
@@ -838,6 +993,33 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     const lab = customColor(current, on, () => { endEdit(); renderCtx(); });
     pop.replaceChildren(Object.assign(document.createElement('p'), { className: 'lv-pop-h', textContent: 'Colour' }), Object.assign(document.createElement('p'), { className: 'lv-pop-sub', textContent: 'The inks of this look' }), wrap, lab);
     showPop(pop, anchor);
+  }
+  function openStyleAll(anchor: HTMLElement) {
+    const pop = $('pop-style');
+    const list = document.createElement('div'); list.className = 'lv-list';
+    for (const d of DRAW_STYLES) {
+      const b = Object.assign(document.createElement('button'), { type: 'button', className: 'lv-opt' });
+      b.append(Object.assign(document.createElement('b'), { textContent: d.label }));
+      b.addEventListener('click', () => { closePops(); styleAll(d.id); });
+      list.append(b);
+    }
+    pop.replaceChildren(Object.assign(document.createElement('p'), { className: 'lv-pop-h', textContent: 'Draw every drawing as' }), Object.assign(document.createElement('p'), { className: 'lv-pop-sub', textContent: 'They take one look, in inks that read on this background.' }), list);
+    showPop(pop, anchor);
+  }
+  function styleAll(st: string) {
+    let n = 0;
+    change(() => {
+      const list = els();
+      for (let i = 0; i < list.length; i++) {
+        const o = list[i], dn = drawingName(o);
+        if (!dn || styleOf(o) === st) continue;
+        const keep = { name: fileFor(dn) || dn, variant: o.variant, x: o.x, y: o.y, size: o.size ?? unit() };
+        list[i] = { ...drawingIn(st, keep, i), ...(o.rot ? { rot: o.rot } : {}), ...(o.hidden ? { hidden: true } : {}), ...(o.locked ? { locked: true } : {}) };
+        n++;
+      }
+    });
+    effectThumbs.clear();
+    say(n ? `${n} ${n === 1 ? 'drawing' : 'drawings'} now drawn as ${DRAW_STYLES.find((d) => d.id === st)!.label}.` : 'Every drawing is already in that style.');
   }
   function openVariants(anchor: HTMLElement, row: Row) {
     const pop = $('pop-variant');
@@ -1265,15 +1447,25 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       return b;
     }));
   }
-  function setSize(wh: [number, number], label: string) {
-    const [w1, h1] = scene.reflow ? (scene.reflowFrom || [1200, 673]) : sizeOf(scene);
+  // the scene at another size: everything moves and scales with the canvas
+  function resizeScene(s: any, wh: [number, number]) {
+    const [w1, h1] = s.reflow ? (s.reflowFrom || [1200, 673]) : sizeOf(s);
     const [w2, h2] = wh;
-    change((s) => {
-      s.elements = (s.elements || []).map((e: any) => rescaled(e, w2 / w1, h2 / h1));
-      if (Array.isArray(s.clip)) s.clip = [s.clip[0] * w2 / w1, s.clip[1] * h2 / h1, s.clip[2] * w2 / w1, s.clip[3] * h2 / h1].map(r1);
-      delete s.format; delete s.reflow; delete s.reflowFrom;
-      s.canvas = [w2, h2];
-    });
+    s.elements = (s.elements || []).map((e: any) => rescaled(e, w2 / w1, h2 / h1));
+    if (Array.isArray(s.clip)) s.clip = [s.clip[0] * w2 / w1, s.clip[1] * h2 / h1, s.clip[2] * w2 / w1, s.clip[3] * h2 / h1].map(r1);
+    delete s.format; delete s.reflow; delete s.reflowFrom;
+    s.canvas = [w2, h2];
+    return s;
+  }
+  $('all-sizes').addEventListener('click', () => {
+    const [w, h] = sizeOf(scene);
+    const list = SIZES.filter((z) => ['Link preview', 'Square', 'Story', 'YouTube', 'Poster'].includes(z.label) && !(z.wh[0] === w && z.wh[1] === h)).map((z) => resizeScene(structuredClone(scene), z.wh));
+    closePops();
+    addPages(list, `${list.length} sizes added as pages. Each one is yours to nudge.`);
+  });
+  function setSize(wh: [number, number], label: string) {
+    const [w2, h2] = wh;
+    change((s) => { resizeScene(s, wh); });
     closePops();
     say(`Resized to ${label}, ${w2} × ${h2}. Everything moved with it; nudge what needs it.`);
   }
@@ -1297,10 +1489,22 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     if (out === 'png' || out === 'png2') { say('Preparing the PNG…'); save(await toBlob(lastSvg, { scale: out === 'png2' ? 2 : 1 }), 'levni.png'); say('PNG downloaded. Next time, ask your agent: Levni runs free in Claude and Codex (levni.dev/mcp).'); }
     if (out === 'svg') save(new Blob([lastSvg], { type: 'image/svg+xml' }), 'levni.svg');
     if (out === 'json') save(new Blob([JSON.stringify(visible(scene), null, 2)], { type: 'application/json' }), 'scene.json');
+    if (out === 'all-png') {
+      pages[page] = scene;
+      for (let i = 0; i < pages.length; i++) {
+        say(`Preparing page ${i + 1} of ${pages.length}…`);
+        const vis = visible(pages[i]);
+        await ensureAssets(vis);
+        save(await toBlob((await compose(vis)).svg, { scale: 1 }), `levni-${String(i + 1).padStart(2, '0')}.png`);
+        await new Promise((r) => setTimeout(r, 350)); // browsers drop downloads that come too close together
+      }
+      say(`${pages.length} PNGs downloaded.`);
+    }
+    if (out === 'all-json') save(new Blob([JSON.stringify({ pages: pages.map((p, i) => visible(i === page ? scene : p)) }, null, 2)], { type: 'application/json' }), 'pages.json');
   });
-  $('open-full')?.addEventListener('click', async (ev) => { ev.preventDefault(); window.open(`/editor/#s=${await pack(JSON.stringify(scene))}`, '_top'); });
+  $('open-full')?.addEventListener('click', async (ev) => { ev.preventDefault(); window.open(`/editor/#s=${await pack(JSON.stringify(docOut()))}`, '_top'); });
   $('share')?.addEventListener('click', async () => {
-    const url = `${location.origin}/editor/#s=${await pack(JSON.stringify(scene))}`;
+    const url = `${location.origin}/editor/#s=${await pack(JSON.stringify(docOut()))}`;
     history.replaceState(null, '', url);
     try { await navigator.clipboard.writeText(url); say('Share link copied. Anyone with it opens this design.'); } catch { say('The share link is in the address bar.'); }
   });
@@ -1316,8 +1520,8 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       try {
         const next = JSON.parse(src.value);
         if (!codeCommitted) { commit(); codeCommitted = true; }
-        scene = next; clampSel();
-        render(); renderCtx(); renderLayers(); syncTop();
+        setScene(next); clampSel();
+        render(); renderCtx(); renderLayers(); syncTop(); renderPages();
         persist();
       } catch (e: any) {
         const pos = Number(/position (\d+)/.exec(e.message)?.[1]);
@@ -1365,11 +1569,11 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     const tpl = new URLSearchParams(location.search).get('tpl');
     const tplLoad = tpl && exampleFiles[`../../../examples/${tpl}.json`];
     const srcParam = new URLSearchParams(location.search).get('src'); // a gallery scene, e.g. /g/stickers/01-seal-sheet.json
-    if (EMBED && srcParam && /^\/g\/[a-z0-9-]+\/[a-z0-9-]+\.json$/.test(srcParam)) { try { scene = await (await fetch(srcParam)).json(); } catch {} }
-    else if (EMBED && tplLoad) { try { scene = structuredClone(await tplLoad()); } catch {} }
-    else if (h) { try { scene = JSON.parse(await unpack(h)); } catch { say('That share link is broken; here is the starter scene.'); } }
-    else if (!EMBED) { try { const saved = localStorage.getItem('levni-editor'); if (saved) scene = JSON.parse(saved); } catch {} }
-    if (!Array.isArray(scene.elements)) scene = structuredClone(STARTER);
+    if (EMBED && srcParam && /^\/g\/[a-z0-9-]+\/[a-z0-9-]+\.json$/.test(srcParam)) { try { loadDoc(await (await fetch(srcParam)).json()); } catch {} }
+    else if (EMBED && tplLoad) { try { loadDoc(structuredClone(await tplLoad())); } catch {} }
+    else if (h) { try { loadDoc(JSON.parse(await unpack(h))); } catch { say('That share link is broken; here is the starter scene.'); } }
+    else if (!EMBED) { try { const saved = localStorage.getItem('levni-editor'); if (saved) loadDoc(JSON.parse(saved)); } catch {} }
+    if (!Array.isArray(scene.elements)) loadDoc(structuredClone(STARTER));
     cv = { w: sizeOf(scene)[0], h: sizeOf(scene)[1] };
     layoutStage();
     refresh();
@@ -1578,7 +1782,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   .lv-err { min-height: 1.2em; margin: 6px 0; font-size: 13px; color: var(--coral-deep); }
 
   /* workspace */
-  .lv-work { grid-area: work; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; min-width: 0; min-height: 0; }
+  .lv-work { grid-area: work; display: grid; grid-template-rows: auto minmax(0, 1fr) auto auto; min-width: 0; min-height: 0; }
   .lv-ctx { display: flex; align-items: center; gap: 4px; min-height: 52px; padding: 7px 12px; background: var(--paper); border-bottom: 1px solid var(--line); overflow-x: auto; scrollbar-width: thin; }
   .lv-ctx-hint { margin-left: auto; padding-left: 12px; font-size: 13px; color: var(--ink-soft); white-space: nowrap; }
   .lv-ctx-t { margin-right: 6px; font: 700 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
@@ -1616,6 +1820,39 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   .lv-mini button:hover { background: rgba(255,255,255,.12); }
   .lv-mini button[aria-pressed='true'] { color: var(--lime) !important; }
   .lv-drop { position: absolute; inset: 8px; display: grid; place-items: center; border: 2px dashed var(--accent); background: rgba(75,47,214,.06); color: var(--accent-text); font-weight: 700; pointer-events: none; }
+  .lv-allsizes { display: grid; gap: 2px; width: 100%; margin-top: 8px; padding: 10px 12px; border: 1.5px dashed var(--indigo); background: transparent; text-align: left; cursor: pointer; color: var(--indigo); }
+  .lv-allsizes:hover { background: var(--soft); }
+  .lv-allsizes b { font: 700 14px/1.2 var(--display); }
+  .lv-allsizes span { font-size: 12px; color: var(--ink-soft); }
+  .lv-tpl-cell { position: relative; }
+  .lv-tpl-cell > .lv-tile { width: 100%; }
+  .lv-tpl-add { position: absolute; top: 6px; right: 6px; width: 28px; height: 28px; border: 0; background: var(--indigo); color: #fff; font: 700 18px/1 var(--mono); cursor: pointer; opacity: 0; transition: opacity .12s; }
+  .lv-tpl-cell:hover .lv-tpl-add, .lv-tpl-add:focus-visible { opacity: 1; }
+  @media (hover: none) { .lv-tpl-add { opacity: 1; } }
+  .lv-brandf { margin: 0 0 14px; background: var(--indigo); color: #fff; }
+  .lv-brandf summary { display: grid; gap: 3px; padding: 12px 14px; cursor: pointer; list-style: none; }
+  .lv-brandf summary::-webkit-details-marker { display: none; }
+  .lv-brandf summary b { font: 800 16px/1.1 var(--display); color: var(--lime); }
+  .lv-brandf summary span { font-size: 12.5px; opacity: .85; }
+  .lv-brandf-body { display: grid; gap: 8px; padding: 0 14px 14px; }
+  .lv-brandf-body label { display: grid; gap: 4px; font: 600 10px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+  .lv-brandf-body input[type=text] { font: 14px/1.3 var(--serif); padding: 7px 8px; border: 0; border-radius: 0; color: var(--ink); background: #fff; text-transform: none; letter-spacing: 0; }
+  .lv-brandf-inks { display: flex; gap: 6px; }
+  .lv-brandf-inks input { width: 40px; height: 32px; padding: 0; border: 2px solid #fff; background: none; cursor: pointer; }
+  .lv-brandf-go { padding: 10px 12px; border: 0; background: var(--lime); color: var(--indigo); font: 700 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+  .lv-brandf-go:disabled { opacity: .6; cursor: progress; }
+  .lv-pages { display: flex; align-items: flex-end; gap: 10px; padding: 8px 14px; overflow-x: auto; background: var(--paper); border-top: 1px solid var(--line); scrollbar-width: thin; }
+  .lv-page { flex: none; display: grid; justify-items: center; gap: 3px; }
+  .lv-page-b { display: grid; justify-items: center; gap: 3px; padding: 3px; border: 0; background: transparent; cursor: pointer; }
+  .lv-page-b img { display: block; height: 52px; width: auto; max-width: 110px; background: #fff; box-shadow: 0 0 0 1px var(--line); object-fit: contain; }
+  .lv-page.on .lv-page-b img { box-shadow: 0 0 0 2px var(--sel); }
+  .lv-page-n { font: 600 10px/1 var(--mono); letter-spacing: .04em; color: var(--ink-soft); white-space: nowrap; }
+  .lv-page-tools { display: flex; gap: 2px; }
+  .lv-page-tools button { width: 22px; height: 20px; padding: 0; border: 0; background: transparent; font: 13px/1 var(--mono); color: var(--indigo); cursor: pointer; }
+  .lv-page-tools button:hover:not(:disabled) { background: var(--soft); }
+  .lv-page-tools button:disabled { opacity: .3; cursor: default; }
+  .lv-page-add { flex: none; align-self: center; height: 52px; padding: 0 14px; border: 1.5px dashed var(--line); background: transparent; font: 600 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--indigo); cursor: pointer; }
+  .lv-page-add:hover { border-color: var(--indigo); background: #fff; }
   .lv-bottom { display: flex; align-items: center; gap: 10px; padding: 6px 14px; background: var(--paper); border-top: 1px solid var(--line); font-size: 13px; }
   .lv-status { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--ink-soft); }
   .lv-fit { padding: 5px 10px; border: 1px solid var(--line); border-radius: 0; background: #fff; font-weight: 600; font-size: 12px; cursor: pointer; }
