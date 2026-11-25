@@ -241,9 +241,9 @@ const jsonld = [
   .bn h1 { max-width: 18ch; }
   .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   .bn-form { display: flex; gap: 10px; margin: 28px 0 8px; max-width: 640px; }
-  .bn-form input { flex: 1; min-width: 0; font: 500 17px/1.2 var(--mono); padding: 14px 16px; border: 1.5px solid var(--ink); border-radius: 10px; background: #fff; color: var(--ink); }
-  .bn-go, .bn-ghost { display: inline-block; text-decoration: none; font: 600 15px/1 var(--serif); padding: 14px 18px; border-radius: 10px; border: 1.5px solid var(--ink); cursor: pointer; white-space: nowrap; }
-  .bn-go { background: var(--ink); color: var(--paper); }
+  .bn-form input { flex: 1; min-width: 0; font: 500 17px/1.2 var(--mono); padding: 14px 16px; border: 1.5px solid var(--indigo); border-radius: 0; background: #fff; color: var(--ink); }
+  .bn-go, .bn-ghost { display: inline-block; text-decoration: none; font: 600 15px/1 var(--serif); padding: 14px 18px; border-radius: 0; border: 1.5px solid var(--indigo); cursor: pointer; white-space: nowrap; }
+  .bn-go { background: var(--indigo); color: var(--paper); }
   .bn-ghost { background: transparent; color: var(--ink); }
   .bn-go:hover { background: var(--accent-text); border-color: var(--accent-text); }
   .bn-ghost:hover { background: #fff; }
@@ -251,7 +251,7 @@ const jsonld = [
   .bn-status.bad { color: var(--coral-deep); }
 
   .bn-stage { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 28px; align-items: start; }
-  .bn-preview { margin: 0; border-radius: 12px; overflow: hidden; background: var(--rule); aspect-ratio: 2 / 1; box-shadow: 0 1px 0 rgba(20,24,31,.06), 0 18px 40px -24px rgba(20,24,31,.45); }
+  .bn-preview { margin: 0; border-radius: 0; overflow: hidden; background: var(--rule); aspect-ratio: 2 / 1; box-shadow: 0 1px 0 rgba(20,24,31,.06), 0 18px 40px -24px rgba(20,24,31,.45); }
   .bn-preview img { display: block; width: 100%; height: 100%; object-fit: cover; transition: opacity .2s; }
   .bn-preview[aria-busy='true'] img { opacity: .55; }
   .bn-preview img:not([src]) { visibility: hidden; }
@@ -259,14 +259,14 @@ const jsonld = [
   .bn-controls fieldset { border: 0; padding: 0; margin: 0 0 20px; }
   .bn-controls legend { font: 700 12px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 10px; }
   .bn-chips { display: flex; flex-wrap: wrap; gap: 8px; }
-  .bn-chips button { display: inline-flex; align-items: center; gap: 8px; font: 600 14px/1 var(--serif); padding: 9px 12px; border-radius: 999px; border: 1.5px solid var(--rule); background: #fff; color: var(--ink); cursor: pointer; }
+  .bn-chips button { display: inline-flex; align-items: center; gap: 8px; font: 600 14px/1 var(--serif); padding: 9px 12px; border-radius: 0; border: 1.5px solid var(--rule); background: #fff; color: var(--ink); cursor: pointer; }
   .bn-chips button[aria-pressed='true'] { border-color: var(--ink); }
   .sw { width: 16px; height: 16px; border-radius: 50%; background: linear-gradient(135deg, var(--a) 50%, var(--b) 50%); }
   .bn-marks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-  .bn-marks button { aspect-ratio: 1; padding: 6px; border-radius: 10px; border: 1.5px solid var(--rule); background: #fff; cursor: pointer; }
+  .bn-marks button { aspect-ratio: 1; padding: 6px; border-radius: 0; border: 1.5px solid var(--rule); background: #fff; cursor: pointer; }
   .bn-marks button[aria-pressed='true'] { border-color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
   .bn-marks img { width: 100%; height: 100%; object-fit: contain; }
-  .bn-search input, .bn-text input, .bn-text textarea { width: 100%; box-sizing: border-box; font: 15px/1.35 var(--serif); padding: 10px 12px; border: 1.5px solid var(--rule); border-radius: 8px; background: #fff; color: var(--ink); }
+  .bn-search input, .bn-text input, .bn-text textarea { width: 100%; box-sizing: border-box; font: 15px/1.35 var(--serif); padding: 10px 12px; border: 1.5px solid var(--rule); border-radius: 0; background: #fff; color: var(--ink); }
   .bn-search { margin-top: 10px; }
   .bn-text label { display: block; font-size: 14px; color: var(--ink-soft); margin-bottom: 10px; }
   .bn-text textarea { resize: vertical; }
@@ -275,9 +275,9 @@ const jsonld = [
   .bn-out { margin-top: 24px; }
   .bn-actions { display: flex; flex-wrap: wrap; gap: 10px; }
   .bn-how { margin: 18px 0 8px; color: var(--ink-soft); }
-  .bn-code { position: relative; background: var(--ink); color: var(--paper); border-radius: 10px; }
+  .bn-code { position: relative; background: var(--indigo); color: var(--paper); border-radius: 0; }
   .bn-code pre { margin: 0; padding: 16px 84px 16px 16px; overflow-x: auto; font: 14px/1.5 var(--mono); }
-  .bn-copy { position: absolute; top: 9px; right: 9px; font: 600 13px/1 var(--serif); padding: 8px 12px; border-radius: 7px; border: 1px solid rgba(255,255,255,.3); background: transparent; color: var(--paper); cursor: pointer; }
+  .bn-copy { position: absolute; top: 9px; right: 9px; font: 600 13px/1 var(--serif); padding: 8px 12px; border-radius: 0; border: 1px solid rgba(255,255,255,.3); background: transparent; color: var(--paper); cursor: pointer; }
 
   .bn-faq { margin-top: 64px; max-width: 720px; }
   .bn-faq details { border-top: 1px solid var(--rule); padding: 14px 0; }

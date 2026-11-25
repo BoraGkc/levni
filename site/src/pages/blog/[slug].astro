@@ -208,7 +208,7 @@ const jsonld = [
   .byline p { margin: 0; font-family: var(--mono); font-size: 0.8rem; color: var(--ink-soft); }
 
   .cover { margin-top: 32px; margin-bottom: 0; }
-  .cover img { width: 100%; border: 2px solid var(--ink); box-shadow: 6px 6px 0 var(--accent); }
+  .cover img { width: 100%; border: 1px solid var(--rule); box-shadow: none; }
   .cover figcaption { font-size: 0.85rem; color: var(--ink-soft); margin-top: 10px; }
 
   .post-grid { display: grid; grid-template-columns: 220px minmax(0, 1fr) 260px; gap: 44px; margin-top: 44px; align-items: start; }
@@ -225,7 +225,7 @@ const jsonld = [
   .prose :global(p) { margin: 0 0 1.2em; }
   .prose :global(h2) { font-size: 2rem; margin: 1.8em 0 0.6em; scroll-margin-top: 20px; }
   .prose :global(h3) { font-size: 1.35rem; margin: 1.4em 0 0.4em; }
-  .prose :global(img) { width: 100%; border: 2px solid var(--ink); box-shadow: 5px 5px 0 var(--accent); margin: 1.2em 0 0.4em; background: var(--paper-2); }
+  .prose :global(img) { width: 100%; border: 1px solid var(--rule); box-shadow: none; margin: 1.2em 0 0.4em; background: var(--paper-2); }
   .prose :global(img + em), .prose :global(p > em:only-child) { display: block; font-size: 0.92rem; color: var(--ink-soft); }
   .prose :global(table) { width: 100%; border-collapse: collapse; margin: 1.4em 0; font-size: 0.98rem; }
   .prose :global(th) { text-align: left; background: var(--paper-2); }
@@ -248,12 +248,12 @@ const jsonld = [
   .pager .next { text-align: right; }
   @media (max-width: 560px) { .pager { grid-template-columns: minmax(0, 1fr); } .pager .next { text-align: left; } }
 
-  .side-card { background: var(--accent); color: #fff; padding: 22px; border: 2px solid var(--ink); }
-  .side-card img { width: 120px; height: 120px; background: var(--paper); border-radius: 50%; border: 2px solid var(--ink); }
+  .side-card { background: var(--accent); color: #fff; padding: 22px; border: 1px solid var(--rule); }
+  .side-card img { width: 120px; height: 120px; background: var(--paper); border-radius: 50%; border: 1px solid var(--rule); }
   .side-eyebrow { font-family: var(--mono); font-size: 0.76rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mustard); margin: 14px 0 6px; }
   .side-title { font-family: var(--display); font-size: 1.5rem; line-height: 1.15; margin: 0 0 8px; }
   .side-text { font-size: 0.95rem; opacity: 0.92; margin: 0 0 16px; }
-  .side-btn { display: inline-block; background: var(--mustard); color: var(--ink); text-decoration: none; font-weight: 600; padding: 10px 16px; border: 2px solid var(--ink); }
+  .side-btn { display: inline-block; background: var(--mustard); color: var(--ink); text-decoration: none; font-weight: 600; padding: 10px 16px; border: 1px solid var(--rule); }
   .side-btn:hover { background: var(--paper); color: var(--ink); }
   .side-link { display: block; margin-top: 12px; color: #fff; }
   .side-link:hover { color: var(--mustard); }
@@ -264,7 +264,7 @@ const jsonld = [
   .related-head h2 { margin: 0; }
   .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 28px; }
 
-  .band { margin-top: 80px; display: grid; grid-template-columns: 1fr 1.3fr; gap: 36px; align-items: center; background: var(--ink); color: var(--paper); padding: 36px; }
+  .band { margin-top: 80px; display: grid; grid-template-columns: 1fr 1.3fr; gap: 36px; align-items: center; background: var(--indigo); color: var(--paper); padding: 36px; }
   .band img { border: 2px solid var(--paper); }
   .band-title { font-family: var(--display); font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; margin: 0 0 10px; }
   .band p { color: var(--paper); }
@@ -279,13 +279,13 @@ const jsonld = [
     .cards { grid-template-columns: minmax(0, 1fr); }
     .band { grid-template-columns: 1fr; padding: 22px; }
   }
-  .try-card { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 20px; align-items: center; margin: 40px 0 8px; padding: 14px; border-radius: 16px; background: var(--ink); color: var(--paper); }
-  .try-card img { width: 100%; height: auto; aspect-ratio: 640 / 359; object-fit: contain; background: var(--paper); border-radius: 10px; margin: 0; }
+  .try-card { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 20px; align-items: center; margin: 40px 0 8px; padding: 14px; border-radius: 0; background: var(--indigo); color: var(--paper); }
+  .try-card img { width: 100%; height: auto; aspect-ratio: 640 / 359; object-fit: contain; background: var(--paper); border-radius: 0; margin: 0; }
   .try-card .try-k { margin: 0 0 4px; font: 700 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mustard); }
   .try-card .try-t { margin: 0 0 6px; font: 700 22px/1.15 var(--display); color: var(--paper); }
   .try-card .try-p { margin: 0 0 12px; font-size: 15px; line-height: 1.5; color: #c9cfdb; }
   .try-card .try-a { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin: 0; }
   .try-card .try-a a { color: var(--paper); font-weight: 600; }
-  .try-card .try-btn { padding: 10px 14px; border-radius: 9px; background: var(--mustard); color: var(--ink) !important; text-decoration: none; font-weight: 700; }
+  .try-card .try-btn { padding: 10px 14px; border-radius: 0; background: var(--mustard); color: var(--ink) !important; text-decoration: none; font-weight: 700; }
   @media (max-width: 640px) { .try-card { grid-template-columns: minmax(0, 1fr); } }
 </style>

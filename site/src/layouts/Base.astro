@@ -50,7 +50,7 @@ const graph = [
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="alternate" type="application/rss+xml" title="Levni blog" href="/blog/rss.xml" />
-    <meta name="theme-color" content="#F4F2EC" />
+    <meta name="theme-color" content="#4B2FD6" />
     <meta name="color-scheme" content="light" />
 
     <meta property="og:type" content={type} />
@@ -72,7 +72,7 @@ const graph = [
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,600;0,6..72,700;1,6..72,500;1,6..72,600&family=Figtree:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
     />
     <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />
   </head>
@@ -89,18 +89,25 @@ const graph = [
 
 <style is:global>
   :root {
-    /* riso print: the Ortak Alan house palette */
-    --paper: #f4f2ec;
-    --paper-2: #fbfaf6;
-    --ink: #14181f;
-    --ink-soft: #4a5160;
-    --rule: #d9d5cb;
-    --accent: #0b57d0;      /* riso blue */
-    --accent-text: #0a3fb0;
-    --coral: #f2603f;
-    --coral-deep: #c2401f;  /* 4.9:1 under white text */
-    --mustard: #f2c230;
-    --green: #1e783f;
+    /* riso poster: indigo, lime, red and paper (the 2026 rebrand) */
+    --indigo: #4b2fd6;
+    --indigo-deep: #2b1a8f;
+    --lime: #d6e521;
+    --red: #ff3a44;
+    --on-indigo: #e9f2d9;
+    --mute-indigo: #c3b9f7;
+    --pink: #ff39b4; --mint: #66dcc2; --sky: #58c4f6; --sun: #f7c744; --orange: #f28c38; --lilac: #f3c2f5;
+    --paper: #f3f1ea;
+    --paper-2: #ffffff;
+    --ink: #1b1340;
+    --ink-soft: #5b5580;
+    --rule: #ddd8ee;
+    --accent: #4b2fd6;
+    --accent-text: #3b22c0;
+    --coral: #ff3a44;
+    --coral-deep: #d11f2b;  /* 5:1 under white text */
+    --mustard: #d6e521;     /* now lime: highlights, primary buttons on indigo */
+    --green: #1e8a57;
     /* older names the pages still use */
     --gold: var(--rule);
     --gold-deep: var(--ink-soft);
@@ -108,15 +115,16 @@ const graph = [
     --vermilion-deep: var(--coral-deep);
     --turquoise-text: var(--accent-text);
     --lapis: var(--accent-text);
-    --serif: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
-    --display: 'Newsreader', Georgia, serif;
-    --mono: ui-monospace, Menlo, Consolas, monospace;
-    --wrap: 1120px;
+    --serif: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif;
+    --display: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif;
+    --mono: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+    --wrap: 1200px;
+    --chamfer: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
   }
   * { box-sizing: border-box; }
-  ::selection { background: var(--mustard); color: var(--ink); }
+  ::selection { background: var(--lime); color: var(--indigo); }
   html { accent-color: var(--accent); caret-color: var(--accent); scrollbar-color: var(--ink-soft) var(--paper); }
-  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 0; }
   html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0;
@@ -125,43 +133,38 @@ const graph = [
     font-family: var(--serif);
     font-size: 1.06rem;
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
   }
   img { max-width: 100%; height: auto; display: block; }
   a { color: var(--lapis); text-decoration-thickness: 1px; text-underline-offset: 3px; }
   a:hover { color: var(--vermilion); }
-  h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.1; color: var(--ink); margin: 0 0 0.5em; }
-  h1 { font-size: clamp(2.6rem, 7vw, 4.6rem); }
-  h2 { font-size: clamp(2rem, 4.5vw, 3rem); }
-  h3 { font-size: 1.6rem; }
-  em.accent, .accent { font-family: var(--display); font-style: italic; color: var(--vermilion); }
+  h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.02; letter-spacing: -0.035em; color: var(--ink); margin: 0 0 0.5em; text-wrap: balance; }
+  h1 { font-size: clamp(2.6rem, 7vw, 4.8rem); font-weight: 500; letter-spacing: -0.045em; }
+  h2 { font-size: clamp(2rem, 4.5vw, 3.2rem); }
+  h3 { font-size: 1.5rem; letter-spacing: -0.02em; }
+  em.accent, .accent { font-family: var(--display); font-style: normal; color: var(--accent); }
+  h1 em, h2 em { font-style: normal; color: var(--accent); }
   code, pre { font-family: var(--mono); font-size: 0.86rem; }
   pre {
     background: var(--paper-2);
-    border: 1px solid var(--gold);
+    border: 1px solid var(--rule);
+    color: var(--ink);
     padding: 1.1rem 1.2rem;
     overflow-x: auto;
     line-height: 1.5;
   }
-  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 20px; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 max(20px, env(safe-area-inset-right)) 0 max(20px, env(safe-area-inset-left)); }
   .skip { position: absolute; left: -999px; }
   .skip:focus { left: 12px; top: 12px; background: var(--paper-2); padding: 8px 12px; z-index: 10; }
 
-  .site-header { border-bottom: 2px solid var(--ink); background: var(--paper); }
-  .header-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; flex-wrap: wrap; }
-  .wordmark { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--ink); }
-  .wordmark img { width: 40px; height: 40px; }
-  .wordmark span { font-family: var(--display); font-style: italic; font-weight: 600; font-size: 1.7rem; }
-  nav { display: flex; gap: 6px 18px; flex-wrap: wrap; font-size: 1.02rem; }
-  nav a { color: var(--ink); text-decoration: none; padding: 10px 0; }
-  nav a:hover { color: var(--vermilion); }
-
-
   /* print frame: a hard ink border with an offset riso-blue plate behind it */
   .tezhip {
-    border: 2px solid var(--ink);
+    border: 0;
     background: var(--paper-2);
-    box-shadow: 6px 6px 0 var(--accent);
+    box-shadow: none;
+    clip-path: var(--chamfer);
   }
+  .kicker { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--coral-deep); }
   .ornament { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 0 auto 18px; color: var(--gold); }
   .ornament::before, .ornament::after { content: ''; height: 1px; width: min(120px, 22vw); background: currentColor; }
   .ornament img { width: 44px; height: 44px; }

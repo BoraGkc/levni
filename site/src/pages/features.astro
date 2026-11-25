@@ -125,14 +125,14 @@ const jsonld = [{ '@type': 'SoftwareApplication', name: 'Levni', applicationCate
   .page { margin-top: 48px; }
   .eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-text); margin: 0 0 12px; }
   .lede { font-size: 1.22rem; color: var(--ink-soft); max-width: 720px; }
-  .new { margin: 20px 0 0; padding: 12px 16px; border: 2px solid var(--ink); background: var(--paper-2); box-shadow: 4px 4px 0 var(--accent); color: var(--ink-soft); max-width: 760px; }
+  .new { margin: 20px 0 0; padding: 12px 16px; border: 1px solid var(--rule); background: var(--paper-2); box-shadow: none; color: var(--ink-soft); max-width: 760px; }
   .new a { margin-right: 6px; }
   .new.older { margin-top: 14px; box-shadow: none; }
   .feature h3 { font-size: 1.15rem; margin: 18px 0 4px; }
   .fields { display: grid; gap: 6px; margin: 0 0 14px; }
   .fields code { display: block; font-size: 0.76rem; line-height: 1.45; padding: 7px 10px; background: var(--paper-2); border: 1px solid var(--rule); overflow-wrap: anywhere; white-space: pre-wrap; }
   .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 8px; }
-  .toc a { font-size: 0.92rem; text-decoration: none; color: var(--ink); border: 1px solid var(--rule); border-radius: 999px; padding: 6px 12px; background: var(--paper-2); }
+  .toc a { font-size: 0.92rem; text-decoration: none; color: var(--ink); border: 1px solid var(--rule); border-radius: 0; padding: 6px 12px; background: var(--paper-2); }
   .toc a:hover { border-color: var(--ink); color: var(--ink); }
   .feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 40px; align-items: center; margin-top: 72px; }
   .feature.flip .text { order: 2; }
@@ -144,10 +144,10 @@ const jsonld = [{ '@type': 'SoftwareApplication', name: 'Levni', applicationCate
   .links { display: flex; flex-wrap: wrap; gap: 4px 20px; }
   .imgs img { width: 100%; padding: 5px; }
   .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
-  .tiles img { width: 100%; background: var(--paper-2); border: 1px solid var(--rule); border-radius: 12px; }
+  .tiles img { width: 100%; background: var(--paper-2); border: 1px solid var(--rule); border-radius: 0; }
   .agents { margin-top: 80px; }
   .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 20px; }
-  .card { display: block; text-decoration: none; color: var(--ink); border: 2px solid var(--ink); background: var(--paper-2); padding: 18px; box-shadow: 5px 5px 0 var(--accent); }
+  .card { display: block; text-decoration: none; color: var(--ink); border: 1px solid var(--rule); background: var(--paper-2); padding: 18px; box-shadow: none; }
   .card:hover { color: var(--ink); transform: translate(-1px, -1px); }
   .card h3 { font-size: 1.3rem; }
   .card p { margin: 0; color: var(--ink-soft); font-size: 0.96rem; }

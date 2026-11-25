@@ -1,5 +1,6 @@
 ---
 import { SITE } from '../site';
+import Logo from './Logo.astro';
 const path = Astro.url.pathname;
 const here = (p: string) => path === p || path.startsWith(p);
 const makes: [string, string, string][] = [
@@ -18,8 +19,8 @@ const makes: [string, string, string][] = [
 <header class="site-header">
   <div class="wrap header-row">
     <a class="wordmark" href="/" aria-label="Levni home">
-      <img src="/props/pencil-0.webp" alt="" width="40" height="40" />
-      <span>Levni</span>
+      <Logo size={30} />
+      <span>levni</span>
     </a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
       <span class="menu-icon" aria-hidden="true"></span><span class="menu-label">Menu</span>
@@ -106,74 +107,73 @@ const makes: [string, string, string][] = [
 </script>
 
 <style is:global>
-  .site-header { position: relative; z-index: 20; }
-  .site-header .header-row { flex-wrap: nowrap; gap: 20px; }
-  .site-nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; gap: 20px; font-size: 1rem; flex-wrap: nowrap; }
+  /* indigo masthead: white mark, mono uppercase links, lime call to action */
+  .site-header { position: relative; z-index: 20; background: var(--indigo); color: var(--on-indigo); border-bottom: 0; }
+  .site-header .header-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: nowrap; gap: 20px; min-height: 72px; }
+  .site-header .wordmark { display: flex; align-items: center; color: #fff; gap: 10px; text-decoration: none; flex: none; }
+  .site-header .wordmark span { font-family: var(--display); font-style: normal; font-weight: 800; font-size: 1.55rem; letter-spacing: -0.04em; }
+  .site-nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; gap: 18px; flex-wrap: nowrap; font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
   .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 4px 6px; }
-  .site-nav a { color: var(--ink); text-decoration: none; padding: 10px 10px; border-radius: 6px; white-space: nowrap; }
-  .site-nav a:hover { color: var(--accent-text); background: rgba(11, 87, 208, 0.07); }
-  .site-nav a[aria-current='page'] { box-shadow: inset 0 -2px 0 var(--coral); border-radius: 0; }
-  .site-nav .agent-link { background: var(--ink); color: var(--paper-2); font-weight: 600; margin-left: 6px; padding: 8px 14px; border-radius: 999px; box-shadow: 3px 3px 0 var(--accent); }
-  .site-nav .agent-link:hover { background: var(--accent-text); color: #fff; }
-  .site-nav .agent-link[aria-current='page'] { box-shadow: 3px 3px 0 var(--coral); }
-  .nav-side { gap: 2px 4px; padding-left: 16px; border-left: 1px solid var(--rule); }
-  .site-nav .side-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.92rem; padding: 10px 8px; color: var(--ink-soft); }
-  .site-nav .ver { font-family: var(--mono); font-size: 0.78rem; border: 1.5px solid var(--ink); padding: 3px 8px; color: var(--ink); }
-  .site-nav .ver:hover { background: var(--mustard); color: var(--ink); }
+  .site-nav a { color: var(--on-indigo); text-decoration: none; padding: 10px 9px; white-space: nowrap; opacity: 0.85; }
+  .site-nav a:hover { color: #fff; opacity: 1; background: none; }
+  .site-nav a[aria-current='page'] { opacity: 1; box-shadow: inset 0 -2px 0 var(--lime); }
+  .site-nav .agent-link { opacity: 1; background: var(--lime); color: var(--indigo); font-weight: 600; margin-left: 8px; padding: 10px 16px; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%); }
+  .site-nav .agent-link:hover { background: #fff; color: var(--indigo); }
+  .site-nav .agent-link[aria-current='page'] { box-shadow: none; background: #fff; }
+  .nav-side { gap: 2px 4px; padding-left: 14px; border-left: 1px solid rgba(255, 255, 255, 0.22); }
+  .site-nav .side-link { display: inline-flex; align-items: center; gap: 6px; padding: 10px 7px; color: var(--mute-indigo); }
+  .site-nav .ver { opacity: 1; font-size: 0.74rem; border: 1px solid var(--on-indigo); padding: 4px 8px; color: var(--on-indigo); }
+  .site-nav .ver:hover { background: var(--lime); color: var(--indigo); border-color: var(--lime); }
 
   .has-mega { position: relative; display: flex; align-items: center; }
-  .mega-toggle { appearance: none; border: 0; background: none; color: var(--ink); width: 28px; height: 36px; margin-left: -8px; cursor: pointer; border-radius: 6px; display: inline-grid; place-items: center; }
+  .mega-toggle { appearance: none; border: 0; background: none; color: var(--on-indigo); width: 26px; height: 36px; margin-left: -8px; cursor: pointer; display: inline-grid; place-items: center; }
   .mega-toggle svg { transition: transform 0.15s; }
   .has-mega.open .mega-toggle svg { transform: rotate(180deg); }
-  .mega { display: none; position: absolute; top: 100%; left: -10px; width: min(560px, calc(100vw - 40px)); background: var(--paper-2); border: 2px solid var(--ink); box-shadow: 6px 6px 0 var(--accent); padding: 14px; z-index: 30; }
+  .mega { display: none; position: absolute; top: 100%; left: -10px; width: min(580px, calc(100vw - 40px)); background: var(--paper-2); color: var(--ink); padding: 14px; z-index: 30; clip-path: var(--chamfer); box-shadow: 0 30px 60px -30px rgba(27, 19, 64, 0.5); text-transform: none; letter-spacing: 0; font-family: var(--serif); font-size: 1rem; }
   .has-mega:hover .mega, .has-mega:focus-within .mega, .has-mega.open .mega { display: block; }
   .mega ul { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 10px; }
-  .mega li a { display: flex; flex-direction: column; white-space: normal; padding: 8px 10px; }
-  .mega .m-t { font-weight: 600; line-height: 1.25; }
+  .site-nav .mega li a { display: flex; flex-direction: column; white-space: normal; padding: 8px 10px; color: var(--ink); opacity: 1; }
+  .site-nav .mega li a:hover { background: var(--paper); color: var(--indigo); }
+  .mega .m-t { font-weight: 700; line-height: 1.25; letter-spacing: -0.01em; }
   .mega .m-d { font-size: 0.82rem; color: var(--ink-soft); line-height: 1.35; }
-  .mega-foot { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 10px 0 0; padding: 10px 10px 0; border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 0.8rem; }
-  .site-nav .mega-foot a { padding: 4px 0; color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
+  .mega-foot { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 10px 0 0; padding: 10px 10px 0; border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 0.78rem; }
+  .site-nav .mega-foot a { padding: 4px 0; color: var(--accent-text); opacity: 1; text-decoration: underline; text-underline-offset: 3px; }
   .menu-btn { display: none; }
 
-  /* medium widths: drop the long labels */
-  @media (max-width: 75rem) { .site-nav .long { display: none; } .site-nav a { padding-left: 7px; padding-right: 7px; } }
+  @media (max-width: 75rem) { .site-nav .long { display: none; } .site-nav a { padding-left: 6px; padding-right: 6px; } }
 
-  /* compact: a button and a panel. Without JS the links simply wrap under the wordmark. */
   @media (max-width: 62rem) {
-    .site-header .header-row { flex-wrap: wrap; gap: 0 12px; min-height: 0; padding-top: 8px; padding-bottom: 8px; }
-    .site-nav { flex-basis: 100%; padding-top: 6px; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0; font-size: 1.05rem; }
+    .site-header .header-row { flex-wrap: wrap; gap: 0 12px; min-height: 64px; padding-top: 8px; padding-bottom: 8px; }
+    .site-nav { flex-basis: 100%; padding-top: 6px; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0; font-size: 0.86rem; }
     .site-nav ul { flex-direction: column; align-items: stretch; }
-    .site-nav li a { display: block; padding: 14px 2px; border-bottom: 1px solid var(--rule); border-radius: 0; }
-    .site-nav a[aria-current='page'] { box-shadow: inset 3px 0 0 var(--coral); padding-left: 12px; }
-    /* "What it makes": a small label over a one-column list with short descriptions */
+    .site-nav li a { display: block; padding: 14px 2px; border-bottom: 1px solid rgba(255, 255, 255, 0.16); opacity: 1; }
+    .site-nav a[aria-current='page'] { box-shadow: inset 3px 0 0 var(--lime); padding-left: 12px; }
     .has-mega { display: block; order: 3; }
     .site-nav .nav-agent { order: 2; }
-    .has-mega > a { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); padding: 16px 2px 6px; border-bottom: 0; }
+    .has-mega > a { font-size: 0.72rem; color: var(--lime); padding: 18px 2px 6px; border-bottom: 0; }
     .mega-toggle { display: none; }
-    .mega { display: block; position: static; width: auto; border: 0; box-shadow: none; background: none; padding: 0 0 8px; }
+    .mega { display: block; position: static; width: auto; clip-path: none; box-shadow: none; background: none; color: var(--on-indigo); padding: 0 0 8px; }
     .mega ul { grid-template-columns: minmax(0, 1fr); gap: 0; }
-    .site-nav .mega li a { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; padding: 10px 2px; border-bottom: 1px solid var(--rule); }
-    .mega .m-t { font-weight: 600; }
-    .mega .m-d { display: block; font-size: 0.84rem; }
+    .site-nav .mega li a { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; padding: 10px 2px; border-bottom: 1px solid rgba(255, 255, 255, 0.16); color: #fff; }
+    .site-nav .mega li a:hover { background: none; color: var(--lime); }
+    .mega .m-d { display: block; font-size: 0.84rem; color: var(--mute-indigo); }
     .mega-foot { display: none; }
-    .site-nav .agent-link { margin: 18px 0 6px; padding: 14px; text-align: center; border-bottom: 0; border-radius: 999px; }
-    .site-nav .agent-link[aria-current='page'] { padding-left: 14px; }
+    .site-nav .agent-link { margin: 18px 0 6px; padding: 15px; text-align: center; border-bottom: 0; }
+    .site-nav .agent-link[aria-current='page'] { padding-left: 15px; }
     .site-nav .nav-side { flex-direction: row; flex-wrap: wrap; align-items: center; padding: 8px 0 4px; border-left: 0; gap: 6px 16px; }
     .site-nav .nav-side li a { display: inline-flex; align-items: center; border-bottom: 0; padding: 8px 2px; }
-    .site-nav .nav-side li a.ver { padding: 4px 9px; line-height: 1.3; border: 1.5px solid var(--ink); }
+    .site-nav .nav-side li a.ver { padding: 4px 9px; line-height: 1.3; }
     .site-nav .nav-side .long { display: inline; }
-    .js .menu-btn { display: inline-flex; align-items: center; gap: 10px; margin-left: auto; appearance: none; background: var(--paper-2); border: 2px solid var(--ink); color: var(--ink); font: inherit; font-weight: 600; padding: 8px 14px; cursor: pointer; min-height: 44px; }
-    .js .menu-btn[aria-expanded='true'] { background: var(--ink); color: var(--paper-2); }
+    .js .menu-btn { display: inline-flex; align-items: center; gap: 10px; margin-left: auto; appearance: none; background: transparent; border: 1px solid var(--on-indigo); color: #fff; font: 600 0.78rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; padding: 8px 14px; cursor: pointer; min-height: 44px; }
+    .js .menu-btn[aria-expanded='true'] { background: var(--lime); color: var(--indigo); border-color: var(--lime); }
     .menu-icon, .menu-icon::before { display: block; width: 18px; height: 2px; background: currentColor; position: relative; }
     .menu-icon::before { content: ''; top: 6px; box-shadow: 0 -12px 0 currentColor; }
     .js .site-nav:not(.open) { display: none; }
-    /* open: a full-height sheet under the header, the page behind does not scroll */
-    .js .site-nav.open { position: fixed; left: 0; right: 0; bottom: 0; top: 64px; z-index: 40; background: var(--paper); padding: 4px 20px calc(24px + env(safe-area-inset-bottom)); overflow-y: auto; overscroll-behavior: contain; }
+    .js .site-nav.open { position: fixed; left: 0; right: 0; bottom: 0; top: 64px; z-index: 40; background: var(--indigo); padding: 4px 20px calc(24px + env(safe-area-inset-bottom)); overflow-y: auto; overscroll-behavior: contain; }
     .js.menu-open, .js.menu-open body { overflow: hidden; }
   }
   @media (max-width: 62rem) and (prefers-reduced-motion: no-preference) {
     .js .site-nav.open { animation: sheet-in 0.16s ease-out; }
     @keyframes sheet-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
   }
-  @media (max-width: 62rem) { .wordmark img { width: 32px; height: 32px; } .wordmark span { font-size: 1.45rem; } }
 </style>

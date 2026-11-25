@@ -1,0 +1,19 @@
+---
+// The Levni mark: a chamfered block with the pixel tulip cut out of it.
+//   <Logo />                 white block, indigo tulip (on indigo)
+//   <Logo tone="indigo" />   indigo block, white tulip (on paper)
+//   <Logo tone="lime" />     lime block, indigo tulip
+interface Props { size?: number; tone?: 'white' | 'indigo' | 'lime'; class?: string }
+const { size = 30, tone = 'white', class: cls } = Astro.props;
+const block = { white: '#FFFFFF', indigo: '#4B2FD6', lime: '#D6E521' }[tone];
+const cut = tone === 'indigo' ? '#FFFFFF' : '#4B2FD6';
+// 7 × 9 pixel tulip: three petal tips, the cup, the stem and two leaves
+const px: [number, number, number, number][] = [
+  [0, 0, 1, 1], [3, 0, 1, 1], [6, 0, 1, 1], [0, 1, 2, 1], [3, 1, 1, 1], [5, 1, 2, 1],
+  [0, 2, 7, 2], [1, 4, 5, 1], [2, 5, 3, 1], [3, 6, 1, 3], [1, 7, 2, 1], [4, 6, 2, 1],
+];
+---
+<svg class={cls} viewBox="0 0 30 30" width={size} height={size} aria-hidden="true" focusable="false">
+  <path d="M6 0H30V30H0V6Z" fill={block} />
+  <g transform="translate(8 5.5) scale(2)" fill={cut}>{px.map(([x, y, w, h]) => <rect x={x} y={y} width={w} height={h} />)}</g>
+</svg>

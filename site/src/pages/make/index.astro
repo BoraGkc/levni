@@ -27,17 +27,17 @@ const jsonld = [
   .mh { padding-top: clamp(32px, 6vw, 64px); }
   .mh h1 { max-width: 18ch; margin: 0 0 14px; text-wrap: balance; }
   .mh .lede { max-width: 64ch; }
-  .mh-feature { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 24px; align-items: center; margin-top: 32px; padding: 14px; border-radius: 16px; background: var(--ink); color: var(--paper); text-decoration: none; }
-  .mh-feature img { width: 100%; height: auto; border-radius: 10px; }
+  .mh-feature { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 24px; align-items: center; margin-top: 32px; padding: 14px; border-radius: 0; background: var(--indigo); color: var(--paper); text-decoration: none; }
+  .mh-feature img { width: 100%; height: auto; border-radius: 0; }
   .mh-feature > span { display: grid; gap: 8px; padding-right: 12px; }
   .mh-feature b { font: 700 26px/1.15 var(--display); }
   .mh-feature span span { color: #c9cfdb; }
   .mh-feature em { font-style: normal; font-weight: 700; color: var(--mustard); }
   @media (max-width: 760px) { .mh-feature { grid-template-columns: minmax(0, 1fr); } }
   .mh-grid { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-  .mh-grid a { display: grid; gap: 6px; height: 100%; padding: 10px 10px 16px; border-radius: 14px; background: #fff; color: var(--ink); text-decoration: none; box-shadow: 0 0 0 1px var(--rule); }
+  .mh-grid a { display: grid; gap: 6px; height: 100%; padding: 10px 10px 16px; border-radius: 0; background: #fff; color: var(--ink); text-decoration: none; box-shadow: 0 0 0 1px var(--rule); }
   .mh-grid a:hover { box-shadow: 0 0 0 2px var(--ink); }
-  .mh-grid img { width: 100%; height: auto; aspect-ratio: 640 / 359; object-fit: contain; background: var(--paper); border-radius: 8px; margin-bottom: 6px; }
+  .mh-grid img { width: 100%; height: auto; aspect-ratio: 640 / 359; object-fit: contain; background: var(--paper); border-radius: 0; margin-bottom: 6px; }
   .mh-grid b { font-size: 18px; padding: 0 4px; }
   .mh-grid span { font-size: 14px; color: var(--ink-soft); padding: 0 4px; }
   @media (max-width: 900px) { .mh-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

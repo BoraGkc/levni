@@ -41,16 +41,16 @@ const id = (v: string) => `v${v}`;
   .cl { padding-top: 48px; max-width: 860px; }
   .cl-head p { color: var(--ink-soft); max-width: 60ch; }
   .jump { list-style: none; padding: 0; margin: 16px 0 0; display: flex; gap: 8px; flex-wrap: wrap; }
-  .jump a { display: inline-block; font-family: var(--mono); font-size: 0.85rem; border: 1.5px solid var(--ink); padding: 4px 10px; text-decoration: none; color: var(--ink); }
+  .jump a { display: inline-block; font-family: var(--mono); font-size: 0.85rem; border: 1.5px solid var(--indigo); padding: 4px 10px; text-decoration: none; color: var(--ink); }
   .jump a:hover { background: var(--mustard); }
-  .rel { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 8px 32px; padding: 32px 0; border-top: 2px solid var(--ink); margin-top: 32px; scroll-margin-top: 16px; }
-  .rel-meta .ver { font-family: var(--display); font-style: italic; font-size: 2rem; margin: 0; line-height: 1; }
+  .rel { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 8px 32px; padding: 32px 0; border-top: 1px solid var(--rule); margin-top: 32px; scroll-margin-top: 16px; }
+  .rel-meta .ver { font-family: var(--display); font-style: normal; font-size: 2rem; margin: 0; line-height: 1; }
   .rel-meta time { font-family: var(--mono); font-size: 0.82rem; color: var(--ink-soft); }
   .rel-body h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 0.25em; }
   .rel-body h2 a { color: inherit; text-decoration: none; }
   .rel-body h2 a:hover { text-decoration: underline; }
   .sum { margin: 0 0 12px; }
-  .note { background: var(--paper-2); border: 1.5px solid var(--ink); border-left: 6px solid var(--mustard); padding: 10px 14px; font-size: 0.95rem; margin: 0 0 12px; }
+  .note { background: var(--paper-2); border: 1.5px solid var(--indigo); border-left: 6px solid var(--mustard); padding: 10px 14px; font-size: 0.95rem; margin: 0 0 12px; }
   .rel-body ul { padding-left: 1.1em; margin: 0 0 12px; }
   .rel-body li { margin: 6px 0; }
   .posts { font-family: var(--mono); font-size: 0.85rem; color: var(--ink-soft); margin: 0; }
