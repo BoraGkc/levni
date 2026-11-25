@@ -1,0 +1,122 @@
+---
+// One sign-up form for the newsletter and the Folio crew. `compact` is the footer version: email only.
+import { CREW_ROLES } from '../data/crew';
+interface Props { compact?: boolean; source?: string; id?: string }
+const { compact = false, source = 'join', id = 'join' } = Astro.props;
+---
+<form class:list={['join-form', { compact }]} action="/api/join" method="post" data-join>
+  <input type="hidden" name="source" value={source} />
+  <input type="hidden" name="t" value="" data-t />
+  <p class="jf-hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label></p>
+  {!compact && (
+    <fieldset class="jf-roles">
+      <legend>Wanted: pick what you are <span>(optional, any number)</span></legend>
+      <div class="jf-chips">
+        {CREW_ROLES.map(([v, label]) => (
+          <label class="jf-chip"><input type="checkbox" name="roles" value={v} /><span>{label}</span></label>
+        ))}
+      </div>
+    </fieldset>
+  )}
+  {!compact && (
+    <div class="jf-row two">
+      <label class="jf-field"><span>Name <small>(optional)</small></span><input type="text" name="name" maxlength="80" autocomplete="name" /></label>
+      <label class="jf-field"><span>Your work <small>(optional link)</small></span><input type="url" name="link" maxlength="200" placeholder="https://" inputmode="url" /></label>
+    </div>
+  )}
+  <div class="jf-row send">
+    <label class="jf-field grow"><span class:list={[{ 'sr-only': compact }]}>Email</span><input id={`${id}-email`} type="email" name="email" required maxlength="254" autocomplete="email" placeholder="you@studio.com" /></label>
+    <button type="submit">{compact ? 'Join' : 'Join the crew'}</button>
+  </div>
+  <p class="jf-note">{compact ? 'A short letter when something new ships. No spam, leave any time.' : 'A short letter when something ships or the Folio needs a hand. We keep your email and picks in our own Cloudflare database, never sell or share them, and store no IP address.'}</p>
+  <p class="jf-status" role="status" aria-live="polite"></p>
+</form>
+
+<script>
+  const messages: Record<string, string> = {
+    joined: 'You are in. Watch your inbox for the first letter.',
+    crew: 'You are on the crew. We will write when the Folio needs your hand.',
+    left: 'Done. You are off the list.',
+    email: 'That email does not look right. Try again?',
+    origin: 'Something blocked that. Try again from levni.dev.',
+    size: 'That was too long. Try again?',
+    error: 'Something went wrong on our side. Try again in a minute.',
+  };
+  for (const form of document.querySelectorAll<HTMLFormElement>('form[data-join]')) {
+    const t = form.querySelector<HTMLInputElement>('[data-t]');
+    if (t) t.value = String(Date.now());
+    const status = form.querySelector<HTMLElement>('.jf-status')!;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const button = form.querySelector('button')!;
+      button.disabled = true;
+      status.textContent = 'Inking your name…';
+      form.dataset.state = 'busy';
+      try {
+        const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { accept: 'application/json' } });
+        const data = await res.json().catch(() => ({ ok: false, code: 'error' }));
+        status.textContent = messages[data.code] ?? messages.error;
+        form.dataset.state = data.ok ? 'done' : 'error';
+        if (data.ok && data.code !== 'left') form.reset();
+      } catch {
+        status.textContent = messages.error;
+        form.dataset.state = 'error';
+      } finally {
+        button.disabled = false;
+      }
+    });
+  }
+  // Coming back from the no-JS form post
+  const q = new URLSearchParams(location.search);
+  const code = q.get('ok') || q.get('error');
+  const first = document.querySelector<HTMLFormElement>('form[data-join]:not(.compact)');
+  if (code && first) {
+    first.dataset.state = q.get('ok') ? 'done' : 'error';
+    first.querySelector('.jf-status')!.textContent = messages[code] ?? messages.error;
+  }
+</script>
+
+<style is:global>
+  .join-form { display: grid; gap: 18px; }
+  .jf-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .jf-roles { border: 0; margin: 0; padding: 0; min-width: 0; }
+  .jf-roles legend { font: 600 0.78rem/1.4 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; padding: 0; }
+  .jf-roles legend span { text-transform: none; letter-spacing: 0; font-weight: 400; opacity: 0.75; }
+  .jf-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .jf-chip { position: relative; cursor: pointer; }
+  .jf-chip input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+  .jf-chip span { display: inline-block; font: 0.8rem/1 var(--mono); padding: 10px 12px; background: var(--paper); color: var(--indigo); border: 1.5px solid var(--indigo); transition: transform 0.15s, background 0.15s; }
+  .jf-chip input:checked + span { background: var(--lime); transform: rotate(-2deg); }
+  .jf-chip input:checked + span::before { content: '✓ '; }
+  .jf-chip input:focus-visible + span { outline: 3px solid var(--red); outline-offset: 2px; }
+  .jf-row { display: grid; gap: 12px; }
+  .jf-row.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .jf-row.send { grid-template-columns: minmax(0, 1fr) auto; align-items: end; }
+  .jf-field { display: grid; gap: 6px; font: 600 0.78rem/1.3 var(--mono); letter-spacing: 0.04em; text-transform: uppercase; }
+  .jf-field small { text-transform: none; font-weight: 400; opacity: 0.75; letter-spacing: 0; }
+  .join-form input[type='email'], .join-form input[type='text'], .join-form input[type='url'] { font: 1rem/1.2 var(--serif); padding: 13px 14px; border: 1.5px solid var(--indigo); background: #fff; color: var(--ink); border-radius: 0; min-height: 48px; width: 100%; text-transform: none; letter-spacing: 0; }
+  .join-form input:focus-visible { outline: 3px solid var(--lime); outline-offset: 0; border-color: var(--indigo-deep); }
+  .join-form button { appearance: none; border: 0; cursor: pointer; min-height: 48px; padding: 0 22px; font: 600 0.8rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; background: var(--indigo); color: #fff; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%); }
+  .join-form button:hover { background: var(--red); }
+  .join-form button:disabled { opacity: 0.6; cursor: progress; }
+  .jf-note { margin: 0; font-size: 0.86rem; line-height: 1.5; opacity: 0.85; max-width: 62ch; }
+  .jf-status { margin: 0; font: 600 0.84rem/1.4 var(--mono); min-height: 1.4em; }
+  .join-form[data-state='done'] .jf-status { color: var(--indigo); background: var(--lime); padding: 8px 10px; justify-self: start; }
+  .join-form[data-state='error'] .jf-status { color: var(--coral-deep); }
+  .join-form .jf-status:empty { display: none; }
+  /* footer version on indigo */
+  .join-form.compact { gap: 10px; }
+  .join-form.compact input[type='email'] { border-color: var(--on-indigo); }
+  .join-form.compact button { background: var(--lime); color: var(--indigo); }
+  .join-form.compact button:hover { background: #fff; }
+  .join-form.compact .jf-note { color: var(--mute-indigo); font-size: 0.82rem; }
+  .join-form.compact[data-state='done'] .jf-status { background: var(--lime); }
+  .join-form.compact[data-state='error'] .jf-status { color: #fff; }
+  @media (max-width: 560px) {
+    .jf-row.two { grid-template-columns: minmax(0, 1fr); }
+    .join-form:not(.compact) .jf-row.send { grid-template-columns: minmax(0, 1fr); }
+    .join-form:not(.compact) button { width: 100%; }
+  }
+  @media (prefers-reduced-motion: reduce) { .jf-chip input:checked + span { transform: none; } }
+</style>

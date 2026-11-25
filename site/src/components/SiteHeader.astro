@@ -3,18 +3,51 @@ import { SITE } from '../site';
 import Logo from './Logo.astro';
 const path = Astro.url.pathname;
 const here = (p: string) => path === p || path.startsWith(p);
-const makes: [string, string, string][] = [
-  ['Illustrations and covers', 'Scenes, styles, the critic', '/make/blog-covers-og-images/'],
-  ['Brand boards', 'Nine tiles from one spec', '/make/brand-board/'],
-  ['Branding posters', 'Eight posters in one series', '/make/branding-posters/'],
-  ['Seals and stickers', 'Ring text, tickets, die-cuts', '/make/stickers-seals-tickets/'],
-  ['Dither and mesh gradients', 'Backgrounds with a grain', '/make/dither-pixel-art/'],
-  ['ASCII and dot-matrix art', 'Glyph fills from any drawing', '/make/ascii-art/'],
-  ['Terrain and etching', 'Wireframes, ridgelines, engraving', '/make/wireframe-terrain-etching/'],
-  ['3D and pixel icons', 'Soft 3D, extruded, pixel grids', '/make/3d-icons/'],
-  ['Little 3D worlds', 'Iso dioramas from a preset', '/make/isometric-illustrations/'],
-  ['Charts', 'Hand-inked bars, lines, donuts', '/make/hand-drawn-charts/'],
+
+type Item = [title: string, desc: string, href: string];
+type Group = { id: string; label: string; match: string[]; items: Item[]; feature: { kicker: string; title: string; text: string; href: string; cta: string } };
+const groups: Group[] = [
+  {
+    id: 'make', label: 'Make', match: ['/make', '/features', '/gallery', '/library', '/banner'],
+    items: [
+      ['Free makers', 'Every maker on one page', '/make/'],
+      ['Illustrations and covers', 'Scenes, styles, the critic', '/make/blog-covers-og-images/'],
+      ['Brand boards', 'Nine tiles from one spec', '/make/brand-board/'],
+      ['Branding posters', 'Eight posters in one series', '/make/branding-posters/'],
+      ['Seals and stickers', 'Ring text, tickets, die-cuts', '/make/stickers-seals-tickets/'],
+      ['ASCII and dot-matrix', 'Glyph fills from any drawing', '/make/ascii-art/'],
+      ['3D and pixel icons', 'Soft 3D, extruded, pixel grids', '/make/3d-icons/'],
+      ['README banner', 'A banner from a GitHub link', '/banner/'],
+      ['Gallery', 'Every image with its scene', '/gallery/'],
+      ['Library', '1,600+ open drawings', '/library/'],
+    ],
+    feature: { kicker: 'all of it', title: 'Everything Levni draws', text: 'Covers, icons, charts, boards, posters, dither, terrain and little 3D worlds.', href: '/features/', cta: 'See all features' },
+  },
+  {
+    id: 'resources', label: 'Resources', match: ['/docs', '/blog', '/lists', '/changelog', '/mcp'],
+    items: [
+      ['Docs', 'Install, scenes, elements, API', '/docs/'],
+      ['Getting started', 'Your first image in two minutes', '/docs/getting-started/'],
+      ['MCP server', 'Setup for Claude, Codex, Cursor', '/mcp/'],
+      ['Blog', 'Guides and stories', '/blog/'],
+      ['No FOMO lists', '240+ open design picks', '/lists/'],
+      ['Changelog', 'What changed, release by release', '/changelog/'],
+    ],
+    feature: { kicker: 'no fomo lists', title: 'Only open. Only free.', text: 'Open design tools, MCP servers for design and type resources, checked by hand.', href: '/lists/', cta: 'Browse the lists' },
+  },
+  {
+    id: 'community', label: 'Community', match: ['/community', '/manifesto', '/join'],
+    items: [
+      ['Five ways in', 'Draw, share, request, show', '/community/'],
+      ['Manifesto', 'A post-AI center for designers', '/manifesto/'],
+      ['Join the crew', 'Newsletter and the Wanted list', '/join/'],
+      ['Draw for the Folio', 'Add one drawing, keep your name', '/blog/contribute-drawing-open-library/'],
+      ['GitHub', 'Levni-Dev on GitHub', 'https://github.com/Levni-Dev'],
+    ],
+    feature: { kicker: 'wanted', title: 'Join the Folio crew', text: 'Illustrators, type nerds, riso printers, agent tinkerers. Leave your email, pick a role.', href: '/join/', cta: 'Join the crew' },
+  },
 ];
+const chevron = '<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
 ---
 <header class="site-header">
   <div class="wrap header-row">
@@ -27,29 +60,29 @@ const makes: [string, string, string][] = [
     </button>
     <nav class="site-nav" id="site-nav" aria-label="Main">
       <ul class="nav-main">
-        <li class="has-mega">
-          <a href="/features/" aria-current={path.startsWith('/features') ? 'page' : undefined}>What it makes</a>
-          <button class="mega-toggle" type="button" aria-expanded="false" aria-controls="mega" aria-label="Show what Levni makes" hidden>
-            <svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
-          </button>
-          <div class="mega" id="mega">
-            <ul>
-              {makes.map(([t, d, h]) => <li><a href={h}><span class="m-t">{t}</span><span class="m-d">{d}</span></a></li>)}
-            </ul>
-            <p class="mega-foot"><a href="/make/">All free makers</a><a href="/features/">All features</a><a href="/gallery/">Browse the gallery</a><a href="/library/">The library</a><a href="/lists/">No FOMO lists</a><a href="/manifesto/">Why we make it</a></p>
-          </div>
-        </li>
-        <li><a href="/gallery/" aria-current={here('/gallery') ? 'page' : undefined}>Gallery</a></li>
-        <li><a href="/library/" aria-current={here('/library') ? 'page' : undefined}>Library</a></li>
-        <li><a href="/editor/" aria-current={here('/editor') || here('/banner') ? 'page' : undefined}>Editor</a></li>
-        <li><a href="/docs/" aria-current={here('/docs') ? 'page' : undefined}>Docs</a></li>
-        <li><a href="/blog/" aria-current={here('/blog') ? 'page' : undefined}>Blog</a></li>
-        <li><a href="/community/" aria-current={here('/community') ? 'page' : undefined}>Community</a></li>
-        <li class="nav-agent"><a class="agent-link" href="/mcp/" aria-current={here('/mcp') ? 'page' : undefined}>Use with your agent</a></li>
+        {groups.map((g) => (
+          <li class="ng" data-group={g.id}>
+            <button class="ng-btn" type="button" aria-expanded="false" aria-controls={`mega-${g.id}`} data-current={g.match.some(here) ? 'true' : undefined}>
+              <span>{g.label}</span><Fragment set:html={chevron} />
+            </button>
+            <div class="mega" id={`mega-${g.id}`}>
+              <ul class="mega-items">
+                {g.items.map(([t, d, h]) => <li><a href={h} aria-current={path === h ? 'page' : undefined}><span class="m-t">{t}</span><span class="m-d">{d}</span></a></li>)}
+              </ul>
+              <a class="mega-feature" href={g.feature.href}>
+                <span class="mf-k">{'{'}{g.feature.kicker}{'}'}</span>
+                <b>{g.feature.title}</b>
+                <span class="mf-t">{g.feature.text}</span>
+                <span class="mf-c">{g.feature.cta} →</span>
+              </a>
+            </div>
+          </li>
+        ))}
+        <li class="nav-plain"><a href="/editor/" aria-current={here('/editor') ? 'page' : undefined}>Editor</a></li>
+        <li class="nav-agent"><a class="agent-link" href="/mcp/#setup">Use with your agent</a></li>
       </ul>
       <ul class="nav-side">
         <li><a class="side-link" href={SITE.github} aria-label="Star Levni on GitHub"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z" fill="currentColor"/></svg><span>Star<span class="long"> on GitHub</span></span></a></li>
-        <li><a class="side-link" href={SITE.npm}><span>npm</span></a></li>
         <li><a class="ver" href="/changelog/" aria-label={`Version ${SITE.version}, see the changelog`}>v{SITE.version}</a></li>
       </ul>
     </nav>
@@ -63,29 +96,36 @@ const makes: [string, string, string][] = [
     var header = document.querySelector('.site-header');
     var btn = header.querySelector('.menu-btn');
     var nav = header.querySelector('#site-nav');
-    var tog = header.querySelector('.mega-toggle');
-    var grp = header.querySelector('.has-mega');
-    btn.hidden = false; tog.hidden = false;
+    var groups = Array.prototype.slice.call(header.querySelectorAll('.ng'));
+    btn.hidden = false;
     var mq = window.matchMedia('(max-width: 62rem)');
+    function setGroup(g, open) {
+      g.classList.toggle('open', open);
+      g.querySelector('.ng-btn').setAttribute('aria-expanded', String(open));
+    }
+    function closeAll(except) { groups.forEach(function (g) { if (g !== except) setGroup(g, false); }); }
     function setMenu(open, refocus) {
       btn.setAttribute('aria-expanded', String(open));
       nav.classList.toggle('open', open);
       if (open) { nav.style.top = Math.round(header.getBoundingClientRect().bottom) + 'px'; nav.scrollTop = 0; }
       root.classList.toggle('menu-open', open && mq.matches);
       btn.querySelector('.menu-label').textContent = open ? 'Close' : 'Menu';
+      if (!open) closeAll();
       if (!open && refocus) btn.focus();
     }
-    function setMega(open, refocus) {
-      tog.setAttribute('aria-expanded', String(open));
-      grp.classList.toggle('open', open);
-      if (!open && refocus) tog.focus();
-    }
     btn.addEventListener('click', function () { setMenu(btn.getAttribute('aria-expanded') !== 'true'); });
-    tog.addEventListener('click', function () { setMega(tog.getAttribute('aria-expanded') !== 'true'); });
+    groups.forEach(function (g) {
+      g.querySelector('.ng-btn').addEventListener('click', function () {
+        var open = !g.classList.contains('open');
+        if (!mq.matches) closeAll(g);
+        setGroup(g, open);
+      });
+    });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') {
-        if (grp.classList.contains('open')) { setMega(false, true); }
-        else if (nav.classList.contains('open')) { setMenu(false, true); }
+        var openG = groups.filter(function (g) { return g.classList.contains('open'); })[0];
+        if (openG && !mq.matches) { setGroup(openG, false); openG.querySelector('.ng-btn').focus(); return; }
+        if (nav.classList.contains('open')) setMenu(false, true);
         return;
       }
       if (e.key === 'Tab' && mq.matches && nav.classList.contains('open')) {
@@ -95,75 +135,86 @@ const makes: [string, string, string][] = [
         else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
       }
     });
-    document.addEventListener('click', function (e) {
-      if (!grp.contains(e.target)) setMega(false);
-      if (nav.classList.contains('open') && !header.contains(e.target)) setMenu(false);
+    // desktop: a panel closes when focus or a click leaves its group
+    document.addEventListener('click', function (e) { if (!mq.matches && !header.contains(e.target)) closeAll(); });
+    header.addEventListener('focusout', function (e) {
+      if (mq.matches) return;
+      groups.forEach(function (g) { if (g.classList.contains('open') && e.relatedTarget && !g.contains(e.relatedTarget)) setGroup(g, false); });
     });
     nav.addEventListener('click', function (e) {
       if (e.target.closest && e.target.closest('a') && nav.classList.contains('open')) setMenu(false);
     });
-    var onChange = function () { setMenu(false); setMega(false); };
+    var onChange = function () { setMenu(false); closeAll(); };
     if (mq.addEventListener) mq.addEventListener('change', onChange);
   })();
 </script>
 
 <style is:global>
-  /* indigo masthead: white mark, mono uppercase links, lime call to action */
+  /* indigo masthead with three mega groups */
   .site-header { position: relative; z-index: 20; background: var(--indigo); color: var(--on-indigo); border-bottom: 0; }
   .site-header .header-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: nowrap; gap: 20px; min-height: 72px; }
   .site-header .wordmark { display: flex; align-items: center; color: #fff; gap: 10px; text-decoration: none; flex: none; }
   .site-header .wordmark span { font-family: var(--display); font-style: normal; font-weight: 800; font-size: 1.55rem; letter-spacing: -0.04em; }
   .site-nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; gap: 18px; flex-wrap: nowrap; font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
-  .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 4px 6px; }
-  .site-nav a { color: var(--on-indigo); text-decoration: none; padding: 10px 9px; white-space: nowrap; opacity: 0.85; }
-  .site-nav a:hover { color: #fff; opacity: 1; background: none; }
-  .site-nav a[aria-current='page'] { opacity: 1; box-shadow: inset 0 -2px 0 var(--lime); }
-  .site-nav .agent-link { opacity: 1; background: var(--lime); color: var(--indigo); font-weight: 600; margin-left: 8px; padding: 10px 16px; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%); }
+  .site-nav > ul { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 4px; }
+  .site-nav .nav-plain a, .ng-btn { color: var(--on-indigo); text-decoration: none; padding: 10px; white-space: nowrap; opacity: 0.9; }
+  .ng-btn { appearance: none; background: none; border: 0; font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; }
+  .ng-btn svg { transition: transform 0.15s; }
+  .ng.open .ng-btn svg { transform: rotate(180deg); }
+  .ng-btn:hover, .ng.open .ng-btn, .site-nav .nav-plain a:hover { opacity: 1; color: #fff; }
+  .ng-btn[data-current], .site-nav .nav-plain a[aria-current='page'] { opacity: 1; box-shadow: inset 0 -2px 0 var(--lime); }
+  .site-nav .agent-link { display: inline-block; background: var(--lime); color: var(--indigo); font-weight: 600; margin-left: 8px; padding: 11px 16px; text-decoration: none; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%); white-space: nowrap; }
   .site-nav .agent-link:hover { background: #fff; color: var(--indigo); }
-  .site-nav .agent-link[aria-current='page'] { box-shadow: none; background: #fff; }
-  .nav-side { gap: 2px 4px; padding-left: 14px; border-left: 1px solid rgba(255, 255, 255, 0.22); }
-  .site-nav .side-link { display: inline-flex; align-items: center; gap: 6px; padding: 10px 7px; color: var(--mute-indigo); }
-  .site-nav .ver { opacity: 1; font-size: 0.74rem; border: 1px solid var(--on-indigo); padding: 4px 8px; color: var(--on-indigo); }
+  .nav-side { padding-left: 14px; border-left: 1px solid rgba(255, 255, 255, 0.22); }
+  .site-nav .side-link { display: inline-flex; align-items: center; gap: 6px; padding: 10px 7px; color: var(--mute-indigo); text-decoration: none; }
+  .site-nav .side-link:hover { color: #fff; }
+  .site-nav .ver { font-size: 0.74rem; border: 1px solid var(--on-indigo); padding: 4px 8px; color: var(--on-indigo); text-decoration: none; }
   .site-nav .ver:hover { background: var(--lime); color: var(--indigo); border-color: var(--lime); }
 
-  .has-mega { position: relative; display: flex; align-items: center; }
-  .mega-toggle { appearance: none; border: 0; background: none; color: var(--on-indigo); width: 26px; height: 36px; margin-left: -8px; cursor: pointer; display: inline-grid; place-items: center; }
-  .mega-toggle svg { transition: transform 0.15s; }
-  .has-mega.open .mega-toggle svg { transform: rotate(180deg); }
-  .mega { display: none; position: absolute; top: 100%; left: -10px; width: min(580px, calc(100vw - 40px)); background: var(--paper-2); color: var(--ink); padding: 14px; z-index: 30; clip-path: var(--chamfer); box-shadow: 0 30px 60px -30px rgba(27, 19, 64, 0.5); text-transform: none; letter-spacing: 0; font-family: var(--serif); font-size: 1rem; }
-  .has-mega:hover .mega, .has-mega:focus-within .mega, .has-mega.open .mega { display: block; }
-  .mega ul { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 10px; }
-  .site-nav .mega li a { display: flex; flex-direction: column; white-space: normal; padding: 8px 10px; color: var(--ink); opacity: 1; }
-  .site-nav .mega li a:hover { background: var(--paper); color: var(--indigo); }
-  .mega .m-t { font-weight: 700; line-height: 1.25; letter-spacing: -0.01em; }
-  .mega .m-d { font-size: 0.82rem; color: var(--ink-soft); line-height: 1.35; }
-  .mega-foot { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 10px 0 0; padding: 10px 10px 0; border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 0.78rem; }
-  .site-nav .mega-foot a { padding: 4px 0; color: var(--accent-text); opacity: 1; text-decoration: underline; text-underline-offset: 3px; }
+  /* the panel: links on the left, one feature card on the right */
+  .mega { display: none; position: absolute; left: 50%; transform: translateX(-50%); top: calc(100% - 6px); width: min(1080px, calc(100vw - 40px)); z-index: 30; background: var(--paper-2); color: var(--ink); padding: 18px;
+    text-transform: none; letter-spacing: 0; font-family: var(--serif); font-size: 1rem; grid-template-columns: minmax(0, 1fr) 290px; gap: 18px; clip-path: var(--chamfer); box-shadow: 0 30px 60px -30px rgba(27, 19, 64, 0.5); }
+  .ng.open .mega { display: grid; }
+  .mega-items { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2px 8px; align-content: start; }
+  .site-nav .mega-items a { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; text-decoration: none; color: var(--ink); }
+  .site-nav .mega-items a:hover, .site-nav .mega-items a[aria-current='page'] { background: var(--paper); color: var(--indigo); }
+  .m-t { font-weight: 700; line-height: 1.25; letter-spacing: -0.01em; }
+  .m-d { font-size: 0.84rem; color: var(--ink-soft); line-height: 1.35; }
+  .site-nav .mega-feature { display: flex; flex-direction: column; gap: 8px; padding: 20px; background: var(--indigo); color: var(--on-indigo); text-decoration: none; clip-path: var(--chamfer); }
+  .site-nav .mega-feature:hover { background: var(--indigo-deep); }
+  .mf-k { font: 500 0.7rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--lime); }
+  .mega-feature b { font-size: 1.35rem; color: #fff; letter-spacing: -0.02em; line-height: 1.1; }
+  .mf-t { color: var(--mute-indigo); font-size: 0.92rem; line-height: 1.45; flex: 1; }
+  .mf-c { font: 600 0.74rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--lime); }
   .menu-btn { display: none; }
 
-  @media (max-width: 75rem) { .site-nav .long { display: none; } .site-nav a { padding-left: 6px; padding-right: 6px; } }
+  @media (max-width: 75rem) {
+    .site-nav .long { display: none; }
+    .ng-btn, .site-nav .nav-plain a { padding-left: 7px; padding-right: 7px; }
+    .mega-items { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
 
+  /* compact: a full-height sheet with three accordions */
   @media (max-width: 62rem) {
     .site-header .header-row { flex-wrap: wrap; gap: 0 12px; min-height: 64px; padding-top: 8px; padding-bottom: 8px; }
     .site-nav { flex-basis: 100%; padding-top: 6px; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0; font-size: 0.86rem; }
-    .site-nav ul { flex-direction: column; align-items: stretch; }
-    .site-nav li a { display: block; padding: 14px 2px; border-bottom: 1px solid rgba(255, 255, 255, 0.16); opacity: 1; }
-    .site-nav a[aria-current='page'] { box-shadow: inset 3px 0 0 var(--lime); padding-left: 12px; }
-    .has-mega { display: block; order: 3; }
-    .site-nav .nav-agent { order: 2; }
-    .has-mega > a { font-size: 0.72rem; color: var(--lime); padding: 18px 2px 6px; border-bottom: 0; }
-    .mega-toggle { display: none; }
-    .mega { display: block; position: static; width: auto; clip-path: none; box-shadow: none; background: none; color: var(--on-indigo); padding: 0 0 8px; }
-    .mega ul { grid-template-columns: minmax(0, 1fr); gap: 0; }
-    .site-nav .mega li a { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; padding: 10px 2px; border-bottom: 1px solid rgba(255, 255, 255, 0.16); color: #fff; }
-    .site-nav .mega li a:hover { background: none; color: var(--lime); }
-    .mega .m-d { display: block; font-size: 0.84rem; color: var(--mute-indigo); }
-    .mega-foot { display: none; }
-    .site-nav .agent-link { margin: 18px 0 6px; padding: 15px; text-align: center; border-bottom: 0; }
-    .site-nav .agent-link[aria-current='page'] { padding-left: 15px; }
-    .site-nav .nav-side { flex-direction: row; flex-wrap: wrap; align-items: center; padding: 8px 0 4px; border-left: 0; gap: 6px 16px; }
-    .site-nav .nav-side li a { display: inline-flex; align-items: center; border-bottom: 0; padding: 8px 2px; }
-    .site-nav .nav-side li a.ver { padding: 4px 9px; line-height: 1.3; }
+    .site-nav > ul { flex-direction: column; align-items: stretch; gap: 0; }
+    .ng { border-bottom: 1px solid rgba(255, 255, 255, 0.16); }
+    .ng-btn { width: 100%; justify-content: space-between; padding: 16px 2px; opacity: 1; color: #fff; font-size: 0.9rem; }
+    .ng-btn[data-current] { box-shadow: inset 3px 0 0 var(--lime); padding-left: 12px; }
+    .mega { position: static; transform: none; width: auto; clip-path: none; box-shadow: none; background: none; color: var(--on-indigo); padding: 0 0 16px; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+    .mega-items { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    .site-nav .mega-items a { padding: 10px 4px; color: #fff; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+    .site-nav .mega-items a:hover, .site-nav .mega-items a[aria-current='page'] { background: none; color: var(--lime); }
+    .m-d { color: var(--mute-indigo); }
+    .site-nav .mega-feature { background: var(--lime); color: var(--indigo); }
+    .site-nav .mega-feature:hover { background: #fff; }
+    .mega-feature b, .mf-k, .mf-c { color: var(--indigo); }
+    .mf-t { color: var(--indigo-deep); }
+    .site-nav .nav-plain a { display: block; padding: 16px 2px; border-bottom: 1px solid rgba(255, 255, 255, 0.16); opacity: 1; color: #fff; font-size: 0.9rem; }
+    .site-nav .nav-agent { margin-top: 18px; }
+    .site-nav .agent-link { display: block; margin: 0 0 6px; padding: 15px; text-align: center; }
+    .site-nav .nav-side { flex-direction: row; flex-wrap: wrap; align-items: center; padding: 10px 0 4px; border-left: 0; gap: 6px 16px; }
     .site-nav .nav-side .long { display: inline; }
     .js .menu-btn { display: inline-flex; align-items: center; gap: 10px; margin-left: auto; appearance: none; background: transparent; border: 1px solid var(--on-indigo); color: #fff; font: 600 0.78rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; padding: 8px 14px; cursor: pointer; min-height: 44px; }
     .js .menu-btn[aria-expanded='true'] { background: var(--lime); color: var(--indigo); border-color: var(--lime); }
@@ -173,6 +224,8 @@ const makes: [string, string, string][] = [
     .js .site-nav.open { position: fixed; left: 0; right: 0; bottom: 0; top: 64px; z-index: 40; background: var(--indigo); padding: 4px 20px calc(24px + env(safe-area-inset-bottom)); overflow-y: auto; overscroll-behavior: contain; }
     .js.menu-open, .js.menu-open body { overflow: hidden; }
   }
+  /* without JS every panel shows inline */
+  html:not(.js) .ng .mega { display: grid; position: static; transform: none; width: auto; }
   @media (max-width: 62rem) and (prefers-reduced-motion: no-preference) {
     .js .site-nav.open { animation: sheet-in 0.16s ease-out; }
     @keyframes sheet-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }

@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import { SITE } from '../site';
 import Logo from './Logo.astro';
+import JoinForm from './JoinForm.astro';
 const latest = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 3);
@@ -14,6 +15,11 @@ const year = new Date().getFullYear();
       <div class="f-brand">
         <a class="f-mark" href="/" aria-label="Levni home"><Logo size={40} /><span>levni</span></a>
         <p>Designed for agents, drawn for people. Illustrations, brand assets, boards and posters from JSON, with no image model inside.</p>
+        <div class="f-join">
+          <h2>The Levni letter</h2>
+          <JoinForm compact source="footer" id="footer-join" />
+          <p class="f-crew"><a href="/join/">Join the crew, pick your role →</a></p>
+        </div>
         <div class="f-dots" aria-hidden="true"><i style="background:var(--pink)"></i><i style="background:var(--orange)"></i><i style="background:var(--sky)"></i><i style="background:var(--sun)"></i><i style="background:var(--red)"></i><i style="background:var(--lilac)"></i></div>
       </div>
       <nav class="f-cols" aria-label="Footer">
@@ -55,6 +61,7 @@ const year = new Date().getFullYear();
             <li><a href="/lists/">No FOMO lists</a></li>
             <li><a href="/manifesto/">Manifesto</a></li>
             <li><a href="/community/">Community</a></li>
+            <li><a href="/join/">Join the crew</a></li>
             <li><a href={gh}>GitHub</a></li>
             <li><a href={`${gh}/blob/main/LICENSE`}>Licence: MIT</a></li>
             <li><a href="https://creativecommons.org/licenses/by/4.0/">Folio: CC BY 4.0</a></li>
@@ -96,4 +103,9 @@ const year = new Date().getFullYear();
   }
   @media (max-width: 400px) { .f-cols { grid-template-columns: minmax(0, 1fr); } .f-cols a { padding: 7px 0; } }
   .f-quip { color: var(--lime); }
+  .f-join { margin-top: 26px; max-width: 26rem; }
+  .f-join h2 { font-family: var(--mono); font-size: 0.74rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lime); margin: 0 0 10px; }
+  .f-crew { margin: 8px 0 0; font: 600 0.76rem/1.4 var(--mono); letter-spacing: 0.04em; text-transform: uppercase; }
+  .f-crew a { color: #fff; }
+  .f-crew a:hover { color: var(--lime); }
 </style>

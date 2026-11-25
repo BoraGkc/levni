@@ -1,0 +1,63 @@
+---
+import Base from '../layouts/Base.astro';
+import JoinForm from '../components/JoinForm.astro';
+import { SITE } from '../site';
+
+const jsonld = [{
+  '@type': 'WebPage',
+  name: 'Join the Levni crew',
+  url: `${SITE.url}/join/`,
+  description: 'Get the Levni letter and join the Folio crew: illustrators, type nerds, riso printers and agent tinkerers building an open design commons.',
+}];
+---
+<Base og="/og/community.png" title="Join the crew: the Levni letter and the Wanted list" description="Get a short letter when Levni ships something new, and tell us what you are: illustrator, type nerd, riso printer, agent tinker. The open design commons needs hands." jsonld={jsonld}>
+  <header class="wrap brand-hero no-art">
+    <p class="eyebrow">Join · newsletter and the Folio crew</p>
+    <h1>WANTED. <em>Hands for an open commons.</em></h1>
+    <p class="lede">Leave your email for a short letter when something ships. Tick what you are, and we will write when the Folio needs exactly you. Reward: your name in every scene that uses your work.</p>
+  </header>
+
+  <section class="wrap join-wrap" aria-labelledby="join-title">
+    <div class="join-card">
+      <h2 id="join-title" class="sr-only">Sign up</h2>
+      <JoinForm source="join" id="join-main" />
+    </div>
+    <aside class="join-side" aria-label="What happens next">
+      <p class="kicker">{'{'}what you get{'}'}</p>
+      <ol>
+        <li><b>One letter, now and then.</b> New makers, new drawings, new lists. No growth hacks, no daily drip.</li>
+        <li><b>A call when you fit.</b> Need an icon pedant for a pixel set? We ask the icon pedants first.</li>
+        <li><b>Credit that travels.</b> What you draw carries your name into the Library, the NOTICE and every scene.</li>
+      </ol>
+      <p class="j-alt">Rather start now? <a href="/community/">Five ways in</a> · <a href="/blog/contribute-drawing-open-library/">draw for the Folio</a> · <a href="/lists/">No FOMO lists</a></p>
+    </aside>
+  </section>
+
+  <section class="wrap leave" aria-labelledby="leave-title">
+    <details>
+      <summary id="leave-title">Leave the list</summary>
+      <form class="join-form leave-form" action="/api/join" method="post" data-join>
+        <input type="hidden" name="action" value="leave" />
+        <div class="jf-row send">
+          <label class="jf-field grow"><span>Email</span><input type="email" name="email" required maxlength="254" autocomplete="email" /></label>
+          <button type="submit">Remove me</button>
+        </div>
+        <p class="jf-status" role="status" aria-live="polite"></p>
+      </form>
+    </details>
+  </section>
+</Base>
+
+<style>
+  .join-wrap { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: start; margin-top: clamp(40px, 5vw, 64px); }
+  .join-card { background: #fff; padding: clamp(20px, 3vw, 36px); clip-path: var(--chamfer); }
+  .join-card :global(.jf-roles legend) { color: var(--indigo); }
+  .join-side ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+  .join-side li { border-top: 3px solid var(--indigo); padding-top: 10px; color: var(--ink-soft); }
+  .join-side b { display: block; color: var(--indigo); font-size: 1.08rem; }
+  .j-alt { margin-top: 24px; color: var(--ink-soft); font-size: 0.95rem; }
+  .leave { margin-top: 48px; }
+  .leave summary { cursor: pointer; font: 600 0.78rem/1.6 var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-soft); }
+  .leave-form { margin-top: 14px; max-width: 520px; }
+  @media (max-width: 900px) { .join-wrap { grid-template-columns: minmax(0, 1fr); } }
+</style>

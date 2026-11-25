@@ -466,6 +466,7 @@ npx @levni/levni board brand.json board.png`}</code></pre>
         <p class="w-head"><b>WANTED</b> for the Folio crew</p>
         <ul>{['illustrators', 'type nerds', 'riso printers', 'icon pedants', 'agent tinkerers', 'prompt sceptics', 'OSS maintainers', 'brand people', 'miniature fans', 'people who still sketch'].map((w) => <li>{w}</li>)}</ul>
         <p class="w-foot">Reward: your name in every scene that uses your work.</p>
+        <a class="w-join" href="/join/">Join the crew →</a>
       </div>
       </div>
     </div>
@@ -1062,4 +1063,6 @@ npx @levni/levni board brand.json board.png`}</code></pre>
   .wanted li:hover { transform: rotate(2deg) scale(1.05); background: var(--lime); }
   .w-foot { margin: 12px 0 0; font: 0.72rem/1.4 var(--mono); color: var(--lime); }
   @media (prefers-reduced-motion: reduce) { .wanted li, .wanted li:hover { transform: none; } }
+  .w-join { display: inline-block; margin-top: 14px; padding: 12px 16px; background: var(--lime); color: var(--indigo); font: 600 0.78rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%); }
+  .w-join:hover { background: #fff; color: var(--indigo); }
 </style>

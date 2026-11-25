@@ -29,5 +29,6 @@ Install for Claude Code: `claude mcp add levni -- npx -y @levni/levni mcp`. npm:
 
 - [Manifesto](https://levni.dev/manifesto/): why Levni exists, the Tulip Era and the FOMO stack
 - [Community](https://levni.dev/community/): five ways to add drawings, palettes, brand kits and showcases
+- [Join the crew](https://levni.dev/join/): the Levni letter and the Folio crew Wanted list
 - [Blog](https://levni.dev/blog/): guides and stories, RSS at https://levni.dev/blog/rss.xml
 - [Changelog](https://levni.dev/changelog/)
