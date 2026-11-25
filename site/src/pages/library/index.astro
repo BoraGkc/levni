@@ -23,7 +23,7 @@ const title = 'Library';
 const description = `Browse all ${props.length.toLocaleString("en")} drawings in the Levni Folio: icons, objects and spot illustrations in one hand-inked style, free under CC BY 4.0.`;
 ---
 <Base title={title} description={description}>
-  <section class="wrap lib-head">
+  <section class="wrap lib-head brand-hero">
     <p class="eyebrow">The Levni Folio · CC BY 4.0</p>
     <h1>Library</h1>
     <p class="lede">
@@ -459,7 +459,7 @@ const description = `Browse all ${props.length.toLocaleString("en")} drawings in
 </script>
 
 <style>
-  .lib-head { margin-top: 48px; }
+  .lib-head { margin-top: 0; }
   .eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-text); margin: 0 0 14px; }
   .lede { font-size: 1.2rem; color: var(--ink-soft); max-width: 720px; }
   .tools { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin: 24px 0 20px; }

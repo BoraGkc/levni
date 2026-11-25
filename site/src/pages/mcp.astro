@@ -60,9 +60,11 @@ const jsonld = [
 ---
 <Base title="MCP server: give your agent a design studio" description="Connect Levni to Claude, Cursor or any MCP client: the agent draws illustrations, covers, icons, charts, brand assets, brand boards and branding posters, reads the layout critic and saves the files. Free and local." jsonld={jsonld}>
   <article class="wrap page">
+    <header class="brand-hero no-art">
     <p class="eyebrow">Levni for agents</p>
     <h1>Give your agent a <em class="accent">design studio</em>.</h1>
     <p class="lede">Connect Levni and your assistant can make branding posters, brand boards, sticker sheets, dithered heroes, ASCII cards, 3D icons and covers. It finds the drawings, writes the scene, reads the critic’s notes and saves the file. Free, local, no image model.</p>
+    </header>
 
     <h2 id="makes">What your agent can make</h2>
     <ul class="strip">{strip.map((t) => (
@@ -140,7 +142,7 @@ const jsonld = [
 </Base>
 
 <style>
-  .page { max-width: 860px; margin-top: 48px; }
+  .page { max-width: 860px; margin-top: 0; }
   .eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-text); margin: 0 0 12px; }
   .lede { font-size: 1.22rem; color: var(--ink-soft); }
   h2 { margin-top: 2.2em; font-size: clamp(1.8rem, 4vw, 2.4rem); }

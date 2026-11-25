@@ -11,9 +11,11 @@ const jsonld = [
 ---
 <Base title="Free design makers: stickers, posters, icons" description="Free makers that run in your browser: stickers and seals, brand boards, branding posters, 3D and pixel icons, ASCII art, charts, covers and more. No sign-up." jsonld={jsonld}>
   <div class="wrap mh">
+    <header class="brand-hero">
     <p class="eyebrow">Free makers</p>
     <h1>Make it in your browser. Free, no sign-up.</h1>
     <p class="lede">Each maker opens a finished example in the Levni editor. Change the words, the drawing and the colours, then download PNG or SVG. When you want more, ask your agent: Levni runs free in Claude and Codex.</p>
+    </header>
     <a class="mh-feature" href={banner.href}><img src={banner.img} width="1280" height="640" alt="" loading="eager" /><span><b>{banner.title}</b><span>{banner.text}</span><em>Make a banner →</em></span></a>
     <ul class="mh-grid">
       {cards.map((c) => (
@@ -24,7 +26,7 @@ const jsonld = [
 </Base>
 
 <style>
-  .mh { padding-top: clamp(32px, 6vw, 64px); }
+  .mh { padding-top: 0; }
   .mh h1 { max-width: 18ch; margin: 0 0 14px; text-wrap: balance; }
   .mh .lede { max-width: 64ch; }
   .mh-feature { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 24px; align-items: center; margin-top: 32px; padding: 14px; border-radius: 0; background: var(--indigo); color: var(--paper); text-decoration: none; }

@@ -277,17 +277,16 @@ npx @levni/levni board brand.json board.png`}</code></pre>
   <!-- 2b. Posters: the red band -->
   <section class="poster-band" aria-labelledby="posters-title">
     <div class="wrap pb-wrap">
-      <div class="chip" aria-hidden="true"><i></i></div>
       <div class="pb-text">
+        <p class="pb-k">{'{'}branding posters{'}'}</p>
         <h2 id="posters-title">One brand.json. Eight posters.</h2>
         <p>Give Levni a name, two colours and a mood. It returns a branding poster series, a nine-tile board and the sticker sheet, all in the same ink.</p>
         <a class="pb-link" href="/make/branding-posters/">Make a poster series →</a>
       </div>
-      <div class="rail" aria-hidden="true"></div>
+      <a class="pb-art" href="/gallery/#posters"><img src="/features/poster-series.webp" width="1200" height="794" alt="Eight branding posters for a coffee roaster called Kumru, sharing one dove mark, inks and type" loading="lazy" decoding="async" /></a>
+      <svg class="pb-burst" viewBox="-100 -100 200 200" aria-hidden="true">{Array.from({ length: 16 }, (_, n) => <line x1="0" y1="0" x2={(Math.cos(n * Math.PI / 8) * 96).toFixed(1)} y2={(Math.sin(n * Math.PI / 8) * 96).toFixed(1)} stroke="#D6E521" stroke-width="9" />)}<circle r="18" fill="#D6E521" /></svg>
     </div>
-    <div class="stripes" aria-hidden="true">
-      <svg viewBox="-100 -100 200 200">{Array.from({ length: 16 }, (_, n) => <line x1="0" y1="0" x2={(Math.cos(n * Math.PI / 8) * 96).toFixed(1)} y2={(Math.sin(n * Math.PI / 8) * 96).toFixed(1)} stroke="#D6E521" stroke-width="7" />)}<circle r="16" fill="#D6E521" /></svg>
-    </div>
+    <div class="stripes" aria-hidden="true"></div>
   </section>
 
   <!-- 2. The library, moving: breadth before any explanation -->
@@ -916,4 +915,15 @@ npx @levni/levni board brand.json board.png`}</code></pre>
   @media (max-width: 640px) { .chip { position: relative; left: auto; margin: 96px 0 0; } .pb-text { padding-top: 32px; } .rail { margin-left: 0; } }
   @media (prefers-reduced-motion: reduce) { .stripes svg { animation: none; } }
   .faq { margin-bottom: clamp(64px, 8vw, 104px); }
+
+  /* poster band, compact: text beside the real series, a thin riso stripe under it */
+  .poster-band { padding-top: clamp(56px, 7vw, 88px); }
+  .pb-wrap { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+  .pb-text { margin: 0; max-width: none; padding-top: 0; }
+  .pb-k { margin: 0 0 14px; font: 500 0.75rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--lime); }
+  .pb-art { position: relative; z-index: 1; display: block; background: #fff; padding: 10px; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%); }
+  .pb-art img { width: 100%; height: auto; }
+  .pb-burst { position: absolute; right: -40px; bottom: -70px; width: 170px; animation: spin 60s linear infinite; }
+  .poster-band .stripes { height: 56px; margin-top: clamp(40px, 5vw, 64px); }
+  @media (max-width: 860px) { .pb-wrap { grid-template-columns: minmax(0, 1fr); } .pb-burst { display: none; } }
 </style>

@@ -54,7 +54,7 @@ const json = (i: Item) => (i.code ? undefined : `/g/${i.group}/${i.id}.json`);
 const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= i.h ? 'square' : 'tall');
 ---
 <Base title="Gallery" description={`${total} images drawn by Levni from a JSON scene: branding posters, brand boards, seals and stickers, brand assets (dither, mesh gradients), etched terrain, pixel icons, isometric little worlds, hand-inked charts, riso and miniature covers, 3D icons, every social format and soft 3D covers. Open any one to copy its scene.`}>
-  <div class="wrap head">
+  <div class="wrap head brand-hero no-art">
     <div class="head-text">
       <p class="eyebrow">Gallery · every image drawn by Levni</p>
       <h1>What one JSON scene <em class="accent">becomes</em>.</h1>
@@ -236,14 +236,15 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
 </script>
 
 <style>
-  .head { margin-top: 48px; display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr); gap: 28px 40px; align-items: center; }
+  .head { margin-top: 0; display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr); gap: 28px 40px; align-items: center; }
   .head-text { min-width: 0; }
   .eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-text); margin: 0 0 12px; }
   .head h1 { max-width: 16ch; text-wrap: balance; }
   .lede { font-size: 1.2rem; color: var(--ink-soft); max-width: 720px; margin: 0 0 8px; }
 
   /* sticky filter tabs; the row scrolls sideways on small screens, the page never does */
-  .tabs { position: sticky; top: 0; z-index: 5; background: var(--paper); border-block: 1px solid var(--rule); margin-top: 28px; }
+  .tabs { position: sticky; top: 0; z-index: 5; background: var(--indigo); border: 0; margin-top: 0; }
+  .head.brand-hero { margin-bottom: 0 !important; padding-bottom: 28px; }
   .tabs-row { display: flex; gap: 6px; overflow-x: auto; padding-block: 10px; scrollbar-width: none; }
   .tabs-row::-webkit-scrollbar { display: none; }
   .tabs a {
@@ -357,4 +358,21 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
     .strip .item:hover img { transform: none; box-shadow: none; }
   }
   @media (prefers-reduced-motion: reduce) and (max-width: 520px) { .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+  /* rebrand: indigo tab bar, white chamfered cards */
+  .tabs a { background: transparent; border: 1px solid rgba(255, 255, 255, 0.3); color: var(--on-indigo); font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.06em; text-transform: uppercase; }
+  .tabs a:hover { border-color: var(--lime); color: var(--lime); }
+  .tabs a[aria-current] { background: var(--lime); border-color: var(--lime); color: var(--indigo); }
+  .tabs-row { padding-block: 14px; }
+  .group-head h2 { color: var(--indigo); }
+  .group-head h2::before { content: '{' attr(id) '}'; display: none; }
+  .item { background: #fff; padding: 8px 8px 0; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%); }
+  .item img, .tile .item img { border: 0; background: var(--paper); }
+  .item:hover img, .item:focus-visible img { transform: none; }
+  .item:hover { background: var(--lime); }
+  .cap { margin: 0; padding: 10px 4px 14px; color: var(--indigo); }
+  .show { border: 0; background: rgba(255, 255, 255, 0.06); }
+  .pause { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.06em; }
+  .more-btn { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.06em; background: var(--indigo); color: #fff; border: 0; padding: 14px 22px; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%); }
+  .more-btn:hover { background: var(--lime); color: var(--indigo); }
 </style>

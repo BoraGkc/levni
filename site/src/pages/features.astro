@@ -83,6 +83,7 @@ const jsonld = [{ '@type': 'SoftwareApplication', name: 'Levni', applicationCate
 ---
 <Base title="Features" description="Everything Levni draws: a library of over 1,500 drawings, style packs and custom inks, branding posters, brand assets (dither, mesh gradients, ASCII art, seals and stickers, terrain and etching, brand boards), soft 3D covers and 3D icons, isometric worlds, pixel icons, faceless people, fusion slots, hand-inked charts, every social format, and MCP and Ghost tools for agents." jsonld={jsonld}>
   <div class="wrap page">
+    <header class="brand-hero">
     <p class="eyebrow">Features</p>
     <h1>Everything Levni <em class="accent">draws</em>.</h1>
     <p class="lede">Your agent’s design studio: illustrations, icons, charts, brand assets, brand boards and branding posters, drawn from a few lines of JSON. Free, local, no image model.</p>
@@ -90,9 +91,11 @@ const jsonld = [{ '@type': 'SoftwareApplication', name: 'Levni', applicationCate
     <nav class="toc" aria-label="On this page">
       <a href="#library">Library</a>{features.map((f) => <a href={`#${f.id}`}>{f.title}</a>)}<a href="#agents">Agents and tools</a>
     </nav>
+    </header>
 
     <section id="library" class="feature">
       <div class="text">
+        <p class="num">{'{'}01 / folio{'}'}</p>
         <h2>The Levni Folio</h2>
         <p>{SITE.props.toLocaleString('en')} drawings and {SITE.variants.toLocaleString('en')} variants, from tulips to server racks, sorted on shelves and searchable in English and Turkish through {tagCount.toLocaleString('en')} tags. Each is SVG path data in a 0–100 box, released under CC BY 4.0, open to contributions.</p>
         <p>Open any drawing in the Library for its tags, related drawings, copy-ready code (scene, JavaScript or CLI), an SVG download in any style pack and a link of its own. Names say what a drawing shows; renamed drawings keep their old names, so saved scenes never break. No brand logos, by rule.</p>
@@ -102,8 +105,9 @@ const jsonld = [{ '@type': 'SoftwareApplication', name: 'Levni', applicationCate
     </section>
 
     {features.map((f, i) => (
-      <section id={f.id} class={`feature ${i % 2 ? 'flip' : ''}`}>
+      <section id={f.id} class={`feature ${i % 2 ? 'flip band' : ''}`}>
         <div class="text">
+          <p class="num">{'{'}{String(i + 2).padStart(2, '0')} / {f.id}{'}'}</p>
           <h2>{f.title}</h2>
           <p>{f.text}</p>
           {f.sub && <><h3>{f.sub[0]}</h3><p>{f.sub[1]}</p></>}
@@ -122,7 +126,7 @@ const jsonld = [{ '@type': 'SoftwareApplication', name: 'Levni', applicationCate
 </Base>
 
 <style>
-  .page { margin-top: 48px; }
+  .page { margin-top: 0; }
   .eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-text); margin: 0 0 12px; }
   .lede { font-size: 1.22rem; color: var(--ink-soft); max-width: 720px; }
   .new { margin: 20px 0 0; padding: 12px 16px; border: 1px solid var(--rule); background: var(--paper-2); box-shadow: none; color: var(--ink-soft); max-width: 760px; }
@@ -159,4 +163,24 @@ const jsonld = [{ '@type': 'SoftwareApplication', name: 'Levni', applicationCate
   }
   @media (max-width: 480px) { .cards { grid-template-columns: minmax(0, 1fr); } .imgs.n2 { grid-template-columns: 1fr; } }
   .try-link { font-weight: 700; }
+
+  /* rebrand: numbered kickers, ticket fields, indigo bands on every other feature */
+  .num { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--coral-deep); margin: 0 0 10px; }
+  .feature h2 { color: var(--indigo); letter-spacing: -0.04em; }
+  .fields code { background: #fff; border: 0; border-left: 3px solid var(--red); color: var(--indigo); padding: 9px 12px; }
+  .links a { font-family: var(--mono); font-size: 0.76rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; }
+  .links a::after { content: ' →'; }
+  .links a:hover { text-decoration: underline; }
+  .feature.band { background: var(--indigo); box-shadow: 0 0 0 100vmax var(--indigo); clip-path: inset(0 -100vmax); padding-block: clamp(48px, 6vw, 80px); }
+  .feature.band h2, .feature.band h3 { color: #fff; }
+  .feature.band p { color: var(--mute-indigo); }
+  .feature.band .num { color: var(--lime); }
+  .feature.band a { color: var(--lime); }
+  .feature.band a:hover { color: #fff; }
+  .feature.band + .feature { margin-top: clamp(48px, 6vw, 80px); }
+  .new { background: rgba(255, 255, 255, 0.08); border: 0; color: var(--on-indigo); }
+  .tiles img { background: #fff; border: 0; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%); }
+  .card { border: 0; background: #fff; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%); }
+  .card h3 { color: var(--indigo); }
+  .card:hover { background: var(--lime); transform: none; }
 </style>
