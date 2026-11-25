@@ -100,14 +100,37 @@ const timeline = [
       </article>
       <article class="p-card">
         <pre class="p-mark" aria-hidden="true">0 B</pre>
-        <h3>Zero Byte Foundation</h3>
-        <p>The post-internet label Berk Boz, one of us, founded back when “post-internet” still sounded like the future. Levni is what that idea grew into after AI: post-AI.</p>
+        <h3>Zero Bytes Foundation</h3>
+        <p>Our friend Berk Boz’s collective for design and media, a studio that wanted to be a movement. Levni is not its sequel. It is a fan letter.</p>
+        <a href="https://medium.com/zero-bytes-foundation/what-if-we-imagined-a-studio-669f954a05f7">Read the essay →</a>
       </article>
       <article class="p-card indigo">
         <pre class="p-mark" aria-hidden="true">1732</pre>
         <h3>Levni</h3>
         <p>Abdülcelil Levni, court painter of the Tulip Era. He signed his work, broke a few rules of miniature painting and made people look like people. A good patron saint for open design.</p>
       </article>
+    </div>
+  </section>
+
+  <section class="zbf" aria-labelledby="zbf-title">
+    <div class="wrap">
+      <div class="zbf-head">
+        <div>
+          <p class="tag">§4½ / kudos, berk</p>
+          <h2 id="zbf-title">Inspired by Zero Bytes Foundation.</h2>
+        </div>
+        <div class="zbf-text">
+          <p>In 2023 our friend Berk Boz, a self-described post-internet guy, wrote <a href="https://medium.com/zero-bytes-foundation/what-if-we-imagined-a-studio-669f954a05f7">“What if we imagined a studio…”</a> for <a href="https://zerobytes.foundation">Zero Bytes Foundation</a>: a collective that wanted to be “not just a studio but a movement.” We have quoted it at each other ever since, mostly as a joke, sometimes not.</p>
+          <p>Levni is not a continuation of Zero Bytes. It is what that idea looks like after AI arrived: a studio that is open source, a movement you join by drawing one thing. Its creative mantra became our map.</p>
+        </div>
+      </div>
+      <ol class="journey" aria-label="A creative's journey, after Zero Bytes Foundation">
+        <li><b>Consume</b><span>look at others’ work</span><a href="/gallery/">the gallery and the Library</a></li>
+        <li><b>Curate</b><span>collect and share it</span><a href="/community/">style packs and showcases</a></li>
+        <li><b>Cogitate</b><span>find how you can contribute</span><a href="/community/">requests, the critic, skills</a></li>
+        <li><b>Create</b><span>make your own work</span><a href="/community/">draw for the Folio</a></li>
+      </ol>
+      <p class="zbf-note">Consume, Curate, Cogitate, Create: the Zero Bytes Foundation mantra, nested the way they drew it. One byte at a time, now one drawing at a time.</p>
     </div>
   </section>
 
@@ -126,7 +149,7 @@ const timeline = [
    ______________________
    cartcurt
    ______________________
-   zero byte foundation
+   (inspired by) zero bytes foundation
    ______________________
    you?  ← draw one thing
 `}</pre>
@@ -205,4 +228,24 @@ const timeline = [
     .articles { grid-template-columns: minmax(0, 1fr); }
   }
   @media (max-width: 560px) { .people { grid-template-columns: minmax(0, 1fr); } .stack li { flex-direction: column; gap: 2px; } .stack span { text-align: left; } }
+
+  /* zero bytes: the four nested pills, drawn in CSS after their hand-drawn journey */
+  .zbf { background: var(--paper-2); padding: clamp(56px, 7vw, 96px) 0; }
+  .zbf-head { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 40px; align-items: end; }
+  .zbf-text p { color: var(--ink-soft); margin: 0 0 12px; max-width: 60ch; }
+  .journey { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); position: relative; }
+  .journey li { position: relative; display: flex; flex-direction: column; gap: 4px; padding: 34px 22px 28px; border: 2.5px solid var(--indigo); border-right: 0; border-radius: 999px 0 0 999px; margin-left: -1px; text-align: center; align-items: center; background: #fff; }
+  .journey li:last-child { border-right: 2.5px solid var(--indigo); border-radius: 999px; background: var(--lime); }
+  .journey li:nth-child(2) { background: #f7f6fd; }
+  .journey li:nth-child(3) { background: #efedfb; }
+  .journey b { font-size: 1.35rem; color: var(--indigo); letter-spacing: -0.02em; }
+  .journey span { font: 0.74rem/1.4 var(--mono); color: var(--ink-soft); }
+  .journey a { margin-top: 8px; font: 600 0.72rem/1.3 var(--mono); letter-spacing: 0.04em; text-transform: uppercase; color: var(--coral-deep); text-decoration: none; }
+  .journey a:hover { text-decoration: underline; }
+  .zbf-note { margin: 22px 0 0; font: 0.8rem/1.6 var(--mono); color: var(--ink-soft); }
+  @media (max-width: 860px) {
+    .zbf-head { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    .journey { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+    .journey li, .journey li:last-child { border: 2.5px solid var(--indigo); border-radius: 999px; margin-left: 0; padding: 18px 22px; }
+  }
 </style>
