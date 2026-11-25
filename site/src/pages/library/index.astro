@@ -97,6 +97,13 @@ const description = `Browse all ${props.length.toLocaleString("en")} drawings in
       ))}
     </div>
     <ul class="variants" id="d-vars"></ul>
+    <div class="styles-box">
+      <div class="styles-head">
+        <p class="use-label">Draw it as</p>
+        <a class="mini" id="d-open" href="/editor/" target="_blank" rel="noopener">Open in the editor →</a>
+      </div>
+      <ul class="variants styles" id="d-styles" aria-label="Drawing styles"></ul>
+    </div>
     <div class="use-row">
       <div class="tabs" role="tablist" aria-label="Use it as">
         <button type="button" role="tab" class="tab" data-tab="scene" aria-selected="true">Scene</button>
@@ -139,6 +146,7 @@ const description = `Browse all ${props.length.toLocaleString("en")} drawings in
 
 <script define:vars={{ inks, cats: CATEGORIES, brands: BRANDS, repo: SITE.github }}>window.__inks = inks; window.__cats = cats; window.__brands = brands; window.__repo = repo;</script>
 <script>
+  import { DRAW_STYLES } from '../../lib/draw-styles';
   type Prop = { name: string; c: string; q: string; notes: string[]; tags: string[]; aliases: string[]; author: string };
   const CATS = (window as any).__cats as Record<string, string>;
   const BRANDS = (window as any).__brands as Record<string, string>;
@@ -302,10 +310,17 @@ const description = `Browse all ${props.length.toLocaleString("en")} drawings in
   const code = document.getElementById('d-code')!;
   let current = { name: '', v: 0 };
   let tab = 'scene';
-  const snippet = (name: string, v: number) =>
-    `{ "type": "prop", "name": "${name}",${v ? ` "variant": ${v},` : ''} "x": 600, "y": 336, "size": 320 }`;
+  // the drawing in the chosen style (ink, 3D icon, ASCII, dot matrix, echo), as one scene element
+  let drawStyle = 'ink';
+  const styleEl = (name: string, v: number, at = { x: 600, y: 336, size: 320 }) => {
+    const d = DRAW_STYLES.find((x) => x.id === drawStyle) || DRAW_STYLES[0];
+    const o = d.to({ name, variant: v || undefined, ...at });
+    return Object.fromEntries(Object.entries(o).filter(([, val]) => val !== undefined));
+  };
+  const snippet = (name: string, v: number) => JSON.stringify(styleEl(name, v)).replace(/,"/g, ', "').replace(/^\{/, '{ ').replace(/\}$/, ' }').replace(/":/g, '": ');
   function writeCode() {
     const el = snippet(current.name, current.v);
+    openLink();
     const map = inksNow();
     const style = pack === 'riso' ? '' : pack === 'miniature' ? '"miniature"' : JSON.stringify(map);
     const styled = style && Object.keys(map).length;
@@ -399,6 +414,7 @@ const description = `Browse all ${props.length.toLocaleString("en")} drawings in
         btn.setAttribute('aria-pressed', 'true');
         current = { name, v: i };
         writeCode();
+        drawStyles();
       });
       if (i === 0) btn.setAttribute('aria-pressed', 'true');
       li.append(btn);
@@ -440,6 +456,64 @@ const description = `Browse all ${props.length.toLocaleString("en")} drawings in
     if (!dlg.open) dlg.showModal();
     dlg.scrollTop = 0;
     paint();
+    drawStyles();
+  }
+
+  // --- styles: the same drawing drawn by Levni in the browser as a 3D icon, ASCII, a dot matrix and an echo
+  const propFiles = import.meta.glob('../../../../library/props/*.json', { import: 'default' });
+  const fontUrls = import.meta.glob('../../../../fonts/*.{ttf,otf}', { query: '?url', import: 'default', eager: true }) as Record<string, string>;
+  const FONT_FILES: Record<string, string> = { grotesk: 'SpaceGrotesk-Variable.ttf', black: 'ArchivoBlack-Regular.ttf', mono: 'JetBrainsMono-Variable.ttf', pixel: 'DepartureMono-Regular.otf' };
+  let engine: Promise<any> | null = null;
+  const loaded = new Set<string>();
+  const styleBox = document.getElementById('d-styles')!;
+  const styleUrls: string[] = [];
+  let styleToken = 0;
+  async function drawStyles() {
+    const my = ++styleToken;
+    const { name, v } = current;
+    styleUrls.splice(0).forEach((u) => URL.revokeObjectURL(u));
+    const pics = DRAW_STYLES.map((d) => {
+      const li = document.createElement('li');
+      const b = document.createElement('button'); b.type = 'button';
+      b.setAttribute('aria-pressed', String(d.id === drawStyle));
+      b.innerHTML = `<span class="st-pic" aria-hidden="true"></span><span class="v-num">${d.label}</span>`;
+      b.addEventListener('click', () => {
+        drawStyle = d.id;
+        styleBox.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+        writeCode();
+      });
+      li.append(b);
+      return [li, b.querySelector('.st-pic') as HTMLElement, d] as const;
+    });
+    styleBox.replaceChildren(...pics.map(([li]) => li));
+    try {
+      engine ||= import('../../../../src/browser.mjs');
+      const eng = await engine;
+      const load = propFiles[`../../../../library/props/${name}.json`];
+      if (load && !loaded.has(name)) { eng.registerProps([await load()]); loaded.add(name); }
+      for (const [, pic, d] of pics) {
+        if (my !== styleToken) return;
+        const scene = { canvas: [240, 240], seed: 4, finish: 'soft', elements: [d.to({ name, variant: v || undefined, x: 120, y: d.id === 'echo' ? 80 : 120, size: d.id === 'echo' ? 120 : 170 })] };
+        await Promise.all(eng.fontsFor(scene).filter((f: string) => !loaded.has(`font:${f}`)).map(async (f: string) => {
+          const url = Object.entries(fontUrls).find(([k]) => k.endsWith(FONT_FILES[f]))?.[1];
+          if (url) { eng.registerFont(f, await (await fetch(url)).arrayBuffer()); loaded.add(`font:${f}`); }
+        }));
+        const { svg } = await eng.compose(scene);
+        if (my !== styleToken) return;
+        const url = URL.createObjectURL(new Blob([svg], { type: 'image/svg+xml' }));
+        styleUrls.push(url);
+        pic.append(Object.assign(document.createElement('img'), { src: url, alt: '', width: 240, height: 240 }));
+      }
+    } catch { styleBox.closest('.styles-box')?.setAttribute('hidden', ''); }
+  }
+  // the editor opens with this drawing, in this style, in the middle of a cover
+  const b64u = (bytes: Uint8Array) => btoa(Array.from(bytes, (b) => String.fromCharCode(b)).join('')).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  let linkToken = 0;
+  async function openLink() {
+    const my = ++linkToken;
+    const scene = { canvas: [1200, 673], seed: 7, ...(drawStyle === 'ink' ? {} : { finish: 'soft' }), elements: [styleEl(current.name, current.v, { x: 600, y: 336, size: 420 })] };
+    const packed = b64u(new Uint8Array(await new Response(new Blob([JSON.stringify(scene)]).stream().pipeThrough(new CompressionStream('deflate-raw'))).arrayBuffer()));
+    if (my === linkToken) (document.getElementById('d-open') as HTMLAnchorElement).href = `/editor/#s=${packed}`;
   }
   list.addEventListener('click', (e) => {
     const b = (e.target as HTMLElement).closest<HTMLButtonElement>('.tile');
@@ -541,6 +615,11 @@ const description = `Browse all ${props.length.toLocaleString("en")} drawings in
   dialog pre { white-space: pre-wrap; word-break: break-word; }
   .custom label { display: inline-flex; align-items: center; gap: 4px; }
   .custom input { width: 30px; height: 26px; padding: 0; border: 1px solid var(--rule); background: none; }
+  .styles-box { margin: 0 0 18px; }
+  .styles-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .styles { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); margin: 8px 0 0; }
+  .styles :global(.st-pic) { display: block; width: 100%; aspect-ratio: 1; background: var(--paper); }
+  .styles :global(.st-pic img) { display: block; width: 100%; height: 100%; }
   .use-label { margin: 0 0 6px; font-size: 0.95rem; color: var(--ink-soft); }
   .tabs { display: inline-flex; gap: 2px; border-bottom: 1.5px solid var(--rule); margin-bottom: 6px; }
   .tab { font: inherit; font-size: 0.9rem; padding: 6px 12px; min-height: 36px; background: none; border: 0; border-bottom: 2.5px solid transparent; margin-bottom: -1.5px; color: var(--ink-soft); cursor: pointer; }

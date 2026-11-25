@@ -137,6 +137,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
 <script>
   import { compose, critique, registerProps, registerFont, registerFile, fontsFor, toBlob, COLORS, STYLES } from '../../../src/browser.mjs';
   import CATS from '../data/categories.json';
+  import { DRAW_STYLES, drawingName, styleOf, likeDrawing, contrast, luminance } from '../lib/draw-styles';
 
   // ---------- assets, loaded on demand ----------
   const propFiles = import.meta.glob('../../../library/props/*.json', { import: 'default' });
@@ -277,14 +278,6 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     { type: 'type', text: 'Slow\nmornings.', x: 80, y: 250, size: 92, font: 'black', color: 'ink' },
   ] };
 
-  // drawing styles: the same Folio drawing as ink, a 3D icon, ASCII, a dot matrix or an echo
-  const DRAW_STYLES: { id: string; label: string; to: (b: any) => any }[] = [
-    { id: 'ink', label: 'Ink drawing', to: (b) => ({ type: 'prop', name: b.name, variant: b.variant, x: b.x, y: b.y, size: b.size }) },
-    { id: '3d', label: '3D icon', to: (b) => ({ type: 'extrude3d', name: b.name, variant: b.variant, x: b.x, y: b.y, size: b.size }) },
-    { id: 'ascii', label: 'ASCII', to: (b) => ({ type: 'glyphfill', prop: b.name, variant: b.variant, x: b.x, y: b.y, size: b.size, mode: 'glyph', color: 'ink' }) },
-    { id: 'dots', label: 'Dot matrix', to: (b) => ({ type: 'glyphfill', prop: b.name, variant: b.variant, x: b.x, y: b.y, size: b.size, mode: 'dot', color: 'ink' }) },
-    { id: 'echo', label: 'Echo', to: (b) => ({ type: 'echo', prop: b.name, variant: b.variant, x: b.x, y: b.y, size: b.size }) },
-  ];
   const DEPTH: { key: string; label: string; on: any; note: string }[] = [
     { key: 'shadow', label: 'Shadow', on: true, note: 'A soft cast shadow' },
     { key: 'extrude', label: 'Cut paper', on: true, note: 'Paper thickness' },
@@ -292,8 +285,6 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     { key: 'diecut', label: 'Sticker', on: { offset: 16 }, note: 'A die-cut paper edge' },
     { key: 'overprint', label: 'Overprint', on: true, note: 'Inks multiply like riso' },
   ];
-  const drawingName = (e: any) => (e?.type === 'prop' || e?.type === 'extrude3d' ? e.name : (e?.type === 'glyphfill' || e?.type === 'echo') && typeof e.prop === 'string' ? e.prop : null);
-  const styleOf = (e: any) => e.type === 'extrude3d' ? '3d' : e.type === 'glyphfill' ? (e.mode === 'dot' ? 'dots' : 'ascii') : e.type === 'echo' ? 'echo' : 'ink';
 
   // ---------- state and history ----------
   const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
@@ -553,9 +544,40 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   }
   const unit = () => R(Math.min(cv.w, cv.h) * 0.3);
   type Add = { kind: 'prop'; name: string } | { kind: 'shape' | 'text'; id: string };
+  // a colour that reads on this background and belongs to the picture: the most used ink of its parts
+  // (drawings count double) that has enough contrast, else paper on dark grounds and ink on light ones
+  function sceneInk(skip = -1): string {
+    const bg = hexOf(scene.background ?? 'paper');
+    const tally = new Map<string, number>();
+    els().forEach((e, i) => {
+      if (e.hidden || i === skip) return;
+      for (const k of ['color', 'fill', 'accent']) if (typeof e[k] === 'string') tally.set(e[k], (tally.get(e[k]) || 0) + (drawingName(e) ? 2 : 1));
+    });
+    const ok = [...tally].filter(([c]) => contrast(hexOf(c), bg) >= 2.6).sort((a, b) => b[1] - a[1]);
+    return ok[0]?.[0] ?? (luminance(bg) < 0.3 ? 'paper' : 'ink');
+  }
+  // a drawing in style `st`, looking like the other drawings already in that style (or, with no style given,
+  // like the selected drawing, else the style most of the picture uses)
+  function drawingIn(st: string | null, b: { name: string; variant?: number; x: number; y: number; size: number }, skip = -1) {
+    const ds = els().map((e, i) => [e, i] as const).filter(([e, i]) => i !== skip && !e.hidden && drawingName(e));
+    if (!st) {
+      const s = cur();
+      if (s && drawingName(s)) st = styleOf(s);
+      else {
+        const n = new Map<string, number>();
+        ds.forEach(([e]) => n.set(styleOf(e), (n.get(styleOf(e)) || 0) + 1));
+        st = [...n].sort((x, y) => y[1] - x[1])[0]?.[0] ?? 'ink';
+      }
+    }
+    const pick = sel !== skip && cur() && drawingName(cur()) && styleOf(cur()) === st ? cur() : [...ds].reverse().find(([e]) => styleOf(e) === st)?.[0];
+    if (pick) return likeDrawing(pick, b);
+    const d = DRAW_STYLES.find((x) => x.id === st) || DRAW_STYLES[0];
+    const was = els()[skip]; // switching ASCII and dots keeps the colour it had
+    return d.to({ ...b, color: was?.type === 'glyphfill' && typeof was.color === 'string' ? was.color : sceneInk(skip) });
+  }
   function makeEl(a: Add, x: number, y: number) {
     const s = unit();
-    if (a.kind === 'prop') return { type: 'prop', name: a.name, x, y, size: s };
+    if (a.kind === 'prop') return drawingIn(null, { name: a.name, x, y, size: s });
     return ((a.kind === 'shape' ? SHAPES : TEXTS) as { id: string; make: Maker }[]).find((m) => m.id === a.id)!.make(x, y, s); // may be a list (text combos)
   }
   function unreflow(s: any) {
@@ -847,7 +869,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   const effectThumbs = new Map<string, string>();
   async function effectPic(key: string, el: any) {
     if (effectThumbs.has(key)) return effectThumbs.get(key)!;
-    const url = await thumbUrl({ canvas: [220, 220], seed: 4, style: scene.style, finish: scene.finish, elements: [el] }, true);
+    const url = await thumbUrl({ canvas: [220, 220], seed: 4, style: scene.style, finish: scene.finish, background: scene.background, elements: [el] }, true);
     effectThumbs.set(key, url);
     return url;
   }
@@ -870,11 +892,16 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       const base = { name: file, variant: v, x: 110, y: 110, size: 150 };
       out.push(Object.assign(document.createElement('h3'), { className: 'lv-h3', textContent: 'Style' }));
       const g = document.createElement('div'); g.className = 'lv-grid';
-      for (const d of DRAW_STYLES) g.append(effectTile(d.label, d.label, st === d.id, () => d.to(d.id === 'echo' ? { ...base, y: 70, size: 110 } : base), `${file}:${v ?? 0}:${d.id}:${scene.style ?? ''}:${scene.finish ?? ''}`, () => {
+      for (const d of DRAW_STYLES) {
+        // the preview shows what the click gives: this drawing in that style, in the look of the picture
+        const pos = d.id === 'echo' ? { x: 110, y: 70, size: 110 } : { x: 110, y: 110, size: 150 };
+        const made = st === d.id ? { ...clean(e), ...pos, rot: undefined } : drawingIn(d.id, { ...base, ...pos }, sel);
+        g.append(effectTile(d.label, d.label, st === d.id, () => made, `${JSON.stringify(made)}:${scene.style ?? ''}:${scene.finish ?? ''}:${scene.background ?? ''}`, () => {
         if (st === d.id) return;
-        change(() => { const o = cur(); const keep = { name: file, variant: o.variant, x: o.x, y: o.y, size: o.size ?? unit() }; els()[sel] = d.to(keep); });
+        change(() => { const o = cur(); const keep = { name: file, variant: o.variant, x: o.x, y: o.y, size: o.size ?? unit() }; els()[sel] = { ...drawingIn(d.id, keep, sel), ...(o.rot ? { rot: o.rot } : {}) }; });
         say(`${dn.replace(/-/g, ' ')} as ${d.label.toLowerCase()}.`);
       }));
+      }
       out.push(g);
       if (e.type === 'prop') {
         out.push(Object.assign(document.createElement('h3'), { className: 'lv-h3', textContent: 'Depth and print' }), Object.assign(document.createElement('p'), { className: 'lv-help', textContent: 'Combine as many as you like.' }));
@@ -907,8 +934,15 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     person: ['size', 'pose', 'color', 'facing'], people: ['n', 'size', 'w'], seal: ['size', 'text', 'word', 'fill', 'color', 'rot'], stub: ['w', 'h', 'text', 'fill'],
     bubble: ['w', 'h', 'tail', 'content', 'color'], window: ['w', 'h', 'title'], waves: ['w', 'h', 'color'], confetti: ['w', 'h', 'kind'],
     meshgrad: ['r', 'w', 'h'], dither: ['r', 'w', 'h', 'color'], halftone: ['w', 'h', 'color'], arrow: ['bend', 'color'],
+    bars: ['highlight', 'showValues', 'horizontal', 'prefix', 'suffix', 'w', 'h', 'labelSize'],
+    linechart: ['area', 'dots', 'baseline', 'showValues', 'w', 'h', 'labelSize'],
+    pie: ['highlight', 'showValues', 'prefix', 'suffix', 'r', 'labelSize'],
+    donut: ['highlight', 'hole', 'showValues', 'prefix', 'suffix', 'r', 'labelSize'],
+    isochart: ['highlight', 'unit', 'showValues', 'size', 'labelSize'],
   };
-  const LABELS: Record<string, string> = { w: 'Width', h: 'Height', r: 'Radius', rot: 'Rotation', size: 'Size', n: 'How many', count: 'How many', text: 'Text', font: 'Font', color: 'Colour', fill: 'Fill', rayColor: 'Rays', leafColor: 'Leaves', potColor: 'Pot', flip: 'Mirror', shadow: 'Shadow', pose: 'Pose', facing: 'Facing', tail: 'Tail', content: 'Inside', kind: 'Kind', bend: 'Bend', radius: 'Corners', word: 'Centre word', title: 'Title', weight: 'Weight', textColor: 'Text colour', wordColor: 'Word colour', depth: 'Depth', mode: 'Mode', cell: 'Cell size' };
+  const CHARTS = new Set(['bars', 'linechart', 'pie', 'donut', 'isochart']);
+  const DEFAULTS: Record<string, any> = { rot: 0, r: 120, w: 300, h: 200, n: 4, count: 6 };
+  const LABELS: Record<string, string> = { w: 'Width', h: 'Height', r: 'Radius', rot: 'Rotation', size: 'Size', n: 'How many', count: 'How many', text: 'Text', font: 'Font', color: 'Colour', fill: 'Fill', rayColor: 'Rays', leafColor: 'Leaves', potColor: 'Pot', flip: 'Mirror', shadow: 'Shadow', pose: 'Pose', facing: 'Facing', tail: 'Tail', content: 'Inside', kind: 'Kind', bend: 'Bend', radius: 'Corners', word: 'Centre word', title: 'Title', weight: 'Weight', textColor: 'Text colour', wordColor: 'Word colour', depth: 'Depth', mode: 'Mode', cell: 'Cell size', highlight: 'Highlight', showValues: 'Show the numbers', horizontal: 'Sideways bars', prefix: 'Before each number', suffix: 'After each number', labelSize: 'Label size', area: 'Fill under the line', dots: 'Dots on points', baseline: 'Base line', hole: 'Hole (0 to 0.8)', unit: 'One icon counts' };
   const ENUMS: Record<string, [string, string][]> = {
     font: [['grotesk', 'Grotesk'], ['black', 'Heavy'], ['mono', 'Mono'], ['pixel', 'Pixel']],
     pose: ['standing', 'walking', 'running', 'sitting', 'pointing', 'waving', 'holding', 'carrying', 'reading', 'phone', 'thinking', 'cheering', 'kneeling', 'leaning'].map((p) => [p, p[0].toUpperCase() + p.slice(1)]),
@@ -916,9 +950,9 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     content: [['lines', 'Lines'], ['dots', 'Dots'], ['heart', 'Heart'], ['none', 'Empty']], kind: [['confetti', 'Confetti'], ['rain', 'Rain'], ['stars', 'Stars']],
   };
   const COLOR_KEYS = new Set(['color', 'fill', 'rayColor', 'leafColor', 'potColor', 'highlight', 'outline', 'under', 'accent', 'textColor', 'wordColor', 'kickerColor', 'background', 'cardColor']);
-  const BOOL_KEYS = new Set(['flip', 'shadow', 'crop', 'overprint', 'card']);
+  const BOOL_KEYS = new Set(['flip', 'shadow', 'crop', 'overprint', 'card', 'showValues', 'horizontal', 'area', 'dots', 'baseline']);
   const SKIP = new Set(['type', 'name', 'prop', 'variant', 'x', 'y', 'hidden', 'locked', 'elements', 'paths', 'objects', 'area', 'points', 'from', 'to', 'colors', 'id', 'in', 'src']);
-  const NUMS = new Set(['size', 'w', 'h', 'r', 'n', 'count', 'radius', 'bend', 'weight', 'depth', 'cell']);
+  const NUMS = new Set(['size', 'w', 'h', 'r', 'n', 'count', 'radius', 'bend', 'weight', 'depth', 'cell', 'labelSize', 'hole', 'unit']);
   const propsEl = $('props');
   let editCommitted = false, liveT = 0;
   function setField(key: string, value: any, target: 'el' | 'scene' = 'el') {
@@ -980,7 +1014,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       wrap.append(i, out);
       return wrap;
     }
-    if (typeof v === 'number' || NUMS.has(key)) return numInput(v ?? 0, set, key === 'bend' || key === 'depth' ? 0.02 : 1);
+    if (typeof v === 'number' || NUMS.has(key)) return numInput(v ?? 0, set, key === 'bend' || key === 'depth' ? 0.02 : key === 'hole' ? 0.05 : 1);
     if (key === 'text') {
       const t = Object.assign(document.createElement('textarea'), { value: v ?? '', rows: Math.min(5, String(v ?? '').split('\n').length + 1) });
       t.addEventListener('input', () => set(t.value)); t.addEventListener('change', endEdit);
@@ -1004,9 +1038,11 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       if (typeof e.x === 'number') propsEl.append(field('X', numInput(e.x, (n) => setField('x', n))));
       if (typeof e.y === 'number') propsEl.append(field('Y', numInput(e.y, (n) => setField('y', n))));
     }
+    if (CHARTS.has(e.type)) propsEl.append(chartData(e));
     const keys = FIELDS[e.type] || Object.keys(e).filter((k) => !SKIP.has(k) && ['string', 'number', 'boolean'].includes(typeof e[k])).slice(0, 8);
-    const fallback = (k: string) => k === 'size' && e.type === 'label' ? 16 : k === 'size' && e.type === 'type' ? 120 : DEFAULTS[k];
-    for (const k of keys) propsEl.append(field(LABELS[k] || k, control(k, k === 'shadow' ? !!e[k] : e[k] ?? fallback(k), (nv) => setField(k, nv)), COLOR_KEYS.has(k) || k === 'text' || k === 'rot'));
+    const fallback = (k: string) => k === 'size' && e.type === 'label' ? 16 : k === 'size' && e.type === 'type' ? 120 : k === 'hole' ? 0.55 : k === 'labelSize' ? 13 : DEFAULTS[k];
+    for (const k of keys) if (CHARTS.has(e.type) && k === 'highlight') propsEl.append(field(LABELS[k], highlightPick(e), true));
+    else propsEl.append(field(LABELS[k] || k, control(k, k === 'shadow' ? !!e[k] : e[k] ?? fallback(k), (nv) => setField(k, nv)), COLOR_KEYS.has(k) || k === 'text' || k === 'rot'));
     const extra = Object.keys(e).filter((k) => !SKIP.has(k) && !keys.includes(k) && ['string', 'number', 'boolean'].includes(typeof e[k]));
     if (extra.length) {
       const d = document.createElement('details'); d.className = 'lv-extra wide';
@@ -1015,6 +1051,82 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       propsEl.append(d);
     }
     if (e.type === 'iso' || e.objects || (e.type === 'draw' && e.paths)) propsEl.append(Object.assign(document.createElement('p'), { className: 'lv-help wide', textContent: 'Its inner parts are edited in Code.' }));
+  }
+
+  // ---------- chart data: one row per bar, slice or point ----------
+  const CYCLE = ['coral', 'blue', 'mustard', 'green', 'tone'];
+  const valuesKey = (e: any) => (!Array.isArray(e.values) && Array.isArray(e.series) && !Array.isArray(e.series[0]) ? 'series' : 'values');
+  const chartColor = (e: any, i: number) => {
+    const l = e.colors;
+    if (Array.isArray(l) && l.length) return l[i % l.length];
+    if (e.highlight != null) return i === e.highlight ? 'coral' : 'tone';
+    return e.type === 'bars' ? 'blue' : e.type === 'isochart' ? 'coral' : CYCLE[i % CYCLE.length];
+  };
+  const rowName = (e: any, i: number) => (Array.isArray(e.labels) && e.labels[i]) || `Item ${i + 1}`;
+  function highlightPick(e: any) {
+    const s = document.createElement('select');
+    s.add(new Option('None', '', false, e.highlight == null));
+    const n = (e[valuesKey(e)] || []).length;
+    for (let i = 0; i < n; i++) s.add(new Option(rowName(e, i), String(i), false, e.highlight === i));
+    s.addEventListener('change', () => { setField('highlight', s.value === '' ? undefined : +s.value); endEdit(); setTimeout(renderProps, 120); });
+    return s;
+  }
+  function chartData(e: any) {
+    const box = document.createElement('div'); box.className = 'lv-data wide';
+    const vk = valuesKey(e);
+    if (e.type === 'linechart' && Array.isArray(e.series) && Array.isArray(e.series[0]) && e.series.length > 1) {
+      box.append(Object.assign(document.createElement('p'), { className: 'lv-help', textContent: `This chart has ${e.series.length} lines; edit their numbers in Code.` }));
+      return box;
+    }
+    const vals: number[] = (vk === 'series' && Array.isArray(e.series?.[0]) ? e.series[0] : e[vk]) || [];
+    const labels: string[] = Array.isArray(e.labels) ? e.labels.map(String) : [];
+    const n = Math.max(vals.length, e.type === 'linechart' ? 0 : labels.length);
+    const perRow = e.type !== 'linechart';
+    box.append(Object.assign(document.createElement('p'), { className: 'lv-flabel', textContent: 'Data' }));
+    const head = document.createElement('div'); head.className = 'lv-drow lv-dhead';
+    head.append(...[perRow ? 'Ink' : '', 'Label', 'Number', ''].map((t) => Object.assign(document.createElement('span'), { textContent: t })));
+    box.append(head);
+    const liveVals = (): number[] => [...((vk === 'series' && Array.isArray(cur().series?.[0]) ? cur().series[0] : cur()[vk]) || [])];
+    const setVals = (next: number[]) => setField(vk, vk === 'series' && Array.isArray(e.series?.[0]) ? [next] : next);
+    for (let i = 0; i < n; i++) {
+      const r = document.createElement('div'); r.className = 'lv-drow';
+      if (perRow) {
+        const c = chartColor(e, i);
+        const chip = Object.assign(document.createElement('button'), { type: 'button', className: 'lv-dchip', title: `Colour of ${rowName(e, i)}` });
+        chip.style.setProperty('--c', hexOf(c)); chip.setAttribute('aria-label', `Colour of ${rowName(e, i)}`);
+        chip.addEventListener('click', (ev) => { ev.stopPropagation(); openColor(chip, c, (nc) => {
+          const cols = Array.from({ length: n }, (_, k) => chartColor(cur(), k)); cols[i] = nc; setField('colors', cols);
+          setTimeout(renderProps, 120);
+        }); });
+        r.append(chip);
+      } else r.append(document.createElement('span'));
+      const lab = Object.assign(document.createElement('input'), { type: 'text', value: labels[i] ?? '', placeholder: `Item ${i + 1}` }); lab.setAttribute('aria-label', `Label ${i + 1}`);
+      lab.addEventListener('input', () => { const l = Array.from({ length: Math.max(n, (cur().labels || []).length) }, (_, k) => String(cur().labels?.[k] ?? '')); l[i] = lab.value; setField('labels', l.some(Boolean) ? l : undefined); });
+      lab.addEventListener('change', () => { endEdit(); if (e.highlight != null) renderProps(); });
+      const num = Object.assign(document.createElement('input'), { type: 'number', value: String(vals[i] ?? 0), step: 'any', inputMode: 'decimal' }); num.setAttribute('aria-label', `Number ${i + 1}`);
+      num.addEventListener('input', () => { if (num.value === '' || !Number.isFinite(+num.value)) return; const v = liveVals(); while (v.length < n) v.push(0); v[i] = +num.value; setVals(v); });
+      num.addEventListener('change', endEdit);
+      const del = Object.assign(document.createElement('button'), { type: 'button', className: 'lv-ib', textContent: '×', title: 'Remove this row', disabled: n <= 1 }); del.setAttribute('aria-label', `Remove ${rowName(e, i)}`);
+      del.addEventListener('click', () => change(() => {
+        const o = cur(), v = liveVals(), m = v.length; v.splice(i, 1);
+        if (vk === 'series' && Array.isArray(o.series?.[0])) o.series = [v]; else o[vk] = v;
+        if (Array.isArray(o.labels)) o.labels.splice(i, 1);
+        if (Array.isArray(o.colors) && o.colors.length === m) o.colors.splice(i, 1);
+        if (o.highlight === i) delete o.highlight; else if (o.highlight > i) o.highlight -= 1;
+      }));
+      r.append(lab, num, del);
+      box.append(r);
+    }
+    const addB = Object.assign(document.createElement('button'), { type: 'button', className: 'lv-more', textContent: '+ Add a row' });
+    addB.addEventListener('click', () => change(() => {
+      const o = cur(), old = liveVals(), m = old.length, v = [...old, m ? old[m - 1] : 1];
+      if (vk === 'series' && Array.isArray(o.series?.[0])) o.series = [v]; else o[vk] = v;
+      if (Array.isArray(o.labels)) { while (o.labels.length < m) o.labels.push(''); o.labels.push(`Item ${m + 1}`); }
+      if (Array.isArray(o.colors) && o.colors.length === m) o.colors.push(CYCLE[m % CYCLE.length]);
+    }));
+    box.append(addB);
+    if (!perRow) box.append(field('Line colour', inlineSwatches(Array.isArray(e.colors) ? e.colors[0] : 'coral', (nc) => setField('colors', [nc, ...(Array.isArray(e.colors) ? e.colors.slice(1) : [])])), true));
+    return box;
   }
 
   // ---------- position: arrange and layers ----------
@@ -1378,7 +1490,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   .lv-fly-head h2 { flex: 1; margin: 0; font: 700 18px/1.2 var(--display); }
   .lv-x, .lv-back { display: grid; place-items: center; width: 32px; height: 32px; border: 0; border-radius: 0; background: transparent; cursor: pointer; font-size: 18px; }
   .lv-x:hover, .lv-back:hover { background: var(--soft); }
-  .lv-fly-body { flex: 1; min-height: 0; overflow: auto; padding: 4px 16px 24px; overscroll-behavior: contain; }
+  .lv-fly-body { flex: 1; min-height: 0; min-width: 0; overflow-x: hidden; overflow-y: auto; padding: 4px 16px 24px; overscroll-behavior: contain; }
   .lv-search { width: 100%; box-sizing: border-box; font: 15px/1.3 var(--serif); padding: 11px 12px; border: 1.5px solid var(--line); border-radius: 0; background: #fff; color: var(--ink); margin-bottom: 6px; }
   .lv-search:focus { border-color: var(--ink); }
   .lv-row { margin-top: 14px; }
@@ -1387,8 +1499,8 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   .lv-row-h button { border: 0; background: none; padding: 2px; font-size: 13px; font-weight: 600; color: var(--accent-text); cursor: pointer; }
   .lv-row-h button:hover { text-decoration: underline; }
   .lv-count { margin: 10px 0 8px; font-size: 13px; font-weight: 600; }
-  .lv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-  .lv-grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .lv-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .lv-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .lv-tile { position: relative; aspect-ratio: 1; padding: 6px; border: 0; border-radius: 0; background: #fff; cursor: grab; box-shadow: 0 0 0 1px var(--line); }
   .lv-tile:hover { box-shadow: 0 0 0 1.5px var(--ink); }
   .lv-tile:active { cursor: grabbing; }
@@ -1429,8 +1541,8 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   .lv-abtn { padding: 10px 6px; border: 0; border-radius: 0; background: #fff; box-shadow: 0 0 0 1px var(--line); font-size: 13px; font-weight: 600; cursor: pointer; }
   .lv-abtn:hover:not(:disabled) { box-shadow: 0 0 0 1.5px var(--ink); }
   .lv-abtn:disabled { opacity: .4; cursor: default; }
-  .lv-layers, #layers { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
-  .lv-layer { display: flex; align-items: center; gap: 2px; border-radius: 0; padding-right: 2px; background: #fff; box-shadow: 0 0 0 1px var(--line); }
+  .lv-layers, #layers { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .lv-layer { min-width: 0; display: flex; align-items: center; gap: 2px; border-radius: 0; padding-right: 2px; background: #fff; box-shadow: 0 0 0 1px var(--line); }
   .lv-layer.on { box-shadow: 0 0 0 2px var(--sel); }
   .lv-layer.off .lv-layer-pick { opacity: .45; }
   .lv-layer.over { box-shadow: 0 -3px 0 var(--accent), 0 0 0 1px var(--line); }
@@ -1443,6 +1555,12 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   .lv-ib:hover:not(:disabled) { background: var(--soft); }
   .lv-ib:disabled { opacity: .3; }
   .lv-eye[aria-pressed='true'] { opacity: .4; }
+  .lv-data { display: grid; gap: 6px; }
+  .lv-drow { display: grid; grid-template-columns: 30px minmax(0, 1.4fr) minmax(0, 1fr) 30px; gap: 6px; align-items: center; }
+  .lv-drow input { width: 100%; min-width: 0; box-sizing: border-box; font: 14px/1.3 var(--serif); padding: 7px 8px; border: 1.5px solid var(--line); border-radius: 0; background: #fff; color: var(--ink); }
+  .lv-dhead span { font: 600 10px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+  .lv-dchip { width: 26px; height: 26px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 1.5px var(--line); background: var(--c); cursor: pointer; padding: 0; }
+  .lv-dchip:hover { box-shadow: 0 0 0 2px var(--indigo); }
   #props { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 10px; }
   #props .wide, .lv-field.wide { grid-column: 1 / -1; }
   #props .lv-h3 { margin-top: 4px; text-transform: none; letter-spacing: 0; font: 700 16px/1.2 var(--serif); color: var(--ink); }

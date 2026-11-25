@@ -99,8 +99,8 @@ export const MAKE: MakePage[] = [
     eyebrow: 'Poster maker',
     h1: 'A poster series for your brand, from one spec.',
     lede: 'Name, tagline, mark, inks and four words. Levni draws eight portrait posters that share one look: big type from bundled fonts, halftone, dot-matrix maps, module grids, camouflage and grain. Edit one right here.',
-    demo: { src: 'posters/10-bauhaus', note: 'Double-click a word to change it, pick another ink with the colour dot, or use Look to change the whole palette.' },
-    examples: ['posters/01-kumru-split', 'posters/03-zeytin-map', 'posters/05-orbit-echo', 'posters/07-summit', 'posters/11-worldmap', 'posters/12-echo'],
+    demo: { src: 'posters/01-kumru-split', note: 'Double-click a word to change it, pick another ink with the colour dot, or use Look to change the whole palette.' },
+    examples: ['posters/03-zeytin-map', 'posters/02-kumru-camo', 'posters/04-zeytin-vertical', 'posters/05-orbit-echo', 'posters/06-orbit-launch', 'posters/07-summit'],
     uses: [
       { title: 'Launch an identity', text: 'Eight posters in one series (split, map, bauhaus, echo, camo, vertical, summit, launch) plus a contact sheet to post.' },
       { title: 'Type that looks the same everywhere', text: 'Space Grotesk, Archivo Black, JetBrains Mono and Departure Mono, drawn as paths, so a poster never falls back to another font.' },
