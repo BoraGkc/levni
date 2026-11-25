@@ -1,0 +1,87 @@
+{
+ "seed": 12,
+ "elements": [
+  {
+   "type": "panel",
+   "x": 0,
+   "y": 0,
+   "w": 1200,
+   "h": 673,
+   "color": "blue"
+  },
+  {
+   "type": "window",
+   "x": 170,
+   "y": 96,
+   "w": 860,
+   "h": 500,
+   "title": "levni.dev/editor"
+  },
+  {
+   "type": "panel",
+   "x": 196,
+   "y": 150,
+   "w": 120,
+   "h": 420,
+   "color": "tone"
+  },
+  {
+   "type": "disc",
+   "x": 690,
+   "y": 340,
+   "r": 150,
+   "color": "mustard"
+  },
+  {
+   "type": "prop",
+   "name": "coffee-cup",
+   "x": 690,
+   "y": 345,
+   "size": 230,
+   "shadow": true
+  },
+  {
+   "type": "prop",
+   "name": "rocket",
+   "x": 256,
+   "y": 230,
+   "size": 80
+  },
+  {
+   "type": "prop",
+   "name": "lighthouse",
+   "x": 256,
+   "y": 350,
+   "size": 80
+  },
+  {
+   "type": "prop",
+   "name": "cat",
+   "x": 256,
+   "y": 470,
+   "size": 80
+  },
+  {
+   "type": "marks",
+   "area": [
+    540,
+    180,
+    320,
+    320
+   ],
+   "count": 5,
+   "colors": [
+    "coral",
+    "paper"
+   ]
+  },
+  {
+   "type": "prop",
+   "name": "pencil",
+   "x": 940,
+   "y": 520,
+   "size": 170,
+   "rot": -20
+  }
+ ]
+}

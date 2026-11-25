@@ -12,6 +12,20 @@ export type Release = {
 
 export const RELEASES: Release[] = [
   {
+    version: '0.4.0',
+    date: '2026-11-25',
+    title: 'The editor, the README banner maker and Levni in the browser',
+    note: 'The editor and the banner maker are live on levni.dev now. The browser build reaches npm with 0.4.0.',
+    summary: 'Levni runs in the browser: a free online design editor and a README banner maker, with no install and no sign-up.',
+    items: [
+      { text: 'The Levni editor: drag drawings, shapes and type onto a canvas, edit what you select from a toolbar, turn a drawing into a 3D icon, ASCII, a dot matrix or an echo, add shadows and sticker edges, arrange layers, pick a size and a look, and download PNG, SVG or JSON. A share link holds the whole design.', links: [{ text: 'Open the editor', href: '/editor/' }, { text: 'The tour', href: '/blog/free-online-design-editor/' }] },
+      { text: 'The README banner maker: paste a GitHub link and get a 1280 × 640 banner for the README and the social preview, with the drawing picked from the repo’s topics.', links: [{ text: 'Make a banner', href: '/banner/' }] },
+      { text: 'For developers: @levni/levni/browser runs compose() in the browser, with a Vite plugin (@levni/levni/vite) that swaps node:fs and sharp for small shims; @levni/levni/banner builds banner scenes.' },
+      { text: 'Site: Editor in the header, and every page now ends on the same three steps: open the editor, add Levni to your agent, star it on GitHub. The MCP page shows Codex setup.', links: [{ text: 'MCP setup', href: '/mcp/#setup' }] },
+    ],
+    posts: [{ text: 'A free online design editor with hand-inked drawings', href: '/blog/free-online-design-editor/' }],
+  },
+  {
     version: '0.3.0',
     date: '2026-11-24',
     title: 'Type engine and branding posters',

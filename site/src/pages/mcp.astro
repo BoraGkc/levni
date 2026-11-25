@@ -5,6 +5,7 @@ import showcase from '../data/gallery.json';
 
 const repo = SITE.github.replace('https://github.com/', '');
 const pkg = '@levni/levni';
+const codex = `[mcp_servers.levni]\ncommand = "npx"\nargs = ["-y", "${pkg}", "mcp"]`;
 const json = (env) => JSON.stringify({ mcpServers: { levni: { command: 'npx', args: ['-y', pkg, 'mcp'], ...(env ? { env } : {}) } } }, null, 2);
 
 const tools: [string, string, string, string][] = [
@@ -69,11 +70,16 @@ const jsonld = [
     ))}</ul>
     <p class="small">Start with <code>render_poster</code> for poster series or <code>render_board</code> for brand boards, or paste one of the <a href="#prompts">brand-asset prompts</a>. Every tile links to its gallery tab.</p>
 
+    <aside class="free-note">
+      <b>Free on the plan you already have.</b> Levni draws on your machine, so a $20 Claude or ChatGPT plan is enough: Claude Code or Claude Desktop with Claude, Codex with ChatGPT. No image credits, no API key, no second bill. Want to see it first? <a href="/editor/">Open the editor</a>.
+    </aside>
+
     <h2 id="setup">Set it up</h2>
     <div class="setup">
       <div><h3>Claude Code</h3><pre><code>{`claude mcp add levni -- npx -y ${pkg} mcp`}</code></pre></div>
       <div><h3>Claude Desktop, Cursor and others</h3><p class="small">In <code>claude_desktop_config.json</code>, <code>.cursor/mcp.json</code> or your client’s MCP settings:</p><pre><code>{json()}</code></pre></div>
     </div>
+    <div class="setup setup-one"><div><h3>Codex</h3><p class="small">In <code>~/.codex/config.toml</code>:</p><pre><code>{codex}</code></pre></div></div>
     <p>Then ask: <q>Illustrate this article with Levni, show me two options, and fix what the critic reports.</q> Node.js 20 or newer is the only requirement. The best first prompts are <a href="#prompts">just below</a>.</p>
 
     <h2 id="prompts">Things to ask your agent</h2>
@@ -180,4 +186,8 @@ const jsonld = [
   .next { margin-top: 40px; }
   .text-link { font-weight: 600; }
   @media (max-width: 720px) { .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } .shots { grid-template-columns: minmax(0, 1fr); } .setup { grid-template-columns: minmax(0, 1fr); } .tools { grid-template-columns: minmax(0, 1fr); gap: 2px 0; } .tools dd { margin-bottom: 10px; } }
+  .free-note { margin: 28px 0 8px; padding: 16px 18px; border-radius: 12px; background: var(--ink); color: #c9cfdb; box-shadow: inset 4px 0 0 var(--mustard); }
+  .free-note b { color: var(--paper); }
+  .free-note a { color: #fff; }
+  .setup-one { grid-template-columns: minmax(0, 1fr); margin-top: 20px; }
 </style>

@@ -1,0 +1,109 @@
+{
+ "canvas": [
+  1280,
+  640
+ ],
+ "seed": 1433,
+ "background": "paper",
+ "elements": [
+  {
+   "type": "panel",
+   "x": 790,
+   "y": -20,
+   "w": 530,
+   "h": 680,
+   "color": "blue"
+  },
+  {
+   "type": "disc",
+   "x": 1035,
+   "y": 326,
+   "r": 178,
+   "color": "mustard"
+  },
+  {
+   "type": "marks",
+   "area": [
+    820,
+    40,
+    430,
+    560
+   ],
+   "count": 7,
+   "colors": [
+    "coral",
+    "mustard",
+    "paper"
+   ]
+  },
+  {
+   "type": "prop",
+   "name": "pencil",
+   "variant": 0,
+   "x": 1035,
+   "y": 326,
+   "size": 330,
+   "shadow": true
+  },
+  {
+   "type": "type",
+   "text": "BORAGKC /",
+   "x": 84,
+   "y": 98,
+   "size": 24,
+   "font": "mono",
+   "weight": 700,
+   "tracking": 0.04,
+   "color": "#4A5160"
+  },
+  {
+   "type": "type",
+   "text": "levni",
+   "x": 80,
+   "y": 150,
+   "w": 640,
+   "h": 124,
+   "fit": "box",
+   "font": "black",
+   "color": "#14181F"
+  },
+  {
+   "type": "type",
+   "text": "Your agent’s design studio:\nillustrations, brand assets and\nposters from JSON.",
+   "x": 84,
+   "y": 322,
+   "size": 32,
+   "weight": 400,
+   "leading": 1.32,
+   "color": "#14181F"
+  },
+  {
+   "type": "disc",
+   "x": 92,
+   "y": 548,
+   "r": 9,
+   "color": "#f1e05a"
+  },
+  {
+   "type": "type",
+   "text": "JavaScript",
+   "x": 112,
+   "y": 538,
+   "size": 22,
+   "font": "mono",
+   "weight": 700,
+   "color": "#4A5160"
+  },
+  {
+   "type": "type",
+   "text": "levni.dev",
+   "x": 1244,
+   "y": 596,
+   "size": 15,
+   "font": "mono",
+   "weight": 700,
+   "align": "right",
+   "color": "#F1EEE6"
+  }
+ ]
+}

@@ -6,7 +6,7 @@
 // Inline weight: **bold** and __light__ switch the weight (or `boldFont` / `lightFont`) inside a line: "SMART**CONTRACTS**".
 import { readFileSync, existsSync } from 'node:fs';
 import { createRequire } from 'node:module';
-import { resolve } from 'node:path';
+import { join, resolve } from 'node:path';
 
 const require = createRequire(import.meta.url);
 const fontkit = require('fontkit');
@@ -25,7 +25,7 @@ function load(name) {
   const key = String(name || 'grotesk');
   if (cache.has(key)) return cache.get(key);
   const spec = FONTS[ALIAS[key] || key];
-  let file = spec ? DIR + spec.file : resolve(key);
+  let file = spec ? join(DIR, spec.file) : resolve(key); // join: bundlers may drop DIR's trailing slash
   if (!existsSync(file)) throw new Error(`unknown font "${key}": use ${Object.keys(FONTS).join(', ')} or a .ttf/.otf path`);
   const font = fontkit.create(readFileSync(file));
   const out = { font, spec: spec || {}, variants: new Map() };

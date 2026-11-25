@@ -1,0 +1,95 @@
+{
+ "seed": 9,
+ "elements": [
+  {
+   "type": "panel",
+   "x": 0,
+   "y": 0,
+   "w": 1200,
+   "h": 673,
+   "color": "tone"
+  },
+  {
+   "type": "prop",
+   "name": "rocket",
+   "x": 130,
+   "y": 320,
+   "size": 190,
+   "shadow": true
+  },
+  {
+   "type": "prop",
+   "name": "rocket",
+   "x": 365,
+   "y": 320,
+   "size": 190,
+   "extrude": true
+  },
+  {
+   "type": "prop",
+   "name": "rocket",
+   "x": 600,
+   "y": 320,
+   "size": 190,
+   "shade": true
+  },
+  {
+   "type": "prop",
+   "name": "rocket",
+   "x": 835,
+   "y": 320,
+   "size": 190,
+   "diecut": {
+    "offset": 16
+   }
+  },
+  {
+   "type": "prop",
+   "name": "rocket",
+   "x": 1070,
+   "y": 320,
+   "size": 190,
+   "overprint": true
+  },
+  {
+   "type": "label",
+   "text": "Shadow",
+   "x": 130,
+   "y": 560,
+   "anchor": "middle",
+   "color": "ink"
+  },
+  {
+   "type": "label",
+   "text": "Cut paper",
+   "x": 365,
+   "y": 560,
+   "anchor": "middle",
+   "color": "ink"
+  },
+  {
+   "type": "label",
+   "text": "Pencil shade",
+   "x": 600,
+   "y": 560,
+   "anchor": "middle",
+   "color": "ink"
+  },
+  {
+   "type": "label",
+   "text": "Sticker",
+   "x": 835,
+   "y": 560,
+   "anchor": "middle",
+   "color": "ink"
+  },
+  {
+   "type": "label",
+   "text": "Overprint",
+   "x": 1070,
+   "y": 560,
+   "anchor": "middle",
+   "color": "ink"
+  }
+ ]
+}

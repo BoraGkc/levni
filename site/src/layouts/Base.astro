@@ -2,6 +2,7 @@
 import { SITE } from '../site';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import TryLevni from '../components/TryLevni.astro';
 
 interface Props {
   title: string;
@@ -78,6 +79,7 @@ const graph = [
     <main id="main">
       <slot />
     </main>
+    {!['/', '/editor/'].includes(Astro.url.pathname) && <TryLevni />}
     <SiteFooter />
   </body>
 </html>

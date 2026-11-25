@@ -1,0 +1,296 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../site';
+
+const faq = [
+  { q: 'Is it free?', a: 'Yes. No account, no key, no limit. The banner is drawn in your browser by Levni itself, the same engine as the npm package, so nothing is uploaded and there is no server to pay for.' },
+  { q: 'How does it pick the drawing?', a: 'It reads the repo’s topics, name, description and language and searches the 1,600 drawings of the Levni Folio by their tags. No AI model. If the first pick is wrong, choose another one under the preview or search the Folio.' },
+  { q: 'Where do I put the banner?', a: 'Save the PNG in your repo as .github/banner.png and paste the Markdown snippet at the top of your README. For link previews on social media, upload the same PNG in your repo’s Settings → General → Social preview (GitHub wants 1280 × 640, which is this size).' },
+  { q: 'Can I change the design?', a: 'Pick a palette, another drawing or a new seed here. For full control, copy the scene JSON and edit it: it is a normal Levni scene, so npx @levni/levni render scene.json banner.png draws the same picture.' },
+];
+const jsonld = [
+  { '@type': 'WebApplication', name: 'Levni README banner maker', applicationCategory: 'DesignApplication', operatingSystem: 'Any (web browser)', url: `${SITE.url}/banner/`, offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, publisher: { '@id': `${SITE.ortakAlan}/#organization` } },
+  { '@type': 'FAQPage', mainEntity: faq.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
+];
+---
+<Base title="Free README banner maker for GitHub repos" description="Paste a GitHub repo link and get a hand-inked 1280 × 640 banner for your README and social preview. Free, no sign-up, drawn in your browser by Levni." jsonld={jsonld}>
+  <article class="wrap page bn">
+    <p class="eyebrow">Free tool</p>
+    <h1>A README banner for your repo</h1>
+    <p class="lede">Paste a GitHub link. Levni reads the repo, picks a drawing from its Folio and inks a 1280 × 640 banner for your README and social preview. Free, no sign-up, drawn right here in your browser.</p>
+
+    <form class="bn-form" id="bn-form">
+      <label class="sr" for="bn-repo">GitHub repository</label>
+      <input id="bn-repo" name="repo" type="text" inputmode="url" autocomplete="off" spellcheck="false" placeholder="github.com/owner/repo" value="BoraGkc/levni" required />
+      <button type="submit" class="bn-go">Make my banner</button>
+    </form>
+    <p class="bn-status" id="bn-status" role="status" aria-live="polite"></p>
+
+    <div class="bn-stage">
+      <figure class="bn-preview" id="bn-preview" aria-busy="true">
+        <img id="bn-img" alt="" width="1280" height="640" />
+      </figure>
+
+      <div class="bn-controls" id="bn-controls">
+        <fieldset>
+          <legend>Palette</legend>
+          <div class="bn-chips" id="bn-themes">
+            <button type="button" data-theme="riso" aria-pressed="true"><span class="sw" style="--a:#0b57d0;--b:#f2c230"></span>Riso</button>
+            <button type="button" data-theme="coral" aria-pressed="false"><span class="sw" style="--a:#f2603f;--b:#ffe08a"></span>Coral</button>
+            <button type="button" data-theme="green" aria-pressed="false"><span class="sw" style="--a:#1e783f;--b:#ffe08a"></span>Green</button>
+            <button type="button" data-theme="night" aria-pressed="false"><span class="sw" style="--a:#1b1f27;--b:#f2603f"></span>Night</button>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Drawing</legend>
+          <div class="bn-marks" id="bn-marks"></div>
+          <div class="bn-search">
+            <label class="sr" for="bn-q">Search the Folio</label>
+            <input id="bn-q" type="search" placeholder="Search 1,600 drawings: cat, rocket, kahve…" autocomplete="off" />
+          </div>
+        </fieldset>
+
+        <fieldset class="bn-text">
+          <legend>Text</legend>
+          <label>Name <input id="bn-name" type="text" maxlength="40" /></label>
+          <label>Description <textarea id="bn-desc" rows="3" maxlength="140"></textarea></label>
+        </fieldset>
+
+        <div class="bn-row">
+          <button type="button" class="bn-ghost" id="bn-shuffle">New hand (seed)</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bn-out" id="bn-out" hidden>
+      <div class="bn-actions">
+        <button type="button" class="bn-go" id="bn-png">Download PNG</button>
+        <button type="button" class="bn-ghost" id="bn-svg">Download SVG</button>
+        <button type="button" class="bn-ghost" id="bn-json">Copy scene JSON</button>
+        <a class="bn-ghost" id="bn-edit" href="/editor/">Open in the editor</a>
+      </div>
+      <p class="bn-how">Save it in your repo as <code>.github/banner.png</code>, then paste this at the top of your README:</p>
+      <div class="bn-code"><pre id="bn-md"></pre><button type="button" class="bn-copy" id="bn-copy">Copy</button></div>
+    </div>
+
+    <section class="bn-faq">
+      <h2>Questions</h2>
+      {faq.map(({ q, a }) => <details><summary>{q}</summary><p>{a}</p></details>)}
+      <p class="bn-more">Want posters, brand boards or covers too? <a href="/mcp/">Give your agent Levni</a> or run <code>npx @levni/levni</code>.</p>
+    </section>
+  </article>
+</Base>
+
+<script>
+  import { compose, registerProps, registerFont, fontsFor, toBlob, bannerScene, pickMark, repoTerms, FALLBACK_MARKS } from '../../../src/browser.mjs';
+
+  // Folio drawings and fonts, loaded on demand (one small chunk per drawing)
+  const propFiles = import.meta.glob('../../../library/props/*.json', { import: 'default' });
+  const fontUrls = import.meta.glob('../../../fonts/*.{ttf,otf}', { query: '?url', import: 'default', eager: true }) as Record<string, string>;
+  const FONT_FILES: Record<string, string> = { grotesk: 'SpaceGrotesk-Variable.ttf', black: 'ArchivoBlack-Regular.ttf', mono: 'JetBrainsMono-Variable.ttf', pixel: 'DepartureMono-Regular.otf' };
+  const LANG: Record<string, string> = { JavaScript: '#f1e05a', TypeScript: '#3178c6', Python: '#3572A5', Go: '#00ADD8', Rust: '#dea584', Java: '#b07219', 'C++': '#f34b7d', C: '#555555', 'C#': '#178600', Ruby: '#701516', PHP: '#4F5D95', Swift: '#F05138', Kotlin: '#A97BFF', Dart: '#00B4AB', Shell: '#89e051', HTML: '#e34c26', CSS: '#663399', Vue: '#41b883', Svelte: '#ff3e00', Astro: '#ff5a03', Lua: '#000080', Elixir: '#6e4a7e', Zig: '#ec915c', 'Jupyter Notebook': '#DA5B0B', MDX: '#fcb32c' };
+
+  const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+  const form = $<HTMLFormElement>('bn-form'), input = $<HTMLInputElement>('bn-repo'), status = $('bn-status');
+  const img = $<HTMLImageElement>('bn-img'), preview = $('bn-preview'), out = $('bn-out');
+  const marksEl = $('bn-marks'), qEl = $<HTMLInputElement>('bn-q'), nameEl = $<HTMLInputElement>('bn-name'), descEl = $<HTMLTextAreaElement>('bn-desc');
+
+  type Repo = { owner: string; name: string; description: string; topics: string[]; language: string; stars: number | null };
+  let repo: Repo | null = null, mark = '', theme = 'riso', seed: number | undefined, candidates: string[] = [];
+  let index: { name: string; tags: string[]; aliases: string[]; variants: string[] }[] = [];
+  let current = { svg: '', scene: null as object | null, blobUrl: '' };
+  let token = 0;
+
+  const loadedFonts = new Set<string>(), loadedProps = new Set<string>();
+  async function ensureFonts(names: string[]) {
+    await Promise.all(names.filter((n) => !loadedFonts.has(n)).map(async (n) => {
+      const url = Object.entries(fontUrls).find(([k]) => k.endsWith(FONT_FILES[n]))?.[1];
+      if (!url) return;
+      registerFont(n, await (await fetch(url)).arrayBuffer());
+      loadedFonts.add(n);
+    }));
+  }
+  async function ensureProp(name: string) {
+    if (loadedProps.has(name)) return true;
+    const load = propFiles[`../../../library/props/${name}.json`];
+    if (!load) return false;
+    registerProps(await load() as object);
+    loadedProps.add(name);
+    return true;
+  }
+  async function getIndex() {
+    if (index.length) return index;
+    const rows = await (await fetch('/props-index.json')).json();
+    index = rows.map(([name, , tags, variants, aliases]: [string, string, string[], string[], string[]]) => ({ name, tags, variants, aliases }));
+    return index;
+  }
+
+  function parseRepo(v: string) {
+    const m = v.trim().replace(/\.git$/, '').match(/(?:github\.com[/:])?([\w.-]+)\/([\w.-]+)\/?$/i);
+    return m ? { owner: m[1], name: m[2] } : null;
+  }
+
+  const say = (t: string, bad = false) => { status.textContent = t; status.classList.toggle('bad', bad); };
+
+  async function draw() {
+    if (!repo) return;
+    const my = ++token;
+    preview.setAttribute('aria-busy', 'true');
+    const fields = { ...repo, name: nameEl.value.trim() || repo.name, description: descEl.value.trim(), languageColor: LANG[repo.language] };
+    if (!(await ensureProp(mark))) mark = FALLBACK_MARKS[0], await ensureProp(mark);
+    const scene = bannerScene({ ...fields, mark, theme, seed });
+    await ensureFonts(fontsFor(scene));
+    const { svg } = await compose(scene);
+    const blob = await toBlob(svg);
+    if (my !== token) return; // a newer draw started
+    if (current.blobUrl) URL.revokeObjectURL(current.blobUrl);
+    current = { svg, scene, blobUrl: URL.createObjectURL(blob) };
+    img.src = current.blobUrl;
+    img.alt = `Banner for ${fields.owner}/${fields.name}: ${mark.replace(/-/g, ' ')} on a ${theme} panel, with the repo name and description`;
+    preview.setAttribute('aria-busy', 'false');
+    $('bn-md').textContent = `[![${fields.owner}/${fields.name}](./.github/banner.png)](https://levni.dev/banner/)`;
+    out.hidden = false;
+  }
+
+  function renderMarks() {
+    marksEl.replaceChildren(...candidates.map((n) => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.title = n.replace(/-/g, ' ');
+      b.setAttribute('aria-pressed', String(n === mark));
+      b.setAttribute('aria-label', `Use the drawing “${n.replace(/-/g, ' ')}”`);
+      const i = document.createElement('img');
+      i.src = `/props/${n}-0.webp`; i.alt = ''; i.width = 56; i.height = 56; i.loading = 'lazy';
+      b.append(i);
+      b.addEventListener('click', () => { mark = n; renderMarks(); draw(); });
+      return b;
+    }));
+  }
+
+  async function load(v: string) {
+    const r = parseRepo(v);
+    if (!r) return say('That does not look like a GitHub repo. Try owner/repo or a github.com link.', true);
+    say(`Reading ${r.owner}/${r.name}…`);
+    try {
+      const res = await fetch(`https://api.github.com/repos/${r.owner}/${r.name}`, { headers: { Accept: 'application/vnd.github+json' } });
+      if (res.status === 404) return say('No public repo with that name.', true);
+      if (res.status === 403 || res.status === 429) {
+        say('GitHub’s hourly limit for this network is used up, so the details were not read. Fill in the text yourself below.', true);
+        repo = { owner: r.owner, name: r.name, description: '', topics: [], language: '', stars: null };
+      } else {
+        const d = await res.json();
+        repo = { owner: d.owner?.login || r.owner, name: d.name || r.name, description: d.description || '', topics: d.topics || [], language: d.language || '', stars: d.stargazers_count ?? null };
+        say('');
+      }
+    } catch {
+      say('Could not reach GitHub. Fill in the text yourself below.', true);
+      repo = { owner: r.owner, name: r.name, description: '', topics: [], language: '', stars: null };
+    }
+    nameEl.value = repo.name; descEl.value = repo.description; seed = undefined;
+    candidates = pickMark(repoTerms(repo), await getIndex(), { limit: 8 });
+    for (const f of FALLBACK_MARKS) if (candidates.length < 8 && !candidates.includes(f)) candidates.push(f);
+    mark = candidates[0];
+    renderMarks();
+    await draw();
+  }
+
+  form.addEventListener('submit', (e) => { e.preventDefault(); load(input.value); });
+  $('bn-themes').addEventListener('click', (e) => {
+    const b = (e.target as HTMLElement).closest('button'); if (!b) return;
+    theme = b.dataset.theme!;
+    for (const x of $('bn-themes').querySelectorAll('button')) x.setAttribute('aria-pressed', String(x === b));
+    draw();
+  });
+  $('bn-shuffle').addEventListener('click', () => { seed = Math.floor(Math.random() * 9000) + 1; draw(); });
+  let typing = 0;
+  for (const el of [nameEl, descEl]) el.addEventListener('input', () => { clearTimeout(typing); typing = window.setTimeout(draw, 350); });
+  let searching = 0;
+  qEl.addEventListener('input', () => {
+    clearTimeout(searching);
+    searching = window.setTimeout(async () => {
+      const q = qEl.value.trim();
+      if (!q) return;
+      const found = pickMark([q], await getIndex(), { limit: 8 });
+      if (found.length) { candidates = found; renderMarks(); } else say(`No drawing for “${q}”. Try another word, in English or Turkish.`, true);
+    }, 250);
+  });
+
+  const save = (blob: Blob, file: string) => { const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = file; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000); };
+  const fileBase = () => `${repo?.name || 'repo'}-banner`;
+  $('bn-png').addEventListener('click', async () => save(await (await fetch(current.blobUrl)).blob(), `${fileBase()}.png`));
+  $('bn-svg').addEventListener('click', () => save(new Blob([current.svg], { type: 'image/svg+xml' }), `${fileBase()}.svg`));
+  const copy = async (text: string, btn: HTMLElement) => { await navigator.clipboard.writeText(text); const t = btn.textContent; btn.textContent = 'Copied'; setTimeout(() => (btn.textContent = t), 1400); };
+  $('bn-json').addEventListener('click', (e) => copy(JSON.stringify(current.scene, null, 2), e.currentTarget as HTMLElement));
+  $('bn-copy').addEventListener('click', (e) => copy($('bn-md').textContent || '', e.currentTarget as HTMLElement));
+
+  // the banner as an editor link: scene JSON, deflated, base64url, in the hash (same format as the editor's share link)
+  $('bn-edit').addEventListener('click', async (e) => {
+    if (!current.scene) return;
+    e.preventDefault();
+    const stream = new Blob([JSON.stringify(current.scene)]).stream().pipeThrough(new CompressionStream('deflate-raw'));
+    const bytes = new Uint8Array(await new Response(stream).arrayBuffer());
+    location.href = `/editor/#s=${btoa(String.fromCharCode(...bytes)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '')}`;
+  });
+
+  const fromUrl = new URLSearchParams(location.search).get('repo');
+  if (fromUrl) input.value = fromUrl;
+  load(input.value);
+</script>
+
+<style>
+  .bn h1 { max-width: 18ch; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .bn-form { display: flex; gap: 10px; margin: 28px 0 8px; max-width: 640px; }
+  .bn-form input { flex: 1; min-width: 0; font: 500 17px/1.2 var(--mono); padding: 14px 16px; border: 1.5px solid var(--ink); border-radius: 10px; background: #fff; color: var(--ink); }
+  .bn-go, .bn-ghost { display: inline-block; text-decoration: none; font: 600 15px/1 var(--serif); padding: 14px 18px; border-radius: 10px; border: 1.5px solid var(--ink); cursor: pointer; white-space: nowrap; }
+  .bn-go { background: var(--ink); color: var(--paper); }
+  .bn-ghost { background: transparent; color: var(--ink); }
+  .bn-go:hover { background: var(--accent-text); border-color: var(--accent-text); }
+  .bn-ghost:hover { background: #fff; }
+  .bn-status { min-height: 1.4em; margin: 0 0 18px; color: var(--ink-soft); font-size: 15px; }
+  .bn-status.bad { color: var(--coral-deep); }
+
+  .bn-stage { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 28px; align-items: start; }
+  .bn-preview { margin: 0; border-radius: 12px; overflow: hidden; background: var(--rule); aspect-ratio: 2 / 1; box-shadow: 0 1px 0 rgba(20,24,31,.06), 0 18px 40px -24px rgba(20,24,31,.45); }
+  .bn-preview img { display: block; width: 100%; height: 100%; object-fit: cover; transition: opacity .2s; }
+  .bn-preview[aria-busy='true'] img { opacity: .55; }
+  .bn-preview img:not([src]) { visibility: hidden; }
+
+  .bn-controls fieldset { border: 0; padding: 0; margin: 0 0 20px; }
+  .bn-controls legend { font: 700 12px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 10px; }
+  .bn-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .bn-chips button { display: inline-flex; align-items: center; gap: 8px; font: 600 14px/1 var(--serif); padding: 9px 12px; border-radius: 999px; border: 1.5px solid var(--rule); background: #fff; color: var(--ink); cursor: pointer; }
+  .bn-chips button[aria-pressed='true'] { border-color: var(--ink); }
+  .sw { width: 16px; height: 16px; border-radius: 50%; background: linear-gradient(135deg, var(--a) 50%, var(--b) 50%); }
+  .bn-marks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .bn-marks button { aspect-ratio: 1; padding: 6px; border-radius: 10px; border: 1.5px solid var(--rule); background: #fff; cursor: pointer; }
+  .bn-marks button[aria-pressed='true'] { border-color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
+  .bn-marks img { width: 100%; height: 100%; object-fit: contain; }
+  .bn-search input, .bn-text input, .bn-text textarea { width: 100%; box-sizing: border-box; font: 15px/1.35 var(--serif); padding: 10px 12px; border: 1.5px solid var(--rule); border-radius: 8px; background: #fff; color: var(--ink); }
+  .bn-search { margin-top: 10px; }
+  .bn-text label { display: block; font-size: 14px; color: var(--ink-soft); margin-bottom: 10px; }
+  .bn-text textarea { resize: vertical; }
+  :is(.bn-form input, .bn-search input, .bn-text input, .bn-text textarea):focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--ink); }
+
+  .bn-out { margin-top: 24px; }
+  .bn-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .bn-how { margin: 18px 0 8px; color: var(--ink-soft); }
+  .bn-code { position: relative; background: var(--ink); color: var(--paper); border-radius: 10px; }
+  .bn-code pre { margin: 0; padding: 16px 84px 16px 16px; overflow-x: auto; font: 14px/1.5 var(--mono); }
+  .bn-copy { position: absolute; top: 9px; right: 9px; font: 600 13px/1 var(--serif); padding: 8px 12px; border-radius: 7px; border: 1px solid rgba(255,255,255,.3); background: transparent; color: var(--paper); cursor: pointer; }
+
+  .bn-faq { margin-top: 64px; max-width: 720px; }
+  .bn-faq details { border-top: 1px solid var(--rule); padding: 14px 0; }
+  .bn-faq summary { font-weight: 600; cursor: pointer; }
+  .bn-faq p { color: var(--ink-soft); margin: 10px 0 0; }
+  .bn-more { margin-top: 28px !important; }
+
+  @media (max-width: 860px) {
+    .bn-stage { grid-template-columns: 1fr; }
+    .bn-marks { grid-template-columns: repeat(8, 1fr); }
+  }
+  @media (max-width: 520px) {
+    .bn-form { flex-direction: column; }
+    .bn-marks { grid-template-columns: repeat(4, 1fr); }
+  }
+</style>

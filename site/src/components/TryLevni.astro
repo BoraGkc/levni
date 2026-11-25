@@ -1,0 +1,65 @@
+---
+// The three calls to action every page ends on, in this order: try it now (editor), keep using it free (MCP),
+// help it grow (GitHub star).
+//   <TryLevni />                    a dark band with a heading and the three actions (page ends, footer)
+//   <TryLevni variant="row" />      the three buttons only (heroes, docs pages)
+import { SITE } from '../site';
+
+interface Props { variant?: 'band' | 'row'; title?: string; lede?: string; }
+const {
+  variant = 'band',
+  title = 'Make one now. Keep making them for free.',
+  lede = 'Try Levni in your browser, then add it to Claude or Codex: it draws on your machine, so the $20 plan you already have is enough. No image credits, no second bill.',
+} = Astro.props;
+const star = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z" fill="currentColor"/></svg>';
+const actions = [
+  { href: '/editor/', label: 'Open the editor', note: 'Free, in your browser', cls: 'try-a try-primary' },
+  { href: '/mcp/#setup', label: 'Add it to your agent', note: 'Claude, Codex, Cursor', cls: 'try-a' },
+  { href: SITE.github, label: 'Star on GitHub', note: 'Open source, MIT', cls: 'try-a try-star', icon: star },
+];
+---
+{variant === 'row' ? (
+  <div class="try-row">
+    {actions.map((a) => <a class={a.cls} href={a.href}>{a.icon && <Fragment set:html={a.icon} />}<span>{a.label}</span></a>)}
+  </div>
+) : (
+  <div class="wrap try-wrap"><section class="try" aria-labelledby="try-title">
+    <div class="try-text">
+      <p class="try-k">Free, for real</p>
+      <h2 id="try-title">{title}</h2>
+      <p>{lede}</p>
+    </div>
+    <div class="try-actions">
+      {actions.map((a) => (
+        <a class={a.cls} href={a.href}>
+          {a.icon && <Fragment set:html={a.icon} />}
+          <span class="try-l"><b>{a.label}</b><small>{a.note}</small></span>
+          <span class="try-arrow" aria-hidden="true">→</span>
+        </a>
+      ))}
+    </div>
+  </section></div>
+)}
+
+<style>
+  .try-wrap { margin-top: clamp(48px, 7vw, 88px); }
+  .try { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 24px 48px; align-items: center; padding: clamp(24px, 4vw, 44px); border-radius: 20px; background: var(--ink); color: var(--paper); }
+  .try-k { margin: 0 0 8px; font: 700 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mustard); }
+  .try h2 { margin: 0 0 10px; color: var(--paper); font-size: clamp(26px, 3.2vw, 38px); line-height: 1.1; text-wrap: balance; }
+  .try-text p:last-child { margin: 0; color: #c9cfdb; }
+  .try-actions { display: grid; gap: 10px; }
+  .try-actions .try-a { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 12px; border: 1.5px solid rgba(255,255,255,.22); color: var(--paper); text-decoration: none; }
+  .try-actions .try-a:hover { border-color: #fff; background: rgba(255,255,255,.06); }
+  .try-actions .try-primary { background: var(--mustard); border-color: var(--mustard); color: var(--ink); }
+  .try-actions .try-primary:hover { background: #ffd34f; border-color: #ffd34f; }
+  .try-l { flex: 1; display: grid; gap: 2px; }
+  .try-l b { font-size: 16px; }
+  .try-l small { font-size: 13px; opacity: .75; }
+  .try-arrow { font-size: 18px; }
+  .try-row { display: flex; flex-wrap: wrap; gap: 10px; }
+  .try-row .try-a { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 10px; border: 1.5px solid var(--ink); color: var(--ink); font-weight: 700; text-decoration: none; }
+  .try-row .try-a:hover { background: var(--ink); color: var(--paper); }
+  .try-row .try-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .try-row .try-primary:hover { background: var(--ink); border-color: var(--ink); }
+  @media (max-width: 760px) { .try { grid-template-columns: minmax(0, 1fr); } }
+</style>

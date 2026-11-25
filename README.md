@@ -6,7 +6,7 @@
 
 [![npm](https://img.shields.io/npm/v/@levni/levni?color=F0573A&label=npm)](https://www.npmjs.com/package/@levni/levni) [![MCP Registry](https://img.shields.io/badge/MCP%20Registry-dev.levni%2Flevni-1F3BE0)](https://registry.modelcontextprotocol.io/v0/servers?search=dev.levni/levni) [![Levni MCP server](https://glama.ai/mcp/servers/BoraGkc/levni/badges/score.svg)](https://glama.ai/mcp/servers/BoraGkc/levni) [![Code: MIT](https://img.shields.io/badge/code-MIT-14181F)](LICENSE) [![Drawings: CC BY 4.0](https://img.shields.io/badge/drawings-CC%20BY%204.0-2E8B57)](https://creativecommons.org/licenses/by/4.0/)
 
-**[levni.dev](https://levni.dev)** · [Docs](https://levni.dev/docs/) · [Gallery](https://levni.dev/gallery/) · [Library](https://levni.dev/library/) · [MCP guide](https://levni.dev/mcp/) · [Changelog](https://levni.dev/changelog/) · Powered by [Ortak Alan](https://ortakalan.io)
+**[levni.dev](https://levni.dev)** · [Editor](https://levni.dev/editor/) · [README banner](https://levni.dev/banner/) · [Docs](https://levni.dev/docs/) · [Gallery](https://levni.dev/gallery/) · [Library](https://levni.dev/library/) · [MCP guide](https://levni.dev/mcp/) · [Changelog](https://levni.dev/changelog/) · Powered by [Ortak Alan](https://ortakalan.io)
 
 ![Branding posters, a brand board, stickers, a dithered sunset, a soft 3D cover, an isometric city, wireframe terrain, an ASCII card and a riso cover, all drawn by Levni](docs/img/showcase.png)
 
@@ -16,10 +16,15 @@
 | a nine-tile brand board | `npx @levni/levni board brand.json board.png` |
 | a cover, sticker sheet or dithered hero | `npx @levni/levni render scene.json cover.webp` |
 | all of it from your assistant | `claude mcp add levni -- npx -y @levni/levni mcp` |
+| a design by hand, no install | [levni.dev/editor](https://levni.dev/editor/) |
 
 Named after Levni, the 18th-century Ottoman painter of the Tulip Era, whose colours still look alive.
 
 ## Quick start
+
+**Try it in your browser first.** The [Levni editor](https://levni.dev/editor/) runs the same engine in the page: drag drawings onto a canvas, turn them into 3D icons or ASCII, download PNG or SVG. The [README banner maker](https://levni.dev/banner/) turns a GitHub link into a 1280 × 640 banner. Both are free, with no sign-up.
+
+**Free in your agent.** Levni draws on your machine, so the $20 Claude or ChatGPT plan you already have is enough: no image credits, no second bill. If Levni is useful to you, a [star on GitHub](https://github.com/BoraGkc/levni) helps others find it.
 
 **With an AI assistant (MCP).** Claude Code:
 
@@ -31,6 +36,14 @@ Claude Desktop, Cursor and other clients (`claude_desktop_config.json`, `.cursor
 
 ```json
 { "mcpServers": { "levni": { "command": "npx", "args": ["-y", "@levni/levni", "mcp"] } } }
+```
+
+Codex (`~/.codex/config.toml`):
+
+```toml
+[mcp_servers.levni]
+command = "npx"
+args = ["-y", "@levni/levni", "mcp"]
 ```
 
 Then ask: *"Illustrate this article with Levni and fix what the critic reports."*
@@ -53,6 +66,19 @@ const scene = { seed: 4, elements: [{ type: 'prop', name: 'rocket', x: 600, y: 3
 const { notes } = await render(scene, 'rocket.png');   // writes the file, returns the critic's notes
 const { svg, used } = await compose(scene);            // or just the SVG
 ```
+
+**In the browser.** The same engine runs in a page (it powers the [editor](https://levni.dev/editor/)). Load the drawings and fonts a scene uses, then compose:
+
+```js
+// vite.config.js: plugins: [levni()]   (import levni from '@levni/levni/vite')
+import { compose, registerProps, registerFont, toBlob } from '@levni/levni/browser';
+
+registerProps([await (await fetch('/props/rocket.json')).json()]);
+const { svg } = await compose({ seed: 4, elements: [{ type: 'prop', name: 'rocket', x: 600, y: 336, size: 360 }] });
+const png = await toBlob(svg);
+```
+
+The browser build skips what needs native code: print screens and the `icon` set.
 
 Node 20+. Two dependencies: [sharp](https://sharp.pixelplumbing.com) (SVG to PNG and WebP) and [fontkit](https://github.com/foliojs/fontkit) (reads the bundled OFL fonts for posters and display type).
 

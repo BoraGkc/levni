@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import levniBrowser from '../src/browser/vite.mjs';
 import { readdirSync, readFileSync } from 'node:fs';
 
 // lastmod per post: `updated`, else `date`, from the frontmatter of each blog post
@@ -28,4 +29,6 @@ export default defineConfig({
   build: { inlineStylesheets: 'always' },
   // plain <pre> blocks styled by the site (no Shiki theme, no extra CSS)
   markdown: { syntaxHighlight: false },
+  // /banner/ runs Levni itself in the browser: the plugin swaps node:fs, sharp and friends for small shims
+  vite: { plugins: [levniBrowser()], server: { fs: { allow: ['..'] } } },
 });

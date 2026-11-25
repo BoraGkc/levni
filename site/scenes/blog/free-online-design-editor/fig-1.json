@@ -1,0 +1,84 @@
+{
+ "seed": 5,
+ "elements": [
+  {
+   "type": "prop",
+   "name": "coffee-cup",
+   "x": 130,
+   "y": 320,
+   "size": 200
+  },
+  {
+   "type": "extrude3d",
+   "name": "coffee-cup",
+   "x": 365,
+   "y": 320,
+   "size": 200
+  },
+  {
+   "type": "glyphfill",
+   "prop": "coffee-cup",
+   "x": 600,
+   "y": 320,
+   "size": 200,
+   "mode": "glyph",
+   "color": "ink"
+  },
+  {
+   "type": "glyphfill",
+   "prop": "coffee-cup",
+   "x": 835,
+   "y": 320,
+   "size": 200,
+   "mode": "dot",
+   "color": "ink"
+  },
+  {
+   "type": "echo",
+   "prop": "coffee-cup",
+   "x": 1070,
+   "y": 330,
+   "size": 150
+  },
+  {
+   "type": "label",
+   "text": "Ink drawing",
+   "x": 130,
+   "y": 560,
+   "anchor": "middle",
+   "color": "ink"
+  },
+  {
+   "type": "label",
+   "text": "3D icon",
+   "x": 365,
+   "y": 560,
+   "anchor": "middle",
+   "color": "ink"
+  },
+  {
+   "type": "label",
+   "text": "ASCII",
+   "x": 600,
+   "y": 560,
+   "anchor": "middle",
+   "color": "ink"
+  },
+  {
+   "type": "label",
+   "text": "Dot matrix",
+   "x": 835,
+   "y": 560,
+   "anchor": "middle",
+   "color": "ink"
+  },
+  {
+   "type": "label",
+   "text": "Echo",
+   "x": 1070,
+   "y": 560,
+   "anchor": "middle",
+   "color": "ink"
+  }
+ ]
+}

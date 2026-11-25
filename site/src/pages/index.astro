@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import TryLevni from '../components/TryLevni.astro';
 import PostCard from '../components/PostCard.astro';
 import { SITE } from '../site';
 import { getCollection } from 'astro:content';
@@ -195,10 +196,7 @@ const star = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
       <p class="pill"><span class="dot" aria-hidden="true"></span> Open source · MCP-ready · free</p>
       <h1>Your agent’s <em>design studio</em>.</h1>
       <p class="lede">Illustrations, covers, 3D and pixel icons, charts, brand assets, brand boards and branding posters, drawn from a few lines of JSON. Free, local, no image model and no API key, with an MCP server so Claude, Codex or Cursor can run it.</p>
-      <div class="ctas">
-        <a class="btn btn-primary" href="#boards">See a brand board</a>
-        <a class="btn" href="/mcp/">Add it to Claude</a>
-      </div>
+      <div class="hero-try"><TryLevni variant="row" /></div>
       <p class="facts">MIT code · CC BY 4.0 drawings · about 0.15 s a cover · Claude, Codex, Cursor · <a href="/library/">Browse {SITE.props.toLocaleString('en')} drawings</a></p>
     </div>
     <div class="reel" aria-label="What Levni draws">
@@ -335,6 +333,8 @@ npx @levni/levni board brand.json board.png`}</code></pre>
   </section>
 
   <!-- 6. Agents: copyable setup per client -->
+  <TryLevni title="Your $20 plan already pays for it." lede="Levni draws on your own machine, so there are no image credits and no second bill. Try it in the browser, then connect it to Claude or Codex on the plan you already have and ask for a poster or a cover in plain words." />
+
   <section id="agents" class="agents wrap" aria-labelledby="agents-title">
     <div class="agents-text">
       <h2 id="agents-title">Give your agent an illustrator.</h2>
@@ -665,4 +665,5 @@ npx @levni/levni board brand.json board.png`}</code></pre>
     .mosaic .big { grid-column: span 2; grid-row: auto; }
     .close-art { grid-template-columns: repeat(3, 1fr); }
   }
+  .hero-try :global(.try-row) { justify-content: center; }
 </style>

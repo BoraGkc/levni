@@ -16,6 +16,11 @@ export function addPropDir(dir) {
   cache = null;
 }
 
+// forget the loaded Folio (the browser build calls this after registering more drawings)
+export function resetProps() {
+  cache = null;
+}
+
 export function loadProps() {
   if (cache) return cache;
   cache = {};
