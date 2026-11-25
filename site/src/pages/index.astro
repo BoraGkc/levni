@@ -203,7 +203,7 @@ const star = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="hero-text">
-        <p class="hero-k">{'{'}open-source design engine · mcp-ready{'}'}</p>
+        <p class="hero-k">{'{'}a post-AI center for designers · open source · mcp-ready{'}'}</p>
         <h1>Designed for agents, drawn for people.</h1>
         <p class="hero-sub">A design studio your agent can run. No image model inside.</p>
         <p class="lede">Illustrations, covers, 3D and pixel icons, charts, brand boards and branding posters, drawn from a few lines of JSON in one hand-inked style. Free and local, with an MCP server so Claude, Codex or Cursor can run it.</p>
@@ -252,6 +252,29 @@ const star = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
           </a></li>
         ))}
       </ul>
+    </div>
+  </section>
+
+  <!-- 2a. Manifesto: why this exists, for the people who come to make things -->
+  <section class="mani" aria-labelledby="mani-title">
+    <div class="wrap mani-grid">
+      <div>
+        <p class="kicker">{'{'}§ manifesto{'}'}</p>
+        <h2 id="mani-title" class="mani-say"><span>We are not an AI company.</span><span>We are not against AI either.</span><span>We just draw, and leave the source open.</span></h2>
+        <p class="mani-p">We are living in a Tulip Era: everything blooms, everything generates, every tool has a free trial. It looks like a golden age. For the creative process it might be the end of one. Levni is the other bet: a design commons, made by people who still like making things.</p>
+        <p class="mani-cta"><a class="mani-btn" href="/manifesto/">Read the manifesto →</a> <a class="mani-link" href="/community/">or skip to joining</a></p>
+      </div>
+      <div class="mani-side">
+        <p class="mani-k">what one small picture costs elsewhere</p>
+        <ul class="mani-stack">
+          <li><s>a credit card</s><span>for one cover</span></li>
+          <li><s>an API key</s><span>for one sticker</span></li>
+          <li><s>a subscription</s><span>for one palette</span></li>
+          <li><s>a waitlist</s><span>for one poster</span></li>
+          <li class="ours"><b>npx @levni/levni</b><span>all of it, $0</span></li>
+        </ul>
+        <p class="mani-foot">Inspired by our friend Berk Boz and <a href="https://medium.com/zero-bytes-foundation/what-if-we-imagined-a-studio-669f954a05f7">Zero Bytes Foundation</a>: consume, curate, cogitate, create.</p>
+      </div>
     </div>
   </section>
 
@@ -426,6 +449,7 @@ npx @levni/levni board brand.json board.png`}</code></pre>
           <a class="btn cm-ghost" href="/manifesto/">Read the manifesto</a>
         </div>
       </div>
+      <div class="cm-right">
       <ul class="cm-doors">
         {[
           ['01', 'Draw for the Folio', 'one JSON file, your name on it', '+'],
@@ -438,6 +462,12 @@ npx @levni/levni board brand.json board.png`}</code></pre>
           <li><a href="/community/"><span class="cm-g" aria-hidden="true">{g}</span><span class="cm-n">{n}</span><b>{t}</b><small>{d}</small></a></li>
         ))}
       </ul>
+      <div class="wanted">
+        <p class="w-head"><b>WANTED</b> for the Folio crew</p>
+        <ul>{['illustrators', 'type nerds', 'riso printers', 'icon pedants', 'agent tinkerers', 'prompt sceptics', 'OSS maintainers', 'brand people', 'miniature fans', 'people who still sketch'].map((w) => <li>{w}</li>)}</ul>
+        <p class="w-foot">Reward: your name in every scene that uses your work.</p>
+      </div>
+      </div>
     </div>
   </section>
 
@@ -997,4 +1027,39 @@ npx @levni/levni board brand.json board.png`}</code></pre>
   @media (max-width: 960px) { .cm-grid { grid-template-columns: minmax(0, 1fr); } }
   @media (max-width: 560px) { .cm-doors { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (prefers-reduced-motion: reduce) { .cm-doors a:hover { transform: none; } }
+
+  /* manifesto band */
+  .mani { margin-top: clamp(64px, 8vw, 104px); }
+  .mani-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+  .mani-say { margin: 0 0 22px; max-width: none; font: 400 clamp(1.5rem, 3.2vw, 2.6rem)/1.2 var(--mono); letter-spacing: -0.03em; color: var(--indigo); }
+  .mani-say span { display: block; }
+  .mani-say span:last-child { color: var(--coral-deep); }
+  .mani-p { color: var(--ink-soft); max-width: 58ch; }
+  .mani-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-top: 24px; }
+  .mani-btn { display: inline-block; background: var(--indigo); color: #fff; font: 600 0.8rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; padding: 15px 20px; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%); }
+  .mani-btn:hover { background: var(--lime); color: var(--indigo); }
+  .mani-link { font: 0.8rem/1 var(--mono); color: var(--ink-soft); }
+  .mani-side { background: #fff; padding: 24px 22px; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%); }
+  .mani-k { margin: 0 0 12px; font: 500 0.7rem/1.3 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--coral-deep); }
+  .mani-stack { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font: 0.8rem/1.3 var(--mono); }
+  .mani-stack li { display: flex; justify-content: space-between; gap: 12px; padding: 9px 12px; background: var(--paper); }
+  .mani-stack s { color: var(--coral-deep); text-decoration-thickness: 2px; }
+  .mani-stack span { color: var(--ink-soft); text-align: right; }
+  .mani-stack .ours { background: var(--lime); }
+  .mani-stack .ours b, .mani-stack .ours span { color: var(--indigo); font-weight: 600; }
+  .mani-foot { margin: 14px 0 0; font: 0.72rem/1.5 var(--mono); color: var(--ink-soft); }
+  @media (max-width: 960px) { .mani-grid { grid-template-columns: minmax(0, 1fr); } }
+
+  /* wanted poster inside the community band */
+  .cm-right { display: grid; gap: 14px; min-width: 0; }
+  .wanted { border: 1.5px dashed rgba(255, 255, 255, 0.45); padding: 18px 18px 16px; }
+  .w-head { margin: 0 0 12px; font: 500 0.78rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--on-indigo); }
+  .w-head b { background: var(--red); color: #fff; padding: 4px 8px; margin-right: 8px; letter-spacing: 0.12em; }
+  .wanted ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  .wanted li { font: 0.74rem/1 var(--mono); color: var(--indigo); background: var(--on-indigo); padding: 7px 10px; transition: transform 0.2s, background 0.2s; }
+  .wanted li:nth-child(3n + 1) { background: var(--lime); }
+  .wanted li:nth-child(4n + 2) { background: #fff; transform: rotate(-2deg); }
+  .wanted li:hover { transform: rotate(2deg) scale(1.05); background: var(--lime); }
+  .w-foot { margin: 12px 0 0; font: 0.72rem/1.4 var(--mono); color: var(--lime); }
+  @media (prefers-reduced-motion: reduce) { .wanted li, .wanted li:hover { transform: none; } }
 </style>
