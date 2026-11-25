@@ -88,7 +88,7 @@ In Levni terms it reads like this:
 
 - **Consume:** look at others' work. The [gallery](/gallery/) shows every image with the exact scene that drew it, and the [Library](/library/) shows every drawing with its code.
 - **Curate:** collect and share it. [Style packs](/blog/share-style-pack-palette/) and showcases let you reprint and present what exists.
-- **Cogitate:** find how you can contribute. Request a missing drawing, argue with the critic, propose a [design skill](/blog/open-source-design-skills/).
+- **Cogitate:** find how you can contribute. Request a missing drawing, argue with the critic, propose a rule the critic should know.
 - **Create:** make your own work. [Draw one thing for the Folio](/blog/contribute-drawing-open-library/).
 
 ## Signing is easy: draw one thing

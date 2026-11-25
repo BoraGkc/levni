@@ -4,6 +4,7 @@ description: "Agents write code well because coding knowledge is open. Design kn
 date: 2026-11-25
 category: agents
 kind: Explainer
+draft: true
 coverAlt: "A brain drawn in ASCII characters on a white card, beside a lime block with a pixel tulip, on indigo"
 faq:
   - q: "What is a design skill for an AI agent?"
