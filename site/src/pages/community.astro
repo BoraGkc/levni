@@ -13,7 +13,6 @@ const ways = [
   { n: '03', k: 'inks', title: 'Share a style pack', text: 'A colour map that reprints the whole library in your palette. Riso and miniature are ours; the third pack could be yours.', cmd: '"style": { "blue": "#6A1B9A", … }', href: issue('style-pack.yml'), cta: 'Propose a pack', tone: 'white' },
   { n: '04', k: 'brand', title: 'Bring your brand', text: 'Run your brand.json through Levni: a board, eight posters, a sticker sheet. Open-source project? We feature the good ones in the gallery.', cmd: 'npx @levni/levni board brand.json', href: issue('showcase.yml'), cta: 'Show your brand', tone: 'white' },
   { n: '05', k: 'show', title: 'Show what you made', text: 'A README banner, a cover series, a launch poster your agent drew. Post it with the scene and it can land in the gallery, credited.', cmd: 'scene.json + the picture', href: issue('showcase.yml'), cta: 'Submit to the gallery', tone: 'white' },
-  { n: '06', k: 'skills', title: 'Write a design skill', text: 'The prompts, critics and recipes that make an agent good at design: art direction, palette from a logo, poster layout rules. Open them like code.', cmd: 'skills/poster-art-direction.md', href: issue('skill.yml'), cta: 'Propose a skill', tone: 'indigo' },
 ];
 
 const steps = [
@@ -30,16 +29,16 @@ const principles = [
   ['Humans and agents both', 'Draw by hand or with a model, then check it yourself. Agent-assisted drawings are marked as such.'],
 ];
 ---
-<Base og="/og/community.png" title="Community: open design, together" description="Join the Levni community: contribute drawings to an open CC BY 4.0 illustration library, request drawings, share style packs and brand kits, and help write open design skills for AI agents.">
+<Base og="/og/community.png" title="Community: open design, together" description="Join the Levni community: contribute drawings to an open CC BY 4.0 illustration library, request drawings, share style packs and brand kits, and show your work.">
   <header class="wrap brand-hero">
     <p class="eyebrow">Community · open design</p>
     <h1>Everything is open source now. <em>Why not the design?</em></h1>
-    <p class="lede">Code went open decades ago. Fonts did, then icon sets. Levni opens the rest: the drawings, the inks, the brand kits and the design skills agents work with. {SITE.props.toLocaleString('en')} drawings are in. The next one can be yours. <a href="/manifesto/">Why we do this</a>.</p>
+    <p class="lede">Code went open decades ago. Fonts did, then icon sets. Levni opens the rest: the drawings, the inks, the brand kits and the palettes. {SITE.props.toLocaleString('en')} drawings are in. The next one can be yours. <a href="/manifesto/">Why we do this</a>.</p>
     <p class="cm-cta"><a class="cm-btn" href={`${gh}/blob/main/CONTRIBUTING.md`}>Start contributing →</a> <a class="cm-btn ghost" href={issue('prop-request.yml')}>Request a drawing</a> <a class="cm-btn ghost" href={gh}>★ Star on GitHub</a></p>
   </header>
 
   <section class="wrap" aria-labelledby="ways-title">
-    <p class="kicker">{'{'}six ways in · consume, curate, cogitate, create{'}'}</p>
+    <p class="kicker">{'{'}five ways in · consume, curate, cogitate, create{'}'}</p>
     <h2 id="ways-title">Pick a door. All of them are open.</h2>
     <ul class="ways">
       {ways.map((w) => (
@@ -77,31 +76,9 @@ const principles = [
     <ul class="wall">
       <li class="filled"><Logo size={44} tone="indigo" /><b>Ortak Alan</b><small>{SITE.props.toLocaleString('en')} drawings</small></li>
       {Array.from({ length: 7 }, (_, i) => (
-        <li class="open"><span aria-hidden="true">{['+', '?', '✎', '+', '☐', '?', '+'][i]}</span><b>your name</b><small>{['a drawing', 'a style pack', 'a brand kit', 'a skill', 'a request', 'a fix', 'a poster'][i]}</small></li>
+        <li class="open"><span aria-hidden="true">{['+', '?', '✎', '+', '☐', '?', '+'][i]}</span><b>your name</b><small>{['a drawing', 'a style pack', 'a brand kit', 'a showcase', 'a request', 'a fix', 'a poster'][i]}</small></li>
       ))}
     </ul>
-  </section>
-
-  <section class="skills" aria-labelledby="skills-title">
-    <div class="wrap sk-grid">
-      <div>
-        <p class="sk-k">{'{'}coming next · levni skills{'}'}</p>
-        <h2 id="skills-title">Open design skills for agents.</h2>
-        <p>Agents can write code because the knowledge is open. Design knowledge mostly is not: it lives in studios and in people’s heads. Levni Skills will be the open set of recipes, critics and art-direction rules that make an agent good at design, written in the open and tested on real renders.</p>
-        <p><a class="cm-btn" href={issue('skill.yml')}>Propose the first skill →</a></p>
-      </div>
-      <pre class="sk-card" aria-label="An example skill file outline">{`# skills/poster-art-direction.md
-
-when    a brand needs a launch series
-read    brand.json (name, inks, mark)
-do      one word per poster, mark
-        halftoned on two of eight
-check   critic: no focal point? fix
-        contrast < 4.5? swap inks
-ship    posters/01..08.png
-
-status  planned · yours to write`}</pre>
-    </div>
   </section>
 
   <section class="wrap principles" aria-labelledby="pr-title">
@@ -170,14 +147,6 @@ status  planned · yours to write`}</pre>
   .wall b { font-size: 0.95rem; }
   .wall small { font: 0.68rem/1.3 var(--mono); }
 
-  .skills { background: var(--lime); color: var(--indigo); padding: clamp(56px, 7vw, 88px) 0; }
-  .sk-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: center; }
-  .sk-k { margin: 0 0 12px; font: 600 0.75rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; }
-  .skills h2 { color: var(--indigo); font-weight: 800; }
-  .skills p { color: var(--indigo-deep); max-width: 52ch; }
-  .skills .cm-btn { background: var(--indigo); color: #fff; }
-  .skills .cm-btn:hover { background: #fff; color: var(--indigo); }
-  .sk-card { margin: 0; border: 0; background: #fff; color: var(--indigo); font-size: 0.86rem; line-height: 1.75; padding: 28px 26px; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%); }
 
   .principles dl { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin: 28px 0 0; }
   .principles dl div { border-top: 3px solid var(--indigo); padding-top: 14px; }
@@ -187,7 +156,7 @@ status  planned · yours to write`}</pre>
 
   @media (max-width: 960px) {
     .ways { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .makers, .sk-grid { grid-template-columns: minmax(0, 1fr); }
+    .makers { grid-template-columns: minmax(0, 1fr); }
     .principles dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .steps li:nth-child(3) { border-left: 0; padding-left: 0; }

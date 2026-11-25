@@ -230,7 +230,7 @@ Drawing needs nothing: no account, no key. Two optional integrations bring your 
 
 ## Community: open design, together
 
-Levni is a commons, and there are six ways in. All of them are open: [levni.dev/community](https://levni.dev/community/).
+Levni is a commons, and there are five ways in. All of them are open: [levni.dev/community](https://levni.dev/community/).
 
 | door | how |
 | --- | --- |
@@ -238,7 +238,6 @@ Levni is a commons, and there are six ways in. All of them are open: [levni.dev/
 | **Ask for a drawing** | [prop request](https://github.com/BoraGkc/levni/issues/new?template=prop-request.yml): say what scene needs it |
 | **Share a style pack** | [style pack](https://github.com/BoraGkc/levni/issues/new?template=style-pack.yml): the whole library in your palette |
 | **Bring your brand, show your work** | [showcase](https://github.com/BoraGkc/levni/issues/new?template=showcase.yml): a brand.json, a README banner, a poster series, with the scene |
-| **Write a design skill** | [design skill](https://github.com/BoraGkc/levni/issues/new?template=skill.yml): recipes, critics and art-direction rules for agents (Levni Skills is next) |
 | **Talk** | [issues](https://github.com/BoraGkc/levni/issues), and the [Code of Conduct](CODE_OF_CONDUCT.md) for everyone |
 
 A drawing looks like this:

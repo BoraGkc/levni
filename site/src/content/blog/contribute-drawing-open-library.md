@@ -119,4 +119,4 @@ Your name stays in the drawing's `author` field. It shows up on the drawing's Li
 
 That is fine too. Open a [prop request](https://github.com/BoraGkc/levni/issues/new?template=prop-request.yml) and describe the scene that needs the object and the angle you want. Requests decide what gets drawn next, and someone who likes drawing watering cans may pick it up.
 
-There are five other ways to add to Levni, from palettes to design skills, on the [community page](/community/). And if you want to know why we care about this at all, the [manifesto](/blog/post-ai-design-manifesto/) explains it.
+There are four other ways to add to Levni, from palettes to brand kits, on the [community page](/community/). And if you want to know why we care about this at all, the [manifesto](/blog/post-ai-design-manifesto/) explains it.

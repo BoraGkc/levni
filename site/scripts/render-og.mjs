@@ -57,7 +57,7 @@ const pages = [
   ['docs', '{documentation}', 'Learn Levni\nin two minutes.', 'MCP, CLI, Node API, the scene format'],
   ['blog', '{levni blog}', 'Illustration for agents\nand publishers.', 'guides, recipes, behind the drawings'],
   ['make', '{free makers}', 'Make it in your\nbrowser. Free.', 'no sign-up, no credits, download PNG or SVG'],
-  ['community', '{open design · community}', 'Everything is open\nsource. Why not design?', 'draw, share, request, write a skill'],
+  ['community', '{open design · community}', 'Everything is open\nsource. Why not design?', 'draw, share, request, show your work'],
   ['manifesto', '{manifesto}', 'We are living in\na Tulip Era.', 'we use AI. we do not rent our taste from it.'],
   ['changelog', '{changelog}', 'What changed,\nrelease by release.', 'elements, commands, MCP tools'],
   ['editor', '{editor}', 'A design editor that\nruns on your laptop.', 'drag drawings, export PNG or SVG, free'],

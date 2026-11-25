@@ -8,7 +8,7 @@ featured: true
 coverAlt: "A tulip drawn in ASCII characters on a white card, beside a lime block with a pixel tulip, on indigo"
 faq:
   - q: "What does 'a post-AI center for designers' mean?"
-    a: "It means we use AI every day but do not hand our taste to it. Levni is an open design commons for the generative age: drawings, palettes, brand kits and design skills that anyone can read, fork and reuse, with no image model and no per-image bill."
+    a: "It means we use AI every day but do not hand our taste to it. Levni is an open design commons for the generative age: drawings, palettes and brand kits that anyone can read, fork and reuse, with no image model and no per-image bill."
   - q: "Is Levni against AI?"
     a: "No. Agents write Levni scenes, read its layout critic and fix the result. What Levni avoids is an image model deciding what good looks like. The drawings are made by people, the rules are written down, and the same scene always gives the same picture."
   - q: "Why is Levni named after a painter?"
@@ -16,7 +16,7 @@ faq:
   - q: "Is Levni related to Zero Bytes Foundation?"
     a: "It is inspired by it, not a continuation. Zero Bytes Foundation is a design and media collective that our friend Berk Boz wrote about in 2023. Its mantra, consume, curate, cogitate, create, became the map for Levni's community."
   - q: "How do I join?"
-    a: "Draw one thing for the Levni Folio, request a drawing, share a style pack, show a brand kit or propose a design skill. Every path is on levni.dev/community and every contribution is credited by name."
+    a: "Draw one thing for the Levni Folio, request a drawing, share a style pack, or show a brand kit. Every path is on levni.dev/community and every contribution is credited by name."
 ---
 
 Every week there is a new image model, a new free trial and a new reason to feel late. Every week a client asks why a cover costs anything at all, now that "AI can just make it". And every week, to make one small picture, someone signs up for another service, pastes another API key and pays for another credit.
@@ -93,7 +93,7 @@ In Levni terms it reads like this:
 
 ## Signing is easy: draw one thing
 
-There is no form and no newsletter. You sign this manifesto by adding something to the commons: a drawing, a palette, a brand kit, a design skill, or just a request for what is missing. Every path, with the real command or template behind it, is on the [community page](/community/).
+There is no form and no newsletter. You sign this manifesto by adding something to the commons: a drawing, a palette, a brand kit, or just a request for what is missing. Every path, with the real command or template behind it, is on the [community page](/community/).
 
 So far one studio drew almost all of it. We would very much like to be the first name on a long list, not the only one.
 
