@@ -1,0 +1,867 @@
+{
+ "list": "awesome-lettering",
+ "updated": "2026-11-26",
+ "entries": [
+  {
+   "name": "FontForge",
+   "url": "https://github.com/fontforge/fontforge",
+   "repo": "fontforge/fontforge",
+   "desc": "The long-running libre font editor for Windows, macOS and Linux, with Python scripting",
+   "license": "GPL-3.0",
+   "stars": 8101,
+   "pushed": "2026-11-23",
+   "category": "Font editors"
+  },
+  {
+   "name": "Fontra",
+   "url": "https://github.com/fontra/fontra",
+   "repo": "fontra/fontra",
+   "desc": "Browser-based font editor with variable-font design spaces, built on a Python backend",
+   "license": "GPL-3.0",
+   "stars": 866,
+   "pushed": "2026-11-24",
+   "category": "Font editors"
+  },
+  {
+   "name": "Fontra Pak",
+   "url": "https://github.com/fontra/fontra-pak",
+   "repo": "fontra/fontra-pak",
+   "desc": "Packaged desktop build of Fontra that runs a local server, so there is nothing to host",
+   "license": "GPL-3.0",
+   "stars": 92,
+   "pushed": "2026-11-24",
+   "category": "Font editors"
+  },
+  {
+   "name": "BirdFont",
+   "url": "https://github.com/johanmattssonm/birdfont",
+   "repo": "johanmattssonm/birdfont",
+   "desc": "Small desktop editor for drawing glyphs and exporting TTF, EOT and SVG fonts",
+   "license": "GPL-3.0",
+   "stars": 565,
+   "pushed": "2025-11-23",
+   "category": "Font editors"
+  },
+  {
+   "name": "TruFont",
+   "url": "https://github.com/trufont/trufont",
+   "repo": "trufont/trufont",
+   "desc": "UFO-native font editor written in Python/Qt with a scripting API",
+   "license": "LGPL-3.0",
+   "stars": 505,
+   "pushed": "2025-12-02",
+   "category": "Font editors"
+  },
+  {
+   "name": "DrawBot",
+   "url": "https://github.com/typemytype/drawbot",
+   "repo": "typemytype/drawbot",
+   "desc": "Python scripting app for macOS that draws 2D type, shapes and animations to PDF, PNG or video",
+   "license": "MIT-style",
+   "stars": 456,
+   "pushed": "2026-07-24",
+   "category": "Font editors"
+  },
+  {
+   "name": "bited",
+   "url": "https://github.com/molarmanful/bited",
+   "repo": "molarmanful/bited",
+   "desc": "Bitmap font editor and build pipeline that outputs bitmap and scalable font formats",
+   "license": "MIT",
+   "stars": 89,
+   "pushed": "2026-11-25",
+   "category": "Font editors"
+  },
+  {
+   "name": "fontTools",
+   "url": "https://github.com/fonttools/fonttools",
+   "repo": "fonttools/fonttools",
+   "desc": "Python library and CLI for reading, editing, subsetting and merging font files; the base of most font tooling",
+   "license": "MIT",
+   "stars": 5339,
+   "pushed": "2026-11-25",
+   "category": "Font engineering and build tools"
+  },
+  {
+   "name": "fontmake",
+   "url": "https://github.com/googlefonts/fontmake",
+   "repo": "googlefonts/fontmake",
+   "desc": "Compiles UFO and Glyphs sources into static or variable OTF and TTF",
+   "license": "Apache-2.0",
+   "stars": 900,
+   "pushed": "2026-10-09",
+   "category": "Font engineering and build tools"
+  },
+  {
+   "name": "fontc",
+   "url": "https://github.com/googlefonts/fontc",
+   "repo": "googlefonts/fontc",
+   "desc": "Rust font compiler aiming to replace fontmake with much faster builds",
+   "license": "Apache-2.0",
+   "stars": 196,
+   "pushed": "2026-11-25",
+   "category": "Font engineering and build tools"
+  },
+  {
+   "name": "fontations",
+   "url": "https://github.com/googlefonts/fontations",
+   "repo": "googlefonts/fontations",
+   "desc": "Rust crates for reading and writing font files (read-fonts, skrifa, write-fonts)",
+   "license": "Apache-2.0",
+   "stars": 857,
+   "pushed": "2026-11-25",
+   "category": "Font engineering and build tools"
+  },
+  {
+   "name": "glyphsLib",
+   "url": "https://github.com/googlefonts/glyphsLib",
+   "repo": "googlefonts/glyphsLib",
+   "desc": "Converts Glyphs source files to UFO and back, so Glyphs projects build with open tools",
+   "license": "Apache-2.0",
+   "stars": 207,
+   "pushed": "2026-11-23",
+   "category": "Font engineering and build tools"
+  },
+  {
+   "name": "ufo2ft",
+   "url": "https://github.com/googlefonts/ufo2ft",
+   "repo": "googlefonts/ufo2ft",
+   "desc": "Turns UFO sources into fontTools objects; the compile step inside fontmake",
+   "license": "MIT",
+   "stars": 177,
+   "pushed": "2026-11-23",
+   "category": "Font engineering and build tools"
+  },
+  {
+   "name": "ufoLib2",
+   "url": "https://github.com/fonttools/ufoLib2",
+   "repo": "fonttools/ufoLib2",
+   "desc": "Typed Python library for reading and writing UFO font sources",
+   "license": "Apache-2.0",
+   "stars": 34,
+   "pushed": "2026-11-23",
+   "category": "Font engineering and build tools"
+  },
+  {
+   "name": "defcon",
+   "url": "https://github.com/robotools/defcon",
+   "repo": "robotools/defcon",
+   "desc": "UFO-based object model for font editing apps and scripts",
+   "license": "MIT",
+   "stars": 70,
+   "pushed": "2026-11-11",
+   "category": "Font engineering and build tools"
+  },
+  {
+   "name": "fontParts",
+   "url": "https://github.com/robotools/fontParts",
+   "repo": "robotools/fontParts",
+   "desc": "Scripting API for font objects, the open successor to RoboFab",
+   "license": "MIT",
+   "stars": 153,
+   "pushed": "2026-07-09",
+   "category": "Font engineering and build tools"
+  },
+  {
+   "name": "AFDKO",
+   "url": "https://github.com/adobe-type-tools/afdko",
+   "repo": "adobe-type-tools/afdko",
+   "desc": "Adobe's command-line font development kit: feature compiler, CFF tools, checks",
+   "license": "Apache-2.0",
+   "stars": 1191,
+   "pushed": "2026-11-23",
+   "category": "Font engineering and build tools"
+  },
+  {
+   "name": "gftools",
+   "url": "https://github.com/googlefonts/gftools",
+   "repo": "googlefonts/gftools",
+   "desc": "Google Fonts' scripts for packaging, fixing and onboarding font families",
+   "license": "Apache-2.0",
+   "stars": 287,
+   "pushed": "2026-11-07",
+   "category": "Font engineering and build tools"
+  },
+  {
+   "name": "nanoemoji",
+   "url": "https://github.com/googlefonts/nanoemoji",
+   "repo": "googlefonts/nanoemoji",
+   "desc": "Builds color fonts (COLR, SVG, bitmap) from SVG artwork",
+   "license": "Apache-2.0",
+   "stars": 331,
+   "pushed": "2026-11-10",
+   "category": "Font engineering and build tools"
+  },
+  {
+   "name": "Google Fonts project template",
+   "url": "https://github.com/googlefonts/googlefonts-project-template",
+   "repo": "googlefonts/googlefonts-project-template",
+   "desc": "Demo repo layout for an open typeface: sources, build config, docs and QA in place",
+   "license": "OFL-1.1",
+   "stars": 202,
+   "pushed": "2026-11-13",
+   "category": "Font engineering and build tools"
+  },
+  {
+   "name": "Font Bakery",
+   "url": "https://github.com/fonttools/fontbakery",
+   "repo": "fonttools/fontbakery",
+   "desc": "Runs hundreds of automated quality checks on font files before release",
+   "license": "Apache-2.0",
+   "stars": 713,
+   "pushed": "2025-11-04",
+   "category": "Font QA, specimens and testing"
+  },
+  {
+   "name": "Fontspector",
+   "url": "https://github.com/fonttools/fontspector",
+   "repo": "fonttools/fontspector",
+   "desc": "Rust successor to Font Bakery that runs the same checks much faster",
+   "license": "Apache-2.0",
+   "stars": 123,
+   "pushed": "2026-11-25",
+   "category": "Font QA, specimens and testing"
+  },
+  {
+   "name": "Diffenator2",
+   "url": "https://github.com/googlefonts/diffenator2",
+   "repo": "googlefonts/diffenator2",
+   "desc": "Compares two font versions and reports glyph, kerning and metrics differences as HTML",
+   "license": "Apache-2.0",
+   "stars": 71,
+   "pushed": "2026-11-06",
+   "category": "Font QA, specimens and testing"
+  },
+  {
+   "name": "Shaperglot",
+   "url": "https://github.com/googlefonts/shaperglot",
+   "repo": "googlefonts/shaperglot",
+   "desc": "Tests whether a font supports a given language, including correct shaping",
+   "license": "Apache-2.0",
+   "stars": 58,
+   "pushed": "2026-11-17",
+   "category": "Font QA, specimens and testing"
+  },
+  {
+   "name": "Glyphsets",
+   "url": "https://github.com/googlefonts/glyphsets",
+   "repo": "googlefonts/glyphsets",
+   "desc": "Google Fonts' curated glyph set definitions for checking character coverage",
+   "license": "Apache-2.0",
+   "stars": 120,
+   "pushed": "2026-10-15",
+   "category": "Font QA, specimens and testing"
+  },
+  {
+   "name": "Wakamai Fondue engine",
+   "url": "https://github.com/Wakamai-Fondue/wakamai-fondue-engine",
+   "repo": "Wakamai-Fondue/wakamai-fondue-engine",
+   "desc": "The open engine behind wakamaifondue.com, which lists a font's features, axes and glyphs",
+   "license": "Apache-2.0",
+   "stars": 79,
+   "pushed": "2026-11-25",
+   "category": "Font QA, specimens and testing"
+  },
+  {
+   "name": "Wakamai Fondue",
+   "url": "https://wakamaifondue.com",
+   "repo": null,
+   "desc": "Drop in a font file to see its OpenType features, variable axes and language support",
+   "license": "Apache-2.0",
+   "stars": null,
+   "pushed": null,
+   "category": "Font QA, specimens and testing"
+  },
+  {
+   "name": "Google Fonts axis registry",
+   "url": "https://github.com/googlefonts/axisregistry",
+   "repo": "googlefonts/axisregistry",
+   "desc": "Python access to the registry of variable font axes and their allowed ranges",
+   "license": "Apache-2.0",
+   "stars": 44,
+   "pushed": "2026-11-23",
+   "category": "Font QA, specimens and testing"
+  },
+  {
+   "name": "fontheight",
+   "url": "https://github.com/googlefonts/fontheight",
+   "repo": "googlefonts/fontheight",
+   "desc": "Finds the tallest and lowest glyphs a font produces for given languages, to catch clipping",
+   "license": "Apache-2.0",
+   "stars": 9,
+   "pushed": "2026-01-27",
+   "category": "Font QA, specimens and testing"
+  },
+  {
+   "name": "Google Fonts (font repo)",
+   "url": "https://github.com/google/fonts",
+   "repo": "google/fonts",
+   "desc": "Source repository of every family served by Google Fonts, plus the public issue tracker",
+   "license": "Mixed (mostly OFL-1.1)",
+   "stars": 20804,
+   "pushed": "2026-11-25",
+   "category": "Open foundries and font libraries"
+  },
+  {
+   "name": "Fontsource",
+   "url": "https://github.com/fontsource/fontsource",
+   "repo": "fontsource/fontsource",
+   "desc": "Open fonts packaged as npm modules for self-hosting, with variable font support",
+   "license": "MIT",
+   "stars": 6301,
+   "pushed": "2026-11-09",
+   "category": "Open foundries and font libraries"
+  },
+  {
+   "name": "The League of Moveable Type",
+   "url": "https://www.theleagueofmoveabletype.com",
+   "repo": null,
+   "desc": "Small foundry of free fonts, commercially usable",
+   "license": "OFL-1.1",
+   "stars": null,
+   "pushed": null,
+   "category": "Open foundries and font libraries"
+  },
+  {
+   "name": "Omnibus-Type",
+   "url": "https://www.omnibus-type.com",
+   "repo": null,
+   "desc": "Buenos Aires independent foundry releasing libre fonts through Google Fonts",
+   "license": "OFL-1.1",
+   "stars": null,
+   "pushed": null,
+   "category": "Open foundries and font libraries"
+  },
+  {
+   "name": "SIL Open Font License",
+   "url": "https://openfontlicense.org",
+   "repo": null,
+   "desc": "The OFL text and FAQ, the licence most open typefaces use",
+   "license": "OFL-1.1",
+   "stars": null,
+   "pushed": null,
+   "category": "Open foundries and font libraries"
+  },
+  {
+   "name": "Inter",
+   "url": "https://github.com/rsms/inter",
+   "repo": "rsms/inter",
+   "desc": "Screen-first sans with a large OpenType feature set and variable build",
+   "license": "OFL-1.1",
+   "stars": 20120,
+   "pushed": "2024-11-19",
+   "category": "Notable open typefaces"
+  },
+  {
+   "name": "IBM Plex",
+   "url": "https://github.com/IBM/plex",
+   "repo": "IBM/plex",
+   "desc": "IBM's sans, serif and mono family with many scripts",
+   "license": "OFL-1.1",
+   "stars": 11792,
+   "pushed": "2026-11-24",
+   "category": "Notable open typefaces"
+  },
+  {
+   "name": "Iosevka",
+   "url": "https://github.com/be5invis/Iosevka",
+   "repo": "be5invis/Iosevka",
+   "desc": "Narrow coding typeface you can customise and build from a config file",
+   "license": "OFL-1.1",
+   "stars": 23319,
+   "pushed": "2026-11-21",
+   "category": "Notable open typefaces"
+  },
+  {
+   "name": "Source Serif",
+   "url": "https://github.com/adobe-fonts/source-serif",
+   "repo": "adobe-fonts/source-serif",
+   "desc": "Adobe's text serif with optical sizes, built to pair with Source Sans",
+   "license": "OFL-1.1",
+   "stars": 2408,
+   "pushed": "2026-10-06",
+   "category": "Notable open typefaces"
+  },
+  {
+   "name": "Geist",
+   "url": "https://github.com/vercel/geist-font",
+   "repo": "vercel/geist-font",
+   "desc": "Sans and mono family with variable weights",
+   "license": "OFL-1.1",
+   "stars": 3794,
+   "pushed": "2026-11-06",
+   "category": "Notable open typefaces"
+  },
+  {
+   "name": "Monaspace",
+   "url": "https://github.com/githubnext/monaspace",
+   "repo": "githubnext/monaspace",
+   "desc": "Five matching monospace styles with texture healing via contextual alternates",
+   "license": "OFL-1.1",
+   "stars": 19851,
+   "pushed": "2026-03-27",
+   "category": "Notable open typefaces"
+  },
+  {
+   "name": "Cascadia Code",
+   "url": "https://github.com/microsoft/cascadia-code",
+   "repo": "microsoft/cascadia-code",
+   "desc": "Microsoft's monospace font with programming ligatures",
+   "license": "OFL-1.1",
+   "stars": 27971,
+   "pushed": "2025-03-06",
+   "category": "Notable open typefaces"
+  },
+  {
+   "name": "Public Sans",
+   "url": "https://github.com/uswds/public-sans",
+   "repo": "uswds/public-sans",
+   "desc": "Neutral sans derived from Libre Franklin, made for US government sites",
+   "license": "OFL-1.1",
+   "stars": 4762,
+   "pushed": "2026-10-01",
+   "category": "Notable open typefaces"
+  },
+  {
+   "name": "EB Garamond",
+   "url": "https://github.com/georgd/EB-Garamond",
+   "repo": "georgd/EB-Garamond",
+   "desc": "Revival of Claude Garamont's roman and italic with small caps and ligatures",
+   "license": "OFL-1.1",
+   "stars": 1082,
+   "pushed": "2024-03-16",
+   "category": "Notable open typefaces"
+  },
+  {
+   "name": "Instrument Serif",
+   "url": "https://github.com/Instrument/instrument-serif",
+   "repo": "Instrument/instrument-serif",
+   "desc": "Condensed display serif with an italic, free for any use",
+   "license": "OFL-1.1",
+   "stars": 380,
+   "pushed": "2023-04-26",
+   "category": "Notable open typefaces"
+  },
+  {
+   "name": "Fraunces",
+   "url": "https://github.com/undercasetype/Fraunces",
+   "repo": "undercasetype/Fraunces",
+   "desc": "Old-style soft-serif variable font with wonk, softness and optical size axes",
+   "license": "OFL-1.1",
+   "stars": 790,
+   "pushed": "2026-02-11",
+   "category": "Variable fonts and web delivery"
+  },
+  {
+   "name": "Recursive",
+   "url": "https://github.com/arrowtype/recursive",
+   "repo": "arrowtype/recursive",
+   "desc": "Variable family with mono, casual and slant axes in one file",
+   "license": "OFL-1.1",
+   "stars": 3927,
+   "pushed": "2025-10-02",
+   "category": "Variable fonts and web delivery"
+  },
+  {
+   "name": "Bricolage Grotesque",
+   "url": "https://github.com/ateliertriay/bricolage",
+   "repo": "ateliertriay/bricolage",
+   "desc": "Variable grotesque with optical size, width and weight axes",
+   "license": "OFL-1.1",
+   "stars": 485,
+   "pushed": "2023-10-09",
+   "category": "Variable fonts and web delivery"
+  },
+  {
+   "name": "Capsize",
+   "url": "https://github.com/seek-oss/capsize",
+   "repo": "seek-oss/capsize",
+   "desc": "Trims font metrics so text boxes align to cap height and baseline in CSS",
+   "license": "MIT",
+   "stars": 1735,
+   "pushed": "2026-11-17",
+   "category": "Variable fonts and web delivery"
+  },
+  {
+   "name": "Fontaine",
+   "url": "https://github.com/made-in-common/fontaine",
+   "repo": "made-in-common/fontaine",
+   "desc": "Generates fallback font metrics to reduce layout shift while web fonts load",
+   "license": "MIT",
+   "stars": 2017,
+   "pushed": "2026-11-25",
+   "category": "Variable fonts and web delivery"
+  },
+  {
+   "name": "glyphhanger",
+   "url": "https://github.com/zachleat/glyphhanger",
+   "repo": "zachleat/glyphhanger",
+   "desc": "CLI that finds the unicode range a page uses and subsets web fonts to it",
+   "license": "MIT",
+   "stars": 909,
+   "pushed": "2026-11-02",
+   "category": "Variable fonts and web delivery"
+  },
+  {
+   "name": "subfont",
+   "url": "https://github.com/Munter/subfont",
+   "repo": "Munter/subfont",
+   "desc": "Rewrites a site's HTML and CSS to use minimal font subsets",
+   "license": "MIT",
+   "stars": 1637,
+   "pushed": "2026-09-20",
+   "category": "Variable fonts and web delivery"
+  },
+  {
+   "name": "FontFaceObserver",
+   "url": "https://github.com/bramstein/fontfaceobserver",
+   "repo": "bramstein/fontfaceobserver",
+   "desc": "Tiny script that tells you when a web font has loaded",
+   "license": "BSD-2-Clause",
+   "stars": 4327,
+   "pushed": "2025-02-18",
+   "category": "Variable fonts and web delivery"
+  },
+  {
+   "name": "opentype.js",
+   "url": "https://github.com/opentypejs/opentype.js",
+   "repo": "opentypejs/opentype.js",
+   "desc": "Parses and writes OpenType and TrueType in JavaScript and extracts glyph paths",
+   "license": "MIT",
+   "stars": 5051,
+   "pushed": "2026-08-08",
+   "category": "Text shaping, parsing and rendering libraries"
+  },
+  {
+   "name": "fontkit",
+   "url": "https://github.com/foliojs/fontkit",
+   "repo": "foliojs/fontkit",
+   "desc": "Font engine for Node and the browser with layout, subsetting and variation support",
+   "license": "MIT",
+   "stars": 1690,
+   "pushed": "2026-11-24",
+   "category": "Text shaping, parsing and rendering libraries"
+  },
+  {
+   "name": "HarfBuzz",
+   "url": "https://github.com/harfbuzz/harfbuzz",
+   "repo": "harfbuzz/harfbuzz",
+   "desc": "The text shaping engine used by browsers, Android and most open type tools",
+   "license": "Old MIT",
+   "stars": 6255,
+   "pushed": "2026-11-25",
+   "category": "Text shaping, parsing and rendering libraries"
+  },
+  {
+   "name": "harfbuzzjs",
+   "url": "https://github.com/harfbuzz/harfbuzzjs",
+   "repo": "harfbuzz/harfbuzzjs",
+   "desc": "HarfBuzz compiled to WebAssembly for shaping and glyph outlines in JS",
+   "license": "MIT",
+   "stars": 297,
+   "pushed": "2026-11-21",
+   "category": "Text shaping, parsing and rendering libraries"
+  },
+  {
+   "name": "Typr.js",
+   "url": "https://github.com/photopea/Typr.js",
+   "repo": "photopea/Typr.js",
+   "desc": "Lightweight JS font parser from the Photopea author, with glyph-to-path output",
+   "license": "MIT",
+   "stars": 1006,
+   "pushed": "2025-08-28",
+   "category": "Text shaping, parsing and rendering libraries"
+  },
+  {
+   "name": "Satori",
+   "url": "https://github.com/vercel/satori",
+   "repo": "vercel/satori",
+   "desc": "Converts HTML and CSS to SVG with text rendered as paths from supplied fonts",
+   "license": "MPL-2.0",
+   "stars": 14218,
+   "pushed": "2026-11-25",
+   "category": "Text shaping, parsing and rendering libraries"
+  },
+  {
+   "name": "cosmic-text",
+   "url": "https://github.com/pop-os/cosmic-text",
+   "repo": "pop-os/cosmic-text",
+   "desc": "Pure Rust multi-line text layout, shaping and fallback",
+   "license": "Apache-2.0",
+   "stars": 2196,
+   "pushed": "2026-10-27",
+   "category": "Text shaping, parsing and rendering libraries"
+  },
+  {
+   "name": "fontdue",
+   "url": "https://github.com/mooman219/fontdue",
+   "repo": "mooman219/fontdue",
+   "desc": "Fast no_std Rust font rasteriser and layout",
+   "license": "Apache-2.0",
+   "stars": 1723,
+   "pushed": "2026-10-19",
+   "category": "Text shaping, parsing and rendering libraries"
+  },
+  {
+   "name": "swash",
+   "url": "https://github.com/dfrg/swash",
+   "repo": "dfrg/swash",
+   "desc": "Rust font introspection, complex shaping and glyph scaling",
+   "license": "Apache-2.0",
+   "stars": 885,
+   "pushed": "2026-11-13",
+   "category": "Text shaping, parsing and rendering libraries"
+  },
+  {
+   "name": "Parley",
+   "url": "https://github.com/linebender/parley",
+   "repo": "linebender/parley",
+   "desc": "Rich text layout library in Rust from the Linebender project",
+   "license": "Apache-2.0",
+   "stars": 843,
+   "pushed": "2026-11-25",
+   "category": "Text shaping, parsing and rendering libraries"
+  },
+  {
+   "name": "Typst",
+   "url": "https://github.com/typst/typst",
+   "repo": "typst/typst",
+   "desc": "Markup-based typesetting system that compiles to PDF, SVG and PNG",
+   "license": "Apache-2.0",
+   "stars": 57418,
+   "pushed": "2026-11-24",
+   "category": "Text shaping, parsing and rendering libraries"
+  },
+  {
+   "name": "Levni",
+   "url": "https://github.com/Levni-Dev/levni",
+   "repo": "Levni-Dev/levni",
+   "desc": "Design engine for agents; its type element draws bundled OFL fonts as vector paths from JSON",
+   "license": "MIT",
+   "stars": 0,
+   "pushed": "2026-11-25",
+   "category": "Text shaping, parsing and rendering libraries"
+  },
+  {
+   "name": "Splitting",
+   "url": "https://github.com/shshaw/Splitting",
+   "repo": "shshaw/Splitting",
+   "desc": "Splits text into chars and words and exposes indexes as CSS variables for animation",
+   "license": "MIT",
+   "stars": 1757,
+   "pushed": "2024-06-19",
+   "category": "Kinetic and generative type"
+  },
+  {
+   "name": "anime.js",
+   "url": "https://github.com/juliangarnier/anime",
+   "repo": "juliangarnier/anime",
+   "desc": "Lightweight animation engine for CSS, SVG and DOM, commonly used for per-letter motion",
+   "license": "MIT",
+   "stars": 75070,
+   "pushed": "2026-11-02",
+   "category": "Kinetic and generative type"
+  },
+  {
+   "name": "fitty",
+   "url": "https://github.com/rikschennink/fitty",
+   "repo": "rikschennink/fitty",
+   "desc": "Scales text to fill its container width",
+   "license": "MIT",
+   "stars": 3850,
+   "pushed": "2025-05-15",
+   "category": "Kinetic and generative type"
+  },
+  {
+   "name": "p5.js",
+   "url": "https://github.com/processing/p5.js",
+   "repo": "processing/p5.js",
+   "desc": "Creative coding library with text, textToPoints and font loading for generative type",
+   "license": "LGPL-2.1",
+   "stars": 24432,
+   "pushed": "2026-11-24",
+   "category": "Kinetic and generative type"
+  },
+  {
+   "name": "Paper.js",
+   "url": "https://github.com/paperjs/paper.js",
+   "repo": "paperjs/paper.js",
+   "desc": "Vector graphics scripting with path boolean operations, useful for warping letterforms",
+   "license": "MIT",
+   "stars": 15213,
+   "pushed": "2026-11-25",
+   "category": "Kinetic and generative type"
+  },
+  {
+   "name": "Rough.js",
+   "url": "https://github.com/rough-stuff/rough",
+   "repo": "rough-stuff/rough",
+   "desc": "Draws shapes and paths with a hand-sketched look",
+   "license": "MIT",
+   "stars": 21468,
+   "pushed": "2024-07-28",
+   "category": "Kinetic and generative type"
+  },
+  {
+   "name": "perfect-freehand",
+   "url": "https://github.com/steveruizok/perfect-freehand",
+   "repo": "steveruizok/perfect-freehand",
+   "desc": "Turns pointer input into pressure-sensitive ink strokes with smooth outlines",
+   "license": "MIT",
+   "stars": 5828,
+   "pushed": "2026-04-13",
+   "category": "Hand lettering, calligraphy and stroke data"
+  },
+  {
+   "name": "Signature Pad",
+   "url": "https://github.com/szimek/signature_pad",
+   "repo": "szimek/signature_pad",
+   "desc": "Canvas drawing with velocity-based stroke width, exportable as SVG",
+   "license": "MIT",
+   "stars": 12081,
+   "pushed": "2026-11-24",
+   "category": "Hand lettering, calligraphy and stroke data"
+  },
+  {
+   "name": "Excalidraw",
+   "url": "https://github.com/excalidraw/excalidraw",
+   "repo": "excalidraw/excalidraw",
+   "desc": "Whiteboard with a hand-drawn look and bundled handwriting fonts",
+   "license": "MIT",
+   "stars": 136301,
+   "pushed": "2026-11-25",
+   "category": "Hand lettering, calligraphy and stroke data"
+  },
+  {
+   "name": "Caveat",
+   "url": "https://github.com/googlefonts/caveat",
+   "repo": "googlefonts/caveat",
+   "desc": "Casual brush-script handwriting font in a variable build",
+   "license": "OFL-1.1",
+   "stars": 40,
+   "pushed": "2026-11-10",
+   "category": "Hand lettering, calligraphy and stroke data"
+  },
+  {
+   "name": "Relief SingleLine",
+   "url": "https://github.com/isdat-type/Relief-SingleLine",
+   "repo": "isdat-type/Relief-SingleLine",
+   "desc": "Single-line (monoline) font for plotters, engraving and CNC lettering",
+   "license": "OFL-1.1",
+   "stars": 262,
+   "pushed": "2025-02-18",
+   "category": "Hand lettering, calligraphy and stroke data"
+  },
+  {
+   "name": "Hanzi Writer",
+   "url": "https://github.com/chanind/hanzi-writer",
+   "repo": "chanind/hanzi-writer",
+   "desc": "Animates Chinese character stroke order and runs handwriting quizzes in the browser",
+   "license": "MIT",
+   "stars": 5083,
+   "pushed": "2025-12-31",
+   "category": "Hand lettering, calligraphy and stroke data"
+  },
+  {
+   "name": "Hanzi Writer Data",
+   "url": "https://github.com/chanind/hanzi-writer-data",
+   "repo": "chanind/hanzi-writer-data",
+   "desc": "Per-character stroke JSON that Hanzi Writer reads",
+   "license": "Arphic",
+   "stars": 777,
+   "pushed": "2024-04-05",
+   "category": "Hand lettering, calligraphy and stroke data"
+  },
+  {
+   "name": "KanjiVG",
+   "url": "https://github.com/KanjiVG/kanjivg",
+   "repo": "KanjiVG/kanjivg",
+   "desc": "SVG stroke outlines and stroke order for Japanese kanji",
+   "license": "CC BY-SA 3.0",
+   "stars": 1418,
+   "pushed": "2026-11-18",
+   "category": "Hand lettering, calligraphy and stroke data"
+  },
+  {
+   "name": "Make Me a Hanzi",
+   "url": "https://github.com/skishore/makemeahanzi",
+   "repo": "skishore/makemeahanzi",
+   "desc": "Open Chinese character outlines, medians and dictionary data",
+   "license": "LGPL-3.0 + Arphic",
+   "stars": 2771,
+   "pushed": "2026-03-08",
+   "category": "Hand lettering, calligraphy and stroke data"
+  },
+  {
+   "name": "Cozette",
+   "url": "https://github.com/the-moonwitch/Cozette",
+   "repo": "the-moonwitch/Cozette",
+   "desc": "11px bitmap programming font with wide symbol coverage",
+   "license": "MIT",
+   "stars": 3888,
+   "pushed": "2026-08-14",
+   "category": "Pixel and bitmap fonts"
+  },
+  {
+   "name": "Ark Pixel Font",
+   "url": "https://github.com/TakWolf/ark-pixel-font",
+   "repo": "TakWolf/ark-pixel-font",
+   "desc": "Pixel font covering Latin and CJK in several sizes and styles",
+   "license": "OFL-1.1",
+   "stars": 5016,
+   "pushed": "2026-11-25",
+   "category": "Pixel and bitmap fonts"
+  },
+  {
+   "name": "Fusion Pixel Font",
+   "url": "https://github.com/TakWolf/fusion-pixel-font",
+   "repo": "TakWolf/fusion-pixel-font",
+   "desc": "Pixel font merged from several open pixel sources for wide CJK coverage",
+   "license": "OFL-1.1",
+   "stars": 3524,
+   "pushed": "2026-11-25",
+   "category": "Pixel and bitmap fonts"
+  },
+  {
+   "name": "Pixel Font Builder",
+   "url": "https://github.com/TakWolf/pixel-font-builder",
+   "repo": "TakWolf/pixel-font-builder",
+   "desc": "Python library that builds OTF, TTF, WOFF2 and BDF fonts from pixel glyph data",
+   "license": "MIT",
+   "stars": 35,
+   "pushed": "2026-11-25",
+   "category": "Pixel and bitmap fonts"
+  },
+  {
+   "name": "Spleen",
+   "url": "https://github.com/fcambus/spleen",
+   "repo": "fcambus/spleen",
+   "desc": "Monospaced bitmap font family in several sizes, from 5x8 to 32x64",
+   "license": "BSD-2-Clause",
+   "stars": 1432,
+   "pushed": "2026-11-23",
+   "category": "Pixel and bitmap fonts"
+  },
+  {
+   "name": "Monocraft",
+   "url": "https://github.com/IdreesInc/Monocraft",
+   "repo": "IdreesInc/Monocraft",
+   "desc": "Monospace font in the style of Minecraft's blocky lettering",
+   "license": "OFL-1.1",
+   "stars": 11492,
+   "pushed": "2026-05-27",
+   "category": "Pixel and bitmap fonts"
+  },
+  {
+   "name": "Departure Mono",
+   "url": "https://github.com/rektdeckard/departure-mono",
+   "repo": "rektdeckard/departure-mono",
+   "desc": "Pixel-style monospace that stays crisp at 11px multiples",
+   "license": "OFL-1.1",
+   "stars": 3669,
+   "pushed": "2026-09-13",
+   "category": "Pixel and bitmap fonts"
+  }
+ ],
+ "hosted": []
+}

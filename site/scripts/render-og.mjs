@@ -61,6 +61,10 @@ const pages = [
   ['manifesto', '{manifesto}', 'We are living in\na Tulip Era.', 'we use AI. we do not rent our taste from it.'],
   ['changelog', '{changelog}', 'What changed,\nrelease by release.', 'elements, commands, MCP tools'],
   ['editor', '{editor}', 'A design editor that\nruns on your laptop.', 'drag drawings, export PNG or SVG, free'],
+  ['lists', '{no fomo lists}', 'No FOMO.\nOnly open.', '240+ open design tools, MCP servers and type picks'],
+  ['list-open-design', '{no fomo lists}', 'Awesome\nOpen Design', '102 open design tools, icons, fonts and more'],
+  ['list-design-mcp', '{no fomo lists}', 'Awesome\nDesign MCP', '55 open-source MCP servers for design'],
+  ['list-lettering', '{no fomo lists}', 'Awesome\nLettering', '86 open type tools, fonts and lettering picks'],
   ['banner', '{readme banner maker}', 'A README banner\nfor your repo.', 'paste a GitHub link, get 1280 × 640'],
 ];
 for (const [slug, kicker, title, sub] of pages) await out(card({ kicker, title, sub }), `public/og/${slug}.png`);

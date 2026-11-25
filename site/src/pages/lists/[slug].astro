@@ -1,0 +1,83 @@
+---
+import Base from '../../layouts/Base.astro';
+import { LISTS, groupByCategory } from '../../data/lists';
+import { SITE } from '../../site';
+
+export function getStaticPaths() {
+  return LISTS.map((l) => ({ params: { slug: l.slug }, props: { list: l } }));
+}
+const { list } = Astro.props;
+const groups = groupByCategory(list.entries);
+const others = LISTS.filter((l) => l.slug !== list.slug);
+const id = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const jsonld = [{
+  '@type': 'ItemList',
+  name: list.title,
+  description: list.description,
+  url: `${SITE.url}/lists/${list.slug}/`,
+  numberOfItems: list.entries.length,
+  itemListElement: list.entries.map((e, i) => ({ '@type': 'ListItem', position: i + 1, name: e.name, url: e.url, description: e.desc })),
+}];
+---
+<Base og={`/og/list-${list.slug}.png`} title={`${list.title}: ${list.entries.length} open-source picks`} description={list.description} jsonld={jsonld}>
+  <header class="wrap brand-hero">
+    <p class="eyebrow">No FOMO lists · {list.entries.length} entries</p>
+    <h1>{list.title}</h1>
+    <p class="lede">{list.intro}</p>
+    <p class="h-links"><a href={`https://github.com/${list.repo}`}>★ The list on GitHub</a> <a href={`https://github.com/${list.repo}/issues/new?template=suggest.yml`}>Suggest a project</a> <a href="/lists/">All lists</a></p>
+  </header>
+
+  <div class="wrap layout">
+    <nav class="toc" aria-label="Sections">
+      <p class="kicker">{'{'}sections{'}'}</p>
+      <ul>{groups.map(([c, es]) => <li><a href={`#${id(c)}`}>{c} <small>{es.length}</small></a></li>)}</ul>
+    </nav>
+    <div class="entries">
+      {groups.map(([c, es]) => (
+        <section id={id(c)} aria-labelledby={`h-${id(c)}`}>
+          <h2 id={`h-${id(c)}`}>{c}</h2>
+          <ul>
+            {es.map((e) => (
+              <li>
+                <a href={e.url}><b>{e.name}</b>{e.official && <span class="off">official</span>}</a>
+                <p>{e.desc}.</p>
+                {e.license && <code>{e.license}</code>}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+      <section class="more" aria-label="More lists">
+        <h2>More No FOMO lists</h2>
+        <ul class="more-l">{others.map((l) => <li><a href={`/lists/${l.slug}/`}><b>{l.title}</b> <span>{l.short}</span></a></li>)}</ul>
+        <p class="note">Data from <a href={`https://github.com/${list.repo}/blob/main/data/entries.json`}>data/entries.json</a> (CC0). Last checked 26 November 2026. Levni appears in these lists once, as an ordinary entry.</p>
+      </section>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .h-links { display: flex; flex-wrap: wrap; gap: 10px 22px; font: 600 0.78rem/1.6 var(--mono); text-transform: uppercase; letter-spacing: 0.05em; }
+  .h-links a { text-decoration: none; }
+  .layout { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 48px; align-items: start; }
+  .toc { position: sticky; top: 16px; }
+  .toc ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+  .toc a { display: flex; justify-content: space-between; gap: 8px; padding: 6px 0; text-decoration: none; color: var(--ink-soft); font-size: 0.94rem; border-bottom: 1px solid var(--rule); }
+  .toc a:hover { color: var(--indigo); }
+  .toc small { font-family: var(--mono); color: var(--coral-deep); }
+  .entries section { margin-bottom: 48px; scroll-margin-top: 16px; }
+  .entries h2 { color: var(--indigo); font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 14px; }
+  .entries ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .entries li { background: #fff; padding: 14px 16px 16px; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%); display: flex; flex-direction: column; gap: 6px; }
+  .entries li a { text-decoration: none; color: var(--indigo); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .entries li a:hover b { text-decoration: underline; }
+  .entries li b { font-size: 1.05rem; letter-spacing: -0.01em; }
+  .off { font: 600 0.62rem/1 var(--mono); text-transform: uppercase; letter-spacing: 0.06em; background: var(--lime); color: var(--indigo); padding: 3px 6px; }
+  .entries li p { margin: 0; color: var(--ink-soft); font-size: 0.92rem; line-height: 1.45; flex: 1; }
+  .entries li code { align-self: flex-start; font-size: 0.7rem; background: var(--paper); color: var(--ink-soft); padding: 2px 6px; }
+  .more-l { grid-template-columns: minmax(0, 1fr) !important; }
+  .more-l a { display: block; text-decoration: none; }
+  .more-l span { display: block; color: var(--ink-soft); font-size: 0.92rem; }
+  .note { font-size: 0.86rem; color: var(--ink-soft); margin-top: 18px; }
+  @media (max-width: 900px) { .layout { grid-template-columns: minmax(0, 1fr); gap: 16px; } .toc { position: static; } .entries ul { grid-template-columns: minmax(0, 1fr); } }
+</style>

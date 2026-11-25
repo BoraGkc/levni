@@ -456,10 +456,10 @@ npx @levni/levni board brand.json board.png`}</code></pre>
           ['02', 'Share a style pack', 'the library in your palette', '◐'],
           ['03', 'Bring your brand', 'board, posters, stickers', '◆'],
           ['04', 'Show what you made', 'credited in the gallery', '★'],
-          ['05', 'Remix a scene', 'every gallery image has its JSON', '✎'],
+          ['05', 'Browse the No FOMO lists', '240+ open design picks', '★', '/lists/'],
           ['06', 'Ask, argue, request', 'issues and discussions', '?'],
-        ].map(([n, t, d, g]) => (
-          <li><a href="/community/"><span class="cm-g" aria-hidden="true">{g}</span><span class="cm-n">{n}</span><b>{t}</b><small>{d}</small></a></li>
+        ].map(([n, t, d, g, h]) => (
+          <li><a href={h ?? '/community/'}><span class="cm-g" aria-hidden="true">{g}</span><span class="cm-n">{n}</span><b>{t}</b><small>{d}</small></a></li>
         ))}
       </ul>
       <div class="wanted">

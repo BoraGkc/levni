@@ -1,0 +1,33 @@
+# Levni
+
+> Levni is an open-source design engine for AI agents. It draws covers, icons, charts, brand boards and poster series from JSON scenes, on your own machine, with no image model and no API key. It ships a CC BY 4.0 library of 1,600+ hand-inked drawings and an MCP server for Claude, Codex and Cursor. A post-AI center for designers, made by the Ortak Alan crew.
+
+Install for Claude Code: `claude mcp add levni -- npx -y @levni/levni mcp`. npm: `@levni/levni`. MCP Registry: `dev.levni/levni`. Source: https://github.com/Levni-Dev/levni (code MIT, drawings CC BY 4.0).
+
+## Start here
+
+- [Getting started](https://levni.dev/docs/getting-started/): install and draw a first image in two minutes
+- [MCP server](https://levni.dev/mcp/): tools for agents, setup for every client
+- [Scene format](https://levni.dev/docs/scenes/): canvas, colours, formats and the layout critic
+- [Elements](https://levni.dev/docs/elements/): every element type a scene can use
+- [CLI](https://levni.dev/docs/cli/) and [Node API](https://levni.dev/docs/api/)
+
+## Make things
+
+- [Free makers](https://levni.dev/make/): stickers, posters, brand boards, icons, ASCII art and more, in the browser
+- [Editor](https://levni.dev/editor/): a free design editor that runs Levni in the page
+- [Gallery](https://levni.dev/gallery/): every image with the scene that drew it
+- [Library](https://levni.dev/library/): the Levni Folio, 1,600+ drawings searchable in English and Turkish
+
+## No FOMO lists (open-source design, curated by Levni-Dev)
+
+- [Awesome Open Design](https://levni.dev/lists/open-design/): open design tools, icon sets, illustrations, fonts, colour and creative code ([GitHub](https://github.com/Levni-Dev/awesome-open-design), data: data/entries.json, CC0)
+- [Awesome Design MCP](https://levni.dev/lists/design-mcp/): open-source MCP servers that let AI agents do design work ([GitHub](https://github.com/Levni-Dev/awesome-design-mcp))
+- [Awesome Lettering](https://levni.dev/lists/lettering/): open type design tools, fonts, lettering and kinetic type ([GitHub](https://github.com/Levni-Dev/awesome-lettering))
+
+## About
+
+- [Manifesto](https://levni.dev/manifesto/): why Levni exists, the Tulip Era and the FOMO stack
+- [Community](https://levni.dev/community/): five ways to add drawings, palettes, brand kits and showcases
+- [Blog](https://levni.dev/blog/): guides and stories, RSS at https://levni.dev/blog/rss.xml
+- [Changelog](https://levni.dev/changelog/)

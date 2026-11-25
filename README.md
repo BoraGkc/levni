@@ -261,6 +261,18 @@ Rules: your own drawing (inspired by a style is fine, tracing a work is not), no
 
 **Wanted for the Folio crew:** illustrators, type nerds, riso printers, icon pedants, agent tinkerers, prompt sceptics, OSS maintainers, brand people, miniature fans, people who still sketch. Reward: your name in every scene that uses your work.
 
+## No FOMO lists
+
+We also curate other people's open work, under one rule: open licence, free to start, maintained. Levni appears once in each, as an ordinary entry.
+
+| list | what |
+| --- | --- |
+| [Awesome Open Design](https://github.com/Levni-Dev/awesome-open-design) | 100+ open design tools, icon sets, illustrations, fonts, colour and creative code |
+| [Awesome Design MCP](https://github.com/Levni-Dev/awesome-design-mcp) | 55 open-source MCP servers that let AI agents do design work |
+| [Awesome Lettering](https://github.com/Levni-Dev/awesome-lettering) | 86 open type tools, fonts, lettering and kinetic type resources |
+
+Browse them on [levni.dev/lists](https://levni.dev/lists/).
+
 ## Licensing
 
 - **Code** (`src/`, `bin/`, `adapters/`, `test/`): [MIT](LICENSE).
