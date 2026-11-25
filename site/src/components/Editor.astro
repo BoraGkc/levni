@@ -96,6 +96,9 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
             </div>
           </details>
           <p class="lv-help">Start from a finished scene: click to put it on this page (Undo brings yours back), or <b>+</b> to add it as a new page.</p>
+          <label class="sr" for="tpl-q">Search templates</label>
+          <input class="lv-search" id="tpl-q" type="search" placeholder="Search: poster, sticker, 3D, chart…" autocomplete="off" />
+          <p class="lv-help" id="tpl-none" hidden>No template matches. Try poster, sticker, 3D, city, chart or dither.</p>
           <h3 class="lv-h3">Starters</h3>
           <div class="lv-grid lv-grid-2" id="templates"></div>
           <div id="gallery-tpls"></div>
@@ -226,15 +229,22 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     { label: 'Poster', use: 'Print and posters, 3:4', wh: [1200, 1600] },
   ];
   const FORMAT_WH: Record<string, [number, number]> = { cover: [1200, 673], og: [1200, 630], square: [1080, 1080], story: [1080, 1920], youtube: [1280, 720], poster: [1200, 1600], 'poster-tall': [1200, 1800], a4: [1240, 1754] };
-  const LOOKS = [
-    { style: '', finish: '', label: 'Riso, crayon', note: 'Hand-inked lines, misprinted colour plates, paper grain.' },
-    { style: '', finish: 'soft', label: 'Riso, soft', note: 'Clean edges and a fine film grain. Best for 3D.' },
-    { style: 'miniature', finish: '', label: 'Miniature, crayon', note: 'Tulip Era colours: lapis, vermilion, gold on warm paper.' },
-    { style: 'miniature', finish: 'soft', label: 'Miniature, soft', note: 'The miniature palette with clean edges.' },
+  // a look is a set of inks (a style pack, or your own) and a finish
+  const INKS: { id: string; label: string; note: string; style: any }[] = [
+    { id: 'riso', label: 'Riso', note: 'Blue, coral and mustard on cream.', style: undefined },
+    { id: 'miniature', label: 'Miniature', note: 'Tulip Era lapis, vermilion and gold on warm paper.', style: 'miniature' },
+    { id: 'mono', label: 'Mono', note: 'Greys on white, for print and serious news.', style: { ink: '#1A1A1A', blue: '#3A3A3A', coral: '#8A8A8A', mustard: '#C8C8C8', green: '#5A5A5A', dark: '#111111', tone: '#BDBDBD', 'tone-coral': '#D6D6D6', 'tone-green': '#A8A8A8', 'tone-mustard': '#E4E4E4', paper: '#F5F5F3' } },
+    { id: 'forest', label: 'Forest', note: 'Pine, moss and clay on oat paper.', style: { ink: '#1F3B2C', blue: '#2F6B4F', coral: '#D9783A', mustard: '#E8B64C', green: '#6E9B3A', tone: '#9CC5A8', 'tone-coral': '#F0B892', 'tone-mustard': '#F3D9A0', paper: '#F3EFE3' } },
+    { id: 'night', label: 'Night', note: 'Bright inks on a dark ground.', style: { ink: '#F4F2EC', blue: '#3D5AFE', coral: '#FF6B8A', mustard: '#FFD166', green: '#06D6A0', tone: '#5468C9', 'tone-coral': '#B3536A', 'tone-mustard': '#B39548', paper: '#14181F', white: '#232A36', dark: '#F4F2EC' } },
   ];
+  const FINISHES: { id: string; label: string; note: string }[] = [
+    { id: '', label: 'Crayon', note: 'Hand-inked lines, misprinted plates, paper grain' },
+    { id: 'soft', label: 'Soft', note: 'Clean edges and film grain; best for 3D' },
+  ];
+  const inkOf = (s: any) => INKS.find((x) => JSON.stringify(x.style ?? null) === JSON.stringify(s.style ?? null)) || null; // null: your own inks
+  const lookLabel = (s: any) => `${inkOf(s)?.label ?? 'Your inks'}, ${FINISHES.find((f) => f.id === (s.finish ?? ''))?.label.toLowerCase() ?? 'soft'}`;
   const sizeOf = (s: any): [number, number] => s.canvas || FORMAT_WH[s.format] || [1200, 673];
-  const lookOf = (s: any) => LOOKS.find((l) => l.style === (typeof s.style === 'string' ? s.style : s.style ? '?' : '') && l.finish === (s.finish ?? '')) || null;
-  const palette = (s: any): Record<string, string> => ({ ...COLORS, ...(typeof s?.style === 'string' ? (STYLES as any)[s.style] : {}) });
+  const palette = (s: any): Record<string, string> => ({ ...COLORS, ...(typeof s?.style === 'string' ? (STYLES as any)[s.style] : s?.style && typeof s.style === 'object' ? s.style : {}) });
   const SWATCHES = ['ink', 'blue', 'tone', 'coral', 'tone-coral', 'mustard', 'tone-mustard', 'green', 'tone-green', 'dark', 'paper', 'white'];
   const hexOf = (c: any) => (typeof c === 'string' && /^#/.test(c) ? c : palette(scene)[c] || '#14181f');
 
@@ -780,8 +790,9 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     const parts: HTMLElement[] = [];
     const rec = recent().filter((n) => index.some((p) => p.name === n));
     if (rec.length) parts.push(row('Recently used', rec.slice(0, 6)));
-    for (const [id, label] of Object.entries(CATS as Record<string, string>)) {
-      const names = index.filter((p) => p.cat === id).map((p) => p.name);
+    const shelves = Object.entries(CATS as Record<string, string>).map(([id, label]) => [id, label, index.filter((p) => p.cat === id).map((p) => p.name)] as const).sort((a, b) => b[2].length - a[2].length);
+    for (const [id, label, names] of shelves) {
+      if (!names.length) continue;
       parts.push(row(label, names.slice(0, 3), () => { openShelf = id; shown = 60; listDrawings(); fly.querySelector('.lv-fly-body')!.scrollTop = 0; }));
     }
     browse.replaceChildren(...parts);
@@ -868,7 +879,8 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       const grid = document.createElement('div'); grid.className = 'lv-grid lv-grid-2';
       for (const [id, title, th] of items) {
         const cell = document.createElement('div'); cell.className = 'lv-tpl-cell'; grid.append(cell);
-        const pic = tile(cell, title.replace(/^[^:]+:\s*/, ''), async () => {
+        const nice = title.replace(/^[^:]+:\s*/, '').replace(/"([^"]+)"/g, (_, w) => w[0].toUpperCase() + w.slice(1));
+        const pic = tile(cell, nice, async () => {
           try { const next = await get(g, id); change(() => { setScene(next); }); select(-1); say(`“${title}” loaded. Undo (⌘Z) brings your scene back.`); } catch { say('Could not load that scene.'); }
         });
         pic.append(Object.assign(document.createElement('img'), { src: `/g/${g}/${th}`, alt: '', loading: 'lazy', decoding: 'async' }));
@@ -881,6 +893,21 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     }
     box.replaceChildren(...out);
   }
+  $('tpl-q').addEventListener('input', () => {
+    const k = $<HTMLInputElement>('tpl-q').value.trim().toLowerCase();
+    const sec = fly.querySelector('[data-p="templates"]')!;
+    let shown = 0;
+    // each heading is followed by its grid; a heading stays when its group name or any tile matches
+    for (const h of sec.querySelectorAll<HTMLElement>('h3.lv-h3')) {
+      const grid = h.nextElementSibling as HTMLElement | null;
+      if (!grid) continue;
+      const group = h.textContent!.toLowerCase().includes(k);
+      let any = 0;
+      for (const t of grid.querySelectorAll<HTMLElement>('.lv-tile')) { const on = !k || group || t.textContent!.toLowerCase().includes(k); (t.closest('.lv-tpl-cell') as HTMLElement || t).hidden = !on; any += on ? 1 : 0; }
+      h.hidden = grid.hidden = !any; shown += any;
+    }
+    $('tpl-none').hidden = shown > 0;
+  });
   $('bf-go').addEventListener('click', async () => {
     const go = $<HTMLButtonElement>('bf-go'), val = (id: string) => $<HTMLInputElement>(id).value.trim();
     await indexReady;
@@ -965,6 +992,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       box.append(step(-4), n, step(4));
       parts.push(box);
     }
+    if (/3d$/.test(e.type) && e.type !== 'extrude3d' && scene.finish !== 'soft') parts.push(ctxButton('Soft look', () => { change((s) => { s.finish = 'soft'; }); effectThumbs.clear(); say('Finish: soft. 3D shapes now have clean edges; Look switches it back.'); }, { title: '3D shapes read best with the soft finish', cls: 'lv-cb-hint' }));
     if (e.type === 'type' || e.type === 'label') parts.push(colorButton('color', 'el'));
     else if (SPEC[e.type]) parts.push(...quickControls(e));
     else if (COLOR_KEY[e.type]) parts.push(colorButton(COLOR_KEY[e.type], 'el'));
@@ -1529,8 +1557,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     const [w, h] = sizeOf(scene);
     const z = SIZES.find((s) => s.wh[0] === w && s.wh[1] === h);
     $('size-v').textContent = z ? z.label : `${w}×${h}`;
-    const lk = lookOf(scene);
-    $('look-v').textContent = lk?.label || 'Your inks';
+    $('look-v').textContent = lookLabel(scene);
     $('sizes').replaceChildren(...SIZES.map((s) => {
       const b = document.createElement('button'); b.type = 'button'; b.className = 'lv-opt'; b.setAttribute('role', 'radio'); b.setAttribute('aria-checked', String(s === z));
       const k = 44 / Math.max(...s.wh);
@@ -1544,23 +1571,89 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       b.addEventListener('click', () => setSize(s.wh, s.label));
       return b;
     }));
-    $('looks').replaceChildren(...LOOKS.map((l) => {
-      const b = document.createElement('button'); b.type = 'button'; b.className = 'lv-opt'; b.setAttribute('role', 'radio'); b.setAttribute('aria-checked', String(l === lk));
-      const pal: Record<string, string> = { ...COLORS, ...(l.style ? (STYLES as any)[l.style] : {}) };
-      const dots = document.createElement('span'); dots.className = `lv-look-dots${l.finish ? ' soft' : ''}`;
-      for (const c of ['paper', 'blue', 'coral', 'mustard', 'green']) { const i = document.createElement('i'); i.style.setProperty('--c', pal[c]); dots.append(i); }
-      const txt = document.createElement('span');
-      txt.append(Object.assign(document.createElement('b'), { textContent: l.label }), Object.assign(document.createElement('small'), { textContent: l.note }));
-      b.append(dots, txt);
-      b.addEventListener('click', () => { change((s) => { if (l.style) s.style = l.style; else delete s.style; if (l.finish) s.finish = l.finish; else delete s.finish; }); closePops(); effectThumbs.clear(); say(`Look: ${l.label}.`); });
+    renderLooks();
+  }
+  function renderLooks() {
+    const ink = inkOf(scene), out: HTMLElement[] = [];
+    const head = (t: string) => Object.assign(document.createElement('p'), { className: 'lv-pop-k', textContent: t });
+    const opt = (label: string, note: string, on: boolean, dotsOf: Record<string, string> | null, click: () => void, soft = false) => {
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'lv-opt'; b.setAttribute('role', 'radio'); b.setAttribute('aria-checked', String(on));
+      if (dotsOf) { const dots = document.createElement('span'); dots.className = `lv-look-dots${soft ? ' soft' : ''}`; for (const c of ['paper', 'blue', 'coral', 'mustard', 'green']) { const i = document.createElement('i'); i.style.setProperty('--c', dotsOf[c]); dots.append(i); } b.append(dots); }
+      const txt = document.createElement('span'); txt.append(Object.assign(document.createElement('b'), { textContent: label }), Object.assign(document.createElement('small'), { textContent: note }));
+      b.append(txt); b.addEventListener('click', click);
       return b;
-    }));
+    };
+    const setLook = (fn: (s: any) => void, msg: string) => { change(fn); effectThumbs.clear(); renderLooks(); say(msg); };
+    out.push(head('Inks'));
+    for (const x of INKS) out.push(opt(x.label, x.note, ink === x, palette({ style: x.style }), () => setLook((s) => { if (x.style) s.style = structuredClone(x.style); else delete s.style; }, `Inks: ${x.label}.`)));
+    const mine = !ink;
+    out.push(opt('Your inks', 'Pick five colours: your brand on every drawing', mine, palette(scene), () => { if (!mine) setLook((s) => { s.style = { ...Object.fromEntries(['ink', 'blue', 'coral', 'mustard', 'paper'].map((k) => [k, palette(s)[k]])) }; }, 'Your inks: change them below.'); }));
+    if (mine) {
+      const row = document.createElement('div'); row.className = 'lv-myinks';
+      for (const k of ['ink', 'blue', 'coral', 'mustard', 'green', 'paper']) {
+        const lab = document.createElement('label'); lab.title = k;
+        const i = Object.assign(document.createElement('input'), { type: 'color', value: palette(scene)[k] });
+        i.addEventListener('input', () => { const st = { ...(typeof scene.style === 'object' ? scene.style : {}), [k]: i.value.toUpperCase() }; setField('style', st, 'scene'); });
+        i.addEventListener('change', () => { endEdit(); effectThumbs.clear(); });
+        lab.append(i, Object.assign(document.createElement('span'), { textContent: k }));
+        row.append(lab);
+      }
+      out.push(row);
+    }
+    out.push(head('Finish'));
+    for (const f of FINISHES) out.push(opt(f.label, f.note, (scene.finish ?? '') === f.id, null, () => setLook((s) => { if (f.id) s.finish = f.id; else delete s.finish; }, `Finish: ${f.label.toLowerCase()}.`)));
+    $('looks').replaceChildren(...out);
   }
   // the scene at another size: everything moves and scales with the canvas
-  function resizeScene(s: any, wh: [number, number]) {
+  function resizeScene(s: any, wh: [number, number], bx: Box[] = []) {
     const [w1, h1] = s.reflow ? (s.reflowFrom || [1200, 673]) : sizeOf(s);
     const [w2, h2] = wh;
-    s.elements = (s.elements || []).map((e: any) => rescaled(e, w2 / w1, h2 / h1));
+    const sx = w2 / w1, sy = h2 / h1, k0 = Math.min(sx, sy), list = s.elements || [];
+    const ground = (e: any) => e.type === 'hills' || e.type === 'furniture' || (e.type === 'grain' && e.w == null) || (typeof e.w === 'number' && typeof e.h === 'number' && (e.w >= w1 * 0.8 || e.h >= h1 * 0.8));
+    const fg = bx.filter((b) => list[b.i] && !ground(list[b.i]) && b.w * b.h < w1 * h1 * 0.8);
+    if (!fg.length || Math.abs(Math.log((w2 / h2) / (w1 / h1))) < 0.2) s.elements = list.map((e: any) => rescaled(e, sx, sy)); // same shape of canvas: scale everything
+    else {
+      let x0 = Math.min(...fg.map((b) => b.x)), y0 = Math.min(...fg.map((b) => b.y)), x1 = Math.max(...fg.map((b) => b.x + b.w)), y1 = Math.max(...fg.map((b) => b.y + b.h));
+      x0 = Math.max(0, x0); y0 = Math.max(0, y0); x1 = Math.min(w1, x1); y1 = Math.min(h1, y1);
+      const bw = Math.max(1, x1 - x0), bh = Math.max(1, y1 - y0), ax = x0 + bw / 2, ay = y0 + bh / 2;
+      const tall = h2 / w2 >= 1.25, m = R(Math.min(w2, h2) * 0.06);
+      const free = { x0: m, y0: tall ? R(h2 * 0.1) : m, x1: w2 - m, y1: tall ? R(h2 * 0.86) : h2 - m };
+      const fw = free.x1 - free.x0, fh = free.y1 - free.y0;
+      const k = Math.min(fw / bw, fh / bh, Math.max(k0, 1));
+      let tx = h2 / w2 > 0.8 ? free.x0 + fw / 2 : ax * sx, ty = h2 / w2 > 0.8 ? free.y0 + fh / 2 : ay * sy;
+      tx = Math.min(Math.max(tx, free.x0 + bw * k / 2), free.x1 - bw * k / 2);
+      ty = Math.min(Math.max(ty, free.y0 + bh * k / 2), free.y1 - bh * k / 2);
+      const stretchGround = (e: any) => { const o = rescaled(e, sx, sy); if (typeof e.w === 'number') o.w = r1(e.w * sx); if (typeof e.h === 'number') o.h = r1(e.h * sy); return o; };
+      // landscape to tall: words beside a picture become the picture on top and the words under it, each as big as fits
+      const isText = (e: any) => e?.type === 'type' || e?.type === 'label';
+      const tb = fg.filter((b) => isText(list[b.i])), ob = fg.filter((b) => !isText(list[b.i]));
+      const span = (g: Box[]) => { const a = Math.min(...g.map((b) => b.x)), c = Math.max(...g.map((b) => b.x + b.w)), d = Math.min(...g.map((b) => b.y)), f = Math.max(...g.map((b) => b.y + b.h)); return { x0: Math.max(0, a), x1: Math.min(w1, c), y0: Math.max(0, d), y1: Math.min(h1, f) }; };
+      const side = tb.length && ob.length ? (() => { const t = span(tb), o = span(ob); return Math.min(t.x1, o.x1) - Math.max(t.x0, o.x0) < 0.25 * Math.min(t.x1 - t.x0, o.x1 - o.x0); })() : false;
+      if (h2 / w2 > 0.95 && side) {
+        const place = (g: Box[], top: number, hgt: number, cap: number) => {
+          const sp = span(g), gw = Math.max(1, sp.x1 - sp.x0), gh = Math.max(1, sp.y1 - sp.y0);
+          const kk = Math.min(fw / gw, hgt / gh, cap);
+          return { kk, ax: sp.x0 + gw / 2, ay: sp.y0 + gh / 2, tx: free.x0 + fw / 2, ty: top + hgt / 2 };
+        };
+        const gap = R(fh * 0.04), oh = R(fh * 0.56), th = fh - oh - gap;
+        const P = { o: place(ob, free.y0, oh, 2.2), t: place(tb, free.y0 + oh + gap, th, 2.2) };
+        // words keep their left edge together: the block is centred, the lines stay aligned
+        const which = (i: number) => (tb.some((b) => b.i === i) ? P.t : P.o);
+        // a side band (full height, part of the width) follows what it sat behind: across the top or the bottom
+        const splitY = R(free.y0 + oh + gap / 2), os = span(ob), ts = span(tb);
+        const band = (e: any) => {
+          if (!(typeof e.x === 'number' && typeof e.w === 'number' && typeof e.h === 'number' && e.h >= h1 * 0.8 && e.w < w1 * 0.8)) return null;
+          const ov = (sp: { x0: number; x1: number }) => Math.max(0, Math.min(e.x + e.w, sp.x1) - Math.max(e.x, sp.x0));
+          const top = ov(os) >= ov(ts);
+          return { ...stretchGround(e), x: 0, y: top ? 0 : splitY, w: w2, h: top ? splitY : h2 - splitY };
+        };
+        s.elements = list.map((e: any, i: number) => {
+          if (ground(e)) return band(e) || stretchGround(e);
+          const g = which(i);
+          return moved(rescaled(e, g.kk, g.kk, g.kk), g.tx - g.kk * g.ax, g.ty - g.kk * g.ay);
+        });
+      } else s.elements = list.map((e: any) => (ground(e) ? stretchGround(e) : moved(rescaled(e, k, k, k), tx - k * ax, ty - k * ay)));
+    }
     if (Array.isArray(s.clip)) s.clip = [s.clip[0] * w2 / w1, s.clip[1] * h2 / h1, s.clip[2] * w2 / w1, s.clip[3] * h2 / h1].map(r1);
     delete s.format; delete s.reflow; delete s.reflowFrom;
     s.canvas = [w2, h2];
@@ -1568,15 +1661,16 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   }
   $('all-sizes').addEventListener('click', () => {
     const [w, h] = sizeOf(scene);
-    const list = SIZES.filter((z) => ['Link preview', 'Square', 'Story', 'YouTube', 'Poster'].includes(z.label) && !(z.wh[0] === w && z.wh[1] === h)).map((z) => resizeScene(structuredClone(scene), z.wh));
+    const list = SIZES.filter((z) => ['Link preview', 'Square', 'Story', 'YouTube', 'Poster'].includes(z.label) && !(z.wh[0] === w && z.wh[1] === h)).map((z) => resizeScene(structuredClone(scene), z.wh, boxes));
     closePops();
     addPages(list, `${list.length} sizes added as pages. Each one is yours to nudge.`);
   });
   function setSize(wh: [number, number], label: string) {
     const [w2, h2] = wh;
-    change((s) => { resizeScene(s, wh); });
+    const bx = boxes;
+    change((s) => { resizeScene(s, wh, bx); });
     closePops();
-    say(`Resized to ${label}, ${w2} × ${h2}. Everything moved with it; nudge what needs it.`);
+    say(`Resized to ${label}, ${w2} × ${h2}. Backgrounds stretched, the rest kept its shape. Undo (⌘Z) goes back.`);
   }
   $('undo').addEventListener('click', undo);
   $('redo').addEventListener('click', redo);
@@ -1869,6 +1963,13 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   .lv-ib:disabled { opacity: .3; }
   .lv-eye[aria-pressed='true'] { opacity: .4; }
   .lv-data { display: grid; gap: 6px; }
+  .lv-pop { max-height: calc(100% - 90px); overflow-y: auto; overscroll-behavior: contain; }
+  .lv-pop-k { margin: 12px 0 4px; font: 600 10px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+  .lv-pop-k:first-child { margin-top: 0; }
+  .lv-myinks { display: flex; flex-wrap: wrap; gap: 8px; padding: 6px 4px 2px; }
+  .lv-myinks label { display: grid; justify-items: center; gap: 3px; font: 600 9px/1 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); }
+  .lv-myinks input { width: 36px; height: 30px; padding: 0; border: 1.5px solid var(--line); background: none; cursor: pointer; }
+  .lv-cb-hint { color: var(--red) !important; }
   .lv-clist { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
   .lv-dchip-add { display: grid; place-items: center; background: #fff; color: var(--indigo); font: 700 15px/1 var(--mono); }
   .lv-seed { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px; }
