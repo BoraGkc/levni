@@ -3,16 +3,16 @@ import { SITE } from '../site';
 const path = Astro.url.pathname;
 const here = (p: string) => path === p || path.startsWith(p);
 const makes: [string, string, string][] = [
-  ['Illustrations and covers', 'Scenes, styles, the critic', '/features/#scenes'],
-  ['Brand boards', 'Nine tiles from one spec', '/features/#boards'],
-  ['Branding posters', 'Eight posters in one series', '/features/#posters'],
+  ['Illustrations and covers', 'Scenes, styles, the critic', '/make/blog-covers-og-images/'],
+  ['Brand boards', 'Nine tiles from one spec', '/make/brand-board/'],
+  ['Branding posters', 'Eight posters in one series', '/make/branding-posters/'],
   ['Seals and stickers', 'Ring text, tickets, die-cuts', '/make/stickers-seals-tickets/'],
-  ['Dither and mesh gradients', 'Backgrounds with a grain', '/features/#dither'],
-  ['ASCII and dot-matrix art', 'Glyph fills from any drawing', '/features/#glyphfill'],
-  ['Terrain and etching', 'Wireframes, ridgelines, engraving', '/features/#terrain'],
-  ['3D and pixel icons', 'Soft 3D, extruded, pixel grids', '/features/#icons3d'],
-  ['Little 3D worlds', 'Iso dioramas from a preset', '/features/#iso'],
-  ['Charts', 'Hand-inked bars, lines, donuts', '/features/#charts'],
+  ['Dither and mesh gradients', 'Backgrounds with a grain', '/make/dither-pixel-art/'],
+  ['ASCII and dot-matrix art', 'Glyph fills from any drawing', '/make/ascii-art/'],
+  ['Terrain and etching', 'Wireframes, ridgelines, engraving', '/make/wireframe-terrain-etching/'],
+  ['3D and pixel icons', 'Soft 3D, extruded, pixel grids', '/make/3d-icons/'],
+  ['Little 3D worlds', 'Iso dioramas from a preset', '/make/isometric-illustrations/'],
+  ['Charts', 'Hand-inked bars, lines, donuts', '/make/hand-drawn-charts/'],
 ];
 ---
 <header class="site-header">
@@ -35,7 +35,7 @@ const makes: [string, string, string][] = [
             <ul>
               {makes.map(([t, d, h]) => <li><a href={h}><span class="m-t">{t}</span><span class="m-d">{d}</span></a></li>)}
             </ul>
-            <p class="mega-foot"><a href="/features/">All features</a><a href="/gallery/">Browse the gallery</a><a href="/library/">The library</a></p>
+            <p class="mega-foot"><a href="/make/">All free makers</a><a href="/features/">All features</a><a href="/gallery/">Browse the gallery</a><a href="/library/">The library</a></p>
           </div>
         </li>
         <li><a href="/gallery/" aria-current={here('/gallery') ? 'page' : undefined}>Gallery</a></li>

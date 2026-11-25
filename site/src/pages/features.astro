@@ -1,9 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { MAKE } from '../data/make';
-// a feature with its own /make/ page links to it first
-const MAKE_FOR: Record<string, string> = { seals: 'stickers-seals-tickets' };
-for (const slug of Object.values(MAKE_FOR)) if (!MAKE.some((m) => m.slug === slug)) throw new Error(`no /make/ page ${slug}`);
+import { MAKE_FOR_FEATURE as MAKE_FOR } from '../data/make-links'; // a feature with its own /make/ page links to it first
 import { SITE } from '../site';
 import folio from '../data/props.json';
 

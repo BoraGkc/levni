@@ -1,0 +1,45 @@
+---
+// The hub of the free makers: one card per /make/ page, plus the README banner maker.
+import Base from '../../layouts/Base.astro';
+import { SITE } from '../../site';
+import { MAKE } from '../../data/make';
+const cards = MAKE.map((m) => ({ href: `/make/${m.slug}/`, title: m.eyebrow, text: m.description, img: `/g/${m.examples[0]}-s.webp`, alt: '' }));
+const banner = { href: '/banner/', title: 'README banner maker', text: 'Paste a GitHub link and get a hand-inked 1280 × 640 banner for your README and social preview. The drawing is picked from the repo’s topics.', img: '/blog/free-online-design-editor/fig-3.webp' };
+const jsonld = [
+  { '@type': 'CollectionPage', name: 'Free design makers', url: `${SITE.url}/make/`, hasPart: [...cards, banner].map((c) => ({ '@type': 'WebPage', name: c.title, url: `${SITE.url}${c.href}` })) },
+];
+---
+<Base title="Free design makers: stickers, posters, icons" description="Free makers that run in your browser: stickers and seals, brand boards, branding posters, 3D and pixel icons, ASCII art, charts, covers and more. No sign-up." jsonld={jsonld}>
+  <div class="wrap mh">
+    <p class="eyebrow">Free makers</p>
+    <h1>Make it in your browser. Free, no sign-up.</h1>
+    <p class="lede">Each maker opens a finished example in the Levni editor. Change the words, the drawing and the colours, then download PNG or SVG. When you want more, ask your agent: Levni runs free in Claude and Codex.</p>
+    <a class="mh-feature" href={banner.href}><img src={banner.img} width="1280" height="640" alt="" loading="eager" /><span><b>{banner.title}</b><span>{banner.text}</span><em>Make a banner →</em></span></a>
+    <ul class="mh-grid">
+      {cards.map((c) => (
+        <li><a href={c.href}><img src={c.img} width="640" height="359" alt={c.alt} loading="lazy" decoding="async" /><b>{c.title}</b><span>{c.text}</span></a></li>
+      ))}
+    </ul>
+  </div>
+</Base>
+
+<style>
+  .mh { padding-top: clamp(32px, 6vw, 64px); }
+  .mh h1 { max-width: 18ch; margin: 0 0 14px; text-wrap: balance; }
+  .mh .lede { max-width: 64ch; }
+  .mh-feature { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 24px; align-items: center; margin-top: 32px; padding: 14px; border-radius: 16px; background: var(--ink); color: var(--paper); text-decoration: none; }
+  .mh-feature img { width: 100%; height: auto; border-radius: 10px; }
+  .mh-feature > span { display: grid; gap: 8px; padding-right: 12px; }
+  .mh-feature b { font: 700 26px/1.15 var(--display); }
+  .mh-feature span span { color: #c9cfdb; }
+  .mh-feature em { font-style: normal; font-weight: 700; color: var(--mustard); }
+  @media (max-width: 760px) { .mh-feature { grid-template-columns: minmax(0, 1fr); } }
+  .mh-grid { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .mh-grid a { display: grid; gap: 6px; height: 100%; padding: 10px 10px 16px; border-radius: 14px; background: #fff; color: var(--ink); text-decoration: none; box-shadow: 0 0 0 1px var(--rule); }
+  .mh-grid a:hover { box-shadow: 0 0 0 2px var(--ink); }
+  .mh-grid img { width: 100%; height: auto; aspect-ratio: 640 / 359; object-fit: contain; background: var(--paper); border-radius: 8px; margin-bottom: 6px; }
+  .mh-grid b { font-size: 18px; padding: 0 4px; }
+  .mh-grid span { font-size: 14px; color: var(--ink-soft); padding: 0 4px; }
+  @media (max-width: 900px) { .mh-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 560px) { .mh-grid { grid-template-columns: minmax(0, 1fr); } }
+</style>

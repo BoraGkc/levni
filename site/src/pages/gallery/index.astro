@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { MAKE_FOR_GROUP } from '../../data/make-links';
 import { SITE } from '../../site';
 import gallery from '../../data/gallery.json';
 import props from '../../data/props.json';
@@ -90,7 +91,7 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
       <section id={g.key} class="group" data-group={g.key} data-first={g.first} data-page={g.page} aria-labelledby={`h-${g.key}`}>
         <div class="group-head">
           <h2 id={`h-${g.key}`}>{g.label}</h2>
-          <p>{intro[g.key][0]} <a href={intro[g.key][1]}>{intro[g.key][2]}</a></p>
+          <p>{intro[g.key][0]} <a href={intro[g.key][1]}>{intro[g.key][2]}</a>{MAKE_FOR_GROUP[g.key] && <> · <a class="make-own" href={`/make/${MAKE_FOR_GROUP[g.key]}/`}>Make your own, free</a></>}</p>
         </div>
         <ul class={`grid grid-${g.key}`}>
           {g.items.map((i, n) => (
@@ -110,7 +111,8 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
     ))}
   </div>
 
-  <noscript><style>.grid > li[hidden] { display: list-item; }</style></noscript>
+  <noscript><style>.grid > li[hidden] { display: list-item; }  .make-own { font-weight: 700; }
+</style></noscript>
 
   <dialog id="g-dlg" aria-labelledby="g-title">
     <div class="dlg-bar">

@@ -12,10 +12,12 @@ export function getStaticPaths() {
   return MAKE.map((page) => ({ params: { slug: page.slug }, props: { page } }));
 }
 const { page } = Astro.props as { page: MakePage };
-const all = (gallery.items as { group: string; id: string; title: string; alt: string }[]).filter((i) => i.group === page.gallery);
-// full rows of three, at most six: a lone tile on the last row hugs the left on desktop
-const items = all.length > 3 ? all.slice(0, Math.min(6, all.length - (all.length % 3))) : all;
-const demoSrc = `/embed/editor/?${page.demo.src ? `src=${page.demo.src}` : `tpl=${page.demo.tpl}`}`;
+type Item = { group: string; id: string; title: string; alt: string; tw?: number; th?: number };
+const byKey = new Map((gallery.items as Item[]).map((i) => [`${i.group}/${i.id}`, i]));
+const items = page.examples.map((k) => byKey.get(k)).filter((i): i is Item => !!i);
+if (items.length !== page.examples.length) throw new Error(`make/${page.slug}: an example is not in the gallery`);
+const editable = (i: Item) => i.group !== 'boards'; // boards are board specs, drawn in Node
+const demoSrc = `/embed/editor/?src=/g/${page.demo.src}.json`;
 const url = `${SITE.url}/make/${page.slug}/`;
 const others = MAKE.filter((p) => p.slug !== page.slug);
 const jsonld = [
@@ -27,7 +29,7 @@ const jsonld = [
     { '@type': 'ListItem', position: 3, name: page.title, item: url },
   ] },
 ];
-const og = items[0] ? `/g/${page.gallery}/${items[0].id}.webp` : undefined;
+const og = items[0] ? `/g/${items[0].group}/${items[0].id}.webp` : undefined;
 ---
 <Base title={page.title} description={page.description} jsonld={jsonld} og={og}>
   <article class="mk">
@@ -57,18 +59,25 @@ const og = items[0] ? `/g/${page.gallery}/${items[0].id}.webp` : undefined;
     {items.length > 0 && (
       <section class="wrap mk-gallery" aria-labelledby="ex-h">
         <h2 id="ex-h">Start from an example</h2>
-        <p class="mk-sub">Each one opens in the editor above. Change it, then download it.</p>
-        <ul>
+        <p class="mk-sub">{items.every(editable) ? 'Each one opens in the editor above. Change it, then download it.' : 'Drawn by the npm package and your agent from a few lines of spec.'}</p>
+        <ul style={`--cols:${Math.min(3, items.length)}`}>
           {items.map((it) => (
             <li>
-              <button type="button" class="mk-ex" data-src={`/g/${page.gallery}/${it.id}.json`} aria-label={`Edit this example: ${it.alt}`}>
-                <img src={`/g/${page.gallery}/${it.id}-s.webp`} width="640" height="359" alt={it.alt} loading="lazy" decoding="async" />
-                <span>Edit this</span>
-              </button>
+              {editable(it) ? (
+                <button type="button" class="mk-ex" data-src={`/g/${it.group}/${it.id}.json`} aria-label={`Edit this example: ${it.alt}`}>
+                  <img src={`/g/${it.group}/${it.id}-s.webp`} width={it.tw ?? 640} height={it.th ?? 359} alt={it.alt} loading="lazy" decoding="async" />
+                  <span>Edit this</span>
+                </button>
+              ) : (
+                <a class="mk-ex" href={`/g/${it.group}/${it.id}.webp`}>
+                  <img src={`/g/${it.group}/${it.id}-s.webp`} width={it.tw ?? 640} height={it.th ?? 359} alt={it.alt} loading="lazy" decoding="async" />
+                  <span>Full size</span>
+                </a>
+              )}
             </li>
           ))}
         </ul>
-        <p class="mk-sub"><a href={`/gallery/#${page.gallery}`}>See them full size in the gallery</a></p>
+        <p class="mk-sub"><a href={`/gallery/#${items[0].group}`}>See more in the gallery</a></p>
       </section>
     )}
 
@@ -94,7 +103,7 @@ const og = items[0] ? `/g/${page.gallery}/${items[0].id}.webp` : undefined;
 
     <section class="wrap mk-code" aria-labelledby="code-h">
       <h2 id="code-h">The same thing in code</h2>
-      <p>Every picture is a small JSON scene. This one renders with <code>npx @levni/levni render scene.json stickers.png</code>, the same as in the editor.</p>
+      <p>Every picture is a few lines of JSON. This one renders with <code>{page.codeCmd}</code>, the same as in the editor and in your agent.</p>
       <pre><code>{page.code}</code></pre>
     </section>
 
@@ -148,16 +157,18 @@ const og = items[0] ? `/g/${page.gallery}/${items[0].id}.webp` : undefined;
   .mk-gallery, .mk-uses, .mk-agent, .mk-code, .mk-faq { margin-top: clamp(48px, 7vw, 88px); }
   .mk-gallery h2, .mk-uses h2, .mk-code h2, .mk-faq h2 { margin: 0 0 8px; }
   .mk-sub { margin: 0 0 16px; color: var(--ink-soft); }
-  .mk-gallery ul { list-style: none; margin: 0 0 12px; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .mk-gallery ul { list-style: none; margin: 0 0 12px; padding: 0; display: grid; grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr)); gap: 14px; }
   @media (max-width: 760px) { .mk-gallery ul { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   .mk-ex { position: relative; display: block; width: 100%; padding: 0; border: 0; border-radius: 12px; overflow: hidden; background: #fff; cursor: pointer; box-shadow: 0 0 0 1px var(--rule); }
-  .mk-ex img { display: block; width: 100%; height: auto; }
+  .mk-ex img { display: block; width: 100%; height: auto; aspect-ratio: 640 / 359; object-fit: contain; background: var(--paper); } /* square and tall examples fit whole */
   .mk-ex span { position: absolute; right: 10px; bottom: 10px; padding: 6px 10px; border-radius: 999px; background: var(--ink); color: var(--paper); font-size: 13px; font-weight: 700; opacity: 0; transform: translateY(4px); transition: opacity .15s, transform .15s; }
   .mk-ex:hover span, .mk-ex:focus-visible span { opacity: 1; transform: none; }
   .mk-ex:hover { box-shadow: 0 0 0 2px var(--ink); }
   @media (hover: none) { .mk-ex span { opacity: 1; transform: none; } }
 
-  .mk-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-top: 16px; }
+  .mk-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 16px; } /* four uses: one row, or two by two */
+  @media (max-width: 900px) { .mk-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 520px) { .mk-cards { grid-template-columns: minmax(0, 1fr); } }
   .mk-card { padding: 18px; border-radius: 14px; background: #fff; box-shadow: 0 0 0 1px var(--rule); }
   .mk-card h3 { margin: 0 0 6px; font-size: 18px; }
   .mk-card p { margin: 0; color: var(--ink-soft); font-size: 15px; }
