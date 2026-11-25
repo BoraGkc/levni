@@ -79,7 +79,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
             <button type="button" role="tab" id="pos-layers" aria-selected="true">Layers</button>
           </div>
           <div id="arrange" hidden></div>
-          <div id="layerbox"><p class="lv-help">Top of the list is in front. Drag rows to reorder.</p><ol id="layers"></ol></div>
+          <div id="layerbox"><p class="lv-help">Top of the list is in front. Drag a row by its dots to move it up or down, or select it and use the arrows.</p><ol id="layers"></ol></div>
         </section>
         <section data-p="edit" hidden><div id="props"></div></section>
         <section data-p="effects" hidden><div id="effects"></div></section>
@@ -223,12 +223,37 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     { id: 'halftone', label: 'Halftone', make: (x, y, s) => ({ type: 'halftone', x: R(x - s), y: R(y - s * 0.6), w: R(s * 2), h: R(s * 1.2), color: 'tone', mode: 'radial' }) },
     { id: 'arrow', label: 'Arrow', make: (x, y, s) => ({ type: 'arrow', from: [R(x - s), R(y + s * 0.3)], to: [R(x + s), R(y - s * 0.3)], bend: 0.3, color: 'coral' }) },
   ];
-  const TEXTS: { id: string; label: string; sample: string; make: Maker }[] = [
-    { id: 'headline', label: 'Add a headline', sample: 'Big idea.', make: (x, y, s) => ({ type: 'type', text: 'Big idea.', x: R(x - s * 1.2), y: R(y - s * 0.2), size: R(s * 0.45), font: 'black', color: 'ink' }) },
-    { id: 'subhead', label: 'Add a subhead', sample: 'A line about it', make: (x, y, s) => ({ type: 'type', text: 'A line about it', x: R(x - s * 1.2), y: R(y - s * 0.07), size: R(s * 0.16), font: 'grotesk', color: 'ink' }) },
-    { id: 'mono', label: 'Code line', sample: 'npx @levni/levni', make: (x, y, s) => ({ type: 'type', text: 'npx @levni/levni', x: R(x - s * 1.2), y: R(y - s * 0.05), size: R(s * 0.12), font: 'mono', weight: 700, color: 'coral' }) },
-    { id: 'pixel', label: 'Pixel type', sample: 'GAME ON', make: (x, y, s) => ({ type: 'type', text: 'GAME ON', x: R(x - s * 1.2), y: R(y - s * 0.12), size: R(s * 0.3), font: 'pixel', color: 'blue' }) },
-    { id: 'label', label: 'Small label', sample: 'SECTION / TOPIC', make: (x, y) => ({ type: 'label', text: 'Section / Topic', x: R(x - 80), y: R(y), color: 'coral' }) },
+  // text presets; a combo returns several elements, added together. Previews are drawn by Levni itself.
+  const TEXTS: { id: string; label: string; make: Maker }[] = [
+    { id: 'headline', label: 'Headline', make: (x, y, s) => ({ type: 'type', text: 'Big idea.', x: R(x - s * 1.2), y: R(y - s * 0.2), size: R(s * 0.45), font: 'black', color: 'ink' }) },
+    { id: 'subhead', label: 'Subhead', make: (x, y, s) => ({ type: 'type', text: 'A line about it', x: R(x - s * 1.2), y: R(y - s * 0.07), size: R(s * 0.16), font: 'grotesk', color: 'ink' }) },
+    { id: 'kicker-head', label: 'Kicker and headline', make: (x, y, s) => [
+      { type: 'label', text: 'New / Issue 04', x: R(x - s * 1.2), y: R(y - s * 0.4), size: R(s * 0.08), color: 'coral' },
+      { type: 'type', text: 'Slow mornings.', x: R(x - s * 1.2), y: R(y - s * 0.25), w: R(s * 2.4), font: 'black', color: 'ink' },
+    ] },
+    { id: 'head-sub', label: 'Headline and subhead', make: (x, y, s) => [
+      { type: 'type', text: 'Big idea.', x: R(x - s * 1.2), y: R(y - s * 0.35), size: R(s * 0.42), font: 'black', color: 'ink' },
+      { type: 'type', text: 'One line that says why it matters', x: R(x - s * 1.2), y: R(y + s * 0.2), w: R(s * 2.4), font: 'grotesk', color: 'ink' },
+    ] },
+    { id: 'two-weights', label: 'Light and heavy', make: (x, y, s) => ({ type: 'type', text: '__SLOW__ **COFFEE**', x: R(x - s * 1.2), y: R(y - s * 0.12), w: R(s * 2.4), font: 'grotesk', weight: 300, boldFont: 'black', color: 'blue' }) },
+    { id: 'outline-solid', label: 'Outline over solid', make: (x, y, s) => [
+      { type: 'type', text: 'BRIGHT', x: R(x - s * 1.2), y: R(y - s * 0.5), w: R(s * 2.0), font: 'black', outline: true, weight: 3, color: 'ink' },
+      { type: 'type', text: 'IDEAS', x: R(x - s * 1.2), y: R(y + s * 0.02), w: R(s * 1.6), font: 'black', color: 'coral' },
+    ] },
+    { id: 'big-number', label: 'Big number', make: (x, y, s) => [
+      { type: 'type', text: '42%', x: R(x - s * 1.2), y: R(y - s * 0.4), size: R(s * 0.7), font: 'black', color: 'coral' },
+      { type: 'label', text: 'of readers come back', x: R(x - s * 1.17), y: R(y + s * 0.42), size: R(s * 0.08), color: 'ink' },
+    ] },
+    { id: 'quote', label: 'Quote', make: (x, y, s) => [
+      { type: 'type', text: '“Good coffee,\nslow mornings.”', x: R(x - s * 1.2), y: R(y - s * 0.3), size: R(s * 0.2), font: 'grotesk', weight: 400, color: 'ink' },
+      { type: 'label', text: '/ The menu', x: R(x - s * 1.2), y: R(y + s * 0.3), size: R(s * 0.08), color: 'coral' },
+    ] },
+    { id: 'pixel-caption', label: 'Pixel title and caption', make: (x, y, s) => [
+      { type: 'type', text: 'GAME ON', x: R(x - s * 1.2), y: R(y - s * 0.4), w: R(s * 1.8), font: 'pixel', color: 'blue' },
+      { type: 'type', text: 'PRESS START TO PLAY', x: R(x - s * 1.2), y: R(y + s * 0.3), size: R(s * 0.1), font: 'mono', weight: 700, color: 'coral' },
+    ] },
+    { id: 'mono', label: 'Code line', make: (x, y, s) => ({ type: 'type', text: 'npx @levni/levni', x: R(x - s * 1.2), y: R(y - s * 0.05), size: R(s * 0.12), font: 'mono', weight: 700, color: 'coral' }) },
+    { id: 'label', label: 'Small label', make: (x, y, s) => ({ type: 'label', text: 'Section / Topic', x: R(x - s * 1.2), y: R(y), size: R(Math.max(14, s * 0.08)), color: 'coral' }) },
   ];
   const TEMPLATES: [string, string][] = [
     ['cover', 'Rocket launch'], ['spot', 'Spot illustration'], ['people', 'People'], ['chart-inflation', 'Chart'], ['slots-tv', 'Chart on a TV'],
@@ -296,7 +321,15 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       if (list[i].hidden) continue;
       try {
         const { used } = await compose({ ...s, title: undefined, clip: undefined, reflow: false, elements: [clean(list[i])] });
-        if (!used.length) continue;
+        if (!used.length) {
+          const e = list[i];
+          if (e.type === 'label' && typeof e.text === 'string') { // mono, letter-spacing 1, baseline at y
+            const size = e.size ?? 16, w = e.text.length * (size * 0.6 + 1);
+            const x0 = e.anchor === 'middle' ? e.x - w / 2 : e.anchor === 'end' ? e.x - w : e.x;
+            out.push({ i, x: x0 - 4, y: e.y - size * 0.85 - 4, w: w + 8, h: size + 8 });
+          }
+          continue;
+        }
         const x0 = Math.min(...used.map((u: any) => u.x)), y0 = Math.min(...used.map((u: any) => u.y));
         const x1 = Math.max(...used.map((u: any) => u.x + u.w)), y1 = Math.max(...used.map((u: any) => u.y + u.h));
         out.push({ i, x: x0, y: y0, w: x1 - x0, h: y1 - y0 });
@@ -425,6 +458,14 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     busy = true; await render(true); busy = false;
     if (pending) { pending = false; quick(); }
   }
+  // double-click a part with text: open its settings with the text field focused and selected
+  function editText() {
+    if (typeof cur()?.text !== 'string') return;
+    openPanel('edit');
+    const t = propsEl.querySelector('textarea') as HTMLTextAreaElement | null;
+    if (t) { t.focus(); t.select(); }
+  }
+  stage.addEventListener('dblclick', () => editText());
   stage.addEventListener('pointerdown', (ev) => {
     if (scene.reflow || ev.button !== 0 || (ev.target as HTMLElement).closest('.lv-mini')) return;
     const p = toCanvas(ev);
@@ -508,7 +549,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   function makeEl(a: Add, x: number, y: number) {
     const s = unit();
     if (a.kind === 'prop') return { type: 'prop', name: a.name, x, y, size: s };
-    return ((a.kind === 'shape' ? SHAPES : TEXTS) as { id: string; make: Maker }[]).find((m) => m.id === a.id)!.make(x, y, s);
+    return ((a.kind === 'shape' ? SHAPES : TEXTS) as { id: string; make: Maker }[]).find((m) => m.id === a.id)!.make(x, y, s); // may be a list (text combos)
   }
   function unreflow(s: any) {
     const [w, h] = sizeOf(s), from = s.reflowFrom || [1200, 673];
@@ -519,8 +560,8 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   const recent = (): string[] => { try { return JSON.parse(localStorage.getItem(RECENT) || '[]'); } catch { return []; } };
   function add(a: Add, at?: { x: number; y: number }) {
     const u = unit();
-    const p = at || (a.kind === 'text' ? freeSpot(u * 2.4, u * 0.6) : freeSpot(u));
-    change((s) => { if (s.reflow) unreflow(s); (s.elements ||= []).push(makeEl(a, R(p.x), R(p.y))); });
+    const p = at || (a.kind === 'text' ? freeSpot(u * 2.4, u * 0.9) : freeSpot(u));
+    change((s) => { if (s.reflow) unreflow(s); (s.elements ||= []).push(...[makeEl(a, R(p.x), R(p.y))].flat()); });
     if (a.kind === 'prop') try { localStorage.setItem(RECENT, JSON.stringify([a.name, ...recent().filter((n) => n !== a.name)].slice(0, 9))); } catch {}
     select(els().length - 1);
     if (window.innerWidth < 760) openPanel(null); // phones: show the canvas again
@@ -551,6 +592,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     lv.classList.toggle('closed', !id);
     for (const b of document.querySelectorAll<HTMLButtonElement>('.lv-rail-b')) b.setAttribute('aria-pressed', String(b.dataset.panel === id || (id === 'edit' || id === 'effects') && false));
     for (const s of fly.querySelectorAll<HTMLElement>('[data-p]')) s.hidden = s.dataset.p !== id;
+    if (id) fly.querySelector('.lv-fly-body')!.scrollTop = 0; // each panel opens at its top
     if (!id) return;
     $('fly-h').textContent = TITLES[id];
     $('fly-back').hidden = !(id === 'drawings' && openShelf);
@@ -663,12 +705,9 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       lazy.observe(pic);
     }
     if (kind === 'text') for (const t of TEXTS) {
-      const b = document.createElement('button');
-      b.type = 'button'; b.className = `lv-textbtn lv-t-${t.id}`;
-      b.append(Object.assign(document.createElement('span'), { className: 'lv-sample', textContent: t.sample }), Object.assign(document.createElement('span'), { className: 'lv-cap', textContent: t.label }));
-      b.addEventListener('click', () => add({ kind: 'text', id: t.id }));
-      draggable(b, { kind: 'text', id: t.id });
-      $('texts').append(b);
+      const pic = tile($('texts'), t.label, () => add({ kind: 'text', id: t.id }), { kind: 'text', id: t.id });
+      (pic as any)._load = async () => { try { pic.append(Object.assign(document.createElement('img'), { src: await thumbUrl({ canvas: [400, 170], seed: 3, elements: [t.make(200, 85, 145)].flat() }), alt: '' })); } catch { pic.closest('button')?.remove(); } };
+      lazy.observe(pic);
     }
     if (kind === 'templates') for (const [id, label] of TEMPLATES) {
       const load = exampleFiles[`../../../examples/${id}.json`];
@@ -739,6 +778,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       f.addEventListener('change', () => { setField('font', f.value); endEdit(); });
       parts.push(f);
     }
+    if (typeof e.text === 'string') parts.push(ctxButton('Edit text', editText, { cls: 'lv-cb-text', title: 'Edit the words (or double-click them)' }));
     if (e.type === 'type' || e.type === 'label') {
       const size = e.size ?? (e.type === 'label' ? 16 : 120);
       const box = document.createElement('span'); box.className = 'lv-stepper';
@@ -766,11 +806,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       b.addEventListener('click', () => { on(name); endEdit(); closePops(); renderCtx(); });
       wrap.append(b);
     }
-    const custom = Object.assign(document.createElement('input'), { type: 'color', value: /^#[0-9a-f]{6}$/i.test(current) ? current : '#14181f' });
-    custom.setAttribute('aria-label', 'Any colour');
-    custom.addEventListener('input', () => on(custom.value));
-    custom.addEventListener('change', () => { endEdit(); renderCtx(); });
-    const lab = Object.assign(document.createElement('label'), { className: 'lv-custom', textContent: 'Any colour' }); lab.prepend(custom);
+    const lab = customColor(current, on, () => { endEdit(); renderCtx(); });
     pop.replaceChildren(Object.assign(document.createElement('p'), { className: 'lv-pop-h', textContent: 'Colour' }), Object.assign(document.createElement('p'), { className: 'lv-pop-sub', textContent: 'The inks of this look' }), wrap, lab);
     showPop(pop, anchor);
   }
@@ -786,6 +822,18 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     }
     pop.replaceChildren(Object.assign(document.createElement('p'), { className: 'lv-pop-h', textContent: 'Variant' }), g);
     showPop(pop, anchor);
+  }
+
+  function customColor(current: any, onInput: (c: string) => void, onDone: () => void) {
+    const lab = document.createElement('label'); lab.className = 'lv-anycol';
+    const isHex = typeof current === 'string' && /^#[0-9a-f]{6}$/i.test(current);
+    const ring = document.createElement('span'); ring.className = 'lv-anycol-ring'; if (isHex) { ring.style.setProperty('--c', current); ring.classList.add('on'); }
+    const input = Object.assign(document.createElement('input'), { type: 'color', value: isHex ? current : '#e0532f', className: 'sr' });
+    input.setAttribute('aria-label', 'Any colour');
+    input.addEventListener('input', () => { ring.style.setProperty('--c', input.value); ring.classList.add('on'); onInput(input.value); });
+    input.addEventListener('change', onDone);
+    lab.append(input, ring, Object.assign(document.createElement('span'), { textContent: isHex ? current.toUpperCase() : 'Any colour' }));
+    return lab;
   }
 
   // ---------- effects panel ----------
@@ -900,11 +948,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       b.addEventListener('click', () => { on(name); endEdit(); renderProps(); });
       wrap.append(b);
     }
-    const custom = Object.assign(document.createElement('input'), { type: 'color', value: /^#[0-9a-f]{6}$/i.test(current) ? current : '#14181f' });
-    custom.setAttribute('aria-label', 'Any colour');
-    custom.addEventListener('input', () => on(custom.value));
-    custom.addEventListener('change', () => { endEdit(); renderProps(); });
-    wrap.append(custom);
+    wrap.append(customColor(current, on, () => { endEdit(); renderProps(); }));
     return wrap;
   }
   function control(key: string, v: any, set: (v: any) => void): HTMLElement {
@@ -954,7 +998,8 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       if (typeof e.y === 'number') propsEl.append(field('Y', numInput(e.y, (n) => setField('y', n))));
     }
     const keys = FIELDS[e.type] || Object.keys(e).filter((k) => !SKIP.has(k) && ['string', 'number', 'boolean'].includes(typeof e[k])).slice(0, 8);
-    for (const k of keys) propsEl.append(field(LABELS[k] || k, control(k, k === 'shadow' ? !!e[k] : e[k], (nv) => setField(k, nv)), COLOR_KEYS.has(k) || k === 'text' || k === 'rot'));
+    const fallback = (k: string) => k === 'size' && e.type === 'label' ? 16 : k === 'size' && e.type === 'type' ? 120 : DEFAULTS[k];
+    for (const k of keys) propsEl.append(field(LABELS[k] || k, control(k, k === 'shadow' ? !!e[k] : e[k] ?? fallback(k), (nv) => setField(k, nv)), COLOR_KEYS.has(k) || k === 'text' || k === 'rot'));
     const extra = Object.keys(e).filter((k) => !SKIP.has(k) && !keys.includes(k) && ['string', 'number', 'boolean'].includes(typeof e[k]));
     if (extra.length) {
       const d = document.createElement('details'); d.className = 'lv-extra wide';
@@ -1003,7 +1048,8 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       const dn = drawingName(e);
       if (dn) ic.append(thumb(fileFor(dn) || dn, e.variant ?? 0, 30));
       else ic.textContent = ({ type: 'Aa', label: 'Ab', panel: '▭', disc: '●', block: '▬', marks: '✦', sunburst: '✺' } as Record<string, string>)[e.type] || '◆';
-      pick.append(ic, Object.assign(document.createElement('span'), { className: 'lv-layer-name', textContent: layerName(e) }));
+      const grip = Object.assign(document.createElement('span'), { className: 'lv-grip', title: 'Drag to reorder', innerHTML: '<svg viewBox="0 0 10 16" width="10" height="16" aria-hidden="true"><g fill="currentColor"><circle cx="2.5" cy="3" r="1.4"/><circle cx="7.5" cy="3" r="1.4"/><circle cx="2.5" cy="8" r="1.4"/><circle cx="7.5" cy="8" r="1.4"/><circle cx="2.5" cy="13" r="1.4"/><circle cx="7.5" cy="13" r="1.4"/></g></svg>' });
+      pick.append(grip, ic, Object.assign(document.createElement('span'), { className: 'lv-layer-name', textContent: layerName(e) }));
       if (e.locked) pick.append(Object.assign(document.createElement('span'), { className: 'lv-lockmark', textContent: 'locked' }));
       pick.addEventListener('click', () => select(i === sel ? -1 : i));
       const eye = document.createElement('button'); eye.type = 'button'; eye.className = 'lv-ib lv-eye';
@@ -1339,7 +1385,16 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   .lv-more { width: 100%; margin-top: 10px; padding: 10px; border: 1.5px dashed var(--line); border-radius: 10px; background: transparent; font-weight: 600; cursor: pointer; }
   .lv-replace { margin: 0 0 10px; padding: 9px 10px; border-radius: 10px; background: #fdf0ea; color: #9c3418; font-size: 13px; }
   .lv-replace button { border: 0; background: none; text-decoration: underline; cursor: pointer; font-weight: 600; padding: 0; }
-  .lv-texts { display: grid; gap: 8px; }
+  .lv-texts { display: grid; grid-template-columns: 1fr; gap: 8px; }
+  #texts .lv-pic { aspect-ratio: 400 / 170; }
+  .lv-anycol { display: inline-flex; align-items: center; gap: 8px; margin-top: 2px; font-size: 13px; font-weight: 600; cursor: pointer; }
+  .lv-anycol-ring { position: relative; width: 26px; height: 26px; border-radius: 50%; background: conic-gradient(#f2603f, #f2c230, #1e783f, #3fa7d6, #0b57d0, #8f4fd8, #f2603f); box-shadow: inset 0 0 0 1px rgba(20,24,31,.2); }
+  .lv-anycol-ring::after { content: '+'; position: absolute; inset: 5px; display: grid; place-items: center; border-radius: 50%; background: #fff; font: 700 13px/1 var(--mono); color: var(--ink); }
+  .lv-anycol-ring.on::after { content: ''; background: var(--c); }
+  .lv-anycol:focus-within .lv-anycol-ring { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .lv-swatches .lv-anycol { margin: 0 0 0 4px; }
+  .lv-grip { flex: none; display: grid; place-items: center; width: 14px; color: #b6b1a6; cursor: grab; }
+  .lv-layer:hover .lv-grip { color: var(--ink-soft); }
   .lv-textbtn { display: grid; gap: 6px; text-align: left; padding: 14px; border: 0; border-radius: 10px; background: #fff; box-shadow: 0 0 0 1px var(--line); cursor: grab; }
   .lv-textbtn:hover { box-shadow: 0 0 0 1.5px var(--ink); }
   .lv-sample { line-height: 1; color: var(--accent-text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
