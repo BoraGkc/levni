@@ -11,8 +11,10 @@ interface Props {
   type?: 'website' | 'article';
   jsonld?: object[];
   published?: Date;
+  bare?: boolean; // no header, footer or call-to-action band (the embedded editor)
+  noindex?: boolean;
 }
-const { title, description, og = '/og/default.png', type = 'website', jsonld = [], published } = Astro.props;
+const { title, description, og = '/og/default.png', type = 'website', jsonld = [], published, bare = false, noindex = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, SITE.url).href;
 const ogUrl = new URL(og, SITE.url).href;
 const fullTitle = title === SITE.name ? `${SITE.name}: ${SITE.tagline}` : `${title} · ${SITE.name}`;
@@ -44,6 +46,7 @@ const graph = [
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="alternate" type="application/rss+xml" title="Levni blog" href="/blog/rss.xml" />
@@ -74,13 +77,13 @@ const graph = [
     <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />
   </head>
   <body>
-    <a class="skip" href="#main">Skip to content</a>
-    <SiteHeader />
+    {!bare && <a class="skip" href="#main">Skip to content</a>}
+    {!bare && <SiteHeader />}
     <main id="main">
       <slot />
     </main>
-    {!['/', '/editor/'].includes(Astro.url.pathname) && <TryLevni />}
-    <SiteFooter />
+    {!bare && !['/', '/editor/'].includes(Astro.url.pathname) && <TryLevni />}
+    {!bare && <SiteFooter />}
   </body>
 </html>
 

@@ -1,0 +1,181 @@
+---
+// One page per thing people search for ("sticker maker", "brand board generator", ...): a hero, the editor embedded
+// with a matching scene, examples that load into it, what it makes, a prompt for agents, the scene in code, FAQ.
+// Content lives in src/data/make.ts.
+import Base from '../../layouts/Base.astro';
+import TryLevni from '../../components/TryLevni.astro';
+import { SITE } from '../../site';
+import { MAKE, type MakePage } from '../../data/make';
+import gallery from '../../data/gallery.json';
+
+export function getStaticPaths() {
+  return MAKE.map((page) => ({ params: { slug: page.slug }, props: { page } }));
+}
+const { page } = Astro.props as { page: MakePage };
+const all = (gallery.items as { group: string; id: string; title: string; alt: string }[]).filter((i) => i.group === page.gallery);
+// full rows of three, at most six: a lone tile on the last row hugs the left on desktop
+const items = all.length > 3 ? all.slice(0, Math.min(6, all.length - (all.length % 3))) : all;
+const demoSrc = `/embed/editor/?${page.demo.src ? `src=${page.demo.src}` : `tpl=${page.demo.tpl}`}`;
+const url = `${SITE.url}/make/${page.slug}/`;
+const others = MAKE.filter((p) => p.slug !== page.slug);
+const jsonld = [
+  { '@type': 'WebApplication', name: page.h1.replace(/\.$/, ''), url, applicationCategory: 'DesignApplication', operatingSystem: 'Any (web browser)', offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, publisher: { '@id': `${SITE.ortakAlan}/#organization` } },
+  { '@type': 'FAQPage', mainEntity: page.faq.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
+  { '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Levni', item: `${SITE.url}/` },
+    { '@type': 'ListItem', position: 2, name: 'Features', item: `${SITE.url}/features/` },
+    { '@type': 'ListItem', position: 3, name: page.title, item: url },
+  ] },
+];
+const og = items[0] ? `/g/${page.gallery}/${items[0].id}.webp` : undefined;
+---
+<Base title={page.title} description={page.description} jsonld={jsonld} og={og}>
+  <article class="mk">
+    <header class="wrap mk-hero">
+      <p class="mk-crumbs"><a href="/features/">Features</a> / {page.eyebrow}</p>
+      <h1>{page.h1}</h1>
+      <p class="lede">{page.lede}</p>
+      <div class="mk-ctas">
+        <a class="mk-btn mk-primary" href="#try">Try it below</a>
+        <a class="mk-btn" href="/editor/">Open the full editor</a>
+        <a class="mk-btn" href="#agent">Make it with your agent</a>
+      </div>
+    </header>
+
+    <section id="try" class="mk-try" aria-labelledby="try-h">
+      <div class="wrap">
+        <div class="mk-try-head">
+          <h2 id="try-h">Try it here. Free, no sign-up.</h2>
+          <p>{page.demo.note}</p>
+        </div>
+        <div class="mk-frame">
+          <iframe id="demo" src={demoSrc} title={`Levni editor with an example: ${page.eyebrow}`} loading="eager"></iframe>
+        </div>
+      </div>
+    </section>
+
+    {items.length > 0 && (
+      <section class="wrap mk-gallery" aria-labelledby="ex-h">
+        <h2 id="ex-h">Start from an example</h2>
+        <p class="mk-sub">Each one opens in the editor above. Change it, then download it.</p>
+        <ul>
+          {items.map((it) => (
+            <li>
+              <button type="button" class="mk-ex" data-src={`/g/${page.gallery}/${it.id}.json`} aria-label={`Edit this example: ${it.alt}`}>
+                <img src={`/g/${page.gallery}/${it.id}-s.webp`} width="640" height="359" alt={it.alt} loading="lazy" decoding="async" />
+                <span>Edit this</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+        <p class="mk-sub"><a href={`/gallery/#${page.gallery}`}>See them full size in the gallery</a></p>
+      </section>
+    )}
+
+    <section class="wrap mk-uses" aria-labelledby="uses-h">
+      <h2 id="uses-h">What you can make</h2>
+      <div class="mk-cards">
+        {page.uses.map((u) => <div class="mk-card"><h3>{u.title}</h3><p>{u.text}</p></div>)}
+      </div>
+    </section>
+
+    <section id="agent" class="wrap mk-agent" aria-labelledby="agent-h">
+      <div>
+        <p class="mk-k">Free in your agent</p>
+        <h2 id="agent-h">Or ask for it in plain words.</h2>
+        <p>Add Levni to Claude Code, Claude Desktop, Codex or Cursor and paste this. It draws on your own machine, so the $20 plan you already have is enough: no image credits, no second bill.</p>
+        <p><a class="mk-btn mk-primary" href="/mcp/#setup">Add Levni to your agent</a></p>
+      </div>
+      <div class="mk-prompt">
+        <div class="mk-prompt-head"><span>Prompt</span><button type="button" class="mk-copy" data-copy={page.prompt}>Copy</button></div>
+        <p>{page.prompt}</p>
+      </div>
+    </section>
+
+    <section class="wrap mk-code" aria-labelledby="code-h">
+      <h2 id="code-h">The same thing in code</h2>
+      <p>Every picture is a small JSON scene. This one renders with <code>npx @levni/levni render scene.json stickers.png</code>, the same as in the editor.</p>
+      <pre><code>{page.code}</code></pre>
+    </section>
+
+    <section class="wrap mk-faq" aria-labelledby="faq-h">
+      <h2 id="faq-h">Questions</h2>
+      {page.faq.map(({ q, a }) => <details><summary>{q}</summary><p>{a}</p></details>)}
+      <p class="mk-more"><a href={page.guide.href}>{page.guide.text}</a> · <a href={page.docs.href}>{page.docs.text}</a> · <a href="/features/">All features</a></p>
+      {others.length > 0 && <p class="mk-more">More free makers: {others.map((o, i) => <>{i > 0 && ' · '}<a href={`/make/${o.slug}/`}>{o.eyebrow}</a></>)}</p>}
+    </section>
+  </article>
+</Base>
+
+<script>
+  // examples load into the embedded editor; copy buttons copy the prompt
+  const frame = document.getElementById('demo') as HTMLIFrameElement | null;
+  for (const b of document.querySelectorAll<HTMLButtonElement>('.mk-ex')) {
+    b.addEventListener('click', () => {
+      if (!frame) return;
+      frame.src = `/embed/editor/?src=${b.dataset.src}`;
+      document.getElementById('try')?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    });
+  }
+  for (const b of document.querySelectorAll<HTMLButtonElement>('.mk-copy')) {
+    b.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(b.dataset.copy || ''); b.textContent = 'Copied'; } catch { b.textContent = 'Select and copy'; }
+      setTimeout(() => (b.textContent = 'Copy'), 1600);
+    });
+  }
+</script>
+
+<style>
+  .mk-hero { padding-top: clamp(32px, 6vw, 72px); text-align: center; }
+  .mk-crumbs { margin: 0 0 14px; font: 700 12px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+  .mk-crumbs a { color: inherit; }
+  .mk-hero h1 { max-width: 20ch; margin: 0 auto 16px; font-size: clamp(34px, 5.4vw, 60px); line-height: 1.04; text-wrap: balance; }
+  .mk-hero .lede { max-width: 62ch; margin: 0 auto 24px; }
+  .mk-ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+  .mk-btn { display: inline-flex; align-items: center; padding: 12px 18px; border-radius: 10px; border: 1.5px solid var(--ink); color: var(--ink); font-weight: 700; text-decoration: none; }
+  .mk-btn:hover { background: var(--ink); color: var(--paper); }
+  .mk-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .mk-primary:hover { background: var(--ink); border-color: var(--ink); }
+
+  .mk-try { margin-top: clamp(32px, 5vw, 56px); padding: clamp(24px, 4vw, 40px) 0; background: #e8e4da; }
+  .mk-try .wrap { max-width: 1280px; }
+  .mk-try-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 24px; margin-bottom: 14px; }
+  .mk-try-head h2 { margin: 0; font-size: clamp(22px, 2.6vw, 30px); }
+  .mk-try-head p { margin: 0; max-width: 60ch; color: var(--ink-soft); font-size: 15px; }
+  .mk-frame { border-radius: 14px; overflow: hidden; background: var(--paper); box-shadow: 0 24px 60px -28px rgba(20,24,31,.55), 0 0 0 1px rgba(20,24,31,.08); }
+  .mk-frame iframe { display: block; width: 100%; height: min(78vh, 680px); min-height: 520px; border: 0; }
+
+  .mk-gallery, .mk-uses, .mk-agent, .mk-code, .mk-faq { margin-top: clamp(48px, 7vw, 88px); }
+  .mk-gallery h2, .mk-uses h2, .mk-code h2, .mk-faq h2 { margin: 0 0 8px; }
+  .mk-sub { margin: 0 0 16px; color: var(--ink-soft); }
+  .mk-gallery ul { list-style: none; margin: 0 0 12px; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  @media (max-width: 760px) { .mk-gallery ul { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .mk-ex { position: relative; display: block; width: 100%; padding: 0; border: 0; border-radius: 12px; overflow: hidden; background: #fff; cursor: pointer; box-shadow: 0 0 0 1px var(--rule); }
+  .mk-ex img { display: block; width: 100%; height: auto; }
+  .mk-ex span { position: absolute; right: 10px; bottom: 10px; padding: 6px 10px; border-radius: 999px; background: var(--ink); color: var(--paper); font-size: 13px; font-weight: 700; opacity: 0; transform: translateY(4px); transition: opacity .15s, transform .15s; }
+  .mk-ex:hover span, .mk-ex:focus-visible span { opacity: 1; transform: none; }
+  .mk-ex:hover { box-shadow: 0 0 0 2px var(--ink); }
+  @media (hover: none) { .mk-ex span { opacity: 1; transform: none; } }
+
+  .mk-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-top: 16px; }
+  .mk-card { padding: 18px; border-radius: 14px; background: #fff; box-shadow: 0 0 0 1px var(--rule); }
+  .mk-card h3 { margin: 0 0 6px; font-size: 18px; }
+  .mk-card p { margin: 0; color: var(--ink-soft); font-size: 15px; }
+
+  .mk-agent { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 24px 48px; align-items: center; }
+  .mk-k { margin: 0 0 8px; font: 700 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--coral-deep); }
+  .mk-agent h2 { margin: 0 0 10px; }
+  .mk-prompt { border-radius: 14px; background: var(--ink); color: var(--paper); overflow: hidden; }
+  .mk-prompt-head { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,.12); font: 700 12px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--mustard); }
+  .mk-copy { padding: 6px 12px; border: 1px solid rgba(255,255,255,.3); border-radius: 7px; background: transparent; color: var(--paper); font: 600 13px/1 var(--serif); cursor: pointer; }
+  .mk-prompt p { margin: 0; padding: 16px; font: 15px/1.55 var(--mono); }
+  .mk-code pre { margin: 14px 0 0; padding: 16px; border-radius: 12px; background: #1b1f27; color: #e6ecf5; overflow-x: auto; font: 13px/1.55 var(--mono); }
+  .mk-faq details { border-top: 1px solid var(--rule); padding: 14px 0; }
+  .mk-faq summary { font-weight: 600; cursor: pointer; }
+  .mk-faq details p { margin: 10px 0 0; color: var(--ink-soft); }
+  .mk-more { margin-top: 18px; color: var(--ink-soft); }
+  @media (max-width: 760px) {
+    .mk-agent { grid-template-columns: minmax(0, 1fr); }
+    .mk-frame iframe { height: 78vh; min-height: 560px; }
+  }
+</style>

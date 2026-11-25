@@ -19,6 +19,7 @@ export default defineConfig({
   trailingSlash: 'always',
   integrations: [
     sitemap({
+      filter: (page) => !page.includes('/embed/'), // the iframe demo is not a page of its own
       serialize(item) {
         const m = lastmod.get(item.url);
         if (m) item.lastmod = m;

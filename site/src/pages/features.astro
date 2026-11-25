@@ -1,5 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
+import { MAKE } from '../data/make';
+// a feature with its own /make/ page links to it first
+const MAKE_FOR: Record<string, string> = { seals: 'stickers-seals-tickets' };
+for (const slug of Object.values(MAKE_FOR)) if (!MAKE.some((m) => m.slug === slug)) throw new Error(`no /make/ page ${slug}`);
 import { SITE } from '../site';
 import folio from '../data/props.json';
 
@@ -107,7 +111,7 @@ const jsonld = [{ '@type': 'SoftwareApplication', name: 'Levni', applicationCate
           <p>{f.text}</p>
           {f.sub && <><h3>{f.sub[0]}</h3><p>{f.sub[1]}</p></>}
           {f.fields && <div class="fields">{f.fields.map((c) => <code>{c}</code>)}</div>}
-          <p class="links"><a class="text-link" href={f.link[0]}>{f.link[1]}</a>{f.more && <a class="text-link" href={f.more[0]}>{f.more[1]}</a>}{f.gallery && <a class="text-link" href={`/gallery/#${f.gallery}`}>See them in the gallery</a>}</p>
+          <p class="links">{MAKE_FOR[f.id] && <a class="text-link try-link" href={`/make/${MAKE_FOR[f.id]}/`}>Try it free in your browser</a>}<a class="text-link" href={f.link[0]}>{f.link[1]}</a>{f.more && <a class="text-link" href={f.more[0]}>{f.more[1]}</a>}{f.gallery && <a class="text-link" href={`/gallery/#${f.gallery}`}>See them in the gallery</a>}</p>
         </div>
         <div class={`imgs n${f.img.length}`}>{f.img.map((src, k) => <img class="tezhip" src={src} alt={f.alt[k]} width={src.includes('/g/icons/') ? 400 : src.includes('/g/boards/') || src.includes('poster-series') ? 1200 : 800} height={src.includes('/g/icons/') ? 400 : src.includes('/g/boards/') ? 800 : src.includes('poster-series') ? 794 : 449} loading="lazy" decoding="async" />)}</div>
       </section>
@@ -157,4 +161,5 @@ const jsonld = [{ '@type': 'SoftwareApplication', name: 'Levni', applicationCate
     .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
   @media (max-width: 480px) { .cards { grid-template-columns: minmax(0, 1fr); } .imgs.n2 { grid-template-columns: 1fr; } }
+  .try-link { font-weight: 700; }
 </style>
