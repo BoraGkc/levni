@@ -106,7 +106,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
           <input class="lv-search" id="q" type="search" placeholder="Search: cat, kahve, rocket…" autocomplete="off" />
           <div id="browse"></div>
         </section>
-        <section data-p="shapes" hidden><p class="lv-help">Click to add, or drag onto the canvas.</p><div class="lv-grid lv-grid-2" id="shapes"></div></section>
+        <section data-p="shapes" hidden><p class="lv-help">Click to add, or drag onto the canvas. 3D shapes look best with Look: soft.</p><div id="shapes"></div></section>
         <section data-p="text" hidden><p class="lv-help">Type is drawn from bundled fonts, so it looks the same everywhere.</p><div class="lv-texts" id="texts"></div></section>
         <section data-p="layers" hidden>
           <div class="lv-seg2" role="tablist" aria-label="Position">
@@ -171,6 +171,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   import { compose, critique, registerProps, registerFont, registerFile, fontsFor, toBlob, COLORS, STYLES } from '../../../src/browser.mjs';
   import CATS from '../data/categories.json';
   import { DRAW_STYLES, drawingName, styleOf, likeDrawing, contrast, luminance } from '../lib/draw-styles';
+  import { SPEC, SHAPES, SHAPE_CATS, type Field } from '../lib/element-spec';
 
   // ---------- assets, loaded on demand ----------
   const propFiles = import.meta.glob('../../../library/props/*.json', { import: 'default' });
@@ -240,28 +241,6 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   // ---------- things to add (s: a size unit, 30 % of the short side) ----------
   type Maker = (x: number, y: number, s: number) => any;
   const R = Math.round;
-  const SHAPES: { id: string; label: string; make: Maker }[] = [
-    { id: 'panel', label: 'Panel', make: (x, y, s) => ({ type: 'panel', x: R(x - s), y: R(y - s * 0.7), w: R(s * 2), h: R(s * 1.4), color: 'blue' }) },
-    { id: 'disc', label: 'Circle', make: (x, y, s) => ({ type: 'disc', x, y, r: R(s * 0.6), color: 'mustard' }) },
-    { id: 'block', label: 'Pill', make: (x, y, s) => ({ type: 'block', x: R(x - s * 0.9), y: R(y - s * 0.3), w: R(s * 1.8), h: R(s * 0.6), radius: R(s * 0.3), color: 'coral' }) },
-    { id: 'sunburst', label: 'Sun rays', make: (x, y, s) => ({ type: 'sunburst', x, y, size: R(s * 1.3), color: 'mustard', rayColor: 'tone-mustard' }) },
-    { id: 'marks', label: 'Sparkles', make: (x, y, s) => ({ type: 'marks', area: [R(x - s), R(y - s * 0.6), R(s * 2), R(s * 1.2)], count: 6, colors: ['coral', 'mustard', 'blue'] }) },
-    { id: 'confetti', label: 'Confetti', make: (x, y, s) => ({ type: 'confetti', x: R(x - s), y: R(y - s * 0.6), w: R(s * 2), h: R(s * 1.2), kind: 'confetti' }) },
-    { id: 'waves', label: 'Waves', make: (x, y, s) => ({ type: 'waves', x: R(x - s), y: R(y - s * 0.3), w: R(s * 2), h: R(s * 0.6), color: 'blue' }) },
-    { id: 'cloud', label: 'Cloud', make: (x, y, s) => ({ type: 'cloud', x, y: R(y + s * 0.2), size: R(s * 1.2) }) },
-    { id: 'tree', label: 'Tree', make: (x, y, s) => ({ type: 'tree', x, y: R(y + s * 0.6), size: R(s * 1.3) }) },
-    { id: 'plant', label: 'Plant', make: (x, y, s) => ({ type: 'plant', x, y: R(y + s * 0.2), size: R(s * 0.9) }) },
-    { id: 'person', label: 'Person', make: (x, y, s) => ({ type: 'person', x, y: R(y + s * 0.7), size: R(s * 1.4), pose: 'walking' }) },
-    { id: 'people', label: 'People', make: (x, y, s) => ({ type: 'people', x: R(x - s), y: R(y + s * 0.6), w: R(s * 2), n: 4, size: R(s * 1.1) }) },
-    { id: 'bubble', label: 'Speech bubble', make: (x, y, s) => ({ type: 'bubble', x: R(x - s * 0.7), y: R(y - s * 0.45), w: R(s * 1.4), h: R(s * 0.9), tail: 'left', content: 'lines' }) },
-    { id: 'window', label: 'Browser window', make: (x, y, s) => ({ type: 'window', x: R(x - s), y: R(y - s * 0.65), w: R(s * 2), h: R(s * 1.3), title: 'levni.dev' }) },
-    { id: 'seal', label: 'Seal sticker', make: (x, y, s) => ({ type: 'seal', x, y, size: R(s * 1.2), edge: 'scallop', fill: 'coral', color: 'ink', textColor: 'ink', text: 'hand inked', sep: '✦', word: 'NEW', wordColor: 'paper' }) },
-    { id: 'stub', label: 'Ticket', make: (x, y, s) => ({ type: 'stub', x: R(x - s), y: R(y - s * 0.4), w: R(s * 2), h: R(s * 0.8), fill: 'paper', text: 'Admit one', stubText: 'no. 0412', color: 'ink' }) },
-    { id: 'meshgrad', label: 'Gradient orb', make: (x, y, s) => ({ type: 'meshgrad', x, y, r: R(s * 0.7), preset: 'orb' }) },
-    { id: 'dither', label: 'Dither disc', make: (x, y, s) => ({ type: 'dither', x, y, r: R(s * 0.7), color: 'blue', mode: 'radial' }) },
-    { id: 'halftone', label: 'Halftone', make: (x, y, s) => ({ type: 'halftone', x: R(x - s), y: R(y - s * 0.6), w: R(s * 2), h: R(s * 1.2), color: 'tone', mode: 'radial' }) },
-    { id: 'arrow', label: 'Arrow', make: (x, y, s) => ({ type: 'arrow', from: [R(x - s), R(y + s * 0.3)], to: [R(x + s), R(y - s * 0.3)], bend: 0.3, color: 'coral' }) },
-  ];
   // text presets; a combo returns several elements, added together. Previews are drawn by Levni itself.
   const TEXTS: { id: string; label: string; make: Maker }[] = [
     { id: 'headline', label: 'Headline', make: (x, y, s) => ({ type: 'type', text: 'Big idea.', x: R(x - s * 1.2), y: R(y - s * 0.2), size: R(s * 0.45), font: 'black', color: 'ink' }) },
@@ -541,6 +520,10 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     if (Array.isArray(o.area)) o.area = [r1(o.area[0] + dx), r1(o.area[1] + dy), o.area[2], o.area[3]];
     if (Array.isArray(o.points)) o.points = o.points.map((p: number[]) => [r1(p[0] + dx), r1(p[1] + dy)]);
     for (const k of ['from', 'to']) if (Array.isArray(o[k])) o[k] = [r1(o[k][0] + dx), r1(o[k][1] + dy)];
+    if (typeof o.cx === 'number') o.cx = r1(o.cx + dx);
+    if (typeof o.cy === 'number') o.cy = r1(o.cy + dy);
+    if (Array.isArray(o.circle)) o.circle = [r1(o.circle[0] + dx), r1(o.circle[1] + dy), ...o.circle.slice(2)];
+    if (Array.isArray(o.fit) && o.fit.length === 4) o.fit = [r1(o.fit[0] + dx), r1(o.fit[1] + dy), o.fit[2], o.fit[3]];
     if (o.type === 'hills' && typeof o.base === 'number') o.base = r1(o.base + dy);
     return o;
   }
@@ -557,11 +540,14 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     const stretch = positions && ['panel', 'block', 'waves', 'halftone', 'confetti', 'window', 'hatch', 'dither', 'meshgrad'].includes(o.type) && o.r == null;
     if (typeof o.w === 'number') o.w = r1(o.w * (stretch ? sx : sm));
     if (typeof o.h === 'number') o.h = r1(o.h * (stretch ? sy : sm));
-    for (const key of ['size', 'r', 'ry', 'scale', 'height', 'radius']) if (typeof o[key] === 'number') o[key] = r1(o[key] * sm);
+    if (positions) { if (typeof o.cx === 'number') o.cx = r1(o.cx * sx); if (typeof o.cy === 'number') o.cy = r1(o.cy * sy); }
+    if (Array.isArray(o.circle)) o.circle = positions ? [r1(o.circle[0] * sx), r1(o.circle[1] * sy), r1(o.circle[2] * sm), ...o.circle.slice(3)] : [o.circle[0], o.circle[1], r1(o.circle[2] * sm), ...o.circle.slice(3)];
+    if (Array.isArray(o.fit) && o.fit.length === 4) o.fit = positions ? [r1(o.fit[0] * sx), r1(o.fit[1] * sy), r1(o.fit[2] * sm), r1(o.fit[3] * sm)] : [r1(o.fit[0] + o.fit[2] * (1 - sm) / 2), r1(o.fit[1] + o.fit[3] * (1 - sm) / 2), r1(o.fit[2] * sm), r1(o.fit[3] * sm)];
+    for (const key of ['size', 'r', 'ry', 'scale', 'height', 'radius', 'width']) if (typeof o[key] === 'number') o[key] = r1(o[key] * sm);
     if (o.type === 'label' && o.size == null) o.size = r1(16 * sm);
     return o;
   }
-  const canMove = (e: any) => e && !e.locked && (typeof e.x === 'number' || Array.isArray(e.area) || Array.isArray(e.points) || Array.isArray(e.from));
+  const canMove = (e: any) => e && !e.locked && (typeof e.x === 'number' || Array.isArray(e.area) || Array.isArray(e.points) || Array.isArray(e.from) || Array.isArray(e.circle) || Array.isArray(e.fit));
 
   type Drag = { mode: 'move' | 'size' | 'rot'; start: { x: number; y: number }; orig: any; box: Box; committed: boolean };
   let drag: Drag | null = null, busy = false, pending = false;
@@ -728,7 +714,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
 
   // ---------- rail and flyout ----------
   const fly = $('fly'), lv = $('lv');
-  const TITLES: Record<string, string> = { templates: 'Templates', drawings: 'Drawings', shapes: 'Shapes', text: 'Text', layers: 'Position', edit: 'All settings', effects: 'Effects', code: 'Scene code' };
+  const TITLES: Record<string, string> = { templates: 'Templates', drawings: 'Drawings', shapes: 'Shapes', text: 'Text', layers: 'Layers', edit: 'Settings', effects: 'Effects', code: 'Scene code' };
   let panel = 'drawings';
   function openPanel(id: string | null) {
     panel = id || '';
@@ -737,13 +723,13 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     for (const s of fly.querySelectorAll<HTMLElement>('[data-p]')) s.hidden = s.dataset.p !== id;
     if (id) fly.querySelector('.lv-fly-body')!.scrollTop = 0; // each panel opens at its top
     if (!id) return;
-    $('fly-h').textContent = TITLES[id];
+    $('fly-h').textContent = id === 'edit' ? (cur() ? `${TYPE_NAMES[cur().type] || 'Part'} settings` : 'Canvas settings') : TITLES[id];
     $('fly-back').hidden = !(id === 'drawings' && openShelf);
     if (id === 'templates' || id === 'shapes' || id === 'text') thumbs(id);
     if (id === 'code') syncCode(true);
     renderPanelFor();
   }
-  for (const b of document.querySelectorAll<HTMLButtonElement>('.lv-rail-b')) b.addEventListener('click', () => openPanel(panel === b.dataset.panel && !lv.classList.contains('closed') ? null : b.dataset.panel!));
+  for (const b of document.querySelectorAll<HTMLButtonElement>('.lv-rail-b')) b.addEventListener('click', () => { const id = panel === b.dataset.panel && !lv.classList.contains('closed') ? null : b.dataset.panel!; openPanel(id); if (id === 'layers') setPosTab('layers'); });
   $('fly-close').addEventListener('click', () => openPanel(null));
   function renderPanelFor() {
     if (panel === 'edit') renderProps();
@@ -842,10 +828,17 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   function thumbs(kind: 'shapes' | 'text' | 'templates') {
     if (thumbDone.has(kind)) return;
     thumbDone.add(kind);
-    if (kind === 'shapes') for (const sh of SHAPES) {
-      const pic = tile($('shapes'), sh.label, () => add({ kind: 'shape', id: sh.id }), { kind: 'shape', id: sh.id });
-      (pic as any)._load = async () => { try { pic.append(Object.assign(document.createElement('img'), { src: await thumbUrl({ canvas: [240, 240], seed: 3, elements: [sh.make(120, 120, 80)] }), alt: '' })); } catch { pic.closest('button')?.remove(); } };
-      lazy.observe(pic);
+    if (kind === 'shapes') for (const [cat, catLabel] of SHAPE_CATS) {
+      const list = SHAPES.filter((x) => x.cat === cat);
+      if (!list.length) continue;
+      const head = Object.assign(document.createElement('h3'), { className: 'lv-h3', textContent: catLabel });
+      const grid = document.createElement('div'); grid.className = 'lv-grid lv-grid-2';
+      $('shapes').append(head, grid);
+      for (const sh of list) {
+        const pic = tile(grid, sh.label, () => add({ kind: 'shape', id: sh.id }), { kind: 'shape', id: sh.id });
+        (pic as any)._load = async () => { try { pic.append(Object.assign(document.createElement('img'), { src: await thumbUrl({ canvas: [240, 240], seed: 3, ...(sh.soft ? { finish: 'soft' } : {}), elements: [sh.make(120, 120, 80)] }), alt: '' })); } catch { pic.closest('button')?.remove(); } };
+        lazy.observe(pic);
+      }
     }
     if (kind === 'text') for (const t of TEXTS) {
       const pic = tile($('texts'), t.label, () => add({ kind: 'text', id: t.id }), { kind: 'text', id: t.id });
@@ -910,7 +903,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
 
   // ---------- contextual toolbar ----------
   const ctx = $('ctx');
-  const TYPE_NAMES: Record<string, string> = { prop: 'Drawing', type: 'Text', label: 'Label', panel: 'Panel', disc: 'Circle', block: 'Pill', marks: 'Sparkles', sunburst: 'Sun rays', iso: '3D world', person: 'Person', people: 'People', seal: 'Seal', stub: 'Ticket', meshgrad: 'Gradient', dither: 'Dither', bubble: 'Speech bubble', window: 'Window', confetti: 'Confetti', waves: 'Waves', halftone: 'Halftone', arrow: 'Arrow', cloud: 'Cloud', tree: 'Tree', plant: 'Plant', extrude3d: '3D icon', glyphfill: 'ASCII', echo: 'Echo', image: 'Image' };
+  const TYPE_NAMES: Record<string, string> = { prop: 'Drawing', type: 'Text', label: 'Label', panel: 'Panel', disc: 'Circle', block: 'Pill', marks: 'Sparkles', sunburst: 'Sun rays', iso: '3D world', person: 'Person', people: 'People', seal: 'Seal', stub: 'Ticket', meshgrad: 'Gradient', dither: 'Dither', bubble: 'Speech bubble', window: 'Window', confetti: 'Confetti', waves: 'Waves', halftone: 'Halftone', arrow: 'Arrow', cloud: 'Cloud', tree: 'Tree', plant: 'Plant', extrude3d: '3D icon', glyphfill: 'ASCII', echo: 'Echo', image: 'Image', amtone: 'Riso screen', camo: 'Camo', grain: 'Grain', shapegrid: 'Bauhaus grid', dotmatrix: 'Dot matrix', furniture: 'Poster frame', terrain: 'Terrain', ridgelines: 'Ridgelines', engrave: 'Etching', flowfield: 'Flow lines', hatch: 'Hatching', rose: 'Flower', spiro: 'Guilloche', flag: 'Flag', badge: 'Badge', ringtext: 'Ring text', ticks: 'Ticks', sheet: 'Sheet', stack: 'Paper stack', crowd: 'Crowd', isotype: 'Pictograms', soft3d: '3D cover', ribbon: 'Ribbon', tube: 'Tube', ribbon3d: '3D ribbon', tube3d: '3D tube', torus3d: '3D ring', sphere3d: '3D ball', capsule3d: '3D pill', blob3d: '3D blob', cubes3d: '3D blocks', bars: 'Bar chart', linechart: 'Line chart', pie: 'Pie chart', donut: 'Donut chart', isochart: 'Icon chart', hills: 'Hills', glyphs: 'Glyph field', line: 'Line', shape: 'Shape', brush: 'Brush stroke' };
   function layerName(e: any) {
     if (!e) return '';
     const dn = drawingName(e);
@@ -942,7 +935,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       parts.push(colorButton('background', 'scene', 'Background'));
       parts.push(ctxButton('Re-ink', () => { change((s) => { s.seed = Math.floor(Math.random() * 9000) + 1; }); say('Re-inked: same layout, a new hand.'); }, { title: 'Same layout, a new hand: the ink wobble, plates and grain change', html: `${ICON_DICE}Re-ink` }));
       if (els().some((x) => drawingName(x))) parts.push(ctxButton('Draw all as…', (b) => openStyleAll(b), { title: 'Turn every drawing on this page into ink, 3D, ASCII, dots or echo' }));
-      parts.push(sep(), ctxButton('Layers', () => openPanel('layers')));
+      parts.push(sep(), ctxButton('Layers', () => { openPanel('layers'); setPosTab('layers'); }));
       parts.push(Object.assign(document.createElement('span'), { className: 'lv-ctx-hint', textContent: 'Click a part to edit it' }));
       return ctx.replaceChildren(...parts);
     }
@@ -962,7 +955,6 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       f.addEventListener('change', () => { setField('font', f.value); endEdit(); });
       parts.push(f);
     }
-    if (typeof e.text === 'string') parts.push(ctxButton('Edit text', editText, { cls: 'lv-cb-text', title: 'Edit the words (or double-click them)' }));
     if (e.type === 'type' || e.type === 'label') {
       const size = e.size ?? (e.type === 'label' ? 16 : 120);
       const box = document.createElement('span'); box.className = 'lv-stepper';
@@ -973,9 +965,14 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       box.append(step(-4), n, step(4));
       parts.push(box);
     }
-    if (COLOR_KEY[e.type]) parts.push(colorButton(COLOR_KEY[e.type], 'el'));
+    if (e.type === 'type' || e.type === 'label') parts.push(colorButton('color', 'el'));
+    else if (SPEC[e.type]) parts.push(...quickControls(e));
+    else if (COLOR_KEY[e.type]) parts.push(colorButton(COLOR_KEY[e.type], 'el'));
     if (e.type === 'type') parts.push(ctxButton('Effects', () => openPanel('effects'), { pressed: panel === 'effects' && !lv.classList.contains('closed') }));
-    parts.push(sep(), ctxButton('Edit', () => openPanel('edit'), { title: 'All settings' }), ctxButton('Position', () => openPanel('layers')));
+    const open = (p: string) => panel === p && !lv.classList.contains('closed');
+    parts.push(sep(),
+      ctxButton('Settings', () => (typeof e.text === 'string' ? editText() : openPanel('edit')), { title: typeof e.text === 'string' ? 'Every setting, with the words first (or double-click the text)' : 'Every setting of this part', pressed: open('edit') }),
+      ctxButton('Arrange', () => { openPanel('layers'); setPosTab('arrange'); }, { title: 'Order, align, layers', pressed: open('layers') }));
     ctx.replaceChildren(...parts);
   }
 
@@ -1137,11 +1134,11 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   const NUMS = new Set(['size', 'w', 'h', 'r', 'n', 'count', 'radius', 'bend', 'weight', 'depth', 'cell', 'labelSize', 'hole', 'unit']);
   const propsEl = $('props');
   let editCommitted = false, liveT = 0;
-  function setField(key: string, value: any, target: 'el' | 'scene' = 'el') {
+  function setField(key: string, value: any, target: 'el' | 'scene' = 'el', keepFalse = false) {
     if (!editCommitted) { commit(); editCommitted = true; }
     const o = target === 'el' ? cur() : scene;
     if (!o) return;
-    if (value === undefined || value === '' || value === false) delete o[key]; else o[key] = value;
+    if (value === undefined || value === '' || (value === false && !keepFalse)) delete o[key]; else o[key] = value;
     clearTimeout(liveT);
     liveT = window.setTimeout(() => { render(); renderLayers(); syncTop(); syncCode(); if (key === 'color' || key === 'fill' || key === 'background') renderCtx(); persist(); }, 90);
   }
@@ -1209,6 +1206,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   function renderProps() {
     const e = cur();
     propsEl.replaceChildren();
+    if (panel === 'edit') $('fly-h').textContent = e ? `${TYPE_NAMES[e.type] || 'Part'} settings` : 'Canvas settings';
     if (!e) {
       propsEl.append(Object.assign(document.createElement('p'), { className: 'lv-help wide', textContent: 'Canvas settings. Select a part of the picture to edit it.' }));
       propsEl.append(field('Background', inlineSwatches(scene.background ?? 'paper', (c) => setField('background', c === 'paper' ? undefined : c, 'scene')), true));
@@ -1221,6 +1219,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       if (typeof e.y === 'number') propsEl.append(field('Y', numInput(e.y, (n) => setField('y', n))));
     }
     if (CHARTS.has(e.type)) propsEl.append(chartData(e));
+    if (SPEC[e.type]) return specProps(e);
     const keys = FIELDS[e.type] || Object.keys(e).filter((k) => !SKIP.has(k) && ['string', 'number', 'boolean'].includes(typeof e[k])).slice(0, 8);
     const fallback = (k: string) => k === 'size' && e.type === 'label' ? 16 : k === 'size' && e.type === 'type' ? 120 : k === 'hole' ? 0.55 : k === 'labelSize' ? 13 : DEFAULTS[k];
     for (const k of keys) if (CHARTS.has(e.type) && k === 'highlight') propsEl.append(field(LABELS[k], highlightPick(e), true));
@@ -1233,6 +1232,115 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       propsEl.append(d);
     }
     if (e.type === 'iso' || e.objects || (e.type === 'draw' && e.paths)) propsEl.append(Object.assign(document.createElement('p'), { className: 'lv-help wide', textContent: 'Its inner parts are edited in Code.' }));
+  }
+
+  // ---------- settings from the element spec (lib/element-spec.ts) ----------
+  const applies = (f: Field, e: any) => !((f.k === 'w' || f.k === 'h') && e.r != null && e.w == null) && !(f.k === 'r' && e.w != null && ['dither', 'meshgrad', 'amtone', 'engrave'].includes(e.type)) && !(f.k === 'size' && e.type === 'iso');
+  const numVal = (v: string) => (/^-?\d+(\.\d+)?$/.test(v) ? +v : v);
+  function colorList(e: any, f: Field, onDone: () => void) {
+    const list: string[] = Array.isArray(e[f.k]) ? e[f.k] : typeof e.color === 'string' && f.k === 'colors' ? [e.color] : [];
+    const wrap = document.createElement('div'); wrap.className = 'lv-clist';
+    const set = (next: string[]) => { setField(f.k, next.length ? next : undefined); if (f.k === 'colors' && next.length && e.color != null) setField('color', undefined); };
+    list.forEach((cl, i) => {
+      const chip = Object.assign(document.createElement('button'), { type: 'button', className: 'lv-dchip', title: `${cl}: click to change` });
+      chip.style.setProperty('--c', hexOf(cl)); chip.setAttribute('aria-label', `${f.label} ${i + 1}: ${cl}`);
+      chip.addEventListener('click', (ev) => { ev.stopPropagation(); openColor(chip, cl, (nc) => { const next = [...list]; next[i] = nc; set(next); setTimeout(onDone, 120); }); });
+      wrap.append(chip);
+    });
+    const plus = Object.assign(document.createElement('button'), { type: 'button', className: 'lv-dchip lv-dchip-add', textContent: '+', title: 'Add an ink' });
+    plus.setAttribute('aria-label', `Add to ${f.label}`);
+    plus.addEventListener('click', (ev) => { ev.stopPropagation(); openColor(plus, 'coral', (nc) => { set([...list, nc]); setTimeout(onDone, 120); }); });
+    wrap.append(plus);
+    if (list.length > 1) {
+      const minus = Object.assign(document.createElement('button'), { type: 'button', className: 'lv-dchip lv-dchip-add', textContent: '−', title: 'Remove the last ink' });
+      minus.setAttribute('aria-label', `Remove the last of ${f.label}`);
+      minus.addEventListener('click', () => { set(list.slice(0, -1)); endEdit(); onDone(); });
+      wrap.append(minus);
+    }
+    return wrap;
+  }
+  function specControl(f: Field, e: any, onDone: () => void): HTMLElement {
+    const v = e[f.k];
+    const set = (nv: any) => setField(f.k, nv, 'el', f.def === true);
+    if (f.kind === 'color') return inlineSwatches(v ?? f.def ?? 'ink', (c) => set(c));
+    if (f.kind === 'colors') return colorList(e, f, onDone);
+    if (f.kind === 'enum') {
+      const sel = document.createElement('select');
+      const cur0 = v == null ? String(f.def ?? f.opts![0][0]) : String(v);
+      for (const [val, lab] of f.opts!) sel.add(new Option(lab, val, false, val === cur0));
+      if (![...sel.options].some((o) => o.selected)) sel.add(new Option(String(v), String(v), true, true));
+      sel.addEventListener('change', () => { set(sel.value === '' ? undefined : numVal(sel.value)); endEdit(); });
+      return sel;
+    }
+    if (f.kind === 'bool') {
+      const i = Object.assign(document.createElement('input'), { type: 'checkbox', checked: v ?? !!f.def, className: 'lv-switch' });
+      i.addEventListener('change', () => { set(i.checked); endEdit(); });
+      return i;
+    }
+    if (f.kind === 'range') {
+      const wrap = document.createElement('div'); wrap.className = 'lv-range';
+      const i = Object.assign(document.createElement('input'), { type: 'range', min: String(f.min), max: String(f.max), step: String(f.step), value: String(v ?? f.def) }); i.setAttribute('aria-label', f.label);
+      const out = Object.assign(document.createElement('output'), { textContent: String(v ?? f.def) });
+      i.addEventListener('input', () => { out.textContent = i.value; set(+i.value); });
+      i.addEventListener('change', endEdit);
+      wrap.append(i, out);
+      return wrap;
+    }
+    if (f.kind === 'seed') {
+      const wrap = document.createElement('div'); wrap.className = 'lv-seed';
+      const i = numInput(v ?? f.def ?? 1, (nv) => set(Math.max(1, R(nv))));
+      const dice = Object.assign(document.createElement('button'), { type: 'button', className: 'lv-abtn', innerHTML: `${ICON_DICE} Shuffle`, title: 'A new one' });
+      dice.addEventListener('click', () => { const nv = Math.floor(Math.random() * 999) + 1; i.value = String(nv); set(nv); endEdit(); });
+      wrap.append(i, dice);
+      return wrap;
+    }
+    if (f.kind === 'text' && f.k === 'rotate') {
+      const i = Object.assign(document.createElement('input'), { type: 'text', value: Array.isArray(v) ? v.join(', ') : '', placeholder: '-16, -26, 3' });
+      i.addEventListener('change', () => { const a = i.value.split(/[ ,]+/).filter(Boolean).map(Number); set(a.length === 3 && a.every(Number.isFinite) ? a : undefined); endEdit(); });
+      return i;
+    }
+    if (f.kind === 'text') {
+      const big = f.k === 'text';
+      const i = Object.assign(document.createElement(big ? 'textarea' : 'input'), big ? { value: v ?? '', rows: Math.min(5, String(v ?? '').split('\n').length + 1) } : { type: 'text', value: v ?? '' }) as HTMLInputElement;
+      i.addEventListener('input', () => set(i.value)); i.addEventListener('change', endEdit);
+      return i;
+    }
+    return numInput(v ?? f.def ?? 0, (nv) => set(nv), f.step ?? 1);
+  }
+  function specProps(e: any) {
+    const fields = SPEC[e.type].filter((f) => applies(f, e));
+    const wide = (f: Field) => ['color', 'colors', 'range', 'text', 'seed'].includes(f.kind);
+    const again = () => renderProps();
+    for (const f of fields.filter((x) => !x.more)) propsEl.append(field(f.label, specControl(f, e, again), wide(f)));
+    const known = new Set([...SPEC[e.type].map((f) => f.k), 'x', 'y']);
+    const more = fields.filter((x) => x.more);
+    const extra = Object.keys(e).filter((k) => !SKIP.has(k) && !known.has(k) && ['string', 'number', 'boolean'].includes(typeof e[k]));
+    if (more.length || extra.length) {
+      const d = document.createElement('details'); d.className = 'lv-extra wide';
+      d.append(Object.assign(document.createElement('summary'), { textContent: `More settings (${more.length + extra.length})` }));
+      for (const f of more) d.append(field(f.label, specControl(f, e, again), true));
+      for (const k of extra) d.append(field(LABELS[k] || k, control(k, e[k], (nv) => setField(k, nv)), true));
+      propsEl.append(d);
+    }
+    if (e.objects || (e.type === 'draw' && e.paths)) propsEl.append(Object.assign(document.createElement('p'), { className: 'lv-help wide', textContent: 'Its inner parts are edited in Code.' }));
+  }
+  // the toolbar: the few settings marked quick, right above the canvas
+  function quickControls(e: any): HTMLElement[] {
+    const out: HTMLElement[] = [];
+    for (const f of (SPEC[e.type] || []).filter((x) => x.quick && applies(x, e))) {
+      if (f.kind === 'color') out.push(colorButton(f.k, 'el', f.label));
+      else if (f.kind === 'colors') {
+        const list: string[] = Array.isArray(e[f.k]) ? e[f.k] : typeof e.color === 'string' ? [e.color] : [];
+        out.push(ctxButton(f.label, () => openPanel('edit'), { cls: 'lv-cb-color', title: `${f.label}: change them in Settings`, html: `<span class="lv-chips">${list.slice(0, 4).map((cl) => `<span class="lv-chip" style="--c:${hexOf(cl)}"></span>`).join('')}</span><span class="lv-cb-l">${f.label}</span>` }));
+      } else if (f.kind === 'enum') {
+        const sel = document.createElement('select'); sel.className = 'lv-cselect'; sel.setAttribute('aria-label', f.label); sel.title = f.label;
+        const cur0 = e[f.k] == null ? String(f.def ?? f.opts![0][0]) : String(e[f.k]);
+        for (const [val, lab] of f.opts!) sel.add(new Option(lab, val, false, val === cur0));
+        sel.addEventListener('change', () => { setField(f.k, sel.value === '' ? undefined : numVal(sel.value)); endEdit(); setTimeout(() => { renderPanelFor(); }, 120); });
+        out.push(sel);
+      } else if (f.kind === 'seed') out.push(ctxButton(`Shuffle ${f.label.toLowerCase()}`, () => { setField('seed', Math.floor(Math.random() * 999) + 1); endEdit(); setTimeout(renderPanelFor, 120); }, { html: `${ICON_DICE}Shuffle`, title: `A new ${f.label.toLowerCase()}` }));
+    }
+    return out;
   }
 
   // ---------- chart data: one row per bar, slice or point ----------
@@ -1315,6 +1423,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   const layersEl = $('layers');
   const chev = (d: string) => `<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="${d}" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
   function setPosTab(t: 'arrange' | 'layers') {
+    if (panel === 'layers') $('fly-h').textContent = t === 'arrange' ? 'Arrange' : 'Layers';
     $('pos-arrange').setAttribute('aria-selected', String(t === 'arrange')); $('pos-layers').setAttribute('aria-selected', String(t === 'layers'));
     $('arrange').hidden = t !== 'arrange'; $('layerbox').hidden = t !== 'layers';
   }
@@ -1760,6 +1869,12 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   .lv-ib:disabled { opacity: .3; }
   .lv-eye[aria-pressed='true'] { opacity: .4; }
   .lv-data { display: grid; gap: 6px; }
+  .lv-clist { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .lv-dchip-add { display: grid; place-items: center; background: #fff; color: var(--indigo); font: 700 15px/1 var(--mono); }
+  .lv-seed { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px; }
+  .lv-seed .lv-abtn { display: inline-flex; align-items: center; gap: 6px; }
+  .lv-chips { display: inline-flex; }
+  .lv-chips .lv-chip + .lv-chip { margin-left: -6px; }
   .lv-drow { display: grid; grid-template-columns: 30px minmax(0, 1.4fr) minmax(0, 1fr) 30px; gap: 6px; align-items: center; }
   .lv-drow input { width: 100%; min-width: 0; box-sizing: border-box; font: 14px/1.3 var(--serif); padding: 7px 8px; border: 1.5px solid var(--line); border-radius: 0; background: #fff; color: var(--ink); }
   .lv-dhead span { font: 600 10px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
