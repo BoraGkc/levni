@@ -156,6 +156,8 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
           </div>
           <div class="lv-mini" id="mini" hidden></div>
           <div class="lv-drop" id="drop" hidden>Drop to add</div>
+          <div class="lv-guide lv-guide-v" id="guide-v" hidden></div>
+          <div class="lv-guide lv-guide-h" id="guide-h" hidden></div>
         </figure>
       </div>
       {!embed && <div class="lv-pages" id="pages" role="list" aria-label="Pages"></div>}
@@ -598,7 +600,18 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     if (!drag.committed) { if (Math.hypot(p.x - start.x, p.y - start.y) < 2) return; commit(); drag.committed = true; mini.hidden = true; }
     const c = { x: box.x + box.w / 2, y: box.y + box.h / 2 };
     if (drag.mode === 'move') {
-      const dx = p.x - start.x, dy = p.y - start.y;
+      let dx = p.x - start.x, dy = p.y - start.y;
+      // snap the part's centre to the page centre, its edges to the page margins (hold Alt to move freely)
+      const tol = 7 / k0(), mg = Math.min(cv.w, cv.h) * 0.05;
+      let gx: number | null = null, gy: number | null = null;
+      if (!ev.altKey) {
+        const xs: [number, number][] = [[box.x + box.w / 2 + dx, cv.w / 2], [box.x + dx, mg], [box.x + box.w + dx, cv.w - mg]];
+        const ys: [number, number][] = [[box.y + box.h / 2 + dy, cv.h / 2], [box.y + dy, mg], [box.y + box.h + dy, cv.h - mg]];
+        const hx = xs.find(([a, t]) => Math.abs(a - t) < tol), hy = ys.find(([a, t]) => Math.abs(a - t) < tol);
+        if (hx) { dx += hx[1] - hx[0]; gx = hx[1]; }
+        if (hy) { dy += hy[1] - hy[0]; gy = hy[1]; }
+      }
+      guide(gx, gy);
       els()[sel] = moved(drag.orig, dx, dy); showSel(dx, dy);
     } else if (drag.mode === 'size') {
       const k = Math.max(0.1, Math.min(8, Math.hypot(p.x - c.x, p.y - c.y) / Math.max(1, Math.hypot(start.x - c.x, start.y - c.y))));
@@ -614,7 +627,14 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     }
     quick();
   });
-  const drop = () => { if (!drag) return; const did = drag.committed; drag = null; if (did) refresh(); else showSel(); };
+  const gv = $('guide-v'), gh = $('guide-h');
+  function guide(x: number | null, y: number | null) {
+    const f = k0();
+    gv.hidden = x == null; gh.hidden = y == null;
+    if (x != null) gv.style.left = `${x * f}px`;
+    if (y != null) gh.style.top = `${y * f}px`;
+  }
+  const drop = () => { guide(null, null); if (!drag) return; const did = drag.committed; drag = null; if (did) refresh(); else showSel(); };
   stage.addEventListener('pointerup', drop);
   stage.addEventListener('pointercancel', drop);
   scroll.addEventListener('pointerdown', (ev) => { if (ev.target === scroll && sel >= 0) select(-1); });
@@ -641,13 +661,16 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
 
   // ---------- adding things ----------
   function freeSpot(w: number, h = w) {
-    const parts = boxes.filter((b) => b.w * b.h < cv.w * cv.h * 0.5);
+    // grounds (panels, gradients, textures) are fine to sit on; words are the worst thing to cover
+    const GROUNDS = new Set(['panel', 'block', 'meshgrad', 'halftone', 'dither', 'waves', 'marks', 'confetti', 'sunburst', 'grain', 'camo', 'amtone', 'hatch', 'flowfield', 'glyphs', 'hills', 'terrain', 'ridgelines', 'engrave', 'shapegrid', 'dotmatrix', 'furniture']);
+    const parts = boxes.filter((b) => b.w * b.h < cv.w * cv.h * 0.5 && !GROUNDS.has(els()[b.i]?.type) && !els()[b.i]?.hidden);
+    const weight = (b: Box) => (['type', 'label', 'ringtext'].includes(els()[b.i]?.type) ? 3 : 1);
     const m = Math.min(cv.w, cv.h) * 0.05;
     let best = { x: cv.w / 2, y: cv.h / 2, cost: Infinity };
-    for (let gy = 1; gy <= 7; gy++) for (let gx = 1; gx <= 7; gx++) {
-      const ax = Math.max(w / 2 + m, Math.min(cv.w - w / 2 - m, (cv.w * gx) / 8)), ay = Math.max(h / 2 + m, Math.min(cv.h - h / 2 - m, (cv.h * gy) / 8));
+    for (let gy = 1; gy <= 11; gy++) for (let gx = 1; gx <= 11; gx++) {
+      const ax = Math.max(w / 2 + m, Math.min(cv.w - w / 2 - m, (cv.w * gx) / 12)), ay = Math.max(h / 2 + m, Math.min(cv.h - h / 2 - m, (cv.h * gy) / 12));
       let cost = Math.hypot(ax - cv.w / 2, ay - cv.h / 2) * 0.5;
-      for (const b of parts) cost += Math.max(0, Math.min(ax + w / 2, b.x + b.w) - Math.max(ax - w / 2, b.x)) * Math.max(0, Math.min(ay + h / 2, b.y + b.h) - Math.max(ay - h / 2, b.y));
+      for (const b of parts) cost += weight(b) * Math.max(0, Math.min(ax + w / 2, b.x + b.w) - Math.max(ax - w / 2, b.x)) * Math.max(0, Math.min(ay + h / 2, b.y + b.h) - Math.max(ay - h / 2, b.y));
       if (cost < best.cost) best = { x: R(ax), y: R(ay), cost };
     }
     return best;
@@ -1471,7 +1494,11 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       btn('Left', align(m - b.x, 0)), btn('Centre', align(cv.w / 2 - (b.x + b.w / 2), 0)), btn('Right', align(cv.w - m - (b.x + b.w), 0)),
       btn('Top', align(0, m - b.y)), btn('Middle', align(0, cv.h / 2 - (b.y + b.h / 2))), btn('Bottom', align(0, cv.h - m - (b.y + b.h))),
     );
-    box.replaceChildren(Object.assign(document.createElement('h3'), { className: 'lv-h3', textContent: 'Order' }), order, Object.assign(document.createElement('h3'), { className: 'lv-h3', textContent: 'Align to page' }), al);
+    const copy = document.createElement('div'); copy.className = 'lv-agrid';
+    copy.append(btn('Copy', copyPart), btn('Paste', paste, !clip), btn('Duplicate', () => doAct('dup')));
+    box.replaceChildren(Object.assign(document.createElement('h3'), { className: 'lv-h3', textContent: 'Order' }), order, Object.assign(document.createElement('h3'), { className: 'lv-h3', textContent: 'Align to page' }), al,
+      Object.assign(document.createElement('h3'), { className: 'lv-h3', textContent: 'Copy to another page' }), copy,
+      Object.assign(document.createElement('p'), { className: 'lv-help', textContent: '⌘C, then pick a page and ⌘V: the part lands at the same place, scaled to that page. While dragging, parts snap to the centre and the margins; hold Alt to move freely.' }));
   }
   function renderLayers() {
     const list = els();
@@ -1734,6 +1761,23 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   });
   src.addEventListener('keydown', (e) => { if (e.key === 'Tab' && !e.shiftKey) { e.preventDefault(); src.setRangeText('  ', src.selectionStart, src.selectionEnd, 'end'); } });
 
+  // ---------- copy and paste: a part goes to another page at the same place, scaled to that page ----------
+  let clip: { el: any; wh: [number, number]; page: number; n: number } | null = null;
+  function copyPart() {
+    if (!cur()) return;
+    clip = { el: structuredClone(clean(cur())), wh: sizeOf(scene), page, n: 0 };
+    say(`Copied ${layerName(cur())}. Paste (⌘V) here or on another page.`);
+  }
+  function paste() {
+    if (!clip) return;
+    const [w, h] = sizeOf(scene), [w0, h0] = clip.wh;
+    let e = w === w0 && h === h0 ? structuredClone(clip.el) : rescaled(clip.el, w / w0, h / h0);
+    if (clip.page === page) { clip.n += 1; e = moved(e, 24 * clip.n, 24 * clip.n); } // on the same page, step it so it shows
+    change((s) => { (s.elements ||= []).push(e); });
+    select(els().length - 1);
+    say(`Pasted ${layerName(e)}.`);
+  }
+
   // ---------- keyboard ----------
   document.addEventListener('keydown', (ev) => {
     const t = ev.target as HTMLElement;
@@ -1746,7 +1790,10 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     const mod = ev.metaKey || ev.ctrlKey;
     if (mod && ev.key.toLowerCase() === 'z') { ev.preventDefault(); if (ev.shiftKey) redo(); else undo(); return; }
     if (mod && ev.key.toLowerCase() === 'y') { ev.preventDefault(); redo(); return; }
+    if (mod && ev.key.toLowerCase() === 'v' && clip) { ev.preventDefault(); paste(); return; }
     if (sel < 0) return;
+    if (mod && ev.key.toLowerCase() === 'c') { ev.preventDefault(); copyPart(); return; }
+    if (mod && ev.key.toLowerCase() === 'x') { ev.preventDefault(); copyPart(); doAct('del'); return; }
     if (mod && ev.key.toLowerCase() === 'd') { ev.preventDefault(); doAct('dup'); return; }
     if (ev.key === 'Delete' || ev.key === 'Backspace') { ev.preventDefault(); doAct('del'); return; }
     if (ev.key === ']') { doAct(ev.shiftKey ? 'top' : 'front'); return; }
@@ -1964,6 +2011,18 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   .lv-eye[aria-pressed='true'] { opacity: .4; }
   .lv-data { display: grid; gap: 6px; }
   @media (max-width: 760px) { #shapes .lv-grid-2, #gallery-tpls .lv-grid-2, #templates.lv-grid-2 { grid-template-columns: repeat(3, minmax(0, 1fr)); } #shapes .lv-cap, #gallery-tpls .lv-cap, #templates .lv-cap { font-size: 11px; } }
+  .lv-guide { position: absolute; z-index: 6; pointer-events: none; background: var(--red); }
+  .lv-guide-v { top: 0; bottom: 0; width: 1px; }
+  .lv-guide-h { left: 0; right: 0; height: 1px; }
+  @media (max-width: 760px) {
+    .lv .lv-top .lv-dd { flex: 1 1 0; min-width: 0; padding: 0 22px 0 8px; background-position: right 6px center; }
+    .lv .lv-top .lv-dd-v { font-size: 12px; letter-spacing: .02em; }
+    .lv .lv-top .lv-dd-v { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+    .lv .lv-top .lv-dl { flex: none; width: 42px; padding: 0 !important; font-size: 0 !important; overflow: hidden; display: grid; place-items: center; }
+    .lv .lv-top .lv-dl::before { content: '↓'; font-size: 20px; line-height: 1; }
+    .lv .lv-top .lv-hist .lv-tb-i { width: 34px; }
+    .lv .lv-top .lv-grow { display: none; }
+  }
   .lv-pop { max-height: calc(100% - 90px); overflow-y: auto; overscroll-behavior: contain; }
   .lv-pop-k { margin: 12px 0 4px; font: 600 10px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
   .lv-pop-k:first-child { margin-top: 0; }
