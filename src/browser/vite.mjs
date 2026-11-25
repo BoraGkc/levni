@@ -2,6 +2,7 @@
 // in the client build. Server-side (SSR) builds keep the real modules.
 //   import levni from '@levni/levni/vite';  export default { plugins: [levni()] }   (Astro: vite: { plugins: [...] })
 import { fileURLToPath } from 'node:url';
+import { join } from 'node:path';
 
 const here = (f) => fileURLToPath(new URL(f, import.meta.url));
 const SRC = fileURLToPath(new URL('..', import.meta.url));
@@ -11,10 +12,15 @@ export default function levniBrowser() {
   return {
     name: 'levni-browser',
     enforce: 'pre',
-    resolveId(id, importer, opts) {
-      if (opts?.ssr || !importer || !MAP[id]) return null;
+    async resolveId(id, importer, opts) {
+      if (opts?.ssr || !importer) return null;
       const from = importer.replace(/^\/@fs/, '').split('?')[0];
-      return from.startsWith(SRC) ? here(MAP[id]) : null;
+      if (!from.startsWith(SRC)) return null;
+      if (MAP[id]) return here(MAP[id]);
+      // fontkit: resolve it from the site that bundles Levni, which may install it on its own (a Pages build
+      // installs only the site's packages, not Levni's), then fall back to Levni's own install
+      if (id === 'fontkit') return (await this.resolve(id, join(process.cwd(), 'package.json'), { skipSelf: true })) || null;
+      return null;
     },
   };
 }
