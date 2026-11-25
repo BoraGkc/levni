@@ -1,0 +1,35 @@
+name: Showcase
+description: Show something you made with Levni, or bring your brand or open-source project to the gallery.
+labels: ["showcase"]
+body:
+  - type: input
+    id: what
+    attributes:
+      label: What did you make?
+      description: e.g. README banner for my CLI, a launch poster series, our brand board.
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Where can we see it?
+      description: A repo, a page or a post. Open-source projects are especially welcome.
+  - type: textarea
+    id: scene
+    attributes:
+      label: The scene or brand.json
+      description: Paste the JSON so others can learn from it and remix it.
+      render: json
+  - type: textarea
+    id: image
+    attributes:
+      label: The picture
+      description: Drag the PNG or WebP in here.
+    validations:
+      required: true
+  - type: checkboxes
+    id: ok
+    attributes:
+      label: Gallery
+      options:
+        - label: Levni may show this in the gallery and on social, credited to me.

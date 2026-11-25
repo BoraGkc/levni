@@ -1,0 +1,31 @@
+name: Design skill
+description: Propose an open design skill for agents (a recipe, a critic or an art-direction rule set).
+labels: ["skill"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Levni Skills is the planned open set of design knowledge for agents: when to use it, what to read, what to do, what to check. Rough ideas are welcome.
+  - type: input
+    id: name
+    attributes:
+      label: Skill
+      description: e.g. poster-art-direction, palette-from-logo, cover-for-hard-news.
+    validations:
+      required: true
+  - type: textarea
+    id: when
+    attributes:
+      label: When should an agent use it?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps and checks
+      description: What it reads, what it does, how it knows the result is good.
+  - type: textarea
+    id: example
+    attributes:
+      label: An example
+      description: A before and after, a render, or a scene it would produce.

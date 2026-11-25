@@ -1,0 +1,35 @@
+name: Style pack
+description: Propose a colour map that reprints the whole Levni library in your palette.
+labels: ["style pack"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A style pack maps Levni's colour names (ink, blue, tone, coral, mustard, green, paper…) to your hex values. See [inks.json](https://levni.dev/inks.json) for the names and the riso and miniature packs for examples.
+  - type: input
+    id: name
+    attributes:
+      label: Pack name
+      description: Lowercase, a-z and hyphens, e.g. bosphorus-night.
+    validations:
+      required: true
+  - type: textarea
+    id: map
+    attributes:
+      label: Colour map
+      description: The JSON map, e.g. { "ink": "#14181F", "blue": "#1F3BE0", "coral": "#F0573A" }
+      render: json
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What is it for?
+      description: The mood, a brand, a print process, a period. A render with it helps a lot.
+  - type: checkboxes
+    id: licence
+    attributes:
+      label: Licence
+      options:
+        - label: I am fine with this pack shipping under the MIT licence with my name in the credits.
+          required: true

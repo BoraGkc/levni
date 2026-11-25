@@ -414,23 +414,30 @@ npx @levni/levni board brand.json board.png`}</code></pre>
     </section>
   )}
 
-  <!-- 8. Close: open source and the Folio -->
-  <section id="folio" class="close wrap" aria-labelledby="close-title">
-    <div class="close-text">
-      <h2 id="close-title">Open, and growing every week.</h2>
-      <p>
-        The code is MIT. The drawings are CC BY 4.0: use them anywhere, commercially too, with credit “drawings by Ortak Alan”.
-        Missing an object? Draw it as one JSON file of paths, check it with <code>npx @levni/levni add</code> and open a pull request:
-        the <a href={`${SITE.github}/blob/main/docs/folio-guide.md`}>Folio guide</a> says how to draw, name and tag it, and automatic checks run on every pull request.
-        Cannot draw it yourself? <a href={`${SITE.github}/issues/new?template=prop-request.yml`}>Ask for it</a>.
-      </p>
-      <div class="ctas">
-        <a class="btn btn-primary" href={SITE.github}><Fragment set:html={star} /> Star on GitHub</a>
-        <a class="btn" href={`${SITE.github}/blob/main/CONTRIBUTING.md`}>Draw for the Folio</a>
+  <!-- 8. Community: open design, together -->
+  <section id="community" class="community" aria-labelledby="community-title">
+    <div class="wrap cm-grid">
+      <div class="cm-text">
+        <p class="cm-k">{'{'}open design · community{'}'}</p>
+        <h2 id="community-title">Everything is open source now. Why not the design?</h2>
+        <p>The code is MIT, the {SITE.props.toLocaleString('en')} drawings are CC BY 4.0, and every part of Levni is open to add to: draw an object, share your inks, bring your brand, show what you made, or help write the open design skills agents will use.</p>
+        <div class="ctas">
+          <a class="btn cm-primary" href="/community/">Join the Folio →</a>
+          <a class="btn cm-ghost" href={`${SITE.github}/issues/new?template=prop-request.yml`}>Request a drawing</a>
+        </div>
       </div>
-    </div>
-    <div class="close-art" aria-hidden="true">
-      {['person-standing', 'bell', 'lighthouse', 'pie-chart', 'pizza-slice', 'rainbow'].map((m) => <img src={`/props/${m}-0.webp`} alt="" width="240" height="240" loading="lazy" />)}
+      <ul class="cm-doors">
+        {[
+          ['01', 'Draw for the Folio', 'one JSON file, your name on it', '+'],
+          ['02', 'Share a style pack', 'the library in your palette', '◐'],
+          ['03', 'Bring your brand', 'board, posters, stickers', '◆'],
+          ['04', 'Show what you made', 'credited in the gallery', '★'],
+          ['05', 'Write a design skill', 'coming next: Levni Skills', '✎'],
+          ['06', 'Ask, argue, request', 'issues and discussions', '?'],
+        ].map(([n, t, d, g]) => (
+          <li><a href="/community/"><span class="cm-g" aria-hidden="true">{g}</span><span class="cm-n">{n}</span><b>{t}</b><small>{d}</small></a></li>
+        ))}
+      </ul>
     </div>
   </section>
 
@@ -967,4 +974,27 @@ npx @levni/levni board brand.json board.png`}</code></pre>
   .fcard .fcap b::after { content: ' →'; display: inline-block; opacity: 0; transform: translateX(-6px); transition: opacity 0.2s, transform 0.2s; }
   .fcard:hover .fcap b::after { opacity: 1; transform: none; }
   @media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } }
+
+  /* community band */
+  .community { background: var(--indigo); color: var(--on-indigo); padding: clamp(64px, 8vw, 104px) 0; }
+  .cm-grid { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: clamp(32px, 5vw, 64px); align-items: center; }
+  .cm-k { margin: 0 0 12px; font: 500 0.75rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--lime); }
+  .community h2 { color: #fff; max-width: 14ch; font-size: clamp(2.2rem, 4.6vw, 3.6rem); letter-spacing: -0.045em; }
+  .cm-text p { color: var(--mute-indigo); max-width: 50ch; margin-bottom: 26px; }
+  .cm-primary { background: var(--lime); border-color: var(--lime); color: var(--indigo); border-radius: 0; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.82rem; }
+  .cm-primary:hover { background: #fff; border-color: #fff; color: var(--indigo); }
+  .cm-ghost { border-color: rgba(255, 255, 255, 0.45); color: #fff; border-radius: 0; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.82rem; }
+  .cm-ghost:hover { background: #fff; color: var(--indigo); }
+  .community .ctas { justify-content: flex-start; }
+  .cm-doors { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .cm-doors a { position: relative; display: flex; flex-direction: column; gap: 4px; height: 100%; padding: 18px 16px 20px; background: #fff; color: var(--indigo); text-decoration: none; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%); transition: background 0.2s, transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1); }
+  .cm-doors li:nth-child(1) a { background: var(--lime); }
+  .cm-doors a:hover { background: var(--lime); transform: translateY(-3px); }
+  .cm-g { position: absolute; right: 14px; top: 12px; font: 600 1.3rem/1 var(--mono); color: var(--red); }
+  .cm-n { font: 500 0.7rem/1 var(--mono); color: var(--coral-deep); }
+  .cm-doors b { font-size: 1.05rem; letter-spacing: -0.02em; line-height: 1.15; margin-top: 8px; }
+  .cm-doors small { font: 0.72rem/1.35 var(--mono); color: var(--ink-soft); }
+  @media (max-width: 960px) { .cm-grid { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 560px) { .cm-doors { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (prefers-reduced-motion: reduce) { .cm-doors a:hover { transform: none; } }
 </style>

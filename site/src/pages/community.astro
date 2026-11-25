@@ -1,0 +1,200 @@
+---
+import Base from '../layouts/Base.astro';
+import Logo from '../components/Logo.astro';
+import { SITE } from '../site';
+
+const gh = SITE.github;
+const issue = (t: string) => `${gh}/issues/new?template=${t}`;
+
+// Every way in, with the real file or command behind it
+const ways = [
+  { n: '01', k: 'draw', title: 'Draw for the Folio', text: 'One object, one JSON file of paths in a 0–100 box, named colours so every style pack can recolour it. Your name goes in the file and in the credits.', cmd: 'npx @levni/levni add my-drawing.json', href: `${gh}/blob/main/CONTRIBUTING.md`, cta: 'How to draw one', tone: 'lime' },
+  { n: '02', k: 'ask', title: 'Ask for a drawing', text: 'Missing a watering can, a ney, a server rack at an angle? Say what scene needs it. Requests decide what gets drawn next.', cmd: 'issue: prop request', href: issue('prop-request.yml'), cta: 'Request a drawing', tone: 'white' },
+  { n: '03', k: 'inks', title: 'Share a style pack', text: 'A colour map that reprints the whole library in your palette. Riso and miniature are ours; the third pack could be yours.', cmd: '"style": { "blue": "#6A1B9A", … }', href: issue('style-pack.yml'), cta: 'Propose a pack', tone: 'white' },
+  { n: '04', k: 'brand', title: 'Bring your brand', text: 'Run your brand.json through Levni: a board, eight posters, a sticker sheet. Open-source project? We feature the good ones in the gallery.', cmd: 'npx @levni/levni board brand.json', href: issue('showcase.yml'), cta: 'Show your brand', tone: 'white' },
+  { n: '05', k: 'show', title: 'Show what you made', text: 'A README banner, a cover series, a launch poster your agent drew. Post it with the scene and it can land in the gallery, credited.', cmd: 'scene.json + the picture', href: issue('showcase.yml'), cta: 'Submit to the gallery', tone: 'white' },
+  { n: '06', k: 'skills', title: 'Write a design skill', text: 'The prompts, critics and recipes that make an agent good at design: art direction, palette from a logo, poster layout rules. Open them like code.', cmd: 'skills/poster-art-direction.md', href: issue('skill.yml'), cta: 'Propose a skill', tone: 'indigo' },
+];
+
+const steps = [
+  ['draw', 'my-drawing.json', 'paths in a 0–100 box'],
+  ['check', 'npx @levni/levni add', 'schema, names, sizes'],
+  ['PR', 'pull request', 'CI renders it for review'],
+  ['ship', 'in the Folio', 'npm, MCP, the Library, credited'],
+];
+
+const principles = [
+  ['Open by default', 'Code MIT, drawings CC BY 4.0, fonts OFL. If it ships in Levni, you can read it, fork it and use it commercially.'],
+  ['Credit travels', 'Your name sits in the drawing file and follows it into every scene, the Library page and the NOTICE.'],
+  ['Generic, never trademarks', 'A phone, not a brand of phone. No logos, no real faces, so anything drawn is safe to reuse.'],
+  ['Humans and agents both', 'Draw by hand or with a model, then check it yourself. Agent-assisted drawings are marked as such.'],
+];
+---
+<Base title="Community: open design, together" description="Levni is open design: draw for the Folio, ask for drawings, share style packs and brand kits, show what you made, and write the open design skills agents use. Code MIT, drawings CC BY 4.0.">
+  <header class="wrap brand-hero">
+    <p class="eyebrow">Community · open design</p>
+    <h1>Everything is open source now. <em>Why not the design?</em></h1>
+    <p class="lede">Code went open decades ago. Fonts did, then icon sets. Levni opens the rest: the drawings, the inks, the brand kits and the design skills agents work with. {SITE.props.toLocaleString('en')} drawings are in. The next one can be yours.</p>
+    <p class="cm-cta"><a class="cm-btn" href={`${gh}/blob/main/CONTRIBUTING.md`}>Start contributing →</a> <a class="cm-btn ghost" href={issue('prop-request.yml')}>Request a drawing</a> <a class="cm-btn ghost" href={gh}>★ Star on GitHub</a></p>
+  </header>
+
+  <section class="wrap" aria-labelledby="ways-title">
+    <p class="kicker">{'{'}six ways in{'}'}</p>
+    <h2 id="ways-title">Pick a door. All of them are open.</h2>
+    <ul class="ways">
+      {ways.map((w) => (
+        <li class={`way t-${w.tone}`}>
+          <p class="w-n">{w.n} / {w.k}</p>
+          <h3>{w.title}</h3>
+          <p class="w-t">{w.text}</p>
+          <code class="w-c">{w.cmd}</code>
+          <a class="w-a" href={w.href}>{w.cta} →</a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="pipe" aria-labelledby="pipe-title">
+    <div class="wrap">
+      <p class="kicker">{'{'}how a drawing gets in{'}'}</p>
+      <h2 id="pipe-title">From your editor to everyone’s agent in four steps.</h2>
+      <ol class="steps">
+        {steps.map(([k, file, note], i) => (
+          <li><span class="s-i">{String(i + 1).padStart(2, '0')}</span><b>{k}</b><code>{file}</code><small>{note}</small></li>
+        ))}
+      </ol>
+      <pre class="pipe-art" aria-hidden="true">{`   you ──► my-drawing.json ──► npx levni add ──► pull request ──► Folio ──► every agent
+              (paths)           (checks)         (CI renders)    (npm)     (MCP)`}</pre>
+    </div>
+  </section>
+
+  <section class="wrap makers" aria-labelledby="makers-title">
+    <div>
+      <p class="kicker">{'{'}wall of makers{'}'}</p>
+      <h2 id="makers-title">So far, one studio drew it all. Be the second name.</h2>
+      <p class="m-p">Ortak Alan drew the Folio and keeps drawing; some line icons were redrawn from Tabler Icons (MIT). Every slot below is waiting for a person with an object nobody has drawn yet.</p>
+    </div>
+    <ul class="wall">
+      <li class="filled"><Logo size={44} tone="indigo" /><b>Ortak Alan</b><small>{SITE.props.toLocaleString('en')} drawings</small></li>
+      {Array.from({ length: 7 }, (_, i) => (
+        <li class="open"><span aria-hidden="true">{['+', '?', '✎', '+', '☐', '?', '+'][i]}</span><b>your name</b><small>{['a drawing', 'a style pack', 'a brand kit', 'a skill', 'a request', 'a fix', 'a poster'][i]}</small></li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="skills" aria-labelledby="skills-title">
+    <div class="wrap sk-grid">
+      <div>
+        <p class="sk-k">{'{'}coming next · levni skills{'}'}</p>
+        <h2 id="skills-title">Open design skills for agents.</h2>
+        <p>Agents can write code because the knowledge is open. Design knowledge mostly is not: it lives in studios and in people’s heads. Levni Skills will be the open set of recipes, critics and art-direction rules that make an agent good at design, written in the open and tested on real renders.</p>
+        <p><a class="cm-btn" href={issue('skill.yml')}>Propose the first skill →</a></p>
+      </div>
+      <pre class="sk-card" aria-label="An example skill file outline">{`# skills/poster-art-direction.md
+
+when    a brand needs a launch series
+read    brand.json (name, inks, mark)
+do      one word per poster, mark
+        halftoned on two of eight
+check   critic: no focal point? fix
+        contrast < 4.5? swap inks
+ship    posters/01..08.png
+
+status  planned · yours to write`}</pre>
+    </div>
+  </section>
+
+  <section class="wrap principles" aria-labelledby="pr-title">
+    <p class="kicker">{'{'}house rules{'}'}</p>
+    <h2 id="pr-title">Four rules that keep it reusable.</h2>
+    <dl>
+      {principles.map(([t, d]) => (<div><dt>{t}</dt><dd>{d}</dd></div>))}
+    </dl>
+    <p class="talk">Want to talk first? <a href={`${gh}/discussions`}>GitHub Discussions</a> · <a href={`${gh}/issues`}>Issues</a> · <a href={`${gh}/blob/main/CODE_OF_CONDUCT.md`}>Code of Conduct</a></p>
+  </section>
+</Base>
+
+<style>
+  section { margin-top: clamp(64px, 8vw, 104px); }
+  h2 { color: var(--indigo); max-width: 20ch; }
+  .kicker { margin: 0 0 12px; }
+  .cm-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+  .cm-btn { display: inline-block; background: var(--lime); color: var(--indigo); font: 600 0.8rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; padding: 15px 20px; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%); }
+  .cm-btn:hover { background: #fff; color: var(--indigo); }
+  .cm-btn.ghost { background: transparent; color: #fff; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4); clip-path: none; }
+  .cm-btn.ghost:hover { background: #fff; color: var(--indigo); }
+  main :global(.brand-hero) a.cm-btn { color: var(--indigo); }
+  main :global(.brand-hero) a.cm-btn.ghost { color: #fff; }
+  main :global(.brand-hero) a.cm-btn.ghost:hover { color: var(--indigo); }
+
+  .ways { list-style: none; margin: 32px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .way { display: flex; flex-direction: column; gap: 10px; padding: 26px 24px 24px; background: #fff; color: var(--ink); clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%); transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1); }
+  .way:hover { transform: translateY(-4px); }
+  .way.t-lime { background: var(--lime); }
+  .way.t-indigo { background: var(--indigo); color: var(--on-indigo); }
+  .w-n { margin: 0; font: 500 0.72rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--coral-deep); }
+  .t-indigo .w-n { color: var(--lime); }
+  .way h3 { margin: 0; color: var(--indigo); font-size: 1.5rem; }
+  .t-indigo h3 { color: #fff; }
+  .w-t { margin: 0; color: var(--ink-soft); font-size: 0.98rem; flex: 1; }
+  .t-lime .w-t { color: var(--indigo-deep); }
+  .t-indigo .w-t { color: var(--mute-indigo); }
+  .w-c { display: block; font-size: 0.74rem; padding: 9px 11px; background: var(--paper); color: var(--indigo); border-left: 3px solid var(--red); overflow-x: auto; white-space: nowrap; }
+  .t-indigo .w-c { background: rgba(255, 255, 255, 0.1); color: #fff; }
+  .t-lime .w-c { background: rgba(255, 255, 255, 0.55); }
+  .w-a { font: 600 0.76rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; color: var(--indigo); }
+  .t-indigo .w-a { color: var(--lime); }
+  .w-a:hover { text-decoration: underline; }
+
+  .pipe { background: var(--indigo); color: var(--on-indigo); padding: clamp(56px, 7vw, 88px) 0; }
+  .pipe h2 { color: #fff; }
+  .pipe .kicker { color: var(--lime); }
+  .steps { list-style: none; margin: 32px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; counter-reset: s; }
+  .steps li { display: flex; flex-direction: column; gap: 6px; padding: 18px 20px; border-left: 1px solid rgba(255, 255, 255, 0.22); }
+  .steps li:first-child { border-left: 0; padding-left: 0; }
+  .s-i { font: 500 0.72rem/1 var(--mono); color: var(--lime); }
+  .steps b { font-size: 1.7rem; color: #fff; letter-spacing: -0.03em; }
+  .steps code { color: #fff; font-size: 0.8rem; }
+  .steps small { font: 0.74rem/1.4 var(--mono); color: var(--mute-indigo); }
+  .pipe-art { margin: 32px 0 0; background: rgba(255, 255, 255, 0.06); border: 0; color: var(--lime); font-size: 0.78rem; line-height: 1.6; }
+
+  .makers { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 40px; align-items: center; }
+  .m-p { color: var(--ink-soft); max-width: 46ch; }
+  .wall { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+  .wall li { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; aspect-ratio: 1; padding: 10px; text-align: center; }
+  .wall .filled { background: #fff; color: var(--indigo); clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%); }
+  .wall .open { border: 1.5px dashed #b9aef5; color: var(--ink-soft); transition: background 0.2s, border-color 0.2s; }
+  .wall .open:hover { background: var(--lime); border-color: var(--lime); color: var(--indigo); }
+  .wall .open span { font: 600 1.6rem/1 var(--mono); color: var(--indigo); }
+  .wall b { font-size: 0.95rem; }
+  .wall small { font: 0.68rem/1.3 var(--mono); }
+
+  .skills { background: var(--lime); color: var(--indigo); padding: clamp(56px, 7vw, 88px) 0; }
+  .sk-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+  .sk-k { margin: 0 0 12px; font: 600 0.75rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; }
+  .skills h2 { color: var(--indigo); font-weight: 800; }
+  .skills p { color: var(--indigo-deep); max-width: 52ch; }
+  .skills .cm-btn { background: var(--indigo); color: #fff; }
+  .skills .cm-btn:hover { background: #fff; color: var(--indigo); }
+  .sk-card { margin: 0; border: 0; background: #fff; color: var(--indigo); font-size: 0.86rem; line-height: 1.75; padding: 28px 26px; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%); }
+
+  .principles dl { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin: 28px 0 0; }
+  .principles dl div { border-top: 3px solid var(--indigo); padding-top: 14px; }
+  .principles dt { font-weight: 700; color: var(--indigo); font-size: 1.15rem; letter-spacing: -0.02em; }
+  .principles dd { margin: 6px 0 0; color: var(--ink-soft); font-size: 0.96rem; }
+  .talk { margin-top: 36px; font: 0.82rem/1.6 var(--mono); color: var(--ink-soft); }
+
+  @media (max-width: 960px) {
+    .ways { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .makers, .sk-grid { grid-template-columns: minmax(0, 1fr); }
+    .principles dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .steps li:nth-child(3) { border-left: 0; padding-left: 0; }
+  }
+  @media (max-width: 560px) {
+    .ways, .principles dl { grid-template-columns: minmax(0, 1fr); }
+    .wall { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pipe-art { font-size: 0.62rem; }
+  }
+  @media (prefers-reduced-motion: reduce) { .way:hover { transform: none; } }
+</style>
