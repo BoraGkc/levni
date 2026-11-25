@@ -1,0 +1,208 @@
+---
+import Base from '../layouts/Base.astro';
+import Logo from '../components/Logo.astro';
+import { SITE } from '../site';
+
+// The FOMO stack: what it costs to make one small picture in the generative age
+const stack = [
+  ['a credit card', 'for one blog cover'],
+  ['an API key', 'for one sticker'],
+  ['a subscription', 'for one palette'],
+  ['a waitlist', 'for one poster'],
+  ['a GPU you rent', 'for one icon'],
+  ['a prompt engineer', 'for one tulip'],
+];
+
+const articles = [
+  ['Design is infrastructure.', 'Code went open. Fonts went open. Icons went open. The pictures that sit on every page, every README, every launch post should be open too, readable as text and owned by nobody.'],
+  ['A cover should not need a credit card.', 'Most images on the web are covers, cards and icons. They deserve care, not a metered API. Levni draws them on your laptop for nothing, forever.'],
+  ['Taste is not rented.', 'We use AI every day. It writes our scenes, fixes our layouts, reads the critic. What it does not do is decide what good looks like. That part stays with people, written down where everyone can read it.'],
+  ['Same seed, same picture.', 'A design you cannot reproduce is a lottery ticket. Every Levni image comes from a file you can diff, fork and render again in ten years.'],
+  ['Small, slow and finished beats big, fast and almost.', 'We would rather ship one drawing that is right than a thousand that are nearly right.'],
+  ['Credit travels.', 'Whoever draws a thing, their name goes with it into every scene. Open does not mean anonymous.'],
+  ['Clients are not wrong to want it free.', 'They are just early. If the tools are open, the money can go to the people who decide, not the meters that count.'],
+  ['The community is the product.', 'A library one studio draws is a portfolio. A library a thousand people draw is a commons. We are building the second one.'],
+];
+
+const timeline = [
+  ['1718', 'The Tulip Era begins. Gardens, palaces, festivals, tulip bulbs worth more than houses.'],
+  ['1720s', 'Levni paints the court in colours that still look wet. Art blooms, at least at the top.'],
+  ['1730', 'A revolt ends the party. Historians still argue: a renaissance, or a feast before the fall?'],
+  ['2026', 'Everything generates. Every tool has a free trial. It looks like a golden age.'],
+  ['next', 'For the creative process, the end may be near. Or a commons. We are betting on the commons.'],
+];
+---
+<Base title="Manifesto: a post-AI center for designers" description="Who makes Levni and why: an open-source design commons for the generative age. No credit card for a cover, no API key for a sticker, taste you do not rent.">
+  <header class="wrap brand-hero">
+    <p class="eyebrow">Manifesto · who we are</p>
+    <h1>A post-AI center for <em>designers</em>.</h1>
+    <p class="lede">We use AI. We just do not rent our taste from it. Levni is an open-source design commons for the generative age, made by the Ortak Alan crew, the same people who run <a href="https://cartcurt.xyz">cartcurt.xyz</a>, the AI-native nothing firm.</p>
+  </header>
+
+  <section class="wrap big" aria-label="Disclaimer">
+    <p class="tag">§0 / disclaimer</p>
+    <p class="say"><span>We are not an AI company.</span><span>We are not against AI either.</span><span>We just draw, and we leave the source open.</span></p>
+  </section>
+
+  <section class="era" aria-labelledby="era-title">
+    <div class="wrap era-grid">
+      <div>
+        <p class="tag">§1 / the tulip era</p>
+        <h2 id="era-title">We are living in a Tulip Era.</h2>
+        <p>Between 1718 and 1730 the Ottoman court fell in love with tulips, gardens and pleasure. Art bloomed, and Levni, the painter this project is named after, painted it all in colours that still look alive. Then a revolt ended it. The bloom was real, and so was the bill.</p>
+        <p>The generative age feels the same. Every week a new tool, a new model, a new free trial. Everything blooms. It looks like a golden age, and for the creative process it might be the end of one. We would like to keep the tulips and lose the illusion.</p>
+      </div>
+      <ol class="time">
+        {timeline.map(([y, t]) => <li><b>{y}</b><span>{t}</span></li>)}
+      </ol>
+    </div>
+  </section>
+
+  <section class="wrap fomo" aria-labelledby="fomo-title">
+    <div>
+      <p class="tag">§2 / the fomo stack</p>
+      <h2 id="fomo-title">What it takes to make one small picture now.</h2>
+      <p class="f-p">Clients want it free. AI brought the fear of missing out. And to make a simple cover you now plug in an API, pay per image and hope the model is in a good mood. We think that is backwards. Every other layer of the web is open source. Design should be too.</p>
+    </div>
+    <ul class="stack">
+      {stack.map(([what, why]) => <li><s>{what}</s><span>{why}</span></li>)}
+      <li class="ours"><b>npx @levni/levni</b><span>for all of it, for $0</span></li>
+    </ul>
+  </section>
+
+  <section class="arts" aria-labelledby="arts-title">
+    <div class="wrap">
+      <p class="tag">§3 / what we believe</p>
+      <h2 id="arts-title">Eight articles, open for amendments.</h2>
+      <ol class="articles">
+        {articles.map(([t, d], i) => (
+          <li><span class="a-n">{String(i + 1).padStart(2, '0')}</span><h3>{t}</h3><p>{d}</p></li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="wrap who" aria-labelledby="who-title">
+    <p class="tag">§4 / who we are</p>
+    <h2 id="who-title">A small crew with a long memory of the internet.</h2>
+    <div class="people">
+      <article class="p-card lime">
+        <Logo size={46} tone="indigo" />
+        <h3>Ortak Alan</h3>
+        <p>A Turkish publication and studio that draws every article cover with Levni, and builds Levni in the open. “Ortak alan” means common ground.</p>
+        <a href={SITE.ortakAlan}>ortakalan.io →</a>
+      </article>
+      <article class="p-card">
+        <pre class="p-mark" aria-hidden="true">{'{c}'}</pre>
+        <h3>cartcurt</h3>
+        <p>Our other corner of the internet: meaningless products, made sincerely, for the people reading the page. Same crew, louder volume.</p>
+        <a href="https://cartcurt.xyz">cartcurt.xyz →</a>
+      </article>
+      <article class="p-card">
+        <pre class="p-mark" aria-hidden="true">0 B</pre>
+        <h3>Zero Byte Foundation</h3>
+        <p>The post-internet label Berk Boz, one of us, founded back when “post-internet” still sounded like the future. Levni is what that idea grew into after AI: post-AI.</p>
+      </article>
+      <article class="p-card indigo">
+        <pre class="p-mark" aria-hidden="true">1732</pre>
+        <h3>Levni</h3>
+        <p>Abdülcelil Levni, court painter of the Tulip Era. He signed his work, broke a few rules of miniature painting and made people look like people. A good patron saint for open design.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="sign" aria-labelledby="sign-title">
+    <div class="wrap sign-grid">
+      <div>
+        <p class="tag">§5 / sign it</p>
+        <h2 id="sign-title">Signing is easy. Draw one thing.</h2>
+        <p>There is no form and no newsletter. You sign this manifesto by adding something to the commons: a drawing, a style pack, a brand kit, a design skill, or just a request for what is missing.</p>
+        <p class="s-cta"><a class="s-btn" href="/community/">Join the community →</a> <a class="s-btn ghost" href={SITE.github}>★ Star on GitHub</a></p>
+      </div>
+      <pre class="sign-art" aria-hidden="true">{`   signed,
+
+   ______________________
+   ortak alan
+   ______________________
+   cartcurt
+   ______________________
+   zero byte foundation
+   ______________________
+   you?  ← draw one thing
+`}</pre>
+    </div>
+  </section>
+</Base>
+
+<style>
+  section { margin-top: clamp(64px, 8vw, 104px); }
+  h2 { color: var(--indigo); max-width: 18ch; }
+  .tag { margin: 0 0 12px; font: 500 0.75rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--coral-deep); }
+  main :global(.brand-hero) h1 { max-width: 13ch; }
+
+  .say { margin: 0; font: 400 clamp(1.6rem, 3.6vw, 2.9rem)/1.22 var(--mono); letter-spacing: -0.03em; color: var(--indigo); }
+  .say span { display: block; }
+  .say span:last-child { color: var(--coral-deep); }
+
+  .era { background: var(--indigo); color: var(--on-indigo); padding: clamp(56px, 7vw, 96px) 0; }
+  .era h2 { color: #fff; }
+  .era .tag { color: var(--lime); }
+  .era p { color: var(--mute-indigo); max-width: 54ch; }
+  .era-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 64px); align-items: start; }
+  .time { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--lime); }
+  .time li { position: relative; display: grid; grid-template-columns: 4.5em minmax(0, 1fr); gap: 14px; padding: 12px 0 18px 22px; }
+  .time li::before { content: ''; position: absolute; left: -7px; top: 18px; width: 12px; height: 12px; background: var(--lime); }
+  .time li:nth-child(4)::before { background: var(--red); }
+  .time li:last-child::before { background: #fff; }
+  .time b { font: 600 0.95rem/1.5 var(--mono); color: var(--lime); }
+  .time span { color: var(--on-indigo); }
+
+  .fomo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 64px); align-items: center; }
+  .f-p { color: var(--ink-soft); max-width: 52ch; }
+  .stack { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .stack li { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; padding: 14px 18px; background: #fff; font-family: var(--mono); font-size: 0.86rem; }
+  .stack s { color: var(--coral-deep); text-decoration-thickness: 2px; }
+  .stack span { color: var(--ink-soft); text-align: right; }
+  .stack .ours { background: var(--lime); clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%); }
+  .stack .ours b { color: var(--indigo); }
+  .stack .ours span { color: var(--indigo); font-weight: 600; }
+
+  .arts { background: var(--paper-2); padding: clamp(56px, 7vw, 96px) 0; }
+  .articles { list-style: none; margin: 32px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; }
+  .articles li { display: grid; grid-template-columns: 3.2em minmax(0, 1fr); column-gap: 14px; padding: 22px 0; border-top: 1px solid var(--rule); }
+  .a-n { grid-row: span 2; font: 600 1.6rem/1 var(--mono); color: var(--indigo); }
+  .articles h3 { margin: 0 0 6px; color: var(--indigo); font-size: 1.3rem; }
+  .articles p { margin: 0; color: var(--ink-soft); font-size: 0.98rem; }
+
+  .people { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
+  .p-card { display: flex; flex-direction: column; gap: 10px; padding: 24px 22px; background: #fff; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%); }
+  .p-card.lime { background: var(--lime); }
+  .p-card.indigo { background: var(--indigo); color: var(--on-indigo); }
+  .p-card h3 { margin: 0; color: var(--indigo); font-size: 1.35rem; }
+  .p-card.indigo h3 { color: #fff; }
+  .p-card p { margin: 0; flex: 1; color: var(--ink-soft); font-size: 0.95rem; }
+  .p-card.lime p { color: var(--indigo-deep); }
+  .p-card.indigo p { color: var(--mute-indigo); }
+  .p-card a { font: 600 0.76rem/1 var(--mono); letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; color: var(--indigo); }
+  .p-mark { margin: 0; padding: 0; border: 0; background: none; font: 700 1.5rem/46px var(--mono); color: var(--red); height: 46px; }
+  .p-card.indigo .p-mark { color: var(--lime); }
+
+  .sign { background: var(--red); color: #fff; padding: clamp(56px, 7vw, 96px) 0; margin-bottom: 0; }
+  .sign h2 { color: #fff; }
+  .sign .tag { color: var(--lime); }
+  .sign p { max-width: 50ch; }
+  .sign-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 48px; align-items: center; }
+  .s-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+  .s-btn { display: inline-block; background: var(--lime); color: var(--indigo); font: 600 0.8rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; padding: 15px 20px; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%); }
+  .s-btn:hover { background: #fff; color: var(--indigo); }
+  .s-btn.ghost { background: transparent; color: #fff; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.55); clip-path: none; }
+  .s-btn.ghost:hover { background: #fff; color: var(--indigo); }
+  .sign-art { margin: 0; border: 0; background: #fff; color: var(--indigo); font-size: 0.9rem; line-height: 1.55; padding: 26px 28px; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%); }
+
+  @media (max-width: 960px) {
+    .era-grid, .fomo, .sign-grid { grid-template-columns: minmax(0, 1fr); }
+    .people { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .articles { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 560px) { .people { grid-template-columns: minmax(0, 1fr); } .stack li { flex-direction: column; gap: 2px; } .stack span { text-align: left; } }
+</style>
