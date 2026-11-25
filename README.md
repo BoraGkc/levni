@@ -1,12 +1,31 @@
-# Levni
+<div align="center">
 
-![Levni: a garden in miniature colours, drawn by Levni](docs/img/banner.png)
+<a href="https://levni.dev"><img src="docs/img/banner.png" alt="Levni: designed for agents, drawn for people. A tulip drawn in ASCII characters on an indigo card." width="100%"></a>
 
-**Your agent's design studio.** Levni turns a few lines of JSON into finished design work: illustrations and article covers, 3D and pixel icons, charts, brand assets (dither, mesh gradients, ASCII art, seals and stickers, etchings), whole brand boards and branding poster series, all in one hand-inked, riso-printed style. No image model, no account, no API key, no cost per image, about 0.15 s a cover on a laptop. It runs on your machine, and Claude, Codex or Cursor can drive it through MCP.
+<h1>Levni</h1>
 
-[![npm](https://img.shields.io/npm/v/@levni/levni?color=F0573A&label=npm)](https://www.npmjs.com/package/@levni/levni) [![MCP Registry](https://img.shields.io/badge/MCP%20Registry-dev.levni%2Flevni-1F3BE0)](https://registry.modelcontextprotocol.io/v0/servers?search=dev.levni/levni) [![Levni MCP server](https://glama.ai/mcp/servers/BoraGkc/levni/badges/score.svg)](https://glama.ai/mcp/servers/BoraGkc/levni) [![Code: MIT](https://img.shields.io/badge/code-MIT-14181F)](LICENSE) [![Drawings: CC BY 4.0](https://img.shields.io/badge/drawings-CC%20BY%204.0-2E8B57)](https://creativecommons.org/licenses/by/4.0/)
+**A post-AI center for designers.**<br>
+Open-source design engine for AI agents: covers, icons, brand boards and poster series from a few lines of JSON.<br>
+No image model. No API key. No credit card. About 0.15 s a cover, on your laptop.
 
-**[levni.dev](https://levni.dev)** · [Editor](https://levni.dev/editor/) · [README banner](https://levni.dev/banner/) · [Docs](https://levni.dev/docs/) · [Gallery](https://levni.dev/gallery/) · [Library](https://levni.dev/library/) · [MCP guide](https://levni.dev/mcp/) · [Changelog](https://levni.dev/changelog/) · Powered by [Ortak Alan](https://ortakalan.io)
+[![npm](https://img.shields.io/npm/v/@levni/levni?color=4B2FD6&label=npm&labelColor=1B1340)](https://www.npmjs.com/package/@levni/levni) [![MCP Registry](https://img.shields.io/badge/MCP%20Registry-dev.levni%2Flevni-D6E521?labelColor=1B1340)](https://registry.modelcontextprotocol.io/v0/servers?search=dev.levni/levni) [![Levni MCP server](https://glama.ai/mcp/servers/BoraGkc/levni/badges/score.svg)](https://glama.ai/mcp/servers/BoraGkc/levni) [![Code: MIT](https://img.shields.io/badge/code-MIT-4B2FD6?labelColor=1B1340)](LICENSE) [![Drawings: CC BY 4.0](https://img.shields.io/badge/drawings-CC%20BY%204.0-FF3A44?labelColor=1B1340)](https://creativecommons.org/licenses/by/4.0/)
+
+**[levni.dev](https://levni.dev)** · [Editor](https://levni.dev/editor/) · [Gallery](https://levni.dev/gallery/) · [Library](https://levni.dev/library/) · [Docs](https://levni.dev/docs/) · [MCP](https://levni.dev/mcp/) · [Community](https://levni.dev/community/) · [Manifesto](https://levni.dev/manifesto/)
+
+</div>
+
+```text
+        .   .   .
+       /|\ /|\ /|\
+      ( @@@@@@@@@ )      we are not an AI company.
+       \@@@@@@@@@/       we are not against AI either.
+        \@@@@@@@/        we just draw, and leave the source open.
+          \@@@/
+            |            claude mcp add levni -- npx -y @levni/levni mcp
+       \\   |   //
+        \\  |  //        try ↑ ↑ ↓ ↓ ← → ← → B A on levni.dev
+    ~~~~~~~~|~~~~~~~~
+```
 
 ![Branding posters, a brand board, stickers, a dithered sunset, a soft 3D cover, an isometric city, wireframe terrain, an ASCII card and a riso cover, all drawn by Levni](docs/img/showcase.png)
 
@@ -18,7 +37,13 @@
 | all of it from your assistant | `claude mcp add levni -- npx -y @levni/levni mcp` |
 | a design by hand, no install | [levni.dev/editor](https://levni.dev/editor/) |
 
-Named after Levni, the 18th-century Ottoman painter of the Tulip Era, whose colours still look alive.
+## Why Levni exists
+
+Every other layer of the web went open source: the code, the fonts, the icons. The pictures did not. Making one small cover now means a credit card, an API key and a model in a good mood. Clients want it free, AI brought the fear of missing out, and every tool has a free trial.
+
+We are living in a Tulip Era. Between 1718 and 1730 the Ottoman court fell in love with tulips and art bloomed; Levni, the painter this project is named after, painted it in colours that still look alive. Then it ended. The generative age blooms the same way. Levni is the other bet: a design commons, drawn as JSON you can read, diff and keep, made by people who still like making things.
+
+We use AI every day. We just do not rent our taste from it. Read the [manifesto](https://levni.dev/manifesto/).
 
 ## Quick start
 
@@ -203,9 +228,20 @@ Optional extras: the `icon` and `ascii` elements use [Tabler Icons](https://tabl
 
 Drawing needs nothing: no account, no key. Two optional integrations bring your own key, kept in your environment or MCP config: Ghost (`GHOST_ADMIN_API_URL`, `GHOST_ADMIN_API_KEY`) and the judge (`OPENROUTER_API_KEY`). Levni sends your scenes and keys nowhere else.
 
-## Submit to the Folio
+## Community: open design, together
 
-The library grows by contribution: one JSON file per drawing in `library/props/`, SVG paths in a 0–100 box with colour names, so every style pack can recolour it.
+Levni is a commons, and there are six ways in. All of them are open: [levni.dev/community](https://levni.dev/community/).
+
+| door | how |
+| --- | --- |
+| **Draw for the Folio** | one JSON file per drawing in `library/props/`, check it with `npx @levni/levni add my-drawing.json --sheet check.png`, open a pull request. Your name goes in the file and the credits. |
+| **Ask for a drawing** | [prop request](https://github.com/BoraGkc/levni/issues/new?template=prop-request.yml): say what scene needs it |
+| **Share a style pack** | [style pack](https://github.com/BoraGkc/levni/issues/new?template=style-pack.yml): the whole library in your palette |
+| **Bring your brand, show your work** | [showcase](https://github.com/BoraGkc/levni/issues/new?template=showcase.yml): a brand.json, a README banner, a poster series, with the scene |
+| **Write a design skill** | [design skill](https://github.com/BoraGkc/levni/issues/new?template=skill.yml): recipes, critics and art-direction rules for agents (Levni Skills is next) |
+| **Talk** | [issues](https://github.com/BoraGkc/levni/issues), and the [Code of Conduct](CODE_OF_CONDUCT.md) for everyone |
+
+A drawing looks like this:
 
 ```json
 {
@@ -222,7 +258,9 @@ The library grows by contribution: one JSON file per drawing in `library/props/`
 }
 ```
 
-Rules: your own drawing (inspired by a style is fine, tracing a work is not), no faces, no hands, no logos, one object per file, readable at 120 px. Check with `npx @levni/levni add my-props.json --sheet check.png`, then open a pull request. Full guide: [CONTRIBUTING.md](CONTRIBUTING.md), naming and tagging rules: [`docs/folio-guide.md`](docs/folio-guide.md), file schema: [`docs/prop.schema.json`](docs/prop.schema.json), why no logos: [BRAND_LOGOS.md](BRAND_LOGOS.md), [Code of Conduct](CODE_OF_CONDUCT.md). Writing many at once with a chat model: [`docs/prop-prompt.md`](docs/prop-prompt.md).
+Rules: your own drawing (inspired by a style is fine, tracing a work is not), no faces, no hands, no logos, one object per file, readable at 120 px. Full guide: [CONTRIBUTING.md](CONTRIBUTING.md), naming and tagging: [`docs/folio-guide.md`](docs/folio-guide.md), file schema: [`docs/prop.schema.json`](docs/prop.schema.json), why no logos: [BRAND_LOGOS.md](BRAND_LOGOS.md). Writing many at once with a chat model: [`docs/prop-prompt.md`](docs/prop-prompt.md).
+
+**Wanted for the Folio crew:** illustrators, type nerds, riso printers, icon pedants, agent tinkerers, prompt sceptics, OSS maintainers, brand people, miniature fans, people who still sketch. Reward: your name in every scene that uses your work.
 
 ## Licensing
 
@@ -247,4 +285,12 @@ Rules: your own drawing (inspired by a style is fine, tracing a work is not), no
 
 ---
 
-Levni is made and used by [Ortak Alan](https://ortakalan.io).
+<div align="center">
+
+Made and used by [Ortak Alan](https://ortakalan.io), the same crew as [cartcurt.xyz](https://cartcurt.xyz).<br>
+Inspired by our friend Berk Boz and [Zero Bytes Foundation](https://medium.com/zero-bytes-foundation/what-if-we-imagined-a-studio-669f954a05f7): consume, curate, cogitate, create.<br>
+Named after Levni, court painter of the Tulip Era (d. 1732).
+
+<sub>No image model was harmed in the making of this README.</sub>
+
+</div>

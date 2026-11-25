@@ -18,9 +18,9 @@ const cover = d.cover ?? `/blog/${post.id}/cover.webp`;
 </a>
 
 <style>
-  .card { display: flex; flex-direction: column; text-decoration: none; color: var(--ink); background: var(--paper-2); border: 1.5px solid var(--rule); padding: 10px; transition: border-color 0.15s, transform 0.15s; height: 100%; }
-  .card:hover { border-color: var(--ink); transform: translateY(-3px); }
-  .card img { width: 100%; aspect-ratio: 1200 / 673; object-fit: cover; border: 1px solid var(--rule); }
+  .card { display: flex; flex-direction: column; text-decoration: none; color: var(--ink); background: var(--paper-2); border: 0; padding: 10px; transition: background 0.2s, transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1); height: 100%; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%); }
+  .card:hover { background: var(--lime); color: var(--ink); transform: translateY(-3px); }
+  .card img { width: 100%; aspect-ratio: 1200 / 673; object-fit: cover; border: 0; }
   .body { padding: 16px 8px 8px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
   .meta { display: flex; justify-content: space-between; gap: 10px; margin: 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink-soft); }
   .kind { color: var(--accent-text); text-transform: uppercase; letter-spacing: 0.08em; }
@@ -29,4 +29,6 @@ const cover = d.cover ?? `/blog/${post.id}/cover.webp`;
   .big .title { font-size: clamp(1.6rem, 3vw, 2.2rem); }
   .dek { margin: 0; color: var(--ink-soft); }
   .date { margin: auto 0 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink-soft); }
+  .title { color: var(--indigo); letter-spacing: -0.02em; }
+  @media (prefers-reduced-motion: reduce) { .card:hover { transform: none; } }
 </style>

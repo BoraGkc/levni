@@ -71,7 +71,7 @@ The extrusion keeps everything that makes the drawing recognisable: the outline,
 
 ## Find an icon to extrude
 
-Any drawing in [the Levni library](/library/) works, and there are more than 1,500 of them on 15 shelves, searchable in English and Turkish. Search from the terminal:
+Any drawing in [the Levni library](/library/) works, and there are more than 1,600 of them on 15 shelves, searchable in English and Turkish. Search from the terminal:
 
 ```bash
 npx @levni/levni list camera

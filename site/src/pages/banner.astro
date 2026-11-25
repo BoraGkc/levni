@@ -13,7 +13,7 @@ const jsonld = [
   { '@type': 'FAQPage', mainEntity: faq.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
 ];
 ---
-<Base title="Free README banner maker for GitHub repos" description="Paste a GitHub repo link and get a hand-inked 1280 × 640 banner for your README and social preview. Free, no sign-up, drawn in your browser by Levni." jsonld={jsonld}>
+<Base og="/og/banner.png" title="Free README banner maker for GitHub repos" description="Paste a GitHub repo link and get a hand-inked 1280 × 640 banner for your README and social preview. Free, no sign-up, drawn in your browser by Levni." jsonld={jsonld}>
   <article class="wrap page bn">
     <header class="brand-hero">
     <p class="eyebrow">Free tool</p>

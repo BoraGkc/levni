@@ -3,9 +3,9 @@ import folio from './data/props.json';
 export const SITE = {
   name: 'Levni',
   url: 'https://levni.dev',
-  tagline: 'Your agent’s design studio',
+  tagline: 'Open-source design studio for AI agents',
   description:
-    'Levni is an open library of hand-inked illustrations and the engine that composes them: covers, icons, spot illustrations and social images from a JSON scene, in one consistent style. Free for agents and publishers.',
+    'Open-source design engine for AI agents: covers, icons, brand boards and poster series from JSON, drawn on your machine with 1,600+ CC BY drawings. MCP server, no image model, $0.',
   github: 'https://github.com/BoraGkc/levni',
   githubReady: true,
   npm: 'https://www.npmjs.com/package/@levni/levni',

@@ -74,7 +74,7 @@ const jsonld = [
 ];
 ---
 <Base title={d.title} description={d.description} og={og} type="article" published={d.date} jsonld={jsonld}>
-  <header class="wrap post-head">
+  <header class="wrap post-head brand-hero no-art">
     <p class="crumbs"><a href="/blog/">Blog</a> / <a href={`/blog/category/${d.category}/`}>{cat.label}</a></p>
     <p class="kind">{d.kind}</p>
     <h1>{d.title}</h1>
@@ -194,7 +194,7 @@ const jsonld = [
 </script>
 
 <style>
-  .post-head { margin-top: 40px; max-width: 1120px; }
+  .post-head { margin-top: 0; }
   .crumbs { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 18px; }
   .crumbs a { color: inherit; text-decoration: none; }
   .crumbs a:hover { color: var(--accent); }
@@ -288,4 +288,16 @@ const jsonld = [
   .try-card .try-a a { color: var(--paper); font-weight: 600; }
   .try-card .try-btn { padding: 10px 14px; border-radius: 0; background: var(--mustard); color: var(--ink) !important; text-decoration: none; font-weight: 700; }
   @media (max-width: 640px) { .try-card { grid-template-columns: minmax(0, 1fr); } }
+
+  /* post header on the indigo band */
+  .post-head h1 { max-width: 22ch; font-size: clamp(2.3rem, 5vw, 4rem); }
+  .post-head .crumbs { color: var(--mute-indigo); }
+  .post-head .crumbs a:hover { color: var(--lime); }
+  .post-head .kind { color: var(--lime); }
+  .post-head .kind::before { background: var(--red); }
+  .post-head .dek { color: var(--on-indigo); }
+  .post-head .byline { border-top-color: rgba(255, 255, 255, 0.2); }
+  .post-head .byline a { color: #fff; }
+  .post-head .byline p { color: var(--mute-indigo); }
+  .post-head .byline img { background: #fff; }
 </style>

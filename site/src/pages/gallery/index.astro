@@ -53,7 +53,7 @@ const large = (i: Item) => i.big || (i.src ? i.src : `/g/${i.group}/${i.id}.webp
 const json = (i: Item) => (i.code ? undefined : `/g/${i.group}/${i.id}.json`);
 const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= i.h ? 'square' : 'tall');
 ---
-<Base title="Gallery" description={`${total} images drawn by Levni from a JSON scene: branding posters, brand boards, seals and stickers, brand assets (dither, mesh gradients), etched terrain, pixel icons, isometric little worlds, hand-inked charts, riso and miniature covers, 3D icons, every social format and soft 3D covers. Open any one to copy its scene.`}>
+<Base og="/og/gallery.png" title="Gallery" description={`${total} images drawn by Levni from a JSON scene: branding posters, brand boards, seals and stickers, brand assets (dither, mesh gradients), etched terrain, pixel icons, isometric little worlds, hand-inked charts, riso and miniature covers, 3D icons, every social format and soft 3D covers. Open any one to copy its scene.`}>
   <div class="wrap head brand-hero no-art">
     <div class="head-text">
       <p class="eyebrow">Gallery · every image drawn by Levni</p>

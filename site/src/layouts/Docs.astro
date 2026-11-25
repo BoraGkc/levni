@@ -30,7 +30,7 @@ const jsonld = [
 ];
 const docMaker = MAKE.find((m) => m.slug === MAKE_FOR_DOC[Astro.url.pathname.split('/').filter(Boolean)[1] ?? '']);
 ---
-<Base title={title} description={description} og={og} jsonld={jsonld}>
+<Base title={title} description={description} og={og ?? '/og/docs.png'} jsonld={jsonld}>
   <div class="docs">
     <div class="docs-bar">
       <details class="docs-menu">

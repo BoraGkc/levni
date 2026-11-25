@@ -9,7 +9,7 @@ const jsonld = [
   { '@type': 'CollectionPage', name: 'Free design makers', url: `${SITE.url}/make/`, hasPart: [...cards, banner].map((c) => ({ '@type': 'WebPage', name: c.title, url: `${SITE.url}${c.href}` })) },
 ];
 ---
-<Base title="Free design makers: stickers, posters, icons" description="Free makers that run in your browser: stickers and seals, brand boards, branding posters, 3D and pixel icons, ASCII art, charts, covers and more. No sign-up." jsonld={jsonld}>
+<Base og="/og/make.png" title="Free design makers: stickers, posters, icons" description="Free makers that run in your browser: stickers and seals, brand boards, branding posters, 3D and pixel icons, ASCII art, charts, covers and more. No sign-up." jsonld={jsonld}>
   <div class="wrap mh">
     <header class="brand-hero">
     <p class="eyebrow">Free makers</p>
