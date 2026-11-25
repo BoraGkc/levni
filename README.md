@@ -84,6 +84,26 @@ Node 20+. Two dependencies: [sharp](https://sharp.pixelplumbing.com) (SVG to PNG
 
 Renders are fast: a hand-inked cover takes about 0.15 s on a laptop (an M4 Mac), because Levni applies its crayon finish to the pixels itself instead of asking the SVG renderer to (about seven times faster, same picture). Batches of hundreds of images run in a minute or two, with no GPU. [How it works](https://levni.dev/blog/faster-renders/).
 
+## Free makers in your browser
+
+Each maker opens a finished example in the editor: change the words, the drawing and the colours, then download PNG or SVG. No install, no sign-up. When you want more, add the MCP server and ask your agent.
+
+| make | free maker |
+| --- | --- |
+| stickers, seals, tickets | [levni.dev/make/stickers-seals-tickets](https://levni.dev/make/stickers-seals-tickets/) |
+| a brand board | [levni.dev/make/brand-board](https://levni.dev/make/brand-board/) |
+| branding posters | [levni.dev/make/branding-posters](https://levni.dev/make/branding-posters/) |
+| dithered pixel art | [levni.dev/make/dither-pixel-art](https://levni.dev/make/dither-pixel-art/) |
+| mesh gradients | [levni.dev/make/mesh-gradients](https://levni.dev/make/mesh-gradients/) |
+| ASCII art | [levni.dev/make/ascii-art](https://levni.dev/make/ascii-art/) |
+| wireframe terrain and etching | [levni.dev/make/wireframe-terrain-etching](https://levni.dev/make/wireframe-terrain-etching/) |
+| 3D icons | [levni.dev/make/3d-icons](https://levni.dev/make/3d-icons/) |
+| pixel icons | [levni.dev/make/pixel-icons](https://levni.dev/make/pixel-icons/) |
+| isometric worlds | [levni.dev/make/isometric-illustrations](https://levni.dev/make/isometric-illustrations/) |
+| hand-drawn charts | [levni.dev/make/hand-drawn-charts](https://levni.dev/make/hand-drawn-charts/) |
+| blog covers and Open Graph images | [levni.dev/make/blog-covers-og-images](https://levni.dev/make/blog-covers-og-images/) |
+| a README banner from a repo link | [levni.dev/banner](https://levni.dev/banner/) |
+
 ## What it draws
 
 | | |
@@ -216,12 +236,13 @@ Rules: your own drawing (inspired by a style is fine, tracing a work is not), no
 | folder | what |
 | --- | --- |
 | `src/` | the engine: compose, ink, pen, iso, assets, ribbons, people, charts, slots, formats, title, critic, styles, MCP |
+| `src/browser.mjs`, `src/browser/` | the browser build (shims for `node:fs`, `sharp` and friends, a Vite plugin); `src/banner.mjs` builds README banners |
 | `bin/levni.mjs` | the CLI |
 | `adapters/ghost/` | the Ghost adapter |
 | `library/` | the Levni Folio and its licence |
 | `docs/` | scene reference and schema, prop schema, Ghost, judge, sensitive stories, the chat-model prompt |
 | `examples/` | scenes and their renders |
-| `site/` | [levni.dev](https://levni.dev) (Astro, static, Cloudflare Pages; images drawn by Levni: `npm run assets`, `npm run library`) |
+| `site/` | [levni.dev](https://levni.dev) (Astro, static, Cloudflare Pages; images drawn by Levni: `npm run assets`, `npm run library`). The editor is `site/src/components/Editor.astro`; the free makers are `site/src/data/make.ts` (one entry per `/make/` page) and `site/src/data/make-links.ts` (which feature, gallery group, post and docs page leads to which maker) |
 | `test/` | `npm test` runs every test file: props, MCP, Ghost (mocked), formats, judge, critic (~2 min: it draws every variant) |
 
 ---

@@ -4,6 +4,7 @@ import PostCard from '../../components/PostCard.astro';
 import { getCollection, render } from 'astro:content';
 import { SITE } from '../../site';
 import { CATEGORIES, readMinutes, fmtDate } from '../../blog';
+import { makerForPost, lowerName } from '../../data/make-links';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -18,6 +19,11 @@ const minutes = readMinutes(post.body || '');
 const cover = d.cover ?? `/blog/${post.id}/cover.webp`;
 const og = d.og ?? `/blog/${post.id}/og.png`;
 const toc = headings.filter((h) => h.depth === 2);
+// the free maker for this topic (or the editor): try it now, then keep making them in your agent
+const maker = makerForPost(post.id);
+const tryIt = maker
+  ? { href: `/make/${maker.slug}/`, label: `Open the free ${lowerName(maker.eyebrow)}`, title: 'Make this free in your browser', img: `/g/${maker.examples[0]}-s.webp`, text: maker.lede }
+  : { href: '/editor/', label: 'Open the editor', title: 'Try it in your browser', img: '/blog/free-online-design-editor/cover.webp', text: 'Drag 1,600 hand-inked drawings, shapes and type onto a canvas, turn them into 3D icons or ASCII, and download PNG or SVG. Free, no sign-up.' };
 const shown = d.updated ?? d.date;
 
 // related: same shelf plus shared keywords in title and description, newest breaks ties
@@ -114,6 +120,16 @@ const jsonld = [
         </section>
       )}
 
+      <aside class="try-card" aria-label={tryIt.title}>
+        <img src={tryIt.img} alt="" width="640" height="359" loading="lazy" decoding="async" />
+        <div>
+          <p class="try-k">Free, no sign-up</p>
+          <p class="try-t">{tryIt.title}</p>
+          <p class="try-p">{tryIt.text}</p>
+          <p class="try-a"><a class="try-btn" href={tryIt.href}>{tryIt.label} →</a><a href="/mcp/#setup">Or ask your agent, free</a></p>
+        </div>
+      </aside>
+
       <section class="author" aria-label="About the author">
         <img src="/props/pencil-0.webp" alt="" width="56" height="56" loading="lazy" />
         <div>
@@ -134,9 +150,10 @@ const jsonld = [
       <div class="side-card">
         <img src="/props/rocket-0.webp" alt="" width="120" height="120" loading="lazy" />
         <p class="side-eyebrow">Levni · open source</p>
-        <p class="side-title">Draw this in your own project</p>
+        <p class="side-title">{tryIt.title}</p>
         <p class="side-text">{SITE.props} hand-inked drawings, an MCP server for agents, zero cost per image.</p>
-        <a class="side-btn" href="/library/">Browse the library →</a>
+        <a class="side-btn" href={tryIt.href}>{tryIt.label} →</a>
+        <a class="side-link" href="/mcp/#setup">Add Levni to your agent</a>
         <a class="side-link" href={SITE.github}>★ Star on GitHub</a>
       </div>
     </aside>
@@ -262,4 +279,13 @@ const jsonld = [
     .cards { grid-template-columns: minmax(0, 1fr); }
     .band { grid-template-columns: 1fr; padding: 22px; }
   }
+  .try-card { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 20px; align-items: center; margin: 40px 0 8px; padding: 14px; border-radius: 16px; background: var(--ink); color: var(--paper); }
+  .try-card img { width: 100%; height: auto; aspect-ratio: 640 / 359; object-fit: contain; background: var(--paper); border-radius: 10px; margin: 0; }
+  .try-card .try-k { margin: 0 0 4px; font: 700 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mustard); }
+  .try-card .try-t { margin: 0 0 6px; font: 700 22px/1.15 var(--display); color: var(--paper); }
+  .try-card .try-p { margin: 0 0 12px; font-size: 15px; line-height: 1.5; color: #c9cfdb; }
+  .try-card .try-a { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin: 0; }
+  .try-card .try-a a { color: var(--paper); font-weight: 600; }
+  .try-card .try-btn { padding: 10px 14px; border-radius: 9px; background: var(--mustard); color: var(--ink) !important; text-decoration: none; font-weight: 700; }
+  @media (max-width: 640px) { .try-card { grid-template-columns: minmax(0, 1fr); } }
 </style>

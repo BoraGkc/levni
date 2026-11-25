@@ -4,6 +4,8 @@ One brand spec becomes a series of portrait posters (1200 × 1600) that share in
 series a studio posts when it launches an identity. No image model: big type is drawn from bundled fonts as paths,
 and the rest is halftone, dither, dot-matrix, noise blobs, module grids and grain, all from code.
 
+Try it in your browser first: the [free poster maker](https://levni.dev/make/branding-posters/) opens a poster from a brand spec in the editor.
+
 ```
 levni poster <spec.json> <out-dir>      # poster-01-split.png … poster-08-launch.png and series.png
 ```

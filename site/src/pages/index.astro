@@ -1,5 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
+import { MAKE } from '../data/make';
+// each "What it makes" tile opens its free maker
+const MAKE_BY_LABEL: Record<string, string> = {
+  'Branding posters': 'branding-posters', 'Covers and spots': 'blog-covers-og-images', '3D icons': '3d-icons', 'Pixel icons': 'pixel-icons',
+  'Little worlds': 'isometric-illustrations', Charts: 'hand-drawn-charts', 'Seals and stickers': 'stickers-seals-tickets', 'Dither and print screens': 'dither-pixel-art',
+  'Mesh gradients': 'mesh-gradients', 'ASCII art': 'ascii-art', 'Terrain and etching': 'wireframe-terrain-etching', 'Brand boards': 'brand-board',
+};
+for (const slug of Object.values(MAKE_BY_LABEL)) if (!MAKE.some((m) => m.slug === slug)) throw new Error(`no /make/ page ${slug}`);
 import TryLevni from '../components/TryLevni.astro';
 import PostCard from '../components/PostCard.astro';
 import { SITE } from '../site';
@@ -72,7 +80,7 @@ const makes = [
   ['brand', '10-glyphfill-globe', 'ASCII art', 'Shapes filled with characters or dots.'],
   ['lines', '05-engrave-poster', 'Terrain and etching', 'Wireframe hills and pen-hatched plates.'],
   ['boards', '03-firin', 'Brand boards', 'Nine tiles from four fields.'],
-].map(([group, id, label, text]) => ({ ...(group === 'posters' ? poster(id) : item(group, id, label)), label, text }));
+].map(([group, id, label, text]) => ({ ...(group === 'posters' ? poster(id) : item(group, id, label)), label, text, href: `/make/${MAKE_BY_LABEL[label]}/` }));
 
 // The recolour demo: real per-variant SVGs from /props-svg, recoloured in the browser like a style pack
 const demo = [
@@ -303,13 +311,13 @@ npx @levni/levni board brand.json board.png`}</code></pre>
   <section id="makes" class="makes wrap" aria-labelledby="makes-title">
     <div class="split-head">
       <h2 id="makes-title">What it makes.</h2>
-      <p>Twelve kinds of asset from the same JSON. Each tile opens its tab in the gallery. <a href="/features/">Features</a> · <a href="/blog/levni-brand-assets/">What is new in 0.2</a></p>
+      <p>Twelve kinds of asset from the same JSON, and each one has a free maker: open it, change the example, download it. <a href="/make/">All free makers</a> · <a href="/features/">Features</a> · <a href="/gallery/">Gallery</a></p>
     </div>
     <ul class="assets">
       {makes.map((m) => (
         <li>
-          <a href={`/gallery/#${m.group}`}><img src={m.src} width="640" height="359" alt={m.alt} loading="lazy" decoding="async" /></a>
-          <h3><a href={`/gallery/#${m.group}`}>{m.label}</a></h3>
+          <a href={m.href}><img src={m.src} width="640" height="359" alt={m.alt} loading="lazy" decoding="async" /></a>
+          <h3><a href={m.href}>{m.label}</a></h3>
           <p>{m.text}</p>
         </li>
       ))}

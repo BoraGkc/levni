@@ -1,5 +1,7 @@
 ---
 import Base from './Base.astro';
+import { MAKE } from '../data/make';
+import { MAKE_FOR_DOC, lowerName } from '../data/make-links';
 import DocsNav from '../components/docs/DocsNav.astro';
 import { DOC_PAGES, docPage } from '../components/docs/nav';
 import { SITE } from '../site';
@@ -26,6 +28,7 @@ const jsonld = [
     ],
   },
 ];
+const docMaker = MAKE.find((m) => m.slug === MAKE_FOR_DOC[Astro.url.pathname.split('/').filter(Boolean)[1] ?? '']);
 ---
 <Base title={title} description={description} og={og} jsonld={jsonld}>
   <div class="docs">
@@ -52,6 +55,9 @@ const jsonld = [
         <article class="prose" id="docs-article">
           <slot />
         </article>
+        <aside class="docs-try" aria-label="Try it without installing">
+          <p><b>No install needed to try it.</b> {docMaker ? <>Make one in the <a href={`/make/${docMaker.slug}/`}>free {lowerName(docMaker.eyebrow)}</a>, open the <a href="/editor/">editor</a></> : <>Open the <a href="/editor/">editor</a>, browse the <a href="/make/">free makers</a></>}, or <a href="/mcp/#setup">add Levni to your agent</a> and ask in plain words.</p>
+        </aside>
         <nav class="docs-pager" aria-label="Previous and next">
           {prev ? <a class="prev" href={prev.href} rel="prev"><small>Previous</small><span>{prev.title}</span></a> : <span />}
           {next ? <a class="next" href={next.href} rel="next"><small>Next</small><span>{next.title}</span></a> : <span />}
@@ -271,4 +277,6 @@ const jsonld = [
     .docs-toc a[aria-current='true'] { color: var(--ink); border-left-color: var(--coral); font-weight: 600; }
     .docs-toc-inline { display: none; }
   }
+  .docs-try { margin: 36px 0 0; padding: 14px 18px; border-radius: 12px; background: #fff; box-shadow: inset 4px 0 0 var(--mustard), 0 0 0 1px var(--rule); }
+  .docs-try p { margin: 0; }
 </style>

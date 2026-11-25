@@ -68,7 +68,7 @@ const jsonld = [
     <ul class="strip">{strip.map((t) => (
       <li><a href={`/gallery/#${t.g}`}><img src={`/g/${t.g}/${t.id}-s.webp`} width="640" height="359" alt={t.alt} loading="lazy" decoding="async" /></a><strong>{t.label}</strong><span>{t.note}</span></li>
     ))}</ul>
-    <p class="small">Start with <code>render_poster</code> for poster series or <code>render_board</code> for brand boards, or paste one of the <a href="#prompts">brand-asset prompts</a>. Every tile links to its gallery tab.</p>
+    <p class="small">Start with <code>render_poster</code> for poster series or <code>render_board</code> for brand boards, or paste one of the <a href="#prompts">brand-asset prompts</a>. Every tile links to its gallery tab, and every kind of asset has a <a href="/make/">free maker</a> to try in the browser first.</p>
 
     <aside class="free-note">
       <b>Free on the plan you already have.</b> Levni draws on your machine, so a $20 Claude or ChatGPT plan is enough: Claude Code or Claude Desktop with Claude, Codex with ChatGPT. No image credits, no API key, no second bill. Want to see it first? <a href="/editor/">Open the editor</a>.

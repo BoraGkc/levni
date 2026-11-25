@@ -2,6 +2,8 @@
 
 A brand board is one image with many tiles: mark, wordmark, palette, pattern, social card, sticker, merch, web page, business card. It is the picture designers post to show an identity.
 
+Try it in your browser first: the [free brand board generator](https://levni.dev/make/brand-board/) on levni.dev. Your agent can draw boards for free through the MCP server (`render_board`).
+
 ```
 levni board <spec.json> <out.png>
 ```

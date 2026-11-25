@@ -295,6 +295,8 @@ Examples: [`slots-tv`](../examples/slots-tv.json), [`slots-lens`](../examples/sl
 
 ### Dither recipes
 
+Try these in the browser: the [free dither maker](https://levni.dev/make/dither-pixel-art/).
+
 A dithered sunset (OG card): two-ink sky, a radial sun that fades from mustard to coral, line-dithered water.
 
 ```json
@@ -308,6 +310,8 @@ A dithered sunset (OG card): two-ink sky, a radial sun that fades from mustard t
 Any scene as a riso print: add `"screen": "riso"` (or `"1bit"`, `"blueprint"`, `"gameboy"`, `"newsprint"`, or `{ "cell": 5, "inks": ["#14181F", "#F2603F"] }`).
 
 ### Meshgrad recipes
+
+Try these in the browser: the [free mesh gradient maker](https://levni.dev/make/mesh-gradients/).
 
 Hero background with a quiet corner for the title (box units 0..1), a posterised orb and a gradient avatar:
 
@@ -323,6 +327,8 @@ Hero background with a quiet corner for the title (box units 0..1), a posterised
 
 With no `colors` the field uses the engine inks, so it follows `style` packs. `mask` keeps the gradient to chosen shapes and leaves the rest of the box empty.
 ### Line-art landscape recipes
+
+Try these in the browser: the [free terrain and etching maker](https://levni.dev/make/wireframe-terrain-etching/).
 
 Terrain hero on dark (glowing streams, sunset glow behind the far ridge):
 
@@ -345,6 +351,8 @@ Etched plate and moon (use `color: "ink"`, `ground: "paper"` on a paper backgrou
 Ridgelines on dark: `{ "type": "ridgelines", "x": 60, "y": 150, "w": 1080, "h": 440, "lines": 34, "color": "paper", "ground": "dark" }`. Examples: `examples/engrave-*.json`.
 ### Seal recipes
 
+Try these in the browser: the [free sticker maker](https://levni.dev/make/stickers-seals-tickets/).
+
 A stamp, a die-cut sticker and a ticket. All three work on paper and on dark grounds, under `finish: crayon` and `soft`.
 
 ```json
@@ -359,6 +367,8 @@ A stamp, a die-cut sticker and a ticket. All three work on paper and on dark gro
 
 Keep ring text and other marks at least `size` px away from each other; a `seal` with `prop` or `word` in the centre needs no extra element. Examples: [`seal-est`](../examples/seal-est.json), [`seal-sheet`](../examples/seal-sheet.json), [`seal-loyalty`](../examples/seal-loyalty.json).
 ### Glyphfill recipes
+
+Try these in the browser: the [free ASCII art maker](https://levni.dev/make/ascii-art/).
 
 A shaded globe in text, ink on paper (lit side sparse, shadow side dense), and a dot-matrix rocket on dark:
 
@@ -401,6 +411,8 @@ A poster block in three layers: a slanted colour block, a halftoned landscape in
 
 Camo next to a dithered half: `camo` with `colors` ["coral", "dark", "mustard"] and `speckle` 0.6 on the left, a `meshgrad` with `"screen": { "cell": 6, "matrix": 8, "inks": ["#0B57D0", "#14181F"] }` on the right. On a dark ground use `"colors": ["paper", "mustard"], "blend": "normal"` for `amtone`, and `grain` in paper tones with `"mode": "toner"`. A rotated asset turns about its `x`, `y` (the region's top-left), a `panel` about its centre. Examples: [`poster-summit`](../examples/poster-summit.json), [`poster-liquidity`](../examples/poster-liquidity.json), [`poster-grain-dark`](../examples/poster-grain-dark.json).
 ### Poster shape recipes
+
+Try these in the browser: the [free poster maker](https://levni.dev/make/branding-posters/).
 
 Three portrait posters, all `finish: soft` (see `examples/poster-*.json`). A Bauhaus module grid with a free slot for the big word (`spans` + `blank`), a dot-matrix world map on blue under a dark header band, and an echoed head stack:
 
