@@ -5,7 +5,7 @@ export const SITE = {
   url: 'https://levni.dev',
   tagline: 'Open-source design studio for AI agents',
   description:
-    'Open-source design engine for AI agents: covers, icons, brand boards and poster series from JSON, drawn on your machine with 1,600+ CC BY drawings. MCP server, no image model, $0.',
+    'Open-source design engine for AI agents: covers, icons, brand boards and posters from a short JSON scene, drawn on your machine. No image model, no API key, $0 per image; code MIT, drawings CC BY 4.0.',
   github: 'https://github.com/Levni-Dev/levni',
   githubReady: true,
   npm: 'https://www.npmjs.com/package/@levni/levni',

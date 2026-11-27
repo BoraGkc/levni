@@ -9,6 +9,7 @@ const MAKE_BY_LABEL: Record<string, string> = {
 };
 for (const slug of Object.values(MAKE_BY_LABEL)) if (!MAKE.some((m) => m.slug === slug)) throw new Error(`no /make/ page ${slug}`);
 import TryLevni from '../components/TryLevni.astro';
+import TurkishGuides from '../components/TurkishGuides.astro';
 import Logo from '../components/Logo.astro';
 import PostCard from '../components/PostCard.astro';
 import { SITE } from '../site';
@@ -394,6 +395,8 @@ npx @levni/levni board brand.json board.png`}</code></pre>
       ))}
     </div>
   </section>
+
+  <TurkishGuides path="/" wrap />
 
   <!-- 6. Agents: copyable setup per client -->
   <TryLevni title="Your $20 plan already pays for it." lede="Levni draws on your own machine, so there are no image credits and no second bill. Try it in the browser, then connect it to Claude or Codex on the plan you already have and ask for a poster or a cover in plain words." />

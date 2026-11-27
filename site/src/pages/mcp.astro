@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import { SITE } from '../site';
+import TurkishGuides from '../components/TurkishGuides.astro';
 import showcase from '../data/gallery.json';
 
 const repo = SITE.github.replace('https://github.com/', '');
@@ -136,6 +137,8 @@ const jsonld = [
 
     <h2 id="faq">Questions</h2>
     {faq.map(({ q, a }) => (<details><summary>{q}</summary><p>{a}</p></details>))}
+
+    <TurkishGuides path="/mcp/" />
 
     <p class="next"><a class="text-link" href="/features/">Everything Levni can draw</a> · <a class="text-link" href="/library/">Browse the library</a> · <a class="text-link" href={`${SITE.github}#use-it-from-an-agent-mcp`}>README</a></p>
   </article>

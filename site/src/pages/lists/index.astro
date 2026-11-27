@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import { LISTS, total, groupByCategory } from '../../data/lists';
 import { SITE } from '../../site';
+import TurkishGuides from '../../components/TurkishGuides.astro';
 
 const jsonld = [{
   '@type': 'CollectionPage',
@@ -45,6 +46,8 @@ const jsonld = [{
       ))}
     </ul>
   </section>
+
+  <TurkishGuides path="/lists/" wrap />
 
   <section class="wrap suggest" aria-label="Suggest">
     <h2>Made something open? Found something that belongs here?</h2>

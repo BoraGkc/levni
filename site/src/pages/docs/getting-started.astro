@@ -1,6 +1,7 @@
 ---
 import Docs from '../../layouts/Docs.astro';
 import { SITE } from '../../site';
+import TurkishGuides from '../../components/TurkishGuides.astro';
 
 const toc = [
   { id: 'requirements', text: 'Requirements', level: 2 as const },
@@ -114,4 +115,6 @@ npx @levni/levni sheet look.png rocket dove    # every variant, on paper and on 
     <li>Brand work: <a href="/docs/boards/">Brand boards</a> and <a href="/docs/posters/">Branding posters</a>.</li>
     <li>Every command: <a href="/docs/cli/">Command line</a>. From code: <a href="/docs/api/">Node API</a>.</li>
   </ul>
+
+  <TurkishGuides path="/docs/getting-started/" />
 </Docs>

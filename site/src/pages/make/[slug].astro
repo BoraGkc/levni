@@ -4,6 +4,7 @@
 // Content lives in src/data/make.ts.
 import Base from '../../layouts/Base.astro';
 import TryLevni from '../../components/TryLevni.astro';
+import TurkishGuides from '../../components/TurkishGuides.astro';
 import { SITE } from '../../site';
 import { MAKE, type MakePage } from '../../data/make';
 import gallery from '../../data/gallery.json';
@@ -112,6 +113,7 @@ const og = items[0] ? `/g/${items[0].group}/${items[0].id}.webp` : undefined;
       {page.faq.map(({ q, a }) => <details><summary>{q}</summary><p>{a}</p></details>)}
       <p class="mk-more"><a href={page.guide.href}>{page.guide.text}</a> · <a href={page.docs.href}>{page.docs.text}</a> · <a href="/features/">All features</a></p>
       {others.length > 0 && <p class="mk-more">More free makers: {others.map((o, i) => <>{i > 0 && ' · '}<a href={`/make/${o.slug}/`}>{o.eyebrow}</a></>)}</p>}
+      <TurkishGuides path={`/make/${page.slug}/`} />
     </section>
   </article>
 </Base>

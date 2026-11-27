@@ -1,0 +1,2 @@
+# Cloudflare Pages redirects. The sitemap integration writes sitemap-index.xml; old links and crawlers ask for sitemap.xml.
+/sitemap.xml /sitemap-index.xml 301

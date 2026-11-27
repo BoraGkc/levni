@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import PostCard from '../../components/PostCard.astro';
+import TurkishGuides from '../../components/TurkishGuides.astro';
 import { getCollection, render } from 'astro:content';
 import { SITE } from '../../site';
 import { CATEGORIES, readMinutes, fmtDate } from '../../blog';
@@ -129,6 +130,8 @@ const jsonld = [
           <p class="try-a"><a class="try-btn" href={tryIt.href}>{tryIt.label} →</a><a href="/mcp/#setup">Or ask your agent, free</a></p>
         </div>
       </aside>
+
+      <TurkishGuides path={`/blog/${post.id}/`} />
 
       <section class="author" aria-label="About the author">
         <img src="/props/pencil-0.webp" alt="" width="56" height="56" loading="lazy" />

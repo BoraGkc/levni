@@ -1,0 +1,56 @@
+---
+// "Türkçe rehberler / Read in Turkish": two or three Ortak Alan guides picked for this page (src/data/tr-guides.ts).
+//   <TurkishGuides path="/mcp/" />            inside a page column
+//   <TurkishGuides path="/" wrap />           as its own full-width band (adds .wrap)
+// Renders nothing for a path with no guides.
+import { TR_GUIDES, TR_GUIDES_BY_PATH } from '../data/tr-guides';
+import { SITE } from '../site';
+
+interface Props { path: string; wrap?: boolean; }
+const { path, wrap = false } = Astro.props;
+const guides = (TR_GUIDES_BY_PATH[path] ?? []).map((k) => TR_GUIDES[k]);
+const id = `tr-guides-${path.replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '') || 'home'}`;
+---
+{guides.length > 0 && (
+  <aside class:list={['trg', { wrap }]} aria-labelledby={id}>
+    <div class="trg-box">
+      <div class="trg-head">
+        <p class="trg-k"><span lang="tr">Türkçe rehberler</span> · Read in Turkish</p>
+        <h2 id={id}>Guides in Turkish from <a href={SITE.ortakAlan} hreflang="tr">Ortak Alan</a></h2>
+        <p class="trg-note">Ortak Alan is the publication that makes Levni and draws its covers with it.</p>
+      </div>
+      <ul class="trg-list">
+        {guides.map((g) => (
+          <li>
+            <a href={g.href} hreflang="tr">
+              <b lang="tr">{g.title}</b>
+              <small>{g.en}</small>
+              <span class="trg-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </aside>
+)}
+
+<style>
+  .trg { display: block; margin-top: clamp(32px, 5vw, 56px); margin-bottom: clamp(32px, 5vw, 56px); }
+  .trg-box { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 20px 40px; align-items: start; padding: clamp(20px, 3vw, 32px); background: var(--paper-2); border: 1.5px solid var(--indigo); clip-path: var(--chamfer); }
+  .trg-k { margin: 0 0 8px; font: 600 0.74rem/1.3 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--coral-deep); }
+  .trg-head h2 { margin: 0 0 8px; font-size: clamp(1.3rem, 2.2vw, 1.7rem); color: var(--ink); }
+  .trg-head h2 a { color: var(--accent-text); }
+  .trg-note { margin: 0; font-size: 0.92rem; line-height: 1.45; color: var(--ink-soft); }
+  .trg-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .trg.wrap .trg-box { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); }
+  .trg.wrap .trg-list { grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr)); }
+  .trg-list li { margin: 0; }
+  .trg-list a { position: relative; display: grid; gap: 4px; height: 100%; box-sizing: border-box; padding: 14px 36px 14px 16px; background: var(--paper); color: var(--ink); text-decoration: none; border: 1px solid var(--rule); }
+  .trg-list a:hover, .trg-list a:focus-visible { background: var(--indigo); border-color: var(--indigo); color: #fff; }
+  .trg-list b { font-family: var(--display); font-size: 1.02rem; line-height: 1.2; }
+  .trg-list small { font-size: 0.84rem; line-height: 1.35; color: var(--ink-soft); }
+  .trg-list a:hover small, .trg-list a:focus-visible small { color: var(--on-indigo); }
+  .trg-arrow { position: absolute; right: 14px; top: 14px; font-size: 1.05rem; }
+  @media (max-width: 760px) { .trg-box, .trg.wrap .trg-box { grid-template-columns: minmax(0, 1fr); } }
+  @media (prefers-reduced-motion: no-preference) { .trg-list a { transition: background-color 0.15s, color 0.15s; } }
+</style>

@@ -1,8 +1,8 @@
 # Levni
 
-> Levni is an open-source design engine for AI agents. It draws covers, icons, charts, brand boards and poster series from JSON scenes, on your own machine, with no image model and no API key. It ships a CC BY 4.0 library of 1,600+ hand-inked drawings and an MCP server for Claude, Codex and Cursor. A post-AI center for designers, made by the Ortak Alan crew.
+> Levni is an open-source design engine for AI agents. It draws covers, icons, charts, brand boards and poster series from a short JSON scene, on your own machine: no image model, no API key, $0 per image. Code MIT, drawings CC BY 4.0: a library of 1,600+ hand-inked drawings and an MCP server for Claude, Codex and Cursor. Made by Ortak Alan (https://ortakalan.io), a Turkish publication that draws its own covers with it.
 
-Install for Claude Code: `claude mcp add levni -- npx -y @levni/levni mcp`. npm: `@levni/levni`. MCP Registry: `dev.levni/levni`. Source: https://github.com/Levni-Dev/levni (code MIT, drawings CC BY 4.0).
+Install for Claude Code: `claude mcp add levni -- npx -y @levni/levni mcp`. npm: `@levni/levni`. MCP Registry: `dev.levni/levni`. Source: https://github.com/Levni-Dev/levni (code MIT, drawings CC BY 4.0). Full docs text in one file: https://levni.dev/llms-full.txt
 
 ## Start here
 
@@ -32,3 +32,15 @@ Install for Claude Code: `claude mcp add levni -- npx -y @levni/levni mcp`. npm:
 - [Join the crew](https://levni.dev/join/): the Levni letter and the Folio crew Wanted list
 - [Blog](https://levni.dev/blog/): guides and stories, RSS at https://levni.dev/blog/rss.xml
 - [Changelog](https://levni.dev/changelog/)
+
+## In Turkish (Ortak Alan guides)
+
+Ortak Alan, the publication that makes Levni, writes the Turkish guides:
+
+- [Yapay zekâ ile ücretsiz görsel üretme](https://ortakalan.io/atolye/yapay-zeka-ile-ucretsiz-gorsel-uretme/): free ways to make images with AI
+- [Blog kapak görseli nasıl yapılır?](https://ortakalan.io/atolye/blog-kapak-gorseli-nasil-yapilir/): blog cover sizes and a free method
+- [MCP nedir?](https://ortakalan.io/atolye/mcp-nedir/): what MCP is and how to set it up
+- [Tasarım için MCP sunucuları](https://ortakalan.io/atolye/tasarim-icin-mcp-sunuculari/): MCP servers for design work
+- [Sosyal medya görsel boyutları](https://ortakalan.io/atolye/sosyal-medya-gorsel-boyutlari/): social media image sizes
+- [Ücretsiz illüstrasyon ve lisanslar](https://ortakalan.io/atolye/ucretsiz-illustrasyon-ve-lisanslar/): free illustrations and their licences
+- [Açık kaynak tasarım araçları](https://ortakalan.io/atolye/acik-kaynak-tasarim-araclari/): open-source design tools, by job

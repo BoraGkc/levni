@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import levniBrowser from '../src/browser/vite.mjs';
+import llmsFull from './scripts/llms-full.mjs';
 import { readdirSync, readFileSync } from 'node:fs';
 
 // lastmod per post: `updated`, else `date`, from the frontmatter of each blog post
@@ -26,6 +27,7 @@ export default defineConfig({
         return item;
       },
     }),
+    llmsFull(), // dist/llms-full.txt from the built docs pages
   ],
   build: { inlineStylesheets: 'always' },
   // plain <pre> blocks styled by the site (no Shiki theme, no extra CSS)
