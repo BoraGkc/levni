@@ -5,8 +5,8 @@
 <h1>Levni</h1>
 
 **A post-AI center for designers.**<br>
-Open-source design engine for AI agents: covers, icons, brand boards and poster series from a few lines of JSON.<br>
-No image model. No API key. No credit card. About 0.15 s a cover, on your laptop.
+Open-source design engine for AI agents: covers, icons, brand boards and posters from a short JSON scene, drawn on your machine.<br>
+No image model, no API key, $0 per image; code MIT, drawings CC BY 4.0. About 0.15 s a cover, made by <a href="https://ortakalan.io">Ortak Alan</a>.
 
 [![npm](https://img.shields.io/npm/v/@levni/levni?color=4B2FD6&label=npm&labelColor=1B1340)](https://www.npmjs.com/package/@levni/levni) [![MCP Registry](https://img.shields.io/badge/MCP%20Registry-dev.levni%2Flevni-D6E521?labelColor=1B1340)](https://registry.modelcontextprotocol.io/v0/servers?search=dev.levni/levni) [![Levni MCP server](https://glama.ai/mcp/servers/BoraGkc/levni/badges/score.svg)](https://glama.ai/mcp/servers/BoraGkc/levni) [![Code: MIT](https://img.shields.io/badge/code-MIT-4B2FD6?labelColor=1B1340)](LICENSE) [![Drawings: CC BY 4.0](https://img.shields.io/badge/drawings-CC%20BY%204.0-FF3A44?labelColor=1B1340)](https://creativecommons.org/licenses/by/4.0/)
 
