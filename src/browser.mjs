@@ -18,6 +18,7 @@ export { STYLES, applyStyle } from './styles.mjs';
 export { FONTS } from './type.mjs';
 export { stampPng, readStamp, remix } from './stamp.mjs';
 export { shotScene, SHOTS } from './shots.mjs';
+export { sceneDiff } from './diff.mjs';
 export { youStats, youScene, youTerms, YOU_THEMES, YOU_LOOKS } from './you.mjs';
 export { bannerScene, pickMark, repoTerms, hashSeed, BANNER_SIZE, BANNER_THEMES, FALLBACK_MARKS } from './banner.mjs';
 

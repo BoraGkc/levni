@@ -1,0 +1,94 @@
+---
+// Levni Hub: GitHub for designers, built on GitHub. Community pieces come from the repo's Showcase issues (read in the
+// browser through the public API); studio picks open in the Pen ready to fork; the diff compares two versions.
+import Base from '../../layouts/Base.astro';
+import { SITE } from '../../site';
+import { readFileSync } from 'node:fs';
+import { deflateRawSync } from 'node:zlib';
+import gallery from '../../data/gallery.json';
+
+const repo = SITE.github.replace('https://github.com/', '');
+const pack = (o: unknown) => deflateRawSync(Buffer.from(JSON.stringify(o))).toString('base64url');
+const picks = (gallery as any).items.filter((i: any) => i.group === 'motion').slice(0, 12).map((i: any) => {
+  const { _meta, ...scene } = JSON.parse(readFileSync(new URL(`../../../scenes/gallery-motion/${i.id}.json`, import.meta.url), 'utf8'));
+  return { ...i, pen: `/pen/#s=${pack({ ...scene, credits: [{ from: `levni.dev/gallery/#${i.id}`, at: '2026-11-28' }] })}` };
+});
+const share = `${SITE.github}/issues/new?template=showcase.yml`;
+---
+<Base title="Levni Hub: fork, remix and compare designs" description="Levni Hub is GitHub for designers: community pieces with their scenes, studio picks you can fork in the Pen, a visual diff for two versions, and a remix chain inside every PNG. Open source, free.">
+  <div class="wrap hb">
+    <header class="brand-hero">
+      <p class="eyebrow">Levni Hub</p>
+      <h1>Fork it. Remix it. Keep the names.</h1>
+      <p class="lede">GitHub for designers, built on GitHub. Every piece here is a scene you can open, fork and change; every PNG carries its scene and the names of everyone who changed it. No accounts of our own, no server: the community lives in the repo's Showcase issues.</p>
+    </header>
+
+    <ul class="hb-tools">
+      <li><a href="/pen/"><b>Pen</b><span>Write a scene, see it drawn, share the link.</span></a></li>
+      <li><a href="/hub/diff/"><b>Diff</b><span>Two versions side by side, with every change marked.</span></a></li>
+      <li><a href="/docs/stamp/"><b>Remix chain</b><span>Every PNG says who made it and who changed it.</span></a></li>
+      <li><a href={share}><b>Share yours</b><span>Post a piece and its scene as a Showcase issue.</span></a></li>
+    </ul>
+
+    <section aria-labelledby="hb-c">
+      <div class="hb-head"><h2 id="hb-c">From the community</h2><a href={`${SITE.github}/issues?q=label%3Ashowcase`}>All on GitHub →</a></div>
+      <ul class="hb-grid" id="hb-community" data-repo={repo}><li class="hb-empty" id="hb-empty">Loading the Showcase…</li></ul>
+    </section>
+
+    <section aria-labelledby="hb-s">
+      <div class="hb-head"><h2 id="hb-s">Studio picks, ready to fork</h2><a href="/gallery/#motion">The whole gallery →</a></div>
+      <ul class="hb-grid">
+        {picks.map((p: any) => (
+          <li class="hb-card">
+            <img src={`/g/motion/${p.id}-s.webp`} onerror={`this.onerror=null;this.src='/g/motion/${p.id}.webp'`} width={p.tw} height={p.th} alt={p.alt} loading="lazy" decoding="async" />
+            <div><b>{p.title}</b><span class="hb-by">by the Levni studio</span>
+              <p class="hb-links"><a href={p.pen}>Fork in the Pen</a> <a href={`/editor/?remix=/g/motion/${p.id}.json`}>Remix in the editor</a></p></div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </div>
+</Base>
+
+<script>
+  // Showcase issues: title, author, the first image in the body, a 👍 count as stars, a link back to the issue.
+  const list = document.getElementById('hb-community')!, empty = document.getElementById('hb-empty')!;
+  const repo = list.dataset.repo!;
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
+  (async () => {
+    try {
+      const r = await fetch(`https://api.github.com/repos/${repo}/issues?labels=showcase&state=all&per_page=24`, { headers: { accept: 'application/vnd.github+json' } });
+      if (!r.ok) throw new Error(String(r.status));
+      const issues = (await r.json()).filter((i: any) => !i.pull_request);
+      if (!issues.length) { empty.innerHTML = `Nothing here yet. <a href="https://github.com/${repo}/issues/new?template=showcase.yml">Be the first to share a piece</a>: a picture and its scene.`; return; }
+      empty.remove();
+      for (const i of issues) {
+        const img = /!\[[^\]]*\]\((https:[^)\s]+)\)|<img[^>]+src="(https:[^"]+)"/.exec(i.body || '');
+        const src = img?.[1] || img?.[2];
+        const li = document.createElement('li'); li.className = 'hb-card';
+        li.innerHTML = `${src ? `<img src="${esc(src)}" alt="${esc(i.title)}" loading="lazy" referrerpolicy="no-referrer" />` : ''}<div><b>${esc(i.title)}</b><span class="hb-by">by @${esc(i.user?.login || 'someone')} · ★ ${i.reactions?.['+1'] ?? 0}</span><p class="hb-links"><a href="${esc(i.html_url)}">Open on GitHub</a></p></div>`;
+        list.append(li);
+      }
+    } catch { empty.textContent = 'Could not reach GitHub right now. The Showcase lives in the repo’s issues.'; }
+  })();
+</script>
+
+<style>
+  .hb h1 { max-width: 16ch; }
+  .hb .lede { max-width: 66ch; }
+  .hb-tools { list-style: none; margin: 28px 0 40px; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+  .hb-tools a { display: grid; gap: 6px; height: 100%; padding: 18px; background: #fff; color: var(--ink); text-decoration: none; box-shadow: 0 0 0 1px var(--rule); }
+  .hb-tools a:hover, .hb-tools a:focus-visible { box-shadow: 0 0 0 2px var(--ink); outline: none; }
+  .hb-tools b { font: 700 1.2rem/1.1 var(--display); }
+  .hb-tools span { font-size: 14px; color: var(--ink-soft); }
+  .hb-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin: 8px 0 14px; flex-wrap: wrap; }
+  .hb-head h2 { margin: 0; }
+  .hb-grid { list-style: none; margin: 0 0 48px; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 16px; }
+  .hb-card { background: #fff; box-shadow: 0 0 0 1px var(--rule); display: grid; grid-template-rows: auto 1fr; }
+  .hb-card img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: var(--paper); }
+  .hb-card div { padding: 12px 14px 14px; display: grid; gap: 4px; }
+  .hb-by { font: 12px/1.3 var(--mono); color: var(--ink-soft); }
+  .hb-links { margin: 6px 0 0; display: flex; gap: 12px; flex-wrap: wrap; font: 600 12px/1.3 var(--mono); }
+  .hb-empty { grid-column: 1 / -1; padding: 20px; background: #fff; box-shadow: 0 0 0 1px var(--rule); color: var(--ink-soft); }
+  @media (max-width: 860px) { .hb-tools { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+</style>
