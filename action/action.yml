@@ -15,7 +15,7 @@ inputs:
     description: A drawing from the Levni Folio by name. Empty picks one from the repo's topics, name and description.
     default: ''
   commit:
-    description: Commit and push the banner when it changed (needs `permissions: contents: write`).
+    description: 'Commit and push the banner when it changed (needs permissions contents: write).'
     default: 'true'
   message:
     description: Commit message.
