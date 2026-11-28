@@ -35,6 +35,8 @@ No image model. No API key. No credit card. About 0.15 s a cover, on your laptop
 | a nine-tile brand board | `npx @levni/levni board brand.json board.png` |
 | a cover, sticker sheet or dithered hero | `npx @levni/levni render scene.json cover.webp` |
 | a looping GIF or WebP of any scene | `npx @levni/levni animate scene.json loop.gif` |
+| a whole brand kit from one name | `npx @levni/levni brand brand.json kit/` |
+| a storyboard from a shot list | `npx @levni/levni storyboard shots.json board.png` |
 | all of it from your assistant | `claude mcp add levni -- npx -y @levni/levni mcp` |
 | a design by hand, no install | [levni.dev/editor](https://levni.dev/editor/) |
 
@@ -136,7 +138,9 @@ Each maker opens a finished example in the editor: change the words, the drawing
 | --- | --- |
 | **The Levni Folio** | 1,628 drawings, 3,409 variants (481 of them pixel icons), on 15 shelves, searchable in English and Turkish through ~11,800 tags. Each drawing in the Library has its tags, related drawings, copy-ready code and an SVG download. Renamed drawings keep their old names. No brand logos. CC BY 4.0. [Browse](https://levni.dev/library/) |
 | **Scenes and the critic** | 73 element types on a 1200 × 673 canvas. Pressure-brush ink, riso plate misregistration, paper grain. Same seed, same picture. Every render returns layout notes: off-canvas, accidental crops, lopsided weight, no focal point. |
-| **Animation** | Any scene as a looping GIF or animated WebP: `t` runs 0..1 and clouds drift, flags wave, mesh gradients breathe, ASCII globes and soft 3D turn. `--boil` adds a hand-drawn shimmer. Same seed, same frames; no browser and no video tool. [docs/animate.md](docs/animate.md) |
+| **Animation** | Any scene as a looping GIF, animated WebP or MP4. `t` runs 0..1: clouds drift, flags wave, mesh gradients breathe, ASCII globes and soft 3D turn. Any element takes `motion` (float, sway, pulse, spin, pop, fade, slide, wipe, typewriter) and the scene a `camera`. README banners type themselves. Same seed, same frames; no browser, and GIFs come from Levni's own encoder at about half the usual size. Also frame sequences, sprite sheets, transparent PNGs and seamless tiles. [docs/animate.md](docs/animate.md), [docs/export.md](docs/export.md) |
+| **Brand kits** | One brand (a name, or a website to read name and colours from) becomes a folder: mark, favicons, palette, link preview, cover, square, story, README banner, brand board, posters and a loop, in the same inks, with an `index.html` to look at them. [docs/brandkit.md](docs/brandkit.md) |
+| **Storyboards** | A shot list becomes a numbered sheet with titles, durations, timecodes and notes, plus full-size frames and `shots.json` for a video tool. [docs/storyboard.md](docs/storyboard.md) |
 | **Style packs and your inks** | `riso` (default), `miniature` (Tulip Era colours, with its own tulips, carnations, cypresses and medallion), or your own colour map: every drawing follows your brand. |
 | **Soft 3D finish** | `"finish": "soft"`: clean edges and film grain. A real little 3D renderer (pure JS, no GPU): glossy `ribbon3d` bands (loop, Möbius, spiral, knot), `torus3d`, `sphere3d`, `capsule3d`, `blob3d`, `cubes3d`, interlocking shapes in one `soft3d` scene, `extrude3d` that turns any Folio drawing into a 3D icon, and `soft3d` cover presets (`"preset": "auto"`, five palettes) with room for a title and an `image` badge. [Guide](docs/scene.md#soft-3d-v2-real-3d-shapes-use-with-finish-soft) |
 | **Little 3D worlds** | `iso` dioramas: one line (`"preset": "cafe"`, also `room`, `desk`, `street`, `city`, `office`, `classroom`) lays out a seeded world on a floating slab with soil layers and a soft shadow. 37 object kinds (walls with windows, doors and arches, stairs, roofs, fences, ponds, roads, trees, lamps, furniture, cars, people, posters hung on walls), soft occlusion, painter's order from real 3D boxes, in the riso hand or `"style": "soft"` toy 3D. |
@@ -185,6 +189,8 @@ Full element reference: [`docs/scene.md`](docs/scene.md) · JSON Schema: [`docs/
 | `render_scene` | draw a scene: critic notes, a 560 px preview, and with `out` the full file (.png/.webp/.svg) |
 | `critique_scene` | only the critic's notes, for quick iterations |
 | `render_animation` | draw a scene as a loop and write a .gif or .webp: critic notes and a strip of four frames ([docs](docs/animate.md)) |
+| `render_brand_kit` | a whole brand kit into a folder; reads a website only when you pass `url` ([docs](docs/brandkit.md)) |
+| `render_storyboard` | a shot list as a numbered storyboard sheet, with optional full-size frames and `shots.json` ([docs](docs/storyboard.md)) |
 | `render_board` | a brand board from `{ brand: { name, tagline, mark, inks } }` or your own tiles; `guide: true` returns [`docs/board.md`](docs/board.md) |
 | `render_poster` | eight branding posters and a series sheet from `{ brand: { name, tagline, mark, inks, words } }`; `scenes: true` returns the scenes to edit, `guide: true` returns [`docs/poster.md`](docs/poster.md) |
 
@@ -212,7 +218,9 @@ The assistant shows you the preview and applies after you say yes. Drafts only: 
 | command | what it does |
 | --- | --- |
 | `levni render <scene.json> <out>` | draw a scene (`--format`, `--preview`) and print the critic's notes |
-| `levni animate <scene.json> <out.gif\|out.webp>` | draw a scene as a loop: clouds drift, flags wave, gradients breathe, 3D spins (`--frames`, `--fps`, `--boil`, `--width`, `--strip`) ([docs](docs/animate.md)) |
+| `levni animate <scene.json> <out.gif\|out.webp\|out.mp4>` | draw a scene as a loop: clouds drift, flags wave, gradients breathe, 3D spins, and any element with `motion` moves (`--frames`, `--fps`, `--boil`, `--width`, `--strip`, `--frames-dir`, `--sprite`) ([docs](docs/animate.md), [export](docs/export.md)) |
+| `levni brand <brand.json\|url> <out-dir>` | a whole brand kit in one folder (`--posters 8`, `--only a,b`) ([docs](docs/brandkit.md)) |
+| `levni storyboard <spec.json> <out.png>` | storyboard sheet from a shot list (`--frames-dir`, `--columns`) ([docs](docs/storyboard.md)) |
 | `levni list [query]` | search props by name, old name or tag (English or Turkish) |
 | `levni sheet <out.png> [prop …]` | contact sheet, every variant on paper and on blue (`--recolor`) |
 | `levni board <spec.json> <out.png>` | brand board: `{"brand": {name, tagline, mark, inks}}` makes a nine-tile board in one call; or place tiles yourself, with browser/card/tote/phone mockups ([docs](docs/board.md)) |

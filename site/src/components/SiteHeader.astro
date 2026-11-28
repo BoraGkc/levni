@@ -8,7 +8,7 @@ type Item = [title: string, desc: string, href: string];
 type Group = { id: string; label: string; match: string[]; items: Item[]; feature: { kicker: string; title: string; text: string; href: string; cta: string } };
 const groups: Group[] = [
   {
-    id: 'make', label: 'Make', match: ['/make', '/features', '/gallery', '/library', '/banner'],
+    id: 'make', label: 'Make', match: ['/make', '/features', '/gallery', '/library', '/banner', '/tools'],
     items: [
       ['Free makers', 'Every maker on one page', '/make/'],
       ['Illustrations and covers', 'Scenes, styles, the critic', '/make/blog-covers-og-images/'],
@@ -17,7 +17,8 @@ const groups: Group[] = [
       ['Seals and stickers', 'Ring text, tickets, die-cuts', '/make/stickers-seals-tickets/'],
       ['ASCII and dot-matrix', 'Glyph fills from any drawing', '/make/ascii-art/'],
       ['3D and pixel icons', 'Soft 3D, extruded, pixel grids', '/make/3d-icons/'],
-      ['README banner', 'A banner from a GitHub link', '/banner/'],
+      ['README banner', 'A banner from a GitHub link, still or moving', '/banner/'],
+      ['Free tools', 'Gradients, patterns, waves, OG images', '/tools/'],
       ['Gallery', 'Every image with its scene', '/gallery/'],
       ['Library', '1,600+ open drawings', '/library/'],
     ],

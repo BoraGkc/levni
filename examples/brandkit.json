@@ -1,0 +1,10 @@
+{
+  "brand": {
+    "name": "İncir Ağacı",
+    "tagline": "Slow-baked bread, ripe figs and strong tea, since 1987",
+    "inks": ["#2B1B3D", "#E4572E", "#F2B134", "#F5EDE0"],
+    "words": ["Bake", "Slice", "Share", "Savour"]
+  },
+  "seed": 12,
+  "posters": 4
+}

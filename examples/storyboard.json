@@ -1,0 +1,20 @@
+{
+  "title": "Kumru Kahve: sabah aboneliği, 21 sn",
+  "brand": {"name": "Kumru", "mark": "dove", "inks": ["#14213D", "#E8734A", "#F0B84A", "#F6F0E4"]},
+  "format": "youtube",
+  "seed": 12,
+  "shots": [
+    { "id": "acilis", "title": "Sabah, ilk fincan", "prop": "coffee-cup", "camera": "close", "text": "Güne yavaş başla.",
+      "note": "Yakın plan: buharı tüten fincan. Ses: kaşık çınlaması, sessiz piyano.", "duration": 3 },
+    { "id": "sorun", "title": "Kahve bitti", "props": ["coffee-cup", "calendar"], "background": "tone-coral", "text": "Yine mi bitti?",
+      "note": "Boş kavanoz, çarşamba sabahı. Kamera yavaşça geri çekilir.", "duration": 3 },
+    { "id": "cozum", "title": "Kumru kutusu", "prop": "package", "camera": "left", "text": "Her ay kapında taze kavrulmuş kahve.",
+      "note": "Kutu soldan girer, yanında kısa bir slogan belirir.", "duration": 4 },
+    { "id": "kapi", "title": "Kapıda", "props": ["shopping-bag", "plant"], "text": "Sabah 8'de kapında.", "background": "tone-green",
+      "note": "Paket paspasın üstünde, saksı çiçeği arkada. Gün ışığı sıcak.", "duration": 3 },
+    { "id": "telefon", "title": "Tek dokunuşla abonelik", "prop": "phone", "camera": "right", "background": "blue", "text": "Aylık plan, istediğin an iptal.",
+      "note": "Ekran kaydı hissi. Düğmeye basılınca küçük bir kalp patlar.", "duration": 4 },
+    { "id": "kapanis", "title": "Kumru, ilk ay yarı fiyat", "prop": "dove", "camera": "left", "background": "tone-mustard", "text": "kumru.coffee",
+      "note": "Logo ve adres, 2 saniye sabit. Son karede fincan sesi.", "duration": 4 }
+  ]
+}

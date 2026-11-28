@@ -1,0 +1,316 @@
+---
+import ToolPage from '../../components/tools/ToolPage.astro';
+import { FREE_FAQ, JSON_FAQ } from '../../data/tools';
+import { SITE } from '../../site';
+
+const faq = [
+  FREE_FAQ,
+  { q: 'What size should an OG image be?', a: 'This tool makes 1200 × 630 pixels, the size Facebook, LinkedIn, Slack and X use for large link previews. Keep the title short so it stays readable when the preview is shown small.' },
+  { q: 'How do I add the image to my page?', a: 'Upload the PNG to your site, then put the meta tags shown under the preview in the head of the page, with the address where the image lives. Link previews are cached, so a changed image can take a while to show up on each network.' },
+  JSON_FAQ,
+];
+const LAYOUTS = { split: 'Split panel', center: 'Centred', band: 'Bottom band', poster: 'Brand poster', mesh: 'Mesh gradient', dots: 'Halftone corner', card: 'Card' };
+const PALETTES = {
+  paper: { label: 'Paper', ground: '#F3F1EA', text: '#1B1340', muted: '#5B5580', disc: '#D6E521', mark: '#FF3A44' },
+  white: { label: 'White', ground: '#FFFFFF', text: '#14181F', muted: '#4A5160', disc: '#FFE08A', mark: '#F2603F' },
+  night: { label: 'Night', ground: '#14122B', text: '#F3F1EA', muted: '#C3B9F7', disc: '#FF3A44', mark: '#D6E521' },
+  lime: { label: 'Lime', ground: '#D6E521', text: '#1B1340', muted: '#2B1A8F', disc: '#FFFFFF', mark: '#FF3A44' },
+  blush: { label: 'Blush', ground: '#FFE3EC', text: '#3A1450', muted: '#7A4B78', disc: '#F7C744', mark: '#FF39B4' },
+};
+const START = ['rocket', 'lightbulb', 'coffee-cup', 'megaphone', 'book', 'globe', 'laptop', 'compass'];
+---
+<ToolPage
+  title="Free OG image generator with drawings"
+  description="Make a 1200 × 630 Open Graph image with your title, your brand colour and a hand-drawn picture. Copy the meta tags. Free, no sign-up, no watermark."
+  name="Levni OG image generator"
+  eyebrow="Free tool"
+  h1="OG image generator"
+  lede="The picture people see when your link is shared. Type the title, pick a drawing from the Levni Folio, a layout and your brand colour, then download a 1200 × 630 PNG and copy the meta tags. No watermark, no sign-up."
+  faq={faq}
+>
+  <div class="tl-stage" id="og" data-palettes={JSON.stringify(PALETTES)} data-start={JSON.stringify(START)}>
+    <div class="tl-view">
+      <figure class="tl-preview" id="og-preview" aria-busy="true">
+        <img id="og-img" alt="Open Graph image preview" width="1200" height="630" />
+      </figure>
+      <p class="tl-status" id="og-status" role="status" aria-live="polite"></p>
+      <div class="tl-actions">
+        <button type="button" class="tl-go" id="og-png">Download PNG</button>
+        <button type="button" class="tl-ghost" id="og-svg">SVG</button>
+        <button type="button" class="tl-ghost" id="og-json">Copy scene JSON</button>
+        <button type="button" class="tl-ghost" id="og-link">Copy link</button>
+      </div>
+      <div class="tl-field og-url">
+        <label for="og-url">Where the image will live</label>
+        <input id="og-url" type="text" inputmode="url" spellcheck="false" autocomplete="off" value="https://example.com/og/my-page.png" />
+      </div>
+      <div class="tl-code"><pre id="og-meta"></pre><button type="button" id="og-meta-copy">Copy</button></div>
+    </div>
+
+    <div class="tl-controls">
+      <fieldset>
+        <legend>Text</legend>
+        <label class="tl-field">Title <textarea id="og-title" rows="3" maxlength="110"></textarea></label>
+        <label class="tl-field">Kicker (optional) <input id="og-kicker" type="text" maxlength="40" /></label>
+        <label class="tl-field">Site name (optional) <input id="og-site" type="text" maxlength="40" /></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Drawing</legend>
+        <div class="og-marks" id="og-marks"></div>
+        <label class="sr" for="og-q">Search the Folio</label>
+        <input id="og-q" type="search" placeholder={`Search ${SITE.props.toLocaleString('en')} drawings: cat, rocket…`} autocomplete="off" />
+        <label class="tl-check og-none"><input type="checkbox" id="og-noprop" /> No drawing</label>
+      </fieldset>
+
+      <div class="tl-field">
+        <label class="tl-lbl" for="og-layout">Layout</label>
+        <select id="og-layout">{Object.entries(LAYOUTS).map(([k, v]) => <option value={k}>{v}</option>)}</select>
+      </div>
+
+      <fieldset>
+        <legend>Colours</legend>
+        <div class="tl-chips" id="og-palettes">
+          {Object.entries(PALETTES).map(([k, p]) => (
+            <button type="button" data-pal={k} aria-pressed="false"><span class="tl-sw" aria-hidden="true">{[p.ground, p.text, p.disc].map((c) => <i style={`background:${c}`}></i>)}</span>{p.label}</button>
+          ))}
+        </div>
+      </fieldset>
+      <div class="tl-inks">
+        <label class="tl-ink"><input type="color" id="og-brand" aria-label="Brand ink" />brand ink</label>
+      </div>
+
+      <div class="tl-field" style="margin-top:16px">
+        <label class="tl-lbl" for="og-font">Title type</label>
+        <select id="og-font"><option value="black">Heavy (Archivo Black)</option><option value="grotesk">Grotesk (Space Grotesk)</option></select>
+      </div>
+      <div class="tl-field">
+        <label class="tl-lbl" for="og-seed">Seed</label>
+        <span class="tl-seed"><input id="og-seed" type="number" min="1" max="9999" inputmode="numeric" /><button type="button" class="tl-ghost" id="og-shuffle">Shuffle</button></span>
+      </div>
+    </div>
+  </div>
+
+  <Fragment slot="about">
+    <h2>How it works</h2>
+    <p>The image is a Levni scene: your words set in bundled open fonts, one drawing from the Levni Folio, and shapes in your brand ink. Levni draws it in your browser with a hand-inked finish, and the seed sets the small wobbles, so the same settings always give the same picture. The settings live in the link, so you can come back to it or share it.</p>
+    <p>Upload the PNG next to your page and paste the meta tags into its head. Most sites need one image per page: change the title, keep the layout and colours, download again.</p>
+    <p>To make these in a build step, copy the scene JSON once, swap the title text for each page, and run <code>npx @levni/levni render scene.json og.png</code>. An agent with the <a href="/mcp/">Levni MCP server</a> can make the whole set for you and pick a drawing that fits each title.</p>
+  </Fragment>
+</ToolPage>
+
+<script>
+  import { render, ensureProp, getIndex, showSvg, savePng, saveSvg, copy, readHash, writeHash, debounce, newSeed, clampInt, isHex, hex, timed } from '../../components/tools/engine';
+  import { pickMark } from '../../../../src/browser.mjs';
+
+  type Pal = { label: string; ground: string; text: string; muted: string; disc: string; mark: string };
+  const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+  const PALS: Record<string, Pal> = JSON.parse($('og').dataset.palettes!);
+  const START: string[] = JSON.parse($('og').dataset.start!);
+  const LAYOUTS = ['split', 'center', 'band', 'poster', 'mesh', 'dots', 'card'];
+  const W = 1200, H = 630;
+
+  const h = readHash();
+  const S = {
+    ti: h.ti ?? 'How we cut our build time in half',
+    k: h.k ?? 'Engineering blog',
+    si: h.si ?? 'example.com',
+    p: h.p ?? 'rocket',
+    np: h.np === '1' ? 1 : 0,
+    l: LAYOUTS.includes(h.l) ? h.l : 'split',
+    c: h.c in PALS ? h.c : 'paper',
+    b: isHex(h.b) ? hex(h.b) : '#4B2FD6',
+    f: h.f === 'grotesk' ? 'grotesk' : 'black',
+    s: clampInt(h.s, 3, 1, 9999),
+  };
+  let candidates = START.includes(S.p) ? [...START] : [S.p, ...START.slice(0, 7)];
+
+  // ---- helpers
+  const rgb = (c: string) => [1, 3, 5].map((i) => parseInt(c.slice(i, i + 2), 16));
+  const lum = (c: string) => { const [r, g, b] = rgb(c).map((v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; }); return 0.2126 * r + 0.7152 * g + 0.0722 * b; };
+  const mixHex = (a: string, b: string, k: number) => '#' + rgb(a).map((v, i) => Math.round(v + (rgb(b)[i] - v) * k).toString(16).padStart(2, '0')).join('').toUpperCase();
+  const onColor = (bg: string) => (lum(bg) > 0.4 ? '#1B1340' : '#F3F1EA');
+  // greedy word wrap to `per` characters a line
+  function wrap(text: string, per: number) {
+    const out: string[] = []; let cur = '';
+    for (const w of text.trim().split(/\s+/).filter(Boolean)) { if (!cur) cur = w; else if ((cur + ' ' + w).length <= per) cur += ' ' + w; else { out.push(cur); cur = w; } }
+    if (cur) out.push(cur);
+    return out;
+  }
+  // the title as a `type` element fitted into a box: largest size (from 92 px down) whose wrapped lines fit.
+  // fit "box" never lets it leave the box; the width is set from an estimate so short titles do not blow up.
+  function titleEl(text: string, x: number, y: number, bw: number, bh: number, color: string, align: 'left' | 'center' = 'left') {
+    const cw = S.f === 'black' ? 0.64 : 0.56, lead = 1.04;
+    let size = 92, lines = wrap(text, 99);
+    for (; size >= 34; size -= 2) {
+      lines = wrap(text, Math.max(4, Math.floor(bw / (size * cw))));
+      if (lines.length * size * lead <= bh && lines.length <= 5) break;
+    }
+    const est = Math.min(bw, Math.max(...lines.map((l) => l.length)) * size * cw);
+    const bx = align === 'center' ? x + (bw - est) / 2 : x;
+    return { type: 'type', text: lines.join('\n'), x: Math.round(bx), y, w: Math.round(est), h: Math.round(Math.min(bh, lines.length * size * lead)), fit: 'box', font: S.f, weight: S.f === 'grotesk' ? 700 : undefined, leading: lead, tracking: S.f === 'black' ? -0.01 : -0.03, align, color };
+  }
+  const mono = (text: string, x: number, y: number, color: string, size = 22, align: 'left' | 'center' | 'right' = 'left') => ({ type: 'type', text: text.toUpperCase(), x, y, size, font: 'mono', weight: 700, tracking: 0.06, align, color });
+
+  function scene() {
+    const P = PALS[S.c], brand = S.b, prop = S.np ? null : S.p;
+    const title = S.ti.trim() || 'Your title here';
+    const el: any[] = [];
+    let ground = P.ground, finish: string | undefined;
+    const propEl = (x: number, y: number, size: number, extra = {}) => (prop ? [{ type: 'prop', name: prop, x, y, size, ...extra }] : []);
+    const text = P.text, muted = P.muted;
+    const wide = (n: number, x = 72) => (prop ? n : W - x * 2); // no drawing: the title takes the width
+    const disc = (d: any) => (prop ? [d] : []);
+
+    if (S.l === 'split') {
+      el.push({ type: 'panel', x: 760, y: -20, w: 480, h: H + 40, color: 'blue' });
+      el.push(...disc({ type: 'disc', x: 980, y: 318, r: 170, color: P.disc }));
+      el.push({ type: 'marks', area: [790, 40, 380, 550], count: 6, colors: [P.mark, P.disc, '#F3F1EA'] });
+      el.push(...propEl(980, 318, 320, { shadow: true }));
+      let y = 150;
+      if (S.k) { el.push(mono(S.k, 76, 110, muted)); }
+      el.push(titleEl(title, 72, y, 630, 330, text));
+      if (S.si) el.push(mono(S.si, 76, H - 90, muted, 20));
+    } else if (S.l === 'center') {
+      el.push(...disc({ type: 'disc', x: W / 2, y: 170, r: 112, color: P.disc }));
+      el.push(...propEl(W / 2, 170, 210));
+      const ky = prop ? 314 : 180, top = ky + (S.k ? 42 : 16);
+      if (S.k) el.push(mono(S.k, W / 2, ky, muted, 22, 'center'));
+      el.push(titleEl(title, 110, top, 980, H - 90 - top, text, 'center'));
+      if (S.si) el.push(mono(S.si, W / 2, H - 52, muted, 18, 'center'));
+    } else if (S.l === 'band') {
+      el.push({ type: 'panel', x: -20, y: H - 118, w: W + 40, h: 140, color: 'blue' });
+      el.push(...propEl(960, 280, 430, { crop: true }));
+      if (S.k) el.push(mono(S.k, 76, 84, muted));
+      el.push(titleEl(title, 72, 128, wide(680), 330, text));
+      if (S.si) el.push(mono(S.si, 76, H - 72, onColor(brand), 22));
+    } else if (S.l === 'poster') {
+      ground = brand;
+      const t = onColor(brand), m = lum(brand) > 0.4 ? '#2B1A8F' : mixHex(brand, '#FFFFFF', 0.6);
+      el.push({ type: 'halftone', x: 700, y: 0, w: 500, h: H, color: mixHex(brand, t, 0.18), mode: 'radial', cx: 1150, cy: 560, gap: 18 });
+      el.push(...propEl(950, 330, 360, { diecut: { offset: 14 } }));
+      if (S.k) el.push(mono(S.k, 76, 84, m));
+      el.push(titleEl(title, 72, 128, wide(640), 360, t));
+      if (S.si) el.push(mono(S.si, 76, H - 72, m, 20));
+      ground = brand;
+    } else if (S.l === 'mesh') {
+      finish = 'soft';
+      el.push({ type: 'meshgrad', x: 0, y: 0, w: W, h: H, colors: [brand, P.disc, P.mark, mixHex(brand, '#FFFFFF', 0.5)], base: mixHex(brand, P.ground, 0.75), seed: S.s, grain: 0.3, calm: [[0, 0.1, 0.6, 0.8]] });
+      el.push(...propEl(960, 315, 340, { diecut: { offset: 14 } }));
+      if (S.k) el.push(mono(S.k, 76, 96, muted));
+      el.push(titleEl(title, 72, 140, wide(620), 330, text));
+      if (S.si) el.push(mono(S.si, 76, H - 80, muted, 20));
+    } else if (S.l === 'dots') {
+      el.push({ type: 'halftone', x: 0, y: 0, w: 460, h: 190, color: 'blue', mode: 'radial', cx: 0, cy: 0, gap: 18, level: 1.1 });
+      el.push(...disc({ type: 'disc', x: 950, y: 330, r: 190, color: P.disc }));
+      el.push(...propEl(950, 330, 330));
+      if (S.k) el.push(mono(S.k, 76, 236, muted));
+      el.push(titleEl(title, 72, S.k ? 280 : 250, wide(640), 250, text));
+      if (S.si) el.push(mono(S.si, 76, H - 64, muted, 20));
+    } else {
+      // card: a paper card on the brand ground, the drawing sitting on its edge
+      ground = brand;
+      el.push({ type: 'block', x: 60, y: 60, w: 820, h: 510, color: P.ground, radius: 28 });
+      el.push(...disc({ type: 'disc', x: 1010, y: 170, r: 90, color: P.disc }));
+      el.push(...propEl(940, 400, 330, { shadow: true }));
+      if (S.k) el.push(mono(S.k, 116, 124, muted));
+      el.push(titleEl(title, 112, 170, prop ? 600 : 712, 300, text));
+      if (S.si) el.push(mono(S.si, 116, 510, muted, 20));
+    }
+    // brand ink: fills that were house blue, their light tone, and the drawing's line colour (a deep shade of it)
+    const style = { blue: brand, tone: mixHex(brand, '#FFFFFF', 0.55), ink: mixHex(brand, '#0B0820', 0.45) };
+    return { seed: S.s, canvas: [W, H], background: ground, style, ...(finish ? { finish } : {}), elements: el };
+  }
+
+  const img = $<HTMLImageElement>('og-img'), preview = $('og-preview'), status = $('og-status'), marksEl = $('og-marks'), qEl = $<HTMLInputElement>('og-q');
+  const titleIn = $<HTMLTextAreaElement>('og-title'), kickerIn = $<HTMLInputElement>('og-kicker'), siteIn = $<HTMLInputElement>('og-site'), urlIn = $<HTMLInputElement>('og-url');
+  const layoutEl = $<HTMLSelectElement>('og-layout'), brandEl = $<HTMLInputElement>('og-brand'), fontEl = $<HTMLSelectElement>('og-font'), seedEl = $<HTMLInputElement>('og-seed'), noPropEl = $<HTMLInputElement>('og-noprop');
+  const say = (t: string) => (status.textContent = t);
+
+  const shown = { url: '' };
+  let current = { svg: '', scene: null as any }, token = 0;
+  async function draw() {
+    const my = ++token;
+    preview.setAttribute('aria-busy', 'true');
+    if (!S.np && !(await ensureProp(S.p))) { S.p = 'rocket'; }
+    const sc = scene();
+    let svg = '';
+    try { svg = await timed(() => render(sc)); } catch (e) { say(`Could not draw this one: ${(e as Error).message}`); return; }
+    if (my !== token) return;
+    current = { svg, scene: sc };
+    showSvg(img, svg, shown);
+    img.alt = `Open Graph image: “${S.ti}”${S.np ? '' : ` with a drawing of ${S.p.replace(/-/g, ' ')}`}`;
+    preview.setAttribute('aria-busy', 'false');
+    renderMeta();
+    writeHash(S);
+  }
+  const drawSoon = debounce(draw, 60);
+  const typeSoon = debounce(draw, 250); // typing: wait for a pause
+
+  const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+  function renderMeta() {
+    const url = esc(urlIn.value.trim() || 'https://example.com/og.png'), alt = esc(S.ti.trim());
+    $('og-meta').textContent = `<meta property="og:image" content="${url}">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:image:alt" content="${alt}">\n<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:image" content="${url}">`;
+  }
+
+  function renderMarks() {
+    marksEl.replaceChildren(...candidates.map((n) => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.title = n.replace(/-/g, ' ');
+      b.setAttribute('aria-pressed', String(!S.np && n === S.p));
+      b.setAttribute('aria-label', `Use the drawing “${n.replace(/-/g, ' ')}”`);
+      const i = document.createElement('img');
+      i.src = `/props/${n}-0.webp`; i.alt = ''; i.width = 56; i.height = 56;
+      b.append(i);
+      b.addEventListener('click', () => { S.p = n; S.np = 0; noPropEl.checked = false; renderMarks(); draw(); });
+      return b;
+    }));
+  }
+  function markPal() { for (const b of document.querySelectorAll<HTMLButtonElement>('#og-palettes button')) b.setAttribute('aria-pressed', String(b.dataset.pal === S.c)); }
+  function syncControls() {
+    titleIn.value = S.ti; kickerIn.value = S.k; siteIn.value = S.si; layoutEl.value = S.l; brandEl.value = S.b.toLowerCase();
+    fontEl.value = S.f; seedEl.value = String(S.s); noPropEl.checked = !!S.np;
+    markPal(); renderMarks();
+  }
+
+  titleIn.addEventListener('input', () => { S.ti = titleIn.value; typeSoon(); });
+  kickerIn.addEventListener('input', () => { S.k = kickerIn.value; typeSoon(); });
+  siteIn.addEventListener('input', () => { S.si = siteIn.value; typeSoon(); });
+  urlIn.addEventListener('input', renderMeta);
+  layoutEl.addEventListener('change', () => { S.l = layoutEl.value; draw(); });
+  fontEl.addEventListener('change', () => { S.f = fontEl.value; draw(); });
+  brandEl.addEventListener('input', () => { S.b = hex(brandEl.value); drawSoon(); });
+  seedEl.addEventListener('input', () => { S.s = clampInt(seedEl.value, S.s, 1, 9999); drawSoon(); });
+  $('og-shuffle').addEventListener('click', () => { S.s = newSeed(); seedEl.value = String(S.s); draw(); });
+  noPropEl.addEventListener('change', () => { S.np = noPropEl.checked ? 1 : 0; renderMarks(); draw(); });
+  $('og-palettes').addEventListener('click', (e) => { const b = (e.target as HTMLElement).closest('button'); if (!b) return; S.c = b.dataset.pal!; markPal(); draw(); });
+  qEl.addEventListener('input', debounce(async () => {
+    const q = qEl.value.trim();
+    if (!q) { candidates = [...START]; renderMarks(); say(''); return; }
+    const found = pickMark([q], await getIndex(), { limit: 8 });
+    if (found.length) { candidates = found; renderMarks(); say(''); } else say(`No drawing for “${q}”. Try another word, in English or Turkish.`);
+  }, 250));
+
+  const fileBase = () => (S.ti.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40) || 'og-image');
+  $('og-png').addEventListener('click', () => savePng(current.svg, `${fileBase()}-og.png`, 1));
+  $('og-svg').addEventListener('click', () => saveSvg(current.svg, `${fileBase()}-og.svg`));
+  $('og-json').addEventListener('click', (e) => copy(JSON.stringify(current.scene, null, 2), e.currentTarget as HTMLElement));
+  $('og-link').addEventListener('click', (e) => copy(location.href, e.currentTarget as HTMLElement));
+  $('og-meta-copy').addEventListener('click', (e) => copy($('og-meta').textContent || '', e.currentTarget as HTMLElement));
+
+  syncControls();
+  draw();
+</script>
+
+<style>
+  .og-marks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 10px; }
+  .og-marks :global(button) { aspect-ratio: 1; padding: 6px; border-radius: 0; border: 1.5px solid var(--rule); background: #fff; cursor: pointer; }
+  .og-marks :global(button[aria-pressed='true']) { border-color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
+  .og-marks :global(img) { width: 100%; height: 100%; object-fit: contain; }
+  .og-none { margin-top: 10px; }
+  .og-url { margin-top: 18px; }
+  .og-url input { width: 100%; font: 14px/1.35 var(--mono); padding: 10px 12px; border: 1.5px solid var(--rule); border-radius: 0; background: #fff; color: var(--ink); }
+  .og-url input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-color: var(--ink); }
+  @media (max-width: 860px) { .og-marks { grid-template-columns: repeat(8, 1fr); } }
+  @media (max-width: 520px) { .og-marks { grid-template-columns: repeat(4, 1fr); } }
+</style>

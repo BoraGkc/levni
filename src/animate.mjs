@@ -9,6 +9,7 @@ import { compose } from './compose.mjs';
 import { critique } from './critic.mjs';
 import { rasterize } from './raster.mjs';
 import { screenRaster } from './dither.mjs';
+import { encodeGif } from './gif.mjs';
 
 const clampInt = (v, d, lo, hi) => { const n = Math.round(Number(v)); return Number.isFinite(n) ? Math.min(hi, Math.max(lo, n)) : d; };
 
@@ -34,7 +35,12 @@ export async function renderFrames(spec, opts = {}) {
   let notes = [], canvas = null;
   for (const [i, step] of plan.entries()) {
     const { svg, used, canvas: cv } = await compose({ ...spec, ...step });
-    if (i === 0) { notes = critique(used, cv); canvas = cv; }
+    if (i === 0) {
+      canvas = cv;
+      // entrances (pop, typewriter…) leave frame 0 half empty: the critic reads the settled picture at mid-loop instead
+      const entering = (spec.elements || []).some((e) => e && e.motion);
+      notes = entering ? critique((await compose({ ...spec, t: 0.5 })).used, cv) : critique(used, cv);
+    }
     if (!cache.has(svg)) {
       let png = await rasterize(svg);
       if (spec.screen) png = await screenRaster(png, spec.screen);
@@ -52,7 +58,8 @@ export async function renderFrames(spec, opts = {}) {
 /**
  * Compose a scene over time and write a looping .gif or .webp. Returns { notes, bytes, frames, width, height, moving, buffer, stills }
  * (`stills`: the frames as PNG buffers, e.g. for frameStrip).
- * opts: frames, fps, boil, width (see renderFrames); loop (0 = forever); colours (GIF palette size, 2..256, default 64).
+ * opts: frames, fps, boil, width (see renderFrames); loop (0 = forever); colours (GIF palette size, 2..255, default 128);
+ * encoder: 'sharp' hands the GIF to sharp instead of Levni's own encoder (dithered, about twice the size).
  */
 export async function animate(spec, out, opts = {}) {
   const ext = /\.(gif|webp)$/i.exec(String(out || ''))?.[1]?.toLowerCase();
@@ -60,10 +67,17 @@ export async function animate(spec, out, opts = {}) {
   const r = await renderFrames(spec, opts);
   const delay = r.frames.map(() => r.delay);
   const loop = clampInt(opts.loop, 0, 0, 65535);
-  const joined = sharp(r.frames, { join: { animated: true } });
-  const buf = (ext ?? opts.format) === 'webp'
-    ? await joined.webp({ quality: clampInt(opts.quality, 80, 1, 100), effort: 4, smartSubsample: true, delay, loop }).toBuffer()
-    : await joined.gif({ colours: clampInt(opts.colours ?? opts.colors, 64, 2, 256), effort: 7, dither: 0.6, delay, loop }).toBuffer();
+  let buf;
+  if ((ext ?? opts.format) === 'webp') {
+    buf = await sharp(r.frames, { join: { animated: true } }).webp({ quality: clampInt(opts.quality, 80, 1, 100), effort: 4, smartSubsample: true, delay, loop }).toBuffer();
+  } else if (opts.encoder === 'sharp') {
+    buf = await sharp(r.frames, { join: { animated: true } }).gif({ colours: clampInt(opts.colours ?? opts.colors, 64, 2, 256), effort: 7, dither: 0.6, delay, loop }).toBuffer();
+  } else {
+    // Levni's own encoder (gif.mjs): only the pixels that change between frames are stored, about half the size of sharp's
+    const raws = new Map(); // a held frame is decoded once
+    for (const f of r.frames) if (!raws.has(f)) raws.set(f, await sharp(f).ensureAlpha().raw().toBuffer());
+    buf = Buffer.from(encodeGif(r.frames.map((f) => raws.get(f)), r.width, r.height, { delay: r.delay, loop, colours: clampInt(opts.colours ?? opts.colors, 128, 2, 255) }));
+  }
   if (out) writeFileSync(out, buf);
   return { notes: r.notes, bytes: buf.length, frames: r.frames.length, distinct: r.distinct, width: r.width, height: r.height, moving: r.moving, buffer: buf, stills: r.frames };
 }

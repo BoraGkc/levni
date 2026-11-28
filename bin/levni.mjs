@@ -2,6 +2,8 @@
 // Levni CLI.
 //   levni render <scene.json> <out.png|out.webp|out.svg> [--preview] [--format cover|og|square|story|youtube]
 //   levni animate <scene.json> <out.gif|out.webp> [--frames 24] [--fps 12] [--boil 3] [--width 800] [--strip frames.png]
+//   levni storyboard <spec.json> <out.png> [--frames-dir dir]
+//   levni brand <brand.json | url> <out-dir>
 //   levni sheet <out.png> [prop ...] [--recolor coral=blue,mustard=tone]
 //   levni board <spec.json> <out.png>
 //   levni list [query]
@@ -17,17 +19,29 @@ import { render, compose, loadProps, findProp, addPropDir, LIBRARY_DIR, validate
 const [cmd, ...rest] = process.argv.slice(2);
 const flag = (name) => rest.includes(`--${name}`);
 const opt = (name) => { const i = rest.indexOf(`--${name}`); return i >= 0 ? rest[i + 1] : undefined; };
-const positional = rest.filter((a, i) => !a.startsWith('--') && !(i > 0 && ['--recolor', '--dir', '--sheet', '--brief', '--model', '--format', '--frames', '--fps', '--boil', '--width', '--strip', '--colours'].includes(rest[i - 1])));
+const positional = rest.filter((a, i) => !a.startsWith('--') && !(i > 0 && ['--recolor', '--dir', '--sheet', '--brief', '--model', '--format', '--frames', '--fps', '--boil', '--width', '--strip', '--colours', '--frames-dir', '--sprite', '--columns', '--crf', '--loops', '--tile', '--posters', '--only'].includes(rest[i - 1])));
 
 const USAGE = `levni: hand-inked illustrations from JSON scenes
 
-  levni render <scene.json> <out.png|out.webp|out.svg> [--preview] [--format cover|og|square|story|youtube]
+  levni render <scene.json> <out.png|out.webp|out.svg> [--preview] [--format cover|og|square|story|youtube|hd|readme]
+                [--transparent] [--tile 512]
       Draw a scene. Prints the layout critic's notes. --preview also writes <out>.prev.jpg (560 px).
+      --transparent: a clear ground (soft finish). --tile N: a seamless N px square texture (PNG).
       --format recomposes a 1200x673 scene for another canvas (sets "format" and "reflow": see docs/scene.md).
-  levni animate <scene.json> <out.gif|out.webp> [--frames 24] [--fps 12] [--boil 3] [--width 800] [--strip frames.png]
+  levni animate <scene.json> <out.gif|out.webp|out.mp4> [--frames 24] [--fps 12] [--boil 3] [--width 800] [--strip frames.png]
+                [--frames-dir dir] [--sprite sheet.png --columns 6] [--crf 20 --loops 1]
       Draw a scene as a loop: the scene's \`t\` runs 0..1 (clouds drift, flags wave, mesh gradients breathe, soft 3D spins).
       --boil N lets N crayon textures take turns for a hand-drawn shimmer. --strip also writes a few frames side by side.
-      docs/animate.md
+      Elements move with "motion": float, sway, pulse, spin, pop, fade, slide, wipe, typewriter; the scene with "camera".
+      .mp4 needs ffmpeg on the PATH. --frames-dir writes frame-0001.png… and frames.json; --sprite writes a sprite sheet
+      and its atlas JSON. docs/animate.md, docs/export.md
+  levni brand <brand.json | https://url> <out-dir> [--posters 8] [--only a,b]
+      Brand kit: { "brand": { name, tagline?, mark?, inks?, words? } } (or a website URL, read once for name, tagline and
+      colours) makes mark, favicons, palette, og, cover, square, story, README banner, board, posters, loop, brand.json,
+      kit.json and index.html in one folder. docs/brandkit.md
+  levni storyboard <spec.json> <out.png> [--frames-dir dir] [--columns n]
+      Storyboard sheet from a shot list: numbered frames with title, duration, timecode and note. A bare
+      [{ id, desc, frames }] list works. --frames-dir also writes shot-NN.png and shots.json. docs/storyboard.md
   levni sheet <out.png> [prop ...] [--recolor coral=blue,mustard=tone]
       Contact sheet of props (all when none named): every variant on paper and on blue.
   levni board <spec.json> <out.png>
@@ -42,7 +56,8 @@ const USAGE = `levni: hand-inked illustrations from JSON scenes
       Default folder: the library in this checkout. --sheet draws the imported props for a look.
   levni mcp
       Run Levni as an MCP server over stdio (tools: scene_guide, list_props, render_scene,
-      critique_scene, render_animation, show_props, render_board, render_poster). Add it to an MCP client as: npx levni mcp
+      critique_scene, render_animation, show_props, render_board, render_poster, render_storyboard,
+      render_brand_kit). Add it to an MCP client as: npx levni mcp
   levni check [prop ...]
       Measure props without looking at them (for agents that cannot see images): how much of the
       box each variant fills, its centre, colours, and what to fix. All props when none named.
@@ -62,22 +77,54 @@ async function main() {
   if (cmd === 'render') {
     const [file, out] = positional;
     if (!file || !out) throw new Error('usage: levni render <scene.json> <out.png|out.webp|out.svg>');
-    const scene = JSON.parse(readFileSync(file, 'utf8'));
+    let scene = JSON.parse(readFileSync(file, 'utf8'));
     if (opt('format')) Object.assign(scene, { format: opt('format'), reflow: true });
+    if (opt('tile')) {
+      const { tileable } = await import('../src/sequence.mjs');
+      writeFileSync(out, await tileable(scene, { size: Number(opt('tile')) || 512 }));
+      console.log(`${out}  (seamless ${Number(opt('tile')) || 512} px tile)`);
+      return;
+    }
+    if (flag('transparent')) { const { transparent } = await import('../src/sequence.mjs'); scene = transparent(scene); }
     const { notes } = await render(scene, out, { preview: flag('preview') });
     console.log(out);
     console.log(notes.length ? notes.map((n) => `- ${n}`).join('\n') : '- critic: no layout problems found');
   } else if (cmd === 'animate') {
     const [file, out] = positional;
-    if (!file || !/\.(gif|webp)$/i.test(out || '')) throw new Error('usage: levni animate <scene.json> <out.gif|out.webp> [--frames 24] [--fps 12] [--boil 3] [--width 800]');
+    if (!file || !/\.(gif|webp|mp4)$/i.test(out || '')) throw new Error('usage: levni animate <scene.json> <out.gif|out.webp|out.mp4> [--frames 24] [--fps 12] [--boil 3] [--width 800]');
     const scene = JSON.parse(readFileSync(file, 'utf8'));
     if (opt('format')) Object.assign(scene, { format: opt('format'), reflow: true });
     const { animate, frameStrip } = await import('../src/animate.mjs');
     const o = { frames: opt('frames'), fps: opt('fps'), boil: opt('boil'), width: opt('width') && Number(opt('width')), colours: opt('colours') };
+    if (opt('frames-dir')) { const { writeFrames } = await import('../src/sequence.mjs'); const m = await writeFrames(scene, resolve(opt('frames-dir')), o); console.log(`${opt('frames-dir')}  ${m.files.length} frames + frames.json`); }
+    if (opt('sprite')) { const { spriteSheet } = await import('../src/sequence.mjs'); await spriteSheet(scene, opt('sprite'), { ...o, columns: opt('columns') && Number(opt('columns')) }); console.log(`${opt('sprite')}  + atlas JSON`); }
+    if (/\.mp4$/i.test(out)) {
+      const { toMp4 } = await import('../src/sequence.mjs');
+      await toMp4(scene, out, { ...o, crf: opt('crf') && Number(opt('crf')), loops: opt('loops') && Number(opt('loops')) });
+      console.log(out);
+      return;
+    }
     const r = await animate(scene, out, o);
     console.log(`${out}  ${r.frames} frames, ${r.width} x ${r.height}, ${Math.round(r.bytes / 1024)} KB`);
     if (opt('strip')) { writeFileSync(opt('strip'), await frameStrip(r.stills)); console.log(opt('strip')); }
     console.log(r.notes.length ? r.notes.map((n) => `- ${n}`).join('\n') : '- critic: no layout problems found');
+  } else if (cmd === 'brand') {
+    const [src, outDir] = positional;
+    if (!src || !outDir) throw new Error('usage: levni brand <brand.json | https://url> <out-dir> [--posters 8] [--only a,b]');
+    const { renderKit, brandFromUrl } = await import('../src/brandkit.mjs');
+    const spec = /^https?:\/\//i.test(src) ? { brand: await brandFromUrl(src) } : JSON.parse(readFileSync(src, 'utf8'));
+    if (opt('posters')) spec.posters = Number(opt('posters'));
+    if (opt('only')) spec.only = opt('only').split(',').map((x) => x.trim()).filter(Boolean);
+    const r = await renderKit(spec, outDir);
+    console.log(`${r.files.length} files -> ${outDir}  (${r.brand.name}, mark ${r.brand.mark}, ${r.ms} ms)`);
+    for (const [k, v] of Object.entries(r.notes)) for (const n of v) console.log(`- ${k}: ${n}`);
+  } else if (cmd === 'storyboard') {
+    const [file, out] = positional;
+    if (!file || !out) throw new Error('usage: levni storyboard <spec.json> <out.png> [--frames-dir dir] [--columns n]');
+    const { renderStoryboard } = await import('../src/storyboard.mjs');
+    const r = await renderStoryboard(JSON.parse(readFileSync(file, 'utf8')), out, { framesDir: opt('frames-dir') ? resolve(opt('frames-dir')) : undefined, columns: opt('columns') ? Number(opt('columns')) : undefined });
+    console.log(`${out}  (${r.width}x${r.height}, ${r.shots.length} shots, ${r.total}s)`);
+    if (r.warnings.length) console.log(r.warnings.map((w) => `- ${w}`).join('\n'));
   } else if (cmd === 'sheet') {
     const [out, ...names] = positional;
     if (!out) throw new Error('usage: levni sheet <out.png> [prop ...]');

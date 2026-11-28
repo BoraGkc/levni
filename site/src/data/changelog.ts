@@ -12,6 +12,24 @@ export type Release = {
 
 export const RELEASES: Release[] = [
   {
+    version: '0.5.0',
+    date: '2026-11-28',
+    title: 'Motion: loops, moving README banners, storyboards and brand kits',
+    note: 'In the repository now; it reaches npm and the MCP Registry with 0.5.0.',
+    summary: 'Any scene becomes a looping GIF, animated WebP or MP4, drawn on your machine. Plus a whole brand kit from one brand, and a storyboard from a shot list.',
+    items: [
+      { text: 'levni animate: a scene’s time runs from 0 to 1 and the picture moves. Clouds drift, flags wave, mesh gradients breathe, ASCII globes and soft 3D turn. Output is a looping GIF, an animated WebP or an MP4 (with ffmpeg). Same seed, same frames.', links: [{ text: 'Animation guide', href: 'https://github.com/Levni-Dev/levni/blob/main/docs/animate.md' }] },
+      { text: 'Motion on any element: float, drift, orbit, sway, wiggle, pulse, spin and blink loop on their own; pop, fade, slide, wipe and typewriter play once and hold. Seventeen easing curves, stagger across elements, and a camera that pushes in and comes back.' },
+      { text: 'README banners that move: the repo name types itself, the mark pops in and floats. The banner maker has a new Animated GIF button, drawn frame by frame in your browser.', links: [{ text: 'Make a banner', href: '/banner/' }] },
+      { text: 'Smaller GIFs: Levni now writes GIFs with its own encoder, which stores only the pixels that change between frames. A moving banner is about 0.2 MB; the same frames through the old path were about three times that.' },
+      { text: 'levni brand: one brand (a name, or a website to read the name and colours from) becomes a folder with the mark, favicons, palette, link preview, cover, square, story, README banner, brand board, posters and a loop, all in the same inks, with one page to look at them.', links: [{ text: 'Brand kit guide', href: 'https://github.com/Levni-Dev/levni/blob/main/docs/brandkit.md' }] },
+      { text: 'levni storyboard: a shot list becomes a numbered sheet with titles, durations, timecodes and notes, plus full-size frames and a shots.json for your video tool.', links: [{ text: 'Storyboard guide', href: 'https://github.com/Levni-Dev/levni/blob/main/docs/storyboard.md' }] },
+      { text: 'More ways out: frame sequences for Remotion, sprite sheets with an atlas, transparent PNGs (--transparent) and seamless square textures (--tile). New sizes: hd (1920 × 1080) and readme (1280 × 640).', links: [{ text: 'Export guide', href: 'https://github.com/Levni-Dev/levni/blob/main/docs/export.md' }] },
+      { text: 'For agents: three new MCP tools, render_animation, render_storyboard and render_brand_kit. The critic now measures link previews, squares and stories against their own canvas (it used the cover size before).', links: [{ text: 'MCP tools', href: '/mcp/#tools' }] },
+      { text: 'Fixes: the sunburst and the rose now close their loops.' },
+    ],
+  },
+  {
     version: '0.4.0',
     date: '2026-11-25',
     title: 'The editor, the README banner maker and Levni in the browser',

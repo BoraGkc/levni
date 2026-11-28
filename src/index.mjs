@@ -18,6 +18,11 @@ export { STYLES, applyStyle } from './styles.mjs';
 export { validateProp, lintProp, parseProps, measureVariant, CATEGORIES } from './validate.mjs';
 export { iconsAvailable, resolveIcon } from './icon.mjs';
 export { animate, renderFrames, framePlan, frameStrip } from './animate.mjs';
+export { writeFrames, spriteSheet, toMp4, ffmpegAvailable, transparent, tileable, tileCheck } from './sequence.mjs';
+export { expandStoryboard, renderStoryboard } from './storyboard.mjs';
+export { renderKit, expandKit, brandFromHtml, brandFromUrl } from './brandkit.mjs';
+export { EASE, MOTIONS } from './motion.mjs';
+export { encodeGif } from './gif.mjs';
 export { renderBoard } from './board.mjs';
 export { expandBrand } from './board.mjs';
 

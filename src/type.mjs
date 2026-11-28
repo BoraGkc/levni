@@ -83,6 +83,8 @@ function shapeLine(line, o) {
 
 // Lay out a text block. Returns { d, box: [x, y, w, h], size } with the path data at final size.
 export function layoutType(e) {
+  // typewriter (motion.mjs): the text grows, but its size and box are those of the finished text
+  if (e._typed != null) { const full = layoutType({ ...e, text: e._typed, _typed: null }); e = { ...e, _typed: null, size: full.size, fit: 'none' }; }
   const locale = e.locale || (/[ğĞşŞıİ]/.test(e.text || '') ? 'tr' : 'en');
   let text = String(e.text ?? '').slice(0, 2000);
   if (e.upper) text = text.toLocaleUpperCase(locale);
