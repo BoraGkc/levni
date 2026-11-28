@@ -132,7 +132,9 @@ for (let i = 0; i < list.length; i += 24) {
 const exDir = new URL('../examples/', import.meta.url);
 for (const f of readdirSync(exDir).filter((n) => n.endsWith('.json'))) {
   try {
-    const { svg } = await compose(JSON.parse(readFileSync(new URL(f, exDir), 'utf8')));
+    const spec = JSON.parse(readFileSync(new URL(f, exDir), 'utf8'));
+    if (Array.isArray(spec) || spec.shots) continue; // a storyboard spec, not a scene: test/storyboard.mjs covers it
+    const { svg } = await compose(spec);
     if (/NaN|undefined|Infinity/.test(svg)) fail(`examples/${f}`, 'SVG contains NaN/undefined/Infinity');
     await rasterize(svg, { density: 24 });
   } catch (err) { fail(`examples/${f}`, err.message); }
