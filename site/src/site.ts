@@ -11,6 +11,8 @@ export const SITE = {
   npm: 'https://www.npmjs.com/package/@levni/levni',
   version: '0.5',
   ortakAlan: 'https://ortakalan.io',
+  // GitHub Sponsors (or similar) page; empty until it exists, and /support/ hides the button while it is
+  sponsor: '',
   props: folio.length,
   variants: folio.reduce((n, p) => n + p.variants.length, 0),
 };

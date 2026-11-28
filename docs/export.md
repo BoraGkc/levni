@@ -1,6 +1,6 @@
 # Export extras
 
-Code from `src/sequence.mjs`. All take a normal scene. Frame i of N is drawn at `t = i / N`, so the loop closes.
+Code from `src/sequence.mjs`. All take a normal scene. Frame i of N is drawn at `t = i / N`, so the loop closes. A scene's raster passes, `screen` (print screen) and `lens` (glass), are applied to every frame; an SVG export has neither.
 
 ```js
 import { writeFrames, spriteSheet, toMp4, ffmpegAvailable, transparent, tileable, tileCheck } from '@levni/levni';

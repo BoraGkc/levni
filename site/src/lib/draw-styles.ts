@@ -1,26 +1,27 @@
-// The five ways one Folio drawing can be drawn: ink, a 3D icon, ASCII, a dot matrix or an echo.
+// The six ways one Folio drawing can be drawn: ink, a 3D icon, ASCII, a dot matrix, dot lines or an echo.
 // Shared by the editor (Effects, adding drawings) and the library dialog (style previews).
 export type DrawBase = { name: string; variant?: number; x: number; y: number; size: number; color?: string };
-export type DrawStyle = { id: 'ink' | '3d' | 'ascii' | 'dots' | 'echo'; label: string; to: (b: DrawBase) => any };
+export type DrawStyle = { id: 'ink' | '3d' | 'ascii' | 'dots' | 'dotline' | 'echo'; label: string; to: (b: DrawBase) => any };
 
 export const DRAW_STYLES: DrawStyle[] = [
   { id: 'ink', label: 'Ink drawing', to: (b) => ({ type: 'prop', name: b.name, variant: b.variant, x: b.x, y: b.y, size: b.size }) },
   { id: '3d', label: '3D icon', to: (b) => ({ type: 'extrude3d', name: b.name, variant: b.variant, x: b.x, y: b.y, size: b.size }) },
   { id: 'ascii', label: 'ASCII', to: (b) => ({ type: 'glyphfill', prop: b.name, variant: b.variant, x: b.x, y: b.y, size: b.size, mode: 'glyph', color: b.color ?? 'ink' }) },
   { id: 'dots', label: 'Dot matrix', to: (b) => ({ type: 'glyphfill', prop: b.name, variant: b.variant, x: b.x, y: b.y, size: b.size, mode: 'dot', color: b.color ?? 'ink' }) },
+  { id: 'dotline', label: 'Dot lines', to: (b) => ({ type: 'dotline', prop: b.name, variant: b.variant, x: b.x, y: b.y, size: b.size, color: b.color ?? 'blue' }) },
   { id: 'echo', label: 'Echo', to: (b) => ({ type: 'echo', prop: b.name, variant: b.variant, x: b.x, y: b.y, size: b.size }) },
 ];
 
 export const drawingName = (e: any): string | null =>
-  e?.type === 'prop' || e?.type === 'extrude3d' ? e.name : (e?.type === 'glyphfill' || e?.type === 'echo') && typeof e.prop === 'string' ? e.prop : null;
+  e?.type === 'prop' || e?.type === 'extrude3d' ? e.name : (e?.type === 'glyphfill' || e?.type === 'echo' || e?.type === 'dotline') && typeof e.prop === 'string' ? e.prop : null;
 export const styleOf = (e: any): DrawStyle['id'] =>
-  e.type === 'extrude3d' ? '3d' : e.type === 'glyphfill' ? (e.mode === 'dot' ? 'dots' : 'ascii') : e.type === 'echo' ? 'echo' : 'ink';
+  e.type === 'extrude3d' ? '3d' : e.type === 'glyphfill' ? (e.mode === 'dot' ? 'dots' : 'ascii') : e.type === 'echo' ? 'echo' : e.type === 'dotline' ? 'dotline' : 'ink';
 
 // `ref` drawn as another drawing: keeps its look (colours, cell, light, effects), takes the new drawing and place
 export function likeDrawing(ref: any, b: DrawBase) {
   const o = structuredClone(ref);
   for (const k of ['x', 'y', 'size', 'variant', 'rot', 'flip', 'hidden', 'locked', 'id']) delete o[k];
-  if (o.type === 'glyphfill' || o.type === 'echo') o.prop = b.name; else o.name = b.name;
+  if (o.type === 'glyphfill' || o.type === 'echo' || o.type === 'dotline') o.prop = b.name; else o.name = b.name;
   if (b.variant != null) o.variant = b.variant;
   return { ...o, x: b.x, y: b.y, size: b.size };
 }

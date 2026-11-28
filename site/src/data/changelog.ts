@@ -12,6 +12,22 @@ export type Release = {
 
 export const RELEASES: Release[] = [
   {
+    version: '0.6.0',
+    date: '2026-11-28',
+    title: 'Dot lines, a glass lens, and a page for every drawing',
+    note: 'In the repository now; it reaches npm with 0.6.0.',
+    summary: 'Any drawing or iso scene redrawn as a dot matrix, a liquid-glass search bar that bends the picture under it, and the library opened up: 1,628 drawing pages, shelves, styles for the whole grid and a page of drawings in use.',
+    items: [
+      { text: 'dotline: line art redrawn as dots on a square grid. Strokes are walked and snapped one dot per cell, fills turn into muted dots, and in an iso scene every edge a nearer face covers becomes a grey hidden line, worked out from the faces, with no 3D. shimmer runs a brightness wave over the dots and closes its loop.', links: [{ text: 'Element reference', href: '/docs/elements/' }] },
+      { text: 'lens: a scene-level glass pass for PNG, WebP and GIF. A pill, circle or rounded box magnifies the picture, bends it at the rim and splits it into red and blue fringes, with a sheen, a bright rim and a soft shadow. It can carry a magnifier, a label and a ⌘K key, and move slides it over a loop.', links: [{ text: 'Scene options', href: 'https://github.com/Levni-Dev/levni/blob/main/docs/scene.md' }] },
+      { text: 'A page for every drawing: /library/<name>/ shows each variant as SVG, the drawing in every style, the scene line, the words people search for it by, its dates, licence and related drawings, with its own share card. Fifteen shelf pages list each shelf.', links: [{ text: 'An example: coffee cup', href: '/library/coffee-cup/' }] },
+      { text: 'Draw the whole library in one style: a bar at the bottom of the library redraws every tile as ink, 3D, ASCII, dot matrix, dot lines or echo, in one ink, and keeps the choice in the address so a link opens the same view. A glass lens follows the pointer and names the drawing under it.', links: [{ text: 'The library in dot lines', href: '/library/?style=dotline' }] },
+      { text: 'Drawings in use: six places a drawing has to work (a blog cover, a README, a Notion page, an empty state, a slide, a welcome card), all redrawn by one switch.', links: [{ text: 'Drawings in use', href: '/library/in-use/' }] },
+      { text: 'Search the open drawings from the first screen of levni.dev, with ⌘K. And a page on how to keep Levni open: no Pro tier, nothing locked, four ways to help.', links: [{ text: 'Keep it open', href: '/support/' }] },
+      { text: 'In the gallery and the motion catalogue: an iso scene as dots, a glass bar over a dot globe, and the two as loops.', links: [{ text: 'Gallery', href: '/gallery/' }, { text: 'Motion catalogue', href: '/motion/' }] },
+    ],
+  },
+  {
     version: '0.5.0',
     date: '2026-11-28',
     title: 'Motion: loops, moving README banners, storyboards and brand kits',

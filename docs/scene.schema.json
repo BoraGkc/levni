@@ -98,6 +98,21 @@
         "spread": { "type": "number", "default": 0.8 }
       }
     },
+    "lens": {
+      "type": ["object", "array"],
+      "description": "Liquid-glass raster pass (PNG/WebP/GIF): a glass pill that magnifies and refracts the picture under it, with red/blue fringes at the rim and optional search chrome. An array draws up to 8 lenses.",
+      "properties": {
+        "x": { "type": "number" }, "y": { "type": "number" },
+        "w": { "type": "number", "default": 760 }, "h": { "type": "number", "default": 190 },
+        "shape": { "enum": ["pill", "circle", "rect"] }, "radius": { "type": "number" },
+        "zoom": { "type": "number", "default": 1.18 }, "bend": { "type": "number" }, "aberration": { "type": "number" },
+        "blur": { "type": "number", "default": 0 }, "tint": { "type": "string" }, "tintLevel": { "type": "number", "default": 0.22 },
+        "sheen": { "type": "number", "default": 0.12 }, "rim": { "type": "number", "default": 0.55 },
+        "shadow": { "type": "number", "default": 0.45 }, "shadowSize": { "type": "number" },
+        "move": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 },
+        "icon": { "type": ["boolean", "object"] }, "label": { "type": ["string", "object"] }, "kbd": { "type": ["string", "object"] }
+      }
+    },
     "format": {
       "enum": [
         "cover",
@@ -323,6 +338,7 @@
             "shapegrid",
             "echo",
             "dotmatrix",
+            "dotline",
             "furniture",
             "meshgrad",
             "flowfield",

@@ -1,0 +1,9 @@
+{
+  "seed": 2,
+  "background": "#0B0B0C",
+  "finish": "soft",
+  "lens": {"x":600,"y":330,"w":700,"h":150,"move":[0,110],"icon":true,"label":"Stack","kbd":"⌘K"},
+  "elements": [
+    {"type":"dotline","cell":9,"color":"#8F7DFF","muted":"#4E4E57","faint":"#151518","shimmer":0.5,"iso":{"x":600,"y":330,"scale":0.95,"objects":[{"kind":"floor","x":-170,"y":-170,"w":440,"d":440},{"kind":"box","x":-70,"y":-70,"w":240,"d":240,"h":130,"hatch":false},{"kind":"box","x":-10,"y":-10,"w":120,"d":120,"h":110,"z":130,"hatch":false},{"kind":"box","x":20,"y":20,"w":60,"d":60,"h":70,"z":240,"hatch":false}]}}
+  ]
+}

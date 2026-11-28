@@ -1,0 +1,81 @@
+---
+// /support/: how to keep the commons open. No tier, no lock, nothing for sale: the asks are ranked by how little they cost.
+// The sponsor button appears only once SITE.sponsor is set (src/site.ts).
+import Base from '../layouts/Base.astro';
+import { SITE } from '../site';
+
+const ways = [
+  { n: '01', t: 'Star it on GitHub', d: 'Free, five seconds, and the thing that makes a small open project findable. Stars decide what shows up when someone searches for a design MCP or an illustration library.', href: SITE.github, cta: 'Star Levni-Dev/levni', ext: true },
+  { n: '02', t: 'Draw one thing for the Folio', d: `Every drawing in the library was drawn by someone. Add one object as a JSON file, check it with one command, and your name travels with it into every scene that uses it.`, href: '/blog/contribute-drawing-open-library/', cta: 'How to add a drawing' },
+  { n: '03', t: 'Show what you made', d: 'A cover, a poster, a brand board, a README banner. Post it with the scene, or send it to the gallery: credited, linked, kept.', href: '/community/', cta: 'Five ways in' },
+  { n: '04', t: 'Tell one person', d: 'The designer who still sketches, the developer who needs a cover by tonight, the friend tired of image credits. Levni grows by being handed on.', href: '/manifesto/', cta: 'Send them the manifesto' },
+];
+const description = 'Levni stays free and open: no Pro tier, no locked drawings, no credits. Four ways to keep the commons going, from a GitHub star to a drawing of your own.';
+---
+<Base title="Keep it open" description={description}>
+  <section class="sp-hero">
+    <div class="wrap">
+      <p class="k">{'{'}a post-AI center for designers · support{'}'}</p>
+      <h1>Keep the commons open.</h1>
+      <p class="lede">Levni has no Pro tier and will not get one. Every drawing added is added for everyone, under the same licence, forever. Support pays for time, not for access: the hours the next hundred drawings take.</p>
+    </div>
+  </section>
+
+  <section class="wrap ways" aria-labelledby="ways-h">
+    <h2 id="ways-h" class="vh">Ways to support Levni</h2>
+    <ol>
+      {ways.map((w) => (
+        <li>
+          <span class="n">{w.n}</span>
+          <div>
+            <h3>{w.t}</h3>
+            <p>{w.d}</p>
+            <a class="go" href={w.href} {...(w.ext ? { rel: 'noopener', target: '_blank' } : {})}>{w.cta} →</a>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="wrap money" aria-labelledby="money-h">
+    <div class="money-card">
+      <h2 id="money-h">And if you want to give money</h2>
+      <p>It unlocks nothing. Everyone gets the same library, the same engine and the same licence whether they give or not. It buys drawing hours, review time for contributed drawings, and the small server bills behind the free tools.</p>
+      {SITE.sponsor ? (
+        <p><a class="btn-sp" href={SITE.sponsor} rel="noopener" target="_blank">Sponsor Levni</a></p>
+      ) : (
+        <p class="soon">Sponsoring opens soon, through <a href={SITE.ortakAlan}>Ortak Alan</a>. Until then the three free ways above help more than money would. <a href="/join/">Join the crew</a> to hear when it opens.</p>
+      )}
+      <p class="fine">Companies that sponsor get their name in the README and on this page. Nothing else changes: no placement in the library, no say over what gets drawn.</p>
+    </div>
+  </section>
+
+  <section class="wrap why" aria-labelledby="why-h">
+    <h2 id="why-h">Why it stays free</h2>
+    <p>Every other layer of the web went open: the code, the fonts, the icons. The pictures did not. Making one small cover now means a credit card, an API key and a model in a good mood. Levni is the other bet, a design commons made by people who still like making things. Locking part of it would make it one more shop. <a href="/manifesto/">Read the manifesto</a>.</p>
+  </section>
+</Base>
+
+<style>
+  .sp-hero { background: var(--indigo); color: var(--on-indigo, #f3f1ea); padding-block: 56px 48px; margin-top: 0; }
+  .k { margin: 0 0 14px; font: 500 0.75rem/1.4 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--lime); }
+  .sp-hero h1 { margin: 0 0 14px; color: #fff; }
+  .sp-hero .lede { max-width: 60ch; font-size: 1.15rem; color: var(--mute-indigo, #d8d2f5); margin: 0; }
+  .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .ways ol { list-style: none; padding: 0; margin: 40px 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  @media (max-width: 760px) { .ways ol { grid-template-columns: 1fr; } }
+  .ways li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; background: var(--paper-2); border: 1.5px solid var(--rule); padding: 20px; }
+  .ways .n { font: 600 0.8rem/1 var(--mono); color: var(--indigo); padding-top: 6px; }
+  .ways h3 { margin: 0 0 6px; }
+  .ways p { margin: 0 0 12px; color: var(--ink-soft); }
+  .go { font-family: var(--mono); font-size: 0.85rem; color: var(--accent-text, var(--indigo)); }
+  .money { margin-top: 40px; }
+  .money-card { border: 2px solid var(--ink); background: var(--lime); color: var(--ink); padding: 26px; max-width: 760px; }
+  .money-card h2 { margin: 0 0 10px; }
+  .money-card p { margin: 0 0 12px; max-width: 62ch; }
+  .money-card a { color: var(--ink); }
+  .btn-sp { display: inline-block; background: var(--ink); color: var(--lime) !important; padding: 12px 18px; font-weight: 600; text-decoration: none; }
+  .fine { font-size: 0.9rem; opacity: 0.8; }
+  .why { margin-block: 44px 20px; }
+  .why p { color: var(--ink-soft); max-width: 70ch; }
+</style>

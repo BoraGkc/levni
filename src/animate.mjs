@@ -9,6 +9,7 @@ import { compose } from './compose.mjs';
 import { critique } from './critic.mjs';
 import { rasterize } from './raster.mjs';
 import { screenRaster } from './dither.mjs';
+import { lensRaster } from './lens.mjs';
 import { encodeGif } from './gif.mjs';
 
 const clampInt = (v, d, lo, hi) => { const n = Math.round(Number(v)); return Number.isFinite(n) ? Math.min(hi, Math.max(lo, n)) : d; };
@@ -41,13 +42,15 @@ export async function renderFrames(spec, opts = {}) {
       const entering = (spec.elements || []).some((e) => e && e.motion);
       notes = entering ? critique((await compose({ ...spec, t: 0.5 })).used, cv) : critique(used, cv);
     }
-    if (!cache.has(svg)) {
+    const ck = spec.lens ? svg + '|lens' + step.t : svg; // a moving lens changes the frame even when the SVG does not
+    if (!cache.has(ck)) {
       let png = await rasterize(svg);
       if (spec.screen) png = await screenRaster(png, spec.screen);
+      if (spec.lens) png = await lensRaster(png, spec.lens, step.t);
       if (opts.width && opts.width < cv.w) png = await sharp(png).resize(Math.round(opts.width)).png().toBuffer();
-      cache.set(svg, png);
+      cache.set(ck, png);
     }
-    frames.push(cache.get(svg));
+    frames.push(cache.get(ck));
   }
   const moving = cache.size > 1;
   if (!moving && plan.length > 1) notes = [...notes, 'animation: every frame is the same. Nothing in this scene follows `t`; add a moving element (cloud with drift, flag, confetti, flowfield, meshgrad, soft3d with spin) or set boil'];

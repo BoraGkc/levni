@@ -373,5 +373,5 @@ Object.assign(ASSETS, TYPE_ASSETS);
 // Print textures (amtone halftone, camo blobs, grain): see print.mjs
 Object.assign(ASSETS, PRINT_ASSETS);
 
-// Poster shape kits (shapegrid, echo, dotmatrix, furniture): see shapes.mjs
+// Poster shape kits (shapegrid, echo, dotmatrix, dotline, furniture): see shapes.mjs
 Object.assign(ASSETS, SHAPES_ASSETS);

@@ -8,6 +8,7 @@
     "preview": "astro preview",
     "assets": "node scripts/render-assets.mjs",
     "library": "node scripts/render-library.mjs",
+    "library-og": "node scripts/render-library-og.mjs",
     "gallery": "node scripts/render-gallery.mjs",
     "blog": "node scripts/render-blog.mjs"
   },

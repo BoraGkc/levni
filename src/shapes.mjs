@@ -2,6 +2,7 @@
 //  shapegrid  Bauhaus / Swiss modular grid: pills, half circles, quarters, arches ... with exact gaps, seeded or explicit.
 //  echo       one silhouette repeated N times with an offset and stepped tones, the last copy on top (the "head stack").
 //  dotmatrix  a dot grid whose mask (prop, built-in world map, noise, pattern rows) decides filled / hollow / faint dots.
+//  dotline    line art (a prop or an iso scene) redrawn as a dot grid: lines in one colour, fills and hidden back edges muted.
 //  furniture  poster furniture: dotted border, corner marks, plus-sign row, mono credits row, code tag, thin rules.
 import { flattenPath } from './ink.mjs';
 import { findProp } from './props.mjs';
@@ -134,10 +135,10 @@ const rgbHex = (a) => '#' + a.map((v) => Math.round(Math.max(0, Math.min(255, v)
 const mix = (a, b, t) => { const A = hexRgb(a), B = hexRgb(b); return rgbHex(A.map((v, i) => v + (B[i] - v) * t)); };
 
 // the silhouette source of an echo, in a 0..100 box: [{ d, fill, stroke, weight }]
-function echoPaths(e) {
+function echoPaths(e, who = 'echo') {
   if (e.prop) {
     const p = findProp(e.prop);
-    if (!p) throw new Error(`echo: no prop "${e.prop}" (levni list)`);
+    if (!p) throw new Error(`${who}: no prop "${e.prop}" (levni list)`);
     const v = p.variants[Math.min(p.variants.length - 1, Math.max(0, int(e.variant, 0, 0, 99)))];
     const only = Array.isArray(e.paths) ? new Set(e.paths) : null;
     return v.paths.filter((_, i) => !only || only.has(i));
@@ -152,7 +153,7 @@ function echoPaths(e) {
   else if (shape === 'rect') d = rrect(x0, y0, w, h, new Array(4).fill((num(e.radius, 0, 0, 1) * Math.min(w, h)) / 2));
   else if (shape === 'pill') d = rrect(x0, y0, w, h, new Array(4).fill(Math.min(w, h) / 2));
   else if (shape === 'triangle') d = `M50 ${f(y0)}L${f(x0 + w)} ${f(y0 + h)}L${f(x0)} ${f(y0 + h)}Z`;
-  else throw new Error(`echo: unknown shape "${shape}" (circle, rect, pill, triangle, or use prop / paths / d)`);
+  else throw new Error(`${who}: unknown shape "${shape}" (circle, rect, pill, triangle, or use prop / paths / d)`);
   return [{ d, fill: 'ink', stroke: 'none' }];
 }
 
@@ -294,6 +295,176 @@ function dotmatrixAsset(e, { r, c, noise }) {
   return { svg, bbox: [gx, gy, gw, gh] };
 }
 
+// ---------- dotline ----------
+// Line art redrawn as a dot matrix: every stroke is walked by arc length and snapped to a square grid (one dot per cell).
+// Sources: a library prop / `paths` / `d` (like echo), or an `iso` scene (boxes, floors, walls, props), whose faces are
+// drawn back to front: an edge covered by a later face is a hidden line and turns muted grey, so back edges show through.
+// Fills become muted dots, `shadow` adds a muted offset copy of the lines, `faint` dots fill the empty grid around the
+// drawing, `shimmer` runs a diagonal wave over the line dots with `t`. The grid is anchored to the canvas, so several
+// dotline elements with the same `cell` share one grid.
+
+function windingIn(poly, x, y) {
+  let w = 0;
+  for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
+    const [x1, y1] = poly[j], [x2, y2] = poly[i];
+    if (y1 <= y) { if (y2 > y && (x2 - x1) * (y - y1) - (x - x1) * (y2 - y1) > 0) w++; }
+    else if (y2 <= y && (x2 - x1) * (y - y1) - (x - x1) * (y2 - y1) < 0) w--;
+  }
+  return w;
+}
+function edgeDist2(polys, x, y) {
+  let m = Infinity;
+  for (const q of polys) for (let i = 0, j = q.length - 1; i < q.length; j = i++) {
+    const [ax, ay] = q[j], [bx, by] = q[i], dx = bx - ax, dy = by - ay, l2 = dx * dx + dy * dy;
+    const u = l2 ? clamp01(((x - ax) * dx + (y - ay) * dy) / l2) : 0, d = (x - ax - u * dx) ** 2 + (y - ay - u * dy) ** 2;
+    if (d < m) m = d;
+  }
+  return m;
+}
+
+// layers in canvas px: { polys, fill (colour or null), stroke (colour or null), hidden, group }; later groups cover earlier ones
+function dotLayersFromPaths(e, c) {
+  const paths = echoPaths(e, 'dotline');
+  if (!paths.length) throw new Error('dotline: no paths left (check "paths")');
+  const size = num(e.size, 400, 8, 6000), x = num(e.x, 600, -1e5, 1e5), y = num(e.y, 400, -1e5, 1e5);
+  const flat = paths.map((p) => flattenPath(p.d, 1.2));
+  let bx = Infinity, by = Infinity, ex = -Infinity, ey = -Infinity;
+  for (const polys of flat) for (const q of polys) for (const [px, py] of q) { bx = Math.min(bx, px); ex = Math.max(ex, px); by = Math.min(by, py); ey = Math.max(ey, py); }
+  if (!Number.isFinite(bx)) throw new Error('dotline: empty path');
+  const bw = ex - bx, bh = ey - by, k = size / Math.max(bw, bh, 1e-6), sg = e.flip ? -1 : 1;
+  const hidden = new Set(Array.isArray(e.hidden) ? e.hidden.map(Number) : []);
+  return paths.map((p, n) => ({
+    polys: flat[n].map((q) => { const o = q.map(([px, py]) => [x + sg * (px - (bx + bw / 2)) * k, y + (py - (by + bh / 2)) * k]); o.closed = q.closed; return o; }),
+    fill: p.fill && p.fill !== 'none' ? p.fill : null,
+    stroke: p.stroke !== 'none' && (p.stroke || !p.fill) ? (p.stroke || 'ink') : null,
+    hidden: hidden.has(n), group: 0,
+  }));
+}
+// iso.mjs reaches assets.mjs (via iso-kit), which loads this file: compose hands the expander in to avoid the cycle
+let expandIso = null;
+export function useIsoExpander(fn) { expandIso = fn; }
+
+function dotLayersFromIso(e) {
+  if (!expandIso) throw new Error('dotline: iso scenes need the compose engine (useIsoExpander was not called)');
+  const iso = { ...e.iso, type: 'iso' };
+  if (iso.x == null) iso.x = num(e.x, 600, -1e5, 1e5);
+  if (iso.y == null) iso.y = num(e.y, 400, -1e5, 1e5);
+  const layers = [];
+  let g = 0;
+  for (const el of expandIso(iso)) {
+    g++;
+    if (el.type === 'shape' && Array.isArray(el.points) && el.points.length > 2 && el.stroke !== 'none') { // unstroked shapes are cast shadows: skipped
+      const q = el.points.map(([px, py]) => [Number(px), Number(py)]); q.closed = el.closed !== false;
+      layers.push({ polys: [q], fill: el.fill && el.fill !== 'none' ? el.fill : null, stroke: el.stroke || 'ink', hidden: false, group: g, face: true });
+    } else if (el.type === 'prop' || el.type === 'draw') { // a drawing standing in the scene: its 0..100 box is `size` px, centred on (x, y)
+      const p = el.type === 'prop' ? findProp(el.name) : null;
+      const paths = el.type === 'draw' ? el.paths : p ? p.variants[Math.min(p.variants.length - 1, Math.max(0, el.variant ?? 0))].paths : null;
+      if (!Array.isArray(paths)) continue;
+      const s = (el.size ?? 120) / 100, sg = el.flip ? -1 : 1;
+      for (const pt of paths) {
+        if (!pt || typeof pt.d !== 'string') continue;
+        const polys = flattenPath(pt.d, 1.2).map((q) => { const o = q.map(([px, py]) => [el.x + sg * (px - 50) * s, el.y + (py - 50) * s]); o.closed = q.closed; return o; });
+        layers.push({ polys, fill: pt.fill && pt.fill !== 'none' ? pt.fill : null, stroke: pt.stroke !== 'none' && (pt.stroke || !pt.fill) ? (pt.stroke || 'ink') : null, hidden: false, group: g });
+      }
+    }
+  }
+  if (!layers.length) throw new Error('dotline: the iso scene drew nothing (give it objects, e.g. [{ "kind": "box", ... }])');
+  return layers;
+}
+
+function dotlineAsset(e, { c, t = 0 }) {
+  const isIso = e.iso && typeof e.iso === 'object';
+  const layers = isIso ? dotLayersFromIso(e) : dotLayersFromPaths(e, c);
+  let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+  for (const L of layers) for (const q of L.polys) for (const [px, py] of q) { x0 = Math.min(x0, px); x1 = Math.max(x1, px); y0 = Math.min(y0, py); y1 = Math.max(y1, py); }
+  let cell = num(e.cell, 12, 3, 200);
+  while (((x1 - x0) / cell) * ((y1 - y0) / cell) > 90000) cell *= 1.15; // keep huge drawings to a sane dot count
+
+  const paint = !!e.paint, line = int(e.line, 1, 1, 6), every = int(e.fillEvery, 2, 1, 4); // fillEvery: 1 every cell, 2 checkerboard, 3 one in four, 4 one in nine
+  const fillOn = e.fill ?? !isIso, showHidden = e.hiddenLines !== false;
+  const lineCol = c(e.color, '#4B2FD6'), mutedCol = c(e.muted, '#6B6B76');
+  const gi = (v) => Math.round(v / cell), key = (i, j) => i + ',' + j;
+  // 1) occlusion: which group's filled interior is on top at each cell (iso only; a prop's own fills never hide its lines)
+  const occ = new Map(), fills = new Map();
+  for (const L of layers) {
+    if (!L.fill && !L.face) continue;
+    let a = Infinity, b = Infinity, cc = -Infinity, d = -Infinity;
+    for (const q of L.polys) for (const [px, py] of q) { a = Math.min(a, px); cc = Math.max(cc, px); b = Math.min(b, py); d = Math.max(d, py); }
+    const inset2 = (cell * 0.6) ** 2;
+    for (let j = Math.ceil(b / cell); j <= Math.floor(d / cell); j++) for (let i = Math.ceil(a / cell); i <= Math.floor(cc / cell); i++) {
+      const X = i * cell, Y = j * cell;
+      let w = 0;
+      for (const q of L.polys) w += windingIn(q, X, Y);
+      if (!w) continue;
+      if (isIso && L.face && edgeDist2(L.polys, X, Y) > inset2) occ.set(key(i, j), L.group);
+      if (L.fill) fills.set(key(i, j), { i, j, col: paint ? c(L.fill, mutedCol) : mutedCol, group: L.group });
+    }
+  }
+  // 2) lines: walk each polyline at a third of a cell, snap to the grid; a line under a later group's face is hidden
+  const cells = new Map(); // key -> { i, j, col, rank }: 3 line, 2 hidden line, 1 fill, 0 shadow
+  const put = (i, j, col, rank) => { const k = key(i, j), cur = cells.get(k); if (!cur || cur.rank < rank) cells.set(k, { i, j, col, rank }); };
+  const reach = (line - 1) / 2, R = Math.ceil(reach);
+  for (const L of layers) {
+    if (!L.stroke) continue;
+    const own = L.hidden ? mutedCol : paint ? c(L.stroke, lineCol) : lineCol;
+    const mark = (i, j) => {
+      const over = occ.get(key(i, j));
+      if (L.hidden || (over != null && over > L.group)) { if (showHidden) put(i, j, mutedCol, 2); }
+      else put(i, j, own, 3);
+    };
+    for (const q of L.polys) {
+      const ring = q.closed && q.length > 2 ? [...q, q[0]] : q;
+      for (let s = 0; s < ring.length - 1; s++) {
+        const [ax, ay] = ring[s], [qx, qy] = ring[s + 1], m = Math.max(1, Math.ceil(Math.hypot(qx - ax, qy - ay) / (cell / 3)));
+        for (let u = 0; u <= m; u++) {
+          const px = ax + ((qx - ax) * u) / m, py = ay + ((qy - ay) * u) / m;
+          if (!R) { mark(gi(px), gi(py)); continue; }
+          for (let dj = -R; dj <= R; dj++) for (let di = -R; di <= R; di++) {
+            const i = gi(px) + di, j = gi(py) + dj;
+            if (Math.hypot(i * cell - px, j * cell - py) <= (reach + 0.5) * cell) mark(i, j);
+          }
+        }
+      }
+    }
+  }
+  // 3) fills under the lines, as muted dots in a checkerboard (fillEvery); only the top fill shows in iso scenes
+  if (fillOn) for (const v of fills.values()) {
+    if (every === 2 ? (v.i + v.j) % 2 : every > 2 && (v.i % (every - 1) || v.j % (every - 1))) continue;
+    const over = occ.get(key(v.i, v.j));
+    if (over != null && over > v.group) continue;
+    put(v.i, v.j, v.col, 1);
+  }
+  // 4) shadow: a muted copy of the visible line dots, offset by [dx, dy] cells, only where the grid is still empty
+  if (Array.isArray(e.shadow) && e.shadow.length === 2) {
+    const [sx, sy] = e.shadow.map((v) => int(v, 0, -20, 20)), shCol = c(e.shadowColor, mutedCol);
+    for (const v of [...cells.values()]) if (v.rank === 3 && !cells.has(key(v.i + sx, v.j + sy))) cells.set(key(v.i + sx, v.j + sy), { i: v.i + sx, j: v.j + sy, col: shCol, rank: 0 });
+  }
+  // the drawing's grid box (with a margin), for faint dots and the bbox
+  const pad = num(e.pad, 2, 0, 40);
+  let i0 = Infinity, j0 = Infinity, i1 = -Infinity, j1 = -Infinity;
+  for (const v of cells.values()) { i0 = Math.min(i0, v.i); i1 = Math.max(i1, v.i); j0 = Math.min(j0, v.j); j1 = Math.max(j1, v.j); }
+  if (!cells.size) { i0 = i1 = gi((x0 + x1) / 2); j0 = j1 = gi((y0 + y1) / 2); }
+  i0 -= pad; j0 -= pad; i1 += pad; j1 += pad;
+
+  const dot = num(e.dot, 0.62, 0.05, 1) * cell, mutedDot = num(e.mutedDot, 0.54, 0.05, 1) * cell;
+  const fo = e.faint && typeof e.faint === 'object' ? e.faint : { color: e.faint };
+  const faintCol = fo.color ? c(fo.color, '#2A2A30') : null, faintDot = num(fo.size ?? e.faintSize, 0.28, 0.05, 1) * cell;
+  // shimmer: an opacity wave along the diagonal; whole cycles over t so loops close; 6 levels keep the SVG small
+  const shimmer = num(e.shimmer, 0, 0, 1), wave = num(e.wave, 28, 2, 400), cycles = int(e.cycles, 1, 1, 8), LV = 6;
+  const level = (i, j) => { if (!shimmer) return LV; const s = 0.5 + 0.5 * Math.sin(2 * Math.PI * (t * cycles - (i + j) / wave)); return Math.round(LV * (1 - shimmer * (1 - s))); };
+  const circ = (cx, cy, rr) => `M${f(cx - rr)} ${f(cy)}a${f(rr)} ${f(rr)} 0 1 0 ${f(rr * 2)} 0a${f(rr)} ${f(rr)} 0 1 0 ${f(-rr * 2)} 0Z`;
+  const groups = new Map(); // "colour|level" -> path data, drawn in insertion order
+  const add = (col, lv, d) => { const k = col + '|' + lv; groups.set(k, (groups.get(k) || '') + d); };
+  if (faintCol) for (let j = j0; j <= j1; j++) for (let i = i0; i <= i1; i++) if (!cells.has(key(i, j))) add(faintCol, LV, circ(i * cell, j * cell, faintDot / 2));
+  for (const v of [...cells.values()].sort((a, b) => a.rank - b.rank)) add(v.col, v.rank === 3 ? level(v.i, v.j) : LV, circ(v.i * cell, v.j * cell, (v.rank === 3 ? dot : mutedDot) / 2));
+  let svg = '';
+  for (const [k, d] of groups) {
+    const [col, lv] = k.split('|'), op = Number(lv) / LV;
+    if (op > 0) svg += `<path d="${d}" fill="${col}"${op < 1 ? ` fill-opacity="${f(op)}"` : ''}/>`;
+  }
+  return { svg, bbox: [i0 * cell, j0 * cell, (i1 - i0) * cell, (j1 - j0) * cell] };
+}
+
 // ---------- furniture ----------
 
 const textW = (s, size, sp = 1) => s.length * (size * 0.6 + sp);
@@ -389,4 +560,4 @@ function furnitureAsset(e, { c, canvas }) {
 }
 
 export { landAt };
-export const SHAPES_ASSETS = { shapegrid: shapegridAsset, echo: echoAsset, dotmatrix: dotmatrixAsset, furniture: furnitureAsset };
+export const SHAPES_ASSETS = { shapegrid: shapegridAsset, echo: echoAsset, dotmatrix: dotmatrixAsset, dotline: dotlineAsset, furniture: furnitureAsset };

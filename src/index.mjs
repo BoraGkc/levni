@@ -12,6 +12,7 @@ export { FORMATS, resolveCanvas } from './formats.mjs';
 export { toWebp, toPng } from './export.mjs';
 export { rasterize } from './raster.mjs';
 export { bayer, screenRaster, SCREEN_PRESETS } from './dither.mjs';
+export { lensRaster } from './lens.mjs';
 export { renderPosters, expandPosters, TEMPLATES as POSTER_TEMPLATES } from './poster.mjs';
 export { FONTS, layoutType } from './type.mjs';
 export { STYLES, applyStyle } from './styles.mjs';
@@ -36,7 +37,7 @@ import { toPng, toWebp } from './export.mjs';
 export async function render(scene, out, opts = {}) {
   const { svg, used, canvas } = await compose(scene);
   if (/\.svg$/i.test(out)) writeFileSync(out, svg);
-  else if (/\.webp$/i.test(out)) await toWebp(svg, out, { ...opts.webp, screen: scene.screen });
-  else await toPng(svg, out, { preview: !!opts.preview, screen: scene.screen });
+  else if (/\.webp$/i.test(out)) await toWebp(svg, out, { ...opts.webp, screen: scene.screen, lens: scene.lens, t: scene.t });
+  else await toPng(svg, out, { preview: !!opts.preview, screen: scene.screen, lens: scene.lens, t: scene.t });
   return { notes: critique(used, canvas), svg };
 }

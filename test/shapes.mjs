@@ -1,4 +1,4 @@
-// shapegrid, echo, dotmatrix, furniture: defaults, silly inputs, determinism, exact geometry.
+// shapegrid, echo, dotmatrix, dotline, furniture: defaults, silly inputs, determinism, exact geometry.
 import assert from 'node:assert/strict';
 import { compose } from '../src/index.mjs';
 import { modulePath, landAt, GRID_MODULES } from '../src/shapes.mjs';
@@ -56,6 +56,33 @@ for (const e of [{ mask: 'noise', cell: 10 }, { mask: 'prop', prop: 'cat', cell:
 }
 await assert.rejects(() => compose({ elements: [{ type: 'dotmatrix', mask: 'nope' }] }), /unknown mask/);
 await assert.rejects(() => compose({ elements: [{ type: 'dotmatrix', mask: 'pattern' }] }), /pattern rows/);
+
+// dotline: line dots sit on the canvas grid, iso back edges turn muted, shimmer loops
+const dl = { type: 'dotline', prop: 'globe', x: 400, y: 300, size: 300, cell: 10, color: '#111111', muted: '#999999' };
+const dl1 = await svgOf(dl);
+assert.match(dl1, /fill="#111111"/);
+assert.match(dl1, /fill="#999999"/, 'fills become muted dots');
+for (const m of dl1.matchAll(/M(-?[\d.]+) (-?[\d.]+)a([\d.]+)/g)) {
+  const cx = Number(m[1]) + Number(m[3]), cy = Number(m[2]);
+  assert.ok(Math.abs(cx / 10 - Math.round(cx / 10)) < 0.02 && Math.abs(cy / 10 - Math.round(cy / 10)) < 0.02, `dot off the grid at ${cx},${cy}`);
+}
+assert.doesNotMatch(await svgOf({ ...dl, fill: false }), /fill="#999999"/, 'fill: false leaves only lines');
+const isoDots = (extra = {}) => svgOf({ type: 'dotline', cell: 10, color: '#111111', muted: '#999999', ...extra,
+  iso: { x: 600, y: 400, objects: [{ kind: 'box', x: -60, y: -60, w: 200, d: 200, h: 120, hatch: false }, { kind: 'box', x: 0, y: 0, w: 80, d: 80, h: 100, z: 120, hatch: false }] } });
+assert.match(await isoDots(), /fill="#999999"/, 'edges under the top box are hidden lines');
+assert.doesNotMatch(await isoDots({ hiddenLines: false }), /fill="#999999"/, 'hiddenLines: false drops them');
+const sh = (t) => compose({ seed: 1, t, elements: [{ ...dl, shimmer: 0.6 }] }).then((o) => o.svg);
+assert.notEqual(await sh(0), await sh(0.5), 'shimmer moves with t');
+assert.equal(await sh(0), await sh(1), 'shimmer loops');
+const dls = await svgOf({ ...dl, shadow: [1, 1], shadowColor: '#555555', faint: '#222222' });
+assert.match(dls, /fill="#555555"/, 'shadow dots');
+assert.match(dls, /fill="#222222"/, 'faint dots');
+for (const e of [{}, { prop: 'rocket', cell: -3, size: 1e9, line: 99, dot: 7, shimmer: 'x', fillEvery: 0, shadow: [1e9, 'a'] }, { d: 'M10 10L90 90', line: 3 }, { prop: 'cat', paint: true, hidden: [0, 1, 'x'], flip: true }]) {
+  const s1 = await svgOf({ type: 'dotline', ...e });
+  assert.doesNotMatch(s1, /NaN|undefined|Infinity/, JSON.stringify(e));
+}
+await assert.rejects(() => compose({ elements: [{ type: 'dotline', prop: 'nope-nope' }] }), /dotline: no prop/);
+await assert.rejects(() => compose({ elements: [{ type: 'dotline', iso: { objects: [] } }] }), /drew nothing/);
 
 // furniture: border dots land on the corners, counts follow the gap, every part is optional
 const fu = await svgOf({ type: 'furniture', x: 0, y: 0, w: 400, h: 300, border: { inset: 20, gap: 10, dot: 2 } });

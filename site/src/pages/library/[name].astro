@@ -1,0 +1,198 @@
+---
+// One page per Folio drawing (/library/coffee-cup/): every variant as SVG, the drawing in every Levni style,
+// the scene line, the agent prompt, tags, licence and related drawings. Static, so search engines and people
+// arriving from an image search land on the drawing itself; the Library grid stays the place to browse.
+import Base from '../../layouts/Base.astro';
+import { SITE } from '../../site';
+import { PROPS, CATS, human, cleanNote, sourceOf, englishTags, related, sceneLine, datesOf, fmtDate, faqOf, type Prop } from '../../lib/library';
+import { DRAW_STYLES } from '../../lib/draw-styles';
+
+export function getStaticPaths() {
+  return PROPS.map((prop) => ({ params: { name: prop.name }, props: { prop } }));
+}
+const { prop } = Astro.props as { prop: Prop };
+const name = prop.name, title = human(name), cat = CATS[prop.category] || 'Other';
+const n = prop.variants.length;
+const words = englishTags(prop).filter((t) => t.toLowerCase() !== name.replace(/-/g, ' ') && t !== 'pixel').slice(0, 4);
+const rel = related(prop);
+const url = `${SITE.url}/library/${name}/`;
+const pageTitle = `${title} illustration: free SVG`;
+const description = `Free ${title.toLowerCase()} drawing${n > 1 ? ` in ${n} variants` : ''}${words.length ? ` (${words.join(', ')})` : ''}, hand-inked in the Levni style. Download the SVG, recolour it, draw it as dots, ASCII or 3D, or place it from JSON. CC BY 4.0.`;
+const credit = 'drawings by Ortak Alan';
+const dates = datesOf(name);
+const faq = faqOf(prop, rel);
+const prompt = `Make a 1200 × 673 blog cover with the Levni "${name}" drawing on a coral panel, and a short title on the left.`;
+const jsonld = [
+  { '@type': 'ImageObject', name: `${title} illustration`, contentUrl: `${SITE.url}/props-svg/${name}-0.svg`, thumbnailUrl: `${SITE.url}/props/${name}-0.webp`, url,
+    license: 'https://creativecommons.org/licenses/by/4.0/', acquireLicensePage: url, creditText: credit, copyrightNotice: 'Ortak Alan',
+    creator: { '@type': 'Organization', name: 'Ortak Alan', url: SITE.ortakAlan }, keywords: [name, ...prop.tags].join(', ') },
+  { '@type': 'FAQPage', mainEntity: faq.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
+  { '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Library', item: `${SITE.url}/library/` },
+    { '@type': 'ListItem', position: 2, name: cat, item: `${SITE.url}/library/category/${prop.category}/` },
+    { '@type': 'ListItem', position: 3, name: title, item: url },
+  ] },
+];
+---
+<Base title={pageTitle} description={description} jsonld={jsonld} og={`/og/library/${name}.jpg`}>
+  <article class="dp" data-name={name}>
+    <header class="wrap dp-head">
+      <p class="crumbs"><a href="/library/">Library</a> / <a href={`/library/category/${prop.category}/`}>{cat}</a></p>
+      <h1>{title}</h1>
+      <p class="lede">
+        A free {title.toLowerCase()} drawing from the Levni Folio{n > 1 ? `, in ${n} variants` : ''}. Hand-inked in one style with the other {(PROPS.length - 1).toLocaleString('en')} drawings,
+        so it sits next to them on a cover, a slide or a doc. Use it anywhere with credit “{credit}”.
+      </p>
+      {dates && <p class="dates">Added {fmtDate(dates.added)}{dates.updated !== dates.added && <> · updated {fmtDate(dates.updated)}</>} · CC BY 4.0</p>}
+    </header>
+
+    <section class="wrap" aria-labelledby="v-h">
+      <h2 id="v-h" class="visually-hidden">Variants</h2>
+      <ul class="vars">
+        {prop.variants.map((note, i) => (
+          <li>
+            <figure>
+              <img src={`/props-svg/${name}-${i}.svg`} width="520" height="520" alt={`${title}${n > 1 ? `, variant ${i}` : ''}: ${cleanNote(note)}`} loading={i < 2 ? 'eager' : 'lazy'} decoding="async" />
+              <figcaption>
+                <span class="v-num">{n > 1 ? `Variant ${i}` : 'Drawing'}</span>
+                <span class="v-note">{cleanNote(note)}</span>
+                <a class="mini" href={`/props-svg/${name}-${i}.svg`} download={`${name}-${i}.svg`}>Download SVG</a>
+              </figcaption>
+            </figure>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="wrap" aria-labelledby="s-h">
+      <div class="row-head">
+        <h2 id="s-h">Draw it as</h2>
+        <a class="mini" href={`/library/?p=${name}`}>Recolour it in the Library →</a>
+      </div>
+      <p class="sub">The same drawing, drawn by Levni in your browser. Each one is a single line of JSON.</p>
+      <ul class="styles" id="styles">
+        {DRAW_STYLES.map((d) => (
+          <li>
+            <span class="st-pic" data-style={d.id} aria-hidden="true"></span>
+            <span class="v-num">{d.label}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="wrap use" aria-labelledby="u-h">
+      <h2 id="u-h">Use it</h2>
+      <div class="use-grid">
+        <div>
+          <p class="use-label">In a Levni scene</p>
+          <pre><code>{sceneLine(name)}</code></pre>
+          <p class="use-label">From the command line</p>
+          <pre><code>{`npx @levni/levni sheet ${name}.png ${name}`}</code></pre>
+        </div>
+        <div>
+          <p class="use-label">Ask your agent</p>
+          <pre><code>{prompt}</code></pre>
+          <p class="sub">With Levni connected once: <code>claude mcp add levni -- npx -y @levni/levni mcp</code>. <a href="/mcp/">More on MCP</a></p>
+          <p class="use-label">Licence</p>
+          <p class="lic">CC BY 4.0: free for any use, commercial too. Credit “{credit}”. {sourceOf(prop)} {prop.author && `Drawn by ${prop.author}.`}
+            <a href={`${SITE.github}/blob/main/library/props/${name}.json`}>Improve this drawing</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {prop.tags.length > 0 && (
+      <section class="wrap" aria-labelledby="t-h">
+        <h2 id="t-h" class="small-h">Also called</h2>
+        <p class="sub">What people type when they look for this drawing. The library search matches all of them, in English and Turkish.</p>
+        <ul class="tags">
+          {prop.tags.map((t) => <li><a href={`/library/?q=${encodeURIComponent(t)}`}>{t}</a></li>)}
+        </ul>
+      </section>
+    )}
+
+    {rel.length > 0 && (
+      <section class="wrap" aria-labelledby="r-h">
+        <h2 id="r-h" class="small-h">Related drawings</h2>
+        <ul class="rel">
+          {rel.map((p) => (
+            <li><a href={`/library/${p.name}/`}><img src={`/props/${p.name}-0.webp`} width="240" height="240" alt="" loading="lazy" decoding="async" /><span>{human(p.name)}</span></a></li>
+          ))}
+        </ul>
+        <p class="more"><a href={`/library/category/${prop.category}/`}>All {PROPS.filter((p) => p.category === prop.category).length} {cat.toLowerCase()} drawings →</a></p>
+      </section>
+    )}
+    <section class="wrap" aria-labelledby="f-h">
+      <h2 id="f-h" class="small-h">Questions about {title.toLowerCase()}</h2>
+      <div class="faq">
+        {faq.map(({ q, a }) => <details><summary>{q}</summary><p>{a}</p></details>)}
+      </div>
+      <p class="keep">Levni stays free: no Pro tier, nothing locked. <a href="/support/">Keep it open</a> · <a href="/blog/contribute-drawing-open-library/">draw one for the Folio</a></p>
+    </section>
+  </article>
+</Base>
+
+<script>
+  import { drawStylePreviews } from '../../lib/style-previews';
+  const root = document.querySelector<HTMLElement>('.dp')!;
+  const pics = [...document.querySelectorAll<HTMLElement>('#styles .st-pic')];
+  // draw the styles when the section comes near the screen, not on load
+  const io = new IntersectionObserver((entries) => {
+    if (!entries.some((e) => e.isIntersecting)) return;
+    io.disconnect();
+    drawStylePreviews(root.dataset.name!, 0, pics).then((r) => { if (!r.ok) document.getElementById('styles')?.closest('section')?.setAttribute('hidden', ''); });
+  }, { rootMargin: '300px' });
+  io.observe(document.getElementById('styles')!);
+</script>
+
+<style>
+  .dp-head { margin-top: 0; }
+  .crumbs { font-family: var(--mono); font-size: 0.82rem; color: var(--ink-soft); margin: 0 0 10px; }
+  .crumbs a { color: inherit; }
+  h1 { margin: 0 0 10px; }
+  .lede { font-size: 1.15rem; color: var(--ink-soft); max-width: 720px; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .vars { list-style: none; padding: 0; margin: 8px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+  .vars li:only-child { max-width: 420px; }
+  @media (max-width: 560px) {
+    .vars { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .vars li:only-child { grid-column: 1 / -1; max-width: none; }
+    .rel { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .styles { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  }
+  figure { margin: 0; background: #f4f2ec; border: 1px solid var(--rule); display: flex; flex-direction: column; }
+  figure img { width: 100%; height: auto; aspect-ratio: 1; display: block; }
+  figcaption { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; padding: 10px 12px 12px; border-top: 1px solid var(--rule); color: var(--ink); }
+  .v-num { font-family: var(--mono); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-soft); }
+  .v-note { flex: 1 1 100%; font-size: 0.92rem; }
+  .mini { font-family: var(--mono); font-size: 0.8rem; color: var(--accent-text); }
+  .row-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 40px; }
+  .row-head h2 { margin: 0; }
+  .sub { color: var(--ink-soft); margin: 6px 0 14px; }
+  .styles { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+  .styles li { display: flex; flex-direction: column; gap: 6px; align-items: center; }
+  .st-pic { width: 100%; aspect-ratio: 1; background: #f4f2ec; border: 1px solid var(--rule); display: block; }
+  .st-pic[data-style='dotline'] { background: #0b0b0c; }
+  .st-pic :global(img) { width: 100%; height: 100%; display: block; }
+  .use h2 { margin-top: 44px; }
+  .use-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 760px) { .use-grid { grid-template-columns: 1fr; } }
+  .use-label { font-family: var(--mono); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-soft); margin: 14px 0 6px; }
+  pre { margin: 0; padding: 12px 14px; background: var(--paper-2); border: 1px solid var(--rule); overflow-x: auto; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.86rem; }
+  .lic { margin: 0; }
+  .small-h { font-size: 1.1rem; margin: 40px 0 12px; }
+  .tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  .tags a { display: inline-block; padding: 4px 10px; border: 1.5px solid var(--rule); background: var(--paper-2); color: var(--ink); text-decoration: none; font-size: 0.9rem; }
+  .tags a:hover { border-color: var(--ink); }
+  .rel { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; }
+  .rel a { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 6px 6px 10px; background: #f4f2ec; border: 1px solid var(--rule); color: var(--ink); text-decoration: none; font-size: 0.85rem; text-align: center; }
+  .rel a:hover { border-color: var(--accent); }
+  .rel img { width: 100%; aspect-ratio: 1; height: auto; }
+  .more { margin: 14px 0 0; }
+  .dates { font-family: var(--mono); font-size: 0.8rem; color: var(--ink-soft); margin: 10px 0 0; }
+  .faq { display: grid; gap: 0; border-top: 1px solid var(--rule); max-width: 820px; }
+  .faq details { border-bottom: 1px solid var(--rule); padding: 12px 0; }
+  .faq summary { cursor: pointer; font-weight: 600; }
+  .faq p { margin: 8px 0 0; color: var(--ink-soft); max-width: 70ch; }
+  .keep { margin: 22px 0 0; font-size: 0.95rem; color: var(--ink-soft); }
+</style>
