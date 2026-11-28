@@ -2,7 +2,7 @@
 // drawn with the engine's brushes, palette and crayon finish.
 // Canvas 1200x673 by default (formats.mjs has the other sizes). Colours by name: blue, ink, coral, mustard, green, paper, white, tone (light blue), dark.
 // Element reference: docs/scene.md
-import { applyMotion, typedElement, cameraTransform, motionList } from './motion.mjs';
+import { applyMotion, typedElement, cameraTransform, motionList, revealOf, ease } from './motion.mjs';
 import { PALETTE as P, rng, frame } from './style.mjs';
 import { resolveCanvas, planLayout, safeInsets } from './formats.mjs';
 import { layoutTitle } from './title.mjs';
@@ -67,7 +67,8 @@ async function composeOnce(spec, canvas, lay) {
     // motion (motion.mjs): typewriter changes the text before it is drawn; the rest wraps the finished element below
     const hasMotion = e0.motion ? motionList(e0.motion).length > 0 : false;
     const mi = hasMotion ? moving++ : 0;
-    const e = hasMotion ? typedElement(e0, time, mi, stagger) : e0;
+    let e = hasMotion ? typedElement(e0, time, mi, stagger) : e0;
+    if (hasMotion && e && e.type === 'draw') { const rv = revealOf(e, time, mi, stagger); if (rv) e = { ...e, _reveal: rv }; }
     if (!e) continue; // typewriter: nothing typed yet
     const t = e.type;
     cur = e;
@@ -148,6 +149,24 @@ async function composeOnce(spec, canvas, lay) {
     } else if (t === 'draw') {
       // A custom object drawn by the director in a 0..100 box, for things the icon set lacks.
       const k = (e.size ?? 200) / 100;
+      // reveal (motion "draw" / "print", motion.mjs): how far the line and each ink plate have come
+      const rv = e._reveal, clamp01 = (v) => Math.min(1, Math.max(0, v));
+      const fillNames = [...new Set((e.paths || []).map((p) => p.fill).filter((f) => f && f !== 'none'))];
+      // print order: paper first, then the lighter inks, the darker ones, the key line last (as a riso run is printed)
+      const ORDER = ['paper', 'white', 'tone', 'tone-mustard', 'tone-coral', 'tone-green', 'mustard', 'coral', 'green', 'blue'];
+      const plateList = fillNames.slice().sort((a, b) => (ORDER.indexOf(a) + 1 || 99) - (ORDER.indexOf(b) + 1 || 99));
+      const stages = plateList.length + 1, stage = (j) => (rv ? clamp01((rv.p - j / stages) * stages * 1.35) : 1);
+      const plateQ = (f) => (rv?.kind === 'print' ? stage(Math.max(0, plateList.indexOf(f))) : rv?.kind === 'draw' ? clamp01((rv.p - 0.62) / 0.38) : 1);
+      const lineQ = rv?.kind === 'print' ? stage(stages - 1) : 1;
+      const depthQ = rv ? (rv.kind === 'print' ? lineQ : clamp01((rv.p - 0.62) / 0.38)) : 1; // shadow, extrusion, sticker edge
+      const dim = (s, q = depthQ) => (q >= 1 ? s : q <= 0 ? '' : `<g opacity="${q.toFixed(3)}">${s}</g>`);
+      // where a plate sits while it lands: far off along its own misregistration, easing into register
+      const plateAt = (f, base) => {
+        if (rv?.kind !== 'print') return base;
+        const j = Math.max(0, plateList.indexOf(f)), a = j * 2.4 + 0.7, far = (1 - ease('outCubic', stage(j))) * rv.shift;
+        if (far <= 0) return base; // landed: exactly where a still print puts it
+        return [(base?.[0] ?? 0) + Math.cos(a) * far, (base?.[1] ?? 0) + Math.sin(a) * far];
+      };
       // x, y is the centre of the 0..100 box. flip mirrors it; overprint adds an offset second-ink silhouette.
       // shadow / extrude / shade add depth while keeping the hand-drawn line (see docs/scene.md).
       const paths = (fillOver) => (e.paths || []).map((p) => `<path d="${esc(p.d)}" fill="${fillOver ?? (p.fill ? c(p.fill) : 'none')}" stroke="${fillOver ?? (p.stroke === 'none' ? 'none' : c(p.stroke, P.ink))}" stroke-width="${(p.weight ?? 10) / k}" stroke-linecap="round" stroke-linejoin="round"/>`).join('');
@@ -157,23 +176,23 @@ async function composeOnce(spec, canvas, lay) {
         const dcut = { offset: 14, color: 'paper', line: 'ink', shadow: true, ...(e.diecut === true ? {} : e.diecut) };
         dcut.offset = Math.min(60, Math.max(0, Number.isFinite(+dcut.offset) ? +dcut.offset : 14));
         const blob = (col, grow, dx = 0, dy = 0) => `<g transform="${tf(dx, dy)}">${(e.paths || []).map((p) => `<path d="${esc(p.d)}" fill="${col}" stroke="${col}" stroke-width="${(grow + (p.weight ?? 10)) / k}" stroke-linejoin="round" stroke-linecap="round"/>`).join('')}</g>`;
-        if (dcut.shadow) out.push(`<g style="mix-blend-mode:multiply" opacity="0.25">${blob(c('ink'), dcut.offset * 2 + 3, 6, 8)}</g>`);
-        if (dcut.line && dcut.line !== 'none') out.push(blob(c(dcut.line), dcut.offset * 2 + 6));
-        out.push(blob(c(dcut.color), dcut.offset * 2));
+        if (dcut.shadow) out.push(dim(`<g style="mix-blend-mode:multiply" opacity="0.25">${blob(c('ink'), dcut.offset * 2 + 3, 6, 8)}</g>`));
+        if (dcut.line && dcut.line !== 'none') out.push(dim(blob(c(dcut.line), dcut.offset * 2 + 6)));
+        out.push(dim(blob(c(dcut.color), dcut.offset * 2)));
       }
-      if (e.overprint) out.push(`<g style="mix-blend-mode:multiply" transform="${tf(14, 12)}">${paths(c(e.overprint))}</g>`);
+      if (e.overprint) out.push(dim(`<g style="mix-blend-mode:multiply" transform="${tf(14, 12)}">${paths(c(e.overprint))}</g>`));
       // ---- depth (all optional): cast shadow, extrusion (thickness), hatch shading on the side away from the light
       const filled = (e.paths || []).filter((p) => p.fill && p.fill !== 'none');
       const silhouette = (col, w = 0) => (e.paths || []).map((p) => `<path d="${esc(p.d)}" fill="${p.fill && p.fill !== 'none' ? col : 'none'}" stroke="${p.stroke === 'none' && !w ? 'none' : col}" stroke-width="${((p.weight ?? 10) + w) / k}" stroke-linejoin="round" stroke-linecap="round"/>`).join('');
       if (e.shadow) {
         const sh = { dx: 18, dy: 16, color: 'ink', opacity: 0.22, ...(e.shadow === true ? {} : e.shadow) };
-        out.push(`<g style="mix-blend-mode:multiply" opacity="${sh.opacity}" transform="${tf(sh.dx, sh.dy)}">${silhouette(c(sh.color))}</g>`);
+        out.push(dim(`<g style="mix-blend-mode:multiply" opacity="${sh.opacity}" transform="${tf(sh.dx, sh.dy)}">${silhouette(c(sh.color))}</g>`));
       }
       if (e.extrude) {
         const ex = { dx: 12, dy: 10, steps: 7, color: 'tone', ...(e.extrude === true ? {} : e.extrude) };
         // back face outlined in ink, then solid layers stepping forward: reads as a cut-out with real thickness
-        out.push(`<g transform="${tf(ex.dx, ex.dy)}">${silhouette(c('ink'), 6)}${silhouette(c(ex.color))}</g>`);
-        for (let s2 = ex.steps - 1; s2 >= 1; s2--) out.push(`<g transform="${tf((ex.dx * s2) / ex.steps, (ex.dy * s2) / ex.steps)}">${silhouette(c(ex.color))}</g>`);
+        out.push(dim(`<g transform="${tf(ex.dx, ex.dy)}">${silhouette(c('ink'), 6)}${silhouette(c(ex.color))}</g>`));
+        for (let s2 = ex.steps - 1; s2 >= 1; s2--) out.push(dim(`<g transform="${tf((ex.dx * s2) / ex.steps, (ex.dy * s2) / ex.steps)}">${silhouette(c(ex.color))}</g>`));
       }
       const shade = e.shade ? { lx: -1, ly: -1, depth: 10, gap: 4.2, angle: 0.8, color: 'ink', weight: 1.5, ...(e.shade === true ? {} : e.shade) } : null;
       let shadeSeq = 0;
@@ -192,27 +211,58 @@ async function composeOnce(spec, canvas, lay) {
         // only pure line art (no paper/white areas its lines could sit on) flips to paper on a dark ground
         const lightFill = (e.paths || []).some((p) => ['paper', 'white', 'tone', 'mustard'].includes(p.fill));
         const lineArtOnDark = e.autoContrast !== false && !lightFill && !e.diecut && inDark(e.x, e.y);
+        // draw-on: the lines share one length budget, spent path by path in drawing order
+        const polysOf = (p) => (p.stroke !== 'none' && (p.stroke || !p.fill) ? dashed(flattenPath(p.d, 2.2), p.dash) : []);
+        const plen = (poly) => poly.reduce((a, q, i) => (i ? a + Math.hypot(q[0] - poly[i - 1][0], q[1] - poly[i - 1][1]) : 0), 0);
+        let budget = Infinity;
+        if (rv?.kind === 'draw') budget = (e.paths || []).reduce((a, p) => a + polysOf(p).reduce((b, poly) => b + Math.max(2, plen(poly)), 0), 0) * clamp01(rv.p / 0.7);
+        const cut = (poly, len) => { // the first `len` units of a polyline
+          const outp = [poly[0]];
+          for (let i = 1; i < poly.length && len > 0; i++) {
+            const d = Math.hypot(poly[i][0] - poly[i - 1][0], poly[i][1] - poly[i - 1][1]);
+            if (d <= len) { outp.push(poly[i]); len -= d; } else { const f = len / d; outp.push([poly[i - 1][0] + (poly[i][0] - poly[i - 1][0]) * f, poly[i - 1][1] + (poly[i][1] - poly[i - 1][1]) * f]); len = 0; }
+          }
+          return outp;
+        };
         const parts = (e.paths || []).map((p) => {
           let s = '';
-          if (p.fill && p.fill !== 'none') {
-            const pl = plates[p.fill];
-            s += `<path d="${esc(p.d)}" fill="${c(p.fill)}"${p.rule === 'evenodd' ? ' fill-rule="evenodd"' : ''}${pl ? ` transform="translate(${(pl[0] / k).toFixed(2)} ${(pl[1] / k).toFixed(2)})"` : ''}/>`;
-            s += shading(p);
+          if (p.fill && p.fill !== 'none' && plateQ(p.fill) > 0) {
+            const pl = plateAt(p.fill, plates[p.fill]), q = plateQ(p.fill);
+            s += dim(`<path d="${esc(p.d)}" fill="${c(p.fill)}"${p.rule === 'evenodd' ? ' fill-rule="evenodd"' : ''}${pl ? ` transform="translate(${(pl[0] / k).toFixed(2)} ${(pl[1] / k).toFixed(2)})"` : ''}/>` + shading(p), Math.min(1, q * 2.5));
           }
           if (p.stroke !== 'none' && (p.stroke || !p.fill)) {
             const w = (p.weight ?? 10) / k;
             // a bare ink line on a dark panel disappears: print it in paper instead (fills keep their ink edge)
             const strokeCol = (!p.fill || p.fill === 'none') && (p.stroke ?? 'ink') === 'ink' && lineArtOnDark ? P.paper : c(p.stroke, P.ink);
-            for (const poly of dashed(flattenPath(p.d, 2.2), p.dash)) {
+            let ln = '';
+            for (const poly0 of dashed(flattenPath(p.d, 2.2), p.dash)) {
               // a zero-length stroke ("M x y h.1") is meant as a dot: draw a round ink dot of the stroke width
-              const len = poly.reduce((a, q, i) => (i ? a + Math.hypot(q[0] - poly[i - 1][0], q[1] - poly[i - 1][1]) : 0), 0);
-              if (len < 0.6) { s += `<circle cx="${poly[0][0].toFixed(2)}" cy="${poly[0][1].toFixed(2)}" r="${(w * 0.55).toFixed(2)}" fill="${strokeCol}"/>`; continue; }
-              s += `<path d="${inkLine(poly, { width: w * 1.08, closed: !!poly.closed, r: er, jit: 1.1 / Math.sqrt(k), taper: p.taper === false ? 0.02 : p.taper })}" fill="${strokeCol}"/>`;
+              const len = plen(poly0);
+              if (budget <= 0) break;
+              if (len < 0.6) { budget -= 2; ln += `<circle cx="${poly0[0][0].toFixed(2)}" cy="${poly0[0][1].toFixed(2)}" r="${(w * 0.55).toFixed(2)}" fill="${strokeCol}"/>`; continue; }
+              const whole = budget >= len, poly = whole ? poly0 : cut(poly0, budget);
+              budget -= len;
+              if (poly.length < 2) continue;
+              ln += `<path d="${inkLine(poly, { width: w * 1.08, closed: whole && !!poly0.closed, r: er, jit: 1.1 / Math.sqrt(k), taper: p.taper === false ? 0.02 : p.taper })}" fill="${strokeCol}"/>`;
             }
+            s += dim(ln, lineQ);
           }
           return s;
         }).join('');
         out.push(`<g transform="${tf()}">${parts}</g>`);
+      } else if (rv) {
+        // clean (soft) lines: fills land per plate as above; lines are drawn on with a dash over a unit path length
+        const lineP = rv.kind === 'draw' ? clamp01(rv.p / 0.7) : 1;
+        const body = (e.paths || []).map((p) => {
+          let s = '';
+          if (p.fill && p.fill !== 'none' && plateQ(p.fill) > 0) {
+            const pl = plateAt(p.fill, null);
+            s += dim(`<path d="${esc(p.d)}" fill="${c(p.fill)}"${p.rule === 'evenodd' ? ' fill-rule="evenodd"' : ''}${pl ? ` transform="translate(${(pl[0] / k).toFixed(2)} ${(pl[1] / k).toFixed(2)})"` : ''}/>`, Math.min(1, plateQ(p.fill) * 2.5));
+          }
+          if (p.stroke !== 'none' && lineP > 0) s += dim(`<path d="${esc(p.d)}" fill="none" stroke="${c(p.stroke, P.ink)}" stroke-width="${(p.weight ?? 10) / k}" stroke-linejoin="round" stroke-linecap="round"${lineP < 1 ? ` pathLength="1" stroke-dasharray="${lineP.toFixed(4)} 1"` : ''}/>`, lineQ);
+          return s;
+        }).join('');
+        out.push(`<g transform="${tf()}">${body}</g>`);
       } else out.push(`<g transform="${tf()}">${paths()}</g>`);
       // the critic measures the visible ink, not the empty 0..100 box (flip and rot applied in box space)
       const sz = e.size ?? 200, rad = ((e.rot || 0) * Math.PI) / 180;

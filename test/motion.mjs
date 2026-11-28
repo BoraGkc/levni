@@ -60,6 +60,18 @@ for (const motion of [{ type: 'float', amp: NaN, turns: -3, phase: 'x' }, { type
   const { svg } = await compose({ ...scene({ motion }), t: 0.5, stagger: 'x', camera: { zoom: ['a', NaN] } });
   assert.ok(!/NaN|undefined|Infinity/.test(svg), `no NaN for ${JSON.stringify(motion)}`);
 }
+// draw: nothing at the start, part of the line midway, the finished drawing (byte-identical to a still) at the end
+{
+  const d = (t, type) => compose({ seed: 4, t, elements: [{ type: 'prop', name: 'lighthouse', x: 600, y: 336, size: 400, shadow: true, motion: { type, delay: 0.1, dur: 0.4 } }] });
+  const still = (await compose({ seed: 4, elements: [{ type: 'prop', name: 'lighthouse', x: 600, y: 336, size: 400, shadow: true }] })).svg;
+  for (const type of ['draw', 'print']) {
+    const a = (await d(0.05, type)).svg, m = (await d(0.3, type)).svg, z = (await d(0.9, type)).svg;
+    assert.ok(a.length < m.length && m.length < z.length * 1.5, `${type}: grows from empty`);
+    assert.notEqual(m, z, `${type}: midway differs from the end`);
+    const flat = (x) => x.replace(/>\s+</g, "><"); // a moving element is joined without the newlines between its parts
+    assert.equal(flat(z), flat(still), `${type}: ends as the still drawing`);
+  }
+}
 // a seal's centre drawing moves with the seal: before a pop begins neither is drawn
 const sealScene = (t) => compose({ seed: 2, t, elements: [{ type: 'seal', x: 600, y: 336, size: 300, text: 'OPEN SOURCE', prop: 'rocket', motion: { type: 'pop', delay: 0.5, dur: 0.2 } }] });
 const hidden = (await sealScene(0.1)).svg, shown = (await sealScene(0.9)).svg, plain = (await compose({ seed: 2, elements: [{ type: 'seal', x: 600, y: 336, size: 300, text: 'OPEN SOURCE', prop: 'rocket' }] })).svg;

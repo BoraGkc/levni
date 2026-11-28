@@ -47,6 +47,12 @@ const ent = [
 ];
 ent.forEach(([id, name, ink, motion, text], i) => add(id, 'entrances', id.replace('-', ' '), text, { motion },
   base(i + 2, [label(`"type": "${motion.type}"`), disc(ink), prop(name, { ...motion, out: true, outDelay: 0.08 })])));
+add('draw', 'entrances', 'draw', 'A drawing is drawn on: the hand-inked lines first, then the colour.', { motion: { type: 'draw', dur: 0.45 } },
+  base(1, [label('"type": "draw"'), prop('lighthouse', { type: 'draw', delay: 0.04, dur: 0.38, out: true, outDelay: 0.02 }, { size: 300, y: 215 })]));
+add('print', 'entrances', 'print', 'A riso print run: each ink plate lands in turn and slides into register, the line last.', { motion: { type: 'print', dur: 0.45 } },
+  base(3, [label('"type": "print"'), prop('rocket', { type: 'print', delay: 0.04, dur: 0.32, out: true, outDelay: 0.02 }, { size: 300, y: 215 })]));
+add('print-run', 'combos', 'print run', 'Several drawings printed one after another with stagger.', { stagger: 0.07, motion: { type: 'print' } },
+  base(2, [label('"print" + "stagger": 0.07'), ...['coffee-cup', 'camera', 'headphones', 'pizza-slice'].map((n, k) => prop(n, { type: 'print', delay: 0.02, dur: 0.24, out: true, outDelay: 0.02 }, { x: 110 + k * 140, size: 130 }))], { stagger: 0.07 }));
 add('typewriter', 'entrances', 'typewriter', 'Text is typed, with a caret.', { motion: { type: 'typewriter', delay: 0.08, dur: 0.45, cursor: '_' } },
   base(5, [label('"type": "typewriter"'), { type: 'type', text: 'Hello, world.', x: 40, y: 150, w: 560, h: 120, fit: 'box', font: 'black', color: 'ink', motion: { type: 'typewriter', delay: 0.08, dur: 0.45, cursor: '_' } }]));
 
