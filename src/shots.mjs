@@ -39,7 +39,7 @@ const SAMPLE = { title: 'Ship it today', subtitle: 'One JSON file, every format.
 // [id, group, one line, default fields, build(L, f) -> { background, elements, stagger?, camera?, finish? }]
 const DEFS = [
   ['typed-headline', 'text', 'The headline types itself while the mark pops in and floats.', {}, (L, f) => ({ background: 'paper', elements: [
-    D(L.art.x, L.art.y, L.art.s * 0.48, 'mustard', { motion: POP(0.02) }), P(f.mark, L.art.x, L.art.y, L.art.s * 0.78, { shadow: true, motion: [POP(0.08), { type: 'float', amp: L.m * 0.015 }] }),
+    D(L.art.x, L.art.y, L.art.s * 0.48, 'mustard', { motion: POP(0.02) }), P(f.mark, L.art.x, L.art.y, L.art.s * 0.78, { shadow: true, motion: [POP(0.08), { type: 'float', amp: r1(L.m * 0.015) }] }),
     ...words(L, f, 'ink')] })],
   ['headline-slide', 'text', 'Headline and subtitle slide in from the left on a blue ground.', {}, (L, f) => ({ background: 'blue', elements: [
     D(L.art.x, L.art.y, L.art.s * 0.48, 'paper'), P(f.mark, L.art.x, L.art.y, L.art.s * 0.74, { motion: { type: 'sway', amp: 6 } }),
@@ -67,7 +67,7 @@ const DEFS = [
     const tx = L.land ? L.tx : { ...L.tx, y: L.H * (L.tall ? 0.52 : 0.56), h: L.H * (L.tall ? 0.1 : 0.12) };
     const bw = L.m * (L.land ? 0.42 : 0.6), bh = L.sub * 2.4, bx = tx.x, by = Math.min(tx.y + tx.h + L.sub * 3.4, L.H * 0.95 - bh);
     return { background: 'coral', elements: [
-      D(L.art.x, L.art.y, L.art.s * 0.46, 'mustard'), P(f.mark, L.art.x, L.art.y, L.art.s * 0.72, { shadow: true, motion: { type: 'float', amp: L.m * 0.012 } }),
+      D(L.art.x, L.art.y, L.art.s * 0.46, 'mustard'), P(f.mark, L.art.x, L.art.y, L.art.s * 0.72, { shadow: true, motion: { type: 'float', amp: r1(L.m * 0.012) } }),
       ...words(L, f, 'paper', { tx }),
       { type: 'block', x: r1(bx), y: r1(by), w: r1(bw), h: r1(bh), color: 'ink', motion: [POP(0.5, 0.12), { type: 'pulse', amp: 0.03, turns: 3 }] },
       T(f.cta || 'Get started →', bx + bw / 2, by + bh * 0.3, { size: r1(L.sub * 0.95), font: 'mono', weight: 700, align: 'center', color: 'paper', motion: FADE(0.56) })] };
@@ -80,14 +80,14 @@ const DEFS = [
       ...(f.subtitle ? [T(f.subtitle.toUpperCase(), L.W / 2, cy + s * 0.75 + L.m * 0.17, { size: r1(L.ky), font: 'mono', weight: 700, tracking: 0.06, align: 'center', color: '#D6E521', motion: FADE(0.6) })] : [])] };
   }],
   ['mark-float', 'mark', 'The mark floats over a breathing disc, the title below.', {}, (L, f) => ({ background: '#E8E2FF', elements: [
-    D(L.art.x, L.art.y, L.art.s * 0.5, 'coral', { motion: { type: 'pulse', amp: 0.05 } }), P(f.mark, L.art.x, L.art.y, L.art.s * 0.8, { shadow: true, motion: { type: 'float', amp: L.m * 0.02 } }),
+    D(L.art.x, L.art.y, L.art.s * 0.5, 'coral', { motion: { type: 'pulse', amp: 0.05 } }), P(f.mark, L.art.x, L.art.y, L.art.s * 0.8, { shadow: true, motion: { type: 'float', amp: r1(L.m * 0.02) } }),
     ...words(L, f, 'ink', { titleMotion: null, subMotion: null })] })],
   ['mark-draw', 'mark', 'The mark is drawn on line by line, then coloured in.', {}, (L, f) => ({ background: 'paper', elements: [
     P(f.mark, L.art.x, L.art.y, L.art.s, { shadow: true, motion: { type: 'draw', delay: 0.04, dur: 0.42 } }),
     ...words(L, f, 'ink', { titleMotion: FADE(0.45), subMotion: FADE(0.55) })] })],
   ['mark-print', 'mark', 'The mark is printed like a riso run, one ink plate at a time.', {}, (L, f) => ({ background: 'paper', elements: [
     { type: 'panel', x: r1(L.land ? L.W * 0.5 : -20), y: r1(L.land ? -20 : L.H * 0.04), w: r1(L.land ? L.W * 0.52 : L.W + 40), h: r1(L.land ? L.H + 40 : L.H * 0.52), color: 'tone-mustard' },
-    P(f.mark, L.art.x, L.art.y, L.art.s * 0.95, { shadow: true, motion: { type: 'print', delay: 0.03, dur: 0.36, shift: L.m * 0.2 } }),
+    P(f.mark, L.art.x, L.art.y, L.art.s * 0.95, { shadow: true, motion: { type: 'print', delay: 0.03, dur: 0.36, shift: r1(L.m * 0.2) } }),
     ...words(L, f, 'ink', { titleMotion: FADE(0.42), subMotion: FADE(0.5) })] })],
   ['seal-spin', 'mark', 'A seal with the mark at its centre turns slowly.', { title: 'Since 2026', subtitle: 'Hand-inked, open source.', mark: 'star' }, (L, f) => ({ background: 'coral', elements: [
     { type: 'seal', x: r1(L.art.x), y: r1(L.art.y), size: r1(L.art.s * 1.05), edge: 'scallop', fill: 'mustard', text: (f.kicker || 'open source').toLowerCase(), prop: f.mark, motion: { type: 'spin' } },
@@ -97,7 +97,7 @@ const DEFS = [
     ...words(L, f, 'ink', { titleMotion: null, subMotion: null })] })],
   ['confetti-launch', 'scene', 'Confetti falls on a dark card; the mark pops in and the title types.', { title: 'v0.5 is out', kicker: 'Launch' }, (L, f) => ({ background: '#14122B', elements: [
     { type: 'confetti', x: 0, y: 0, w: L.W, h: L.H, spacing: r1(L.m * 0.07) },
-    D(L.art.x, L.art.y, L.art.s * 0.48, 'blue', { motion: POP(0.02) }), P(f.mark, L.art.x, L.art.y, L.art.s * 0.76, { shadow: true, motion: [POP(0.08), { type: 'float', amp: L.m * 0.015 }] }),
+    D(L.art.x, L.art.y, L.art.s * 0.48, 'blue', { motion: POP(0.02) }), P(f.mark, L.art.x, L.art.y, L.art.s * 0.76, { shadow: true, motion: [POP(0.08), { type: 'float', amp: r1(L.m * 0.015) }] }),
     ...words(L, f, 'paper', { kickColor: 'mustard' })] })],
   ['rain', 'scene', 'Rain falls past a drifting cloud: weather, mood, a slow day.', { title: 'Rainy Monday', subtitle: 'Stay in, read something.', mark: 'umbrella' }, (L, f) => ({ background: '#DDEBFF', elements: [
     { type: 'confetti', kind: 'rain', x: 0, y: 0, w: L.W, h: L.H, spacing: r1(L.m * 0.05), colors: ['blue'] },
@@ -111,12 +111,12 @@ const DEFS = [
     ...words(L, f, 'ink', { titleMotion: null, subMotion: null })] })],
   ['night', 'scene', 'Stars blink out of step over dark hills; the moon floats.', { title: 'Good night.', mark: 'moon' }, (L, f) => ({ background: '#14122B', stagger: 0.13, elements: [
     ...[[0.12, 0.15], [0.35, 0.1], [0.55, 0.28], [0.25, 0.4], [0.68, 0.45], [0.9, 0.55], [0.45, 0.6]].map(([x, y], k) => P('star', L.W * x, L.H * y * (L.tall ? 0.7 : 1), L.m * (0.05 + (k % 3) * 0.015), { motion: { type: 'blink', amp: 0.8, turns: 2 } })),
-    D(L.W * 0.8, L.H * 0.2, L.m * 0.08, 'paper'), P(f.mark, L.W * 0.8, L.H * 0.2, L.m * 0.13, { motion: { type: 'float', amp: L.m * 0.008 } }),
+    D(L.W * 0.8, L.H * 0.2, L.m * 0.08, 'paper'), P(f.mark, L.W * 0.8, L.H * 0.2, L.m * 0.13, { motion: { type: 'float', amp: r1(L.m * 0.008) } }),
     { type: 'hills', base: L.H, height: r1(L.H * 0.22), color: 'blue' },
     ...words(L, f, 'paper', { titleMotion: null, subMotion: null, tx: { x: L.W * 0.07, y: L.H * (L.tall ? 0.62 : 0.62), w: L.W * 0.6, h: L.H * (L.land ? 0.14 : 0.07) } })] })],
   ['sunburst', 'scene', 'Rays turn behind the mark; a bright hero for good news.', { title: 'We did it', mark: 'trophy' }, (L, f) => ({ background: 'paper', elements: [
     { type: 'sunburst', x: r1(L.art.x), y: r1(L.art.y), size: r1(L.art.s * 1.4), color: 'mustard' },
-    P(f.mark, L.art.x, L.art.y, L.art.s * 0.7, { shadow: true, motion: { type: 'float', amp: L.m * 0.012 } }),
+    P(f.mark, L.art.x, L.art.y, L.art.s * 0.7, { shadow: true, motion: { type: 'float', amp: r1(L.m * 0.012) } }),
     ...words(L, f, 'ink')] })],
   ['mesh-breathe', 'scene', 'A dark mesh gradient breathes behind a typed title.', { title: 'Calm, then loud.', kicker: 'Gradients' }, (L, f) => ({ background: '#14122B', finish: 'soft', elements: [
     { type: 'meshgrad', x: 0, y: 0, w: L.W, h: L.H, base: '#1B1745', drift: 0.18, colors: ['#FF7A59', '#7A5CFF', '#38D6E8', '#FF4FA3'], grain: 0.08 },
@@ -131,7 +131,7 @@ const DEFS = [
   ['camera-push', 'scene', 'A cover where the view slowly pushes in while the mark floats.', { title: 'Ideas that last', kicker: 'Essay · 6 min', mark: 'lightbulb' }, (L, f) => ({ background: 'paper', camera: { zoom: 1.1 }, elements: [
     { type: 'panel', x: r1(L.art.x - L.art.s * 0.5), y: r1(L.art.y - L.art.s * 0.5), w: r1(L.art.s), h: r1(L.art.s), color: 'blue' },
     { type: 'sunburst', x: r1(L.art.x), y: r1(L.art.y), size: r1(L.art.s), color: 'tone' },
-    P(f.mark, L.art.x, L.art.y, L.art.s * 0.66, { shadow: true, motion: { type: 'float', amp: L.m * 0.012 } }),
+    P(f.mark, L.art.x, L.art.y, L.art.s * 0.66, { shadow: true, motion: { type: 'float', amp: r1(L.m * 0.012) } }),
     ...words(L, f, 'ink', { titleMotion: null, subMotion: null })] })],
   ['bars-grow', 'data', 'Bars rise one after another; the last one is the news.', { title: '+50%', subtitle: 'Signups by month · sample data', values: [3, 5, 4, 7, 6, 9] }, (L, f) => {
     const v = (f.values || [3, 5, 4, 7, 6, 9]).slice(0, 10).map((x) => num(x, 0)), mx = Math.max(1, ...v), n = v.length;
@@ -154,9 +154,9 @@ const DEFS = [
     const ex = f.extra || ['sailboat', 'bird'];
     return { background: 'paper', stagger: 0.06, plateShift: 4, elements: [
       { type: 'panel', x: r1(L.land ? L.W * 0.5 : -20), y: r1(L.land ? -20 : -20), w: r1(L.land ? L.W * 0.52 : L.W + 40), h: r1(L.land ? L.H + 40 : L.H * 0.54), color: 'tone-mustard' },
-      P(f.mark, L.art.x - L.art.s * 0.12, L.art.y, L.art.s * 0.9, { shadow: true, motion: { type: 'print', delay: 0.02, dur: 0.34, shift: L.m * 0.24 } }),
-      P(ex[0], L.art.x + L.art.s * 0.42, L.art.y + L.art.s * 0.24, L.art.s * 0.45, { motion: { type: 'print', delay: 0.02, dur: 0.34, shift: L.m * 0.24 } }),
-      P(ex[1], L.art.x + L.art.s * 0.38, L.art.y - L.art.s * 0.38, L.art.s * 0.3, { motion: { type: 'print', delay: 0.02, dur: 0.34, shift: L.m * 0.24 } }),
+      P(f.mark, L.art.x - L.art.s * 0.12, L.art.y, L.art.s * 0.9, { shadow: true, motion: { type: 'print', delay: 0.02, dur: 0.34, shift: r1(L.m * 0.24) } }),
+      P(ex[0], L.art.x + L.art.s * 0.42, L.art.y + L.art.s * 0.24, L.art.s * 0.45, { motion: { type: 'print', delay: 0.02, dur: 0.34, shift: r1(L.m * 0.24) } }),
+      P(ex[1], L.art.x + L.art.s * 0.38, L.art.y - L.art.s * 0.38, L.art.s * 0.3, { motion: { type: 'print', delay: 0.02, dur: 0.34, shift: r1(L.m * 0.24) } }),
       ...words(L, f, 'ink', { titleMotion: null, subMotion: null })] };
   }],
 ];
