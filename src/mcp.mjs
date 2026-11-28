@@ -12,6 +12,7 @@ import { critique } from './critic.mjs';
 import { loadProps, findProp } from './props.mjs';
 import { toPng, toWebp } from './export.mjs';
 import { screenRaster } from './dither.mjs';
+import { lensRaster } from './lens.mjs';
 import { rasterize } from './raster.mjs';
 import { CATEGORIES } from './validate.mjs';
 import { GHOST_TOOLS, ghostEnabled, callGhost } from './mcp-ghost.mjs';
@@ -24,7 +25,7 @@ const POSTER_GUIDE = new URL('../docs/poster.md', import.meta.url);
 const STORYBOARD_GUIDE = new URL('../docs/storyboard.md', import.meta.url);
 const BRANDKIT_GUIDE = new URL('../docs/brandkit.md', import.meta.url);
 
-const scene = { type: 'object', description: 'A Levni scene: { seed?, style?, background?, elements: [...] }. Canvas is 1200 x 673. Besides drawings (props) it makes brand assets: dither fields, grainy mesh gradients, ASCII/glyph fills, seals and stickers with ring text, wireframe terrain and engravings, and a `screen` print pass (1bit, riso, blueprint, gameboy, newsprint). `style` is \"riso\", \"miniature\" or your own inks, e.g. {\"blue\":\"#6A1B9A\",\"mustard\":\"#00BFA5\"}. Call scene_guide for every element type.' };
+const scene = { type: 'object', description: 'A Levni scene: { seed?, style?, background?, elements: [...] }. Canvas is 1200 x 673. Besides drawings (props) it makes brand assets: dither fields, grainy mesh gradients, ASCII/glyph fills, seals and stickers with ring text, wireframe terrain and engravings, `dotline` (a drawing or iso scene as a dot matrix), a `screen` print pass (1bit, riso, blueprint, gameboy, newsprint) and a `lens` pass (a liquid-glass search bar over the picture). `style` is \"riso\", \"miniature\" or your own inks, e.g. {\"blue\":\"#6A1B9A\",\"mustard\":\"#00BFA5\"}. Call scene_guide for every element type.' };
 export const TOOLS = [
   {
     name: 'scene_guide',
@@ -193,8 +194,9 @@ const image = (buf) => ({ type: 'image', data: buf.toString('base64'), mimeType:
 const asScene = (s) => (typeof s === 'string' ? JSON.parse(s) : s);
 const notesText = (notes) => (notes.length ? notes.map((n) => `- ${n}`).join('\n') : '- critic: no layout problems found');
 // the preview shows the scene as it will be written: with its `screen` print pass when it has one
-const preview = async (svg, width = 560, screen) => {
-  const full = screen ? await screenRaster(await rasterize(svg), screen) : await rasterize(svg);
+const preview = async (svg, width = 560, screen, scene = {}) => {
+  let full = screen ? await screenRaster(await rasterize(svg), screen) : await rasterize(svg);
+  if (scene.lens) full = await lensRaster(full, scene.lens, scene.t);
   return sharp(full).resize(width).png({ compressionLevel: 9, palette: true }).toBuffer();
 };
 
@@ -232,11 +234,11 @@ async function call(name, args = {}) {
       if (!['.png', '.webp', '.svg'].includes(ext)) throw new Error('out must end in .png, .webp or .svg');
       mkdirSync(dirname(file), { recursive: true });
       if (ext === '.svg') writeFileSync(file, svg);
-      else if (ext === '.webp') await toWebp(svg, file, { screen: scene.screen });
-      else await toPng(svg, file, { screen: scene.screen });
+      else if (ext === '.webp') await toWebp(svg, file, { screen: scene.screen, lens: scene.lens, t: scene.t });
+      else await toPng(svg, file, { screen: scene.screen, lens: scene.lens, t: scene.t });
       out.push(text(`wrote ${file}`));
     }
-    if (args.preview !== false) out.push(image(await preview(svg, 560, scene.screen)));
+    if (args.preview !== false) out.push(image(await preview(svg, 560, scene.screen, scene)));
     return out;
   }
 

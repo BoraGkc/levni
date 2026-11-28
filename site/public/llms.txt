@@ -29,7 +29,9 @@ Install for Claude Code: `claude mcp add levni -- npx -y @levni/levni mcp`. npm:
 - [README banner maker](https://levni.dev/banner/): a banner from a GitHub link, as a PNG or an animated GIF
 - [Free tools](https://levni.dev/tools/): [mesh gradient generator](https://levni.dev/tools/mesh-gradient-generator/), [SVG pattern generator](https://levni.dev/tools/svg-pattern-generator/), [blob and wave generator](https://levni.dev/tools/blob-wave-generator/), [OG image generator](https://levni.dev/tools/og-image-generator/)
 - [Gallery](https://levni.dev/gallery/): every image with the scene that drew it
-- [Library](https://levni.dev/library/): the Levni Folio, 1,600+ drawings searchable in English and Turkish
+- [Library](https://levni.dev/library/): the Levni Folio, 1,600+ drawings searchable in English and Turkish; draw the whole library as ink, 3D, ASCII, dots, dot lines or echo
+- Drawing pages: one per drawing at https://levni.dev/library/<name>/ (SVG, every style, the scene line, licence), and shelves at https://levni.dev/library/category/<shelf>/
+- [Drawings in use](https://levni.dev/library/in-use/): the drawings on a blog cover, a README, a Notion page, an empty state, a slide and a welcome card
 
 ## No FOMO lists (open-source design, curated by Levni-Dev)
 
@@ -42,6 +44,7 @@ Install for Claude Code: `claude mcp add levni -- npx -y @levni/levni mcp`. npm:
 - [Manifesto](https://levni.dev/manifesto/): why Levni exists, the Tulip Era and the FOMO stack
 - [Community](https://levni.dev/community/): five ways to add drawings, palettes, brand kits and showcases
 - [Join the crew](https://levni.dev/join/): the Levni letter and the Folio crew Wanted list
+- [Keep it open](https://levni.dev/support/): no Pro tier, nothing locked; four ways to support the commons
 - [Blog](https://levni.dev/blog/): guides and stories, RSS at https://levni.dev/blog/rss.xml
 - [Changelog](https://levni.dev/changelog/)
 

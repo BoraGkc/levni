@@ -46,6 +46,6 @@ MCP: `render_poster` (`spec`, `out_dir`, `scenes`, `preview`, `guide`). API: `im
 
 Every poster is a normal scene: `expandPosters(spec)` (or `render_poster` with `scenes: true`) returns them as JSON to edit
 and render one by one. The building blocks are ordinary elements you can use in any scene: `type`, `block`, `amtone`,
-`camo`, `grain`, `dither`, `dotmatrix`, `shapegrid`, `echo`, `furniture` (see [`scene.md`](scene.md)).
+`camo`, `grain`, `dither`, `dotmatrix`, `dotline`, `shapegrid`, `echo`, `furniture` (see [`scene.md`](scene.md)).
 
 Fonts in `fonts/` are under the SIL Open Font License 1.1: Space Grotesk, Archivo Black, JetBrains Mono, Departure Mono.

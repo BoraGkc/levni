@@ -13,6 +13,7 @@ import sharp from 'sharp';
 import { rasterize } from '../../src/raster.mjs';
 import { compose, resolveCanvas, renderBoard } from '../../src/index.mjs';
 import { screenRaster } from '../../src/dither.mjs';
+import { lensRaster } from '../../src/lens.mjs';
 import { animate } from '../../src/animate.mjs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -85,6 +86,7 @@ for (const [group] of GROUPS) {
         const { svg } = await compose(animated ? { ...scene, t: meta.t ?? 0.5 } : scene);
         png = await rasterize(svg, { density: 72 * Math.max(1, lw / cw) });
         if (scene.screen) png = await screenRaster(png, scene.screen); // the print pass is raster: the CLI applies it on export
+        if (scene.lens) png = await lensRaster(png, scene.lens, animated ? meta.t ?? 0.5 : scene.t ?? 0, Math.max(1, lw / cw));
       }
       await sharp(png).resize(lw).webp(webp).toFile(big);
       await sharp(png).resize(tw).webp({ ...webp, quality: 78 }).toFile(small);

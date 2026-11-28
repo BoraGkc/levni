@@ -3,6 +3,7 @@
 //   npm run library -- --force (redraws all)
 // Props are laid out 18 to a canvas, rendered once at 2x and cut into tiles: ~40 renders instead of 700.
 // Output is committed (public/props/*.webp, src/data/props.json), so the Pages build needs no sharp.
+// After adding drawings, `npm run library-og` draws their share cards (render-library-og.mjs).
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import sharp from 'sharp';
 import { rasterize } from '../../src/raster.mjs';

@@ -1,0 +1,65 @@
+---
+// One page per Library shelf (/library/category/food/): every drawing on it, each linking to its own page.
+import Base from '../../../layouts/Base.astro';
+import { SITE } from '../../../site';
+import { PROPS, CATS, human, type Prop } from '../../../lib/library';
+
+export function getStaticPaths() {
+  return Object.keys(CATS)
+    .map((key) => ({ key, items: PROPS.filter((p) => p.category === key) }))
+    .filter((c) => c.items.length)
+    .map(({ key, items }) => ({ params: { key }, props: { key, items } }));
+}
+const { key, items } = Astro.props as { key: string; items: Prop[] };
+const label = CATS[key];
+const n = items.length;
+const url = `${SITE.url}/library/category/${key}/`;
+const examples = items.filter((p) => !p.name.startsWith('pixel-')).slice(0, 6).map((p) => human(p.name).toLowerCase());
+const title = `${n} free ${label.toLowerCase()} illustrations`;
+const description = `${n} free ${label.toLowerCase()} drawings in one hand-inked style${examples.length ? `: ${examples.join(', ')} and more` : ''}. SVG downloads, recolour, dots, ASCII and 3D. CC BY 4.0.`;
+const others = Object.entries(CATS).map(([k, l]) => ({ k, l, c: PROPS.filter((p) => p.category === k).length })).filter((o) => o.c && o.k !== key);
+const jsonld = [
+  { '@type': 'CollectionPage', name: title, url, description, isPartOf: { '@type': 'WebSite', url: `${SITE.url}/` } },
+  { '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Library', item: `${SITE.url}/library/` },
+    { '@type': 'ListItem', position: 2, name: label, item: url },
+  ] },
+];
+---
+<Base title={title} description={description} jsonld={jsonld}>
+  <section class="wrap cp-head">
+    <p class="crumbs"><a href="/library/">Library</a> / {label}</p>
+    <h1>{label}</h1>
+    <p class="lede">{n} free drawings, all hand-inked in the same Levni style, so they sit together on one cover. Open one for its SVG, its styles and the line of JSON that places it. CC BY 4.0, credit “drawings by Ortak Alan”.</p>
+  </section>
+  <section class="wrap">
+    <ul class="grid">
+      {items.map((p) => (
+        <li><a href={`/library/${p.name}/`}><img src={`/props/${p.name}-0.webp`} width="240" height="240" alt="" loading="lazy" decoding="async" /><span>{human(p.name)}</span>{p.variants.length > 1 && <small>{p.variants.length} variants</small>}</a></li>
+      ))}
+    </ul>
+  </section>
+  <nav class="wrap others" aria-labelledby="o-h">
+    <h2 id="o-h">Other shelves</h2>
+    <ul>
+      {others.map((o) => <li><a href={`/library/category/${o.k}/`}>{o.l} <small>{o.c}</small></a></li>)}
+    </ul>
+  </nav>
+</Base>
+
+<style>
+  .cp-head { margin-top: 0; }
+  .crumbs { font-family: var(--mono); font-size: 0.82rem; color: var(--ink-soft); margin: 0 0 10px; }
+  .crumbs a { color: inherit; }
+  .lede { font-size: 1.15rem; color: var(--ink-soft); max-width: 720px; }
+  .grid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+  .grid a { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 6px 6px 10px; background: #f4f2ec; border: 1px solid var(--rule); color: var(--ink); text-decoration: none; font-size: 0.88rem; text-align: center; transition: border-color 0.15s, transform 0.15s; }
+  .grid a:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .grid img { width: 100%; height: auto; aspect-ratio: 1; }
+  .grid small { color: var(--ink-soft); font-size: 0.78rem; }
+  .others h2 { font-size: 1.1rem; margin: 48px 0 12px; }
+  .others ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .others a { display: inline-flex; gap: 6px; align-items: baseline; padding: 5px 12px; border: 1.5px solid var(--rule); background: var(--paper-2); color: var(--ink); text-decoration: none; font-size: 0.92rem; }
+  .others a:hover { border-color: var(--ink); }
+  .others small { font-family: var(--mono); color: var(--ink-soft); font-size: 0.75rem; }
+</style>

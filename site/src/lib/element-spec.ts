@@ -48,6 +48,7 @@ export const SPEC: Record<string, Field[]> = {
   meshgrad: [W, H, n('r', 'Radius (an orb)'), cs('colors', 'Colours', { quick: true }), e('shape', 'Shape', ['rect', 'circle', 'squircle']), r('count', 'Blobs', 2, 12, 1, 5), r('grain', 'Grain', 0, 1, 0.05, 0.35), r('bands', 'Hard steps (0 = smooth)', 0, 12, 1, 0), b('lines', 'Contour lines'), seed('Mix', { quick: true })],
   shapegrid: [W, H, r('cols', 'Columns', 1, 20, 1, 4), r('rows', 'Rows', 1, 20, 1, 4), n('gap', 'Gap'), cs('colors', 'Inks', { quick: true }), r('blank', 'Empty cells', 0, 0.9, 0.05, 0), seed('Arrangement', { quick: true })],
   dotmatrix: [W, H, e('mask', 'Shape', [['world', 'World map'], ['noise', 'Noise'], ['', 'All dots']], { quick: true }), r('cell', 'Cell', 6, 40, 1, 14), c('color', 'Dots'), r('hollow', 'Hollow share', 0, 1, 0.05, 0.2), c('faint', 'Dots outside'), c('accent', 'Accent')],
+  dotline: [n('size', 'Size'), r('cell', 'Cell', 4, 40, 1, 12, { quick: true }), c('color', 'Lines', { quick: true }), c('muted', 'Grey dots'), c('faint', 'Dots around'), r('fillEvery', 'Fill density', 1, 4, 1, 2), r('shimmer', 'Shimmer (loops)', 0, 1, 0.05, 0), b('paint', 'Own colours')],
   glyphs: [W, H, c('color', 'Colour'), e('mode', 'Fade', ['flat', 'radial', 'fade-down', 'fade-up']), r('level', 'Strength', 0, 1, 0.05, 0.5)],
   waves: [W, H, c('color', 'Colour', { quick: true }), n('gap', 'Line gap'), n('amp', 'Wave height')],
   hills: [n('base', 'Base line'), n('height', 'Height'), c('color', 'Colour', { quick: true })],
@@ -146,6 +147,7 @@ export const SHAPES: ShapeDef[] = [
   { id: 'ascii-star', label: 'ASCII star', cat: 'ascii', make: (x, y, s) => ({ type: 'glyphfill', shape: 'star', x, y, size: R(s * 1.3), color: 'mustard', cell: 9 }) },
   { id: 'dot-disc', label: 'Dot disc', cat: 'ascii', make: (x, y, s) => ({ type: 'glyphfill', shape: 'circle', mode: 'dot', x, y, size: R(s * 1.3), color: 'blue', cell: 12, light: { mode: 'radial', from: 1, to: 0.2 } }) },
   { id: 'worldmap', label: 'Dot world map', cat: 'ascii', make: (x, y, s) => ({ type: 'dotmatrix', x: R(x - s * 1.2), y: R(y - s * 0.6), w: R(s * 2.4), h: R(s * 1.2), mask: 'world', cell: 12, color: 'blue', faint: 'tone' }) },
+  { id: 'dot-cube', label: 'Dot cube', cat: 'ascii', make: (x, y, s) => ({ type: 'dotline', x, y, cell: 10, color: 'blue', muted: '#8A8F9C', iso: { scale: s / 240, objects: [{ kind: 'box', x: -60, y: -60, w: 200, d: 200, h: 120, hatch: false }, { kind: 'box', x: 0, y: 0, w: 90, d: 90, h: 100, z: 120, hatch: false }] } }) },
   { id: 'echo-circle', label: 'Echo stack', cat: 'ascii', make: (x, y, s) => ({ type: 'echo', shape: 'circle', x, y, size: R(s * 0.9), n: 8, from: 'tone', to: 'blue', outline: 'ink' }) },
   // 3d (soft finish reads best)
   { id: 'sphere3d', label: 'Glossy ball', cat: '3d', soft: true, make: (x, y, s) => ({ type: 'sphere3d', x, y, size: R(s * 1.1), colors: ['coral', 'mustard'] }) },

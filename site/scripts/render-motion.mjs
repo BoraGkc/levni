@@ -8,6 +8,7 @@ import sharp from 'sharp';
 import { compose } from '../../src/index.mjs';
 import { animate } from '../../src/animate.mjs';
 import { rasterize } from '../../src/raster.mjs';
+import { lensRaster } from '../../src/lens.mjs';
 
 const here = (p) => new URL(`../${p}`, import.meta.url).pathname;
 const force = process.argv.includes('--force');
@@ -99,9 +100,16 @@ const self = [
   ['extrude3d', '3D turn', { type: 'extrude3d', name: 'rocket', x: 320, y: 215, size: 240, depth: 0.2, spin: 1 }, 'A drawing as a 3D object, "spin": 1.'],
   ['ribbon', 'ribbon', { type: 'ribbon', circle: [320, 215, 130], width: 70, colors: ['#4B2FD6', '#FF3A44', '#D6E521'], twists: 2, closed: true }, 'The twist travels along the band.'],
   ['spiro', 'spiro draw-on', { type: 'spiro', x: 320, y: 215, size: 280, animate: true }, 'Draws itself in once.'],
+  ['dotline', 'dot lines', { type: 'dotline', prop: 'rocket', x: 320, y: 220, size: 290, cell: 6, color: '#4B2FD6', muted: '#A7A2BE', shimmer: 0.6 }, 'A brightness wave runs over the dots, "shimmer": 0.6.'],
 ];
 self.forEach(([id, title, el, text], i) => add(id, 'movers', title, text, el,
   base(i, [label(id, id === 'meshgrad' ? 'paper' : 'ink'), el], id === 'meshgrad' ? { background: '#1B1745', _opt: { quality: 94, cap: 520e3, frames: 24 } } : id === 'halftone' || id === 'rain' || id === 'flowfield' ? { _opt: { frames: 18 } } : {})));
+
+// --- the glass lens: a scene-level raster pass that slides once up and back over t
+const lensSpec = { x: 320, y: 215, w: 400, h: 92, move: [0, 80], icon: true, label: 'Rocket', kbd: '⌘K' };
+add('lens', 'movers', 'glass lens', 'A glass search bar slides over the drawing and bends it.', { lens: lensSpec },
+  { canvas: [W, H], seed: 11, finish: 'soft', grain: 0.01, background: '#0B0B0C', lens: lensSpec, elements: [label('lens', 'paper'),
+    { type: 'dotline', prop: 'rocket', x: 320, y: 220, size: 300, cell: 7, color: '#D6E521', muted: '#4E4E57', faint: '#18181B', shimmer: 0.4 }] });
 
 // --- boil: the crayon filter's seed steps, a hand-drawn shimmer on a still drawing
 add('boil', 'boil', 'boil', 'A still drawing that shimmers: crayon textures take turns.', { boil: 3 },
@@ -116,7 +124,9 @@ for (const e of E) {
   if (force || !existsSync(loop)) {
     const t0 = Date.now();
     const at = e.group === 'entrances' || e.group === 'combos' || e.id === 'spiro' || e.id === 'easing' ? 0.6 : 0;
-    await sharp(await rasterize((await compose({ ...scene, t: at })).svg)).resize(480).webp({ quality: 82 }).toFile(still);
+    let png = await rasterize((await compose({ ...scene, t: at })).svg);
+    if (scene.lens) png = await lensRaster(png, scene.lens, at);
+    await sharp(png).resize(480).webp({ quality: 82 }).toFile(still);
     let q = _opt.quality ?? 80, r;
     for (;;) { r = await animate(scene, loop, { frames: _opt.frames ?? 30, fps: 15, width: 480, boil: _boil || 0, quality: q }); if (r.bytes < (_opt.cap ?? 300e3) || q <= 50) break; q -= 8; }
     console.log(`${e.id.padEnd(12)} ${Math.round(r.bytes / 1024)} KB ${r.moving ? '' : 'STILL!'} ${Date.now() - t0} ms ${r.notes.filter((n) => !/focal|lopsided/.test(n)).join('; ')}`);

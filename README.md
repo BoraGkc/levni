@@ -62,7 +62,7 @@ We use AI every day. We just do not rent our taste from it. Read the [manifesto]
 
 **Try it in your browser first.** The [Levni editor](https://levni.dev/editor/) runs the same engine in the page: drag drawings onto a canvas, turn them into 3D icons or ASCII, download PNG or SVG. The [README banner maker](https://levni.dev/banner/) turns a GitHub link into a 1280 × 640 banner. Both are free, with no sign-up.
 
-**Free in your agent.** Levni draws on your machine, so the $20 Claude or ChatGPT plan you already have is enough: no image credits, no second bill. If Levni is useful to you, a [star on GitHub](https://github.com/Levni-Dev/levni) helps others find it.
+**Free in your agent.** Levni draws on your machine, so the $20 Claude or ChatGPT plan you already have is enough: no image credits, no second bill. If Levni is useful to you, a [star on GitHub](https://github.com/Levni-Dev/levni) helps others find it. Levni has no Pro tier and nothing is locked; [four ways to keep it open](https://levni.dev/support/).
 
 **With an AI assistant (MCP).** Claude Code:
 
@@ -151,8 +151,8 @@ Each maker opens a finished example in the editor: change the words, the drawing
 
 | | |
 | --- | --- |
-| **The Levni Folio** | 1,628 drawings, 3,409 variants (481 of them pixel icons), on 15 shelves, searchable in English and Turkish through ~11,800 tags. Each drawing in the Library has its tags, related drawings, copy-ready code and an SVG download. Renamed drawings keep their old names. No brand logos. CC BY 4.0. [Browse](https://levni.dev/library/) |
-| **Scenes and the critic** | 73 element types on a 1200 × 673 canvas. Pressure-brush ink, riso plate misregistration, paper grain. Same seed, same picture. Every render returns layout notes: off-canvas, accidental crops, lopsided weight, no focal point. |
+| **The Levni Folio** | 1,628 drawings, 3,409 variants (481 of them pixel icons), on 15 shelves, searchable in English and Turkish through ~11,800 tags. Each drawing has its own page (`levni.dev/library/<name>/`) with every variant as SVG, the drawing in every style, copy-ready code, its search words and related drawings; the whole grid can be drawn as ink, 3D, ASCII, dots or dot lines in one click. Renamed drawings keep their old names. No brand logos. CC BY 4.0. [Browse](https://levni.dev/library/) · [In use](https://levni.dev/library/in-use/) |
+| **Scenes and the critic** | 74 element types on a 1200 × 673 canvas. Pressure-brush ink, riso plate misregistration, paper grain. Same seed, same picture. Every render returns layout notes: off-canvas, accidental crops, lopsided weight, no focal point. |
 | **Animation** | Any scene as a looping GIF, animated WebP or MP4. `t` runs 0..1: clouds drift, flags wave, mesh gradients breathe, ASCII globes and soft 3D turn. Any element takes `motion` (float, sway, pulse, spin, pop, fade, slide, wipe, typewriter) and the scene a `camera`. README banners type themselves. Same seed, same frames; no browser, and GIFs come from Levni's own encoder at about half the usual size. Also frame sequences, sprite sheets, transparent PNGs and seamless tiles. [docs/animate.md](docs/animate.md), [docs/export.md](docs/export.md) |
 | **Brand kits** | One brand (a name, or a website to read name and colours from) becomes a folder: mark, favicons, palette, link preview, cover, square, story, README banner, brand board, posters and a loop, in the same inks, with an `index.html` to look at them. [docs/brandkit.md](docs/brandkit.md) |
 | **Storyboards** | A shot list becomes a numbered sheet with titles, durations, timecodes and notes, plus full-size frames and `shots.json` for a video tool. [docs/storyboard.md](docs/storyboard.md) |
@@ -163,7 +163,7 @@ Each maker opens a finished example in the editor: change the words, the drawing
 | **Fusion slots** | Put any drawing inside another: a chart on a TV screen, a tulip in a magnifier's lens. 64 hosts have slots. |
 | **Hand-inked data** | `bars`, `linechart`, `pie`, `donut`, `isochart` from plain numbers. |
 | **Every format, plus a title** | cover, og, square, story, youtube: recomposed, not cropped. Optional headline, kicker and brand layer. |
-| **Brand assets** | `dither` fields (Bayer squares, dots, lines, several inks) and a `screen` print pass that turns any scene into a 1-bit, riso, blueprint, Game Boy or newsprint image; grainy `meshgrad` colour fields and orbs; `glyphfill` (ASCII, block and dot-matrix silhouettes, a shaded globe); `seal`, `ringtext`, `stub` tickets and die-cut stickers; wireframe `terrain`, `ridgelines` and `engrave` etchings. Recipes at the end of [`docs/scene.md`](docs/scene.md) |
+| **Brand assets** | `dither` fields (Bayer squares, dots, lines, several inks) and a `screen` print pass that turns any scene into a 1-bit, riso, blueprint, Game Boy or newsprint image; grainy `meshgrad` colour fields and orbs; `glyphfill` (ASCII, block and dot-matrix silhouettes, a shaded globe); `seal`, `ringtext`, `stub` tickets and die-cut stickers; wireframe `terrain`, `ridgelines` and `engrave` etchings; `dotline` (any drawing or iso scene redrawn as a dot matrix, hidden edges in grey, a shimmer that loops) and a `lens` pass (a liquid-glass search bar that magnifies and bends the picture under it). Recipes at the end of [`docs/scene.md`](docs/scene.md) |
 | **Branding posters** | `levni poster`: one brand spec (`{ "brand": { name, tagline, mark, inks, words } }`) becomes eight portrait posters (split, map, bauhaus, echo, camo, vertical, summit, launch) and a series sheet. Big type comes from the `type` element, which draws text as paths from bundled open fonts (Space Grotesk, Archivo Black, JetBrains Mono, Departure Mono), so it looks the same everywhere. Also `block`, `amtone`, `camo`, `grain`, `shapegrid`, `echo`, `dotmatrix` and `furniture`. [Guide](docs/poster.md) |
 | **Brand boards** | `levni board`: mark, wordmark, palette, web page, social card, tote, sticker, pattern and business card in one image, from four fields (`{ "brand": { name, tagline, mark, inks } }`). [Guide](docs/board.md) |
 | **Calm images for hard news** | A blue-only pack for loss, disaster, illness, courts and grief. [Guide](docs/sensitive.md) |
@@ -177,12 +177,13 @@ The `miniature` pack, the `soft` finish and soft 3D, iso dioramas, people, slots
 | ![Pictogram people walking, cheering and handing over an object](examples/people.png) | ![A chart drawn inside an old TV screen](examples/slots-tv.png) | ![Hand-drawn bar, line and donut charts with sample data](examples/chart-inflation.png) |
 | ![A soft 3D cover: a glossy teal-to-indigo ribbon loop on pale blue, a title and a badge](examples/soft3d-auto-aqua.png) | ![A chain of four interlocking glossy mint and violet rings on deep purple](examples/soft3d-tori.png) | ![Five library drawings as 3D icons: rocket, light bulb, tulip, trophy, heart](examples/soft3d-icons.png) |
 
-Brand assets: dither, screen, mesh gradients, glyph fills, seals, terrain, etching and a whole brand board:
+Brand assets: dither, screen, mesh gradients, glyph fills, dot lines and glass, seals, terrain, etching and a whole brand board:
 
 | | | |
 | --- | --- | --- |
 | ![A dithered sunset: blue-to-coral pixel sky, a mustard sun, line-dithered water](examples/dither-sunset.png) | ![Grainy mesh-gradient hero with a mono title](examples/meshgrad-hero.png) | ![A globe drawn in ASCII characters with a lit side and a shadow side](examples/glyphfill-globe.png) |
 | ![A sticker sheet: seals with ring text, a ticket and die-cut stickers](examples/seal-sheet.png) | ![Wireframe terrain at dusk with glowing streams and a rocket on the horizon](examples/engrave-terrain-hero.png) | ![Etched mountains and a sun in blue lines on paper](examples/engrave-etched-poster.png) |
+| ![Stacked isometric boxes drawn as violet dots, the hidden edges in grey](examples/dotline-iso.png) | ![The same dot drawing with a glass search bar across it that bends and splits the dots under it](examples/dotline-glass.png) | |
 
 Branding posters: one spec, eight posters in one series (split, map, bauhaus, echo, camo, vertical, summit, launch):
 

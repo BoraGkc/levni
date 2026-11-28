@@ -1,0 +1,20 @@
+{
+ "_meta": {
+  "title": "dotline: an iso scene as dots",
+  "alt": "Three stacked isometric boxes drawn as violet dots on near-black, the edges hidden by the top boxes in grey, beside a headline and a mono label"
+ },
+ "seed": 2,
+ "background": "#0B0B0C",
+ "finish": "soft",
+ "elements": [
+  { "type": "dotline", "cell": 9, "color": "#8F7DFF", "muted": "#4E4E57", "faint": "#151518",
+    "iso": { "x": 820, "y": 360, "scale": 0.9, "objects": [
+      { "kind": "floor", "x": -170, "y": -170, "w": 440, "d": 440 },
+      { "kind": "box", "x": -70, "y": -70, "w": 240, "d": 240, "h": 130, "hatch": false },
+      { "kind": "box", "x": -10, "y": -10, "w": 120, "d": 120, "h": 110, "z": 130, "hatch": false },
+      { "kind": "box", "x": 20, "y": 20, "w": 60, "d": 60, "h": 70, "z": 240, "hatch": false } ] } },
+  { "type": "type", "text": "FIG 0.1 · DOTLINE", "x": 70, "y": 80, "size": 18, "font": "mono", "weight": 700, "tracking": 0.06, "color": "#7C7C84" },
+  { "type": "type", "text": "Line art,\ndrawn as dots", "x": 70, "y": 380, "size": 72, "weight": 700, "tracking": -0.04, "leading": 0.95, "color": "#F4F4F5" },
+  { "type": "type", "text": "hidden edges in grey, from one iso scene", "x": 70, "y": 560, "size": 18, "font": "mono", "color": "#7C7C84" }
+ ]
+}

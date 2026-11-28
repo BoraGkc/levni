@@ -51,7 +51,8 @@
      }
     }
    ]
-  }
+  },
+  "kb": 110
  },
  {
   "id": "drift",
@@ -105,7 +106,8 @@
      }
     }
    ]
-  }
+  },
+  "kb": 67
  },
  {
   "id": "orbit",
@@ -159,7 +161,8 @@
      }
     }
    ]
-  }
+  },
+  "kb": 100
  },
  {
   "id": "sway",
@@ -213,7 +216,8 @@
      }
     }
    ]
-  }
+  },
+  "kb": 51
  },
  {
   "id": "wiggle",
@@ -267,7 +271,8 @@
      }
     }
    ]
-  }
+  },
+  "kb": 94
  },
  {
   "id": "pulse",
@@ -321,7 +326,8 @@
      }
     }
    ]
-  }
+  },
+  "kb": 78
  },
  {
   "id": "spin",
@@ -373,7 +379,8 @@
      }
     }
    ]
-  }
+  },
+  "kb": 101
  },
  {
   "id": "blink",
@@ -429,7 +436,8 @@
      }
     }
    ]
-  }
+  },
+  "kb": 73
  },
  {
   "id": "pop",
@@ -487,7 +495,8 @@
      }
     }
    ]
-  }
+  },
+  "kb": 54
  },
  {
   "id": "fade",
@@ -545,7 +554,8 @@
      }
     }
    ]
-  }
+  },
+  "kb": 22
  },
  {
   "id": "slide-up",
@@ -607,7 +617,8 @@
      }
     }
    ]
-  }
+  },
+  "kb": 47
  },
  {
   "id": "slide-left",
@@ -669,7 +680,8 @@
      }
     }
    ]
-  }
+  },
+  "kb": 48
  },
  {
   "id": "wipe",
@@ -729,7 +741,8 @@
      }
     }
    ]
-  }
+  },
+  "kb": 10
  },
  {
   "id": "draw",
@@ -779,7 +792,8 @@
      }
     }
    ]
-  }
+  },
+  "kb": 76
  },
  {
   "id": "print",
@@ -829,7 +843,8 @@
      }
     }
    ]
-  }
+  },
+  "kb": 23
  },
  {
   "id": "print-run",
@@ -980,7 +995,8 @@
      }
     }
    ]
-  }
+  },
+  "kb": 9
  },
  {
   "id": "pop-float",
@@ -1044,7 +1060,8 @@
      ]
     }
    ]
-  }
+  },
+  "kb": 72
  },
  {
   "id": "headline",
@@ -1110,7 +1127,8 @@
      }
     }
    ]
-  }
+  },
+  "kb": 20
  },
  {
   "id": "stagger-in",
@@ -1219,7 +1237,8 @@
     }
    ],
    "stagger": 0.08
-  }
+  },
+  "kb": 73
  },
  {
   "id": "stagger-wave",
@@ -1315,7 +1334,8 @@
     }
    ],
    "stagger": 0.1
-  }
+  },
+  "kb": 184
  },
  {
   "id": "in-and-out",
@@ -1374,7 +1394,8 @@
      }
     }
    ]
-  }
+  },
+  "kb": 28
  },
  {
   "id": "camera-zoom",
@@ -1444,7 +1465,8 @@
    "camera": {
     "zoom": 1.25
    }
-  }
+  },
+  "kb": 292
  },
  {
   "id": "camera-pan",
@@ -1522,7 +1544,8 @@
     ],
     "zoom": 1.15
    }
-  }
+  },
+  "kb": 283
  },
  {
   "id": "camera-once",
@@ -1608,7 +1631,8 @@
     ],
     "once": true
    }
-  }
+  },
+  "kb": 269
  },
  {
   "id": "easing",
@@ -1799,7 +1823,8 @@
      }
     }
    ]
-  }
+  },
+  "kb": 37
  },
  {
   "id": "cloud",
@@ -1842,7 +1867,8 @@
      "drift": 150
     }
    ]
-  }
+  },
+  "kb": 71
  },
  {
   "id": "flag",
@@ -1887,7 +1913,8 @@
      "canton": "blue"
     }
    ]
-  }
+  },
+  "kb": 101
  },
  {
   "id": "confetti",
@@ -1932,7 +1959,8 @@
      "spacing": 40
     }
    ]
-  }
+  },
+  "kb": 264
  },
  {
   "id": "rain",
@@ -1984,11 +2012,9 @@
       "blue"
      ]
     }
-   ],
-   "_opt": {
-    "frames": 18
-   }
-  }
+   ]
+  },
+  "kb": 285
  },
  {
   "id": "sunburst",
@@ -2031,7 +2057,8 @@
      "color": "mustard"
     }
    ]
-  }
+  },
+  "kb": 73
  },
  {
   "id": "rose",
@@ -2074,7 +2101,8 @@
      "petals": 5
     }
    ]
-  }
+  },
+  "kb": 149
  },
  {
   "id": "flowfield",
@@ -2124,11 +2152,9 @@
       "coral"
      ]
     }
-   ],
-   "_opt": {
-    "frames": 18
-   }
-  }
+   ]
+  },
+  "kb": 286
  },
  {
   "id": "halftone",
@@ -2174,11 +2200,9 @@
      "color": "coral",
      "mode": "radial"
     }
-   ],
-   "_opt": {
-    "frames": 18
-   }
-  }
+   ]
+  },
+  "kb": 441
  },
  {
   "id": "meshgrad",
@@ -2236,13 +2260,9 @@
      ],
      "base": "#1B1745"
     }
-   ],
-   "_opt": {
-    "quality": 94,
-    "cap": 520000,
-    "frames": 24
-   }
-  }
+   ]
+  },
+  "kb": 271
  },
  {
   "id": "globe",
@@ -2293,7 +2313,8 @@
      "land": 0.42
     }
    ]
-  }
+  },
+  "kb": 289
  },
  {
   "id": "extrude3d",
@@ -2340,7 +2361,8 @@
      "spin": 1
     }
    ]
-  }
+  },
+  "kb": 130
  },
  {
   "id": "ribbon",
@@ -2401,7 +2423,8 @@
      "closed": true
     }
    ]
-  }
+  },
+  "kb": 119
  },
  {
   "id": "spiro",
@@ -2444,7 +2467,130 @@
      "animate": true
     }
    ]
-  }
+  },
+  "kb": 83
+ },
+ {
+  "id": "dotline",
+  "group": "movers",
+  "title": "dot lines",
+  "text": "A brightness wave runs over the dots, \"shimmer\": 0.6.",
+  "snippet": {
+   "type": "dotline",
+   "prop": "rocket",
+   "x": 320,
+   "y": 220,
+   "size": 290,
+   "cell": 6,
+   "color": "#4B2FD6",
+   "muted": "#A7A2BE",
+   "shimmer": 0.6
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 16,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#E8E2FF",
+   "elements": [
+    {
+     "type": "type",
+     "text": "dotline",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "dotline",
+     "prop": "rocket",
+     "x": 320,
+     "y": 220,
+     "size": 290,
+     "cell": 6,
+     "color": "#4B2FD6",
+     "muted": "#A7A2BE",
+     "shimmer": 0.6
+    }
+   ]
+  },
+  "kb": 106
+ },
+ {
+  "id": "lens",
+  "group": "movers",
+  "title": "glass lens",
+  "text": "A glass search bar slides over the drawing and bends it.",
+  "snippet": {
+   "lens": {
+    "x": 320,
+    "y": 215,
+    "w": 400,
+    "h": 92,
+    "move": [
+     0,
+     80
+    ],
+    "icon": true,
+    "label": "Rocket",
+    "kbd": "⌘K"
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 11,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#0B0B0C",
+   "lens": {
+    "x": 320,
+    "y": 215,
+    "w": 400,
+    "h": 92,
+    "move": [
+     0,
+     80
+    ],
+    "icon": true,
+    "label": "Rocket",
+    "kbd": "⌘K"
+   },
+   "elements": [
+    {
+     "type": "type",
+     "text": "lens",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "paper"
+    },
+    {
+     "type": "dotline",
+     "prop": "rocket",
+     "x": 320,
+     "y": 220,
+     "size": 300,
+     "cell": 7,
+     "color": "#D6E521",
+     "muted": "#4E4E57",
+     "faint": "#18181B",
+     "shimmer": 0.4
+    }
+   ]
+  },
+  "kb": 212
  },
  {
   "id": "boil",
@@ -2488,8 +2634,8 @@
      "size": 190,
      "shadow": true
     }
-   ],
-   "_boil": 3
-  }
+   ]
+  },
+  "kb": 41
  }
 ]

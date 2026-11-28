@@ -47,6 +47,8 @@ critic's notes with a strip of four frames to look at.
 | `flowfield`, `halftone`, `dither` | the field shifts in a small circle |
 | `meshgrad` | each blob moves on its own small circle (`drift`, default 0.06) |
 | `glyphfill` (sphere, globe) | turns once |
+| `dotline` with `shimmer` | a brightness wave crosses the dots once (`cycles` for more) |
+| scene `lens` with `move` | the glass slides out and back once |
 | `soft3d`, `extrude3d` with `spin` | `spin` turns per loop |
 | `ribbon` | the twist travels along the ribbon |
 | `spiro` with `animate: true` | draws itself on (a reveal, not a loop) |

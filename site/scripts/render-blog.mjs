@@ -10,7 +10,7 @@
 import { readFileSync, readdirSync, mkdirSync, existsSync, statSync } from 'node:fs';
 import sharp from 'sharp';
 import { rasterize } from '../../src/raster.mjs';
-import { compose, critique, screenRaster } from '../../src/index.mjs';
+import { compose, critique, screenRaster, lensRaster } from '../../src/index.mjs';
 import { renderBoard } from '../../src/board.mjs';
 
 const here = (p) => new URL(`../${p}`, import.meta.url).pathname;
@@ -43,6 +43,7 @@ for (const slug of readdirSync(root).filter((d) => !d.startsWith('.'))) {
     try { ({ svg, used } = await compose(spec)); } finally { process.chdir(cwd); }
     let png = await rasterize(svg);
     if (spec.screen) png = await screenRaster(png, spec.screen);
+    if (spec.lens) png = await lensRaster(png, spec.lens, spec.t ?? 0);
     const { width, height } = await sharp(png).metadata();
     await sharp(png).resize(height >= width ? Math.min(640, width) : 1200).webp({ quality: 82, effort: 6 }).toFile(out);
     if (name === 'cover') {

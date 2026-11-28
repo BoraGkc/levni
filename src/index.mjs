@@ -12,6 +12,7 @@ export { FORMATS, resolveCanvas } from './formats.mjs';
 export { toWebp, toPng } from './export.mjs';
 export { rasterize } from './raster.mjs';
 export { bayer, screenRaster, SCREEN_PRESETS } from './dither.mjs';
+export { lensRaster } from './lens.mjs';
 export { renderPosters, expandPosters, TEMPLATES as POSTER_TEMPLATES } from './poster.mjs';
 export { FONTS, layoutType } from './type.mjs';
 export { STYLES, applyStyle } from './styles.mjs';
@@ -43,10 +44,10 @@ import { stampPng } from './stamp.mjs';
 export async function render(scene, out, opts = {}) {
   const { svg, used, canvas } = await compose(scene);
   if (/\.svg$/i.test(out)) writeFileSync(out, svg);
-  else if (/\.webp$/i.test(out)) await toWebp(svg, out, { ...opts.webp, screen: scene.screen });
+  else if (/\.webp$/i.test(out)) await toWebp(svg, out, { ...opts.webp, screen: scene.screen, lens: scene.lens, t: scene.t });
   else {
     // the PNG carries its scene (stamp.mjs): it opens again in the editor and shows it was drawn, not generated
-    const { png } = await toPng(svg, null, { screen: scene.screen });
+    const { png } = await toPng(svg, null, { screen: scene.screen, lens: scene.lens, t: scene.t });
     writeFileSync(out, opts.stamp === false ? png : stampPng(png, scene));
     if (opts.preview) await toPng(png, out, { preview: true });
   }

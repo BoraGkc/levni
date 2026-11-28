@@ -1,0 +1,15 @@
+{
+ "_meta": {
+  "title": "lens: a glass search bar over dots",
+  "alt": "A dot-matrix globe drawing in lime on near-black with a glass search pill across it; the dots under the glass are magnified and split into red and blue fringes, the pill reads Globe with a magnifier and a command-K key"
+ },
+ "seed": 2,
+ "background": "#0B0B0C",
+ "finish": "soft",
+ "lens": { "x": 600, "y": 360, "w": 640, "h": 150, "icon": true, "label": "Globe", "kbd": "⌘K" },
+ "elements": [
+  { "type": "dotline", "prop": "globe", "x": 600, "y": 340, "size": 520, "cell": 10, "color": "#D6E521", "muted": "#4E4E57", "faint": "#151518" },
+  { "type": "type", "text": "FIG 0.2", "x": 60, "y": 60, "size": 18, "font": "mono", "weight": 700, "tracking": 0.06, "color": "#7C7C84" },
+  { "type": "type", "text": "LENS", "x": 1140, "y": 60, "size": 18, "font": "mono", "weight": 700, "tracking": 0.06, "align": "right", "color": "#7C7C84" }
+ ]
+}

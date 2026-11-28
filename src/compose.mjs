@@ -14,6 +14,8 @@ import { ASSETS, makeNoise } from './assets.mjs';
 import { expandProp } from './props.mjs';
 import { expandSeal } from './seal.mjs';
 import { expandIso } from './iso.mjs';
+import { useIsoExpander } from './shapes.mjs';
+useIsoExpander(expandIso);
 import { flattenPath, inkLine, plateOffsets } from './ink.mjs';
 import { applyStyle } from './styles.mjs';
 import { resolveSlots } from './slots.mjs';

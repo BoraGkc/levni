@@ -1,0 +1,5 @@
+{ "seed": 2, "background": "#0B0B0C", "finish": "soft",
+  "lens": { "x": 600, "y": 340, "w": 640, "h": 150, "icon": true, "label": "Globe", "kbd": "⌘K" },
+  "elements": [
+  { "type": "dotline", "prop": "globe", "x": 600, "y": 340, "size": 520, "cell": 10, "color": "#D6E521", "muted": "#4E4E57", "faint": "#151518" }
+]}

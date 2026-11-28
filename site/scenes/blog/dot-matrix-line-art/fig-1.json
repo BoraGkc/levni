@@ -1,0 +1,9 @@
+{ "seed": 4, "background": "#0B0B0C", "finish": "soft", "elements": [
+  { "type": "panel", "x": 40, "y": 96, "w": 340, "h": 480, "color": "paper" },
+  { "type": "prop", "name": "globe", "x": 210, "y": 330, "size": 280 },
+  { "type": "dotline", "prop": "globe", "x": 600, "y": 330, "size": 300, "cell": 8, "color": "#D6E521", "muted": "#4E4E57" },
+  { "type": "dotline", "prop": "globe", "x": 990, "y": 330, "size": 300, "cell": 8, "paint": true, "muted": "#4E4E57", "fillEvery": 1 },
+  { "type": "type", "text": "INK", "x": 210, "y": 610, "size": 16, "font": "mono", "weight": 700, "align": "center", "color": "#7C7C84" },
+  { "type": "type", "text": "DOTLINE", "x": 600, "y": 610, "size": 16, "font": "mono", "weight": 700, "align": "center", "color": "#7C7C84" },
+  { "type": "type", "text": "DOTLINE, PAINT", "x": 990, "y": 610, "size": 16, "font": "mono", "weight": 700, "align": "center", "color": "#7C7C84" }
+]}
