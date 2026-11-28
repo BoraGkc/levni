@@ -1,0 +1,11 @@
+{
+  "seed": 28,
+  "background": "ink",
+  "elements": [
+    {"type":"dither","x":0,"y":0,"w":1200,"h":673,"colors":["mustard","coral","blue","ink"],"mode":"linear","from":1,"to":0},
+    {"type":"disc","x":600,"y":440,"r":170,"color":"mustard","motion":{"type":"float","amp":14}},
+    {"type":"panel","x":-20,"y":470,"w":1240,"h":230,"color":"ink"},
+    {"type":"waves","x":0,"y":500,"w":1200,"h":160,"gap":22,"color":"coral","motion":{"type":"drift","amp":26}},
+    {"type":"type","text":"DUSK, 8 PX AT A TIME","x":70,"y":80,"size":20,"font":"mono","weight":700,"tracking":0.06,"color":"paper"}
+  ]
+}

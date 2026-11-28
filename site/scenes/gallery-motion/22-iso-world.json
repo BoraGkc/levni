@@ -1,0 +1,38 @@
+{
+ "seed": 22,
+ "background": "#DDF0E4",
+ "camera": {
+  "zoom": 1.08
+ },
+ "elements": [
+  {
+   "type": "iso",
+   "preset": "city",
+   "seed": 4
+  },
+  {
+   "type": "cloud",
+   "x": 230,
+   "y": 140,
+   "size": 170,
+   "drift": 50
+  },
+  {
+   "type": "cloud",
+   "x": 950,
+   "y": 110,
+   "size": 130,
+   "drift": -40
+  },
+  {
+   "type": "label",
+   "text": "a little world, breathing",
+   "x": 70,
+   "y": 620
+  }
+ ],
+ "_meta": {
+  "title": "a little world",
+  "alt": "An isometric little city on mint green, clouds drift above it and the view slowly pushes in and back"
+ }
+}

@@ -1,0 +1,15 @@
+{
+  "format": "story",
+  "seed": 15,
+  "background": "blue",
+  "stagger": 0.07,
+  "elements": [
+    {"type":"sunburst","x":540,"y":620,"size":900,"color":"tone"},
+    {"type":"disc","x":540,"y":620,"r":260,"color":"mustard","motion":{"type":"pop","delay":0.02,"dur":0.18}},
+    {"type":"prop","name":"megaphone","x":540,"y":610,"size":360,"shadow":true,"motion":[{"type":"pop","delay":0.08,"dur":0.18},{"type":"wiggle","amp":5}]},
+    {"type":"type","text":"FRIDAY · 19:00","x":540,"y":1060,"size":36,"font":"mono","weight":700,"tracking":0.06,"color":"mustard","align":"center"},
+    {"type":"type","text":"Open studio","x":90,"y":1180,"w":900,"h":180,"fit":"box","font":"black","color":"paper","align":"center","motion":{"type":"typewriter","delay":0.12,"dur":0.25,"cursor":"_"}},
+    {"type":"type","text":"Drinks, prints and a live demo.","x":540,"y":1460,"size":44,"color":"paper","align":"center","motion":{"type":"slide","from":"down","distance":40,"delay":0.45,"dur":0.16}},
+    {"type":"confetti","x":0,"y":1560,"w":1080,"h":360,"spacing":70}
+  ]
+}

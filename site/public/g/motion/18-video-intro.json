@@ -1,0 +1,13 @@
+{
+  "format": "youtube",
+  "seed": 18,
+  "background": "mustard",
+  "camera": {"zoom":[1,1.12],"once":true},
+  "elements": [
+    {"type":"panel","x":-20,"y":470,"w":1320,"h":270,"color":"ink"},
+    {"type":"prop","name":"camera","x":980,"y":330,"size":380,"shadow":true,"motion":[{"type":"pop","delay":0.05,"dur":0.18},{"type":"sway","amp":4}]},
+    {"type":"type","text":"EPISODE 12","x":90,"y":150,"size":20,"font":"mono","weight":700,"tracking":0.06,"color":"ink"},
+    {"type":"type","text":"Behind\nthe lens","x":86,"y":230,"w":640,"h":210,"fit":"box","font":"black","color":"ink","motion":{"type":"typewriter","delay":0.1,"dur":0.3,"cursor":"_"}},
+    {"type":"type","text":"A short film about small studios","x":90,"y":590,"size":40,"color":"paper","motion":{"type":"slide","from":"left","distance":80,"delay":0.45,"dur":0.16}}
+  ]
+}

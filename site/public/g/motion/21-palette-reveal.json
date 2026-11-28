@@ -1,0 +1,18 @@
+{
+  "seed": 21,
+  "background": "paper",
+  "stagger": 0.07,
+  "elements": [
+    {"type":"type","text":"BRAND INKS","x":80,"y":110,"size":20,"font":"mono","weight":700,"tracking":0.06,"color":"ink"},
+    {"type":"block","x":80,"y":170,"w":196,"h":360,"color":"#1F3A5F","motion":{"type":"wipe","from":"down","delay":0.08,"dur":0.2}},
+    {"type":"block","x":292,"y":170,"w":196,"h":360,"color":"#E4572E","motion":{"type":"wipe","from":"down","delay":0.08,"dur":0.2}},
+    {"type":"block","x":504,"y":170,"w":196,"h":360,"color":"#F2C230","motion":{"type":"wipe","from":"down","delay":0.08,"dur":0.2}},
+    {"type":"block","x":716,"y":170,"w":196,"h":360,"color":"#2E8B57","motion":{"type":"wipe","from":"down","delay":0.08,"dur":0.2}},
+    {"type":"block","x":928,"y":170,"w":196,"h":360,"color":"#7A5CFF","motion":{"type":"wipe","from":"down","delay":0.08,"dur":0.2}},
+    {"type":"type","text":"#1F3A5F","x":92,"y":580,"size":18,"font":"mono","weight":700,"tracking":0.06,"color":"ink","motion":{"type":"fade","delay":0.05,"dur":0.1}},
+    {"type":"type","text":"#E4572E","x":304,"y":580,"size":18,"font":"mono","weight":700,"tracking":0.06,"color":"ink","motion":{"type":"fade","delay":0.05,"dur":0.1}},
+    {"type":"type","text":"#F2C230","x":516,"y":580,"size":18,"font":"mono","weight":700,"tracking":0.06,"color":"ink","motion":{"type":"fade","delay":0.05,"dur":0.1}},
+    {"type":"type","text":"#2E8B57","x":728,"y":580,"size":18,"font":"mono","weight":700,"tracking":0.06,"color":"ink","motion":{"type":"fade","delay":0.05,"dur":0.1}},
+    {"type":"type","text":"#7A5CFF","x":940,"y":580,"size":18,"font":"mono","weight":700,"tracking":0.06,"color":"ink","motion":{"type":"fade","delay":0.05,"dur":0.1}}
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "seed": 26,
+  "background": "paper",
+  "stagger": 0.06,
+  "elements": [
+    {"type":"type","text":"SIGNUPS BY MONTH · SAMPLE DATA","x":80,"y":90,"size":18,"font":"mono","weight":700,"tracking":0.06,"color":"blue"},
+    {"type":"bars","x":100,"y":140,"w":110,"h":420,"values":[3],"min":0,"max":10,"baseline":false,"colors":["blue"],"motion":{"type":"wipe","from":"down","delay":0.06,"dur":0.2}},
+    {"type":"bars","x":260,"y":140,"w":110,"h":420,"values":[5],"min":0,"max":10,"baseline":false,"colors":["blue"],"motion":{"type":"wipe","from":"down","delay":0.06,"dur":0.2}},
+    {"type":"bars","x":420,"y":140,"w":110,"h":420,"values":[4],"min":0,"max":10,"baseline":false,"colors":["blue"],"motion":{"type":"wipe","from":"down","delay":0.06,"dur":0.2}},
+    {"type":"bars","x":580,"y":140,"w":110,"h":420,"values":[7],"min":0,"max":10,"baseline":false,"colors":["blue"],"motion":{"type":"wipe","from":"down","delay":0.06,"dur":0.2}},
+    {"type":"bars","x":740,"y":140,"w":110,"h":420,"values":[6],"min":0,"max":10,"baseline":false,"colors":["blue"],"motion":{"type":"wipe","from":"down","delay":0.06,"dur":0.2}},
+    {"type":"bars","x":900,"y":140,"w":110,"h":420,"values":[9],"min":0,"max":10,"baseline":false,"colors":["coral"],"motion":{"type":"wipe","from":"down","delay":0.06,"dur":0.2}},
+    {"type":"block","x":80,"y":562,"w":1000,"h":4,"color":"ink"},
+    {"type":"type","text":"JAN","x":130,"y":600,"size":18,"font":"mono","weight":700,"tracking":0.06,"color":"ink"},
+    {"type":"type","text":"FEB","x":290,"y":600,"size":18,"font":"mono","weight":700,"tracking":0.06,"color":"ink"},
+    {"type":"type","text":"MAR","x":450,"y":600,"size":18,"font":"mono","weight":700,"tracking":0.06,"color":"ink"},
+    {"type":"type","text":"APR","x":610,"y":600,"size":18,"font":"mono","weight":700,"tracking":0.06,"color":"ink"},
+    {"type":"type","text":"MAY","x":770,"y":600,"size":18,"font":"mono","weight":700,"tracking":0.06,"color":"ink"},
+    {"type":"type","text":"JUN","x":930,"y":600,"size":18,"font":"mono","weight":700,"tracking":0.06,"color":"ink"},
+    {"type":"type","text":"+50%","x":1040,"y":230,"size":44,"font":"black","align":"right","color":"coral","motion":{"type":"pop","delay":0.5,"dur":0.14}}
+  ]
+}

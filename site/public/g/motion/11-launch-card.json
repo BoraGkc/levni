@@ -1,0 +1,15 @@
+{
+  "seed": 11,
+  "background": "#14122B",
+  "stagger": 0.06,
+  "elements": [
+    {"type":"panel","x":640,"y":-20,"w":600,"h":720,"color":"blue"},
+    {"type":"disc","x":920,"y":336,"r":200,"color":"mustard","motion":{"type":"pop","delay":0.02,"dur":0.18}},
+    {"type":"prop","name":"rocket","x":920,"y":330,"size":300,"shadow":true,"motion":[{"type":"pop","delay":0.08,"dur":0.18},{"type":"float","amp":12}]},
+    {"type":"type","text":"NEW · 28 NOV","x":80,"y":150,"size":20,"font":"mono","weight":700,"tracking":0.06,"color":"mustard","motion":{"type":"fade","delay":0.05,"dur":0.1}},
+    {"type":"type","text":"Lift-off.","x":76,"y":300,"w":520,"h":150,"fit":"box","font":"black","color":"paper","motion":{"type":"typewriter","delay":0.1,"dur":0.22,"cursor":"_"}},
+    {"type":"type","text":"Our app is live. Try it free.","x":80,"y":420,"size":30,"color":"paper","motion":{"type":"slide","from":"down","distance":40,"delay":0.4,"dur":0.16}},
+    {"type":"block","x":80,"y":500,"w":230,"h":56,"color":"coral","motion":{"type":"pop","delay":0.5,"dur":0.14}},
+    {"type":"type","text":"GET STARTED →","x":98,"y":535,"size":20,"font":"mono","weight":700,"tracking":0.06,"color":"paper","motion":{"type":"fade","delay":0.55,"dur":0.1}}
+  ]
+}
