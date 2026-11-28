@@ -23,6 +23,7 @@ export const DOC_GROUPS: DocGroup[] = [
     pages: [
       { href: '/docs/animation/', title: 'Animation', blurb: 'Loop any scene as GIF, WebP or MP4: motion, stagger, camera, moving README banners.' },
       { href: '/docs/storyboards/', title: 'Storyboards', blurb: 'Draw a shot list as one contact sheet, plus full-size frames and shots.json.' },
+      { href: '/docs/print/', title: 'Print', blurb: 'Split a scene into riso plates for a real print run.' },
       { href: '/docs/brand-kits/', title: 'Brand kits', blurb: 'One brand spec makes a folder of matching marks, cards, banners and posters.' },
       { href: '/docs/export/', title: 'Export extras', blurb: 'Frame sequences, sprite sheets, MP4, transparent PNG, seamless tiles, Remotion.' },
     ],

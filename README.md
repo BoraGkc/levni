@@ -40,6 +40,7 @@ No image model, no API key, $0 per image; code MIT, drawings CC BY 4.0. About 0.
 | a cover, sticker sheet or dithered hero | `npx @levni/levni render scene.json cover.webp` |
 | a looping GIF or WebP of any scene | `npx @levni/levni animate scene.json loop.gif` |
 | a whole brand kit from one name | `npx @levni/levni brand brand.json kit/` |
+| riso plates for a real print run | `npx @levni/levni print scene.json print/` |
 | a storyboard from a shot list | `npx @levni/levni storyboard shots.json board.png` |
 | all of it from your assistant | `claude mcp add levni -- npx -y @levni/levni mcp` |
 | a design by hand, no install | [levni.dev/editor](https://levni.dev/editor/) |
@@ -199,6 +200,7 @@ Full element reference: [`docs/scene.md`](docs/scene.md) · JSON Schema: [`docs/
 | `critique_scene` | only the critic's notes, for quick iterations |
 | `render_animation` | draw a scene as a loop and write a .gif or .webp: critic notes and a strip of four frames ([docs](docs/animate.md)) |
 | `render_brand_kit` | a whole brand kit into a folder; reads a website only when you pass `url` ([docs](docs/brandkit.md)) |
+| `render_print` | a scene as riso plates for a real print run, with a proof and a sheet ([docs](docs/print.md)) |
 | `render_storyboard` | a shot list as a numbered storyboard sheet, with optional full-size frames and `shots.json` ([docs](docs/storyboard.md)) |
 | `render_board` | a brand board from `{ brand: { name, tagline, mark, inks } }` or your own tiles; `guide: true` returns [`docs/board.md`](docs/board.md) |
 | `render_poster` | eight branding posters and a series sheet from `{ brand: { name, tagline, mark, inks, words } }`; `scenes: true` returns the scenes to edit, `guide: true` returns [`docs/poster.md`](docs/poster.md) |
@@ -229,6 +231,7 @@ The assistant shows you the preview and applies after you say yes. Drafts only: 
 | `levni render <scene.json> <out>` | draw a scene (`--format`, `--preview`) and print the critic's notes |
 | `levni animate <scene.json> <out.gif\|out.webp\|out.mp4>` | draw a scene as a loop: clouds drift, flags wave, gradients breathe, 3D spins, and any element with `motion` moves (`--frames`, `--fps`, `--boil`, `--width`, `--strip`, `--frames-dir`, `--sprite`) ([docs](docs/animate.md), [export](docs/export.md)) |
 | `levni brand <brand.json\|url> <out-dir>` | a whole brand kit in one folder (`--posters 8`, `--only a,b`) ([docs](docs/brandkit.md)) |
+| `levni print <scene.json> <out-dir>` | riso plates: one grayscale image per ink, a proof, a sheet and `print.json` (`--scale`, `--plates`, `--halftone`) ([docs](docs/print.md)) |
 | `levni storyboard <spec.json> <out.png>` | storyboard sheet from a shot list (`--frames-dir`, `--columns`) ([docs](docs/storyboard.md)) |
 | `levni list [query]` | search props by name, old name or tag (English or Turkish) |
 | `levni sheet <out.png> [prop …]` | contact sheet, every variant on paper and on blue (`--recolor`) |

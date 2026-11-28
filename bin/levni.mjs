@@ -4,6 +4,7 @@
 //   levni animate <scene.json> <out.gif|out.webp> [--frames 24] [--fps 12] [--boil 3] [--width 800] [--strip frames.png]
 //   levni storyboard <spec.json> <out.png> [--frames-dir dir]
 //   levni brand <brand.json | url> <out-dir>
+//   levni print <scene.json> <out-dir>
 //   levni sheet <out.png> [prop ...] [--recolor coral=blue,mustard=tone]
 //   levni board <spec.json> <out.png>
 //   levni list [query]
@@ -19,7 +20,7 @@ import { render, compose, loadProps, findProp, addPropDir, LIBRARY_DIR, validate
 const [cmd, ...rest] = process.argv.slice(2);
 const flag = (name) => rest.includes(`--${name}`);
 const opt = (name) => { const i = rest.indexOf(`--${name}`); return i >= 0 ? rest[i + 1] : undefined; };
-const positional = rest.filter((a, i) => !a.startsWith('--') && !(i > 0 && ['--recolor', '--dir', '--sheet', '--brief', '--model', '--format', '--frames', '--fps', '--boil', '--width', '--strip', '--colours', '--frames-dir', '--sprite', '--columns', '--crf', '--loops', '--tile', '--posters', '--only'].includes(rest[i - 1])));
+const positional = rest.filter((a, i) => !a.startsWith('--') && !(i > 0 && ['--recolor', '--dir', '--sheet', '--brief', '--model', '--format', '--frames', '--fps', '--boil', '--width', '--strip', '--colours', '--frames-dir', '--sprite', '--columns', '--crf', '--loops', '--tile', '--posters', '--only', '--scale', '--plates', '--halftone', '--shift', '--paper'].includes(rest[i - 1])));
 
 const USAGE = `levni: hand-inked illustrations from JSON scenes
 
@@ -35,6 +36,9 @@ const USAGE = `levni: hand-inked illustrations from JSON scenes
       Elements move with "motion": float, sway, pulse, spin, pop, fade, slide, wipe, typewriter; the scene with "camera".
       .mp4 needs ffmpeg on the PATH. --frames-dir writes frame-0001.png… and frames.json; --sprite writes a sprite sheet
       and its atlas JSON. docs/animate.md, docs/export.md
+  levni print <scene.json> <out-dir> [--scale 3] [--plates 4] [--halftone 4] [--paper #F4F2EC] [--shift 3]
+      Riso plates: one grayscale PNG per ink (black = full ink; lightest ink first, the key line last), proof.png
+      (the plates multiplied back on the paper), sheet.png and print.json. Ready for a stencil printer. docs/print.md
   levni brand <brand.json | https://url> <out-dir> [--posters 8] [--only a,b]
       Brand kit: { "brand": { name, tagline?, mark?, inks?, words? } } (or a website URL, read once for name, tagline and
       colours) makes mark, favicons, palette, og, cover, square, story, README banner, board, posters, loop, brand.json,
@@ -57,7 +61,7 @@ const USAGE = `levni: hand-inked illustrations from JSON scenes
   levni mcp
       Run Levni as an MCP server over stdio (tools: scene_guide, list_props, render_scene,
       critique_scene, render_animation, show_props, render_board, render_poster, render_storyboard,
-      render_brand_kit). Add it to an MCP client as: npx levni mcp
+      render_brand_kit, render_print). Add it to an MCP client as: npx levni mcp
   levni check [prop ...]
       Measure props without looking at them (for agents that cannot see images): how much of the
       box each variant fills, its centre, colours, and what to fix. All props when none named.
@@ -108,6 +112,14 @@ async function main() {
     console.log(`${out}  ${r.frames} frames, ${r.width} x ${r.height}, ${Math.round(r.bytes / 1024)} KB`);
     if (opt('strip')) { writeFileSync(opt('strip'), await frameStrip(r.stills)); console.log(opt('strip')); }
     console.log(r.notes.length ? r.notes.map((n) => `- ${n}`).join('\n') : '- critic: no layout problems found');
+  } else if (cmd === 'print') {
+    const [file, dir] = positional;
+    if (!file || !dir) throw new Error('usage: levni print <scene.json> <out-dir> [--scale 3] [--plates 4] [--halftone 4]');
+    const { separate } = await import('../src/separate.mjs');
+    const num = (k) => (opt(k) != null ? Number(opt(k)) : undefined);
+    const r = await separate(JSON.parse(readFileSync(file, 'utf8')), dir, { scale: num('scale'), plates: num('plates'), halftone: num('halftone'), shift: num('shift'), paper: opt('paper') });
+    console.log(`${dir}  ${r.plates.length} plates, ${r.width} x ${r.height} px (A4 at ${r.dpi.a4} dpi, A3 at ${r.dpi.a3} dpi), paper ${r.paper}, ${r.ms} ms`);
+    for (const p of r.plates) console.log(`- ${p.order}. ${p.ink} ${p.hex}  ${p.coverage}% cover  ${p.file}`);
   } else if (cmd === 'brand') {
     const [src, outDir] = positional;
     if (!src || !outDir) throw new Error('usage: levni brand <brand.json | https://url> <out-dir> [--posters 8] [--only a,b]');

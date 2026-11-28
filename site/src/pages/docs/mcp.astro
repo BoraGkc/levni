@@ -27,12 +27,13 @@ const tools: Tool[] = [
   { name: 'render_board', does: 'Makes a brand board.', input: [['spec', 'a brand shortcut { brand: { name, tagline, mark, inks } } or a board of your own tiles.'], ['out', 'a PNG path.'], ['preview', 'a 900 px preview; default true.'], ['guide', 'true returns the board format instead of rendering.']], output: 'A line with the board size, the preview and, with out, the PNG. The shortest spec makes nine tiles.' },
   { name: 'render_poster', does: 'Makes a series of eight branding posters (1200 by 1600). Needs Levni 0.3.0.', input: [['spec', '{ brand: { name, tagline, mark, inks, words }, only?, count? }.'], ['out_dir', 'a folder for poster-01-split.png and so on, plus series.png.'], ['scenes', 'true also returns each poster as editable scene JSON.'], ['preview', 'a contact sheet of the series; default true.'], ['guide', 'true returns the poster format instead.']], output: 'The poster count, the contact sheet and, with out_dir, the files.' },
   { name: 'render_storyboard', does: 'Draws a storyboard before anyone makes a video: one contact sheet of numbered frames with title, length, running timecode and note. Needs Levni 0.5.0.', input: [['spec', 'a storyboard spec { title?, brand?, format?, shots: [...] }, or a bare shot list [{ id, desc, frames }].'], ['out', 'a .png path for the sheet.'], ['frames_dir', 'a folder for shot-NN.png at full size and shots.json.'], ['columns', 'frames per row; default 3.'], ['preview', 'a 900 px preview; default true.'], ['guide', 'true returns the storyboard format instead of rendering.']], output: 'A line with the sheet size, shot count and total seconds (and the file path when out is set), any warnings such as an unknown prop, and the preview.' },
+  { name: 'render_print', does: 'Splits a scene into riso plates for a real print run: one grayscale PNG per ink in print order, a proof, a sheet and print.json. Needs Levni 0.5.0.', input: [['scene', 'the scene JSON. Motion is ignored: the finished still is printed.'], ['out_dir', 'folder to write the plates into.'], ['scale', 'pixels per canvas unit, default 3.'], ['plates', 'most drums to use, default 4.'], ['halftone', 'dot size in px; leave out to keep gray.'], ['preview', 'return the sheet as an image, default true.']], output: 'The plate list (order, ink, hex, coverage, file), the size in px and the paper colour, plus the sheet: each plate in its ink beside the proof.' },
   { name: 'render_brand_kit', does: 'Makes a folder of matching brand assets from one brand: mark, favicons, palette, social cards, story, README banner, board, posters and a loop. Needs Levni 0.5.0.', input: [['spec', '{ brand: { name, tagline?, mark?, inks?, words? }, seed?, only?, posters? }.'], ['url', 'a web page the user named. It is fetched once to read the name, tagline and colours, and never fetched unless you pass it. Fields in spec win.'], ['out_dir', 'a folder to write the kit into. Without it nothing is written and the asset list comes back.'], ['preview', 'a preview of the kit’s board; default true when out_dir is set.'], ['guide', 'true returns the brand kit format instead.']], output: 'With out_dir: the file count, the brand name, mark and inks, the list of files and the critic’s notes per asset, plus a 900 px preview. Without it: the names of the assets that would be made.' },
 ];
 ---
 <Docs
   title="Levni MCP server: setup for Claude, Cursor and Codex, every tool"
-  description="Connect Levni to Claude Code, Claude Desktop, Cursor or Codex. Reference for all ten tools, from scene_guide and render_scene to render_animation, render_storyboard and render_brand_kit, with a sample session."
+  description="Connect Levni to Claude Code, Claude Desktop, Cursor or Codex. Reference for all eleven tools, from scene_guide and render_scene to render_animation, render_storyboard and render_brand_kit, with a sample session."
   toc={toc}
 >
   <p class="eyebrow">Use Levni</p>
@@ -77,7 +78,7 @@ args = ["-y", "${pkg}", "mcp"]`}</code></pre>
   </ol>
 
   <h2 id="tools">Tools</h2>
-  <p>Ten tools, all running locally. Inputs marked required must be given; everything else is optional.</p>
+  <p>Eleven tools, all running locally. Inputs marked required must be given; everything else is optional.</p>
   {tools.map((t) => (
     <section class="tooldef" aria-labelledby={`t-${t.name}`}>
       <h3 id={`t-${t.name}`}>{t.name}</h3>

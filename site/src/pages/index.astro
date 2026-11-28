@@ -159,6 +159,7 @@ const tools = [
   ['render_brand_kit', 'mark, favicons, cards, banner, board and posters in one folder'],
   ['render_animation', 'a scene as a looping GIF or WebP, with a strip of frames to look at'],
   ['render_storyboard', 'a shot list as a numbered sheet with timecodes'],
+  ['render_print', 'riso plates for a real print run, one image per ink'],
   ['critique_scene', 'only the notes, for quick iterations'],
   ['scene_guide', 'every element type, colour and style pack'],
 ];
@@ -432,7 +433,7 @@ npx @levni/levni board brand.json board.png`}</code></pre>
   <section id="agents" class="agents wrap" aria-labelledby="agents-title">
     <div class="agents-text">
       <h2 id="agents-title">Give your agent an illustrator.</h2>
-      <p>One MCP server, ten tools (three more for Ghost). The agent searches the library, writes the scene, a brand kit or a loop, reads the critic and saves the file, without a person in the loop until the picture is right.</p>
+      <p>One MCP server, eleven tools (three more for Ghost). The agent searches the library, writes the scene, a brand kit or a loop, reads the critic and saves the file, without a person in the loop until the picture is right.</p>
       <dl class="tools">
         {tools.map(([name, what]) => (<><dt><code>{name}</code></dt><dd>{what}</dd></>))}
       </dl>

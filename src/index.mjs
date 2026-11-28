@@ -24,6 +24,7 @@ export { renderKit, expandKit, brandFromHtml, brandFromUrl } from './brandkit.mj
 export { EASE, MOTIONS } from './motion.mjs';
 export { bannerScene, pickMark, repoTerms, hashSeed, BANNER_SIZE, BANNER_THEMES } from './banner.mjs';
 export { encodeGif } from './gif.mjs';
+export { separate, findPlates } from './separate.mjs';
 export { renderBoard } from './board.mjs';
 export { expandBrand } from './board.mjs';
 
