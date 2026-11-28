@@ -10,7 +10,8 @@
     "library": "node scripts/render-library.mjs",
     "library-og": "node scripts/render-library-og.mjs",
     "gallery": "node scripts/render-gallery.mjs",
-    "blog": "node scripts/render-blog.mjs"
+    "blog": "node scripts/render-blog.mjs",
+    "commons": "node scripts/render-commons.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",

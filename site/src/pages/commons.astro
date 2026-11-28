@@ -1,0 +1,181 @@
+---
+// Folio commons: the open library in numbers, where its drawings came from, open calls for what is missing, and the
+// community's own requests (read live from the repo's "prop request" issues). Data: scripts/render-commons.mjs.
+import Base from '../layouts/Base.astro';
+import { SITE } from '../site';
+import data from '../data/commons.json';
+
+const gh = SITE.github;
+const ask = (w: string) => `${gh}/issues/new?template=prop-request.yml&title=${encodeURIComponent(`Prop request: ${w}`)}`;
+const n = (v: number) => v.toLocaleString('en-US');
+const total = data.drawings;
+const SOURCES = [
+  { k: 'studio', label: 'Drawn in the Levni studio', color: 'var(--indigo)' },
+  { k: 'tabler', label: 'Redrawn from Tabler Icons (MIT) as filled, inked shapes', color: 'var(--lime)' },
+  { k: 'assisted', label: 'Drawn with a model, checked by hand', color: '#E8522F' },
+] as const;
+const shelfMax = Math.max(...data.categories.map((c) => c.n));
+const faq = [
+  { q: 'What is the Folio?', a: `Levni’s open library of ${n(total)} drawings: every object is a JSON file of paths in a 0–100 box with named colours, so every style pack can recolour it. Code is MIT, drawings are CC BY 4.0.` },
+  { q: 'How is the Wanted list made?', a: 'From common objects people reach for in posters, menus, books and slides. Each one the library has no drawing for (by name, alias or leading tag) lands on the list. It is rebuilt whenever the library changes.' },
+  { q: 'Can I draw with a model?', a: 'Yes. Agent-assisted drawings are welcome and marked as such; you check the drawing yourself before the pull request, and CI renders it for review.' },
+  { q: 'Where do the numbers come from?', a: `Drawings are counted from the repository. Installs are the public npm count for @levni/levni over the last month. Updated ${data.at}.` },
+];
+---
+<Base title="Folio commons: the open library, its makers and what is wanted" description={`Levni’s open drawing library in public: ${n(total)} drawings, where they came from, ${data.wanted} objects still wanted in open calls, and drawing requests from the community. Draw one and your name stays on it.`}>
+  <div class="wrap fc">
+    <header class="brand-hero">
+      <p class="eyebrow">Folio commons</p>
+      <h1>An open library, drawn in public.</h1>
+      <p class="lede">Every drawing Levni uses lives in one open folder, free to use with credit. Here is what is in it, where it came from, and the {data.wanted} everyday objects nobody has drawn yet. Pick one, draw it, and your name stays on it.</p>
+    </header>
+
+    <ul class="fc-stats" aria-label="The library in numbers">
+      <li><b>{n(total)}</b><span>drawings</span></li>
+      <li><b>{n(data.variants)}</b><span>variants</span></li>
+      <li><b>{data.categories.length}</b><span>shelves</span></li>
+      <li><b>{data.wanted}</b><span>wanted</span></li>
+      {data.usage?.npmMonth ? <li><b>{n(data.usage.npmMonth)}</b><span>npm installs last month</span></li> : null}
+    </ul>
+
+    <section class="fc-sec" aria-labelledby="fc-src">
+      <h2 id="fc-src">Where the drawings come from</h2>
+      <div class="fc-bar" role="img" aria-label={SOURCES.map((s) => `${s.label}: ${data.sources[s.k]}`).join(', ')}>
+        {SOURCES.map((s) => <i style={`flex:${data.sources[s.k]};background:${s.color}`}></i>)}
+      </div>
+      <ul class="fc-legend">
+        {SOURCES.map((s) => <li><i style={`background:${s.color}`}></i><b>{n(data.sources[s.k])}</b> {s.label}</li>)}
+      </ul>
+      <p class="fc-note">Credit travels with the file: an author field in the drawing, the NOTICE, and the Library page. The next name on this bar could be yours.</p>
+    </section>
+
+    <section class="fc-sec" aria-labelledby="fc-calls">
+      <div class="fc-head"><h2 id="fc-calls">Open calls</h2><a href={`${gh}/blob/main/CONTRIBUTING.md`}>How to draw one →</a></div>
+      <p class="fc-sub">Five shelves people keep reaching for. Filled tiles are drawn; dashed tiles are wanted.</p>
+      <div class="fc-calls">
+        {data.themes.map((t) => (
+          <article class="fc-call" id={t.id}>
+            <header>
+              <h3>{t.title}</h3>
+              <p>{t.text}</p>
+              <p class="fc-prog"><span style={`--p:${Math.round((t.present.length / t.total) * 100)}%`}></span>{t.present.length} of {t.total} drawn</p>
+            </header>
+            <ul class="fc-tiles">
+              {t.present.map((x) => <li class="have"><a href={`/library/?q=${encodeURIComponent(x.name)}`} title={`${x.word}: ${x.name}`}><img src={`/props-svg/${x.name}-0.svg`} alt={x.word} width="64" height="64" loading="lazy" decoding="async" /></a></li>)}
+              {t.missing.map((w) => <li class="want"><a href={ask(w)} title={`Ask for a ${w} drawing`}><span>{w}</span></a></li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="fc-sec" aria-labelledby="fc-req">
+      <div class="fc-head"><h2 id="fc-req">Asked for by people</h2><a href={`${gh}/issues?q=label%3A%22prop+request%22`}>All requests on GitHub →</a></div>
+      <ul class="fc-req" id="fc-requests" data-repo={gh.replace('https://github.com/', '')}><li class="fc-empty">Loading requests…</li></ul>
+    </section>
+
+    <section class="fc-sec" aria-labelledby="fc-shelves">
+      <div class="fc-head"><h2 id="fc-shelves">The shelves</h2><a href="/library/">Open the Library →</a></div>
+      <ul class="fc-shelves">
+        {data.categories.map((c) => (
+          <li>
+            <div class="fc-sh-top"><b>{c.id}</b><span>{n(c.n)}</span></div>
+            <i class="fc-sh-bar" style={`--w:${Math.round((c.n / shelfMax) * 100)}%`}></i>
+            <div class="fc-sh-imgs">{c.sample.map((s) => <img src={`/props-svg/${s}-0.svg`} alt="" width="40" height="40" loading="lazy" decoding="async" />)}</div>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="fc-cta" aria-labelledby="fc-join">
+      <div>
+        <h2 id="fc-join">Draw one object. Keep your name on it.</h2>
+        <p>One JSON file of paths, a pull request, and CI renders it for review. Illustrators, students, type nerds and agent tinkerers all welcome.</p>
+      </div>
+      <p class="fc-cta-links"><a class="fc-btn" href="/join/">Join the crew</a> <a class="fc-btn ghost" href={`${gh}/blob/main/CONTRIBUTING.md`}>Contributing guide</a> <a class="fc-btn ghost" href={`${gh}/issues/new?template=prop-request.yml`}>Ask for a drawing</a></p>
+    </section>
+
+    <section class="fc-sec fc-about">
+      <h2>Questions</h2>
+      <dl>{faq.map(({ q, a }) => (<><dt>{q}</dt><dd>{a}</dd></>))}</dl>
+    </section>
+  </div>
+</Base>
+
+<script>
+  // the community's own drawing requests, read in this browser from the public GitHub API
+  const list = document.getElementById('fc-requests')!;
+  const repo = list.dataset.repo;
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
+  const empty = (html: string) => { list.innerHTML = `<li class="fc-empty">${html}</li>`; };
+  (async () => {
+    try {
+      const r = await fetch(`https://api.github.com/repos/${repo}/issues?labels=${encodeURIComponent('prop request')}&state=all&per_page=30`, { headers: { accept: 'application/vnd.github+json' } });
+      if (!r.ok) throw new Error(String(r.status));
+      const issues = (await r.json()).filter((i: any) => !i.pull_request);
+      if (!issues.length) return empty(`No requests yet. <a href="https://github.com/${repo}/issues/new?template=prop-request.yml">Ask for the drawing your scene needs</a>, or pick a dashed tile above.`);
+      issues.sort((a: any, b: any) => (b.reactions?.['+1'] || 0) - (a.reactions?.['+1'] || 0) || (a.state === 'open' ? -1 : 1));
+      list.innerHTML = issues.map((i: any) => `<li class="${i.state === 'closed' ? 'done' : ''}"><a href="${esc(i.html_url)}">${esc(i.title.replace(/^(Prop request|Drawing):\s*/i, ''))}</a><span>${i.state === 'closed' ? 'drawn' : `👍 ${i.reactions?.['+1'] || 0}`} · @${esc(i.user?.login || 'someone')}</span></li>`).join('');
+    } catch { empty('Could not reach GitHub right now. The requests live in the repo’s issues.'); }
+  })();
+</script>
+
+<style>
+  .fc-stats { list-style: none; margin: 0 0 clamp(36px, 5vw, 56px); padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; }
+  .fc-stats li { background: #fff; box-shadow: 0 0 0 1px var(--rule); padding: 18px 20px; display: grid; gap: 6px; }
+  .fc-stats b { font: 400 clamp(2rem, 4vw, 2.8rem)/1 var(--display); letter-spacing: -.03em; color: var(--indigo); }
+  .fc-stats span { font: 600 11px/1.3 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+  .fc-sec { margin: 0 0 clamp(44px, 6vw, 72px); }
+  .fc-sec h2 { margin: 0 0 14px; }
+  .fc-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+  .fc-head h2 { margin: 0; }
+  .fc-sub, .fc-note { color: var(--ink-soft); margin: 0 0 18px; max-width: 70ch; }
+  .fc-note { margin: 14px 0 0; font-size: 15px; }
+  .fc-bar { display: flex; height: 28px; box-shadow: 0 0 0 1px var(--rule); }
+  .fc-bar i { display: block; min-width: 6px; }
+  .fc-legend { list-style: none; margin: 14px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px 20px; font-size: 15px; }
+  .fc-legend li { display: flex; gap: 10px; align-items: baseline; }
+  .fc-legend i { width: 12px; height: 12px; flex: none; transform: translateY(1px); box-shadow: 0 0 0 1px rgba(0,0,0,.15); }
+  .fc-legend b { font-family: var(--mono); }
+  .fc-calls { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 16px; }
+  .fc-call { background: #fff; box-shadow: 0 0 0 1px var(--rule); padding: 18px; display: grid; gap: 14px; align-content: start; scroll-margin-top: 90px; }
+  .fc-call:target { box-shadow: 0 0 0 2px var(--indigo); }
+  .fc-call h3 { margin: 0 0 6px; font-size: 1.25rem; }
+  .fc-call header p { margin: 0; color: var(--ink-soft); font-size: 15px; }
+  .fc-call .fc-prog { margin-top: 10px; display: flex; align-items: center; gap: 10px; font: 600 11px/1 var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--ink); }
+  .fc-prog span { flex: 0 0 120px; height: 6px; background: linear-gradient(90deg, var(--indigo) var(--p), var(--paper) var(--p)); box-shadow: 0 0 0 1px var(--rule); }
+  .fc-tiles { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)); gap: 8px; }
+  .fc-tiles li { aspect-ratio: 1; }
+  .fc-tiles a { display: grid; place-items: center; width: 100%; height: 100%; text-decoration: none; }
+  .fc-tiles .have a { background: var(--paper); }
+  .fc-tiles .have img { width: 78%; height: auto; }
+  .fc-tiles .want a { border: 1.5px dashed #B9B3D9; color: var(--ink-soft); font: 600 11px/1.2 var(--mono); text-align: center; padding: 6px; overflow-wrap: anywhere; }
+  .fc-tiles .want a:hover, .fc-tiles .want a:focus-visible { border-color: var(--indigo); color: var(--indigo); background: #F1EEFF; outline: none; }
+  .fc-tiles .want a:hover span::after, .fc-tiles .want a:focus-visible span::after { content: ' · ask'; }
+  .fc-req { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 10px; }
+  .fc-req :global(li) { background: #fff; box-shadow: 0 0 0 1px var(--rule); padding: 12px 14px; display: grid; gap: 4px; }
+  .fc-req :global(li span) { font: 12px/1.3 var(--mono); color: var(--ink-soft); }
+  .fc-req :global(li.done a) { text-decoration: line-through; }
+  .fc-req :global(.fc-empty) { display: block; grid-column: 1 / -1; color: var(--ink-soft); padding: 18px 20px; }
+  .fc-shelves { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 12px; }
+  .fc-shelves li { background: #fff; box-shadow: 0 0 0 1px var(--rule); padding: 14px 16px; display: grid; gap: 10px; }
+  .fc-sh-top { display: flex; justify-content: space-between; align-items: baseline; }
+  .fc-sh-top b { text-transform: capitalize; }
+  .fc-sh-top span { font: 600 13px/1 var(--mono); color: var(--ink-soft); }
+  .fc-sh-bar { display: block; height: 5px; background: linear-gradient(90deg, var(--indigo) var(--w), var(--paper) var(--w)); }
+  .fc-sh-imgs { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; }
+  .fc-sh-imgs img { width: 100%; height: auto; aspect-ratio: 1; background: var(--paper); }
+  .fc-cta { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 360px); gap: 24px; align-items: center; background: var(--lime); padding: clamp(22px, 4vw, 40px); margin: 0 0 clamp(44px, 6vw, 72px); }
+  .fc-cta h2 { margin: 0 0 10px; color: var(--indigo); }
+  .fc-cta p { margin: 0; }
+  .fc-cta-links { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+  .fc-btn { font: 600 12px/1 var(--mono); letter-spacing: .05em; text-transform: uppercase; padding: 14px 16px; background: var(--indigo); color: #fff; text-decoration: none; }
+  .fc-btn.ghost { background: #fff; color: var(--ink); box-shadow: 0 0 0 2px var(--ink); }
+  .fc-btn:focus-visible, .fc-tiles a:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+  .fc-about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: clamp(20px, 4vw, 56px); align-items: start; }
+  .fc-about dl { margin: 0; }
+  .fc-about dt:first-child { margin-top: 0; }
+  .fc-about dt { font-weight: 700; margin-top: 14px; }
+  .fc-about dd { margin: 6px 0 0; color: var(--ink-soft); }
+  @media (max-width: 760px) { .fc-cta, .fc-about { grid-template-columns: minmax(0, 1fr); } .fc-tiles { grid-template-columns: repeat(auto-fill, minmax(62px, 1fr)); gap: 6px; } .fc-tiles .want a { font-size: 10px; padding: 4px; } .fc-cta-links { justify-content: flex-start; } }
+</style>
