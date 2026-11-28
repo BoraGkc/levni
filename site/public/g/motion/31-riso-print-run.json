@@ -1,0 +1,15 @@
+{
+  "seed": 31,
+  "background": "paper",
+  "stagger": 0.06,
+  "plateShift": 4,
+  "elements": [
+    {"type":"panel","x":600,"y":-20,"w":640,"h":720,"color":"tone-mustard"},
+    {"type":"prop","name":"lighthouse","x":760,"y":360,"size":430,"shadow":true,"motion":{"type":"print","delay":0.02,"dur":0.34,"shift":160,"out":true,"outDelay":0.03}},
+    {"type":"prop","name":"sailboat","x":1040,"y":470,"size":230,"motion":{"type":"print","delay":0.02,"dur":0.34,"shift":160,"out":true,"outDelay":0.03}},
+    {"type":"prop","name":"bird","x":1010,"y":170,"size":150,"motion":{"type":"print","delay":0.02,"dur":0.34,"shift":160,"out":true,"outDelay":0.03}},
+    {"type":"type","text":"RISO PRINT RUN","x":72,"y":110,"size":20,"font":"mono","weight":700,"tracking":0.06,"color":"coral"},
+    {"type":"type","text":"Every ink,\none plate\nat a time.","x":68,"y":200,"w":470,"h":300,"fit":"box","font":"black","color":"ink"},
+    {"type":"type","text":"\"motion\": { \"type\": \"print\" }","x":72,"y":580,"size":20,"font":"mono","color":"blue"}
+  ]
+}
