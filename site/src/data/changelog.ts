@@ -26,6 +26,7 @@ export const RELEASES: Release[] = [
       { text: 'levni storyboard: a shot list becomes a numbered sheet with titles, durations, timecodes and notes, plus full-size frames and a shots.json for your video tool.', links: [{ text: 'Storyboard guide', href: 'https://github.com/Levni-Dev/levni/blob/main/docs/storyboard.md' }] },
       { text: 'More ways out: frame sequences for Remotion, sprite sheets with an atlas, transparent PNGs (--transparent) and seamless square textures (--tile). New sizes: hd (1920 × 1080) and readme (1280 × 640).', links: [{ text: 'Export guide', href: 'https://github.com/Levni-Dev/levni/blob/main/docs/export.md' }] },
       { text: 'For agents: three new MCP tools, render_animation, render_storyboard and render_brand_kit. The critic now measures link previews, squares and stories against their own canvas (it used the cover size before).', links: [{ text: 'MCP tools', href: '/mcp/#tools' }] },
+      { text: 'Levni Skills: two skills for agents, levni-taste (art direction) and levni-motion (loops), with sixteen recipe cards, in their own repository. Install with npx skills add Levni-Dev/levni-skills.', links: [{ text: 'levni-skills on GitHub', href: 'https://github.com/Levni-Dev/levni-skills' }, { text: 'What a design skill is', href: '/blog/open-source-design-skills/' }] },
       { text: 'Fixes: the sunburst and the rose now close their loops.' },
     ],
   },
