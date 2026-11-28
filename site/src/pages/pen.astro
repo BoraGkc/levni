@@ -1,0 +1,200 @@
+---
+// Levni Pen: CodePen for designers. Scene JSON on the left, the drawing on the right, live; a time slider and Play for
+// motion; a share link that holds the whole scene; Fork adds your name to its remix chain. Runs in the browser.
+import Base from '../layouts/Base.astro';
+import { SITE } from '../site';
+import { SHOTS } from '../../../src/shots.mjs';
+
+const faq = [
+  { q: 'What is the Pen?', a: 'A playground for Levni scenes: write or paste the JSON on the left and the picture redraws on the right as you type. It is the same engine as the npm package, running in your browser.' },
+  { q: 'How do I share a pen?', a: 'Copy link puts the whole scene in the address, compressed. Anyone who opens it sees your pen and can change it. Nothing is stored on a server.' },
+  { q: 'What does Fork do?', a: 'It copies the pen with your name added to its remix chain, so the next person sees who made it and who changed it. The chain also travels inside every PNG you download.' },
+  { q: 'Where is the reference?', a: 'Every field is in the scene docs, every motion preset in the motion catalogue, and the ready-made shots in Levni Shots. Load any of them from the Start from menu.' },
+];
+const jsonld = [
+  { '@type': 'WebApplication', name: 'Levni Pen', applicationCategory: 'DesignApplication', operatingSystem: 'Any (web browser)', url: `${SITE.url}/pen/`, offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' } },
+  { '@type': 'FAQPage', mainEntity: faq.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
+];
+const shotIds = SHOTS.map((s) => s.id);
+---
+<Base title="Levni Pen: a live playground for design in JSON" description="Write a Levni scene on the left, see the hand-inked drawing on the right as you type. Scrub its motion, share it in a link, fork it with your name in the remix chain. Free, in your browser." jsonld={jsonld}>
+  <div class="pn">
+    <div class="pn-bar">
+      <a class="pn-logo" href="/pen/">Levni Pen</a>
+      <label class="pn-sel"><span>Start from</span>
+        <select id="pn-start">
+          <option value="">Choose…</option>
+          <optgroup label="Shots">{shotIds.map((id) => <option value={`shot:${id}`}>{id}</option>)}</optgroup>
+          <optgroup label="Examples" id="pn-examples"></optgroup>
+        </select>
+      </label>
+      <span class="pn-grow"></span>
+      <button type="button" class="pn-btn" id="pn-fork">Fork</button>
+      <button type="button" class="pn-btn" id="pn-link">Copy link</button>
+      <button type="button" class="pn-btn" id="pn-png">PNG</button>
+      <button type="button" class="pn-btn" id="pn-gif">GIF</button>
+      <a class="pn-btn" id="pn-edit" href="/editor/">Open in editor</a>
+    </div>
+    <div class="pn-main">
+      <section class="pn-code" aria-label="Scene JSON">
+        <textarea id="pn-src" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Scene JSON"></textarea>
+        <p class="pn-err" id="pn-err" role="status" aria-live="polite"></p>
+      </section>
+      <section class="pn-view" aria-label="Drawing">
+        <figure class="pn-stage"><img id="pn-img" alt="The drawing of the scene on the left" /></figure>
+        <div class="pn-time">
+          <button type="button" class="pn-btn" id="pn-play" aria-pressed="false">Play</button>
+          <label class="pn-range"><span>t</span><input id="pn-t" type="range" min="0" max="1" step="0.01" value="0.6" /><output id="pn-tv">0.60</output></label>
+        </div>
+        <ul class="pn-notes" id="pn-notes"></ul>
+        <p class="pn-credits" id="pn-credits"></p>
+      </section>
+    </div>
+    <div class="wrap pn-about">
+      <h1>Levni Pen</h1>
+      <p>A live playground for design in JSON. Change a number on the left and the hand-inked drawing on the right redraws. Drag <code>t</code> to scrub the motion, press Play to watch the loop. The <a href="/docs/scenes/">scene docs</a> list every field, the <a href="/motion/">motion catalogue</a> every preset, <a href="/shots/">Levni Shots</a> the ready-made pieces.</p>
+      <p>The same JSON renders on your machine with <code>npx @levni/levni render scene.json out.png</code>, or from your agent: <code>claude mcp add levni -- npx -y @levni/levni mcp</code>.</p>
+      <h2>Questions</h2>
+      <dl>{faq.map(({ q, a }) => (<><dt>{q}</dt><dd>{a}</dd></>))}</dl>
+    </div>
+  </div>
+</Base>
+
+<script>
+  import { compose, critique, registerProps, registerFont, fontsFor, propsFor, toBlob, animateBlob, stampPng, remix, shotScene } from '../../../src/browser.mjs';
+
+  const propFiles = import.meta.glob('../../../library/props/*.json', { import: 'default' });
+  const exampleFiles = import.meta.glob('../../../examples/*.json', { import: 'default' });
+  const fontUrls = import.meta.glob('../../../fonts/*.{ttf,otf}', { query: '?url', import: 'default', eager: true }) as Record<string, string>;
+  const FONT_FILES: Record<string, string> = { grotesk: 'SpaceGrotesk-Variable.ttf', black: 'ArchivoBlack-Regular.ttf', mono: 'JetBrainsMono-Variable.ttf', pixel: 'DepartureMono-Regular.otf' };
+  const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+  const src = $<HTMLTextAreaElement>('pn-src'), img = $<HTMLImageElement>('pn-img'), err = $('pn-err'), tEl = $<HTMLInputElement>('pn-t');
+  let scene: any = null, token = 0, url = '', playing = 0, typingT = 0;
+
+  const fonts = new Set<string>(), props = new Set<string>();
+  const ensure = async (sc: any) => {
+    await Promise.all(fontsFor(sc).filter((n: string) => !fonts.has(n)).map(async (n: string) => {
+      const u = Object.entries(fontUrls).find(([k]) => k.endsWith(FONT_FILES[n]))?.[1];
+      if (u) { registerFont(n, await (await fetch(u)).arrayBuffer()); fonts.add(n); }
+    }));
+    const missing: string[] = [];
+    await Promise.all(propsFor(sc).filter((n: string) => !props.has(n)).map(async (n: string) => {
+      const load = propFiles[`../../../library/props/${n}.json`];
+      if (!load) { missing.push(n); return; }
+      registerProps(await load() as object); props.add(n);
+    }));
+    return missing;
+  };
+
+  async function draw(t = Number(tEl.value)) {
+    if (!scene) return;
+    const my = ++token;
+    try {
+      const missing = await ensure(scene);
+      const { svg, used, canvas } = await compose({ ...scene, t });
+      const blob = await toBlob(svg);
+      if (my !== token) return;
+      if (url) URL.revokeObjectURL(url);
+      url = URL.createObjectURL(blob); img.src = url;
+      const notes = [...(missing.length ? [`no drawing called ${missing.join(', ')}: search the library`] : []), ...critique(used, canvas)];
+      $('pn-notes').replaceChildren(...notes.map((n) => Object.assign(document.createElement('li'), { textContent: n })));
+      const chain = (scene.credits || []).filter((c: any) => c.by).map((c: any) => c.by);
+      $('pn-credits').textContent = chain.length ? `Remix chain: ${chain.join(' → ')}` : '';
+    } catch (e) { err.textContent = `Could not draw: ${(e as Error).message}`; }
+  }
+  function parse() {
+    try { scene = JSON.parse(src.value); err.textContent = ''; return true; }
+    catch (e) { err.textContent = `JSON: ${(e as Error).message}`; return false; }
+  }
+  src.addEventListener('input', () => { clearTimeout(typingT); typingT = window.setTimeout(() => { if (parse()) { draw(); save(); } }, 220); });
+  src.addEventListener('keydown', (e) => { if (e.key === 'Tab') { e.preventDefault(); const s = src.selectionStart; src.setRangeText('  ', s, src.selectionEnd, 'end'); } });
+  tEl.addEventListener('input', () => { $('pn-tv').textContent = Number(tEl.value).toFixed(2); draw(); });
+
+  // Play: step t a dozen times a second; drawing is async, so a frame is skipped when the last one is still drawing
+  $('pn-play').addEventListener('click', (e) => {
+    const b = e.currentTarget as HTMLButtonElement;
+    if (playing) { clearInterval(playing); playing = 0; b.textContent = 'Play'; b.setAttribute('aria-pressed', 'false'); return; }
+    b.textContent = 'Pause'; b.setAttribute('aria-pressed', 'true');
+    let busy = false;
+    playing = window.setInterval(async () => {
+      if (busy) return; busy = true;
+      tEl.value = String((Number(tEl.value) + 1 / 24) % 1); $('pn-tv').textContent = Number(tEl.value).toFixed(2);
+      await draw(); busy = false;
+    }, 83);
+  });
+
+  // share link: the scene, deflated and base64url, in the hash (the editor reads the same format)
+  const b64u = (b: Uint8Array) => btoa(Array.from(b, (x) => String.fromCharCode(x)).join('')).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  const unb64u = (s: string) => Uint8Array.from(atob(s.replace(/-/g, '+').replace(/_/g, '/')), (c) => c.charCodeAt(0));
+  const pack = async (t: string) => b64u(new Uint8Array(await new Response(new Blob([t]).stream().pipeThrough(new CompressionStream('deflate-raw'))).arrayBuffer()));
+  const unpack = async (s: string) => new Response(new Blob([unb64u(s)]).stream().pipeThrough(new DecompressionStream('deflate-raw'))).text();
+  let saveT = 0;
+  const save = () => { clearTimeout(saveT); saveT = window.setTimeout(async () => { if (!scene) return; const h = await pack(JSON.stringify(scene)); history.replaceState(null, '', `#s=${h}`); ($('pn-edit') as HTMLAnchorElement).href = `/editor/#s=${h}`; try { localStorage.setItem('levni-pen', JSON.stringify(scene)); } catch {} }, 400); };
+  const load = (sc: any, from?: string) => { scene = from ? remix(sc, { from }) : sc; src.value = JSON.stringify(scene, null, 2); err.textContent = ''; draw(); save(); };
+
+  const flash = (b: HTMLElement, t: string) => { const o = b.textContent; b.textContent = t; setTimeout(() => (b.textContent = o), 1400); };
+  $('pn-link').addEventListener('click', async (e) => { if (!scene) return; await navigator.clipboard.writeText(`${location.origin}/pen/#s=${await pack(JSON.stringify(scene))}`); flash(e.currentTarget as HTMLElement, 'Copied'); });
+  $('pn-fork').addEventListener('click', (e) => {
+    if (!parse()) return;
+    let by = ''; try { by = localStorage.getItem('levni-name') || ''; } catch {}
+    by = (prompt('Your name for the remix chain (leave empty to stay anonymous)', by) || '').trim();
+    if (by) try { localStorage.setItem('levni-name', by); } catch {}
+    load(remix(scene, { by: by || undefined, from: 'levni.dev/pen' }));
+    flash(e.currentTarget as HTMLElement, 'Forked');
+  });
+  const dl = (blob: Blob, file: string) => { const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = file; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000); };
+  $('pn-png').addEventListener('click', async () => { if (!scene) return; const p = await toBlob((await compose({ ...scene, t: Number(tEl.value) })).svg); dl(new Blob([stampPng(new Uint8Array(await p.arrayBuffer()), scene)], { type: 'image/png' }), 'levni-pen.png'); });
+  $('pn-gif').addEventListener('click', async (e) => {
+    const b = e.currentTarget as HTMLButtonElement; if (!scene || b.disabled) return;
+    const o = b.textContent; b.disabled = true;
+    try { await ensure(scene); dl(await animateBlob(scene, { frames: 24, fps: 12, width: 640, onProgress: (d: number, n: number) => (b.textContent = `${d}/${n}`) }), 'levni-pen.gif'); }
+    finally { b.textContent = o; b.disabled = false; }
+  });
+
+  // start menu: shots and the repo's examples
+  const exGroup = $('pn-examples');
+  for (const k of Object.keys(exampleFiles).sort()) { const id = k.split('/').pop()!.replace('.json', ''); exGroup.append(new Option(id, `ex:${id}`)); }
+  $<HTMLSelectElement>('pn-start').addEventListener('change', async (e) => {
+    const v = (e.target as HTMLSelectElement).value; if (!v) return;
+    if (v.startsWith('shot:')) load(shotScene(v.slice(5), {}), `levni.dev/shots/#${v.slice(5)}`);
+    else { const sc: any = structuredClone(await exampleFiles[`../../../examples/${v.slice(3)}.json`]()); if (Array.isArray(sc.elements)) load(sc, `examples/${v.slice(3)}.json`); else err.textContent = 'That example is not a single scene.'; }
+    (e.target as HTMLSelectElement).value = '';
+  });
+
+  (async () => {
+    const h = new URLSearchParams(location.hash.slice(1)).get('s');
+    if (h) { try { load(JSON.parse(await unpack(h))); return; } catch { err.textContent = 'That link is broken; here is a starter.'; } }
+    try { const saved = localStorage.getItem('levni-pen'); if (saved) { load(JSON.parse(saved)); return; } } catch {}
+    load(shotScene('typed-headline', { title: 'Hello, Pen', subtitle: 'Change me on the left.', mark: 'pencil' }));
+  })();
+</script>
+
+<style>
+  .pn { --bar: 56px; }
+  .pn-bar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 10px 16px; background: var(--indigo-deep); color: #fff; }
+  .pn-logo { font: 700 15px/1 var(--mono); color: var(--lime); text-decoration: none; margin-right: 8px; }
+  .pn-sel { display: flex; align-items: center; gap: 6px; font: 600 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+  .pn-sel select { font: 13px/1.2 var(--mono); padding: 7px 8px; border: 0; }
+  .pn-grow { flex: 1; }
+  .pn-btn { font: 600 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; padding: 9px 12px; border: 0; background: #fff; color: var(--ink); cursor: pointer; text-decoration: none; }
+  .pn-btn:hover, .pn-btn:focus-visible { background: var(--lime); outline: none; }
+  .pn-btn[disabled] { opacity: .7; cursor: progress; }
+  .pn-main { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); min-height: calc(100vh - 140px); }
+  .pn-code { display: grid; grid-template-rows: 1fr auto; background: #12102A; }
+  .pn-code textarea { width: 100%; min-height: 520px; resize: none; border: 0; padding: 16px; background: transparent; color: #E9E6FF; font: 13px/1.55 var(--mono); tab-size: 2; white-space: pre; overflow: auto; }
+  .pn-code textarea:focus-visible { outline: 2px solid var(--lime); outline-offset: -2px; }
+  .pn-err { margin: 0; min-height: 1.4em; padding: 6px 16px 10px; font: 12px/1.4 var(--mono); color: #FF8A7A; }
+  .pn-view { padding: 16px; display: grid; gap: 12px; align-content: start; background: var(--paper); }
+  .pn-stage { margin: 0; background: #fff; padding: 10px; box-shadow: 0 0 0 1px var(--rule); }
+  .pn-stage img { display: block; width: 100%; height: auto; }
+  .pn-time { display: flex; align-items: center; gap: 12px; }
+  .pn-time .pn-btn { background: var(--indigo); color: #fff; }
+  .pn-range { flex: 1; display: flex; align-items: center; gap: 8px; font: 600 12px/1 var(--mono); }
+  .pn-range input { flex: 1; accent-color: var(--indigo); }
+  .pn-notes { margin: 0; padding-left: 18px; font-size: 14px; color: var(--ink-soft); }
+  .pn-credits { margin: 0; font: 600 12px/1.4 var(--mono); color: var(--accent-text); }
+  .pn-about { max-width: 760px; margin: clamp(40px, 6vw, 72px) auto clamp(48px, 7vw, 80px) 0; }
+  .pn-about dt { font-weight: 700; margin-top: 14px; }
+  .pn-about dd { margin: 6px 0 0; color: var(--ink-soft); }
+  @media (max-width: 860px) { .pn-main { grid-template-columns: minmax(0, 1fr); } .pn-code textarea { min-height: 300px; } }
+</style>

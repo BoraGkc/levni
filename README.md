@@ -40,6 +40,7 @@ No image model, no API key, $0 per image; code MIT, drawings CC BY 4.0. About 0.
 | a cover, sticker sheet or dithered hero | `npx @levni/levni render scene.json cover.webp` |
 | a looping GIF or WebP of any scene | `npx @levni/levni animate scene.json loop.gif` |
 | a whole brand kit from one name | `npx @levni/levni brand brand.json kit/` |
+| a live playground for scene JSON | [levni.dev/pen](https://levni.dev/pen/) |
 | a moving card of your GitHub year | [levni.dev/you](https://levni.dev/you/) |
 | a moving README banner on every release | [README banner Action](docs/readme-action.md) |
 | a ready-made motion shot with your words | `npx @levni/levni shot logo-sting sting.gif --title "Lale" --mark tulip` |
