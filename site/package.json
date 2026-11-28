@@ -11,7 +11,8 @@
     "library-og": "node scripts/render-library-og.mjs",
     "gallery": "node scripts/render-gallery.mjs",
     "blog": "node scripts/render-blog.mjs",
-    "commons": "node scripts/render-commons.mjs"
+    "commons": "node scripts/render-commons.mjs",
+    "zine": "node scripts/render-zine.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
