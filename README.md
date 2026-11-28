@@ -207,6 +207,7 @@ Full element reference: [`docs/scene.md`](docs/scene.md) · JSON Schema: [`docs/
 | `render_animation` | draw a scene as a loop and write a .gif or .webp: critic notes and a strip of four frames ([docs](docs/animate.md)) |
 | `render_brand_kit` | a whole brand kit into a folder; reads a website only when you pass `url` ([docs](docs/brandkit.md)) |
 | `render_reel` | shots or scenes joined with transitions into one video ([docs](docs/reel.md)) |
+| `route_design` | Design Router: one search over drawings, icons, fonts, palettes, patterns, motion and shots, with licences and snippets ([docs](docs/router.md)) |
 | `render_shot` | a ready-made motion shot with your words, drawing and inks; lists the shots when called with no name ([docs](docs/shots.md)) |
 | `render_print` | a scene as riso plates for a real print run, with a proof and a sheet ([docs](docs/print.md)) |
 | `render_storyboard` | a shot list as a numbered storyboard sheet, with optional full-size frames and `shots.json` ([docs](docs/storyboard.md)) |
@@ -240,6 +241,7 @@ The assistant shows you the preview and applies after you say yes. Drafts only: 
 | `levni animate <scene.json> <out.gif\|out.webp\|out.mp4>` | draw a scene as a loop: clouds drift, flags wave, gradients breathe, 3D spins, and any element with `motion` moves (`--frames`, `--fps`, `--boil`, `--width`, `--strip`, `--frames-dir`, `--sprite`) ([docs](docs/animate.md), [export](docs/export.md)) |
 | `levni brand <brand.json\|url> <out-dir>` | a whole brand kit in one folder (`--posters 8`, `--only a,b`) ([docs](docs/brandkit.md)) |
 | `levni reel <reel.json> <out.mp4>` | shots or scenes joined with transitions ([docs](docs/reel.md)) |
+| `levni route <words> [--colors #hex,#hex]` | Design Router: drawings, icons, fonts, palettes, patterns, motion and shots in one search, with licences ([docs](docs/router.md)) |
 | `levni zine <zine.json> <out-dir>` | a small magazine: pages, PDF and an 8-page fold-up on one A4 sheet ([docs](docs/zine.md)) |
 | `levni desk [dir]` | a local panel: every scene in the folder drawn, watched and exported ([docs](docs/desk.md)) |
 | `levni banner <out.gif> --repo owner/name` | a README banner for a GitHub repo; also [a GitHub Action](docs/readme-action.md) |
