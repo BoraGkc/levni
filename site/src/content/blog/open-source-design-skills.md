@@ -5,7 +5,6 @@ date: 2026-11-25
 updated: 2026-11-28
 category: agents
 kind: Explainer
-draft: true
 coverAlt: "A brain drawn in ASCII characters on a white card, beside a lime block with a pixel tulip, on indigo"
 faq:
   - q: "What is a design skill for an AI agent?"
