@@ -39,7 +39,7 @@ const jsonld = [
         </div>
         <p class="yo-h">Drawing</p>
         <div class="yo-chips" id="yo-marks"></div>
-        <label class="yo-search"><span class="sr">Search drawings</span><input id="yo-q" type="search" autocomplete="off" placeholder="Search 1,600 drawings: cat, guitar, kahve…" /></label>
+        <label class="yo-search"><span class="sr">Search drawings</span><input id="yo-q" type="search" autocomplete="off" placeholder="Search drawings: cat, guitar…" /></label>
         <p class="yo-small"><a href="/library/">Discover the whole library →</a> Every drawing is free to use, CC BY 4.0.</p>
         <div class="yo-actions">
           <button type="button" class="yo-go" id="yo-gif">Animated GIF</button>
@@ -106,7 +106,8 @@ const jsonld = [
     if (!(await ensureProp(mark))) { mark = 'rocket'; await ensureProp(mark); }
     scene = youScene(stats, { mark, look: theme });
     await ensureFonts(fontsFor(scene));
-    const blob = await toBlob((await compose({ ...scene, t: 0.95 })).svg);
+    // the preview shows at ~420 css px: drawing it at 0.75 keeps it sharp on retina and cuts the blur/grain cost; PNG and GIF stay full size
+    const blob = await toBlob((await compose({ ...scene, t: 0.95 })).svg, { scale: 0.75 });
     if (my !== token) return;
     if (still) URL.revokeObjectURL(still);
     still = URL.createObjectURL(blob);
@@ -153,7 +154,8 @@ const jsonld = [
       renderMarks();
       await draw();
       history.replaceState(null, '', `#u=${encodeURIComponent(login)}&look=${theme}`);
-      say(`@${login}: ${stats.repos} repos, ${stats.stars} stars.`);
+      const n = (v: number) => v.toLocaleString('en-US');
+      say(`@${login}: ${n(stats.repos)} repos, ${n(stats.stars)} stars, ${n(stats.followers)} followers.`);
     } catch { say('Could not reach GitHub. Check the connection and try again.'); }
   }
 
@@ -185,9 +187,14 @@ const jsonld = [
     await navigator.clipboard.writeText(`${location.origin}/you/#u=${stats.login}&look=${theme}`);
     const b = e.currentTarget as HTMLElement, t = b.textContent; b.textContent = 'Copied'; setTimeout(() => (b.textContent = t), 1400);
   });
-  const hp = new URLSearchParams(location.hash.slice(1)), fromHash = hp.get('u'), lookHash = hp.get('look');
-  if (lookHash && document.querySelector(`#yo-themes [data-theme="${lookHash}"]`)) { theme = lookHash; $('yo-themes').querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String((x as HTMLElement).dataset.theme === theme))); }
-  if (fromHash) { input.value = fromHash; load(fromHash); }
+  // a shared link (#u=login&look=night) opens that card; pasting another link on the same page works too
+  const fromLink = () => {
+    const hp = new URLSearchParams(location.hash.slice(1)), u = hp.get('u'), look = hp.get('look');
+    if (look && document.querySelector(`#yo-themes [data-theme="${look}"]`)) { theme = look; $('yo-themes').querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String((x as HTMLElement).dataset.theme === theme))); }
+    if (u && u !== stats?.login) { input.value = u; load(u); } else if (u) draw();
+  };
+  window.addEventListener('hashchange', fromLink);
+  fromLink();
 </script>
 
 <style>
@@ -200,7 +207,7 @@ const jsonld = [
   .yo-go, .yo-ghost { font: 600 13px/1 var(--mono); letter-spacing: .05em; text-transform: uppercase; padding: 14px 18px; border: 0; cursor: pointer; }
   .yo-go { background: var(--indigo); color: #fff; }
   .yo-ghost { background: #fff; color: var(--ink); box-shadow: 0 0 0 2px var(--ink); }
-  .yo-go:focus-visible, .yo-ghost:focus-visible, .yo-row input:focus-visible, .yo-chips button:focus-visible { outline: 3px solid var(--lime); outline-offset: 2px; }
+  .yo-go:focus-visible, .yo-ghost:focus-visible, .yo-row input:focus-visible, .yo-chips :global(button:focus-visible) { outline: 3px solid var(--lime); outline-offset: 2px; }
   .yo-go[disabled] { opacity: .7; cursor: progress; }
   .yo-status { min-height: 1.5em; margin: 12px 0 0; color: var(--ink-soft); }
   .yo-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: clamp(20px, 4vw, 48px); margin-top: 20px; align-items: start; }
@@ -208,8 +215,8 @@ const jsonld = [
   .yo-preview img { display: block; width: 100%; height: auto; aspect-ratio: 1; }
   .yo-side { display: grid; gap: 10px; align-content: start; }
   .yo-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
-  .yo-chips button { font: 600 12px/1 var(--mono); padding: 9px 11px; border: 0; background: #fff; color: var(--ink); box-shadow: 0 0 0 1px var(--rule); cursor: pointer; text-transform: capitalize; }
-  .yo-chips button[aria-pressed='true'] { box-shadow: 0 0 0 2px var(--indigo); background: var(--paper); }
+  .yo-chips :global(button) { font: 600 12px/1 var(--mono); padding: 9px 11px; border: 0; background: #fff; color: var(--ink); box-shadow: 0 0 0 1px var(--rule); cursor: pointer; text-transform: capitalize; }
+  .yo-chips :global(button[aria-pressed='true']) { box-shadow: 0 0 0 2px var(--indigo); background: var(--paper); }
   .yo-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
   .yo-small { font-size: 14px; color: var(--ink-soft); }
   .yo-search input { width: 100%; font: 15px/1.3 var(--mono); padding: 10px 12px; border: 0; box-shadow: 0 0 0 1px var(--rule); background: #fff; color: var(--ink); }

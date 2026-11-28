@@ -34,7 +34,9 @@ export function youStats(user, repos = []) {
 }
 
 // the words a mark is picked from: topics, then the top repos' names, then the language
-export const youTerms = (s) => [...(s.topics || []), ...(s.top || []).map((r) => r.name.replace(/[-_.]/g, ' ')), String(s.language || '').toLowerCase()].filter(Boolean);
+const NOISE = new Set(['test', 'tests', 'demo', 'example', 'examples', 'config', 'dotfiles', 'github', 'io', 'app', 'lib', 'api', 'tool', 'tools', 'tlb', 'the', 'my', 'and', 'for', 'js', 'ts']);
+const clean = (t) => t.split(' ').filter((w) => w.length > 2 && !NOISE.has(w.toLowerCase())).join(' ');
+export const youTerms = (s) => [...(s.topics || []), ...(s.top || []).map((r) => r.name.replace(/[-_.]/g, ' ')), String(s.language || '').toLowerCase()].map((t) => clean(String(t))).filter(Boolean);
 
 // a crisp five-point star in the look's accent (the Folio star is drawn in house inks, which vanish on dark grounds)
 const STAR = 'M50 4 L61.8 36.6 L96.6 37.6 L69.1 58.9 L78.8 92.4 L50 72.8 L21.2 92.4 L30.9 58.9 L3.4 37.6 L38.2 36.6 Z';
@@ -47,11 +49,11 @@ export function youScene(s, { mark = 'rocket', theme = 'clean', look, year = new
   const top = (s.top || []).slice(0, 5), max = Math.max(1, ...top.map((r) => r.stars));
   const els = [];
   // decoration first, behind everything
-  if (L.glow) els.push({ type: 'meshgrad', x: 0, y: 0, w: W, h: H, base: '#14122B', drift: 0.14, colors: ['#FF7A59', '#7A5CFF', '#38D6E8'], grain: 0.06, stops: [{ x: 0.85, y: 0.15, color: '#7A5CFF', r: 0.55 }, { x: 0.15, y: 1, color: '#FF7A59', r: 0.5, opacity: 0.6 }] });
+  if (L.glow) els.push({ type: 'meshgrad', x: 0, y: 0, w: W, h: H, base: '#14122B', drift: 0.14, colors: ['#FF7A59', '#7A5CFF', '#38D6E8'], grain: 0, stops: [{ x: 0.85, y: 0.15, color: '#7A5CFF', r: 0.55 }, { x: 0.15, y: 1, color: '#FF7A59', r: 0.5, opacity: 0.6 }] });
   if (L.dots) els.push({ type: 'halftone', x: 700, y: 0, w: 380, h: 380, color: 'tone-coral', mode: 'radial', gap: 16 });
   // header: year, handle, name; the drawing on the right
   els.push(T(`${year} · IN CODE`, M, 86, { size: 24, font: 'mono', weight: 700, tracking: 0.08, color: L.accent, motion: { type: 'fade', delay: 0, dur: 0.08 } }));
-  els.push(T(`@${s.login}`, M - 4, 140, { w: 600, h: 104, fit: 'box', font: font('black'), color: L.text, motion: { type: 'typewriter', delay: 0.04, dur: 0.2, cursor: '_' } }));
+  els.push(T(`@${s.login}`, M - 4, 140, { w: 570, h: 104, fit: 'box', font: font('black'), color: L.text, motion: { type: 'typewriter', delay: 0.04, dur: 0.2, cursor: '_' } }));
   if (s.name && s.name !== s.login) els.push(T(s.name, M, 274, { size: 32, font: font('grotesk'), color: L.muted, motion: { type: 'fade', delay: 0.2, dur: 0.1 } }));
   if (L.globe) els.push({ type: 'glyphfill', shape: 'sphere', x: 878, y: 196, size: 260, cell: 9, color: L.bar, accent: L.accent, land: 0.42 });
   else {
