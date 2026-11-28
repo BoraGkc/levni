@@ -1,0 +1,163 @@
+{
+ "_meta": {
+  "title": "README banner, motion: true",
+  "alt": "A README banner: the repo name levni types itself, a tulip pops in on a disc and floats, the description slides up"
+ },
+ "canvas": [
+  1280,
+  640
+ ],
+ "seed": 1578,
+ "background": "paper",
+ "elements": [
+  {
+   "type": "panel",
+   "x": 790,
+   "y": -20,
+   "w": 530,
+   "h": 680,
+   "color": "blue"
+  },
+  {
+   "type": "disc",
+   "x": 1035,
+   "y": 326,
+   "r": 178,
+   "color": "mustard",
+   "motion": [
+    {
+     "type": "pop",
+     "delay": 0,
+     "dur": 0.14
+    },
+    {
+     "type": "pulse",
+     "amp": 0.03
+    }
+   ]
+  },
+  {
+   "type": "marks",
+   "area": [
+    820,
+    40,
+    430,
+    560
+   ],
+   "count": 7,
+   "colors": [
+    "coral",
+    "mustard",
+    "paper"
+   ]
+  },
+  {
+   "type": "prop",
+   "name": "tulip",
+   "variant": 0,
+   "x": 1035,
+   "y": 326,
+   "size": 330,
+   "shadow": true,
+   "motion": [
+    {
+     "type": "pop",
+     "delay": 0.08,
+     "dur": 0.16
+    },
+    {
+     "type": "float",
+     "amp": 9
+    }
+   ]
+  },
+  {
+   "type": "type",
+   "text": "LEVNI-DEV /",
+   "x": 84,
+   "y": 98,
+   "size": 24,
+   "font": "mono",
+   "weight": 700,
+   "tracking": 0.04,
+   "color": "#4A5160",
+   "motion": {
+    "type": "fade",
+    "delay": 0.02,
+    "dur": 0.1
+   }
+  },
+  {
+   "type": "type",
+   "text": "levni",
+   "x": 80,
+   "y": 150,
+   "w": 640,
+   "h": 124,
+   "fit": "box",
+   "font": "black",
+   "color": "#14181F",
+   "motion": {
+    "type": "typewriter",
+    "delay": 0.08,
+    "dur": 0.13,
+    "cursor": "_"
+   }
+  },
+  {
+   "type": "type",
+   "text": "Hand-inked illustrations from a\nJSON scene, drawn on your machine.",
+   "x": 84,
+   "y": 322,
+   "size": 32,
+   "weight": 400,
+   "leading": 1.32,
+   "color": "#14181F",
+   "motion": {
+    "type": "slide",
+    "from": "down",
+    "distance": 26,
+    "delay": 0.42,
+    "dur": 0.14
+   }
+  },
+  {
+   "type": "disc",
+   "x": 92,
+   "y": 548,
+   "r": 9,
+   "color": "#F1E05A",
+   "motion": {
+    "type": "fade",
+    "delay": 0.56,
+    "dur": 0.12
+   }
+  },
+  {
+   "type": "type",
+   "text": "JavaScript",
+   "x": 112,
+   "y": 538,
+   "size": 22,
+   "font": "mono",
+   "weight": 700,
+   "color": "#4A5160",
+   "motion": {
+    "type": "fade",
+    "delay": 0.56,
+    "dur": 0.12
+   }
+  },
+  {
+   "type": "type",
+   "text": "levni.dev",
+   "x": 1244,
+   "y": 596,
+   "size": 15,
+   "font": "mono",
+   "weight": 700,
+   "align": "right",
+   "color": "#F1EEE6"
+  }
+ ]
+}

@@ -7,6 +7,7 @@ const toc = [
   { id: 'install', text: 'Install', level: 2 as const },
   { id: 'first-render', text: 'Your first render', level: 2 as const },
   { id: 'critic', text: 'Read the critic', level: 2 as const },
+  { id: 'move', text: 'Make it move', level: 2 as const },
   { id: 'where', text: 'Where files go', level: 2 as const },
   { id: 'next', text: 'Where next', level: 2 as const },
 ];
@@ -46,7 +47,7 @@ npx @levni/levni list coffee</code></pre>
       <p>The <code>levni</code> command is now available through <code>npx</code> inside that project. Install globally with <code>npm install -g @levni/levni</code> if you want it everywhere.</p>
     </li>
     <li>
-      <strong>For the newest features: install from GitHub.</strong> Branding posters and the type engine are in 0.3.0, which is not published to npm yet.
+      <strong>For the newest features: install from GitHub.</strong> Animation, storyboards and brand kits are new in 0.5.0. If the npm version you have is older, install from GitHub.
       <pre><code class="language-bash">npm install github:Levni-Dev/levni</code></pre>
       <p>Or work from a checkout, which is also how you contribute drawings:</p>
       <pre><code class="language-bash">git clone {SITE.github}.git
@@ -98,6 +99,12 @@ npx @levni/levni sheet look.png rocket dove    # every variant, on paper and on 
   <pre><code class="language-text">- draw "rocket" (ink box 983,188 305×315) is cut by the frame, 71% shows: pull it in, or set "crop": true if the cut is deliberate</code></pre>
   <p>The critic reports at most six notes: elements off the canvas, accidental crops, lopsided weight, no clear focal symbol, icons overlapping. Fix them by moving or resizing, or set <code>"crop": true</code> when the cut is on purpose. An agent does exactly this loop over MCP.</p>
 
+  <h2 id="move">Make it move</h2>
+  <p>Give an element <code>motion</code> and render the scene as a loop. This needs Levni 0.5.0. In <code>scene.json</code> above, add <code>"motion": "float"</code> to the rocket:</p>
+  <pre><code class="language-json">{`{ "type": "prop", "name": "rocket", "x": 600, "y": 336, "size": 380, "rot": 20, "shadow": true, "motion": "float" }`}</code></pre>
+  <pre><code class="language-bash">npx @levni/levni animate scene.json loop.gif --width 800</code></pre>
+  <p>That writes a 24 frame GIF that loops forever and prints the critic’s notes for the first frame. Use <code>loop.webp</code> for a smaller file in browsers, or <code>loop.mp4</code> if ffmpeg is installed. The motion names, stagger and camera are on <a href="/docs/animation/">Animation</a>.</p>
+
   <h2 id="where">Where files go</h2>
   <ul>
     <li><strong>Output.</strong> Wherever you point it. <code>levni render scene.json out.png</code> writes <code>out.png</code> in the current folder. <code>levni poster</code> writes a whole folder.</li>
@@ -111,7 +118,8 @@ npx @levni/levni sheet look.png rocket dove    # every variant, on paper and on 
   <ul>
     <li>Using an agent: <a href="/docs/mcp/">MCP server</a>, with every tool and a sample session.</li>
     <li>Writing scenes by hand: <a href="/docs/scenes/">Scenes</a> and <a href="/docs/elements/">Elements</a>.</li>
-    <li>Brand work: <a href="/docs/boards/">Brand boards</a> and <a href="/docs/posters/">Branding posters</a>.</li>
+    <li>Moving pictures: <a href="/docs/animation/">Animation</a>, <a href="/docs/storyboards/">Storyboards</a> and <a href="/docs/export/">Export extras</a>.</li>
+    <li>Brand work: <a href="/docs/brand-kits/">Brand kits</a>, <a href="/docs/boards/">Brand boards</a> and <a href="/docs/posters/">Branding posters</a>.</li>
     <li>Every command: <a href="/docs/cli/">Command line</a>. From code: <a href="/docs/api/">Node API</a>.</li>
   </ul>
 </Docs>

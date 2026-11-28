@@ -1,0 +1,10 @@
+{
+  "brand": {
+    "name": "Pervaz",
+    "tagline": "Second-hand books, strong coffee and a quiet room upstairs",
+    "mark": "books",
+    "inks": ["#1D2B53", "#FF6B4A", "#FFC94A", "#F7F1E5"],
+    "words": ["Read", "Swap", "Stay", "Return"]
+  },
+  "seed": 8
+}

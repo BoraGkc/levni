@@ -110,7 +110,7 @@ When a scene has entrances, the critic reads the settled picture at mid-loop, no
 ```js
 import { bannerScene, animate } from '@levni/levni';
 const scene = bannerScene({ owner: 'you', name: 'your-repo', description: 'One line.', mark: 'rocket', motion: true });
-await animate(scene, 'banner.gif', { frames: 36, width: 800 });   // about 0.2 MB
+await animate(scene, 'banner.gif', { frames: 36, width: 800 });   // about 0.25 MB
 ```
 
 The name types itself, the mark pops in and floats, the lines slide in. [levni.dev/banner](https://levni.dev/banner/)
@@ -120,7 +120,7 @@ does the same in the browser: **Animated GIF**.
 
 1. **Same scene, same seed, same `t`: same frame.** A loop is as reproducible as a still.
 2. **Loops close.** `t = 1` is never drawn; the frame after the last is the first.
-3. **Check frame 0 with the critic.** `animate` returns the same notes as `render` for the first frame.
+3. **The critic reads the settled picture.** `animate` returns the same notes as `render`: for the first frame, or for mid-loop when the scene has entrances.
 4. **Identical frames are drawn once.** A still scene with `boil: 3` costs three renders, not 24.
 
 ## Size and time
@@ -129,7 +129,7 @@ Measured on an Apple M4, 24 frames at 800 px wide:
 
 | scene | GIF | WebP | time |
 | --- | --- | --- | --- |
-| README banner with motion | 0.2 MB | | |
+| README banner with motion (36 frames) | 0.25 MB | | |
 | line art on paper (clouds, trees, flag) | 0.5 MB | 0.4 MB | 6 s |
 | ASCII globe ([`examples/glyphfill-globe.json`](../examples/glyphfill-globe.json)) | 0.7 MB | 0.8 MB | 4 s |
 | mesh gradient ([`examples/meshgrad-hero.json`](../examples/meshgrad-hero.json)) | 1.4 MB | | 15 s |

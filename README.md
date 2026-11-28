@@ -29,6 +29,10 @@ No image model. No API key. No credit card. About 0.15 s a cover, on your laptop
 
 ![Branding posters, a brand board, stickers, a dithered sunset, a soft 3D cover, an isometric city, wireframe terrain, an ASCII card and a riso cover, all drawn by Levni](docs/img/showcase.png)
 
+![A README banner drawing itself: the name is typed, a tulip pops in and floats, the description slides in](docs/img/banner-motion.gif)
+
+<sub>New in 0.5: any scene loops as a GIF, WebP or MP4. This banner is 36 frames and about 0.25 MB. Make yours at [levni.dev/banner](https://levni.dev/banner/).</sub>
+
 | make | one line to start |
 | --- | --- |
 | a series of eight branding posters | `npx @levni/levni poster brand.json posters/` |
@@ -127,6 +131,11 @@ Each maker opens a finished example in the editor: change the words, the drawing
 | wireframe terrain and etching | [levni.dev/make/wireframe-terrain-etching](https://levni.dev/make/wireframe-terrain-etching/) |
 | 3D icons | [levni.dev/make/3d-icons](https://levni.dev/make/3d-icons/) |
 | pixel icons | [levni.dev/make/pixel-icons](https://levni.dev/make/pixel-icons/) |
+| a README banner, still or moving | [levni.dev/banner](https://levni.dev/banner/) |
+| grainy mesh gradients | [levni.dev/tools/mesh-gradient-generator](https://levni.dev/tools/mesh-gradient-generator/) |
+| SVG patterns in your brand colours | [levni.dev/tools/svg-pattern-generator](https://levni.dev/tools/svg-pattern-generator/) |
+| blobs, waves and section dividers | [levni.dev/tools/blob-wave-generator](https://levni.dev/tools/blob-wave-generator/) |
+| Open Graph images, no watermark | [levni.dev/tools/og-image-generator](https://levni.dev/tools/og-image-generator/) |
 | isometric worlds | [levni.dev/make/isometric-illustrations](https://levni.dev/make/isometric-illustrations/) |
 | hand-drawn charts | [levni.dev/make/hand-drawn-charts](https://levni.dev/make/hand-drawn-charts/) |
 | blog covers and Open Graph images | [levni.dev/make/blog-covers-og-images](https://levni.dev/make/blog-covers-og-images/) |

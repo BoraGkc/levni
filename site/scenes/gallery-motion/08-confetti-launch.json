@@ -1,0 +1,14 @@
+{
+ "_meta": { "title": "confetti on a launch card", "alt": "A dark launch card: confetti in coral, mustard and blue falls across it, a rocket pops in and floats, the words v0.5 is out" },
+ "seed": 30, "background": "dark",
+ "elements": [
+  { "type": "panel", "x": 0, "y": 0, "w": 1200, "h": 673, "color": "dark" },
+  { "type": "confetti", "x": 0, "y": 0, "w": 1200, "h": 673, "kind": "confetti", "colors": ["coral", "mustard", "blue", "paper"] },
+  { "type": "disc", "x": 870, "y": 340, "r": 190, "color": "blue" },
+  { "type": "prop", "name": "rocket", "x": 870, "y": 330, "size": 310, "rot": 20, "shadow": true, "motion": [{ "type": "pop", "delay": 0.04, "dur": 0.2, "ease": "outBack" }, { "type": "float", "amp": 10 }] },
+  { "type": "type", "text": "RELEASE / 0.5.0", "x": 72, "y": 110, "size": 22, "font": "mono", "weight": 700, "tracking": 0.06, "color": "mustard" },
+  { "type": "type", "text": "v0.5\nis out.", "x": 68, "y": 190, "w": 520, "h": 300, "fit": "box", "font": "black", "color": "paper", "motion": { "type": "slide", "from": "down", "distance": 40, "delay": 0.1, "dur": 0.18 } },
+  { "type": "panel", "x": 56, "y": 556, "w": 470, "h": 50, "color": "dark" },
+  { "type": "type", "text": "levni animate launch.json launch.gif", "x": 72, "y": 580, "size": 20, "font": "mono", "color": "paper" }
+ ]
+}

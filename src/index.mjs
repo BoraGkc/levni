@@ -22,6 +22,7 @@ export { writeFrames, spriteSheet, toMp4, ffmpegAvailable, transparent, tileable
 export { expandStoryboard, renderStoryboard } from './storyboard.mjs';
 export { renderKit, expandKit, brandFromHtml, brandFromUrl } from './brandkit.mjs';
 export { EASE, MOTIONS } from './motion.mjs';
+export { bannerScene, pickMark, repoTerms, hashSeed, BANNER_SIZE, BANNER_THEMES } from './banner.mjs';
 export { encodeGif } from './gif.mjs';
 export { renderBoard } from './board.mjs';
 export { expandBrand } from './board.mjs';

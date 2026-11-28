@@ -1,0 +1,32 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { readDoc, render, resetIds } from '../../components/docs/md';
+
+resetIds();
+const { intro, sections } = readDoc('storyboard.md');
+const fig = `<figure>
+    <img src="/docs/storyboard.webp" width="1324" height="949" alt="A six shot storyboard sheet for a coffee subscription teaser: numbered frames with a title, length, timecode and note under each" loading="lazy" decoding="async" />
+    <figcaption>The sheet from <code>examples/storyboard.json</code>.</figcaption>
+  </figure>`;
+const head = render(intro.replace(/^!\[[^\]]*\]\([^)]*\)\n+/m, 'FIGUREHERE\n\n'));
+head.html = head.html.replace('<p>FIGUREHERE</p>', fig);
+const parts = sections.map((s) => render(s.md, { title: s.title, id: s.id }));
+const toc = parts.flatMap((p) => p.toc);
+---
+<Docs
+  title="Levni storyboards: draw a shot list as one contact sheet"
+  description="Make a storyboard with levni storyboard, the render_storyboard MCP tool or the Node API: numbered frames with title, length, timecode and note, plus full-size frames and shots.json for video tools."
+  toc={toc}
+>
+  <p class="eyebrow">Animate and export</p>
+  <h1>Storyboards</h1>
+  <p class="callout"><strong>New in Levni 0.5.0</strong> <code>levni storyboard</code> needs 0.5.0 or newer.</p>
+  <Fragment set:html={head.html} />
+
+  {parts.map((p) => <Fragment set:html={p.html} />)}
+
+  <div class="callout">
+    <strong>From an agent</strong>
+    <p><code>render_storyboard</code> takes the same spec. <code>guide: true</code> returns this format as text. See <a href="/docs/mcp/#t-render_storyboard">MCP server</a>.</p>
+  </div>
+</Docs>

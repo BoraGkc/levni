@@ -1,0 +1,12 @@
+{
+  "seed": 3,
+  "background": "paper",
+  "finish": "soft",
+  "grain": 0.008,
+  "elements": [
+    {"type":"glyphfill","shape":"sphere","x":850,"y":336,"size":540,"cell":8,"color":"ink","accent":"coral","land":0.42,"light":{"angle":215,"elev":28}},
+    {"type":"type","text":"GLYPHFILL / SPHERE","x":72,"y":110,"size":20,"font":"mono","weight":700,"tracking":0.06,"color":"blue"},
+    {"type":"type","text":"one planet,\nall in text.","x":68,"y":260,"w":470,"h":170,"fit":"box","font":"black","color":"ink"},
+    {"type":"type","text":"$ npx @levni/levni animate globe.json","x":72,"y":580,"size":18,"font":"mono","color":"ink"}
+  ]
+}

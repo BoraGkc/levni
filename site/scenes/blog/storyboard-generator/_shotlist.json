@@ -1,0 +1,6 @@
+[
+  { "id": "s1", "desc": "A rocket on the launch pad at dawn", "frames": 72 },
+  { "id": "s2", "desc": "Coffee while the build runs", "frames": 48 },
+  { "id": "s3", "desc": "A truck carries the release to users", "frames": 96 },
+  { "id": "s4", "desc": "Confetti over the changelog", "frames": 60 }
+]

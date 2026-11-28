@@ -1,0 +1,32 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { readDoc, render, resetIds } from '../../components/docs/md';
+
+resetIds();
+const { intro, sections } = readDoc('brandkit.md');
+const fig = `<figure>
+    <img src="/docs/brandkit.webp" width="1400" height="918" alt="A brand kit for İncir Ağacı laid out as one sheet: cards, brand board, story, transparent mark, palette, favicons and four posters, all in the same purple, orange and yellow inks" loading="lazy" decoding="async" />
+    <figcaption>A kit made from <code>examples/brandkit.json</code>.</figcaption>
+  </figure>`;
+const head = render(intro.replace(/^!\[[^\]]*\]\([^)]*\)\n+/m, 'FIGUREHERE\n\n'));
+head.html = head.html.replace('<p>FIGUREHERE</p>', fig);
+const parts = sections.map((s) => render(s.md, { title: s.title, id: s.id }));
+const toc = parts.flatMap((p) => p.toc);
+---
+<Docs
+  title="Levni brand kits: one brand spec makes a folder of matching assets"
+  description="Make a brand kit with levni brand, the render_brand_kit MCP tool or the Node API: mark, favicons, palette, social cards, story, README banner, board, posters and a loop in the same inks. Fields, files and limits."
+  toc={toc}
+>
+  <p class="eyebrow">Animate and export</p>
+  <h1>Brand kits</h1>
+  <p class="callout"><strong>New in Levni 0.5.0</strong> <code>levni brand</code> needs 0.5.0 or newer.</p>
+  <Fragment set:html={head.html} />
+
+  {parts.map((p) => <Fragment set:html={p.html} />)}
+
+  <div class="callout">
+    <strong>From an agent</strong>
+    <p><code>render_brand_kit</code> takes the same spec, and a <code>url</code> only when you name a website. See <a href="/docs/mcp/#t-render_brand_kit">MCP server</a>.</p>
+  </div>
+</Docs>

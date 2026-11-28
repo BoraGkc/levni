@@ -23,13 +23,16 @@ const tools: Tool[] = [
   { name: 'show_props', does: 'Draws a contact sheet so the agent can choose a drawing by eye.', input: [['names', 'up to 12 drawing names from list_props (required).']], output: 'An image of up to 18 variants, each labelled "name number". Unknown names are reported, not fatal.' },
   { name: 'render_scene', does: 'Draws a scene.', input: [['scene', 'the scene JSON (required).'], ['out', 'a .png, .webp or .svg path, relative to the working directory of the client.'], ['preview', 'return a 560 px preview; default true. Set false for agents that cannot see images.']], output: 'The critic’s notes, the preview image, and with out the full-size file. The preview includes the scene’s screen print pass, so a gameboy or blueprint scene previews as it will be saved. WebP output stays under a size budget.' },
   { name: 'critique_scene', does: 'Only the critic’s notes, no image. Quick and cheap while iterating.', input: [['scene', 'the scene JSON (required).']], output: 'Notes such as an element cut by the frame, or "critic: no layout problems found".' },
+  { name: 'render_animation', does: 'Draws a scene as a short loop and writes an animated GIF or WebP. The scene’s t runs from 0 to 1 over the frames; elements that move on their own, and any element with motion, follow it. Needs Levni 0.5.0.', input: [['scene', 'the scene JSON (required).'], ['out', 'a path ending in .gif or .webp, relative to the working directory of the client (required). For MP4 use the CLI.'], ['frames', 'frames in the loop; default 24, up to 240.'], ['fps', 'frames per second; default 12.'], ['boil', 'hand-drawn shimmer: this many crayon textures take turns (0, or 2 to 8). Makes GIFs about twice as large.'], ['width', 'output width in px; default the canvas width. 800 suits a README.'], ['preview', 'return a strip of four frames; default true.']], output: 'The critic’s notes (they say so when nothing in the scene moves), a line with the file path, frame count, size and weight, and the strip of four frames.' },
   { name: 'render_board', does: 'Makes a brand board.', input: [['spec', 'a brand shortcut { brand: { name, tagline, mark, inks } } or a board of your own tiles.'], ['out', 'a PNG path.'], ['preview', 'a 900 px preview; default true.'], ['guide', 'true returns the board format instead of rendering.']], output: 'A line with the board size, the preview and, with out, the PNG. The shortest spec makes nine tiles.' },
   { name: 'render_poster', does: 'Makes a series of eight branding posters (1200 by 1600). Needs Levni 0.3.0.', input: [['spec', '{ brand: { name, tagline, mark, inks, words }, only?, count? }.'], ['out_dir', 'a folder for poster-01-split.png and so on, plus series.png.'], ['scenes', 'true also returns each poster as editable scene JSON.'], ['preview', 'a contact sheet of the series; default true.'], ['guide', 'true returns the poster format instead.']], output: 'The poster count, the contact sheet and, with out_dir, the files.' },
+  { name: 'render_storyboard', does: 'Draws a storyboard before anyone makes a video: one contact sheet of numbered frames with title, length, running timecode and note. Needs Levni 0.5.0.', input: [['spec', 'a storyboard spec { title?, brand?, format?, shots: [...] }, or a bare shot list [{ id, desc, frames }].'], ['out', 'a .png path for the sheet.'], ['frames_dir', 'a folder for shot-NN.png at full size and shots.json.'], ['columns', 'frames per row; default 3.'], ['preview', 'a 900 px preview; default true.'], ['guide', 'true returns the storyboard format instead of rendering.']], output: 'A line with the sheet size, shot count and total seconds (and the file path when out is set), any warnings such as an unknown prop, and the preview.' },
+  { name: 'render_brand_kit', does: 'Makes a folder of matching brand assets from one brand: mark, favicons, palette, social cards, story, README banner, board, posters and a loop. Needs Levni 0.5.0.', input: [['spec', '{ brand: { name, tagline?, mark?, inks?, words? }, seed?, only?, posters? }.'], ['url', 'a web page the user named. It is fetched once to read the name, tagline and colours, and never fetched unless you pass it. Fields in spec win.'], ['out_dir', 'a folder to write the kit into. Without it nothing is written and the asset list comes back.'], ['preview', 'a preview of the kit’s board; default true when out_dir is set.'], ['guide', 'true returns the brand kit format instead.']], output: 'With out_dir: the file count, the brand name, mark and inks, the list of files and the critic’s notes per asset, plus a 900 px preview. Without it: the names of the assets that would be made.' },
 ];
 ---
 <Docs
   title="Levni MCP server: setup for Claude, Cursor and Codex, every tool"
-  description="Connect Levni to Claude Code, Claude Desktop, Cursor or Codex. Reference for scene_guide, list_props, show_props, render_scene, critique_scene, render_board and render_poster, with a sample session."
+  description="Connect Levni to Claude Code, Claude Desktop, Cursor or Codex. Reference for all ten tools, from scene_guide and render_scene to render_animation, render_storyboard and render_brand_kit, with a sample session."
   toc={toc}
 >
   <p class="eyebrow">Use Levni</p>
@@ -57,12 +60,12 @@ command = "npx"
 args = ["-y", "${pkg}", "mcp"]`}</code></pre>
 
   <h3 id="checkout">From a checkout</h3>
-  <p>If you cloned the repository (or want the 0.3.0 posters before they reach npm), point the client at the file:</p>
+  <p>If you cloned the repository (or want the newest changes before they reach npm), point the client at the file:</p>
   <pre><code class="language-json">{checkout}</code></pre>
 
   <div class="callout">
     <strong>Working folder</strong>
-    <p>Files from <code>render_scene</code>, <code>render_board</code> and <code>render_poster</code> are written relative to the working directory of your client. Start the client inside the project where the images should land.</p>
+    <p>Files from <code>render_scene</code>, <code>render_animation</code>, <code>render_board</code>, <code>render_poster</code>, <code>render_storyboard</code> and <code>render_brand_kit</code> are written relative to the working directory of your client. Start the client inside the project where the images should land.</p>
   </div>
 
   <h2 id="workflow">How an agent works with it</h2>
@@ -74,7 +77,7 @@ args = ["-y", "${pkg}", "mcp"]`}</code></pre>
   </ol>
 
   <h2 id="tools">Tools</h2>
-  <p>Seven tools, all running locally. Inputs marked required must be given; everything else is optional.</p>
+  <p>Ten tools, all running locally. Inputs marked required must be given; everything else is optional.</p>
   {tools.map((t) => (
     <section class="tooldef" aria-labelledby={`t-${t.name}`}>
       <h3 id={`t-${t.name}`}>{t.name}</h3>
@@ -87,7 +90,7 @@ args = ["-y", "${pkg}", "mcp"]`}</code></pre>
       </dl>
     </section>
   ))}
-  <p>The guide for boards and posters is also available as <code>guide: true</code> on their tools, so an agent can read the format it needs without loading the whole scene reference.</p>
+  <p>The guide for boards, posters, storyboards and brand kits is also available as <code>guide: true</code> on their tools, so an agent can read the format it needs without loading the whole scene reference. The animation format is on <a href="/docs/animation/">Animation</a>; <code>scene_guide</code> covers <code>motion</code> too.</p>
 
   <h2 id="session">A sample session</h2>
   <p>An illustration of the loop, shortened; the details will differ every time. The assistant calls the tools; you only talk to it.</p>
@@ -125,7 +128,7 @@ Place one with { "type": "prop", "name": "<name>", "variant": <n>, "x": 600, "y"
   <h2 id="trouble">Troubleshooting</h2>
   <ul>
     <li><strong>The tools do not show up.</strong> Restart the client after editing its config, and check that <code>npx -y {pkg} mcp</code> starts when you run it in a terminal. Node.js 20 or newer is required.</li>
-    <li><strong><code>render_poster</code> is missing or errors.</strong> Posters arrived in 0.3.0, which is not on npm yet. Use the checkout config above, or <code>npm install github:Levni-Dev/levni</code> and point the client at <code>node_modules/@levni/levni/bin/levni.mjs</code>.</li>
+    <li><strong>A tool is missing or errors.</strong> <code>render_poster</code> needs Levni 0.3.0; <code>render_animation</code>, <code>render_storyboard</code> and <code>render_brand_kit</code> need 0.5.0. If your client runs an older copy, start it with <code>npx -y {pkg}@latest mcp</code>, or use the checkout config above.</li>
     <li><strong>Files land in the wrong folder.</strong> Paths are relative to the client’s working directory. Use absolute paths in <code>out</code> if in doubt.</li>
     <li><strong>The agent cannot see images.</strong> Ask it to pass <code>preview: false</code> and rely on <code>critique_scene</code>, or on <code>levni check</code> for drawings.</li>
   </ul>

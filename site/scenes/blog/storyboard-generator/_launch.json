@@ -1,0 +1,20 @@
+{
+  "title": "tiny-queue launch, 20 s",
+  "brand": { "name": "tiny-queue", "mark": "package", "inks": ["#14181F", "#F2603F", "#F2C230", "#F1EEE6"] },
+  "format": "youtube",
+  "seed": 5,
+  "shots": [
+    { "id": "hook", "title": "Jobs go missing", "prop": "hourglass", "camera": "close",
+      "text": "Where did that job go?", "note": "Slow push in on the hourglass. No music yet.", "duration": 3 },
+    { "id": "problem", "title": "Three services for one queue", "props": ["database", "terminal", "laptop"],
+      "background": "tone-coral", "text": "Redis, a worker, a dashboard...", "note": "Cut fast between the three.", "duration": 3 },
+    { "id": "answer", "title": "One file", "prop": "package", "camera": "left",
+      "text": "Every job in one SQLite file.", "note": "The box drops in from the top.", "duration": 4 },
+    { "id": "code", "title": "Five lines", "prop": "terminal", "camera": "left", "background": "blue",
+      "text": "npm install tiny-queue", "note": "Screen recording, typed live.", "duration": 4 },
+    { "id": "proof", "title": "Nothing lost", "prop": "checklist", "camera": "wide", "background": "tone-green",
+      "text": "Restart it. The jobs are still there.", "note": "Kill the process on screen, start it again.", "duration": 3 },
+    { "id": "end", "title": "Star it", "prop": "package", "camera": "left", "background": "tone-mustard",
+      "text": "Star tiny-queue on GitHub.", "note": "Logo and link, held for two seconds.", "duration": 3 }
+  ]
+}

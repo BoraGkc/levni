@@ -1,0 +1,132 @@
+{
+  "canvas": [
+    1280,
+    640
+  ],
+  "seed": 1376,
+  "background": "dark",
+  "elements": [
+    {
+      "type": "panel",
+      "x": 790,
+      "y": -20,
+      "w": 530,
+      "h": 680,
+      "color": "blue"
+    },
+    {
+      "type": "disc",
+      "x": 1035,
+      "y": 326,
+      "r": 178,
+      "color": "coral",
+      "motion": [
+        {
+          "type": "pop",
+          "delay": 0,
+          "dur": 0.14
+        },
+        {
+          "type": "pulse",
+          "amp": 0.03
+        }
+      ]
+    },
+    {
+      "type": "marks",
+      "area": [
+        820,
+        40,
+        430,
+        560
+      ],
+      "count": 7,
+      "colors": [
+        "mustard",
+        "coral",
+        "tone"
+      ]
+    },
+    {
+      "type": "prop",
+      "name": "crescent-moon",
+      "variant": 0,
+      "x": 1035,
+      "y": 326,
+      "size": 330,
+      "shadow": true,
+      "motion": [
+        {
+          "type": "pop",
+          "delay": 0.08,
+          "dur": 0.16
+        },
+        {
+          "type": "float",
+          "amp": 9
+        }
+      ]
+    },
+    {
+      "type": "type",
+      "text": "YOU /",
+      "x": 84,
+      "y": 98,
+      "size": 24,
+      "font": "mono",
+      "weight": 700,
+      "tracking": 0.04,
+      "color": "#AEB6C6",
+      "motion": {
+        "type": "fade",
+        "delay": 0.02,
+        "dur": 0.1
+      }
+    },
+    {
+      "type": "type",
+      "text": "moonlog",
+      "x": 80,
+      "y": 150,
+      "w": 640,
+      "h": 124,
+      "fit": "box",
+      "font": "black",
+      "color": "#F1EEE6",
+      "motion": {
+        "type": "typewriter",
+        "delay": 0.08,
+        "dur": 0.158,
+        "cursor": "_"
+      }
+    },
+    {
+      "type": "type",
+      "text": "Readable logs for late nights: one\ncolour per level, no setup.",
+      "x": 84,
+      "y": 322,
+      "size": 32,
+      "weight": 400,
+      "leading": 1.32,
+      "color": "#F1EEE6",
+      "motion": {
+        "type": "slide",
+        "from": "down",
+        "distance": 26,
+        "delay": 0.42,
+        "dur": 0.14
+      }
+    },
+    {
+      "type": "type",
+      "text": "levni.dev",
+      "x": 1244,
+      "y": 596,
+      "size": 15,
+      "font": "mono",
+      "weight": 700,
+      "align": "right",
+      "color": "#F1EEE6"
+    }
+  ]
+}

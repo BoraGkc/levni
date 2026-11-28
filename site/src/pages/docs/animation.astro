@@ -1,0 +1,40 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { readDoc, render, resetIds } from '../../components/docs/md';
+
+resetIds();
+const { intro, sections } = readDoc('animate.md');
+// the markdown image is placed by hand below (width, height, alt); the bold run-in labels become real headings
+const clean = (md: string) => md.replace(/^!\[[^\]]*\]\([^)]*\)\n+/m, 'FIGUREHERE\n\n');
+const fig = `<figure>
+    <img src="/docs/animate-globe.gif" width="640" height="359" alt="An ASCII globe turning in a loop, drawn by Levni" loading="lazy" decoding="async" />
+    <figcaption>A <code>glyphfill</code> globe, 24 frames: <code>examples/glyphfill-globe.json</code>.</figcaption>
+  </figure>`;
+const head = render(clean(intro));
+head.html = head.html.replace('<p>FIGUREHERE</p>', fig);
+const heads = (md: string) => md
+  .replace(/^\*\*(Loops|Entrances)\*\* /gm, '### $1\n\n$1 ')
+  .replace(/^\*\*(Stagger|Camera)\.\*\* /gm, '### $1\n\n')
+  .replace(/^(`ease` takes the usual names)/m, '### Easing names\n\n$1');
+// the markdown imports bannerScene from the package root; it is exported from the banner subpath, so the page shows that
+const fixImport = (md: string) => md.replace("import { bannerScene, animate } from '@levni/levni';", "import { animate } from '@levni/levni';\nimport { bannerScene } from '@levni/levni/banner';");
+const parts = sections.map((s) => render(fixImport(heads(s.md)), { title: s.title, id: s.id }));
+const toc = parts.flatMap((p) => p.toc);
+---
+<Docs
+  title="Levni animation: loop any scene as a GIF, WebP or MP4"
+  description="Draw a Levni scene as a short loop with levni animate, the render_animation MCP tool or the Node API. Motion presets, stagger, camera, easing names, moving README banners, file sizes and rules."
+  toc={toc}
+>
+  <p class="eyebrow">Animate and export</p>
+  <h1>Animation</h1>
+  <p class="callout"><strong>New in Levni 0.5.0</strong> <code>levni animate</code>, <code>motion</code>, <code>stagger</code> and <code>camera</code> need 0.5.0 or newer.</p>
+  <Fragment set:html={head.html} />
+
+  {parts.map((p) => <Fragment set:html={p.html} />)}
+
+  <div class="callout">
+    <strong>Related</strong>
+    <p>MP4, frame sequences and sprite sheets are on <a href="/docs/export/">Export extras</a>. The command and its flags are on <a href="/docs/cli/#animate">Command line</a>; the functions are on <a href="/docs/api/#animation">Node API</a>; the MCP tool is <a href="/docs/mcp/#t-render_animation">render_animation</a>.</p>
+  </div>
+</Docs>

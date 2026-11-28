@@ -11,13 +11,13 @@ const toc = [
 ];
 const paths = [
   ['With an agent', '/docs/mcp/', 'MCP', 'Connect Levni to Claude, Cursor or Codex. The agent searches the library, writes scenes, reads the critic and saves files. One line to install.'],
-  ['From the terminal', '/docs/cli/', 'CLI', 'Write a JSON scene, run levni render, get a PNG, WebP or SVG. Also boards, posters and a prop search. Good for scripts and for agents without MCP.'],
-  ['From code', '/docs/api/', 'Node API', 'compose, render and critique as functions, for build steps, CMS hooks and your own tools. Node 20 or newer.'],
+  ['From the terminal', '/docs/cli/', 'CLI', 'Write a JSON scene, run levni render, get a PNG, WebP or SVG, or levni animate for a GIF, WebP or MP4. Also boards, posters, storyboards, brand kits and a prop search. Good for scripts and for agents without MCP.'],
+  ['From code', '/docs/api/', 'Node API', 'compose, render, animate and critique as functions, for build steps, CMS hooks and your own tools. Node 20 or newer.'],
 ];
 ---
 <Docs
   title="Levni documentation: MCP, CLI, Node API and the scene format"
-  description="How to use Levni: connect it to an agent over MCP, run the levni CLI, call the Node API, and write scenes, brand boards and branding posters in JSON."
+  description="How to use Levni: connect it to an agent over MCP, run the levni CLI, call the Node API, and write scenes, animations, storyboards, brand kits, brand boards and branding posters in JSON."
   toc={toc}
 >
   <p class="eyebrow">Documentation</p>
@@ -25,7 +25,7 @@ const paths = [
   <p class="lede">Levni draws hand-inked, riso-printed images from a short JSON description. These pages show you how to drive it: from an AI agent, from the terminal or from your own code.</p>
 
   <h2 id="what">What Levni is</h2>
-  <p>Levni is an open library of drawings (the Levni Folio: {SITE.props.toLocaleString('en')} objects in {SITE.variants.toLocaleString('en')} variants) and the engine that composes them. You describe a picture as a <em>scene</em>: a list of elements drawn in order. Levni renders it as PNG, WebP or SVG. The same scene and seed always give the same picture.</p>
+  <p>Levni is an open library of drawings (the Levni Folio: {SITE.props.toLocaleString('en')} objects in {SITE.variants.toLocaleString('en')} variants) and the engine that composes them. You describe a picture as a <em>scene</em>: a list of elements drawn in order. Levni renders it as PNG, WebP or SVG, or as a GIF, WebP or MP4 loop. The same scene and seed always give the same picture.</p>
   <p>There is no image model, no account and no cost per image. It runs on your machine, and an agent can drive it through MCP. After every render, a layout critic tells you what looks wrong: elements off the canvas, accidental crops, lopsided weight, no clear focal point.</p>
 
   <div class="pair two">
@@ -59,6 +59,8 @@ const paths = [
     <li><strong>The Levni Folio.</strong> Drawn objects on 15 shelves, searchable in English and Turkish, recolourable by style packs, named for what they show (old names keep working). <a href="/docs/library/">Library guide</a>.</li>
     <li><strong>Scenes and elements.</strong> Drawings, panels, charts, little 3D worlds, dither and mesh gradients, ASCII fills, seals and stickers, terrain and engraving. <a href="/docs/scenes/">Scene format</a>, <a href="/docs/elements/">element reference</a>.</li>
     <li><strong>The critic.</strong> Cheap layout notes after every render, so an agent can fix its own work.</li>
+    <li><strong>Animation.</strong> Any scene as a loop: motion on any element, stagger, a camera, moving README banners. <a href="/docs/animation/">Animation</a>, <a href="/docs/export/">Export extras</a> (frames, sprite sheets, MP4, transparent PNG, tiles).</li>
+    <li><strong>Storyboards and brand kits.</strong> A shot list drawn as one sheet, and a folder of matching brand assets from one spec. <a href="/docs/storyboards/">Storyboards</a>, <a href="/docs/brand-kits/">Brand kits</a>.</li>
     <li><strong>Brand boards.</strong> A mark, wordmark, palette, web page, social card, tote, sticker, pattern and business card in one image. <a href="/docs/boards/">Boards</a>.</li>
     <li><strong>Branding posters.</strong> Eight portrait posters that share inks, type and a mark. <a href="/docs/posters/">Posters</a>.</li>
   </ul>
@@ -71,7 +73,7 @@ const paths = [
 
   <div class="callout">
     <strong>Versions</strong>
-    <p>Install from npm: <code>@levni/levni</code>. The branding posters and the type engine are new in 0.3.0, which is not on npm yet; until it is, use <code>npm install github:Levni-Dev/levni</code> to get them. Everything else works with the published package.</p>
+    <p>Install from npm: <code>@levni/levni</code>. Branding posters and the type engine need 0.3.0 or newer. Animation, <code>levni storyboard</code>, <code>levni brand</code>, frame sequences and the three new MCP tools are new in 0.5.0; to get them before your version has them, use <code>npm install github:Levni-Dev/levni</code>.</p>
   </div>
 
   <h2 id="map">The docs at a glance</h2>

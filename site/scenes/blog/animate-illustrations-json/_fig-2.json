@@ -1,0 +1,14 @@
+{
+  "seed": 11,
+  "background": "tone",
+  "elements": [
+    { "type": "sunburst", "x": 1010, "y": 150, "size": 180, "color": "mustard", "rayColor": "mustard" },
+    { "type": "cloud", "x": 250, "y": 160, "size": 200, "color": "paper", "drift": 60 },
+    { "type": "cloud", "x": 640, "y": 110, "size": 130, "color": "paper", "drift": 40 },
+    { "type": "hills", "base": 673, "height": 230, "color": "green" },
+    { "type": "tree", "x": 200, "y": 600, "size": 300, "leafColors": ["green", "mustard"] },
+    { "type": "tree", "x": 400, "y": 620, "size": 210, "leafColors": ["mustard", "coral"] },
+    { "type": "flag", "x": 680, "y": 250, "w": 330, "h": 200, "stripes": ["mustard", "paper", "mustard", "paper"] },
+    { "type": "plant", "x": 1090, "y": 610, "size": 160 }
+  ]
+}

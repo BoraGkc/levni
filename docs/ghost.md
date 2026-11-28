@@ -55,7 +55,7 @@ Relative paths are resolved from the plan file's folder. A scene is rendered wit
 ## From code
 
 ```js
-import { createClient, attachPost, attachPlan, pullDrafts } from 'levni/adapters/ghost';
+import { createClient, attachPost, attachPlan, pullDrafts } from '@levni/levni/adapters/ghost';
 ```
 
 `attachPost(client, entry, { apply, baseDir })` returns `{ status, edits, notes }` where status is `planned`, `applied`, `skipped` or `refused`. `createClient({ url, key, fetch })` accepts a custom `fetch` (the tests use a mock; `npm run test:ghost`).

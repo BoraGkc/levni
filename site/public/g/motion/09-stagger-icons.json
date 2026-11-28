@@ -1,0 +1,15 @@
+{
+  "seed": 12,
+  "background": "paper",
+  "stagger": 0.06,
+  "elements": [
+    {"type":"panel","x":60,"y":52,"w":1080,"h":569,"color":"mustard"},
+    {"type":"type","text":"STAGGER 0.06","x":110,"y":110,"size":22,"font":"mono","weight":700,"tracking":0.06,"color":"ink"},
+    {"type":"prop","name":"lightbulb","x":200,"y":330,"size":200,"motion":[{"type":"pop","dur":0.16},{"type":"float","amp":10}]},
+    {"type":"prop","name":"camera","x":400,"y":330,"size":200,"motion":[{"type":"pop","dur":0.16},{"type":"float","amp":10}]},
+    {"type":"prop","name":"globe","x":600,"y":330,"size":200,"motion":[{"type":"pop","dur":0.16},{"type":"float","amp":10}]},
+    {"type":"prop","name":"piggy-bank","x":800,"y":330,"size":200,"motion":[{"type":"pop","dur":0.16},{"type":"float","amp":10}]},
+    {"type":"prop","name":"trophy","x":1000,"y":330,"size":200,"motion":[{"type":"pop","dur":0.16},{"type":"float","amp":10}]},
+    {"type":"type","text":"pop, then float, each one a beat later","x":600,"y":540,"size":22,"font":"mono","color":"ink","align":"center"}
+  ]
+}

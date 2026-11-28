@@ -11,11 +11,15 @@ Install for Claude Code: `claude mcp add levni -- npx -y @levni/levni mcp`. npm:
 - [Scene format](https://levni.dev/docs/scenes/): canvas, colours, formats and the layout critic
 - [Elements](https://levni.dev/docs/elements/): every element type a scene can use
 - [CLI](https://levni.dev/docs/cli/) and [Node API](https://levni.dev/docs/api/)
+- [Animation](https://levni.dev/docs/animation/): any scene as a looping GIF, animated WebP or MP4; motion on any element, stagger, camera
+- [Brand kits](https://levni.dev/docs/brand-kits/), [Storyboards](https://levni.dev/docs/storyboards/) and [Export](https://levni.dev/docs/export/): frames, sprite sheets, transparent PNGs, seamless tiles
 
 ## Make things
 
 - [Free makers](https://levni.dev/make/): stickers, posters, brand boards, icons, ASCII art and more, in the browser
 - [Editor](https://levni.dev/editor/): a free design editor that runs Levni in the page
+- [README banner maker](https://levni.dev/banner/): a banner from a GitHub link, as a PNG or an animated GIF
+- [Free tools](https://levni.dev/tools/): [mesh gradient generator](https://levni.dev/tools/mesh-gradient-generator/), [SVG pattern generator](https://levni.dev/tools/svg-pattern-generator/), [blob and wave generator](https://levni.dev/tools/blob-wave-generator/), [OG image generator](https://levni.dev/tools/og-image-generator/)
 - [Gallery](https://levni.dev/gallery/): every image with the scene that drew it
 - [Library](https://levni.dev/library/): the Levni Folio, 1,600+ drawings searchable in English and Turkish
 

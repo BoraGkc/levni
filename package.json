@@ -44,7 +44,8 @@
     "./brandkit": "./src/brandkit.mjs",
     "./gif": "./src/gif.mjs",
     "./browser": "./src/browser.mjs",
-    "./vite": "./src/browser/vite.mjs"
+    "./vite": "./src/browser/vite.mjs",
+    "./adapters/ghost": "./adapters/ghost/index.mjs"
   },
   "bin": {
     "levni": "./bin/levni.mjs"

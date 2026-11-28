@@ -1,0 +1,13 @@
+{
+ "_meta": { "title": "breathing mesh gradient", "alt": "A grainy mesh gradient in coral, violet and cyan whose colour blobs drift on small circles, with the headline Calm, then loud in a quiet zone on the left" },
+ "seed": 4,
+ "finish": "soft",
+ "background": "#14122B",
+ "elements": [
+  { "type": "meshgrad", "x": 0, "y": 0, "w": 1200, "h": 673, "base": "#1B1745", "blur": 90, "grain": 0.08, "drift": 0.16,
+    "stops": [{ "x": 0.12, "y": 0.2, "color": "#FF7A59", "r": 0.75 }, { "x": 0.45, "y": 0.95, "color": "#7A5CFF", "r": 0.8 }, { "x": 0.9, "y": 0.15, "color": "#38D6E8", "r": 0.7 }, { "x": 0.85, "y": 0.85, "color": "#FF4FA3", "r": 0.6 }],
+    "calm": [[0, 0.45, 0.6, 0.45]] },
+  { "type": "type", "text": "MESHGRAD / DRIFT 0.16", "x": 72, "y": 92, "size": 20, "font": "mono", "weight": 700, "tracking": 0.06, "color": "#F4EFFF" },
+  { "type": "type", "text": "Calm,\nthen loud.", "x": 68, "y": 330, "w": 560, "h": 230, "fit": "box", "font": "black", "color": "#FFFFFF" }
+ ]
+}

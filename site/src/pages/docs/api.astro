@@ -7,6 +7,9 @@ const toc = [
   { id: 'compose', text: 'Compose and critique', level: 2 as const },
   { id: 'props', text: 'Work with drawings', level: 2 as const },
   { id: 'brand', text: 'Boards and posters', level: 2 as const },
+  { id: 'animation', text: 'Animate a scene', level: 2 as const },
+  { id: 'sequences', text: 'Frames, MP4, sprites and tiles', level: 2 as const },
+  { id: 'storyboards-kits', text: 'Storyboards and brand kits', level: 2 as const },
   { id: 'export', text: 'Export and print passes', level: 2 as const },
   { id: 'exports', text: 'All exports', level: 2 as const },
   { id: 'subpaths', text: 'Subpath imports', level: 2 as const },
@@ -39,14 +42,33 @@ const exportsRows: [string, string][] = [
   ['iconsAvailable(), resolveIcon(name)', 'The optional Tabler icon bridge.'],
   ['renderBoard(spec, out, opts?)', 'async. Renders a brand board PNG.'],
   ['expandBrand(brand)', 'Turns a brand shortcut into a full board spec.'],
-  ['renderPosters(spec, outDir)', 'async. Renders the poster series. 0.3.0.'],
-  ['expandPosters(spec)', 'The posters as [{ template, scene }]. 0.3.0.'],
-  ['POSTER_TEMPLATES', 'The eight template names. 0.3.0.'],
+  ['renderPosters(spec, outDir)', 'async. Renders the poster series.'],
+  ['expandPosters(spec)', 'The posters as [{ template, scene }].'],
+  ['POSTER_TEMPLATES', 'The eight template names.'],
+  ['animate(scene, out, opts?)', 'async. Draws a loop and writes .gif or .webp. Returns { notes, bytes, frames, width, height, … }. 0.5.0.'],
+  ['renderFrames(scene, opts?)', 'async. The frames as PNG buffers: { frames, width, height, delay, notes, moving, distinct }. 0.5.0.'],
+  ['framePlan(scene, opts?)', 'The list of { t } the frames are drawn at, without drawing anything. 0.5.0.'],
+  ['frameStrip(frames, opts?)', 'async. A few frames side by side as one PNG: { count, width }. 0.5.0.'],
+  ['EASE, MOTIONS', 'The easing functions by name, and the list of motion names. 0.5.0.'],
+  ['encodeGif(frames, width, height, opts?)', 'Levni’s own GIF encoder: RGBA frames in, bytes out. Options: delay, loop, colours. 0.5.0.'],
+  ['writeFrames(scene, dir, opts?)', 'async. Writes frame-0001.png and so on, plus frames.json. 0.5.0.'],
+  ['spriteSheet(scene, out, opts?)', 'async. One PNG grid of the frames plus an atlas JSON. 0.5.0.'],
+  ['toMp4(scene, out, opts?)', 'async. Pipes the frames to ffmpeg for an H.264 MP4. 0.5.0.'],
+  ['ffmpegAvailable()', 'true when ffmpeg is on the PATH. 0.5.0.'],
+  ['transparent(scene)', 'A copy of the scene that renders on a clear ground. 0.5.0.'],
+  ['tileable(scene, opts?)', 'async. A seamless square PNG buffer: { size }. 0.5.0.'],
+  ['tileCheck(png)', 'async. { seamX, seamY }: about 1 or below tiles, above 1.5 shows a seam. 0.5.0.'],
+  ['expandStoryboard(spec)', 'A shot list as plain JSON: [{ id, title, note, duration, scene, warnings }]. 0.5.0.'],
+  ['renderStoryboard(spec, out, opts?)', 'async. Writes the storyboard sheet. Returns { png, width, height, shots, total, warnings }. 0.5.0.'],
+  ['renderKit(spec, outDir)', 'async. Writes a brand kit. Returns { files, brand, notes, ms }. 0.5.0.'],
+  ['expandKit(spec)', 'The kit as { brand, assets } without rendering. 0.5.0.'],
+  ['brandFromHtml(html, url)', 'Reads name, tagline and inks from HTML text. 0.5.0.'],
+  ['brandFromUrl(url)', 'async. Fetches that one page and reads the same. 0.5.0.'],
 ];
 ---
 <Docs
-  title="Levni Node API: compose, render, critique, boards and posters"
-  description="Use Levni from JavaScript: compose a scene to SVG, render it to PNG or WebP, read the layout critic, search the library, and make brand boards and posters, with examples."
+  title="Levni Node API: compose, render, animate, boards, posters and brand kits"
+  description="Use Levni from JavaScript: compose a scene to SVG, render it to PNG or WebP, animate it as GIF, WebP or MP4, read the layout critic, search the library, and make boards, posters, storyboards and brand kits."
   toc={toc}
 >
   <p class="eyebrow">Use Levni</p>
@@ -56,7 +78,7 @@ const exportsRows: [string, string][] = [
   <h2 id="import">Import</h2>
   <pre><code class="language-bash">npm install @levni/levni</code></pre>
   <pre><code class="language-js">{`import { compose, critique, render } from '@levni/levni';`}</code></pre>
-  <p>The package is ESM only. From a CommonJS file, use <code>await import('@levni/levni')</code>. Boards need nothing extra; posters and the type engine arrive with 0.3.0 (see <a href="/docs/getting-started/#install">install</a>).</p>
+  <p>The package is ESM only. From a CommonJS file, use <code>await import('@levni/levni')</code>. Animation, storyboards and brand kits need 0.5.0 or newer (see <a href="/docs/getting-started/#install">install</a>).</p>
 
   <h2 id="render">Render a scene</h2>
   <p><code>render(scene, out, opts?)</code> draws a scene and writes the file. The extension picks the format. It returns the critic’s notes and the SVG.</p>
@@ -109,10 +131,50 @@ const { width, height, bytes } = await renderBoard({ brand }, 'board.png');
 
 const spec = expandBrand(brand);               // the full board spec, to print and edit
 
-// eight posters and series.png (0.3.0)
+// eight posters and series.png
 const { files } = await renderPosters({ brand: { ...brand, words: ['Sail', 'Drift', 'Land', 'Return'] } }, 'posters/');
 const list = expandPosters({ brand });         // [{ template, scene }, ...]: edit a scene, then render(scene, ...)`}</code></pre>
   <p>Formats: <a href="/docs/boards/">Brand boards</a> and <a href="/docs/posters/">Branding posters</a>. <code>renderBoard</code> takes <code>{`{ baseDir }`}</code> to resolve scene paths in a spec.</p>
+
+  <h2 id="animation">Animate a scene</h2>
+  <p>Frame <code>i</code> of <code>N</code> is drawn at <code>t = i / N</code>, so the loop closes. <code>animate</code> writes a GIF or WebP; <code>renderFrames</code> gives you the frames as PNG buffers for your own encoder or canvas. The options and the motion fields are on <a href="/docs/animation/">Animation</a>.</p>
+  <pre><code class="language-js">{`import { animate, renderFrames, framePlan, frameStrip } from '@levni/levni';
+
+const { notes, bytes } = await animate(scene, 'loop.gif', { frames: 24, fps: 12, width: 800 });
+
+framePlan(scene, { frames: 4 });               // [{ t: 0 }, { t: 0.25 }, { t: 0.5 }, { t: 0.75 }]
+const { frames, width, height, delay, moving } = await renderFrames(scene, { frames: 24, width: 800 });
+const strip = await frameStrip(frames, { count: 6, width: 280 });   // one PNG to look at`}</code></pre>
+  <p>The scene can hold <code>motion</code> on any element, <code>stagger</code> and <code>camera</code>. <code>MOTIONS</code> lists the motion names and <code>EASE</code> holds the easing functions by name. <code>encodeGif</code> is the GIF encoder <code>animate</code> uses.</p>
+  <p>A moving README banner starts from <code>bannerScene</code>, which lives in the <code>banner</code> subpath:</p>
+  <pre><code class="language-js">{`import { animate } from '@levni/levni';
+import { bannerScene } from '@levni/levni/banner';
+
+const banner = bannerScene({ owner: 'you', name: 'your-repo', description: 'One line.', mark: 'rocket', motion: true });
+await animate(banner, 'banner.gif', { frames: 36, width: 800 });`}</code></pre>
+
+  <h2 id="sequences">Frames, MP4, sprites and tiles</h2>
+  <pre><code class="language-js">{`import { writeFrames, spriteSheet, toMp4, ffmpegAvailable, render, transparent, tileable, tileCheck } from '@levni/levni';
+
+await writeFrames(scene, 'public/hero', { frames: 24, fps: 12 });                    // frame-0001.png… and frames.json
+await spriteSheet(scene, 'hero-sheet.png', { frames: 8, fps: 12, width: 256, columns: 4 });
+if (ffmpegAvailable()) await toMp4(scene, 'hero.mp4', { frames: 48, fps: 24, loops: 3, crf: 20 });
+
+await render(transparent(scene), 'sticker.png');                                    // clear ground
+const png = await tileable(scene, { size: 512 });                                    // seamless square
+console.log(await tileCheck(png));                                                   // { seamX, seamY }`}</code></pre>
+  <p>Details, the atlas layout and recipes for Remotion, three.js and Blender are on <a href="/docs/export/">Export extras</a>.</p>
+
+  <h2 id="storyboards-kits">Storyboards and brand kits</h2>
+  <pre><code class="language-js">{`import { expandStoryboard, renderStoryboard, renderKit, expandKit, brandFromUrl } from '@levni/levni';
+
+const shots = expandStoryboard(spec);                                                // plain JSON: edit a scene, render it
+const { width, height, total } = await renderStoryboard(spec, 'story.png', { columns: 3, framesDir: 'frames' });
+
+const found = await brandFromUrl('https://example.com');                             // fetches that one page
+const { files, notes } = await renderKit({ brand: found }, 'kit/');                  // or { brand: { name, inks, … } }
+const plan = expandKit({ brand: { name: 'Kumru' } });                                // { brand, assets }, nothing rendered`}</code></pre>
+  <p>Formats: <a href="/docs/storyboards/">Storyboards</a> and <a href="/docs/brand-kits/">Brand kits</a>. <code>brandFromUrl</code> fetches exactly the address you give, with a 10 second timeout, and nothing else.</p>
 
   <h2 id="export">Export and print passes</h2>
   <p>If you hold an SVG already, <code>toPng</code> and <code>toWebp</code> rasterise it, both through <code>rasterize</code>: the picture is drawn in three plain layers and the crayon finish is applied to the pixels in JavaScript, which is about seven times faster than the SVG renderer's own filter with the same result. Use <code>{'rasterize(svg, { density, raw })'}</code> directly for buffers, thumbnails or your own pipeline. A scene’s <code>screen</code> field runs an ordered-dither print pass after the raster; <code>screenRaster</code> exposes it.</p>
@@ -129,7 +191,20 @@ await toPng(svg, 'out.png', { screen: 'gameboy' });`}</code></pre>
   </table></div>
 
   <h2 id="subpaths">Subpath imports</h2>
-  <p>The package also exposes narrower entry points: <code>@levni/levni/props</code>, <code>/critic</code>, <code>/board</code>, <code>/poster</code>, <code>/judge</code> and <code>/mcp</code>.</p>
+  <p>The package also exposes narrower entry points: <code>@levni/levni/props</code>, <code>/critic</code>, <code>/board</code>, <code>/poster</code>, <code>/judge</code> and <code>/mcp</code>. New in 0.5.0: <code>/animate</code>, <code>/sequence</code>, <code>/storyboard</code>, <code>/brandkit</code>, <code>/banner</code> and <code>/gif</code>, plus <code>/browser</code> and <code>/vite</code> for running the engine in a web page.</p>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="Subpaths, scrolls sideways"><table>
+    <thead><tr><th>Subpath</th><th>What is in it</th></tr></thead>
+    <tbody>
+      <tr><td><code>/animate</code></td><td><code>animate</code>, <code>renderFrames</code>, <code>framePlan</code>, <code>frameStrip</code></td></tr>
+      <tr><td><code>/sequence</code></td><td><code>writeFrames</code>, <code>spriteSheet</code>, <code>toMp4</code>, <code>ffmpegAvailable</code>, <code>transparent</code>, <code>tileable</code>, <code>tileCheck</code></td></tr>
+      <tr><td><code>/storyboard</code></td><td><code>expandStoryboard</code>, <code>renderStoryboard</code>, <code>timecode</code></td></tr>
+      <tr><td><code>/brandkit</code></td><td><code>renderKit</code>, <code>expandKit</code>, <code>brandFromHtml</code>, <code>brandFromUrl</code>, <code>resolveBrand</code>, <code>seededInks</code>, <code>KIT_ASSETS</code></td></tr>
+      <tr><td><code>/banner</code></td><td><code>bannerScene</code>, <code>pickMark</code>, <code>repoTerms</code>, <code>hashSeed</code>, <code>BANNER_SIZE</code>, <code>BANNER_THEMES</code>, <code>FALLBACK_MARKS</code></td></tr>
+      <tr><td><code>/gif</code></td><td><code>encodeGif</code></td></tr>
+      <tr><td><code>/browser</code>, <code>/vite</code></td><td>The engine for a web page, and the Vite plugin that bundles it.</td></tr>
+    </tbody>
+  </table></div>
   <pre><code class="language-js">{`import { critique } from '@levni/levni/critic';
+import { bannerScene } from '@levni/levni/banner';
 import { serve } from '@levni/levni/mcp';     // run the MCP server from your own process`}</code></pre>
 </Docs>
