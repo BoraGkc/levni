@@ -25,6 +25,7 @@
     "animation",
     "brand-kit",
     "storyboard",
+    "risograph",
     "gif",
     "mcp-server"
   ],
@@ -43,6 +44,7 @@
     "./storyboard": "./src/storyboard.mjs",
     "./brandkit": "./src/brandkit.mjs",
     "./gif": "./src/gif.mjs",
+    "./separate": "./src/separate.mjs",
     "./browser": "./src/browser.mjs",
     "./vite": "./src/browser/vite.mjs",
     "./adapters/ghost": "./adapters/ghost/index.mjs"
@@ -59,6 +61,7 @@
     "docs/export.md",
     "docs/storyboard.md",
     "docs/brandkit.md",
+    "docs/print.md",
     "docs/board.md",
     "docs/poster.md",
     "docs/ghost.md",

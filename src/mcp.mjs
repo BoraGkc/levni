@@ -143,6 +143,22 @@ export const TOOLS = [
       },
     },
   },
+  {
+    name: 'render_print',
+    description: 'Split a scene into riso plates for a real print run: one grayscale PNG per ink (black = full ink), printed lightest first with the key line last, plus proof.png (the plates multiplied back on the paper), sheet.png (each plate in its ink beside the proof) and print.json (inks, hex, coverage, order, dpi at A4 and A3). Tints become lower density of their ink; two inks over each other are split onto both plates. Motion is ignored: the finished still is printed.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        scene,
+        out_dir: { type: 'string', description: 'Folder to write the plates into, relative to the server\'s working directory.' },
+        scale: { type: 'number', description: 'Pixels per canvas unit (default 3: a cover becomes 3600 x 2019, about 300 dpi at A4 landscape).' },
+        plates: { type: 'integer', description: 'Most drums to use (default 4); extra inks fold into the nearest plate.' },
+        halftone: { type: 'integer', description: 'Screen the tints into dots of this many px. Leave out to keep gray and let the printer screen.' },
+        preview: { type: 'boolean', description: 'Return sheet.png as an image (default true).' },
+      },
+      required: ['scene', 'out_dir'],
+    },
+  },
 ];
 
 const text = (t) => ({ type: 'text', text: t });
@@ -206,6 +222,15 @@ async function call(name, args = {}) {
     const r = await animate(scene, file, { frames: args.frames, fps: args.fps, boil: args.boil, width: args.width });
     const out = [text(notesText(r.notes)), text(`wrote ${file}: ${r.frames} frames, ${r.width} x ${r.height}, ${Math.round(r.bytes / 1024)} KB`)];
     if (args.preview !== false) out.push(image(await frameStrip(r.stills)));
+    return out;
+  }
+
+  if (name === 'render_print') {
+    const { separate } = await import('./separate.mjs');
+    const dir = resolve(String(args.out_dir || ''));
+    const r = await separate(asScene(args.scene), dir, { scale: args.scale, plates: args.plates, halftone: args.halftone });
+    const out = [text(`${r.plates.length} plates in ${dir}: ${r.width} x ${r.height} px, paper ${r.paper}\n${r.plates.map((p) => `${p.order}. ${p.ink} ${p.hex}  ${p.coverage}% cover  ${p.file}`).join('\n')}`)];
+    if (args.preview !== false) out.push(image(await sharp(r.sheet).resize(1200).png({ compressionLevel: 9, palette: true }).toBuffer()));
     return out;
   }
 
