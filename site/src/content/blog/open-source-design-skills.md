@@ -2,6 +2,7 @@
 title: "Open Source Design Skills for AI Agents: What They Are and Why"
 description: "Agents write code well because coding knowledge is open. Design knowledge is not. Here is what open design skills for AI agents are and how to write one."
 date: 2026-11-25
+updated: 2026-11-28
 category: agents
 kind: Explainer
 draft: true
@@ -12,7 +13,7 @@ faq:
   - q: "How is a skill different from a prompt?"
     a: "A prompt asks for one output. A skill encodes a repeatable method with checks, so the agent can verify its own work, for example by reading Levni's layout critic and fixing what it reports before a person looks."
   - q: "What is Levni Skills?"
-    a: "The planned open set of design skills for Levni: recipes, critics and art-direction rules written in the open and tested on real renders. It is not shipped yet; proposals are open on GitHub."
+    a: "The open set of design skills for Levni: recipes, critics and art-direction rules written in the open and tested on real renders. The first two skills, levni-taste and levni-motion, are in the levni-skills repository on GitHub with sixteen recipe cards; proposals for more are open."
   - q: "Do I need Levni to use a design skill?"
     a: "The skills are written for agents that drive Levni through its MCP server or CLI, because Levni gives them something exact to render and check. The thinking inside a good skill is useful to anyone who designs."
   - q: "How can I contribute a skill?"
@@ -23,7 +24,7 @@ Ask an agent to build a login form and it will do a decent job. Ask it to art-di
 
 The difference is not intelligence. It is what the agent has read. Coding knowledge is open: decades of documentation, tutorials, open-source repositories, code review threads and style guides, all public. Design knowledge mostly is not. It lives in studios, in critiques that happen out loud, in brand books under NDA, and in the heads of people who learned it by doing.
 
-We think that should change, and the way to change it is the same way code changed: write the knowledge down, put it in the open, and let anyone improve it. We call the result **design skills**, and the Levni version of them is **Levni Skills**. This post explains what they are, why we think they matter, and how to write the first ones with us. Levni Skills is planned, not shipped: this is an invitation, not a launch.
+We think that should change, and the way to change it is the same way code changed: write the knowledge down, put it in the open, and let anyone improve it. We call the result **design skills**, and the Levni version of them is **Levni Skills**. This post explains what they are, why we think they matter, and how to write the first ones with us. When this post was first written Levni Skills was planned, not shipped. The first two skills are out now (see [the update below](#the-first-two-skills-are-out)); the invitation stands.
 
 ## What a design skill is
 
@@ -73,6 +74,32 @@ You do not need code. A good first proposal answers four questions in plain word
 4. **How** does it know the result is good, and what does it do when it is not?
 
 Add an example if you can: a before and after, a render, or a scene it would produce. Then open a [design skill proposal](https://github.com/Levni-Dev/levni/issues/new?template=skill.yml) on GitHub. Rough ideas are welcome. The best skills will come from people who do the work every day and are tired of explaining the same rules in every critique.
+
+## The first two skills are out
+
+*Added on 28 November 2026.* The first two skills are in their own repository, [Levni-Dev/levni-skills](https://github.com/Levni-Dev/levni-skills):
+
+- **levni-taste**: art direction for drawn assets. When not to draw, one style family per brand, icon sets that look like one hand, a small palette, safe areas, text on art, and a list of patterns to avoid. It ends in a loop: render, read the critic, fix, render again.
+- **levni-motion**: loops and motion from Levni scenes, and which format plays where.
+
+They come with sixteen recipe cards, one per kind of asset an agent is asked for: a blog cover, a link preview, a README banner, an icon set, a sticker, a poster and more. Each card has the scene, the fields worth changing, the pitfalls and the critic notes to expect. A script renders every card and fails when a card and its scene disagree.
+
+![Sixteen recipe cards drawn by Levni: a lighthouse cover, a link preview, a README banner, a thumbnail, a social square, a story, a favicon, an icon set, a seal, a dithered sunset, an ASCII globe, an isometric desk, a 3D trophy, a mesh gradient title, a bar chart and a poster](/blog/open-source-design-skills/recipes.webp)
+
+Install them with the skills CLI, or as a Claude Code plugin:
+
+```bash
+npx skills add Levni-Dev/levni-skills
+```
+
+```bash
+claude plugin marketplace add Levni-Dev/levni-skills
+claude plugin install levni-skills@levni-skills
+```
+
+The skills drive Levni, so the agent needs it too: `claude mcp add levni -- npx -y @levni/levni mcp`. The motion skill uses commands from Levni 0.5.0 and says how to check that the installed version has them.
+
+Proposals for the next skills go the same way as before: open a [design skill proposal](https://github.com/Levni-Dev/levni/issues/new?template=skill.yml).
 
 ## What happens next
 

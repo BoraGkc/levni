@@ -11,6 +11,7 @@ Install for Claude Code: `claude mcp add levni -- npx -y @levni/levni mcp`. npm:
 - [Scene format](https://levni.dev/docs/scenes/): canvas, colours, formats and the layout critic
 - [Elements](https://levni.dev/docs/elements/): every element type a scene can use
 - [CLI](https://levni.dev/docs/cli/) and [Node API](https://levni.dev/docs/api/)
+- [Levni Skills](https://github.com/Levni-Dev/levni-skills): agent skills for art direction and motion, with sixteen recipe cards (`npx skills add Levni-Dev/levni-skills`)
 - [Animation](https://levni.dev/docs/animation/): any scene as a looping GIF, animated WebP or MP4; motion on any element, stagger, camera
 - [Brand kits](https://levni.dev/docs/brand-kits/), [Storyboards](https://levni.dev/docs/storyboards/) and [Export](https://levni.dev/docs/export/): frames, sprite sheets, transparent PNGs, seamless tiles
 

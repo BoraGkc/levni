@@ -249,6 +249,14 @@ Optional extras: the `icon` and `ascii` elements use [Tabler Icons](https://tabl
 
 Drawing needs nothing: no account, no key. Two optional integrations bring your own key, kept in your environment or MCP config: Ghost (`GHOST_ADMIN_API_URL`, `GHOST_ADMIN_API_KEY`) and the judge (`OPENROUTER_API_KEY`). Levni sends your scenes and keys nowhere else.
 
+## Skills for your agent
+
+[Levni Skills](https://github.com/Levni-Dev/levni-skills) teach an agent how to art-direct what it draws: `levni-taste` (when to draw, one style per brand, safe areas, the render and critic loop) and `levni-motion` (loops and where each format plays), with sixteen recipe cards.
+
+```bash
+npx skills add Levni-Dev/levni-skills
+```
+
 ## Community: open design, together
 
 Levni is a commons, and there are five ways in. All of them are open: [levni.dev/community](https://levni.dev/community/).
