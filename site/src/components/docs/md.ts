@@ -45,6 +45,10 @@ const link = (href: string) => {
   if (ex) return `${SITE.github}/blob/main/examples/${ex[1]}`;
   if (href === 'scene.schema.json') return `${SITE.github}/blob/main/docs/scene.schema.json`;
   if (href === 'scene.md') return '/docs/elements/';
+  if (href === 'animate.md') return '/docs/animation/';
+  if (href === 'export.md') return '/docs/export/';
+  if (href === 'brandkit.md') return '/docs/brand-kits/';
+  if (href === 'storyboard.md') return '/docs/storyboards/';
   return href;
 };
 

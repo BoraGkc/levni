@@ -1,0 +1,10 @@
+{
+ "_meta": { "t": 0, "title": "a turning 3D icon", "alt": "A thick, lit 3D rocket icon turns once around its axis on a soft lilac card, a glossy ring turning behind it" },
+ "seed": 6, "finish": "soft", "background": "#EDE8FB",
+ "elements": [
+  { "type": "meshgrad", "x": 600, "y": 336, "r": 300, "colors": ["#C9B8FF", "#FFD3C2", "#EDE8FB"], "grain": 0.1 },
+  { "type": "extrude3d", "name": "rocket", "x": 600, "y": 330, "size": 360, "depth": 0.2, "spin": 1 },
+  { "type": "type", "text": "EXTRUDE3D / SPIN 1", "x": 72, "y": 96, "size": 20, "font": "mono", "weight": 700, "tracking": 0.06, "color": "#3B2A7A" },
+  { "type": "type", "text": "one turn per loop", "x": 1128, "y": 580, "size": 22, "font": "mono", "color": "#3B2A7A", "align": "right" }
+ ]
+}

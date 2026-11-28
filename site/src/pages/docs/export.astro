@@ -1,0 +1,30 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { readDoc, render, resetIds } from '../../components/docs/md';
+
+resetIds();
+const { intro, sections } = readDoc('export.md');
+const head = render(intro);
+const parts = sections.map((s) => render(s.md, { title: s.title, id: s.id }));
+const toc = [{ id: 'cli', text: 'From the command line', level: 2 as const }, ...parts.flatMap((p) => p.toc)];
+---
+<Docs
+  title="Levni export extras: frames, sprite sheets, MP4, transparent PNG and tiles"
+  description="Take Levni scenes into other tools: numbered PNG frames with a manifest, a sprite sheet and atlas JSON, MP4 through ffmpeg, a transparent PNG, a seamless tile, and recipes for Remotion, three.js and Blender."
+  toc={toc}
+>
+  <p class="eyebrow">Animate and export</p>
+  <h1>Export extras</h1>
+  <p class="callout"><strong>New in Levni 0.5.0</strong> These functions and flags need 0.5.0 or newer.</p>
+  <Fragment set:html={head.html} />
+
+  <h2 id="cli">From the command line<a class="anchor" href="#cli" aria-label="Link to From the command line">#</a></h2>
+  <p>Most of these are flags on <code>levni animate</code> and <code>levni render</code>. The loop itself is on <a href="/docs/animation/">Animation</a>.</p>
+  <pre><code class="language-bash">npx @levni/levni animate scene.json hero.mp4 --crf 20 --loops 3         # needs ffmpeg
+npx @levni/levni animate scene.json hero.gif --frames-dir public/hero   # frame-0001.png… and frames.json
+npx @levni/levni animate scene.json hero.gif --sprite sheet.png --columns 6
+npx @levni/levni render scene.json sticker.png --transparent
+npx @levni/levni render scene.json paper.png --tile 512</code></pre>
+
+  {parts.map((p) => <Fragment set:html={p.html} />)}
+</Docs>

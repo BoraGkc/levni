@@ -2,6 +2,7 @@
 // drawn with the engine's brushes, palette and crayon finish.
 // Canvas 1200x673 by default (formats.mjs has the other sizes). Colours by name: blue, ink, coral, mustard, green, paper, white, tone (light blue), dark.
 // Element reference: docs/scene.md
+import { applyMotion, typedElement, cameraTransform, motionList } from './motion.mjs';
 import { PALETTE as P, rng, frame } from './style.mjs';
 import { resolveCanvas, planLayout, safeInsets } from './formats.mjs';
 import { layoutTitle } from './title.mjs';
@@ -60,7 +61,14 @@ async function composeOnce(spec, canvas, lay) {
   let clip = 0;
 
   // props (library/props/*.json) are pre-drawn `draw` elements and `iso` is a macro: expand them first
-  for (const e of resolveSlots((spec.elements || []).flatMap(expandIso).flatMap(expandSeal).map(expandProp))) {
+  let moving = 0; // elements with `motion`, counted for stagger
+  const stagger = Number.isFinite(Number(spec.stagger)) ? Number(spec.stagger) : 0;
+  for (const e0 of resolveSlots((spec.elements || []).flatMap(expandIso).flatMap(expandSeal).map(expandProp))) {
+    // motion (motion.mjs): typewriter changes the text before it is drawn; the rest wraps the finished element below
+    const hasMotion = e0.motion ? motionList(e0.motion).length > 0 : false;
+    const mi = hasMotion ? moving++ : 0;
+    const e = hasMotion ? typedElement(e0, time, mi, stagger) : e0;
+    if (!e) continue; // typewriter: nothing typed yet
     const t = e.type;
     cur = e;
     const m0 = lay?.start(out, used);
@@ -269,6 +277,17 @@ async function composeOnce(spec, canvas, lay) {
       const img = await printScreen(out.splice(out0).join(''), e.screen, canvas, bb ? [bb.x, bb.y, bb.w, bb.h] : null);
       if (img) out.push(img);
     }
+    // element-level motion: wrap what this element drew in its transform at time `t`
+    if (hasMotion && out.length > out0) {
+      const bs = used.slice(used0);
+      const box = bs.length
+        ? [Math.min(...bs.map((b) => b.x)), Math.min(...bs.map((b) => b.y)), Math.max(...bs.map((b) => b.x + b.w)) - Math.min(...bs.map((b) => b.x)), Math.max(...bs.map((b) => b.y + b.h)) - Math.min(...bs.map((b) => b.y))]
+        : t === 'label' // labels leave no box for the critic: estimate one from the mono font (x is the anchor, y the baseline)
+          ? (() => { const fs = e.size ?? 16, w = String(e.text ?? '').length * (fs * 0.6 + 1); return [e.anchor === 'end' ? e.x - w : e.anchor === 'middle' ? e.x - w / 2 : e.x, e.y - fs, w, fs * 1.3]; })()
+          : [e.x ?? canvas.w / 2, e.y ?? canvas.h / 2, e.w ?? 0, e.h ?? 0];
+      const moved = applyMotion(out.splice(out0).join(''), e.motion, time, box, { index: mi, stagger, id: `mo${mi}` });
+      if (moved) out.push(moved);
+    }
     lay?.end(e, m0, out, used);
   }
   // spec.clip = [x, y, w, h]: everything stays inside the panel, like a printed card
@@ -276,6 +295,9 @@ async function composeOnce(spec, canvas, lay) {
   // text that must stay exact (glyphfill grids) is marked <!--crisp-->…<!--/crisp--> and drawn above the crayon filter
   let crisp = '';
   if (!soft && !lay) body = body.replace(/<!--crisp-->[\s\S]*?<!--\/crisp-->/g, (m) => { crisp += m; return ''; });
+  // spec.camera: the drawing pans and zooms under a fixed frame (motion.mjs); the title layer stays put
+  const camT = cameraTransform(spec.camera, time, canvas);
+  if (camT) body = `<g transform="${camT}">${body}</g>`;
   if (spec.clip) {
     const [x, y, w, h] = spec.clip;
     body = `<clipPath id="card"><path d="${pen.d(box(x, y, x + w, y + h, 40), { amp: 0, closed: true })}"/></clipPath><g clip-path="url(#card)">${body}</g>`;

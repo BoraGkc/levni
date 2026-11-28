@@ -1,0 +1,237 @@
+---
+import ToolPage from '../../components/tools/ToolPage.astro';
+import { FREE_FAQ, JSON_FAQ, SIZES } from '../../data/tools';
+
+const faq = [
+  FREE_FAQ,
+  { q: 'Why add grain to a gradient?', a: 'Smooth gradients can show visible steps (banding) on many screens and after compression. A fine grain breaks those steps up and gives the colour a printed feel. Set grain to zero if you want it clean.' },
+  { q: 'Can I use the gradient commercially?', a: 'Yes. What you make here is yours to use, in products, ads and client work, with no credit needed. Levni itself is MIT licensed.' },
+  JSON_FAQ,
+];
+const PRESETS = {
+  riso: { label: 'Riso', colors: ['#FF3A44', '#D6E521', '#58C4F6', '#FF39B4'], base: '#4B2FD6' },
+  sunset: { label: 'Sunset', colors: ['#FF7A59', '#FFB36B', '#FF39B4', '#8E3BC9'], base: '#3A1450' },
+  mint: { label: 'Mint night', colors: ['#66DCC2', '#2A9DFF', '#4B2FD6'], base: '#140A35' },
+  peach: { label: 'Peach', colors: ['#FFD3B6', '#FFAAA5', '#FF8B94', '#DCEDC1'], base: '#FFF1E6' },
+  ocean: { label: 'Ocean', colors: ['#0B57D0', '#58C4F6', '#7CF0D0'], base: '#071A5C' },
+  lilac: { label: 'Lilac', colors: ['#F3C2F5', '#C3B9F7', '#4B2FD6', '#FFE08A'], base: '#E9E3FF' },
+};
+const SHAPES = { field: 'Full field', calm: 'Calm side for text', poster: 'Posterised bands', steps: 'Soft steps', orb: 'Orb', tile: 'Squircle tile' };
+---
+<ToolPage
+  title="Free mesh gradient generator with grain"
+  description="Make grainy mesh gradient backgrounds in your own colours, sized for OG cards, stories, YouTube or desktop. Free, no sign-up, no watermark. PNG or SVG."
+  name="Levni mesh gradient generator"
+  eyebrow="Free tool"
+  h1="Mesh gradient generator"
+  lede="Soft blended colour with film grain, for a hero, a launch post or a slide background. Pick your colours, shuffle the seed until you like it, download PNG or SVG. It runs in your browser: no sign-up, no watermark."
+  faq={faq}
+>
+  <div class="tl-stage" data-presets={JSON.stringify(PRESETS)} id="mg">
+    <div class="tl-view">
+      <figure class="tl-preview" id="mg-preview" aria-busy="true">
+        <img id="mg-img" alt="Mesh gradient preview" />
+      </figure>
+      <p class="tl-meta" id="mg-meta" aria-live="polite"></p>
+      <div class="tl-actions">
+        <button type="button" class="tl-go" id="mg-png">Download PNG</button>
+        <button type="button" class="tl-ghost" id="mg-png2">PNG 2×</button>
+        <button type="button" class="tl-ghost" id="mg-svg">SVG</button>
+        <button type="button" class="tl-ghost" id="mg-json">Copy scene JSON</button>
+        <button type="button" class="tl-ghost" id="mg-link">Copy link</button>
+      </div>
+    </div>
+
+    <div class="tl-controls">
+      <fieldset>
+        <legend>Colour presets</legend>
+        <div class="tl-chips" id="mg-presets">
+          {Object.entries(PRESETS).map(([k, p]) => (
+            <button type="button" data-preset={k} aria-pressed="false"><span class="tl-sw" aria-hidden="true">{p.colors.slice(0, 3).map((c) => <i style={`background:${c}`}></i>)}</span>{p.label}</button>
+          ))}
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Colours</legend>
+        <div class="tl-inks" id="mg-inks"></div>
+      </fieldset>
+
+      <div class="tl-field">
+        <label class="tl-lbl" for="mg-shape">Shape</label>
+        <select id="mg-shape">{Object.entries(SHAPES).map(([k, v]) => <option value={k}>{v}</option>)}</select>
+      </div>
+
+      <div class="tl-field">
+        <span class="tl-row2"><label for="mg-grain">Grain</label><output id="mg-grain-o" for="mg-grain"></output></span>
+        <input id="mg-grain" type="range" min="0" max="100" step="1" />
+      </div>
+      <div class="tl-field">
+        <span class="tl-row2"><label for="mg-blur">Softness</label><output id="mg-blur-o" for="mg-blur"></output></span>
+        <input id="mg-blur" type="range" min="2" max="60" step="1" />
+      </div>
+      <div class="tl-field">
+        <span class="tl-row2"><label for="mg-count">Colour spots</label><output id="mg-count-o" for="mg-count"></output></span>
+        <input id="mg-count" type="range" min="2" max="12" step="1" />
+      </div>
+
+      <div class="tl-field">
+        <label class="tl-lbl" for="mg-seed">Seed</label>
+        <span class="tl-seed"><input id="mg-seed" type="number" min="1" max="9999" inputmode="numeric" /><button type="button" class="tl-ghost" id="mg-shuffle">Shuffle</button></span>
+      </div>
+
+      <div class="tl-field">
+        <label class="tl-lbl" for="mg-size">Size</label>
+        <select id="mg-size">
+          {Object.entries(SIZES).map(([k, s]) => <option value={k}>{s.label}</option>)}
+          <option value="custom">Custom size</option>
+        </select>
+      </div>
+      <div class="tl-two" id="mg-custom" hidden>
+        <label class="tl-field">Width <input id="mg-w" type="number" min="64" max="4096" step="1" /></label>
+        <label class="tl-field">Height <input id="mg-h" type="number" min="64" max="4096" step="1" /></label>
+      </div>
+    </div>
+  </div>
+
+  <Fragment slot="about">
+    <h2>How it works</h2>
+    <p>The gradient is a Levni <code>meshgrad</code> element: a few soft colour spots on a base colour, blurred together, with a fine film grain on top. The seed places the spots, so the same seed and colours always give the same picture. Shuffle until the blend looks right, then share the link: the settings live in the address.</p>
+    <p>Pick a size that matches where it goes. Use 2× for sharp results on high-density screens. The SVG stays small, because the blur and grain are SVG filters that your browser draws.</p>
+    <p>Want the same gradient in a build step or from an AI agent? Copy the scene JSON, save it as <code>scene.json</code> and run <code>npx @levni/levni render scene.json hero.png</code>. With the <a href="/mcp/">Levni MCP server</a>, an agent can make it for you and add a title, a drawing or a set of tiles.</p>
+  </Fragment>
+</ToolPage>
+
+<script>
+  import { render, showSvg, savePng, saveSvg, copy, readHash, writeHash, debounce, newSeed, clampInt, isHex, hex, SIZES, timed } from '../../components/tools/engine';
+
+  type Preset = { label: string; colors: string[]; base: string };
+  const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+  const PRESETS: Record<string, Preset> = JSON.parse($('mg').dataset.presets!);
+  const img = $<HTMLImageElement>('mg-img'), preview = $('mg-preview'), meta = $('mg-meta'), inksEl = $('mg-inks');
+  const shapeEl = $<HTMLSelectElement>('mg-shape'), grainEl = $<HTMLInputElement>('mg-grain'), blurEl = $<HTMLInputElement>('mg-blur'), countEl = $<HTMLInputElement>('mg-count');
+  const seedEl = $<HTMLInputElement>('mg-seed'), sizeEl = $<HTMLSelectElement>('mg-size'), wEl = $<HTMLInputElement>('mg-w'), hEl = $<HTMLInputElement>('mg-h');
+
+  // state (also the URL hash)
+  const h = readHash();
+  const S = {
+    c: (h.c || '').split(',').filter(isHex).map(hex).slice(0, 5),
+    b: isHex(h.b) ? hex(h.b) : '',
+    sh: h.sh in { field: 1, calm: 1, poster: 1, steps: 1, orb: 1, tile: 1 } ? h.sh : 'field',
+    g: clampInt(h.g, 20, 0, 100),
+    bl: clampInt(h.bl, 14, 2, 60),
+    n: clampInt(h.n, 5, 2, 12),
+    s: clampInt(h.s, 7, 1, 9999),
+    sz: h.sz in SIZES || h.sz === 'custom' ? h.sz : 'og',
+    w: clampInt(h.w, 1600, 64, 4096),
+    h: clampInt(h.h, 900, 64, 4096),
+  };
+  if (S.c.length < 2) { S.c = [...PRESETS.riso.colors]; S.b = S.b || PRESETS.riso.base; }
+  if (!S.b) S.b = PRESETS.riso.base;
+
+  const size = () => (S.sz === 'custom' ? { w: S.w, h: S.h } : SIZES[S.sz]);
+
+  function scene() {
+    const { w, h } = size(), minD = Math.min(w, h);
+    const el: any = { type: 'meshgrad', colors: S.c, base: S.b, count: S.n, grain: S.g / 100, blur: Math.round((minD * S.bl) / 100), seed: S.s };
+    let background = S.b;
+    if (S.sh === 'orb') {
+      const r = Math.round(minD * 0.36);
+      Object.assign(el, { x: Math.round(w / 2), y: Math.round(h / 2), r, preset: 'orb', blur: Math.round((r * 2 * Math.max(S.bl, 10)) / 100) });
+      background = mix(S.b);
+    } else if (S.sh === 'tile') {
+      const side = Math.round(minD * 0.72);
+      Object.assign(el, { x: Math.round((w - side) / 2), y: Math.round((h - side) / 2), w: side, h: side, shape: 'squircle', blur: Math.round((side * S.bl) / 100) });
+      background = mix(S.b);
+    } else {
+      Object.assign(el, { x: 0, y: 0, w, h });
+      if (S.sh === 'calm') el.calm = [[0.04, 0.22, 0.5, 0.56]];
+      if (S.sh === 'poster') Object.assign(el, { bands: 7, lines: true });
+      if (S.sh === 'steps') el.bands = 5;
+    }
+    return { seed: S.s, finish: 'soft', grain: 0, canvas: [w, h], background, elements: [el] };
+  }
+  // ground behind an orb or a tile: the base colour, lightened toward paper
+  function mix(c: string) {
+    const n = parseInt(c.slice(1), 16), p = [0xf3, 0xf1, 0xea];
+    const ch = [(n >> 16) & 255, (n >> 8) & 255, n & 255].map((v, i) => Math.round(v * 0.18 + p[i] * 0.82));
+    return '#' + ch.map((v) => v.toString(16).padStart(2, '0')).join('').toUpperCase();
+  }
+
+  const shown = { url: '' };
+  let current = { svg: '', scene: null as any }, token = 0;
+  async function draw() {
+    const my = ++token;
+    preview.setAttribute('aria-busy', 'true');
+    const sc = scene();
+    const svg = await timed(() => render(sc));
+    if (my !== token) return;
+    current = { svg, scene: sc };
+    showSvg(img, svg, shown);
+    const { w, h } = size();
+    img.alt = `Mesh gradient, ${w} by ${h} pixels, in ${S.c.length} colours on ${S.b}`;
+    meta.textContent = `${w} × ${h} px · seed ${S.s}`;
+    preview.setAttribute('aria-busy', 'false');
+    writeHash(S);
+  }
+  const drawSoon = debounce(draw, 60);
+
+  // controls <- state
+  function renderInks() {
+    inksEl.replaceChildren();
+    S.c.forEach((c, i) => {
+      const lab = document.createElement('label'); lab.className = 'tl-ink';
+      const inp = document.createElement('input'); inp.type = 'color'; inp.value = c.toLowerCase(); inp.setAttribute('aria-label', `Colour ${i + 1}`);
+      inp.addEventListener('input', () => { S.c[i] = hex(inp.value); markPreset(); drawSoon(); });
+      lab.append(inp, document.createTextNode(String(i + 1)));
+      inksEl.append(lab);
+    });
+    const base = document.createElement('label'); base.className = 'tl-ink';
+    const bi = document.createElement('input'); bi.type = 'color'; bi.value = S.b.toLowerCase(); bi.setAttribute('aria-label', 'Base colour');
+    bi.addEventListener('input', () => { S.b = hex(bi.value); markPreset(); drawSoon(); });
+    base.append(bi, document.createTextNode('base'));
+    const add = document.createElement('button'); add.type = 'button'; add.className = 'tl-mini'; add.textContent = '+ Add colour'; add.disabled = S.c.length >= 5;
+    add.addEventListener('click', () => { S.c.push(S.c[S.c.length - 2] || '#FFFFFF'); renderInks(); draw(); (inksEl.querySelectorAll('input')[S.c.length - 1] as HTMLElement)?.focus(); });
+    const rm = document.createElement('button'); rm.type = 'button'; rm.className = 'tl-mini'; rm.textContent = '− Remove last'; rm.disabled = S.c.length <= 2;
+    rm.addEventListener('click', () => { S.c.pop(); renderInks(); draw(); });
+    const row = document.createElement('div'); row.className = 'tl-minirow'; row.append(add, rm);
+    inksEl.append(base, row);
+  }
+  function markPreset() {
+    for (const b of document.querySelectorAll<HTMLButtonElement>('#mg-presets button')) {
+      const p = PRESETS[b.dataset.preset!];
+      b.setAttribute('aria-pressed', String(p.base === S.b && p.colors.join() === S.c.join()));
+    }
+  }
+  function syncControls() {
+    shapeEl.value = S.sh; grainEl.value = String(S.g); blurEl.value = String(S.bl); countEl.value = String(S.n);
+    seedEl.value = String(S.s); sizeEl.value = S.sz; wEl.value = String(S.w); hEl.value = String(S.h);
+    $('mg-custom').hidden = S.sz !== 'custom';
+    $('mg-grain-o').textContent = `${S.g}%`; $('mg-blur-o').textContent = `${S.bl}%`; $('mg-count-o').textContent = String(S.n);
+    renderInks(); markPreset();
+  }
+
+  $('mg-presets').addEventListener('click', (e) => {
+    const b = (e.target as HTMLElement).closest('button'); if (!b) return;
+    const p = PRESETS[b.dataset.preset!]; S.c = [...p.colors]; S.b = p.base;
+    renderInks(); markPreset(); draw();
+  });
+  shapeEl.addEventListener('change', () => { S.sh = shapeEl.value; draw(); });
+  grainEl.addEventListener('input', () => { S.g = +grainEl.value; $('mg-grain-o').textContent = `${S.g}%`; drawSoon(); });
+  blurEl.addEventListener('input', () => { S.bl = +blurEl.value; $('mg-blur-o').textContent = `${S.bl}%`; drawSoon(); });
+  countEl.addEventListener('input', () => { S.n = +countEl.value; $('mg-count-o').textContent = String(S.n); drawSoon(); });
+  seedEl.addEventListener('input', () => { S.s = clampInt(seedEl.value, S.s, 1, 9999); drawSoon(); });
+  $('mg-shuffle').addEventListener('click', () => { S.s = newSeed(); seedEl.value = String(S.s); draw(); });
+  sizeEl.addEventListener('change', () => { S.sz = sizeEl.value; $('mg-custom').hidden = S.sz !== 'custom'; draw(); });
+  for (const el of [wEl, hEl]) el.addEventListener('change', () => { S.w = clampInt(wEl.value, S.w, 64, 4096); S.h = clampInt(hEl.value, S.h, 64, 4096); wEl.value = String(S.w); hEl.value = String(S.h); draw(); });
+
+  const file = () => { const { w, h } = size(); return `mesh-gradient-${w}x${h}-${S.s}`; };
+  $('mg-png').addEventListener('click', () => savePng(current.svg, `${file()}.png`, 1));
+  $('mg-png2').addEventListener('click', () => savePng(current.svg, `${file()}@2x.png`, 2));
+  $('mg-svg').addEventListener('click', () => saveSvg(current.svg, `${file()}.svg`));
+  $('mg-json').addEventListener('click', (e) => copy(JSON.stringify(current.scene, null, 2), e.currentTarget as HTMLElement));
+  $('mg-link').addEventListener('click', (e) => copy(location.href, e.currentTarget as HTMLElement));
+
+  syncControls();
+  draw();
+</script>

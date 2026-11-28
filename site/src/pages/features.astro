@@ -9,7 +9,28 @@ const tagCount = folio.reduce((n, p) => n + p.tags.length, 0);
 
 const doc = (p) => `${SITE.github}/blob/main/${p}`;
 const tiles = ['rocket', 'tulip', 'coffee-cup', 'bicycle', 'lighthouse', 'piggy-bank', 'camera', 'globe'];
+// loops from the gallery's Motion group (scripts/render-gallery.mjs): the still is the <img>, the loop plays unless reduced motion is on
+const mo = (id) => `/g/motion/${id}-loop.webp`;
 const features = [
+  { id: 'animate', title: 'Animation', gallery: 'motion', img: ['/g/motion/05-ascii-globe.webp', '/g/motion/08-confetti-launch-s.webp', '/g/motion/04-mesh-breathe-s.webp'], loop: [mo('05-ascii-globe'), mo('08-confetti-launch'), mo('04-mesh-breathe')], dims: [[1200, 673], [640, 359], [640, 359]],
+    alt: ['A globe made of text characters turning once, beside the words one planet, all in text', 'Confetti falling over a dark launch card with a rocket and the words v0.5 is out', 'A grainy mesh gradient whose colour blobs drift, under the headline Calm, then loud'],
+    text: 'levni animate draws any scene as a short loop. A scene’s time t runs from 0 to 1, and the elements that know how to move follow it: clouds drift, trees and plants sway, flags wave, confetti falls, mesh gradients breathe, ASCII globes and soft 3D shapes turn. Frame i of 24 (by default) is drawn at t = i / 24, so the loop closes, and the same scene and seed give the same frames. Out comes a looping GIF, an animated WebP or an MP4 (with ffmpeg on the PATH). GIFs are written by Levni’s own encoder, which stores only the pixels that change from one frame to the next. No browser, no video tool, no new dependency.',
+    fields: ['npx @levni/levni animate scene.json loop.gif --width 800', 'npx @levni/levni animate scene.json loop.webp --frames 36 --fps 12 --boil 3 --strip frames.png', 'MCP: render_animation writes the file and returns the critic’s notes with a strip of four frames'],
+    link: [doc('docs/animate.md'), 'Animation guide'] },
+  { id: 'motion', title: 'Motion on any element', gallery: 'motion', img: ['/g/motion/01-typed-headline.webp', '/g/motion/09-stagger-icons-s.webp', '/g/motion/03-camera-push-s.webp'], loop: [mo('01-typed-headline'), mo('09-stagger-icons'), mo('03-camera-push')], dims: [[1200, 673], [640, 359], [640, 359]],
+    alt: ['The headline Ship it today typed out with a caret, a sparkle popping in and spinning on a mustard disc', 'Five drawings popping in one after another, then floating out of step', 'The riso rocket cover with the camera pushing in and coming back'],
+    text: 'A prop, a panel, type, a label or a chart moves when you give it motion. Loops run whole cycles, so the last frame meets the first: float, drift, orbit, sway, wiggle, pulse, spin and blink. Entrances play once and hold: pop, fade, slide, wipe and typewriter, and with "out": true they leave the same way at the end of the loop. Seventeen easing curves, "stagger" to set moving elements one beat apart, and a "camera" that pushes in and comes back while the title layer stays put. A fitted headline keeps the size of its finished text while it is typed.',
+    sub: ['README banners that move', 'The same motion makes a README banner move: the repo name types itself, the mark pops in and floats, the lines slide in. bannerScene({ ..., motion: true }) builds the scene, and the banner maker’s Animated GIF button draws it in your browser.'],
+    fields: ['{ "type": "prop", "name": "rocket", "x": 900, "y": 336, "size": 320, "motion": "float" }', '{ "type": "type", "text": "Ship it", "fit": "box", "motion": { "type": "typewriter", "delay": 0.1, "cursor": "_" } }', '{ "type": "prop", "name": "star", "motion": ["pop", { "type": "spin", "turns": 2 }] }', '"stagger": 0.06, "camera": { "zoom": 1.08 }'],
+    link: [doc('docs/animate.md#motion-on-any-element'), 'Motion reference'], more: ['/banner/', 'Make a moving banner'] },
+  { id: 'brandkit', title: 'Brand kits', img: ['/features/brandkit.webp'], dims: [[1200, 787]], alt: ['A brand kit for İncir Ağacı, a bakery: link previews and covers, a brand board, a square post, a story, a transparent mark, the palette, favicons and four posters, all with one fig mark in plum, orange, mustard and paper'],
+    text: 'levni brand turns one small brand spec into a folder of assets that look like one family: a mark (PNG and SVG on a clear ground), favicons, a palette, a link preview, a cover, a square post, a story, a README banner, a brand board, posters and a short loop, all in the same inks. Only the name is required; the mark, the inks and the poster words are picked when you leave them out. Give it a website instead and it reads the name, tagline and colours from the page once. One index.html shows the whole kit.',
+    fields: ['{ "brand": { "name": "İncir Ağacı", "tagline": "Slow-baked bread, ripe figs and strong tea, since 1987", "inks": ["#2B1B3D", "#E4572E", "#F2B134", "#F5EDE0"] }, "posters": 4 }', 'npx @levni/levni brand brand.json kit/ --only og,cover,board', 'MCP: render_brand_kit with the same spec'],
+    link: [doc('docs/brandkit.md'), 'Brand kit guide'] },
+  { id: 'storyboard', title: 'Storyboards', img: ['/features/storyboard.webp'], dims: [[1200, 860]], alt: ['A six-shot storyboard sheet for a coffee subscription teaser: numbered frames with titles, durations, timecodes and notes in Turkish'],
+    text: 'levni storyboard draws a shot list before anyone renders a video. Give each shot a prop, a camera, some on-screen words and a duration; out comes one contact sheet with a numbered frame per shot, its title, length, running timecode and note. --frames-dir also writes every frame full size and a shots.json, so Remotion, Blender or an editor can read the same plan. A bare [{ id, desc, frames }] list works as it is.',
+    fields: ['{ "title": "Kumru Kahve: sabah aboneliği, 21 sn", "format": "youtube", "shots": [{ "title": "Sabah, ilk fincan", "prop": "coffee-cup", "camera": "close", "text": "Güne yavaş başla.", "duration": 3 }] }', 'npx @levni/levni storyboard spec.json board.png --frames-dir shots/', 'MCP: render_storyboard'],
+    link: [doc('docs/storyboard.md'), 'Storyboard guide'] },
   { id: 'posters', title: 'Branding posters', gallery: 'posters', img: ['/features/poster-series.webp'], alt: ['Eight portrait posters for a coffee roaster called Kumru, sharing one dove mark, inks and type: halftone, a dot-matrix world, a module grid, camouflage, rotated words and a dark launch poster'],
     text: 'One brand spec makes eight portrait posters (1200 × 1600) that read as one series: split, map, bauhaus, echo, camo, vertical, summit and launch. The words go one per poster, the mark is halftoned, echoed and printed on them, and the inks are shared. It is the kind of series a studio posts when it launches an identity, with no image model behind it.',
     sub: ['Type from real fonts', 'The type element draws text as paths from bundled open fonts (Space Grotesk, Archivo Black, JetBrains Mono and the Departure Mono pixel face), so a headline looks the same on every machine and stays sharp at any size. It is an ordinary element: use it in any scene, next to block, amtone, camo, grain, shapegrid, echo, dotmatrix and furniture.'],
@@ -69,25 +90,33 @@ const features = [
   { id: 'formats', title: 'Every format, plus a title', gallery: 'formats', img: ['/g/formats/all.webp'], alt: ['One scene as a tall story, an Open Graph card, a square post and a YouTube thumbnail, each with the same headline'],
     text: 'Render one scene as a cover, Open Graph card, square, story or YouTube thumbnail. Levni recomposes rather than crops: grounds stretch, objects move together into the free space. An optional title layer sets a crisp headline, kicker and brand line.',
     link: [doc('docs/scene.md#formats-and-reflow'), 'Formats and titles'] },
+  { id: 'export', title: 'Frames, sprite sheets, clear grounds and tiles', img: ['/features/sprite-sheet.webp'], dims: [[1200, 336]], alt: ['A sprite sheet: eight frames of a 3D rocket icon turning, in two rows of four'],
+    text: 'More ways out of a scene. A frame sequence (frame-0001.png and on, plus frames.json) steps through Remotion or any video tool. A sprite sheet puts every frame on one PNG with an atlas in the TexturePacker JSON-hash layout that Phaser, Pixi and Godot read. --transparent renders on a clear ground for stickers and overlays, and --tile renders a seamless square texture for Blender or three.js. Two more sizes: hd (1920 × 1080) and readme (1280 × 640).',
+    fields: ['npx @levni/levni animate scene.json loop.webp --frames-dir public/levni', 'npx @levni/levni animate scene.json loop.webp --sprite sheet.png --columns 4', 'npx @levni/levni render scene.json sticker.png --transparent', 'npx @levni/levni render scene.json paper.png --tile 512'],
+    link: [doc('docs/export.md'), 'Export guide'] },
+  { id: 'webtools', title: 'Free tools in your browser', img: ['/g/motion/10-readme-banner.webp'], loop: [mo('10-readme-banner')], dims: [[1200, 600]], alt: ['A README banner for levni: the name types itself, a tulip pops in on a mustard disc and floats, the description slides up'],
+    text: 'Levni also runs in the browser, so some of it needs no install at all. Four free tools draw in your browser, with no sign-up and no watermark: a mesh gradient generator, an SVG pattern generator, a blob and wave generator for section dividers, and an OG image generator with drawings. The README banner maker turns a GitHub link into a 1280 × 640 banner, and its Animated GIF button draws the moving version frame by frame.',
+    links: [['/tools/mesh-gradient-generator/', 'Mesh gradients'], ['/tools/svg-pattern-generator/', 'SVG patterns'], ['/tools/blob-wave-generator/', 'Blobs and waves'], ['/tools/og-image-generator/', 'OG images']],
+    link: ['/tools/', 'All free tools'], more: ['/banner/', 'README banner maker'] },
   { id: 'sensitive', title: 'Calm images for hard news', img: ['/features/sensitive.webp', '/g/worlds/street-blue-s.webp'], alt: ['A memorial candle and a single flower in quiet blues', 'An isometric street in blues only'],
     text: 'A pack of dignified drawings for loss, disaster, illness, courts and grief: memorial candles, an empty chair, a closed door with light under it, a dove. One object, lots of space, blue only.',
     link: [doc('docs/sensitive.md'), 'Illustrating sensitive stories'] },
 ];
 const tools = [
-  ['MCP server', 'Claude, Cursor and any MCP client search the library, render scenes, brand boards and poster series, and read the critic.', '/mcp/'],
+  ['MCP server', 'Ten tools for Claude, Cursor and any MCP client: search the library, render scenes, loops, brand boards, poster series, storyboards and brand kits, and read the critic.', '/mcp/'],
   ['Ghost', 'Find drafts without images, preview a cover and inline images, attach them after your OK.', '/mcp/#ghost'],
-  ['CLI', 'levni render, board, poster, sheet, list, add, check, judge and ghost from any terminal or CI job.', SITE.github],
+  ['CLI', 'levni render, animate, brand, storyboard, board, poster, sheet, list, add, check, judge, ghost and mcp from any terminal or CI job.', SITE.github],
   ['Judge', 'Optional: rate renders against a brief with your own model key, scoring twice to beat position bias.', doc('docs/judge.md')],
 ];
 const jsonld = [{ '@type': 'SoftwareApplication', name: 'Levni', applicationCategory: 'DesignApplication', operatingSystem: 'macOS, Linux, Windows (Node.js 20+)', url: `${SITE.url}/features/`, featureList: features.map((f) => f.title).concat(tools.map((t) => t[0])), offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, publisher: { '@id': `${SITE.ortakAlan}/#organization` } }];
 ---
-<Base og="/og/features.png" title="Features" description="Everything Levni draws: a library of over 1,600 drawings, style packs and custom inks, branding posters, brand assets (dither, mesh gradients, ASCII art, seals and stickers, terrain and etching, brand boards), soft 3D covers and 3D icons, isometric worlds, pixel icons, faceless people, fusion slots, hand-inked charts, every social format, and MCP and Ghost tools for agents." jsonld={jsonld}>
+<Base og="/og/features.png" title="Features" description="Everything Levni draws: looping animations (GIF, WebP, MP4) and motion on any element, brand kits, storyboards, a library of over 1,600 drawings, style packs and custom inks, branding posters, brand assets (dither, mesh gradients, ASCII art, seals and stickers, terrain and etching, brand boards), soft 3D covers and 3D icons, isometric worlds, pixel icons, faceless people, fusion slots, hand-inked charts, every social format, and MCP and Ghost tools for agents." jsonld={jsonld}>
   <div class="wrap page">
     <header class="brand-hero">
     <p class="eyebrow">Features</p>
     <h1>Everything Levni <em class="accent">draws</em>.</h1>
-    <p class="lede">Your agent’s design studio: illustrations, icons, charts, brand assets, brand boards and branding posters, drawn from a few lines of JSON. Free, local, no image model.</p>
-    <p class="new"><strong>New in 0.3: branding posters.</strong> One brand spec, eight portrait posters, type drawn from real fonts. <a class="text-link" href="#posters">See how</a> · <a class="text-link" href="/changelog/">What else is new</a></p>
+    <p class="lede">Your agent’s design studio: illustrations, icons, charts, loops, brand assets, brand kits, brand boards and branding posters, drawn from a few lines of JSON. Free, local, no image model.</p>
+    <p class="new"><strong>New in 0.5: motion.</strong> Any scene as a looping GIF, animated WebP or MP4, motion on any element, brand kits and storyboards. <a class="text-link" href="#animate">See how</a> · <a class="text-link" href="/changelog/">What else is new</a></p>
     <nav class="toc" aria-label="On this page">
       <a href="#library">Library</a>{features.map((f) => <a href={`#${f.id}`}>{f.title}</a>)}<a href="#agents">Agents and tools</a>
     </nav>
@@ -112,9 +141,13 @@ const jsonld = [{ '@type': 'SoftwareApplication', name: 'Levni', applicationCate
           <p>{f.text}</p>
           {f.sub && <><h3>{f.sub[0]}</h3><p>{f.sub[1]}</p></>}
           {f.fields && <div class="fields">{f.fields.map((c) => <code>{c}</code>)}</div>}
-          <p class="links">{MAKE_FOR[f.id] && <a class="text-link try-link" href={`/make/${MAKE_FOR[f.id]}/`}>Try it free in your browser</a>}<a class="text-link" href={f.link[0]}>{f.link[1]}</a>{f.more && <a class="text-link" href={f.more[0]}>{f.more[1]}</a>}{f.gallery && <a class="text-link" href={`/gallery/#${f.gallery}`}>See them in the gallery</a>}</p>
+          <p class="links">{MAKE_FOR[f.id] && <a class="text-link try-link" href={`/make/${MAKE_FOR[f.id]}/`}>Try it free in your browser</a>}{f.links && f.links.map(([href, t]) => <a class="text-link try-link" href={href}>{t}</a>)}<a class="text-link" href={f.link[0]}>{f.link[1]}</a>{f.more && <a class="text-link" href={f.more[0]}>{f.more[1]}</a>}{f.gallery && <a class="text-link" href={`/gallery/#${f.gallery}`}>See them in the gallery</a>}</p>
         </div>
-        <div class={`imgs n${f.img.length}`}>{f.img.map((src, k) => <img class="tezhip" src={src} alt={f.alt[k]} width={src.includes('/g/icons/') ? 400 : src.includes('/g/boards/') || src.includes('poster-series') ? 1200 : 800} height={src.includes('/g/icons/') ? 400 : src.includes('/g/boards/') ? 800 : src.includes('poster-series') ? 794 : 449} loading="lazy" decoding="async" />)}</div>
+        <div class={`imgs n${f.img.length}`}>{f.img.map((src, k) => {
+          const [w, h] = f.dims?.[k] ?? [src.includes('/g/icons/') ? 400 : src.includes('/g/boards/') || src.includes('poster-series') ? 1200 : 800, src.includes('/g/icons/') ? 400 : src.includes('/g/boards/') ? 800 : src.includes('poster-series') ? 794 : 449];
+          const img = <img class="tezhip" src={src} alt={f.alt[k]} width={w} height={h} loading="lazy" decoding="async" />;
+          return f.loop?.[k] ? <picture><source media="(prefers-reduced-motion: no-preference)" srcset={f.loop[k]} type="image/webp" />{img}</picture> : img;
+        })}</div>
       </section>
     ))}
 
@@ -147,6 +180,8 @@ const jsonld = [{ '@type': 'SoftwareApplication', name: 'Levni', applicationCate
   .imgs.n3 img:first-child { grid-column: 1 / -1; }
   .links { display: flex; flex-wrap: wrap; gap: 4px 20px; }
   .imgs img { width: 100%; padding: 5px; }
+  .imgs picture { display: block; min-width: 0; }
+  .imgs.n3 picture:first-child { grid-column: 1 / -1; }
   .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
   .tiles img { width: 100%; background: var(--paper-2); border: 1px solid var(--rule); border-radius: 0; }
   .agents { margin-top: 80px; }

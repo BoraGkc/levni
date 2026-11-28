@@ -1,0 +1,51 @@
+name: Skill
+description: Propose a design skill, a written recipe that tells an agent how to make one kind of picture with Levni and how to check it.
+labels: ["skill"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A skill is plain writing, not code. A good one answers four questions. Rough ideas are welcome. See the [post on design skills](https://levni.dev/blog/open-source-design-skills/) for examples.
+  - type: input
+    id: name
+    attributes:
+      label: Skill name
+      description: Lowercase, a-z and hyphens, e.g. poster-art-direction.
+    validations:
+      required: true
+  - type: textarea
+    id: when
+    attributes:
+      label: When should an agent use it, and when not?
+    validations:
+      required: true
+  - type: textarea
+    id: read
+    attributes:
+      label: What does it read before it starts?
+      description: A brand.json, a brief, a scene, a page of the docs.
+  - type: textarea
+    id: steps
+    attributes:
+      label: What steps does it take, in order?
+    validations:
+      required: true
+  - type: textarea
+    id: check
+    attributes:
+      label: How does it know the result is good?
+      description: Critic notes, sizes, contrast, a look at the render. And what it does when the result is not good.
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: A scene or a render, if you have one
+      render: json
+  - type: checkboxes
+    id: licence
+    attributes:
+      label: Licence
+      options:
+        - label: I am happy for this skill to be published under the MIT licence.
+          required: true

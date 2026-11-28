@@ -37,7 +37,7 @@ const shots = [
 >
   <p class="eyebrow">Reference</p>
   <h1>Elements</h1>
-  <p class="lede">The building blocks of a scene. Start with <code>prop</code> (a drawing from the library); reach for the rest when you need a ground, a chart, a 3D world or a brand texture. The scene fields and the critic are on <a href="/docs/scenes/">Scenes</a>.</p>
+  <p class="lede">The building blocks of a scene. Start with <code>prop</code> (a drawing from the library); reach for the rest when you need a ground, a chart, a 3D world or a brand texture. The scene fields and the critic are on <a href="/docs/scenes/">Scenes</a>. Every element also takes <code>motion</code> to move in an animation; see <a href="/docs/animation/">Animation</a>.</p>
 
   <div class="shots">
     {shots.map(([src, alt, cap]) => (
@@ -48,5 +48,5 @@ const shots = [
 
   {parts.map((p) => <Fragment set:html={p.html} />)}
 
-  <p>Next: <a href="/docs/boards/">brand boards</a> and <a href="/docs/posters/">branding posters</a> use these same elements.</p>
+  <p>Next: <a href="/docs/animation/">animation</a> makes any of these move; <a href="/docs/boards/">brand boards</a> and <a href="/docs/posters/">branding posters</a> use these same elements.</p>
 </Docs>

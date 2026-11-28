@@ -74,5 +74,29 @@ export async function toCanvas(svg, { scale = 1 } = {}) {
   } finally { URL.revokeObjectURL(url); }
 }
 
+// A scene as a looping GIF, made in the page: each frame is drawn by the browser, then packed by src/gif.mjs.
+// opts: frames (24), fps (12), width (px, default the canvas width), colours (128), onProgress(done, total).
+// Returns a Blob (image/gif). The same loop from Node: animate() in src/animate.mjs.
+export async function animateBlob(spec, { frames = 24, fps = 12, width, colours = 128, onProgress } = {}) {
+  const { compose } = await import('./compose.mjs');
+  const { encodeGif } = await import('./gif.mjs');
+  const n = Math.max(1, Math.min(240, Math.round(frames) || 24));
+  const raws = [];
+  let w = 0, h = 0, last = null, lastSvg = null;
+  for (let i = 0; i < n; i++) {
+    const { svg, canvas } = await compose({ ...spec, t: i / n });
+    if (svg !== lastSvg) { // identical frames are drawn once
+      const c = await toCanvas(svg, { scale: width ? Math.min(1, width / canvas.w) : 1 });
+      w = c.width; h = c.height;
+      last = c.getContext('2d').getImageData(0, 0, w, h).data;
+      lastSvg = svg;
+    }
+    raws.push(last);
+    onProgress?.(i + 1, n);
+    await new Promise((r) => setTimeout(r)); // let the page paint its progress
+  }
+  return new Blob([encodeGif(raws, w, h, { delay: Math.round(1000 / (Math.round(fps) || 12)), colours })], { type: 'image/gif' });
+}
+
 export const toBlob = async (svg, { type = 'image/png', quality, scale } = {}) =>
   new Promise(async (ok, fail) => (await toCanvas(svg, { scale })).toBlob((b) => (b ? ok(b) : fail(new Error('canvas export failed'))), type, quality));

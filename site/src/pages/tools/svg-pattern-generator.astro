@@ -1,0 +1,292 @@
+---
+import ToolPage from '../../components/tools/ToolPage.astro';
+import { FREE_FAQ, JSON_FAQ } from '../../data/tools';
+
+const faq = [
+  FREE_FAQ,
+  { q: 'Which patterns tile seamlessly?', a: 'Confetti, stars, rain, the dot grid and the shape grid are drawn so the right edge continues on the left and the bottom on the top. Turn on “Show as tiles” to check. Waves, hatching, halftone, flow lines and marks are backgrounds: use them at the size you export.' },
+  { q: 'How do I use a tile in CSS?', a: 'Download the SVG and set it as a repeating background, for example background: url(pattern.svg) 0 0 / 300px 300px repeat. Use the same size you exported, or any size with the same proportions.' },
+  JSON_FAQ,
+];
+const PRESETS = {
+  riso: { label: 'Riso', inks: ['#4B2FD6', '#FF3A44', '#D6E521'], ground: '#F3F1EA' },
+  night: { label: 'Night', inks: ['#D6E521', '#FF39B4', '#58C4F6'], ground: '#2B1A8F' },
+  mono: { label: 'Mono', inks: ['#1B1340', '#5B5580'], ground: '#FFFFFF' },
+  candy: { label: 'Candy', inks: ['#FF39B4', '#66DCC2', '#F7C744'], ground: '#FFF7FB' },
+  earth: { label: 'Earth', inks: ['#1E783F', '#F28C38', '#F7C744'], ground: '#F3F1EA' },
+};
+const TYPES = [
+  ['confetti', 'Confetti (tiles)'], ['stars', 'Stars (tiles)'], ['rain', 'Rain (tiles)'], ['dots', 'Dot grid (tiles)'], ['shapes', 'Shape grid (tiles)'],
+  ['waves', 'Waves'], ['hatch', 'Hatching'], ['halftone', 'Halftone'], ['flow', 'Flow lines'], ['marks', 'Marks and sparks'],
+];
+const SIZES = { t300: 'Tile 300 × 300', t600: 'Tile 600 × 600', og: 'OG card 1200 × 630', square: 'Square 1080 × 1080', hd: 'Desktop 1920 × 1080' };
+---
+<ToolPage
+  title="Free SVG pattern generator in your brand colours"
+  description="Make seamless SVG patterns and textured backgrounds in two or three of your brand colours: confetti, dot grids, shape grids, waves, hatching. Free, no sign-up."
+  name="Levni SVG pattern generator"
+  eyebrow="Free tool"
+  h1="SVG pattern generator"
+  lede="Brand patterns from Levni's hand-drawn textures. Pick a pattern, set your two or three inks and the density, shuffle the seed. Tiles repeat without a seam. Download SVG or PNG, free and without a watermark."
+  faq={faq}
+>
+  <div class="tl-stage" id="pt" data-presets={JSON.stringify(PRESETS)}>
+    <div class="tl-view">
+      <figure class="tl-preview" id="pt-preview" aria-busy="true">
+        <img id="pt-img" alt="Pattern preview" />
+      </figure>
+      <p class="tl-meta" id="pt-meta" aria-live="polite"></p>
+      <div class="tl-actions">
+        <button type="button" class="tl-go" id="pt-svg">Download SVG</button>
+        <button type="button" class="tl-ghost" id="pt-png">PNG</button>
+        <button type="button" class="tl-ghost" id="pt-png2">PNG 2×</button>
+        <button type="button" class="tl-ghost" id="pt-json">Copy scene JSON</button>
+        <button type="button" class="tl-ghost" id="pt-link">Copy link</button>
+      </div>
+      <div class="tl-code" id="pt-css-box" hidden><pre id="pt-css"></pre><button type="button" id="pt-css-copy">Copy</button></div>
+    </div>
+
+    <div class="tl-controls">
+      <div class="tl-field">
+        <label class="tl-lbl" for="pt-type">Pattern</label>
+        <select id="pt-type">{TYPES.map(([k, v]) => <option value={k}>{v}</option>)}</select>
+      </div>
+      <label class="tl-check" id="pt-tile-wrap"><input type="checkbox" id="pt-tile" /> Show as tiles (2 × 2)</label>
+
+      <fieldset>
+        <legend>Ink presets</legend>
+        <div class="tl-chips" id="pt-presets">
+          {Object.entries(PRESETS).map(([k, p]) => (
+            <button type="button" data-preset={k} aria-pressed="false"><span class="tl-sw" aria-hidden="true">{[p.ground, ...p.inks].map((c) => <i style={`background:${c}`}></i>)}</span>{p.label}</button>
+          ))}
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Inks</legend>
+        <div class="tl-inks" id="pt-inks"></div>
+      </fieldset>
+      <label class="tl-check"><input type="checkbox" id="pt-clear" /> Transparent ground</label>
+      <label class="tl-check" id="pt-hand-wrap"><input type="checkbox" id="pt-hand" /> Hand-inked lines</label>
+
+      <div class="tl-field">
+        <span class="tl-row2"><label for="pt-density">Density</label><output id="pt-density-o" for="pt-density"></output></span>
+        <input id="pt-density" type="range" min="1" max="10" step="1" />
+      </div>
+      <div class="tl-field" id="pt-scale-wrap">
+        <span class="tl-row2"><label for="pt-scale" id="pt-scale-l">Size</label><output id="pt-scale-o" for="pt-scale"></output></span>
+        <input id="pt-scale" type="range" min="1" max="10" step="1" />
+      </div>
+
+      <div class="tl-field">
+        <label class="tl-lbl" for="pt-seed">Seed</label>
+        <span class="tl-seed"><input id="pt-seed" type="number" min="1" max="9999" inputmode="numeric" /><button type="button" class="tl-ghost" id="pt-shuffle">Shuffle</button></span>
+      </div>
+      <div class="tl-field">
+        <label class="tl-lbl" for="pt-size">Size</label>
+        <select id="pt-size">{Object.entries(SIZES).map(([k, v]) => <option value={k}>{v}</option>)}</select>
+      </div>
+    </div>
+  </div>
+
+  <Fragment slot="about">
+    <h2>How it works</h2>
+    <p>Each pattern is a Levni texture element: <code>confetti</code>, <code>dotmatrix</code>, <code>shapegrid</code>, <code>waves</code>, <code>hatch</code>, <code>halftone</code>, <code>flowfield</code> or <code>marks</code>. The seed places every mark, so the same settings always draw the same pattern, and the link in your address bar brings it back.</p>
+    <p>The tiling patterns are drawn nine times around the tile with the same seed and cut to the tile, so whatever leaves one edge comes back on the other. Grids are sized so a whole number of cells fits. Use the SVG as a repeating CSS background, or the PNG in tools that need pixels.</p>
+    <p>To make the same pattern from the command line or an agent, copy the scene JSON and run <code>npx @levni/levni render scene.json pattern.svg</code>. The <a href="/mcp/">Levni MCP server</a> lets an agent draw patterns like these on your machine and place them behind a title or a drawing.</p>
+  </Fragment>
+</ToolPage>
+
+<script>
+  import { render, showSvg, savePng, saveSvg, copy, readHash, writeHash, debounce, newSeed, clampInt, hexList, isHex, hex, timed } from '../../components/tools/engine';
+
+  type Preset = { label: string; inks: string[]; ground: string };
+  const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+  const PRESETS: Record<string, Preset> = JSON.parse($('pt').dataset.presets!);
+  const SIZES: Record<string, [number, number]> = { t300: [300, 300], t600: [600, 600], og: [1200, 630], square: [1080, 1080], hd: [1920, 1080] };
+  const lerp = (a: number, b: number, k: number) => a + (b - a) * k; // k 0..1
+  const k10 = (v: number) => (v - 1) / 9;
+
+  // every pattern: does it tile, what the second slider means, and the elements for a W x H canvas
+  type Ctx = { W: number; H: number; inks: string[]; d: number; z: number; seed: number };
+  type Pattern = { tile: boolean; size?: string; build: (c: Ctx) => any[] };
+  // nine copies with the same element seed, so marks leaving one edge come back on the other (cut by the canvas)
+  const wrap = (W: number, H: number, el: any) => [-1, 0, 1].flatMap((j) => [-1, 0, 1].map((i) => ({ ...el, x: el.x + i * W, y: el.y + j * H })));
+  const divisorNear = (W: number, H: number, want: number) => {
+    const g = (a: number, b: number): number => (b ? g(b, a % b) : a), G = g(W, H);
+    let best = G;
+    for (let k = 1; k <= G; k++) if (G % k === 0 && Math.abs(k - want) < Math.abs(best - want)) best = k;
+    return best;
+  };
+  const PATTERNS: Record<string, Pattern> = {
+    confetti: { tile: true, build: ({ W, H, inks, d, seed }) => wrap(W, H, { type: 'confetti', kind: 'confetti', x: 0, y: 0, w: W, h: H, spacing: Math.round(lerp(90, 22, k10(d))), colors: inks, seed }) },
+    stars: { tile: true, build: ({ W, H, inks, d, seed }) => wrap(W, H, { type: 'confetti', kind: 'stars', x: 0, y: 0, w: W, h: H, spacing: Math.round(lerp(90, 22, k10(d))), colors: inks, seed }) },
+    rain: { tile: true, build: ({ W, H, inks, d, seed }) => wrap(W, H, { type: 'confetti', kind: 'rain', x: 0, y: 0, w: W, h: H, spacing: Math.round(lerp(80, 18, k10(d))), colors: inks, seed }) },
+    dots: {
+      tile: true, size: 'Cell size',
+      build: ({ W, H, inks, d, z, seed }) => {
+        const cell = divisorNear(W, H, Math.round(lerp(8, 60, k10(z))));
+        return [{ type: 'dotmatrix', x: 0, y: 0, w: W, h: H, cell, filled: inks[0], hollow: 0.25, hollowMode: 'random', hollowColor: inks[1] || inks[0], accent: inks[2] || inks[1] || inks[0], accentShare: inks[2] ? 0.08 : 0, dot: Number(lerp(0.3, 0.86, k10(d)).toFixed(2)), seed }];
+      },
+    },
+    shapes: {
+      tile: true, size: 'Cells across',
+      build: ({ W, H, inks, d, z, seed }) => {
+        const cols = Math.round(lerp(14, 2, k10(z))), cell = W / cols, rows = Math.max(1, Math.round(H / cell)), gap = Math.round(cell * 0.12);
+        return [{ type: 'shapegrid', x: gap / 2, y: gap / 2, w: W - gap, h: H - gap, cols, rows, gap, colors: inks, weights: inks.map((_, i) => (i ? 2 : 4)), blank: Number(lerp(0.55, 0, k10(d)).toFixed(2)), seed }];
+      },
+    },
+    waves: {
+      tile: false, size: 'Line weight',
+      build: ({ W, H, inks, d, z }) => {
+        const gap = Math.round(lerp(70, 16, k10(d))) * inks.length, weight = Number(lerp(2, 10, k10(z)).toFixed(1));
+        return inks.map((color, i) => ({ type: 'waves', x: -40, y: Math.round(10 + (i * gap) / inks.length), w: W + 80, h: H, gap, amp: Math.round(weight * 1.2 + 3), color, weight }));
+      },
+    },
+    hatch: {
+      tile: false, size: 'Line weight',
+      build: ({ W, H, inks, d, z }) => inks.map((color, i) => ({ type: 'hatch', x: -20, y: -20, w: W + 40, h: H + 40, color, angle: Number((-0.7 + i * (Math.PI / (inks.length + 0.4))).toFixed(2)), gap: Math.round(lerp(48, 9, k10(d))) * inks.length, weight: Number(lerp(1.5, 8, k10(z)).toFixed(1)), seed: i + 1 })),
+    },
+    halftone: {
+      tile: false, size: 'Dot spacing',
+      build: ({ W, H, inks, d, z }) => {
+        const gap = Math.round(lerp(8, 40, k10(z))), level = Number(lerp(0.6, 2.2, k10(d)).toFixed(2));
+        const spots = [[0.15, 0.2], [0.85, 0.8], [0.8, 0.15]];
+        return inks.map((color, i) => ({ type: 'halftone', x: 0, y: 0, w: W, h: H, color, mode: 'radial', cx: Math.round(W * spots[i][0]), cy: Math.round(H * spots[i][1]), gap: gap + i * 2, level }));
+      },
+    },
+    flow: {
+      tile: false, size: 'Line weight',
+      build: ({ W, H, inks, d, z, seed }) => [{ type: 'flowfield', x: 0, y: 0, w: W, h: H, colors: inks, spacing: Math.round(lerp(96, 22, k10(d))), weight: Number(lerp(2, 12, k10(z)).toFixed(1)), seed }],
+    },
+    marks: {
+      tile: false,
+      build: ({ W, H, inks, d }) => [{ type: 'marks', area: [24, 24, W - 48, H - 48], count: Math.round(((W * H) / 1e6) * lerp(20, 160, k10(d))), colors: inks }],
+    },
+  };
+
+  const img = $<HTMLImageElement>('pt-img'), preview = $('pt-preview'), meta = $('pt-meta'), inksEl = $('pt-inks');
+  const typeEl = $<HTMLSelectElement>('pt-type'), tileEl = $<HTMLInputElement>('pt-tile'), clearEl = $<HTMLInputElement>('pt-clear'), handEl = $<HTMLInputElement>('pt-hand');
+  const densEl = $<HTMLInputElement>('pt-density'), scaleEl = $<HTMLInputElement>('pt-scale'), seedEl = $<HTMLInputElement>('pt-seed'), sizeEl = $<HTMLSelectElement>('pt-size');
+
+  const h = readHash();
+  const S = {
+    p: h.p in PATTERNS ? h.p : 'confetti',
+    i: hexList(h.i).slice(0, 3),
+    g: isHex(h.g) ? hex(h.g) : PRESETS.riso.ground,
+    t: h.t === '1' ? 1 : 0, // transparent ground
+    hd: h.hd === '0' ? 0 : 1, // hand-inked
+    d: clampInt(h.d, 5, 1, 10),
+    z: clampInt(h.z, 5, 1, 10),
+    s: clampInt(h.s, 4, 1, 9999),
+    sz: h.sz in SIZES ? h.sz : 't600',
+  };
+  if (S.i.length < 2) S.i = [...PRESETS.riso.inks];
+  let tiled = h.tile === '1';
+
+  function scene() {
+    const [W, H] = SIZES[S.sz];
+    const elements = PATTERNS[S.p].build({ W, H, inks: S.i, d: S.d, z: S.z, seed: S.s });
+    // tiles use clean lines: the hand pen's wobble depends on absolute position, so hand-inked copies would not meet at the edges
+    return { seed: S.s, finish: 'soft', grain: 0, hand: !PATTERNS[S.p].tile && !!S.hd, canvas: [W, H], background: S.t ? 'none' : S.g, elements };
+  }
+
+  const shown = { url: '' };
+  let current = { svg: '', scene: null as any, url: '' }, token = 0;
+  async function draw() {
+    const my = ++token;
+    preview.setAttribute('aria-busy', 'true');
+    const sc = scene();
+    const svg = await timed(() => render(sc));
+    if (my !== token) return;
+    current = { svg, scene: sc, url: showSvg(img, svg, shown) };
+    const [W, H] = SIZES[S.sz], P = PATTERNS[S.p];
+    img.alt = `${typeEl.selectedOptions[0].text.replace(/ \(tiles\)/, '')} pattern in ${S.i.length} inks, ${W} by ${H} pixels`;
+    meta.textContent = `${W} × ${H} px · seed ${S.s} · ${P.tile ? 'tiles seamlessly' : 'background, does not tile'}`;
+    applyTiles();
+    preview.setAttribute('aria-busy', 'false');
+    writeHash({ ...S, tile: tiled ? 1 : '' });
+  }
+  const drawSoon = debounce(draw, 60);
+
+  // 2 x 2 preview: the SVG as a repeating background at half the preview's size
+  function applyTiles() {
+    const P = PATTERNS[S.p], on = P.tile && tiled;
+    preview.classList.toggle('tiled', on);
+    preview.style.backgroundImage = on ? `url(${current.url})` : '';
+    if (on) {
+      const [W, H] = SIZES[S.sz], box = preview.getBoundingClientRect(), tw = box.width / 2;
+      preview.style.backgroundSize = `${tw}px ${(tw * H) / W}px`;
+      preview.style.backgroundPosition = '0 0';
+      preview.style.height = `${(tw * H) / W * 2}px`;
+    } else { preview.style.backgroundSize = ''; preview.style.backgroundPosition = ''; preview.style.height = ''; }
+    preview.setAttribute('aria-label', on ? 'Pattern shown as 2 by 2 tiles' : 'Pattern preview');
+    const [W, H] = SIZES[S.sz];
+    $('pt-css-box').hidden = !P.tile;
+    $('pt-css').textContent = `background: url(pattern.svg) 0 0 / ${W / 2}px ${H / 2}px repeat;`;
+  }
+
+  function renderInks() {
+    inksEl.replaceChildren();
+    const mk = (val: string, label: string, aria: string, set: (v: string) => void) => {
+      const lab = document.createElement('label'); lab.className = 'tl-ink';
+      const inp = document.createElement('input'); inp.type = 'color'; inp.value = val.toLowerCase(); inp.setAttribute('aria-label', aria);
+      inp.addEventListener('input', () => { set(hex(inp.value)); markPreset(); drawSoon(); });
+      lab.append(inp, document.createTextNode(label));
+      return lab;
+    };
+    S.i.forEach((c, k) => inksEl.append(mk(c, String(k + 1), `Ink ${k + 1}`, (v) => (S.i[k] = v))));
+    inksEl.append(mk(S.g, 'ground', 'Ground colour', (v) => (S.g = v)));
+    const row = document.createElement('div'); row.className = 'tl-minirow';
+    const add = document.createElement('button'); add.type = 'button'; add.className = 'tl-mini'; add.textContent = '+ Third ink'; add.disabled = S.i.length >= 3;
+    add.addEventListener('click', () => { S.i.push('#D6E521'); renderInks(); markPreset(); draw(); });
+    const rm = document.createElement('button'); rm.type = 'button'; rm.className = 'tl-mini'; rm.textContent = '− Remove last'; rm.disabled = S.i.length <= 2;
+    rm.addEventListener('click', () => { S.i.pop(); renderInks(); markPreset(); draw(); });
+    row.append(add, rm); inksEl.append(row);
+  }
+  function markPreset() {
+    for (const b of document.querySelectorAll<HTMLButtonElement>('#pt-presets button')) {
+      const p = PRESETS[b.dataset.preset!];
+      b.setAttribute('aria-pressed', String(p.ground === S.g && p.inks.join() === S.i.join()));
+    }
+  }
+  function syncType() {
+    const P = PATTERNS[S.p];
+    $('pt-scale-wrap').hidden = !P.size;
+    $('pt-scale-l').textContent = P.size || 'Size';
+    $('pt-tile-wrap').hidden = !P.tile;
+    $('pt-hand-wrap').hidden = P.tile;
+  }
+  function syncControls() {
+    typeEl.value = S.p; tileEl.checked = tiled; clearEl.checked = !!S.t; handEl.checked = !!S.hd;
+    densEl.value = String(S.d); scaleEl.value = String(S.z); seedEl.value = String(S.s); sizeEl.value = S.sz;
+    $('pt-density-o').textContent = String(S.d); $('pt-scale-o').textContent = String(S.z);
+    syncType(); renderInks(); markPreset();
+  }
+
+  typeEl.addEventListener('change', () => { S.p = typeEl.value; syncType(); draw(); });
+  tileEl.addEventListener('change', () => { tiled = tileEl.checked; applyTiles(); writeHash({ ...S, tile: tiled ? 1 : '' }); });
+  clearEl.addEventListener('change', () => { S.t = clearEl.checked ? 1 : 0; draw(); });
+  handEl.addEventListener('change', () => { S.hd = handEl.checked ? 1 : 0; draw(); });
+  densEl.addEventListener('input', () => { S.d = +densEl.value; $('pt-density-o').textContent = String(S.d); drawSoon(); });
+  scaleEl.addEventListener('input', () => { S.z = +scaleEl.value; $('pt-scale-o').textContent = String(S.z); drawSoon(); });
+  seedEl.addEventListener('input', () => { S.s = clampInt(seedEl.value, S.s, 1, 9999); drawSoon(); });
+  $('pt-shuffle').addEventListener('click', () => { S.s = newSeed(); seedEl.value = String(S.s); draw(); });
+  sizeEl.addEventListener('change', () => { S.sz = sizeEl.value; draw(); });
+  $('pt-presets').addEventListener('click', (e) => {
+    const b = (e.target as HTMLElement).closest('button'); if (!b) return;
+    const p = PRESETS[b.dataset.preset!]; S.i = [...p.inks]; S.g = p.ground;
+    renderInks(); markPreset(); draw();
+  });
+  window.addEventListener('resize', debounce(applyTiles, 100));
+
+  const file = () => { const [W, H] = SIZES[S.sz]; return `${S.p}-pattern-${W}x${H}-${S.s}`; };
+  $('pt-svg').addEventListener('click', () => saveSvg(current.svg, `${file()}.svg`));
+  $('pt-png').addEventListener('click', () => savePng(current.svg, `${file()}.png`, 1));
+  $('pt-png2').addEventListener('click', () => savePng(current.svg, `${file()}@2x.png`, 2));
+  $('pt-json').addEventListener('click', (e) => copy(JSON.stringify(current.scene, null, 2), e.currentTarget as HTMLElement));
+  $('pt-link').addEventListener('click', (e) => copy(location.href, e.currentTarget as HTMLElement));
+  $('pt-css-copy').addEventListener('click', (e) => copy($('pt-css').textContent || '', e.currentTarget as HTMLElement));
+
+  syncControls();
+  draw();
+</script>

@@ -1,0 +1,58 @@
+---
+// The hub of the free browser tools: the four generators, the README banner maker and the editor.
+import Base from '../../layouts/Base.astro';
+import { SITE } from '../../site';
+import { TOOLS, MORE_TOOLS } from '../../data/tools';
+
+const all = [...TOOLS, ...MORE_TOOLS];
+const jsonld = [
+  { '@type': 'CollectionPage', name: 'Free design tools', url: `${SITE.url}/tools/`, hasPart: all.map((t) => ({ '@type': 'WebPage', name: t.name, url: `${SITE.url}${t.href}` })) },
+];
+---
+<Base title="Free design tools that run in your browser" description="Free tools for mesh gradients, SVG patterns, blobs and wave dividers, OG images and README banners. No sign-up, no watermark, drawn in your browser by Levni." jsonld={jsonld}>
+  <div class="wrap th">
+    <header class="brand-hero">
+      <p class="eyebrow">Free tools</p>
+      <h1>Free design tools, right in your browser.</h1>
+      <p class="lede">Gradients, patterns, dividers, link preview images and README banners. No sign-up, no watermark, no upload: Levni draws every picture on your own machine. Each tool gives you the scene JSON too, so the CLI or your agent can draw the same picture again.</p>
+    </header>
+
+    <h2 class="th-h">Generators</h2>
+    <ul class="th-grid">
+      {TOOLS.map((t, i) => (
+        <li><a href={t.href}><span class="th-n">{String(i + 1).padStart(2, '0')}</span><b>{t.name}</b><span>{t.text}</span><em>Open the tool →</em></a></li>
+      ))}
+    </ul>
+
+    <h2 class="th-h">Also free</h2>
+    <ul class="th-grid th-more">
+      {MORE_TOOLS.map((t) => (
+        <li><a href={t.href}><b>{t.name}</b><span>{t.text}</span><em>Open →</em></a></li>
+      ))}
+    </ul>
+
+    <section class="th-about">
+      <h2>Why these are free</h2>
+      <p>Levni is an open-source design engine under the MIT licence. It turns a JSON scene into an SVG or PNG, the same way every time for the same seed. These pages run that engine in your browser, so there is no server doing the work and nothing to charge for.</p>
+      <p>When you want more than one picture, copy the scene JSON and run <code>npx @levni/levni render scene.json out.png</code>, or add the <a href="/mcp/">Levni MCP server</a> to your agent. For finished examples to start from, see the <a href="/make/">free makers</a>.</p>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .th h1 { max-width: 16ch; }
+  .th .lede { max-width: 64ch; }
+  .th-h { font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 0 0 16px; }
+  .th-grid { list-style: none; margin: 0 0 clamp(40px, 6vw, 64px); padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .th-grid a { display: grid; gap: 8px; align-content: start; height: 100%; padding: 22px 22px 20px; background: #fff; color: var(--ink); text-decoration: none; box-shadow: 0 0 0 1px var(--rule); }
+  .th-grid a:hover { box-shadow: 0 0 0 2px var(--ink); color: var(--ink); }
+  .th-n { font: 700 12px/1 var(--mono); letter-spacing: .06em; color: var(--accent); }
+  .th-grid b { font: 700 22px/1.15 var(--display); letter-spacing: -0.02em; }
+  .th-grid span:not(.th-n) { font-size: 15px; color: var(--ink-soft); line-height: 1.5; }
+  .th-grid em { font-style: normal; font-weight: 700; color: var(--accent-text); margin-top: 4px; }
+  .th-more a { background: transparent; }
+  .th-about { max-width: 720px; margin-bottom: clamp(40px, 6vw, 72px); }
+  .th-about h2 { margin: 0 0 14px; }
+  .th-about p { color: var(--ink-soft); }
+  @media (max-width: 640px) { .th-grid { grid-template-columns: minmax(0, 1fr); } }
+</style>

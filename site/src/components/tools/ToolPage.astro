@@ -1,0 +1,131 @@
+---
+// Shell for the /tools/ generators: brand hero, the tool (default slot), a short explanation (slot "about"),
+// questions with FAQ JSON-LD and links to the other tools. Styles follow /banner/ (tokens from Base.astro).
+import Base from '../../layouts/Base.astro';
+import { SITE } from '../../site';
+import { TOOLS, MORE_TOOLS, toolJsonLd } from '../../data/tools';
+
+interface Props {
+  title: string;
+  description: string;
+  name: string; // WebApplication name
+  eyebrow: string;
+  h1: string;
+  lede: string;
+  faq: { q: string; a: string }[];
+  og?: string;
+}
+const { title, description, name, eyebrow, h1, lede, faq, og } = Astro.props;
+const url = new URL(Astro.url.pathname, SITE.url).href;
+const others = [...TOOLS, ...MORE_TOOLS].filter((t) => t.href !== Astro.url.pathname);
+---
+<Base title={title} description={description} og={og} jsonld={toolJsonLd(name, url, faq)}>
+  <article class="wrap page tl">
+    <header class="brand-hero">
+      <p class="eyebrow">{eyebrow}</p>
+      <h1>{h1}</h1>
+      <p class="lede">{lede}</p>
+    </header>
+
+    <slot />
+
+    <section class="tl-about">
+      <slot name="about" />
+    </section>
+
+    <section class="tl-faq" aria-labelledby="tl-faq-h">
+      <h2 id="tl-faq-h">Questions</h2>
+      {faq.map(({ q, a }) => <details><summary>{q}</summary><p>{a}</p></details>)}
+    </section>
+
+    <nav class="tl-more" aria-label="More free tools">
+      <h2>More free tools</h2>
+      <ul>{others.map((t) => <li><a href={t.href}><b>{t.name}</b><span>{t.text}</span></a></li>)}</ul>
+    </nav>
+  </article>
+</Base>
+
+<style is:global>
+  .tl h1 { max-width: 16ch; }
+  .tl [hidden] { display: none !important; }
+  .tl .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  /* stage: live preview on the left, controls on the right (stacked below 860 px) */
+  .tl-stage { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 28px; align-items: start; }
+  .tl-view { position: sticky; top: 16px; min-width: 0; }
+  .tl-preview { margin: 0; display: grid; place-items: center; min-height: 240px; max-height: 72vh; padding: 0; overflow: hidden; background-color: #fff; background-image: linear-gradient(45deg, var(--rule) 25%, transparent 25%, transparent 75%, var(--rule) 75%), linear-gradient(45deg, var(--rule) 25%, transparent 25%, transparent 75%, var(--rule) 75%); background-size: 20px 20px; background-position: 0 0, 10px 10px; box-shadow: 0 1px 0 rgba(20,24,31,.06), 0 18px 40px -24px rgba(20,24,31,.45); }
+  .tl-preview img { display: block; max-width: 100%; max-height: 72vh; width: auto; height: auto; transition: opacity .15s; }
+  .tl-preview[aria-busy='true'] img { opacity: .7; }
+  .tl-preview img:not([src]) { visibility: hidden; }
+  .tl-preview.tiled { place-items: stretch; height: min(72vh, 560px); background-repeat: repeat; }
+  .tl-preview.tiled img { display: none; }
+  .tl-meta { margin: 10px 0 0; font: 500 13px/1.4 var(--mono); color: var(--ink-soft); }
+
+  .tl-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+  .tl-go, .tl-ghost { display: inline-block; text-decoration: none; font: 600 15px/1 var(--serif); padding: 13px 16px; border-radius: 0; border: 1.5px solid var(--indigo); cursor: pointer; white-space: nowrap; }
+  .tl-go { background: var(--indigo); color: var(--paper); }
+  .tl-ghost { background: transparent; color: var(--ink); }
+  .tl-go:hover { background: var(--accent-text); border-color: var(--accent-text); color: var(--paper); }
+  .tl-ghost:hover { background: #fff; color: var(--ink); }
+  .tl-status { min-height: 1.4em; margin: 10px 0 0; color: var(--ink-soft); font-size: 15px; }
+
+  .tl-controls fieldset { border: 0; padding: 0; margin: 0 0 20px; min-width: 0; }
+  .tl-controls legend, .tl-controls .tl-lbl { display: block; font: 700 12px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 10px; padding: 0; }
+  .tl-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tl-chips button { display: inline-flex; align-items: center; gap: 8px; font: 600 14px/1 var(--serif); padding: 9px 12px; border-radius: 0; border: 1.5px solid var(--rule); background: #fff; color: var(--ink); cursor: pointer; }
+  .tl-chips button[aria-pressed='true'] { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
+  .tl-sw { display: inline-flex; }
+  .tl-sw i { width: 12px; height: 16px; display: block; }
+  .tl-field { display: grid; gap: 6px; margin-bottom: 14px; font-size: 14px; color: var(--ink-soft); }
+  .tl-field output { font: 500 13px/1 var(--mono); color: var(--ink); }
+  .tl-field .tl-row2 { display: flex; justify-content: space-between; align-items: baseline; }
+  .tl-controls input[type='range'] { width: 100%; accent-color: var(--indigo); }
+  .tl-controls select, .tl-controls input[type='text'], .tl-controls input[type='search'], .tl-controls input[type='number'], .tl-controls textarea { width: 100%; font: 15px/1.35 var(--serif); padding: 10px 12px; border: 1.5px solid var(--rule); border-radius: 0; background: #fff; color: var(--ink); }
+  .tl-controls textarea { resize: vertical; }
+  .tl-controls :is(input, select, textarea, button):focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-color: var(--ink); }
+  .tl-inks { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .tl-ink { position: relative; display: grid; gap: 4px; justify-items: center; font: 500 11px/1 var(--mono); color: var(--ink-soft); }
+  .tl-ink input[type='color'] { width: 44px; height: 44px; padding: 0; border: 1.5px solid var(--rule); border-radius: 0; background: #fff; cursor: pointer; }
+  .tl-ink input[type='color']::-webkit-color-swatch-wrapper { padding: 3px; }
+  .tl-ink input[type='color']::-webkit-color-swatch { border: 0; border-radius: 0; }
+  .tl-ink input[type='color']::-moz-color-swatch { border: 0; border-radius: 0; }
+  .tl-minirow { display: flex; gap: 8px; width: 100%; }
+  .tl-mini { font: 600 13px/1 var(--serif); padding: 8px 10px; border: 1.5px solid var(--rule); background: #fff; color: var(--ink); cursor: pointer; }
+  .tl-mini:disabled { opacity: .45; cursor: default; }
+  .tl-iconbtn { width: 44px; height: 44px; font: 600 20px/1 var(--serif); border: 1.5px dashed var(--rule); background: transparent; color: var(--ink-soft); cursor: pointer; }
+  .tl-seed { display: flex; gap: 8px; align-items: stretch; }
+  .tl-seed input { flex: 1; min-width: 0; }
+  .tl-seed button { flex: none; }
+  .tl-two { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .tl-check { display: flex; gap: 8px; align-items: center; font-size: 15px; color: var(--ink); margin-bottom: 8px; cursor: pointer; }
+  .tl-check + fieldset, .tl-check + .tl-field { margin-top: 16px; }
+  .tl-check input { width: 18px; height: 18px; accent-color: var(--indigo); }
+
+  .tl-code { position: relative; margin-top: 16px; background: var(--indigo); color: var(--paper); }
+  .tl-code pre { margin: 0; padding: 16px 84px 16px 16px; overflow-x: auto; font: 13px/1.5 var(--mono); background: transparent; border: 0; color: var(--paper); white-space: pre-wrap; word-break: break-all; }
+  .tl-code button { position: absolute; top: 9px; right: 9px; font: 600 13px/1 var(--serif); padding: 8px 12px; border-radius: 0; border: 1px solid rgba(255,255,255,.3); background: transparent; color: var(--paper); cursor: pointer; }
+  .tl-code button:hover { background: var(--lime); color: var(--indigo); border-color: var(--lime); }
+
+  .tl-about { margin-top: clamp(48px, 7vw, 88px); max-width: 720px; }
+  .tl-about h2 { margin: 0 0 14px; }
+  .tl-about p { color: var(--ink-soft); }
+  .tl-about pre { white-space: pre-wrap; word-break: break-word; }
+  .tl-faq { margin-top: clamp(40px, 6vw, 64px); max-width: 720px; }
+  .tl-faq details { border-top: 1px solid var(--rule); padding: 14px 0; }
+  .tl-faq summary { font-weight: 600; cursor: pointer; }
+  .tl-faq details p { color: var(--ink-soft); margin: 10px 0 0; }
+  .tl-more { margin: clamp(40px, 6vw, 64px) 0 clamp(40px, 6vw, 72px); }
+  .tl-more h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 0 0 16px; }
+  .tl-more ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+  .tl-more a { display: grid; gap: 6px; height: 100%; padding: 16px; background: #fff; color: var(--ink); text-decoration: none; box-shadow: 0 0 0 1px var(--rule); }
+  .tl-more a:hover { box-shadow: 0 0 0 2px var(--ink); color: var(--ink); }
+  .tl-more b { font-size: 17px; }
+  .tl-more span { font-size: 14px; color: var(--ink-soft); line-height: 1.45; }
+
+  @media (max-width: 860px) {
+    .tl-stage { grid-template-columns: minmax(0, 1fr); }
+    .tl-view { position: static; }
+    .tl-preview { min-height: 0; }
+    .tl-preview, .tl-preview img { max-height: 60vh; }
+  }
+</style>

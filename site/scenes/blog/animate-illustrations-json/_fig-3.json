@@ -1,0 +1,18 @@
+{
+  "seed": 4,
+  "background": "paper",
+  "stagger": 0.1,
+  "camera": { "zoom": 1.1 },
+  "elements": [
+    { "type": "panel", "x": 60, "y": 230, "w": 1080, "h": 370, "color": "blue" },
+    { "type": "prop", "name": "coffee-cup", "x": 205, "y": 415, "size": 200, "diecut": true,
+      "motion": ["pop", { "type": "float", "amp": 10 }] },
+    { "type": "prop", "name": "book", "x": 465, "y": 415, "size": 200, "diecut": true,
+      "motion": ["pop", { "type": "float", "amp": 10 }] },
+    { "type": "prop", "name": "lightbulb", "x": 725, "y": 415, "size": 200, "diecut": true,
+      "motion": ["pop", { "type": "float", "amp": 10 }] },
+    { "type": "prop", "name": "compass", "x": 985, "y": 415, "size": 200, "diecut": true,
+      "motion": ["pop", { "type": "float", "amp": 10 }] },
+    { "type": "type", "text": "stagger 0.1, camera zoom 1.1", "x": 70, "y": 110, "size": 46, "font": "mono", "weight": 700, "color": "#14181F" }
+  ]
+}

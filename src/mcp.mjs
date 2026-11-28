@@ -21,6 +21,8 @@ const VERSION = JSON.parse(readFileSync(new URL('../package.json', import.meta.u
 const GUIDE = new URL('../docs/scene.md', import.meta.url);
 const BOARD_GUIDE = new URL('../docs/board.md', import.meta.url);
 const POSTER_GUIDE = new URL('../docs/poster.md', import.meta.url);
+const STORYBOARD_GUIDE = new URL('../docs/storyboard.md', import.meta.url);
+const BRANDKIT_GUIDE = new URL('../docs/brandkit.md', import.meta.url);
 
 const scene = { type: 'object', description: 'A Levni scene: { seed?, style?, background?, elements: [...] }. Canvas is 1200 x 673. Besides drawings (props) it makes brand assets: dither fields, grainy mesh gradients, ASCII/glyph fills, seals and stickers with ring text, wireframe terrain and engravings, and a `screen` print pass (1bit, riso, blueprint, gameboy, newsprint). `style` is \"riso\", \"miniature\" or your own inks, e.g. {\"blue\":\"#6A1B9A\",\"mustard\":\"#00BFA5\"}. Call scene_guide for every element type.' };
 export const TOOLS = [
@@ -60,6 +62,23 @@ export const TOOLS = [
     inputSchema: { type: 'object', properties: { scene }, required: ['scene'] },
   },
   {
+    name: 'render_animation',
+    description: 'Draw a scene as a short loop and write it as an animated .gif or .webp. The scene\'s `t` runs 0..1 over the frames: clouds with `drift` move, trees sway, flags wave, confetti falls, flowfield and halftone shift, meshgrad blobs breathe, soft3d / extrude3d with `spin` turn, glyphfill globes rotate. Frame N+1 after the last is the first, so it loops. Returns the critic\'s notes (it says so when nothing in the scene moves) and a strip of four frames to look at. GIF plays in GitHub READMEs, chat and email; WebP is several times smaller for web pages.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        scene,
+        out: { type: 'string', description: 'File path to write, relative to the server\'s working directory. Must end in .gif or .webp.' },
+        frames: { type: 'integer', description: 'Frames in the loop (default 24, max 240). Each takes about as long as one render_scene.' },
+        fps: { type: 'integer', description: 'Frames per second (default 12).' },
+        boil: { type: 'integer', description: 'Hand-drawn shimmer: this many crayon textures take turns (0 = steady, 2..8). Makes GIFs about twice as large.' },
+        width: { type: 'integer', description: 'Output width in px (default: the canvas width). 800 is a good README size.' },
+        preview: { type: 'boolean', description: 'Return a strip of four frames as an image (default true).' },
+      },
+      required: ['scene', 'out'],
+    },
+  },
+  {
     name: 'show_props',
     description: 'Contact image of up to 12 props with every variant numbered, to choose a drawing by eye.',
     inputSchema: {
@@ -92,6 +111,35 @@ export const TOOLS = [
         scenes: { type: 'boolean', description: 'Also return each poster as scene JSON (to tweak and pass to render_scene).' },
         preview: { type: 'boolean', description: 'Return the contact sheet image (default true).' },
         guide: { type: 'boolean', description: 'Return docs/poster.md and do nothing else.' },
+      },
+    },
+  },
+  {
+    name: 'render_storyboard',
+    description: 'Draw a storyboard before making a video: one contact sheet of numbered frames (id/title, duration, running timecode, note). Spec: { "title"?, "brand"?: {name, inks, mark}, "format"?: "youtube"|"hd"|"story"|"square"|[w,h], "shots": [{ "id"?, "title"?, "note"?, "duration"? (s) | "frames"?, "prop"? | "props"?, "camera"?: "wide"|"close"|"left"|"right", "background"?, "text"?, "scene"? }] }. A bare array of { id, desc, frames } also works. Unknown props give placeholders plus warnings. Set guide: true for the format.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        spec: { type: ['object', 'array'], description: 'Storyboard spec or a bare shot list.' },
+        out: { type: 'string', description: 'PNG path for the sheet, relative to the server\'s working directory.' },
+        frames_dir: { type: 'string', description: 'Folder for shot-NN.png (full size) and shots.json.' },
+        columns: { type: 'integer', description: 'Frames per row (default 3).' },
+        preview: { type: 'boolean', description: 'Return a 900 px preview image (default true).' },
+        guide: { type: 'boolean', description: 'Return docs/storyboard.md and do nothing else.' },
+      },
+    },
+  },
+  {
+    name: 'render_brand_kit',
+    description: 'Make a whole consistent brand kit from one brand: { "brand": { "name", "tagline"?, "mark"?: <prop name>, "inks"?: ["#RRGGBB", ...], "words"?: [...] }, "seed"?, "only"?: [asset names], "posters"?: 4 | 8 }. Writes mark.png/svg (transparent), favicons, palette, og, cover, social-square, story, readme-banner, board, posters/, loop.webp, brand.json, kit.json and index.html into out_dir, all with the same inks, mark and finish. Assets: mark, favicon, palette, og, cover, social-square, story, readme-banner, board, posters, loop. Pass url ONLY if the user gave a website: that single page is fetched to read its name, tagline and colours (other fields you pass win). Without out_dir nothing is written and the asset list is returned. guide: true for the format.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        spec: { type: 'object', description: '{ brand: {...}, seed?, only?, posters? }' },
+        url: { type: 'string', description: 'Optional http(s) page the user named. Fetched once to read name, tagline and colours; never fetched unless given.' },
+        out_dir: { type: 'string', description: 'Folder to write the kit into, relative to the server\'s working directory.' },
+        preview: { type: 'boolean', description: 'Return the kit\'s brand board image (default true when out_dir is set).' },
+        guide: { type: 'boolean', description: 'Return docs/brandkit.md and do nothing else.' },
       },
     },
   },
@@ -131,8 +179,8 @@ async function call(name, args = {}) {
 
   if (name === 'render_scene' || name === 'critique_scene') {
     const scene = asScene(args.scene);
-    const { svg, used } = await compose(scene);
-    const notes = critique(used);
+    const { svg, used, canvas } = await compose(scene);
+    const notes = critique(used, canvas); // og, square, story and custom sizes are measured against their own canvas
     const out = [text(notesText(notes))];
     if (name === 'critique_scene') return out;
     if (args.out) {
@@ -146,6 +194,57 @@ async function call(name, args = {}) {
       out.push(text(`wrote ${file}`));
     }
     if (args.preview !== false) out.push(image(await preview(svg, 560, scene.screen)));
+    return out;
+  }
+
+  if (name === 'render_animation') {
+    const scene = asScene(args.scene);
+    const file = resolve(String(args.out || ''));
+    if (!['.gif', '.webp'].includes(extname(file).toLowerCase())) throw new Error('out must end in .gif or .webp');
+    mkdirSync(dirname(file), { recursive: true });
+    const { animate, frameStrip } = await import('./animate.mjs');
+    const r = await animate(scene, file, { frames: args.frames, fps: args.fps, boil: args.boil, width: args.width });
+    const out = [text(notesText(r.notes)), text(`wrote ${file}: ${r.frames} frames, ${r.width} x ${r.height}, ${Math.round(r.bytes / 1024)} KB`)];
+    if (args.preview !== false) out.push(image(await frameStrip(r.stills)));
+    return out;
+  }
+
+  if (name === 'render_brand_kit') {
+    if (args.guide) return [text(readFileSync(BRANDKIT_GUIDE, 'utf8'))];
+    const spec = asScene(args.spec) || {};
+    const { renderKit, expandKit, brandFromUrl } = await import('./brandkit.mjs');
+    if (args.url) spec.brand = { ...(await brandFromUrl(String(args.url))), ...(spec.brand || {}) }; // only when the caller passed a url
+    if (!spec.brand?.name) throw new Error('render_brand_kit needs spec.brand.name (or a url to read it from)');
+    const out = [];
+    if (args.out_dir) {
+      const dir = resolve(String(args.out_dir));
+      const r = await renderKit(spec, dir);
+      out.push(text(`${r.files.length} files in ${dir} (${r.ms} ms)\nbrand: ${r.brand.name}, mark ${r.brand.mark}, inks ${r.brand.inks.join(' ')}\n${r.files.map((f) => `- ${f}`).join('\n')}${Object.keys(r.notes).length ? '\nnotes:\n' + Object.entries(r.notes).flatMap(([k, v]) => v.map((n) => `- ${k}: ${n}`)).join('\n') : ''}`));
+      if (args.preview !== false) {
+        const board = r.files.find((f) => f.endsWith('board.png')) || r.files.find((f) => f.endsWith('og.png'));
+        if (board) out.push(image(await sharp(board).resize(900).png({ compressionLevel: 9, palette: true }).toBuffer()));
+      }
+    } else {
+      const kit = expandKit(spec);
+      out.push(text(`${kit.assets.length} assets for ${kit.brand.name} (mark ${kit.brand.mark}): ${kit.assets.map((x) => x.name).join(', ')} (pass out_dir to write them)`));
+    }
+    return out;
+  }
+
+  if (name === 'render_storyboard') {
+    if (args.guide) return [text(readFileSync(STORYBOARD_GUIDE, 'utf8'))];
+    const spec = asScene(args.spec);
+    if (!spec || typeof spec !== 'object') throw new Error('render_storyboard needs a spec (or guide: true)');
+    const { renderStoryboard } = await import('./storyboard.mjs');
+    let file = null;
+    if (args.out) {
+      file = resolve(String(args.out));
+      if (extname(file).toLowerCase() !== '.png') throw new Error('out must end in .png');
+      mkdirSync(dirname(file), { recursive: true });
+    }
+    const r = await renderStoryboard(spec, file, { columns: args.columns, framesDir: args.frames_dir ? resolve(String(args.frames_dir)) : undefined });
+    const out = [text(`storyboard ${r.width} x ${r.height}, ${r.shots.length} shots, ${r.total}s${file ? `, wrote ${file}` : ''}${r.warnings.length ? `\nwarnings:\n${r.warnings.map((w) => `- ${w}`).join('\n')}` : ''}`)];
+    if (args.preview !== false) out.push(image(await sharp(r.png).resize(900).png({ compressionLevel: 9, palette: true }).toBuffer()));
     return out;
   }
 

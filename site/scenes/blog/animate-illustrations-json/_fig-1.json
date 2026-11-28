@@ -1,0 +1,19 @@
+{
+  "seed": 7,
+  "background": "paper",
+  "stagger": 0.05,
+  "elements": [
+    { "type": "panel", "x": 660, "y": -10, "w": 560, "h": 700, "color": "blue" },
+    { "type": "disc", "x": 930, "y": 350, "r": 190, "color": "mustard", "motion": "pulse" },
+    { "type": "cloud", "x": 850, "y": 130, "size": 170, "color": "paper", "drift": 50 },
+    { "type": "cloud", "x": 1060, "y": 585, "size": 120, "color": "tone", "drift": 30 },
+    { "type": "prop", "name": "rocket", "x": 930, "y": 355, "size": 300,
+      "motion": ["pop", { "type": "float", "amp": 12 }] },
+    { "type": "type", "text": "Ship it", "x": 80, "y": 200, "w": 500, "h": 160, "fit": "box",
+      "font": "black", "color": "#14181F", "motion": { "type": "typewriter", "cursor": "_" } },
+    { "type": "block", "x": 84, "y": 392, "w": 140, "h": 14, "color": "coral", "radius": 7,
+      "motion": { "type": "wipe", "from": "left", "delay": 0.1 } },
+    { "type": "type", "text": "One JSON file, one loop.", "x": 84, "y": 450, "size": 36,
+      "color": "#14181F", "motion": { "type": "slide", "from": "down", "delay": 0.15 } }
+  ]
+}

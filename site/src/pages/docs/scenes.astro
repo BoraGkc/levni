@@ -15,13 +15,13 @@ const body = keep.map((t) => {
 const toc = [...body.flatMap((b) => b.toc)];
 ---
 <Docs
-  title="Levni scene format: canvas, colours, formats, slots and the critic"
-  description="The Levni scene format: one JSON object with elements drawn in order. Fields, canvas and colours, composition rules, formats and reflow, the title layer, fusion slots and the layout critic."
+  title="Levni scene format: canvas, colours, formats, animation fields, slots and the critic"
+  description="The Levni scene format: one JSON object with elements drawn in order. Fields including the animation fields t, boil, stagger and camera, canvas and colours, composition rules, formats such as hd and readme, the title layer, fusion slots and the layout critic."
   toc={toc}
 >
   <p class="eyebrow">Reference</p>
   <h1>Scenes</h1>
-  <p class="lede">A scene is one JSON object. Elements are drawn in order, each on top of the last. This page is the format itself; every element type is on <a href="/docs/elements/">Elements</a>.</p>
+  <p class="lede">A scene is one JSON object. Elements are drawn in order, each on top of the last. This page is the format itself; every element type is on <a href="/docs/elements/">Elements</a>. The fields <code>t</code>, <code>boil</code>, <code>stagger</code> and <code>camera</code> are for animation; see <a href="/docs/animation/">Animation</a>.</p>
 
   <Fragment set:html={head.html} />
 
@@ -38,5 +38,5 @@ const toc = [...body.flatMap((b) => b.toc)];
 
   {body.map((b) => <Fragment set:html={b.html} />)}
 
-  <p>Next: <a href="/docs/elements/">every element type and the recipes</a>.</p>
+  <p>Next: <a href="/docs/elements/">every element type and the recipes</a>, or <a href="/docs/animation/">make a scene move</a>.</p>
 </Docs>

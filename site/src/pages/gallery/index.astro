@@ -6,7 +6,7 @@ import gallery from '../../data/gallery.json';
 import props from '../../data/props.json';
 
 // Every image here was drawn by Levni from the scene shown in its dialog (scripts/render-gallery.mjs).
-type Item = { group: string; id: string; title: string; alt: string; w: number; h: number; tw: number; th: number; src?: string; code?: string; big?: string; tile?: boolean };
+type Item = { group: string; id: string; title: string; alt: string; w: number; h: number; tw: number; th: number; src?: string; code?: string; big?: string; tile?: boolean; loop?: string };
 const doc = (p: string) => `${SITE.github}/blob/main/${p}`;
 
 // pixel icons: three drawn covers, then a sample of Folio tiles (already drawn for the Library)
@@ -22,6 +22,7 @@ const pixelTiles: Item[] = pixelProps.filter((_, i) => i % 7 === 0).slice(0, 66)
 });
 
 const intro: Record<string, [string, string, string]> = {
+  motion: ['New in 0.5: any scene as a loop. Text types itself, marks pop in, props float and sway, the camera pushes in, mesh gradients breathe, globes and 3D icons turn. Each card plays its 24-frame loop while it is on screen; open one for the scene and the levni animate command.', doc('docs/animate.md'), 'Animation guide'],
   posters: ['One brand spec, { "brand": { name, tagline, mark, inks, words } }, makes eight portrait posters that share inks, type and a mark: split, map, bauhaus, echo, camo, vertical, summit and launch. The big type is drawn as paths from bundled open fonts. Three fictional brands and some single posters; open one for its scene.', doc('docs/poster.md'), 'Branding posters guide'],
   brand: ['Ordered dither fields, a print pass that reprints any scene as riso, gameboy, blueprint or newsprint, grainy mesh gradients with calm zones for text, and ASCII, block and dot-matrix fills of any drawing. Backgrounds, hero art and dev-tool cards, all from JSON.', doc('docs/scene.md#dither-recipes'), 'Dither, mesh gradient and glyph fill recipes'],
   stickers: ['seal sets a scalloped, perforated or zigzag badge with ring text and a word or drawing in the middle; stub cuts a ticket; diecut gives any drawing a thick paper outline like a printed sticker.', doc('docs/scene.md#seal-recipes'), 'Seal recipes'],
@@ -53,12 +54,12 @@ const large = (i: Item) => i.big || (i.src ? i.src : `/g/${i.group}/${i.id}.webp
 const json = (i: Item) => (i.code ? undefined : `/g/${i.group}/${i.id}.json`);
 const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= i.h ? 'square' : 'tall');
 ---
-<Base og="/og/gallery.png" title="Gallery" description={`${total} images drawn by Levni from a JSON scene: branding posters, brand boards, seals and stickers, brand assets (dither, mesh gradients), etched terrain, pixel icons, isometric little worlds, hand-inked charts, riso and miniature covers, 3D icons, every social format and soft 3D covers. Open any one to copy its scene.`}>
+<Base og="/og/gallery.png" title="Gallery" description={`${total} images drawn by Levni from a JSON scene: looping animations, branding posters, brand boards, seals and stickers, brand assets (dither, mesh gradients), etched terrain, pixel icons, isometric little worlds, hand-inked charts, riso and miniature covers, 3D icons, every social format and soft 3D covers. Open any one to copy its scene.`}>
   <div class="wrap head brand-hero no-art">
     <div class="head-text">
       <p class="eyebrow">Gallery · every image drawn by Levni</p>
       <h1>What one JSON scene <em class="accent">becomes</em>.</h1>
-      <p class="lede">Branding posters, brand boards, stickers and brand assets first, then terrain, pixel icons, little worlds and charts. {total} images, no image model. Open one to see it large with the exact scene that drew it, copy the JSON, and change a seed or a palette.</p>
+      <p class="lede">Loops first, then branding posters, brand boards, stickers and brand assets, then terrain, pixel icons, little worlds and charts. {total} images, no image model. Open one to see it large with the exact scene that drew it, copy the JSON, and change a seed or a palette.</p>
     </div>
     <div class="show" role="region" aria-label="A few favourites">
       <div class="reel">
@@ -96,8 +97,9 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
         <ul class={`grid grid-${g.key}`}>
           {g.items.map((i, n) => (
             <li class={shape(i)} hidden={n >= g.first}>
-              <a class="item" href={large(i)} data-big={large(i)} data-json={json(i)} data-code={i.code} data-w={i.w} data-h={i.h}>
-                <img src={thumb(i)} width={i.tw} height={i.th} alt={i.alt} loading="lazy" decoding="async" />
+              <a class="item" href={large(i)} data-big={large(i)} data-json={json(i)} data-code={i.code} data-w={i.w} data-h={i.h} data-loop={i.loop}>
+                <img src={thumb(i)} width={i.tw} height={i.th} alt={i.alt} loading="lazy" decoding="async" data-still={i.loop && thumb(i)} data-loop={i.loop} />
+                {i.loop && <span class="loop-tag" aria-hidden="true">Loop</span>}
                 <span class="cap">{i.title}</span>
               </a>
             </li>
@@ -182,6 +184,36 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
     pause.textContent = on ? 'Play' : 'Pause';
   });
 
+  // --- loops (the Motion group): the still is the <img>; its loop plays while the card is on screen, or on hover and
+  // focus. With reduced motion only the still shows. Loop and still share a size, so swapping never shifts the layout.
+  const still = matchMedia('(prefers-reduced-motion: reduce)');
+  const loopImgs = [...document.querySelectorAll<HTMLImageElement>('.grid img[data-loop]')];
+  const seen = new Set<HTMLImageElement>();
+  function play(el: HTMLImageElement, on: boolean) {
+    const want = on && !still.matches ? el.dataset.loop! : el.dataset.still!;
+    el.dataset.want = want;
+    if (el.getAttribute('src') === want) return;
+    if (want === el.dataset.still) { el.src = want; return; }
+    const pre = new Image(); // load the loop off-screen first, so the still stays until the loop can show
+    pre.onload = () => { if (el.dataset.want === want) el.src = want; };
+    pre.src = want;
+  }
+  const live = (el: HTMLImageElement) => seen.has(el) || el.matches(':hover') || el.closest('a')!.matches(':focus-visible');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+      const el = e.target as HTMLImageElement;
+      e.isIntersecting ? seen.add(el) : seen.delete(el);
+      play(el, live(el));
+    }), { threshold: 0.5 });
+    loopImgs.forEach((el) => io.observe(el));
+  }
+  loopImgs.forEach((el) => {
+    const a = el.closest('a')!;
+    ['mouseenter', 'focus'].forEach((ev) => a.addEventListener(ev, () => play(el, true)));
+    ['mouseleave', 'blur'].forEach((ev) => a.addEventListener(ev, () => play(el, seen.has(el))));
+  });
+  still.addEventListener('change', () => loopImgs.forEach((el) => play(el, live(el))));
+
   // --- dialog: the large image and the scene that drew it
   const dlg = document.getElementById('g-dlg') as HTMLDialogElement;
   const img = document.getElementById('g-img') as HTMLImageElement;
@@ -194,7 +226,7 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
     at = list.findIndex((x) => x.dataset.big === a.dataset.big);
     a = list[at] ?? a;
     const d = a.dataset;
-    img.src = d.big!;
+    img.src = d.loop && !still.matches ? d.loop : d.big!;
     img.width = Number(d.w);
     img.height = Number(d.h);
     const thumb = a.querySelector('img')!;
@@ -211,7 +243,7 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
     copy.textContent = 'Copy';
     const board = d.big!.includes('/g/boards/');
     document.getElementById('g-file')!.textContent = board ? 'board.json' : 'scene.json';
-    document.getElementById('g-run')!.textContent = board ? 'npx @levni/levni board board.json out.png' : 'npx @levni/levni render scene.json out.png';
+    document.getElementById('g-run')!.textContent = board ? 'npx @levni/levni board board.json out.png' : d.loop ? 'npx @levni/levni animate scene.json loop.webp --width 640' : 'npx @levni/levni render scene.json out.png';
     if (!dlg.open) dlg.showModal();
   }
   document.querySelector('main')!.addEventListener('click', (e) => {
@@ -302,6 +334,8 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
   .item:hover img, .item:focus-visible img { transform: translate(-3px, -3px); box-shadow: none; }
   .cap { display: block; margin-top: 6px; font-family: var(--mono); font-size: 0.78rem; color: var(--ink-soft); overflow-wrap: anywhere; }
   .tile .cap { font-size: 0.7rem; text-align: center; }
+  .loop-tag { position: absolute; top: 16px; left: 16px; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--indigo); background: var(--lime); padding: 2px 8px; pointer-events: none; }
+  @media (prefers-reduced-motion: reduce) { .loop-tag { display: none; } }
 
   dialog {
     width: min(1100px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); border: 1px solid var(--rule); border-radius: 0;

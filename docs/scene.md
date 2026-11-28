@@ -20,14 +20,16 @@ A machine-readable outline is in [`scene.schema.json`](scene.schema.json).
 | `clip` | `[x, y, w, h]` | none | everything stays inside this hand-drawn card |
 | `hand` | boolean | `true` | `false` draws plain SVG strokes instead of pressure-brush ink |
 | `plateShift` | number | `3.2` | riso misregistration: how far each ink colour's plate drifts |
-| `boil` | integer | `seed` | seed of the crayon filter only (animate it for a hand-drawn shimmer) |
-| `t` | 0..1 | `0` | animation time; trees sway, clouds drift, flags wave |
+| `boil` | integer | `seed` | seed of the crayon filter only; `levni animate --boil 3` steps it for a hand-drawn shimmer ([animate.md](animate.md)) |
+| `t` | 0..1 | `0` | animation time; trees sway, clouds drift, flags wave. `levni animate scene.json loop.gif` runs it 0..1 and writes a looping GIF or WebP ([animate.md](animate.md)) |
+| `stagger` | number | `0` | each element with `motion` starts this much later than the one before (share of the loop) |
+| `camera` | object | none | `{ "zoom": 1.08 }` or `{ zoom, x, y: number \| [from, to], ease, once }`: the drawing pans and zooms under a fixed frame over one loop |
 | `locale` | string | `en` | locale used to upper-case `label` text (`tr` gives dotted İ) |
 | `style` | string or object | `riso` | style pack: `riso` or `miniature`, or your own inks as `{ "blue": "#123456", "coral": "#FF8800" }` (house colour names: paper, white, ink, blue, coral, green, mustard, dark, tone, tone-coral, tone-green, tone-mustard; the rest keep the house hex). Recolours every prop, panel and texture. |
 | `finish` | string | `crayon` | `crayon`: hand-inked lines, riso plates, paper grain. `soft`: clean edges and a fine film grain, for the ribbon look. Both finishes are applied to the pixels by `rasterize()` (about 0.15 s for a crayon cover); `LEVNI_RASTER=rsvg` hands the filter back to the SVG renderer |
 | `grain` | number | `0.16` | strength of the film grain in the `soft` finish |
 | `screen` | string or object | none | print pass on .png/.webp: the finished picture is averaged into `cell`-px blocks and Bayer-dithered to the nearest of `paper` + `inks`. Presets: `1bit`, `riso`, `blueprint`, `gameboy`, `newsprint`; or `{preset?, cell, matrix, inks, paper, spread}`. Flat paper and flat ink stay solid |
-| `format` | string | `cover` | canvas preset: `cover` 1200×673, `og` 1200×630, `square` 1080×1080, `story` 1080×1920, `youtube` 1280×720, `poster` 1200×1600, `poster-tall` 1200×1800, `a4` 1240×1754 |
+| `format` | string | `cover` | canvas preset: `cover` 1200×673, `og` 1200×630, `square` 1080×1080, `story` 1080×1920, `youtube` 1280×720, `poster` 1200×1600, `poster-tall` 1200×1800, `a4` 1240×1754, `hd` 1920×1080, `readme` 1280×640 |
 | `canvas` | `[w, h]` | none | explicit canvas size (64..8192 each); wins over `format` |
 | `reflow` | boolean | `false` | recompose a scene authored for 1200×673 onto the chosen canvas (below). `levni render --format <name>` sets `format` and `reflow` |
 | `reflowFrom` | `[w, h]` | `[1200, 673]` | the canvas the scene was authored for |
@@ -52,6 +54,8 @@ House rule: at most **two main inks plus paper** per scene; a third colour only 
 - **Pick an idea first.** Before drawing, write three object metaphors for the story ("a dumbbell whose weights are hearts") and keep the sharpest. Alone, a heart, bulb, gear, globe, handshake or rocket is a cliché.
 
 ## Elements
+
+Every element also takes `motion` for `levni animate`: a name (`float`, `drift`, `orbit`, `sway`, `wiggle`, `pulse`, `spin`, `blink`, `pop`, `fade`, `slide`, `wipe`, `typewriter`), an object with its fields, or a list. A still render ignores it. See [animate.md](animate.md).
 
 ### Objects
 

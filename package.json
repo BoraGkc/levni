@@ -1,6 +1,6 @@
 {
   "name": "@levni/levni",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "mcpName": "dev.levni/levni",
   "description": "Your agent's design studio: illustrations, brand assets, brand boards and branding posters from JSON. Hand-inked, local, no image model. Powered by Ortak Alan.",
   "type": "module",
@@ -22,6 +22,10 @@
     "branding",
     "dither",
     "typography",
+    "animation",
+    "brand-kit",
+    "storyboard",
+    "gif",
     "mcp-server"
   ],
   "main": "./src/index.mjs",
@@ -34,8 +38,14 @@
     "./poster": "./src/poster.mjs",
     "./board": "./src/board.mjs",
     "./banner": "./src/banner.mjs",
+    "./animate": "./src/animate.mjs",
+    "./sequence": "./src/sequence.mjs",
+    "./storyboard": "./src/storyboard.mjs",
+    "./brandkit": "./src/brandkit.mjs",
+    "./gif": "./src/gif.mjs",
     "./browser": "./src/browser.mjs",
-    "./vite": "./src/browser/vite.mjs"
+    "./vite": "./src/browser/vite.mjs",
+    "./adapters/ghost": "./adapters/ghost/index.mjs"
   },
   "bin": {
     "levni": "./bin/levni.mjs"
@@ -45,6 +55,10 @@
     "README.md",
     "adapters/",
     "bin/",
+    "docs/animate.md",
+    "docs/export.md",
+    "docs/storyboard.md",
+    "docs/brandkit.md",
     "docs/board.md",
     "docs/poster.md",
     "docs/ghost.md",

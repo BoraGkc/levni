@@ -2,6 +2,7 @@
 //   import { compose, critique, render } from 'levni';
 //   const { svg, used, canvas } = await compose(scene);       // SVG string + boxes for the critic
 //   await render(scene, 'out.png');                   // or out.webp / out.svg
+//   await animate(scene, 'out.gif', { frames: 24 });  // or out.webp: a loop over the scene's `t`
 export { compose, critique, COLORS } from './compose.mjs';
 export { PALETTE, W, H, rng, frame } from './style.mjs';
 export { loadProps, findProp, expandProp, addPropDir, LIBRARY_DIR } from './props.mjs';
@@ -16,6 +17,13 @@ export { FONTS, layoutType } from './type.mjs';
 export { STYLES, applyStyle } from './styles.mjs';
 export { validateProp, lintProp, parseProps, measureVariant, CATEGORIES } from './validate.mjs';
 export { iconsAvailable, resolveIcon } from './icon.mjs';
+export { animate, renderFrames, framePlan, frameStrip } from './animate.mjs';
+export { writeFrames, spriteSheet, toMp4, ffmpegAvailable, transparent, tileable, tileCheck } from './sequence.mjs';
+export { expandStoryboard, renderStoryboard } from './storyboard.mjs';
+export { renderKit, expandKit, brandFromHtml, brandFromUrl } from './brandkit.mjs';
+export { EASE, MOTIONS } from './motion.mjs';
+export { bannerScene, pickMark, repoTerms, hashSeed, BANNER_SIZE, BANNER_THEMES } from './banner.mjs';
+export { encodeGif } from './gif.mjs';
 export { renderBoard } from './board.mjs';
 export { expandBrand } from './board.mjs';
 

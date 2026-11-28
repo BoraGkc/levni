@@ -68,6 +68,7 @@ const jsonld = [
     <div class="bn-out" id="bn-out" hidden>
       <div class="bn-actions">
         <button type="button" class="bn-go" id="bn-png">Download PNG</button>
+        <button type="button" class="bn-ghost" id="bn-gif">Animated GIF</button>
         <button type="button" class="bn-ghost" id="bn-svg">Download SVG</button>
         <button type="button" class="bn-ghost" id="bn-json">Copy scene JSON</button>
         <a class="bn-ghost" id="bn-edit" href="/editor/">Open in the editor</a>
@@ -85,7 +86,7 @@ const jsonld = [
 </Base>
 
 <script>
-  import { compose, registerProps, registerFont, fontsFor, toBlob, bannerScene, pickMark, repoTerms, FALLBACK_MARKS } from '../../../src/browser.mjs';
+  import { compose, registerProps, registerFont, fontsFor, toBlob, animateBlob, bannerScene, pickMark, repoTerms, FALLBACK_MARKS } from '../../../src/browser.mjs';
 
   // Folio drawings and fonts, loaded on demand (one small chunk per drawing)
   const propFiles = import.meta.glob('../../../library/props/*.json', { import: 'default' });
@@ -101,7 +102,8 @@ const jsonld = [
   type Repo = { owner: string; name: string; description: string; topics: string[]; language: string; stars: number | null };
   let repo: Repo | null = null, mark = '', theme = 'riso', seed: number | undefined, candidates: string[] = [];
   let index: { name: string; tags: string[]; aliases: string[]; variants: string[] }[] = [];
-  let current = { svg: '', scene: null as object | null, blobUrl: '' };
+  let current = { svg: '', scene: null as object | null, blobUrl: '', banner: null as Record<string, unknown> | null };
+  let gifUrl = '';
   let token = 0;
 
   const loadedFonts = new Set<string>(), loadedProps = new Set<string>();
@@ -147,7 +149,7 @@ const jsonld = [
     const blob = await toBlob(svg);
     if (my !== token) return; // a newer draw started
     if (current.blobUrl) URL.revokeObjectURL(current.blobUrl);
-    current = { svg, scene, blobUrl: URL.createObjectURL(blob) };
+    current = { svg, scene, blobUrl: URL.createObjectURL(blob), banner: { ...fields, mark, theme, seed } };
     img.src = current.blobUrl;
     img.alt = `Banner for ${fields.owner}/${fields.name}: ${mark.replace(/-/g, ' ')} on a ${theme} panel, with the repo name and description`;
     preview.setAttribute('aria-busy', 'false');
@@ -220,6 +222,24 @@ const jsonld = [
   const save = (blob: Blob, file: string) => { const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = file; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000); };
   const fileBase = () => `${repo?.name || 'repo'}-banner`;
   $('bn-png').addEventListener('click', async () => save(await (await fetch(current.blobUrl)).blob(), `${fileBase()}.png`));
+  // the same banner as a loop: the name types itself, the mark pops in and floats. Drawn frame by frame in this page.
+  $('bn-gif').addEventListener('click', async (e) => {
+    const btn = e.currentTarget as HTMLButtonElement;
+    if (!current.banner || btn.disabled) return;
+    const label = btn.textContent;
+    btn.disabled = true;
+    try {
+      const scene = bannerScene({ ...current.banner, motion: true });
+      const gif = await animateBlob(scene, { frames: 36, fps: 12, width: 800, onProgress: (d: number, n: number) => (btn.textContent = `Drawing ${d}/${n}`) });
+      if (gifUrl) URL.revokeObjectURL(gifUrl);
+      gifUrl = URL.createObjectURL(gif);
+      img.src = gifUrl; // the preview plays what was saved; Download PNG still gives the still
+      save(gif, `${fileBase()}.gif`);
+      $('bn-md').textContent = ($('bn-md').textContent || '').replace('banner.png', 'banner.gif');
+      say(`Animated banner saved: 36 frames, 800 px wide, ${Math.round(gif.size / 1024)} KB.`);
+    } catch (err) { say(`Could not draw the animation: ${(err as Error).message}`, true); }
+    finally { btn.textContent = label; btn.disabled = false; }
+  });
   $('bn-svg').addEventListener('click', () => save(new Blob([current.svg], { type: 'image/svg+xml' }), `${fileBase()}.svg`));
   const copy = async (text: string, btn: HTMLElement) => { await navigator.clipboard.writeText(text); const t = btn.textContent; btn.textContent = 'Copied'; setTimeout(() => (btn.textContent = t), 1400); };
   $('bn-json').addEventListener('click', (e) => copy(JSON.stringify(current.scene, null, 2), e.currentTarget as HTMLElement));

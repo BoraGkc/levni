@@ -1,0 +1,17 @@
+{
+  "seed": 8,
+  "background": "paper",
+  "elements": [
+    {"type":"panel","x":60,"y":52,"w":1080,"h":569,"color":"tone"},
+    {"type":"disc","x":600,"y":300,"r":190,"color":"tone-coral"},
+    {"type":"cloud","x":250,"y":190,"size":150,"color":"paper","drift":40},
+    {"type":"cloud","x":930,"y":150,"size":110,"color":"paper","drift":30},
+    {"type":"panel","x":60,"y":500,"w":1080,"h":121,"color":"blue"},
+    {"type":"prop","name":"rocket","x":600,"y":290,"size":300,"rot":18,"shadow":true,"motion":{"type":"float","amp":16}},
+    {"type":"prop","name":"potted-plant","x":240,"y":420,"size":210,"motion":{"type":"sway","amp":5,"pivot":"bottom"}},
+    {"type":"prop","name":"coffee-cup","x":950,"y":440,"size":160,"motion":{"type":"float","amp":6,"phase":0.3}},
+    {"type":"prop","name":"star","x":420,"y":150,"size":60,"motion":{"type":"blink","amp":0.7}},
+    {"type":"prop","name":"star","x":800,"y":380,"size":46,"motion":{"type":"blink","amp":0.7,"phase":0.5}},
+    {"type":"label","text":"float / sway / drift / blink","x":100,"y":104,"color":"ink"}
+  ]
+}

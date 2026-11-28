@@ -76,6 +76,8 @@ function wrap(text, per, max) {
 // bannerScene(repo) -> a Levni scene (plain JSON: print it, edit it, render it anywhere).
 //   name (required), owner, description, stars, language, languageColor ('#rrggbb'),
 //   mark (a Folio name), variant, theme (riso | coral | green | night), seed, credit (default true: "levni.dev")
+//   motion (true: the banner becomes a loop for `animate()`: the name types itself, the mark pops in and floats,
+//   the lines slide in, the disc breathes; everything is settled by mid-loop and held to the end)
 export function bannerScene(repo) {
   const name = String(repo.name || '').trim();
   if (!name) throw new Error('banner needs a repo name');
@@ -89,18 +91,19 @@ export function bannerScene(repo) {
   const nameH = name.length > 16 ? 96 : 124;
   const top = lines.length ? 150 : 210;
 
+  const mo = (m) => (repo.motion ? { motion: m } : {}); // motion only when asked: a still banner stays byte-identical
   const el = [
     { type: 'panel', x: split, y: -20, w: W - split + 40, h: H + 40, color: th.panel },
-    { type: 'disc', x: cx, y: cy, r: 178, color: th.disc },
+    { type: 'disc', x: cx, y: cy, r: 178, color: th.disc, ...mo([{ type: 'pop', delay: 0, dur: 0.14 }, { type: 'pulse', amp: 0.03 }]) },
     { type: 'marks', area: [split + 30, 40, W - split - 60, H - 80], count: 7, colors: th.marks },
-    { type: 'prop', name: repo.mark || FALLBACK_MARKS[seed % FALLBACK_MARKS.length], variant: repo.variant ?? 0, x: cx, y: cy, size: 330, shadow: true },
+    { type: 'prop', name: repo.mark || FALLBACK_MARKS[seed % FALLBACK_MARKS.length], variant: repo.variant ?? 0, x: cx, y: cy, size: 330, shadow: true, ...mo([{ type: 'pop', delay: 0.08, dur: 0.16 }, { type: 'float', amp: 9 }]) },
   ];
-  if (repo.owner) el.push({ type: 'type', text: `${repo.owner} /`.toUpperCase(), x: 84, y: top - 52, size: 24, font: 'mono', weight: 700, tracking: 0.04, color: th.muted });
-  el.push({ type: 'type', text: name, x: 80, y: top, w: split - 150, h: nameH, fit: 'box', font: 'black', color: th.text });
-  if (lines.length) el.push({ type: 'type', text: lines.join('\n'), x: 84, y: top + nameH + 48, size: 32, weight: 400, leading: 1.32, color: th.text });
+  if (repo.owner) el.push({ type: 'type', text: `${repo.owner} /`.toUpperCase(), x: 84, y: top - 52, size: 24, font: 'mono', weight: 700, tracking: 0.04, color: th.muted, ...mo({ type: 'fade', delay: 0.02, dur: 0.1 }) });
+  el.push({ type: 'type', text: name, x: 80, y: top, w: split - 150, h: nameH, fit: 'box', font: 'black', color: th.text, ...mo({ type: 'typewriter', delay: 0.08, dur: Math.min(0.3, 0.06 + name.length * 0.014), cursor: '_' }) });
+  if (lines.length) el.push({ type: 'type', text: lines.join('\n'), x: 84, y: top + nameH + 48, size: 32, weight: 400, leading: 1.32, color: th.text, ...mo({ type: 'slide', from: 'down', distance: 26, delay: 0.42, dur: 0.14 }) });
   if (meta) {
-    if (repo.languageColor && repo.language) el.push({ type: 'disc', x: 92, y: H - 92, r: 9, color: repo.languageColor });
-    el.push({ type: 'type', text: meta, x: repo.languageColor && repo.language ? 112 : 84, y: H - 102, size: 22, font: 'mono', weight: 700, color: th.muted });
+    if (repo.languageColor && repo.language) el.push({ type: 'disc', x: 92, y: H - 92, r: 9, color: repo.languageColor, ...mo({ type: 'fade', delay: 0.56, dur: 0.12 }) });
+    el.push({ type: 'type', text: meta, x: repo.languageColor && repo.language ? 112 : 84, y: H - 102, size: 22, font: 'mono', weight: 700, color: th.muted, ...mo({ type: 'fade', delay: 0.56, dur: 0.12 }) });
   }
   if (repo.credit !== false) el.push({ type: 'type', text: 'levni.dev', x: W - 36, y: H - 44, size: 15, font: 'mono', weight: 700, align: 'right', color: '#F1EEE6' });
   return { canvas: [W, H], seed, background: th.ground, elements: el };

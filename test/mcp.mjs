@@ -27,7 +27,7 @@ assert.equal(init.result.serverInfo.name, 'levni');
 child.stdin.write(`${JSON.stringify({ jsonrpc: '2.0', method: 'notifications/initialized' })}\n`);
 
 const names = (await rpc('tools/list')).result.tools.map((t) => t.name);
-assert.deepEqual(names, ['scene_guide', 'list_props', 'render_scene', 'critique_scene', 'show_props', 'render_board', 'render_poster']);
+assert.deepEqual(names, ['scene_guide', 'list_props', 'render_scene', 'critique_scene', 'render_animation', 'show_props', 'render_board', 'render_poster', 'render_storyboard', 'render_brand_kit']);
 
 assert.match((await tool('scene_guide')).content[0].text, /# Scene format/);
 assert.match((await tool('list_props', { query: 'cat' })).content[0].text, /^cat \(/m);
@@ -63,7 +63,19 @@ const sheet = await tool('show_props', { names: ['apple', 'no-such-prop'] });
 assert.ok(!sheet.isError, sheet.content[0].text);
 assert.match(sheet.content[0].text, /Unknown: no-such-prop/);
 assert.equal((await tool('render_scene', { scene: '{oops' })).isError, true);
+// the two kit tools answer without writing anything when no path is given
+const sb = await tool('render_storyboard', { spec: [{ id: 'a', desc: 'a rocket', frames: 48 }, { id: 'b', desc: 'a key', frames: 24 }], preview: false });
+assert.match(sb.content[0].text, /2 shots/);
+const kit = await tool('render_brand_kit', { spec: { brand: { name: 'Fener' } } });
+assert.match(kit.content[0].text, /assets for Fener/);
+assert.equal((await tool('render_brand_kit', { spec: {} })).isError, true);
+// render_animation writes a looping file and returns notes, a summary and a frame strip
+const anim = await tool('render_animation', { scene: { seed: 2, elements: [{ type: 'cloud', x: 400, y: 300, size: 240, drift: 40 }] }, out: join(dir, 'loop.gif'), frames: 3, width: 240 });
+assert.match(anim.content[1].text, /3 frames, 240 x/);
+assert.equal(anim.content[2].type, 'image');
+assert.equal((await tool('render_animation', { scene: { elements: [] }, out: join(dir, 'loop.png') })).isError, true);
+
 assert.equal((await rpc('nope')).error.code, -32601);
 
 child.kill();
-console.log('mcp: handshake and 7 tools ok');
+console.log('mcp: handshake and 10 tools ok');

@@ -1,0 +1,16 @@
+{
+ "_meta": { "title": "a waving flag, drifting clouds", "alt": "A striped coral and paper pennant waves on a pole on a blue hill while clouds drift across a pale sky and two trees sway" },
+ "seed": 14, "background": "paper",
+ "elements": [
+  { "type": "panel", "x": 0, "y": 0, "w": 1200, "h": 673, "color": "tone" },
+  { "type": "sunburst", "x": 980, "y": 150, "size": 190, "color": "mustard", "rayColor": "mustard" },
+  { "type": "cloud", "x": 250, "y": 170, "size": 170, "color": "paper", "drift": 60 },
+  { "type": "cloud", "x": 700, "y": 110, "size": 120, "color": "paper", "drift": 40 },
+  { "type": "hills", "base": 673, "height": 200, "color": "#5E9C6B" },
+  { "type": "panel", "x": 576, "y": 210, "w": 9, "h": 300, "color": "dark" },
+  { "type": "flag", "x": 585, "y": 216, "w": 250, "h": 150, "stripes": ["coral", "paper", "coral", "paper", "coral"] },
+  { "type": "tree", "x": 220, "y": 560, "size": 200 },
+  { "type": "tree", "x": 990, "y": 580, "size": 160 },
+  { "type": "label", "text": "flag / cloud drift / tree sway", "x": 64, "y": 70, "color": "dark" }
+ ]
+}

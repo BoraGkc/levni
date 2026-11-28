@@ -9,7 +9,7 @@ export const SITE = {
   github: 'https://github.com/Levni-Dev/levni',
   githubReady: true,
   npm: 'https://www.npmjs.com/package/@levni/levni',
-  version: '0.4',
+  version: '0.5',
   ortakAlan: 'https://ortakalan.io',
   props: folio.length,
   variants: folio.reduce((n, p) => n + p.variants.length, 0),

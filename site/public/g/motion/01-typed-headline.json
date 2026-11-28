@@ -1,0 +1,12 @@
+{
+  "seed": 21,
+  "background": "paper",
+  "elements": [
+    {"type":"panel","x":760,"y":0,"w":440,"h":673,"color":"blue"},
+    {"type":"disc","x":980,"y":330,"r":150,"color":"mustard","motion":[{"type":"pop","delay":0.02,"dur":0.16},{"type":"pulse","amp":0.03}]},
+    {"type":"prop","name":"sparkle","x":980,"y":330,"size":230,"shadow":true,"motion":[{"type":"pop","delay":0.12,"dur":0.2,"ease":"outBack"},{"type":"spin","turns":1}]},
+    {"type":"type","text":"LEVNI / ANIMATE","x":72,"y":96,"size":22,"font":"mono","weight":700,"tracking":0.06,"color":"coral","motion":{"type":"fade","delay":0,"dur":0.08}},
+    {"type":"type","text":"Ship it\ntoday.","x":68,"y":170,"w":600,"h":290,"fit":"box","font":"black","color":"ink","motion":{"type":"typewriter","delay":0.06,"dur":0.32,"cursor":"_"}},
+    {"type":"type","text":"typewriter + pop + spin, 24 frames","x":72,"y":560,"size":22,"font":"mono","color":"ink","motion":{"type":"slide","from":"down","distance":24,"delay":0.4,"dur":0.14}}
+  ]
+}
