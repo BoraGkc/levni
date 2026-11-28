@@ -8,7 +8,7 @@ type Item = [title: string, desc: string, href: string];
 type Group = { id: string; label: string; match: string[]; items: Item[]; feature: { kicker: string; title: string; text: string; href: string; cta: string } };
 const groups: Group[] = [
   {
-    id: 'make', label: 'Make', match: ['/make', '/features', '/gallery', '/library', '/banner', '/tools', '/motion', '/shots', '/you', '/pen', '/hub', '/zine'],
+    id: 'make', label: 'Make', match: ['/make', '/features', '/gallery', '/library', '/banner', '/tools', '/motion', '/shots', '/you', '/pen', '/hub', '/zine', '/router'],
     items: [
       ['Free makers', 'Every maker on one page', '/make/'],
       ['Illustrations and covers', 'Scenes, styles, the critic', '/make/blog-covers-og-images/'],
@@ -20,6 +20,7 @@ const groups: Group[] = [
       ['README banner', 'A banner from a GitHub link, still or moving', '/banner/'],
       ['Free tools', 'Gradients, patterns, waves, OG images', '/tools/'],
       ['Levni Hub', 'Fork, remix and compare designs', '/hub/'],
+      ['Design Router', 'One search for drawings, fonts, palettes', '/router/'],
       ['Levni Zine', 'A small magazine to read, print and fold', '/zine/'],
       ['Levni Pen', 'A live playground for design in JSON', '/pen/'],
       ['Your year in code', 'A moving card from your GitHub', '/you/'],

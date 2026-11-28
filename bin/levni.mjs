@@ -7,6 +7,7 @@
 //   levni print <scene.json> <out-dir>
 //   levni shot <name> <out> [--title …]   (levni shot --list)
 //   levni reel <reel.json> <out.mp4>
+//   levni route <words> [--colors '#E8522F,#1E1466'] [--kind font] [--sheet out.png]   (Design Router)
 //   levni zine <zine.json> <out-dir>   (pages, zine.pdf, fold.pdf)
 //   levni desk [dir] [--port 4747]   (local panel for a folder of scenes)
 //   levni open | remix <image.png> …
@@ -25,7 +26,7 @@ import { render, compose, loadProps, findProp, addPropDir, LIBRARY_DIR, validate
 const [cmd, ...rest] = process.argv.slice(2);
 const flag = (name) => rest.includes(`--${name}`);
 const opt = (name) => { const i = rest.indexOf(`--${name}`); return i >= 0 ? rest[i + 1] : undefined; };
-const positional = rest.filter((a, i) => !a.startsWith('--') && !(i > 0 && ['--recolor', '--port', '--dir', '--sheet', '--brief', '--model', '--format', '--frames', '--fps', '--boil', '--width', '--strip', '--colours', '--frames-dir', '--sprite', '--columns', '--crf', '--loops', '--tile', '--posters', '--only', '--scale', '--plates', '--halftone', '--shift', '--paper', '--title', '--subtitle', '--kicker', '--mark', '--inks', '--items', '--values', '--cta', '--seed', '--by', '--from', '--repo', '--repo-json', '--theme'].includes(rest[i - 1])));
+const positional = rest.filter((a, i) => !a.startsWith('--') && !(i > 0 && ['--recolor', '--port', '--colors', '--kind', '--limit', '--dir', '--sheet', '--brief', '--model', '--format', '--frames', '--fps', '--boil', '--width', '--strip', '--colours', '--frames-dir', '--sprite', '--columns', '--crf', '--loops', '--tile', '--posters', '--only', '--scale', '--plates', '--halftone', '--shift', '--paper', '--title', '--subtitle', '--kicker', '--mark', '--inks', '--items', '--values', '--cta', '--seed', '--by', '--from', '--repo', '--repo-json', '--theme'].includes(rest[i - 1])));
 
 const USAGE = `levni: hand-inked illustrations from JSON scenes
 
@@ -48,6 +49,7 @@ const USAGE = `levni: hand-inked illustrations from JSON scenes
               [--mark name] [--still]
       A README banner for a GitHub repo (read from the GitHub API, GITHUB_TOKEN if set): moving unless --still or .png.
   levni reel <reel.json> <out.mp4|out.gif|out.webp>
+  levni route <words> [--colors #hex,#hex] [--kind font] [--sheet out.png] [--json]   search drawings, icons, fonts, palettes, patterns, motion and shots
   levni zine <zine.json> <out-dir>   a zine: page images, zine.pdf and an 8-page fold-up on one A4 sheet
   levni desk [dir] [--port 4747] [--no-open]   a local panel: every scene in the folder, drawn and watched
       Shots or scenes one after another with transitions (cut, fade, wipe, slide, push, iris): { format, fps,
@@ -150,6 +152,22 @@ async function main() {
     if (still) await render(scene, out);
     else { const { animate } = await import('../src/animate.mjs'); await animate(scene, out, { frames: 36, fps: 12, width: 800 }); }
     console.log(`${out}  ${gh.full_name || gh.name}, mark ${scene.elements.find((e) => e.type === 'prop')?.name}`);
+  } else if (cmd === 'route') {
+    const { routeDesign } = await import('../src/route.mjs');
+    const { inksFrom } = await import('../src/router.mjs');
+    const colors = opt('colors') ? opt('colors').split(',') : undefined;
+    const r = routeDesign(positional.join(' '), { kinds: opt('kind') ? opt('kind').split(',') : undefined, limit: Number(opt('limit')) || 12, colors });
+    if (flag('json')) { console.log(JSON.stringify(r.results.map(({ scene, ...x }) => x), null, 2)); return; }
+    if (!r.results.length) { console.log(`nothing for "${positional.join(' ')}": try a plainer word, or a kind word (font, palette, pattern, motion, icon, shot)`); return; }
+    for (const x of r.results) console.log(`${x.kind.padEnd(8)} ${x.id.padEnd(28)} ${x.license}  ·  ${JSON.stringify(x.snippet)}`);
+    console.log(`\nfound ${Object.entries(r.counts).map(([k, n]) => `${n} ${k}`).join(', ')}`);
+    if (colors) console.log(`style: ${JSON.stringify(inksFrom(colors))}`);
+    if (opt('sheet')) {
+      const tiles = await Promise.all(r.results.slice(0, 12).map(async (x) => sharp(await rasterize((await compose(x.scene)).svg)).resize(320, 200).png().toBuffer()));
+      const cols = Math.min(4, tiles.length);
+      await sharp({ create: { width: cols * 328, height: Math.ceil(tiles.length / cols) * 208, channels: 3, background: '#DCD8CC' } }).composite(tiles.map((input, i) => ({ input, left: (i % cols) * 328, top: Math.floor(i / cols) * 208 }))).png().toFile(opt('sheet'));
+      console.log(opt('sheet'));
+    }
   } else if (cmd === 'zine') {
     const [file, out] = positional;
     if (!file || !out) throw new Error('usage: levni zine <zine.json> <out-dir>');

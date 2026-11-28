@@ -1,0 +1,23 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { readDoc, render, resetIds } from '../../components/docs/md';
+
+resetIds();
+const { intro, sections } = readDoc('router.md');
+const fig = '';
+const head = render(intro.replace(/^!\[[^\]]*\]\([^)]*\)\n+/m, 'FIGUREHERE\n\n'));
+head.html = head.html.replace('<p>FIGUREHERE</p>', fig);
+const parts = sections.map((s) => render(s.md, { title: s.title, id: s.id }));
+const toc = parts.flatMap((p) => p.toc);
+---
+<Docs
+  title="Design Router: one search for open drawings, fonts and patterns"
+  description="levni route and the route_design MCP tool search Folio drawings, Tabler icons, OFL fonts, palettes, pattern generators, motion presets and shots at once, with licences, paste-ready snippets and previews in your colours."
+  toc={toc}
+>
+  <p class="eyebrow">Animate and export</p>
+  <h1>Design Router</h1>
+  <p class="callout"><strong>New in Levni 0.6.0</strong> <code>levni route</code> and <code>route_design</code> need 0.6.0 or newer.</p>
+  <Fragment set:html={head.html} />
+  {parts.map((p) => <Fragment set:html={p.html} />)}
+</Docs>

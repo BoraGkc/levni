@@ -187,6 +187,21 @@ export const TOOLS = [
       required: ['reel', 'out'],
     },
   },
+  {
+    name: 'route_design',
+    description: 'Design Router: one search over everything open that Levni draws with: Folio drawings, Tabler icons, the four OFL fonts, palettes, pattern generators, motion presets and shots. Each result has its licence, its credit and a snippet to paste into a scene. Words like "font", "palette", "pattern", "motion", "icon" or "shot" narrow the kind. With `colors`, the preview sheet is drawn in your colours and you get the ink map to put in the scene\'s `style`.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        query: { type: 'string', description: 'What you need, e.g. "coffee", "headline font", "dots pattern", "night palette", "float". English or Turkish.' },
+        kinds: { type: 'array', items: { type: 'string', enum: ['drawing', 'icon', 'font', 'palette', 'pattern', 'motion', 'shot'] }, description: 'Only these kinds.' },
+        colors: { type: 'array', items: { type: 'string' }, description: 'Your colours as hex, e.g. ["#E8522F", "#1E1466"]: they fill blue, coral, mustard and green in that order.' },
+        limit: { type: 'integer', description: 'Maximum results (default 8, at most 24).' },
+        preview: { type: 'boolean', description: 'Return a contact sheet of the results (default true).' },
+      },
+      required: ['query'],
+    },
+  },
 ];
 
 const text = (t) => ({ type: 'text', text: t });
@@ -269,6 +284,21 @@ async function call(name, args = {}) {
     return out;
   }
 
+  if (name === 'route_design') {
+    const { routeDesign } = await import('./route.mjs');
+    const { inksFrom } = await import('./router.mjs');
+    const r = routeDesign(String(args.query || ''), { kinds: args.kinds, limit: Math.min(24, Number(args.limit) || 8), colors: args.colors });
+    if (!r.results.length) return [text(`Nothing for "${args.query}". Try a plainer word (cat, coffee, rocket), a kind word (font, palette, pattern, motion), or list_props.`)];
+    const out = [text(r.results.map((x, i) => `${i + 1}. [${x.kind}] ${x.id}${x.name && x.name !== x.id ? ` (${x.name})` : ''} · ${x.license} · ${x.credit}\n   ${JSON.stringify(x.snippet)}`).join('\n') + `\n\nfound: ${Object.entries(r.counts).map(([k, n]) => `${n} ${k}`).join(', ')}`)];
+    const inks = inksFrom(args.colors);
+    if (inks) out.push(text(`your inks, for the scene's "style": ${JSON.stringify(inks)}`));
+    if (args.preview !== false) {
+      const tiles = await Promise.all(r.results.slice(0, 12).map(async (x) => sharp(await rasterize((await compose(x.scene)).svg)).resize(240, 150).png().toBuffer()));
+      const cols = Math.min(4, tiles.length), rows = Math.ceil(tiles.length / cols);
+      out.push(image(await sharp({ create: { width: cols * 246, height: rows * 156, channels: 3, background: '#DCD8CC' } }).composite(tiles.map((input, i) => ({ input, left: (i % cols) * 246, top: Math.floor(i / cols) * 156 }))).png().toBuffer()));
+    }
+    return out;
+  }
   if (name === 'render_shot') {
     const { shotScene, SHOTS } = await import('./shots.mjs');
     if (!args.name) return [text(SHOTS.map((s) => `${s.id} (${s.group}): ${s.text}`).join('\n'))];
