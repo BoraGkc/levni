@@ -1,0 +1,396 @@
+{
+ "at": "2026-11-28",
+ "drawings": 1628,
+ "variants": 3409,
+ "categories": [
+  {
+   "id": "tech",
+   "n": 238,
+   "sample": [
+    "app-grid",
+    "camera",
+    "dashboard",
+    "kalp-diyafram",
+    "phone-cage-crown",
+    "refinery-towers"
+   ]
+  },
+  {
+   "id": "symbols",
+   "n": 235,
+   "sample": [
+    "astrolabe",
+    "folded-flag",
+    "heart-birdcage",
+    "hourglass-calm",
+    "nazar-bead",
+    "pocket-watch"
+   ]
+  },
+  {
+   "id": "home",
+   "n": 206,
+   "sample": [
+    "anahtar-deligi",
+    "cloche-lid",
+    "eye-house",
+    "key",
+    "oil-lamp",
+    "stone-suitcase"
+   ]
+  },
+  {
+   "id": "books",
+   "n": 163,
+   "sample": [
+    "book-bitten-apple",
+    "compass-steps",
+    "firman-scroll",
+    "mailbox-overflowing-book",
+    "pen-case",
+    "quote-marks"
+   ]
+  },
+  {
+   "id": "money",
+   "n": 134,
+   "sample": [
+    "atm-machine",
+    "bond-certificate",
+    "chair-jacket",
+    "empty-parcel-can",
+    "percent",
+    "safe-box"
+   ]
+  },
+  {
+   "id": "nature",
+   "n": 115,
+   "sample": [
+    "blossom-sprig",
+    "dog-plinth-banana",
+    "hyacinth",
+    "narcissus",
+    "rosette",
+    "solar-panel"
+   ]
+  },
+  {
+   "id": "places",
+   "n": 108,
+   "sample": [
+    "airplane",
+    "building",
+    "ferry-twin-funnel",
+    "mahalle-house-cumba",
+    "rocket",
+    "spark-plug-rocket"
+   ]
+  },
+  {
+   "id": "sport",
+   "n": 71,
+   "sample": [
+    "american-football",
+    "boxing-glove",
+    "lane-rope",
+    "person-running",
+    "ring-rope-health-bars",
+    "stadium-bowl"
+   ]
+  },
+  {
+   "id": "food",
+   "n": 71,
+   "sample": [
+    "apple",
+    "cake",
+    "doner-skewer",
+    "lokum",
+    "pickle-jar",
+    "salad-bowl"
+   ]
+  },
+  {
+   "id": "film",
+   "n": 65,
+   "sample": [
+    "ballot-box-reel-ball-big",
+    "clapper-director-chair",
+    "film-house",
+    "guitar-reel",
+    "podium-black-ball",
+    "reel-wifi"
+   ]
+  },
+  {
+   "id": "health",
+   "n": 64,
+   "sample": [
+    "ambulance",
+    "glasses",
+    "hospital-bed-empty",
+    "moon-thermometer",
+    "pill-bottle",
+    "slanted-thermometer"
+   ]
+  },
+  {
+   "id": "music",
+   "n": 62,
+   "sample": [
+    "cassette-to-phone",
+    "diamond-record",
+    "gitar-yangin-merdiveni",
+    "megaphone-giant",
+    "oud",
+    "robot-dog-mic"
+   ]
+  },
+  {
+   "id": "stage",
+   "n": 45,
+   "sample": [
+    "backstage-facade-braces",
+    "half-comedy-half-tragedy-mask",
+    "marquee-ticket",
+    "redacted-horse-mask",
+    "stage-in-broken-heart",
+    "stanchion"
+   ]
+  },
+  {
+   "id": "law",
+   "n": 30,
+   "sample": [
+    "approval-stamp",
+    "court-bench",
+    "gavel-hall",
+    "id-card",
+    "law-scroll",
+    "scales"
+   ]
+  },
+  {
+   "id": "tv",
+   "n": 21,
+   "sample": [
+    "curtain-back-sofa",
+    "falling-ratings-tv",
+    "old-crt-tv-long-shadow",
+    "satellite",
+    "spiral-tv",
+    "talk-desk-mic-chat"
+   ]
+  }
+ ],
+ "sources": {
+  "studio": 1140,
+  "tabler": 409,
+  "assisted": 79
+ },
+ "themes": [
+  {
+   "id": "kitchen",
+   "title": "The kitchen drawer",
+   "text": "Recipes, menus and food blogs keep asking for the tools, not only the food.",
+   "missing": [
+    "whisk",
+    "grater",
+    "ladle",
+    "colander",
+    "toaster",
+    "blender",
+    "spatula",
+    "oven mitt",
+    "mortar",
+    "apron",
+    "cutting board",
+    "jar"
+   ],
+   "present": [
+    {
+     "word": "rolling pin",
+     "name": "oklava"
+    },
+    {
+     "word": "kettle",
+     "name": "teapot"
+    },
+    {
+     "word": "frying pan",
+     "name": "pan"
+    }
+   ],
+   "total": 16
+  },
+  {
+   "id": "music",
+   "title": "The band room",
+   "text": "Posters for gigs, podcasts and music lessons. We have a guitar and a mic; the rest of the band is missing.",
+   "missing": [
+    "drum",
+    "accordion",
+    "harp",
+    "trumpet",
+    "saxophone",
+    "ukulele",
+    "metronome",
+    "violin",
+    "flute",
+    "xylophone",
+    "cello",
+    "maracas"
+   ],
+   "present": [
+    {
+     "word": "piano",
+     "name": "piano"
+    },
+    {
+     "word": "guitar",
+     "name": "guitar"
+    },
+    {
+     "word": "headphones",
+     "name": "headphones"
+    },
+    {
+     "word": "vinyl",
+     "name": "vinyl"
+    }
+   ],
+   "total": 16
+  },
+  {
+   "id": "nature",
+   "title": "Small animals, forest floor",
+   "text": "Children’s books, garden shops and climate stories. Fewer than half of these exist yet.",
+   "missing": [
+    "fern",
+    "acorn",
+    "pinecone",
+    "seashell",
+    "coral",
+    "bee",
+    "snail",
+    "hedgehog",
+    "fox",
+    "owl",
+    "whale",
+    "octopus",
+    "turtle",
+    "frog",
+    "squirrel",
+    "rabbit"
+   ],
+   "present": [
+    {
+     "word": "mushroom",
+     "name": "mushroom"
+    },
+    {
+     "word": "cactus",
+     "name": "cactus"
+    },
+    {
+     "word": "butterfly",
+     "name": "butterfly"
+    },
+    {
+     "word": "deer",
+     "name": "deer"
+    }
+   ],
+   "total": 20
+  },
+  {
+   "id": "studio",
+   "title": "The print studio",
+   "text": "Riso, screen print and the desk around it: the tools of the people Levni is made for.",
+   "missing": [
+    "brayer",
+    "squeegee",
+    "cutting mat",
+    "protractor",
+    "paint tube",
+    "stapler",
+    "tape",
+    "glue",
+    "sketchbook"
+   ],
+   "present": [
+    {
+     "word": "easel",
+     "name": "easel"
+    },
+    {
+     "word": "palette",
+     "name": "palette"
+    },
+    {
+     "word": "ruler",
+     "name": "ruler"
+    },
+    {
+     "word": "scissors",
+     "name": "scissors"
+    },
+    {
+     "word": "eraser",
+     "name": "eraser"
+    }
+   ],
+   "total": 14
+  },
+  {
+   "id": "turkish",
+   "title": "From Istanbul",
+   "text": "The objects of the city Levni comes from: tea, games, instruments.",
+   "missing": [
+    "backgammon",
+    "samovar",
+    "ney",
+    "baglama",
+    "fez"
+   ],
+   "present": [
+    {
+     "word": "tea glass",
+     "name": "tea-glass"
+    },
+    {
+     "word": "simit",
+     "name": "simit"
+    },
+    {
+     "word": "cezve",
+     "name": "cezve"
+    },
+    {
+     "word": "evil eye",
+     "name": "nazar-bead"
+    },
+    {
+     "word": "pomegranate",
+     "name": "pomegranate"
+    },
+    {
+     "word": "ferry",
+     "name": "ferry"
+    },
+    {
+     "word": "seagull",
+     "name": "seagull"
+    }
+   ],
+   "total": 12
+  }
+ ],
+ "wanted": 54,
+ "usage": {
+  "npmMonth": 992,
+  "from": "2026-10-29",
+  "to": "2026-11-27"
+ }
+}
