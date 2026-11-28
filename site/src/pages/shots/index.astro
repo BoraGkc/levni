@@ -1,0 +1,157 @@
+---
+// Levni Shots: ready-made motion shots. Each card plays the shot with its own sample words and gives the one-line
+// command that makes it with yours. Loops and data come from scripts/render-shots.mjs (src/data/shots.json).
+import Base from '../../layouts/Base.astro';
+import { SITE } from '../../site';
+import entries from '../../data/shots.json';
+
+type Entry = { id: string; group: string; text: string; defaults: Record<string, unknown>; scene: unknown; kb: number };
+const list = entries as Entry[];
+const GROUPS: [string, string, string][] = [
+  ['text', 'Words', 'Headlines, quotes, lists and calls to action that type, slide and wipe in.'],
+  ['mark', 'Marks', 'A logo or a drawing that pops, floats, is drawn on or printed like a riso run.'],
+  ['scene', 'Scenes', 'Whole pictures that move: confetti, rain, snow, a night sky, a turning globe, a camera push.'],
+  ['data', 'Data', 'Numbers, bars and brand colours that arrive in order.'],
+];
+const q = (v: string) => `"${v.replace(/"/g, '\\"')}"`;
+const cli = (e: Entry) => `npx @levni/levni shot ${e.id} out.gif --title ${q(String(e.defaults.title ?? 'Ship it today'))}${e.defaults.mark ? ` --mark ${e.defaults.mark}` : ''} --format square`;
+const short = (v: unknown) => JSON.stringify(v, null, 1).replace(/\n\s*/g, ' ');
+const full = (v: unknown) => JSON.stringify(v, null, 2);
+const faq = [
+  ['What is a shot?', 'A ready-made motion design with slots: a title, a subtitle, a kicker, a drawing from the Folio and your inks. Fill the slots and Levni draws the loop on your own machine. Fields you leave out keep the shot\u2019s sample.'],
+  ['Which sizes?', 'Every shot lays itself out for a cover, a link preview, a square post, a vertical story, a YouTube frame, HD and a README banner. Pass --format square, story, youtube and so on.'],
+  ['Which files?', 'A GIF or animated WebP loop, an MP4 (with ffmpeg), a PNG still of the finished picture, or the scene as JSON to edit further and render with levni animate.'],
+  ['Can my agent make them?', 'Yes. The Levni MCP server has a render_shot tool: name the shot, pass the fields, and it writes the file and shows a strip of frames. Called with no name it lists every shot.'],
+];
+const jsonld = [
+  { '@type': 'CollectionPage', name: 'Levni Shots', url: `${SITE.url}/shots/` },
+  { '@type': 'FAQPage', mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
+];
+---
+<Base title="Levni Shots: ready-made motion with your words" description={`${list.length} ready-made motion shots: typed headlines, logo stings, quotes, launch cards, riso print runs, charts and more. Your words, your drawing, your inks, every format. Free and open source.`} jsonld={jsonld}>
+  <div class="wrap mc">
+    <header class="brand-hero">
+      <p class="eyebrow">Levni Shots</p>
+      <h1>Ready-made motion, your words.</h1>
+      <p class="lede">{list.length} shots. Pick one, give it your title, a drawing from the Folio and your colours, and Levni draws the loop for a cover, a square post, a story or a video. One line, on your machine, no image model.</p>
+    </header>
+
+    <nav class="mc-jump" aria-label="Groups">
+      {GROUPS.map(([g, name]) => <a href={`#${g}`}>{name} <span>{list.filter((e) => e.group === g).length}</span></a>)}
+    </nav>
+
+    {GROUPS.map(([g, name, about]) => (
+      <section class="mc-group" id={g} aria-labelledby={`h-${g}`}>
+        <div class="mc-head"><h2 id={`h-${g}`}>{name}</h2><p>{about}</p></div>
+        <ul class="mc-grid">
+          {list.filter((e) => e.group === g).map((e) => (
+            <li class="mc-card">
+              <button type="button" class="mc-art" data-id={e.id} aria-label={`Open ${e.id} larger`}>
+                <img src={`/shots/${e.id}.webp`} data-still={`/shots/${e.id}.webp`} data-loop={`/shots/${e.id}-loop.webp`} width="480" height="269" alt={`${e.id}: ${e.text}`} loading="lazy" decoding="async" />
+              </button>
+              <div class="mc-body">
+                <h3>{e.id}</h3>
+                <p>{e.text}</p>
+                <pre><code>{cli(e)}</code></pre>
+                <div class="mc-actions">
+                  <button type="button" class="mc-copy" data-copy={cli(e)}>Copy command</button>
+                  <button type="button" class="mc-copy" data-copy={full(e.scene)}>Copy scene</button>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+
+    <section class="mc-about">
+      <h2>Make one</h2>
+      <p>Run <code>npx @levni/levni shot --list</code> to see every shot, then <code>npx @levni/levni shot logo-sting sting.gif --title "Your name" --mark tulip --inks "#4B2FD6,#D6E521" --format square</code>. End the file in <code>.webp</code>, <code>.mp4</code>, <code>.png</code> or <code>.json</code> for other outputs. Lists take <code>--items "a,b,c"</code>, charts <code>--values "3,5,8"</code>.</p>
+      <p>Every shot is built from the same parts as any Levni scene, so <code>.json</code> gives you a scene to change freely. See the <a href="/motion/">motion catalogue</a> for the parts, the <a href="/docs/shots/">shots reference</a>, and the <a href="/gallery/#motion">Motion gallery</a> for finished pieces.</p>
+      <h2>Questions</h2>
+      <dl class="mc-faq">{faq.map(([q, a]) => (<><dt>{q}</dt><dd>{a}</dd></>))}</dl>
+    </section>
+  </div>
+
+  <dialog class="mc-dlg" id="mc-dlg" aria-labelledby="mc-dlg-t">
+    <form method="dialog"><button class="mc-x" aria-label="Close">×</button></form>
+    <img id="mc-dlg-img" alt="" width="480" height="269" />
+    <h2 id="mc-dlg-t"></h2>
+    <pre><code id="mc-dlg-json"></code></pre>
+    <p class="mc-run"><code>npx @levni/levni animate scene.json loop.gif --width 800</code> (or <code>levni shot</code> with your fields)</p>
+  </dialog>
+  <script type="application/json" id="mc-data" set:html={JSON.stringify(Object.fromEntries(list.map((e) => [e.id, { t: e.id, s: e.scene }])))} />
+</Base>
+
+<script>
+  // loops play while a card is on screen (still first, loop swapped in once loaded); reduced motion keeps the still
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+  const imgs = [...document.querySelectorAll<HTMLImageElement>('.mc-art img')];
+  const play = (img: HTMLImageElement, on: boolean) => {
+    const want = on && !reduce.matches ? img.dataset.loop! : img.dataset.still!;
+    if (img.getAttribute('src') === want) return;
+    if (want === img.dataset.still) { img.src = want; return; }
+    const pre = new Image(); pre.onload = () => { if (img.dataset.live === '1') img.src = want; }; pre.src = want;
+  };
+  const io = new IntersectionObserver((es) => es.forEach((e) => { const el = e.target as HTMLImageElement; el.dataset.live = e.isIntersecting ? '1' : ''; play(el, e.isIntersecting); }), { rootMargin: '120px 0px', threshold: 0.4 });
+  imgs.forEach((el) => io.observe(el));
+  reduce.addEventListener('change', () => imgs.forEach((el) => play(el, el.dataset.live === '1')));
+
+  document.querySelectorAll<HTMLButtonElement>('.mc-copy').forEach((b) => b.addEventListener('click', async () => {
+    await navigator.clipboard.writeText(b.dataset.copy || '');
+    const t = b.textContent; b.textContent = 'Copied'; setTimeout(() => (b.textContent = t), 1400);
+  }));
+
+  const data = JSON.parse(document.getElementById('mc-data')!.textContent || '{}');
+  const dlg = document.getElementById('mc-dlg') as HTMLDialogElement;
+  let opener: HTMLElement | null = null;
+  document.querySelectorAll<HTMLButtonElement>('.mc-art').forEach((b) => b.addEventListener('click', () => {
+    const id = b.dataset.id!, d = data[id];
+    opener = b;
+    const img = document.getElementById('mc-dlg-img') as HTMLImageElement;
+    img.src = reduce.matches ? `/shots/${id}.webp` : `/shots/${id}-loop.webp`;
+    img.alt = b.querySelector('img')!.alt;
+    document.getElementById('mc-dlg-t')!.textContent = d.t;
+    document.getElementById('mc-dlg-json')!.textContent = JSON.stringify(d.s, null, 2);
+    dlg.showModal();
+  }));
+  dlg.addEventListener('close', () => opener?.focus());
+  dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+</script>
+
+<style>
+  .mc h1 { max-width: 14ch; }
+  .mc .lede { max-width: 62ch; }
+  .mc-jump { position: sticky; top: 0; z-index: 5; display: flex; gap: 8px; overflow-x: auto; padding: 12px 0; margin-bottom: 8px; background: var(--paper); }
+  .mc-jump a { flex: none; font: 600 12px/1 var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--ink); text-decoration: none; padding: 9px 12px; box-shadow: 0 0 0 1px var(--rule); background: #fff; }
+  .mc-jump a:hover, .mc-jump a:focus-visible { box-shadow: 0 0 0 2px var(--ink); }
+  .mc-jump span { color: var(--accent-text); margin-left: 4px; }
+  .mc-group { scroll-margin-top: 64px; margin-top: clamp(28px, 5vw, 48px); }
+  .mc-head { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 24px; align-items: end; margin-bottom: 18px; }
+  .mc-head h2 { margin: 0; font-size: clamp(1.6rem, 3vw, 2.2rem); }
+  .mc-head p { margin: 0; color: var(--ink-soft); max-width: 60ch; }
+  .mc-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 18px; }
+  .mc-card { background: #fff; box-shadow: 0 0 0 1px var(--rule); display: grid; grid-template-rows: auto 1fr; }
+  .mc-art { display: block; padding: 0; border: 0; background: none; cursor: zoom-in; }
+  .mc-art img { display: block; width: 100%; height: auto; aspect-ratio: 480 / 269; }
+  .mc-art:focus-visible { outline: 3px solid var(--indigo); outline-offset: -3px; }
+  .mc-body { padding: 14px 16px 16px; display: grid; gap: 8px; align-content: start; }
+  .mc-body h3 { margin: 0; font: 700 1.15rem/1.2 var(--display); }
+  .mc-body p { margin: 0; font-size: 14px; color: var(--ink-soft); line-height: 1.45; }
+  .mc-body pre { margin: 2px 0 0; padding: 10px 12px; background: var(--indigo-deep); color: #fff; font: 12px/1.5 var(--mono); white-space: pre-wrap; word-break: break-word; max-height: 7.5em; overflow: auto; }
+  .mc-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .mc-copy { font: 600 11px/1 var(--mono); letter-spacing: .05em; text-transform: uppercase; padding: 9px 10px; border: 0; background: var(--paper); color: var(--ink); box-shadow: 0 0 0 1px var(--rule); cursor: pointer; }
+  .mc-copy:hover, .mc-copy:focus-visible { box-shadow: 0 0 0 2px var(--ink); }
+  .mc-about { max-width: 760px; margin: clamp(48px, 7vw, 80px) auto clamp(48px, 7vw, 80px) 0; }
+  .mc-about p { color: var(--ink-soft); }
+  .mc-faq dt { font-weight: 700; margin-top: 16px; }
+  .mc-faq dd { margin: 6px 0 0; color: var(--ink-soft); }
+  .mc-dlg { width: min(92vw, 760px); max-height: 92vh; padding: 20px; border: 0; box-shadow: 0 20px 60px rgb(0 0 0 / .3); }
+  .mc-dlg::backdrop { background: rgb(27 19 64 / .7); }
+  .mc-dlg img { display: block; width: 100%; height: auto; }
+  .mc-dlg h2 { margin: 14px 0 8px; }
+  .mc-dlg pre { margin: 0; padding: 12px; background: var(--indigo-deep); color: #fff; font: 12px/1.5 var(--mono); max-height: 36vh; overflow: auto; }
+  .mc-run code { font: 13px/1.5 var(--mono); }
+  .mc-x { position: absolute; top: 6px; right: 10px; border: 0; background: none; font-size: 28px; line-height: 1; cursor: pointer; color: var(--ink); }
+  @media (max-width: 720px) { .mc-head { grid-template-columns: minmax(0, 1fr); gap: 8px; } }
+</style>

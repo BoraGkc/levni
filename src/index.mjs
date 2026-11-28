@@ -25,6 +25,7 @@ export { EASE, MOTIONS } from './motion.mjs';
 export { bannerScene, pickMark, repoTerms, hashSeed, BANNER_SIZE, BANNER_THEMES } from './banner.mjs';
 export { encodeGif } from './gif.mjs';
 export { separate, findPlates } from './separate.mjs';
+export { shotScene, SHOTS } from './shots.mjs';
 export { renderBoard } from './board.mjs';
 export { expandBrand } from './board.mjs';
 

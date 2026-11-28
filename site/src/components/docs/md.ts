@@ -50,6 +50,7 @@ const link = (href: string) => {
   if (href === 'brandkit.md') return '/docs/brand-kits/';
   if (href === 'storyboard.md') return '/docs/storyboards/';
   if (href === 'print.md') return '/docs/print/';
+  if (href === 'shots.md') return '/docs/shots/';
   return href;
 };
 

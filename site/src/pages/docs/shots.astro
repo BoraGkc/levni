@@ -1,0 +1,26 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { readDoc, render, resetIds } from '../../components/docs/md';
+
+resetIds();
+const { intro, sections } = readDoc('shots.md');
+const fig = `<figure>
+    <img src="/docs/shots-grid.webp" width="1400" height="798" alt="Twenty-five Levni shots in one grid: typed headlines, logo stings, quotes, launch cards, weather, charts and riso print runs" loading="lazy" decoding="async" />
+    <figcaption>Every shot with its sample words. See them move at <a href="/shots/">levni.dev/shots</a>.</figcaption>
+  </figure>`;
+const head = render(intro.replace(/^!\[[^\]]*\]\([^)]*\)\n+/m, 'FIGUREHERE\n\n'));
+head.html = head.html.replace('<p>FIGUREHERE</p>', fig);
+const parts = sections.map((s) => render(s.md, { title: s.title, id: s.id }));
+const toc = parts.flatMap((p) => p.toc);
+---
+<Docs
+  title="Levni shots: ready-made motion with your words"
+  description="Make a ready-made motion shot with levni shot or the render_shot MCP tool: typed headlines, logo stings, launch cards, charts and riso print runs with your title, drawing and inks, in every format."
+  toc={toc}
+>
+  <p class="eyebrow">Animate and export</p>
+  <h1>Shots</h1>
+  <p class="callout"><strong>New in Levni 0.5.0</strong> <code>levni shot</code> needs 0.5.0 or newer.</p>
+  <Fragment set:html={head.html} />
+  {parts.map((p) => <Fragment set:html={p.html} />)}
+</Docs>

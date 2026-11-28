@@ -1,0 +1,2359 @@
+[
+ {
+  "id": "typed-headline",
+  "group": "text",
+  "text": "The headline types itself while the mark pops in and floats.",
+  "defaults": {},
+  "scene": {
+   "seed": 7,
+   "background": "paper",
+   "elements": [
+    {
+     "type": "disc",
+     "x": 876,
+     "y": 337,
+     "r": 181,
+     "color": "mustard",
+     "motion": {
+      "type": "pop",
+      "delay": 0.02,
+      "dur": 0.16
+     }
+    },
+    {
+     "type": "prop",
+     "name": "rocket",
+     "x": 876,
+     "y": 337,
+     "size": 294,
+     "shadow": true,
+     "motion": [
+      {
+       "type": "pop",
+       "delay": 0.08,
+       "dur": 0.16
+      },
+      {
+       "type": "float",
+       "amp": 10.094999999999999
+      }
+     ]
+    },
+    {
+     "type": "type",
+     "text": "NEW",
+     "x": 84,
+     "y": 108,
+     "size": 20,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "Ship it today",
+     "x": 84,
+     "y": 202,
+     "w": 600,
+     "h": 175,
+     "fit": "box",
+     "font": "black",
+     "color": "ink",
+     "motion": {
+      "type": "typewriter",
+      "delay": 0.1,
+      "dur": 0.26,
+      "cursor": "_"
+     }
+    },
+    {
+     "type": "type",
+     "text": "One JSON file, every format.",
+     "x": 88,
+     "y": 413,
+     "size": 30,
+     "color": "ink",
+     "motion": {
+      "type": "slide",
+      "from": "down",
+      "distance": 40,
+      "delay": 0.42,
+      "dur": 0.14
+     }
+    }
+   ]
+  },
+  "kb": 81
+ },
+ {
+  "id": "headline-slide",
+  "group": "text",
+  "text": "Headline and subtitle slide in from the left on a blue ground.",
+  "defaults": {},
+  "scene": {
+   "seed": 7,
+   "background": "blue",
+   "elements": [
+    {
+     "type": "disc",
+     "x": 876,
+     "y": 337,
+     "r": 181,
+     "color": "paper"
+    },
+    {
+     "type": "prop",
+     "name": "rocket",
+     "x": 876,
+     "y": 337,
+     "size": 279,
+     "motion": {
+      "type": "sway",
+      "amp": 6
+     }
+    },
+    {
+     "type": "type",
+     "text": "NEW",
+     "x": 84,
+     "y": 108,
+     "size": 20,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "paper"
+    },
+    {
+     "type": "type",
+     "text": "Ship it today",
+     "x": 84,
+     "y": 202,
+     "w": 600,
+     "h": 175,
+     "fit": "box",
+     "font": "black",
+     "color": "paper",
+     "motion": {
+      "type": "slide",
+      "from": "left",
+      "distance": 96,
+      "delay": 0.06,
+      "dur": 0.14
+     }
+    },
+    {
+     "type": "type",
+     "text": "One JSON file, every format.",
+     "x": 88,
+     "y": 413,
+     "size": 30,
+     "color": "paper",
+     "motion": {
+      "type": "slide",
+      "from": "left",
+      "distance": 72,
+      "delay": 0.3,
+      "dur": 0.14
+     }
+    }
+   ]
+  },
+  "kb": 75
+ },
+ {
+  "id": "kicker-wipe",
+  "group": "text",
+  "text": "A coral bar wipes in, the headline is uncovered, the mark is drawn on.",
+  "defaults": {},
+  "scene": {
+   "seed": 7,
+   "background": "paper",
+   "elements": [
+    {
+     "type": "block",
+     "x": 84,
+     "y": 149,
+     "w": 67,
+     "h": 12,
+     "color": "coral",
+     "motion": {
+      "type": "wipe",
+      "delay": 0.02,
+      "dur": 0.12
+     }
+    },
+    {
+     "type": "prop",
+     "name": "rocket",
+     "x": 876,
+     "y": 337,
+     "size": 339,
+     "motion": {
+      "type": "draw",
+      "delay": 0.05,
+      "dur": 0.4
+     }
+    },
+    {
+     "type": "type",
+     "text": "Ship it today",
+     "x": 84,
+     "y": 202,
+     "w": 600,
+     "h": 175,
+     "fit": "box",
+     "font": "black",
+     "color": "ink",
+     "motion": {
+      "type": "wipe",
+      "delay": 0.12,
+      "dur": 0.22
+     }
+    },
+    {
+     "type": "type",
+     "text": "One JSON file, every format.",
+     "x": 88,
+     "y": 413,
+     "size": 30,
+     "color": "ink",
+     "motion": {
+      "type": "fade",
+      "delay": 0.4,
+      "dur": 0.12
+     }
+    }
+   ]
+  },
+  "kb": 15
+ },
+ {
+  "id": "quote",
+  "group": "text",
+  "text": "A quote types itself in serif; the attribution fades in after.",
+  "defaults": {
+   "title": "“Make the thing you wish existed.”",
+   "subtitle": "— A note on the studio wall",
+   "mark": "pencil"
+  },
+  "scene": {
+   "seed": 7,
+   "background": "#F6EFE3",
+   "elements": [
+    {
+     "type": "disc",
+     "x": 876,
+     "y": 337,
+     "r": 128,
+     "color": "blue"
+    },
+    {
+     "type": "prop",
+     "name": "pencil",
+     "x": 876,
+     "y": 337,
+     "size": 188,
+     "motion": {
+      "type": "wiggle",
+      "amp": 6
+     }
+    },
+    {
+     "type": "type",
+     "text": "NEW",
+     "x": 84,
+     "y": 108,
+     "size": 20,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "“Make the thing you wish existed.”",
+     "x": 84,
+     "y": 202,
+     "w": 600,
+     "h": 175,
+     "fit": "box",
+     "font": "serif",
+     "color": "ink",
+     "motion": {
+      "type": "typewriter",
+      "delay": 0.05,
+      "dur": 0.42,
+      "cursor": "_"
+     }
+    },
+    {
+     "type": "type",
+     "text": "— A note on the studio wall",
+     "x": 88,
+     "y": 413,
+     "size": 30,
+     "color": "ink",
+     "motion": {
+      "type": "fade",
+      "delay": 0.55,
+      "dur": 0.12
+     }
+    }
+   ]
+  },
+  "kb": 42
+ },
+ {
+  "id": "big-number",
+  "group": "data",
+  "text": "A number types itself; a row of drawings sways underneath.",
+  "defaults": {
+   "title": "12,480",
+   "subtitle": "trees planted by readers",
+   "mark": "tree",
+   "kicker": "This year"
+  },
+  "scene": {
+   "seed": 7,
+   "background": "green",
+   "elements": [
+    {
+     "type": "type",
+     "text": "THIS YEAR",
+     "x": 84,
+     "y": 108,
+     "size": 20,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "paper"
+    },
+    {
+     "type": "type",
+     "text": "12,480",
+     "x": 84,
+     "y": 148,
+     "w": 720,
+     "h": 202,
+     "fit": "box",
+     "font": "black",
+     "color": "paper",
+     "motion": {
+      "type": "typewriter",
+      "delay": 0.1,
+      "dur": 0.26,
+      "cursor": "_"
+     }
+    },
+    {
+     "type": "type",
+     "text": "trees planted by readers",
+     "x": 88,
+     "y": 386,
+     "size": 30,
+     "color": "paper",
+     "motion": {
+      "type": "slide",
+      "from": "down",
+      "distance": 40,
+      "delay": 0.42,
+      "dur": 0.14
+     }
+    },
+    {
+     "type": "prop",
+     "name": "tree",
+     "x": 168,
+     "y": 538,
+     "size": 135,
+     "motion": {
+      "type": "sway",
+      "amp": 6,
+      "phase": 0
+     }
+    },
+    {
+     "type": "prop",
+     "name": "tree",
+     "x": 384,
+     "y": 538,
+     "size": 135,
+     "motion": {
+      "type": "sway",
+      "amp": 6,
+      "phase": 0.15
+     }
+    },
+    {
+     "type": "prop",
+     "name": "tree",
+     "x": 600,
+     "y": 538,
+     "size": 135,
+     "motion": {
+      "type": "sway",
+      "amp": 6,
+      "phase": 0.3
+     }
+    },
+    {
+     "type": "prop",
+     "name": "tree",
+     "x": 816,
+     "y": 538,
+     "size": 135,
+     "motion": {
+      "type": "sway",
+      "amp": 6,
+      "phase": 0.44999999999999996
+     }
+    },
+    {
+     "type": "prop",
+     "name": "tree",
+     "x": 1032,
+     "y": 538,
+     "size": 135,
+     "motion": {
+      "type": "sway",
+      "amp": 6,
+      "phase": 0.6
+     }
+    }
+   ]
+  },
+  "kb": 81
+ },
+ {
+  "id": "list-stagger",
+  "group": "text",
+  "text": "A title, then a list whose lines slide in one after another.",
+  "defaults": {
+   "title": "v2.0",
+   "kicker": "Changelog",
+   "items": [
+    "Dark mode",
+    "Faster search",
+    "Offline drafts",
+    "Fewer bugs"
+   ]
+  },
+  "scene": {
+   "seed": 7,
+   "background": "paper",
+   "elements": [
+    {
+     "type": "type",
+     "text": "CHANGELOG",
+     "x": 84,
+     "y": 108,
+     "size": 20,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "v2.0",
+     "x": 84,
+     "y": 148,
+     "w": 540,
+     "h": 135,
+     "fit": "box",
+     "font": "black",
+     "color": "ink",
+     "motion": {
+      "type": "typewriter",
+      "delay": 0.04,
+      "dur": 0.14,
+      "cursor": "_"
+     }
+    },
+    {
+     "type": "disc",
+     "x": 96,
+     "y": 326,
+     "r": 8,
+     "color": "coral",
+     "motion": {
+      "type": "pop",
+      "delay": 0.24,
+      "dur": 0.1
+     }
+    },
+    {
+     "type": "disc",
+     "x": 96,
+     "y": 383,
+     "r": 8,
+     "color": "blue",
+     "motion": {
+      "type": "pop",
+      "delay": 0.32,
+      "dur": 0.1
+     }
+    },
+    {
+     "type": "disc",
+     "x": 96,
+     "y": 441,
+     "r": 8,
+     "color": "green",
+     "motion": {
+      "type": "pop",
+      "delay": 0.4,
+      "dur": 0.1
+     }
+    },
+    {
+     "type": "disc",
+     "x": 96,
+     "y": 499,
+     "r": 8,
+     "color": "mustard",
+     "motion": {
+      "type": "pop",
+      "delay": 0.48,
+      "dur": 0.1
+     }
+    },
+    {
+     "type": "type",
+     "text": "Dark mode",
+     "x": 123,
+     "y": 312,
+     "size": 36,
+     "color": "ink",
+     "motion": {
+      "type": "slide",
+      "from": "left",
+      "distance": 60,
+      "delay": 0.24,
+      "dur": 0.14
+     }
+    },
+    {
+     "type": "type",
+     "text": "Faster search",
+     "x": 123,
+     "y": 370,
+     "size": 36,
+     "color": "ink",
+     "motion": {
+      "type": "slide",
+      "from": "left",
+      "distance": 60,
+      "delay": 0.32,
+      "dur": 0.14
+     }
+    },
+    {
+     "type": "type",
+     "text": "Offline drafts",
+     "x": 123,
+     "y": 427,
+     "size": 36,
+     "color": "ink",
+     "motion": {
+      "type": "slide",
+      "from": "left",
+      "distance": 60,
+      "delay": 0.4,
+      "dur": 0.14
+     }
+    },
+    {
+     "type": "type",
+     "text": "Fewer bugs",
+     "x": 123,
+     "y": 485,
+     "size": 36,
+     "color": "ink",
+     "motion": {
+      "type": "slide",
+      "from": "left",
+      "distance": 60,
+      "delay": 0.48,
+      "dur": 0.14
+     }
+    },
+    {
+     "type": "prop",
+     "name": "rocket",
+     "x": 960,
+     "y": 202,
+     "size": 135,
+     "motion": [
+      {
+       "type": "pop",
+       "delay": 0.12,
+       "dur": 0.16
+      },
+      {
+       "type": "spin"
+      }
+     ]
+    }
+   ]
+  },
+  "kb": 45
+ },
+ {
+  "id": "cta-pop",
+  "group": "text",
+  "text": "A headline, then a button that pops in and pulses.",
+  "defaults": {
+   "title": "Try it free",
+   "subtitle": "No sign-up, no card.",
+   "cta": "Get started →"
+  },
+  "scene": {
+   "seed": 7,
+   "background": "coral",
+   "elements": [
+    {
+     "type": "disc",
+     "x": 876,
+     "y": 337,
+     "r": 173,
+     "color": "mustard"
+    },
+    {
+     "type": "prop",
+     "name": "rocket",
+     "x": 876,
+     "y": 337,
+     "size": 271,
+     "shadow": true,
+     "motion": {
+      "type": "float",
+      "amp": 8.076
+     }
+    },
+    {
+     "type": "type",
+     "text": "NEW",
+     "x": 84,
+     "y": 108,
+     "size": 20,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "paper"
+    },
+    {
+     "type": "type",
+     "text": "Try it free",
+     "x": 84,
+     "y": 202,
+     "w": 600,
+     "h": 175,
+     "fit": "box",
+     "font": "black",
+     "color": "paper",
+     "motion": {
+      "type": "typewriter",
+      "delay": 0.1,
+      "dur": 0.26,
+      "cursor": "_"
+     }
+    },
+    {
+     "type": "type",
+     "text": "No sign-up, no card.",
+     "x": 88,
+     "y": 413,
+     "size": 30,
+     "color": "paper",
+     "motion": {
+      "type": "slide",
+      "from": "down",
+      "distance": 40,
+      "delay": 0.42,
+      "dur": 0.14
+     }
+    },
+    {
+     "type": "block",
+     "x": 84,
+     "y": 480,
+     "w": 283,
+     "h": 73,
+     "color": "ink",
+     "motion": [
+      {
+       "type": "pop",
+       "delay": 0.5,
+       "dur": 0.12
+      },
+      {
+       "type": "pulse",
+       "amp": 0.03,
+       "turns": 3
+      }
+     ]
+    },
+    {
+     "type": "type",
+     "text": "Get started →",
+     "x": 225,
+     "y": 502,
+     "size": 29,
+     "font": "mono",
+     "weight": 700,
+     "align": "center",
+     "color": "paper",
+     "motion": {
+      "type": "fade",
+      "delay": 0.56,
+      "dur": 0.12
+     }
+    }
+   ]
+  },
+  "kb": 94
+ },
+ {
+  "id": "logo-sting",
+  "group": "mark",
+  "text": "A disc and the mark pop in, the name types itself, a line fades in.",
+  "defaults": {
+   "title": "Lale Studio",
+   "subtitle": "Branding · type · print",
+   "mark": "tulip"
+  },
+  "scene": {
+   "seed": 7,
+   "background": "#4B2FD6",
+   "elements": [
+    {
+     "type": "disc",
+     "x": 600,
+     "y": 269,
+     "r": 175,
+     "color": "#D6E521",
+     "motion": {
+      "type": "pop",
+      "delay": 0.03,
+      "dur": 0.16
+     }
+    },
+    {
+     "type": "prop",
+     "name": "tulip",
+     "x": 600,
+     "y": 269,
+     "size": 283,
+     "motion": [
+      {
+       "type": "pop",
+       "delay": 0.1,
+       "dur": 0.16
+      },
+      {
+       "type": "sway",
+       "amp": 5
+      }
+     ]
+    },
+    {
+     "type": "type",
+     "text": "Lale Studio",
+     "x": 120,
+     "y": 481,
+     "w": 960,
+     "h": 87,
+     "fit": "box",
+     "font": "black",
+     "align": "center",
+     "color": "paper",
+     "motion": {
+      "type": "typewriter",
+      "delay": 0.3,
+      "dur": 0.22,
+      "cursor": "_"
+     }
+    },
+    {
+     "type": "type",
+     "text": "BRANDING · TYPE · PRINT",
+     "x": 600,
+     "y": 596,
+     "size": 20,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "align": "center",
+     "color": "#D6E521",
+     "motion": {
+      "type": "fade",
+      "delay": 0.6,
+      "dur": 0.12
+     }
+    }
+   ]
+  },
+  "kb": 71
+ },
+ {
+  "id": "mark-float",
+  "group": "mark",
+  "text": "The mark floats over a breathing disc, the title below.",
+  "defaults": {},
+  "scene": {
+   "seed": 7,
+   "background": "#E8E2FF",
+   "elements": [
+    {
+     "type": "disc",
+     "x": 876,
+     "y": 337,
+     "r": 188,
+     "color": "coral",
+     "motion": {
+      "type": "pulse",
+      "amp": 0.05
+     }
+    },
+    {
+     "type": "prop",
+     "name": "rocket",
+     "x": 876,
+     "y": 337,
+     "size": 302,
+     "shadow": true,
+     "motion": {
+      "type": "float",
+      "amp": 13.46
+     }
+    },
+    {
+     "type": "type",
+     "text": "NEW",
+     "x": 84,
+     "y": 108,
+     "size": 20,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "Ship it today",
+     "x": 84,
+     "y": 202,
+     "w": 600,
+     "h": 175,
+     "fit": "box",
+     "font": "black",
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "One JSON file, every format.",
+     "x": 88,
+     "y": 413,
+     "size": 30,
+     "color": "ink"
+    }
+   ]
+  },
+  "kb": 116
+ },
+ {
+  "id": "mark-draw",
+  "group": "mark",
+  "text": "The mark is drawn on line by line, then coloured in.",
+  "defaults": {},
+  "scene": {
+   "seed": 7,
+   "background": "paper",
+   "elements": [
+    {
+     "type": "prop",
+     "name": "rocket",
+     "x": 876,
+     "y": 337,
+     "size": 377,
+     "shadow": true,
+     "motion": {
+      "type": "draw",
+      "delay": 0.04,
+      "dur": 0.42
+     }
+    },
+    {
+     "type": "type",
+     "text": "NEW",
+     "x": 84,
+     "y": 108,
+     "size": 20,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "Ship it today",
+     "x": 84,
+     "y": 202,
+     "w": 600,
+     "h": 175,
+     "fit": "box",
+     "font": "black",
+     "color": "ink",
+     "motion": {
+      "type": "fade",
+      "delay": 0.45,
+      "dur": 0.12
+     }
+    },
+    {
+     "type": "type",
+     "text": "One JSON file, every format.",
+     "x": 88,
+     "y": 413,
+     "size": 30,
+     "color": "ink",
+     "motion": {
+      "type": "fade",
+      "delay": 0.55,
+      "dur": 0.12
+     }
+    }
+   ]
+  },
+  "kb": 22
+ },
+ {
+  "id": "mark-print",
+  "group": "mark",
+  "text": "The mark is printed like a riso run, one ink plate at a time.",
+  "defaults": {},
+  "scene": {
+   "seed": 7,
+   "background": "paper",
+   "elements": [
+    {
+     "type": "panel",
+     "x": 600,
+     "y": -20,
+     "w": 624,
+     "h": 713,
+     "color": "tone-mustard"
+    },
+    {
+     "type": "prop",
+     "name": "rocket",
+     "x": 876,
+     "y": 337,
+     "size": 358,
+     "shadow": true,
+     "motion": {
+      "type": "print",
+      "delay": 0.03,
+      "dur": 0.36,
+      "shift": 134.6
+     }
+    },
+    {
+     "type": "type",
+     "text": "NEW",
+     "x": 84,
+     "y": 108,
+     "size": 20,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "Ship it today",
+     "x": 84,
+     "y": 202,
+     "w": 600,
+     "h": 175,
+     "fit": "box",
+     "font": "black",
+     "color": "ink",
+     "motion": {
+      "type": "fade",
+      "delay": 0.42,
+      "dur": 0.12
+     }
+    },
+    {
+     "type": "type",
+     "text": "One JSON file, every format.",
+     "x": 88,
+     "y": 413,
+     "size": 30,
+     "color": "ink",
+     "motion": {
+      "type": "fade",
+      "delay": 0.5,
+      "dur": 0.12
+     }
+    }
+   ]
+  },
+  "kb": 16
+ },
+ {
+  "id": "seal-spin",
+  "group": "mark",
+  "text": "A seal with the mark at its centre turns slowly.",
+  "defaults": {
+   "title": "Since 2026",
+   "subtitle": "Hand-inked, open source.",
+   "mark": "star"
+  },
+  "scene": {
+   "seed": 7,
+   "background": "coral",
+   "elements": [
+    {
+     "type": "seal",
+     "x": 876,
+     "y": 337,
+     "size": 396,
+     "edge": "scallop",
+     "fill": "mustard",
+     "text": "new",
+     "prop": "star",
+     "motion": {
+      "type": "spin"
+     }
+    },
+    {
+     "type": "type",
+     "text": "Since 2026",
+     "x": 84,
+     "y": 202,
+     "w": 600,
+     "h": 175,
+     "fit": "box",
+     "font": "black",
+     "color": "paper"
+    },
+    {
+     "type": "type",
+     "text": "Hand-inked, open source.",
+     "x": 88,
+     "y": 413,
+     "size": 30,
+     "color": "paper"
+    }
+   ]
+  },
+  "kb": 254
+ },
+ {
+  "id": "error-wiggle",
+  "group": "mark",
+  "text": "A big title and a mark that shakes: 404s, empty states.",
+  "defaults": {
+   "title": "404",
+   "subtitle": "This page wandered off.",
+   "mark": "compass"
+  },
+  "scene": {
+   "seed": 7,
+   "background": "mustard",
+   "elements": [
+    {
+     "type": "disc",
+     "x": 876,
+     "y": 337,
+     "r": 188,
+     "color": "paper"
+    },
+    {
+     "type": "prop",
+     "name": "compass",
+     "x": 876,
+     "y": 337,
+     "size": 271,
+     "shadow": true,
+     "motion": {
+      "type": "wiggle",
+      "amp": 12,
+      "turns": 3
+     }
+    },
+    {
+     "type": "type",
+     "text": "NEW",
+     "x": 84,
+     "y": 108,
+     "size": 20,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "404",
+     "x": 84,
+     "y": 202,
+     "w": 600,
+     "h": 175,
+     "fit": "box",
+     "font": "black",
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "This page wandered off.",
+     "x": 88,
+     "y": 413,
+     "size": 30,
+     "color": "ink"
+    }
+   ]
+  },
+  "kb": 63
+ },
+ {
+  "id": "confetti-launch",
+  "group": "scene",
+  "text": "Confetti falls on a dark card; the mark pops in and the title types.",
+  "defaults": {
+   "title": "v0.5 is out",
+   "kicker": "Launch"
+  },
+  "scene": {
+   "seed": 7,
+   "background": "#14122B",
+   "elements": [
+    {
+     "type": "confetti",
+     "x": 0,
+     "y": 0,
+     "w": 1200,
+     "h": 673,
+     "spacing": 47
+    },
+    {
+     "type": "disc",
+     "x": 876,
+     "y": 337,
+     "r": 181,
+     "color": "blue",
+     "motion": {
+      "type": "pop",
+      "delay": 0.02,
+      "dur": 0.16
+     }
+    },
+    {
+     "type": "prop",
+     "name": "rocket",
+     "x": 876,
+     "y": 337,
+     "size": 286,
+     "shadow": true,
+     "motion": [
+      {
+       "type": "pop",
+       "delay": 0.08,
+       "dur": 0.16
+      },
+      {
+       "type": "float",
+       "amp": 10.094999999999999
+      }
+     ]
+    },
+    {
+     "type": "type",
+     "text": "LAUNCH",
+     "x": 84,
+     "y": 108,
+     "size": 20,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "mustard"
+    },
+    {
+     "type": "type",
+     "text": "v0.5 is out",
+     "x": 84,
+     "y": 202,
+     "w": 600,
+     "h": 175,
+     "fit": "box",
+     "font": "black",
+     "color": "paper",
+     "motion": {
+      "type": "typewriter",
+      "delay": 0.1,
+      "dur": 0.26,
+      "cursor": "_"
+     }
+    },
+    {
+     "type": "type",
+     "text": "One JSON file, every format.",
+     "x": 88,
+     "y": 413,
+     "size": 30,
+     "color": "paper",
+     "motion": {
+      "type": "slide",
+      "from": "down",
+      "distance": 40,
+      "delay": 0.42,
+      "dur": 0.14
+     }
+    }
+   ]
+  },
+  "kb": 286
+ },
+ {
+  "id": "rain",
+  "group": "scene",
+  "text": "Rain falls past a drifting cloud: weather, mood, a slow day.",
+  "defaults": {
+   "title": "Rainy Monday",
+   "subtitle": "Stay in, read something.",
+   "mark": "umbrella"
+  },
+  "scene": {
+   "seed": 7,
+   "background": "#DDEBFF",
+   "elements": [
+    {
+     "type": "confetti",
+     "kind": "rain",
+     "x": 0,
+     "y": 0,
+     "w": 1200,
+     "h": 673,
+     "spacing": 34,
+     "colors": [
+      "blue"
+     ]
+    },
+    {
+     "type": "cloud",
+     "x": 876,
+     "y": 167,
+     "size": 226,
+     "drift": 40
+    },
+    {
+     "type": "prop",
+     "name": "umbrella",
+     "x": 876,
+     "y": 382,
+     "size": 226,
+     "motion": {
+      "type": "sway",
+      "amp": 5
+     }
+    },
+    {
+     "type": "type",
+     "text": "NEW",
+     "x": 84,
+     "y": 108,
+     "size": 20,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "Rainy Monday",
+     "x": 84,
+     "y": 202,
+     "w": 600,
+     "h": 175,
+     "fit": "box",
+     "font": "black",
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "Stay in, read something.",
+     "x": 88,
+     "y": 413,
+     "size": 30,
+     "color": "ink"
+    }
+   ]
+  },
+  "kb": 430
+ },
+ {
+  "id": "snow",
+  "group": "scene",
+  "text": "Snow falls over a still drawing on pale hills.",
+  "defaults": {
+   "title": "-4°",
+   "subtitle": "Tuesday",
+   "mark": "house"
+  },
+  "scene": {
+   "seed": 7,
+   "background": "#DDEBFF",
+   "elements": [
+    {
+     "type": "hills",
+     "base": 673,
+     "height": 188,
+     "color": "paper"
+    },
+    {
+     "type": "confetti",
+     "kind": "stars",
+     "x": 0,
+     "y": 0,
+     "w": 1200,
+     "h": 673,
+     "spacing": 54,
+     "colors": [
+      "paper",
+      "blue"
+     ]
+    },
+    {
+     "type": "prop",
+     "name": "house",
+     "x": 876,
+     "y": 337,
+     "size": 302,
+     "shadow": true
+    },
+    {
+     "type": "type",
+     "text": "NEW",
+     "x": 84,
+     "y": 108,
+     "size": 20,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "-4°",
+     "x": 84,
+     "y": 202,
+     "w": 600,
+     "h": 175,
+     "fit": "box",
+     "font": "black",
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "Tuesday",
+     "x": 88,
+     "y": 413,
+     "size": 30,
+     "color": "ink"
+    }
+   ]
+  },
+  "kb": 184
+ },
+ {
+  "id": "night",
+  "group": "scene",
+  "text": "Stars blink out of step over dark hills; the moon floats.",
+  "defaults": {
+   "title": "Good night.",
+   "mark": "moon"
+  },
+  "scene": {
+   "seed": 7,
+   "background": "#14122B",
+   "stagger": 0.13,
+   "elements": [
+    {
+     "type": "prop",
+     "name": "star",
+     "x": 144,
+     "y": 101,
+     "size": 34,
+     "motion": {
+      "type": "blink",
+      "amp": 0.8,
+      "turns": 2
+     }
+    },
+    {
+     "type": "prop",
+     "name": "star",
+     "x": 420,
+     "y": 67,
+     "size": 44,
+     "motion": {
+      "type": "blink",
+      "amp": 0.8,
+      "turns": 2
+     }
+    },
+    {
+     "type": "prop",
+     "name": "star",
+     "x": 660,
+     "y": 188,
+     "size": 54,
+     "motion": {
+      "type": "blink",
+      "amp": 0.8,
+      "turns": 2
+     }
+    },
+    {
+     "type": "prop",
+     "name": "star",
+     "x": 300,
+     "y": 269,
+     "size": 34,
+     "motion": {
+      "type": "blink",
+      "amp": 0.8,
+      "turns": 2
+     }
+    },
+    {
+     "type": "prop",
+     "name": "star",
+     "x": 816,
+     "y": 303,
+     "size": 44,
+     "motion": {
+      "type": "blink",
+      "amp": 0.8,
+      "turns": 2
+     }
+    },
+    {
+     "type": "prop",
+     "name": "star",
+     "x": 1080,
+     "y": 370,
+     "size": 54,
+     "motion": {
+      "type": "blink",
+      "amp": 0.8,
+      "turns": 2
+     }
+    },
+    {
+     "type": "prop",
+     "name": "star",
+     "x": 540,
+     "y": 404,
+     "size": 34,
+     "motion": {
+      "type": "blink",
+      "amp": 0.8,
+      "turns": 2
+     }
+    },
+    {
+     "type": "disc",
+     "x": 960,
+     "y": 135,
+     "r": 54,
+     "color": "paper"
+    },
+    {
+     "type": "prop",
+     "name": "moon",
+     "x": 960,
+     "y": 135,
+     "size": 87,
+     "motion": {
+      "type": "float",
+      "amp": 5.384
+     }
+    },
+    {
+     "type": "hills",
+     "base": 673,
+     "height": 148,
+     "color": "blue"
+    },
+    {
+     "type": "type",
+     "text": "NEW",
+     "x": 84,
+     "y": 108,
+     "size": 20,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "paper"
+    },
+    {
+     "type": "type",
+     "text": "Good night.",
+     "x": 84,
+     "y": 417,
+     "w": 720,
+     "h": 94,
+     "fit": "box",
+     "font": "black",
+     "color": "paper"
+    },
+    {
+     "type": "type",
+     "text": "One JSON file, every format.",
+     "x": 88,
+     "y": 548,
+     "size": 30,
+     "color": "paper"
+    }
+   ]
+  },
+  "kb": 57
+ },
+ {
+  "id": "sunburst",
+  "group": "scene",
+  "text": "Rays turn behind the mark; a bright hero for good news.",
+  "defaults": {
+   "title": "We did it",
+   "mark": "trophy"
+  },
+  "scene": {
+   "seed": 7,
+   "background": "paper",
+   "elements": [
+    {
+     "type": "sunburst",
+     "x": 876,
+     "y": 337,
+     "size": 528,
+     "color": "mustard"
+    },
+    {
+     "type": "prop",
+     "name": "trophy",
+     "x": 876,
+     "y": 337,
+     "size": 264,
+     "shadow": true,
+     "motion": {
+      "type": "float",
+      "amp": 8.076
+     }
+    },
+    {
+     "type": "type",
+     "text": "NEW",
+     "x": 84,
+     "y": 108,
+     "size": 20,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "We did it",
+     "x": 84,
+     "y": 202,
+     "w": 600,
+     "h": 175,
+     "fit": "box",
+     "font": "black",
+     "color": "ink",
+     "motion": {
+      "type": "typewriter",
+      "delay": 0.1,
+      "dur": 0.26,
+      "cursor": "_"
+     }
+    },
+    {
+     "type": "type",
+     "text": "One JSON file, every format.",
+     "x": 88,
+     "y": 413,
+     "size": 30,
+     "color": "ink",
+     "motion": {
+      "type": "slide",
+      "from": "down",
+      "distance": 40,
+      "delay": 0.42,
+      "dur": 0.14
+     }
+    }
+   ]
+  },
+  "kb": 123
+ },
+ {
+  "id": "mesh-breathe",
+  "group": "scene",
+  "text": "A dark mesh gradient breathes behind a typed title.",
+  "defaults": {
+   "title": "Calm, then loud.",
+   "kicker": "Gradients"
+  },
+  "scene": {
+   "seed": 7,
+   "background": "#14122B",
+   "finish": "soft",
+   "elements": [
+    {
+     "type": "meshgrad",
+     "x": 0,
+     "y": 0,
+     "w": 1200,
+     "h": 673,
+     "base": "#1B1745",
+     "drift": 0.18,
+     "colors": [
+      "#FF7A59",
+      "#7A5CFF",
+      "#38D6E8",
+      "#FF4FA3"
+     ],
+     "grain": 0.08
+    },
+    {
+     "type": "type",
+     "text": "GRADIENTS",
+     "x": 84,
+     "y": 108,
+     "size": 20,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "paper"
+    },
+    {
+     "type": "type",
+     "text": "Calm, then loud.",
+     "x": 84,
+     "y": 215,
+     "w": 840,
+     "h": 202,
+     "fit": "box",
+     "font": "black",
+     "color": "paper",
+     "motion": {
+      "type": "typewriter",
+      "delay": 0.1,
+      "dur": 0.26,
+      "cursor": "_"
+     }
+    },
+    {
+     "type": "type",
+     "text": "One JSON file, every format.",
+     "x": 88,
+     "y": 454,
+     "size": 30,
+     "color": "paper",
+     "motion": {
+      "type": "slide",
+      "from": "down",
+      "distance": 40,
+      "delay": 0.42,
+      "dur": 0.14
+     }
+    }
+   ]
+  },
+  "kb": 126
+ },
+ {
+  "id": "ascii-globe",
+  "group": "scene",
+  "text": "A globe of text characters turns beside a typed title.",
+  "defaults": {
+   "title": "One planet, all in text.",
+   "kicker": "World"
+  },
+  "scene": {
+   "seed": 7,
+   "background": "paper",
+   "finish": "soft",
+   "elements": [
+    {
+     "type": "glyphfill",
+     "shape": "sphere",
+     "x": 876,
+     "y": 337,
+     "size": 396,
+     "cell": 8,
+     "color": "ink",
+     "accent": "coral",
+     "land": 0.42
+    },
+    {
+     "type": "type",
+     "text": "WORLD",
+     "x": 84,
+     "y": 108,
+     "size": 20,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "One planet, all in text.",
+     "x": 84,
+     "y": 202,
+     "w": 600,
+     "h": 175,
+     "fit": "box",
+     "font": "mono",
+     "color": "ink",
+     "motion": {
+      "type": "typewriter",
+      "delay": 0.1,
+      "dur": 0.26,
+      "cursor": "_"
+     }
+    },
+    {
+     "type": "type",
+     "text": "One JSON file, every format.",
+     "x": 88,
+     "y": 413,
+     "size": 30,
+     "color": "ink",
+     "motion": {
+      "type": "slide",
+      "from": "down",
+      "distance": 40,
+      "delay": 0.42,
+      "dur": 0.14
+     }
+    }
+   ]
+  },
+  "kb": 225
+ },
+ {
+  "id": "turntable",
+  "group": "scene",
+  "text": "The mark as a 3D object, turning once a loop.",
+  "defaults": {
+   "title": "Winner",
+   "mark": "trophy"
+  },
+  "scene": {
+   "seed": 7,
+   "background": "#FFE3DE",
+   "finish": "soft",
+   "elements": [
+    {
+     "type": "meshgrad",
+     "x": 876,
+     "y": 337,
+     "r": 226,
+     "colors": [
+      "#FFB5A3",
+      "#FFD9A0",
+      "#FFE3DE"
+     ],
+     "grain": 0.06
+    },
+    {
+     "type": "extrude3d",
+     "name": "trophy",
+     "x": 876,
+     "y": 337,
+     "size": 320,
+     "depth": 0.22,
+     "spin": 1
+    },
+    {
+     "type": "type",
+     "text": "NEW",
+     "x": 84,
+     "y": 108,
+     "size": 20,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "Winner",
+     "x": 84,
+     "y": 202,
+     "w": 600,
+     "h": 175,
+     "fit": "box",
+     "font": "black",
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "One JSON file, every format.",
+     "x": 88,
+     "y": 413,
+     "size": 30,
+     "color": "ink"
+    }
+   ]
+  },
+  "kb": 102
+ },
+ {
+  "id": "camera-push",
+  "group": "scene",
+  "text": "A cover where the view slowly pushes in while the mark floats.",
+  "defaults": {
+   "title": "Ideas that last",
+   "kicker": "Essay · 6 min",
+   "mark": "lightbulb"
+  },
+  "scene": {
+   "seed": 7,
+   "background": "paper",
+   "camera": {
+    "zoom": 1.1
+   },
+   "elements": [
+    {
+     "type": "panel",
+     "x": 688,
+     "y": 148,
+     "w": 377,
+     "h": 377,
+     "color": "blue"
+    },
+    {
+     "type": "sunburst",
+     "x": 876,
+     "y": 337,
+     "size": 377,
+     "color": "tone"
+    },
+    {
+     "type": "prop",
+     "name": "lightbulb",
+     "x": 876,
+     "y": 337,
+     "size": 249,
+     "shadow": true,
+     "motion": {
+      "type": "float",
+      "amp": 8.076
+     }
+    },
+    {
+     "type": "type",
+     "text": "ESSAY · 6 MIN",
+     "x": 84,
+     "y": 108,
+     "size": 20,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "Ideas that last",
+     "x": 84,
+     "y": 202,
+     "w": 600,
+     "h": 175,
+     "fit": "box",
+     "font": "black",
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "One JSON file, every format.",
+     "x": 88,
+     "y": 413,
+     "size": 30,
+     "color": "ink"
+    }
+   ]
+  },
+  "kb": 145
+ },
+ {
+  "id": "bars-grow",
+  "group": "data",
+  "text": "Bars rise one after another; the last one is the news.",
+  "defaults": {
+   "title": "+50%",
+   "subtitle": "Signups by month · sample data",
+   "values": [
+    3,
+    5,
+    4,
+    7,
+    6,
+    9
+   ]
+  },
+  "scene": {
+   "seed": 7,
+   "background": "paper",
+   "elements": [
+    {
+     "type": "bars",
+     "x": 96,
+     "y": 121,
+     "w": 78,
+     "h": 417,
+     "values": [
+      3
+     ],
+     "min": 0,
+     "max": 9.450000000000001,
+     "baseline": false,
+     "colors": [
+      "blue"
+     ],
+     "motion": {
+      "type": "wipe",
+      "from": "down",
+      "delay": 0.04,
+      "dur": 0.18
+     }
+    },
+    {
+     "type": "bars",
+     "x": 208,
+     "y": 121,
+     "w": 78,
+     "h": 417,
+     "values": [
+      5
+     ],
+     "min": 0,
+     "max": 9.450000000000001,
+     "baseline": false,
+     "colors": [
+      "blue"
+     ],
+     "motion": {
+      "type": "wipe",
+      "from": "down",
+      "delay": 0.09,
+      "dur": 0.18
+     }
+    },
+    {
+     "type": "bars",
+     "x": 320,
+     "y": 121,
+     "w": 78,
+     "h": 417,
+     "values": [
+      4
+     ],
+     "min": 0,
+     "max": 9.450000000000001,
+     "baseline": false,
+     "colors": [
+      "blue"
+     ],
+     "motion": {
+      "type": "wipe",
+      "from": "down",
+      "delay": 0.14,
+      "dur": 0.18
+     }
+    },
+    {
+     "type": "bars",
+     "x": 432,
+     "y": 121,
+     "w": 78,
+     "h": 417,
+     "values": [
+      7
+     ],
+     "min": 0,
+     "max": 9.450000000000001,
+     "baseline": false,
+     "colors": [
+      "blue"
+     ],
+     "motion": {
+      "type": "wipe",
+      "from": "down",
+      "delay": 0.19000000000000003,
+      "dur": 0.18
+     }
+    },
+    {
+     "type": "bars",
+     "x": 544,
+     "y": 121,
+     "w": 78,
+     "h": 417,
+     "values": [
+      6
+     ],
+     "min": 0,
+     "max": 9.450000000000001,
+     "baseline": false,
+     "colors": [
+      "blue"
+     ],
+     "motion": {
+      "type": "wipe",
+      "from": "down",
+      "delay": 0.24000000000000002,
+      "dur": 0.18
+     }
+    },
+    {
+     "type": "bars",
+     "x": 656,
+     "y": 121,
+     "w": 78,
+     "h": 417,
+     "values": [
+      9
+     ],
+     "min": 0,
+     "max": 9.450000000000001,
+     "baseline": false,
+     "colors": [
+      "coral"
+     ],
+     "motion": {
+      "type": "wipe",
+      "from": "down",
+      "delay": 0.29,
+      "dur": 0.18
+     }
+    },
+    {
+     "type": "block",
+     "x": 89,
+     "y": 538,
+     "w": 672,
+     "h": 3,
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "+50%",
+     "x": 840,
+     "y": 202,
+     "w": 288,
+     "h": 135,
+     "fit": "box",
+     "font": "black",
+     "color": "coral",
+     "motion": {
+      "type": "pop",
+      "delay": 0.5,
+      "dur": 0.14
+     }
+    },
+    {
+     "type": "type",
+     "text": "Signups by month · sample data",
+     "x": 840,
+     "y": 377,
+     "size": 24,
+     "color": "ink",
+     "w": 300
+    }
+   ]
+  },
+  "kb": 13
+ },
+ {
+  "id": "palette-rise",
+  "group": "data",
+  "text": "Brand colour swatches rise one after another, then their codes.",
+  "defaults": {
+   "title": "Brand inks",
+   "inks": [
+    "#1F3A5F",
+    "#E4572E",
+    "#F2C230",
+    "#2E8B57",
+    "#7A5CFF"
+   ]
+  },
+  "scene": {
+   "seed": 7,
+   "background": "paper",
+   "elements": [
+    {
+     "type": "type",
+     "text": "BRAND INKS",
+     "x": 84,
+     "y": 94,
+     "size": 24,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "block",
+     "x": 84,
+     "y": 175,
+     "w": 190,
+     "h": 337,
+     "color": "#1F3A5F",
+     "motion": {
+      "type": "wipe",
+      "from": "down",
+      "delay": 0.04,
+      "dur": 0.18
+     }
+    },
+    {
+     "type": "block",
+     "x": 295,
+     "y": 175,
+     "w": 190,
+     "h": 337,
+     "color": "#E4572E",
+     "motion": {
+      "type": "wipe",
+      "from": "down",
+      "delay": 0.11000000000000001,
+      "dur": 0.18
+     }
+    },
+    {
+     "type": "block",
+     "x": 505,
+     "y": 175,
+     "w": 190,
+     "h": 337,
+     "color": "#F2C230",
+     "motion": {
+      "type": "wipe",
+      "from": "down",
+      "delay": 0.18000000000000002,
+      "dur": 0.18
+     }
+    },
+    {
+     "type": "block",
+     "x": 716,
+     "y": 175,
+     "w": 190,
+     "h": 337,
+     "color": "#2E8B57",
+     "motion": {
+      "type": "wipe",
+      "from": "down",
+      "delay": 0.25,
+      "dur": 0.18
+     }
+    },
+    {
+     "type": "block",
+     "x": 926,
+     "y": 175,
+     "w": 190,
+     "h": 337,
+     "color": "#7A5CFF",
+     "motion": {
+      "type": "wipe",
+      "from": "down",
+      "delay": 0.32,
+      "dur": 0.18
+     }
+    },
+    {
+     "type": "type",
+     "text": "#1F3A5F",
+     "x": 88,
+     "y": 539,
+     "size": 21,
+     "font": "mono",
+     "color": "ink",
+     "motion": {
+      "type": "fade",
+      "delay": 0.3,
+      "dur": 0.12
+     }
+    },
+    {
+     "type": "type",
+     "text": "#E4572E",
+     "x": 299,
+     "y": 539,
+     "size": 21,
+     "font": "mono",
+     "color": "ink",
+     "motion": {
+      "type": "fade",
+      "delay": 0.35,
+      "dur": 0.12
+     }
+    },
+    {
+     "type": "type",
+     "text": "#F2C230",
+     "x": 509,
+     "y": 539,
+     "size": 21,
+     "font": "mono",
+     "color": "ink",
+     "motion": {
+      "type": "fade",
+      "delay": 0.4,
+      "dur": 0.12
+     }
+    },
+    {
+     "type": "type",
+     "text": "#2E8B57",
+     "x": 720,
+     "y": 539,
+     "size": 21,
+     "font": "mono",
+     "color": "ink",
+     "motion": {
+      "type": "fade",
+      "delay": 0.45,
+      "dur": 0.12
+     }
+    },
+    {
+     "type": "type",
+     "text": "#7A5CFF",
+     "x": 930,
+     "y": 539,
+     "size": 21,
+     "font": "mono",
+     "color": "ink",
+     "motion": {
+      "type": "fade",
+      "delay": 0.5,
+      "dur": 0.12
+     }
+    }
+   ]
+  },
+  "kb": 17
+ },
+ {
+  "id": "print-run",
+  "group": "mark",
+  "text": "Three drawings printed like a riso run, one after another.",
+  "defaults": {
+   "title": "Every ink, one plate at a time.",
+   "extra": [
+    "sailboat",
+    "bird"
+   ],
+   "mark": "lighthouse"
+  },
+  "scene": {
+   "seed": 7,
+   "background": "paper",
+   "stagger": 0.06,
+   "plateShift": 4,
+   "elements": [
+    {
+     "type": "panel",
+     "x": 600,
+     "y": -20,
+     "w": 624,
+     "h": 713,
+     "color": "tone-mustard"
+    },
+    {
+     "type": "prop",
+     "name": "lighthouse",
+     "x": 831,
+     "y": 337,
+     "size": 339,
+     "shadow": true,
+     "motion": {
+      "type": "print",
+      "delay": 0.02,
+      "dur": 0.34,
+      "shift": 161.51999999999998
+     }
+    },
+    {
+     "type": "prop",
+     "name": "sailboat",
+     "x": 1034,
+     "y": 427,
+     "size": 170,
+     "motion": {
+      "type": "print",
+      "delay": 0.02,
+      "dur": 0.34,
+      "shift": 161.51999999999998
+     }
+    },
+    {
+     "type": "prop",
+     "name": "bird",
+     "x": 1019,
+     "y": 193,
+     "size": 113,
+     "motion": {
+      "type": "print",
+      "delay": 0.02,
+      "dur": 0.34,
+      "shift": 161.51999999999998
+     }
+    },
+    {
+     "type": "type",
+     "text": "NEW",
+     "x": 84,
+     "y": 108,
+     "size": 20,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "Every ink, one plate at a time.",
+     "x": 84,
+     "y": 202,
+     "w": 600,
+     "h": 175,
+     "fit": "box",
+     "font": "black",
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "One JSON file, every format.",
+     "x": 88,
+     "y": 413,
+     "size": 30,
+     "color": "ink"
+    }
+   ]
+  },
+  "kb": 23
+ }
+]

@@ -159,6 +159,20 @@ export const TOOLS = [
       required: ['scene', 'out_dir'],
     },
   },
+  {
+    name: 'render_shot',
+    description: 'Make a ready-made motion shot with your words, drawing and inks, and write it as a loop (.gif, .webp, .mp4) or a still (.png) or its scene (.json). Call with no name for the list of shots. Shots: typed-headline, headline-slide, kicker-wipe, quote, big-number, list-stagger, cta-pop, logo-sting, mark-float, mark-draw, mark-print, seal-spin, error-wiggle, confetti-launch, rain, snow, night, sunburst, mesh-breathe, ascii-globe, turntable, camera-push, bars-grow, palette-rise, print-run. Every shot lays itself out for cover, og, square, story, youtube, hd and readme.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        name: { type: 'string', description: 'Shot name. Leave out to get the list.' },
+        fields: { type: 'object', description: '{ title?, subtitle?, kicker?, mark? (Folio name from list_props), inks? (up to five hex), items? [strings], values? [numbers], cta?, format?, seed? }. Left-out fields take the shot\'s own sample.' },
+        out: { type: 'string', description: 'File to write: .gif, .webp, .mp4 (needs ffmpeg), .png (a still) or .json (the scene, to edit and pass to render_animation).' },
+        width: { type: 'integer', description: 'Output width in px for loops (default: the canvas width).' },
+        preview: { type: 'boolean', description: 'Return a strip of four frames (default true).' },
+      },
+    },
+  },
 ];
 
 const text = (t) => ({ type: 'text', text: t });
@@ -222,6 +236,26 @@ async function call(name, args = {}) {
     const r = await animate(scene, file, { frames: args.frames, fps: args.fps, boil: args.boil, width: args.width });
     const out = [text(notesText(r.notes)), text(`wrote ${file}: ${r.frames} frames, ${r.width} x ${r.height}, ${Math.round(r.bytes / 1024)} KB`)];
     if (args.preview !== false) out.push(image(await frameStrip(r.stills)));
+    return out;
+  }
+
+  if (name === 'render_shot') {
+    const { shotScene, SHOTS } = await import('./shots.mjs');
+    if (!args.name) return [text(SHOTS.map((s) => `${s.id} (${s.group}): ${s.text}`).join('\n'))];
+    const scene = shotScene(String(args.name), asScene(args.fields) || {});
+    const out = [];
+    if (args.out) {
+      const file = resolve(String(args.out)), ext = extname(file).toLowerCase();
+      mkdirSync(dirname(file), { recursive: true });
+      if (ext === '.json') writeFileSync(file, JSON.stringify(scene, null, 2) + '\n');
+      else if (ext === '.png') await toPng((await compose({ ...scene, t: 0.62 })).svg, file);
+      else if (ext === '.mp4') { const { toMp4 } = await import('./sequence.mjs'); await toMp4(scene, file, { frames: 36, fps: 12, width: args.width }); }
+      else if (ext === '.gif' || ext === '.webp') { const { animate } = await import('./animate.mjs'); await animate(scene, file, { frames: 36, fps: 12, width: args.width }); }
+      else throw new Error('out must end in .gif, .webp, .mp4, .png or .json');
+      out.push(text(`wrote ${file}`));
+    }
+    if (args.preview !== false) { const { renderFrames, frameStrip } = await import('./animate.mjs'); out.push(image(await frameStrip((await renderFrames(scene, { frames: 8, width: 360 })).frames))); }
+    out.push(text(JSON.stringify(scene)));
     return out;
   }
 

@@ -21,6 +21,7 @@ export const DOC_GROUPS: DocGroup[] = [
   {
     label: 'Animate and export',
     pages: [
+      { href: '/docs/shots/', title: 'Shots', blurb: 'Ready-made motion with your words, drawing and inks.' },
       { href: '/docs/animation/', title: 'Animation', blurb: 'Loop any scene as GIF, WebP or MP4: motion, stagger, camera, moving README banners.' },
       { href: '/docs/storyboards/', title: 'Storyboards', blurb: 'Draw a shot list as one contact sheet, plus full-size frames and shots.json.' },
       { href: '/docs/print/', title: 'Print', blurb: 'Split a scene into riso plates for a real print run.' },
