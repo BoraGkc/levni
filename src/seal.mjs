@@ -154,9 +154,9 @@ export const SEAL_ASSETS = {
 };
 
 // `seal` with `prop`: the macro adds the prop as the centre slot, sized to fit inside the ring.
-// It turns with the seal (`rot`), on top of its own `propRot`.
+// It turns with the seal (`rot`), on top of its own `propRot`, and moves with it (`motion`).
 export function expandSeal(e) {
   if (e.type !== 'seal' || !e.prop) return e;
   const R = num(e.size, 300, 40, 2000) / 2, inner = e.text || e.top || e.bottom ? R * num(e.inner, 0.62, 0.3, 0.9) : R * 0.88;
-  return [e, { type: 'prop', name: e.prop, variant: e.propVariant, x: e.x, y: e.y, fit: true, size: inner * 1.25, rot: (e.rot || 0) + (e.propRot || 0), recolor: e.recolor }];
+  return [e, { type: 'prop', name: e.prop, variant: e.propVariant, x: e.x, y: e.y, fit: true, size: inner * 1.25, rot: (e.rot || 0) + (e.propRot || 0), recolor: e.recolor, ...(e.motion ? { motion: e.motion } : {}) }];
 }

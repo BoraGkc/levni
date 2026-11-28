@@ -232,7 +232,7 @@ function buildScene(shot, i, W, H, base, warnings) {
   names.forEach((name, k) => {
     const cx = prop.x + cell * (k + 0.5);
     if (camera !== 'close' || n > 1) els.push({ type: 'disc', x: r1(cx), y: r1(cy), r: r1(size * 0.56), color: DISC[bg] ?? 'paper' });
-    els.push({ type: 'prop', name, variant: k % 3 === 2 ? 1 : 0, x: r1(cx), y: r1(cy), size: r1(size), fit: true, shadow: true, ...(camera === 'close' ? { extrude: true } : {}), flip: camera === 'right' && k === 0 });
+    els.push({ type: 'prop', name, variant: k % 3 === 2 ? 1 : 0, x: r1(cx), y: r1(cy), size: r1(size), fit: true, shadow: true, ...(camera === 'close' ? { extrude: true } : {}) }); // never mirrored: a flipped drawing reverses any writing on it
   });
   if (camera === 'close' && n === 1) els.unshift({ type: 'disc', x: r1(prop.x + prop.w / 2), y: r1(cy), r: r1(size * 0.5), color: DISC[bg] ?? 'paper' });
 

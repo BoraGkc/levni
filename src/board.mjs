@@ -436,13 +436,14 @@ export function expandBrand(brand = {}) {
   ] };
 
   // landing page (1100 x 1000): a hero card on paper and a row of products
-  const hero = fitLines(tagline || name, 540, 34, 22, 2), heroLines = hero.lines, heroSize = hero.size;
+  // the mark sits at x 770 and can be 350 wide (left edge 595): words start at 160 and must end before it
+  const hero = fitLines(tagline || name, 410, 34, 22, 2), heroLines = hero.lines, heroSize = hero.size;
   const prods = [0, 1, 2].map((i) => extra[i] ?? null);
   const landing = { canvas: [1100, 1000], seed: seed + 3, background: 'paper', elements: [
     { type: 'panel', x: 115, y: 60, w: 870, h: 520, color: 'blue' }, // under 80% of the width: part of the page, not a full-bleed ground
     markEl(770, 320, 350, MONO_PAPER),
     ...heroLines.map((l, i) => lbl(l, 160, 150 + i * 42, heroSize, 'paper')),
-    lbl(name, 160, 345, fitSize(name, 500, 130, 56), 'paper', { upper: false }),
+    lbl(name, 160, 345, fitSize(name, 410, 130, 56), 'paper', { upper: false }),
     lbl('Discover  ->', 160, 470, 32, 'coral'),
     ...[200, 550, 900].flatMap((x, i) => [
       { type: 'disc', x, y: 800, r: 118, color: ['coral', 'mustard', 'blue'][i] },
