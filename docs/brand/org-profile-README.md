@@ -26,7 +26,7 @@ Then ask: *"Make a launch poster series for my brand with Levni."* No image mode
 
 <a href="https://levni.dev/banner/"><img src="https://raw.githubusercontent.com/Levni-Dev/levni/main/docs/img/banner-motion.gif" alt="A README banner drawing itself: the repo name is typed, a tulip pops into a yellow circle and floats, the description slides in" width="100%"></a>
 
-Any scene now loops as a GIF, an animated WebP or an MP4: `npx @levni/levni animate scene.json loop.gif`. Give an element `"motion": "float"` and it floats; a headline types itself. One name becomes a whole [brand kit](https://levni.dev/docs/brand-kits/), a shot list becomes a [storyboard](https://levni.dev/docs/storyboards/), and four [free tools](https://levni.dev/tools/) make gradients, patterns, waves and Open Graph images in your browser. Make a moving banner for your own repo at [levni.dev/banner](https://levni.dev/banner/).
+From 0.5.0 any scene loops as a GIF, an animated WebP or an MP4 with `levni animate scene.json loop.gif`. Give an element `"motion": "float"` and it floats; a headline types itself. One name becomes a whole [brand kit](https://levni.dev/docs/brand-kits/), a shot list becomes a [storyboard](https://levni.dev/docs/storyboards/), and four [free tools](https://levni.dev/tools/) make gradients, patterns, waves and Open Graph images in your browser. Make a moving banner for your own repo at [levni.dev/banner](https://levni.dev/banner/).
 
 ---
 
