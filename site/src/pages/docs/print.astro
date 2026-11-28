@@ -1,0 +1,26 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { readDoc, render, resetIds } from '../../components/docs/md';
+
+resetIds();
+const { intro, sections } = readDoc('print.md');
+const fig = `<figure>
+    <img src="/docs/print-sheet.webp" width="1400" height="208" alt="A lighthouse scene split into three plates, mustard, coral and blue, each printed alone in its ink, then the proof where the three are printed over each other" loading="lazy" decoding="async" />
+    <figcaption>The plates of <code>examples/riso-print.json</code>, and the proof.</figcaption>
+  </figure>`;
+const head = render(intro.replace(/^!\[[^\]]*\]\([^)]*\)\n+/m, 'FIGUREHERE\n\n'));
+head.html = head.html.replace('<p>FIGUREHERE</p>', fig);
+const parts = sections.map((s) => render(s.md, { title: s.title, id: s.id }));
+const toc = parts.flatMap((p) => p.toc);
+---
+<Docs
+  title="Levni print: split a scene into riso plates"
+  description="Turn a Levni scene into riso plates with levni print or the render_print MCP tool: one grayscale image per ink, a proof, a sheet and a manifest, ready for a stencil printer."
+  toc={toc}
+>
+  <p class="eyebrow">Animate and export</p>
+  <h1>Print</h1>
+  <p class="callout"><strong>New in Levni 0.5.0</strong> <code>levni print</code> needs 0.5.0 or newer.</p>
+  <Fragment set:html={head.html} />
+  {parts.map((p) => <Fragment set:html={p.html} />)}
+</Docs>

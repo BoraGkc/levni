@@ -130,6 +130,7 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
         <div class="code-head"><span id="g-file">scene.json</span><button type="button" id="g-copy" class="copy">Copy</button></div>
         <pre><code id="g-code"></code></pre>
         <p class="dlg-run">Render it: <code id="g-run">npx @levni/levni render scene.json out.png</code></p>
+        <p class="dlg-remix"><a id="g-remix" href="/editor/">Remix it in the editor →</a> <span>Your name joins its remix chain.</span></p>
       </div>
     </div>
   </dialog>
@@ -243,6 +244,9 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
     copy.textContent = 'Copy';
     const board = d.big!.includes('/g/boards/');
     document.getElementById('g-file')!.textContent = board ? 'board.json' : 'scene.json';
+    const rm = document.getElementById('g-remix') as HTMLAnchorElement;
+    rm.parentElement!.hidden = !!board;
+    rm.href = `/editor/?remix=${encodeURIComponent(d.json!)}`;
     document.getElementById('g-run')!.textContent = board ? 'npx @levni/levni board board.json out.png' : d.loop ? 'npx @levni/levni animate scene.json loop.webp --width 640' : 'npx @levni/levni render scene.json out.png';
     if (!dlg.open) dlg.showModal();
   }
@@ -357,6 +361,9 @@ const shape = (i: Item) => (i.tile ? 'tile' : i.w > i.h * 1.2 ? 'wide' : i.w >= 
   .copy { font: inherit; font-size: 0.82rem; color: #fff; background: var(--accent); border: 0; border-radius: 0; padding: 6px 14px; cursor: pointer; }
   .copy:hover { background: var(--indigo); }
   dialog pre { margin: 0; max-height: 46dvh; overflow: auto; font-size: 0.74rem; background: var(--indigo); color: #e9ecf4; border-color: var(--ink); white-space: pre-wrap; overflow-wrap: anywhere; }
+  .dlg-remix { margin: 12px 0 0; font-size: 0.9rem; }
+  .dlg-remix a { font-weight: 700; }
+  .dlg-remix span { color: var(--ink-soft); }
   .dlg-run { font-size: 0.86rem; color: var(--ink-soft); margin: 10px 0 0; }
   .dlg-run code { overflow-wrap: anywhere; }
 

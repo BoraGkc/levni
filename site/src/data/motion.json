@@ -745,6 +745,205 @@
   "kb": 10
  },
  {
+  "id": "draw",
+  "group": "entrances",
+  "title": "draw",
+  "text": "A drawing is drawn on: the hand-inked lines first, then the colour.",
+  "snippet": {
+   "motion": {
+    "type": "draw",
+    "dur": 0.45
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 4,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#E8E2FF",
+   "elements": [
+    {
+     "type": "type",
+     "text": "\"type\": \"draw\"",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "prop",
+     "name": "lighthouse",
+     "x": 320,
+     "y": 215,
+     "size": 300,
+     "shadow": true,
+     "motion": {
+      "type": "draw",
+      "delay": 0.04,
+      "dur": 0.38,
+      "out": true,
+      "outDelay": 0.02
+     }
+    }
+   ]
+  },
+  "kb": 76
+ },
+ {
+  "id": "print",
+  "group": "entrances",
+  "title": "print",
+  "text": "A riso print run: each ink plate lands in turn and slides into register, the line last.",
+  "snippet": {
+   "motion": {
+    "type": "print",
+    "dur": 0.45
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 6,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#E2F2EA",
+   "elements": [
+    {
+     "type": "type",
+     "text": "\"type\": \"print\"",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "prop",
+     "name": "rocket",
+     "x": 320,
+     "y": 215,
+     "size": 300,
+     "shadow": true,
+     "motion": {
+      "type": "print",
+      "delay": 0.04,
+      "dur": 0.32,
+      "out": true,
+      "outDelay": 0.02
+     }
+    }
+   ]
+  },
+  "kb": 23
+ },
+ {
+  "id": "print-run",
+  "group": "combos",
+  "title": "print run",
+  "text": "Several drawings printed one after another with stagger.",
+  "snippet": {
+   "stagger": 0.07,
+   "motion": {
+    "type": "print"
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 5,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#FFF1D6",
+   "elements": [
+    {
+     "type": "type",
+     "text": "\"print\" + \"stagger\": 0.07",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "prop",
+     "name": "coffee-cup",
+     "x": 110,
+     "y": 210,
+     "size": 130,
+     "shadow": true,
+     "motion": {
+      "type": "print",
+      "delay": 0.02,
+      "dur": 0.24,
+      "out": true,
+      "outDelay": 0.02
+     }
+    },
+    {
+     "type": "prop",
+     "name": "camera",
+     "x": 250,
+     "y": 210,
+     "size": 130,
+     "shadow": true,
+     "motion": {
+      "type": "print",
+      "delay": 0.02,
+      "dur": 0.24,
+      "out": true,
+      "outDelay": 0.02
+     }
+    },
+    {
+     "type": "prop",
+     "name": "headphones",
+     "x": 390,
+     "y": 210,
+     "size": 130,
+     "shadow": true,
+     "motion": {
+      "type": "print",
+      "delay": 0.02,
+      "dur": 0.24,
+      "out": true,
+      "outDelay": 0.02
+     }
+    },
+    {
+     "type": "prop",
+     "name": "pizza-slice",
+     "x": 530,
+     "y": 210,
+     "size": 130,
+     "shadow": true,
+     "motion": {
+      "type": "print",
+      "delay": 0.02,
+      "dur": 0.24,
+      "out": true,
+      "outDelay": 0.02
+     }
+    }
+   ],
+   "stagger": 0.07
+  },
+  "kb": 41
+ },
+ {
   "id": "typewriter",
   "group": "entrances",
   "title": "typewriter",

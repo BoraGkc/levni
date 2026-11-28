@@ -144,6 +144,49 @@ export const TOOLS = [
       },
     },
   },
+  {
+    name: 'render_print',
+    description: 'Split a scene into riso plates for a real print run: one grayscale PNG per ink (black = full ink), printed lightest first with the key line last, plus proof.png (the plates multiplied back on the paper), sheet.png (each plate in its ink beside the proof) and print.json (inks, hex, coverage, order, dpi at A4 and A3). Tints become lower density of their ink; two inks over each other are split onto both plates. Motion is ignored: the finished still is printed.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        scene,
+        out_dir: { type: 'string', description: 'Folder to write the plates into, relative to the server\'s working directory.' },
+        scale: { type: 'number', description: 'Pixels per canvas unit (default 3: a cover becomes 3600 x 2019, about 300 dpi at A4 landscape).' },
+        plates: { type: 'integer', description: 'Most drums to use (default 4); extra inks fold into the nearest plate.' },
+        halftone: { type: 'integer', description: 'Screen the tints into dots of this many px. Leave out to keep gray and let the printer screen.' },
+        preview: { type: 'boolean', description: 'Return sheet.png as an image (default true).' },
+      },
+      required: ['scene', 'out_dir'],
+    },
+  },
+  {
+    name: 'render_shot',
+    description: 'Make a ready-made motion shot with your words, drawing and inks, and write it as a loop (.gif, .webp, .mp4) or a still (.png) or its scene (.json). Call with no name for the list of shots. Shots: typed-headline, headline-slide, kicker-wipe, quote, big-number, list-stagger, cta-pop, logo-sting, mark-float, mark-draw, mark-print, seal-spin, error-wiggle, confetti-launch, rain, snow, night, sunburst, mesh-breathe, ascii-globe, turntable, camera-push, bars-grow, palette-rise, print-run. Every shot lays itself out for cover, og, square, story, youtube, hd and readme.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        name: { type: 'string', description: 'Shot name. Leave out to get the list.' },
+        fields: { type: 'object', description: '{ title?, subtitle?, kicker?, mark? (Folio name from list_props), inks? (up to five hex), items? [strings], values? [numbers], cta?, format?, seed? }. Left-out fields take the shot\'s own sample.' },
+        out: { type: 'string', description: 'File to write: .gif, .webp, .mp4 (needs ffmpeg), .png (a still) or .json (the scene, to edit and pass to render_animation).' },
+        width: { type: 'integer', description: 'Output width in px for loops (default: the canvas width).' },
+        preview: { type: 'boolean', description: 'Return a strip of four frames (default true).' },
+      },
+    },
+  },
+  {
+    name: 'render_reel',
+    description: 'Join shots or scenes into one short video or loop with transitions. reel: { format?, fps? (24), width?, inks?, transition? (cut, fade, wipe, slide, push, iris; default fade), transitionSeconds? (0.4), clips: [{ shot, fields?, seconds?, transition? } | { scene, seconds? }] }. Each clip plays its own motion once over its seconds. Writes .mp4 (needs ffmpeg), .gif or .webp and returns one frame from each clip.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        reel: { type: 'object', description: 'The reel spec.' },
+        out: { type: 'string', description: 'File to write: .mp4, .gif or .webp, relative to the server\'s working directory.' },
+        preview: { type: 'boolean', description: 'Return a strip of frames (default true).' },
+      },
+      required: ['reel', 'out'],
+    },
+  },
 ];
 
 const text = (t) => ({ type: 'text', text: t });
@@ -208,6 +251,50 @@ async function call(name, args = {}) {
     const r = await animate(scene, file, { frames: args.frames, fps: args.fps, boil: args.boil, width: args.width });
     const out = [text(notesText(r.notes)), text(`wrote ${file}: ${r.frames} frames, ${r.width} x ${r.height}, ${Math.round(r.bytes / 1024)} KB`)];
     if (args.preview !== false) out.push(image(await frameStrip(r.stills)));
+    return out;
+  }
+
+  if (name === 'render_reel') {
+    const { renderReel, reelFrames } = await import('./reel.mjs');
+    const reel = asScene(args.reel), file = resolve(String(args.out || ''));
+    mkdirSync(dirname(file), { recursive: true });
+    const r = await renderReel(reel, file);
+    const out = [text(`wrote ${file}: ${r.seconds} s, ${r.frames} frames at ${r.fps} fps, ${r.width} x ${r.height}`)];
+    if (args.preview !== false) {
+      const f = await reelFrames({ ...reel, width: 240, fps: 4 });
+      const picks = [0.15, 0.4, 0.65, 0.9].map((p) => f.frames[Math.floor(p * (f.frames.length - 1))]);
+      const cells = await Promise.all(picks.map((d) => sharp(d, { raw: { width: f.width, height: f.height, channels: 4 } }).png().toBuffer()));
+      out.push(image(await sharp({ create: { width: 4 * f.width, height: f.height, channels: 3, background: '#E9E6DE' } }).composite(cells.map((input, k) => ({ input, left: k * f.width, top: 0 }))).png().toBuffer()));
+    }
+    return out;
+  }
+
+  if (name === 'render_shot') {
+    const { shotScene, SHOTS } = await import('./shots.mjs');
+    if (!args.name) return [text(SHOTS.map((s) => `${s.id} (${s.group}): ${s.text}`).join('\n'))];
+    const scene = shotScene(String(args.name), asScene(args.fields) || {});
+    const out = [];
+    if (args.out) {
+      const file = resolve(String(args.out)), ext = extname(file).toLowerCase();
+      mkdirSync(dirname(file), { recursive: true });
+      if (ext === '.json') writeFileSync(file, JSON.stringify(scene, null, 2) + '\n');
+      else if (ext === '.png') await toPng((await compose({ ...scene, t: 0.62 })).svg, file);
+      else if (ext === '.mp4') { const { toMp4 } = await import('./sequence.mjs'); await toMp4(scene, file, { frames: 36, fps: 12, width: args.width }); }
+      else if (ext === '.gif' || ext === '.webp') { const { animate } = await import('./animate.mjs'); await animate(scene, file, { frames: 36, fps: 12, width: args.width }); }
+      else throw new Error('out must end in .gif, .webp, .mp4, .png or .json');
+      out.push(text(`wrote ${file}`));
+    }
+    if (args.preview !== false) { const { renderFrames, frameStrip } = await import('./animate.mjs'); out.push(image(await frameStrip((await renderFrames(scene, { frames: 8, width: 360 })).frames))); }
+    out.push(text(JSON.stringify(scene)));
+    return out;
+  }
+
+  if (name === 'render_print') {
+    const { separate } = await import('./separate.mjs');
+    const dir = resolve(String(args.out_dir || ''));
+    const r = await separate(asScene(args.scene), dir, { scale: args.scale, plates: args.plates, halftone: args.halftone });
+    const out = [text(`${r.plates.length} plates in ${dir}: ${r.width} x ${r.height} px, paper ${r.paper}\n${r.plates.map((p) => `${p.order}. ${p.ink} ${p.hex}  ${p.coverage}% cover  ${p.file}`).join('\n')}`)];
+    if (args.preview !== false) out.push(image(await sharp(r.sheet).resize(1200).png({ compressionLevel: 9, palette: true }).toBuffer()));
     return out;
   }
 

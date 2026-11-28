@@ -27,7 +27,7 @@ assert.equal(init.result.serverInfo.name, 'levni');
 child.stdin.write(`${JSON.stringify({ jsonrpc: '2.0', method: 'notifications/initialized' })}\n`);
 
 const names = (await rpc('tools/list')).result.tools.map((t) => t.name);
-assert.deepEqual(names, ['scene_guide', 'list_props', 'render_scene', 'critique_scene', 'render_animation', 'show_props', 'render_board', 'render_poster', 'render_storyboard', 'render_brand_kit']);
+assert.deepEqual(names, ['scene_guide', 'list_props', 'render_scene', 'critique_scene', 'render_animation', 'show_props', 'render_board', 'render_poster', 'render_storyboard', 'render_brand_kit', 'render_print', 'render_shot', 'render_reel']);
 
 assert.match((await tool('scene_guide')).content[0].text, /# Scene format/);
 assert.match((await tool('list_props', { query: 'cat' })).content[0].text, /^cat \(/m);
@@ -78,4 +78,4 @@ assert.equal((await tool('render_animation', { scene: { elements: [] }, out: joi
 assert.equal((await rpc('nope')).error.code, -32601);
 
 child.kill();
-console.log('mcp: handshake and 10 tools ok');
+console.log('mcp: handshake and 13 tools ok');

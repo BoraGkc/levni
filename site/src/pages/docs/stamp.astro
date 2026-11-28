@@ -1,0 +1,23 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { readDoc, render, resetIds } from '../../components/docs/md';
+
+resetIds();
+const { intro, sections } = readDoc('stamp.md');
+const fig = '';
+const head = render(intro.replace(/^!\[[^\]]*\]\([^)]*\)\n+/m, 'FIGUREHERE\n\n'));
+head.html = head.html.replace('<p>FIGUREHERE</p>', fig);
+const parts = sections.map((s) => render(s.md, { title: s.title, id: s.id }));
+const toc = parts.flatMap((p) => p.toc);
+---
+<Docs
+  title="Levni stamp and remix chain"
+  description="Every Levni PNG carries the scene that drew it and its remix chain: open it again in the editor, remix it, and keep everyone who made it in the file."
+  toc={toc}
+>
+  <p class="eyebrow">Animate and export</p>
+  <h1>Stamp and remix</h1>
+  <p class="callout"><strong>New in Levni 0.5.0</strong> Stamps and <code>levni open</code> / <code>levni remix</code> need 0.5.0 or newer.</p>
+  <Fragment set:html={head.html} />
+  {parts.map((p) => <Fragment set:html={p.html} />)}
+</Docs>

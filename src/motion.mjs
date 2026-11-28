@@ -27,7 +27,7 @@ export const EASE = {
 export const ease = (name, x) => (EASE[name] || EASE.outCubic)(clamp01(x));
 
 const LOOPS = new Set(['float', 'drift', 'sway', 'wiggle', 'pulse', 'spin', 'orbit', 'blink']);
-const ENTRANCES = new Set(['pop', 'fade', 'slide', 'wipe', 'typewriter']);
+const ENTRANCES = new Set(['pop', 'fade', 'slide', 'wipe', 'typewriter', 'draw', 'print']);
 export const MOTIONS = [...LOOPS, ...ENTRANCES];
 
 // "float" | { type, ... } | [ ... ]  ->  [{ type, ... }], unknown types dropped
@@ -60,6 +60,17 @@ export function typedElement(e, t, index = 0, stagger = 0) {
   if (!text) return null;
   // `fit: "box"` would re-size the text as it grows: lay it out once at full length and keep that size
   return { ...e, text, _typed: e.text };
+}
+
+// `draw` and `print` change how a drawing (a prop or a draw element) is inked, so compose reads them before drawing:
+//   draw:  the hand-inked lines are drawn on in path order, then the colour fills come in.
+//   print: a riso print run: each ink plate lands in turn, sliding from far out of register into place, the key line last.
+// Returns { kind, p (0..1 eased progress), shift (px of the opening misregistration) } or null.
+export function revealOf(e, t, index = 0, stagger = 0) {
+  const m = motionList(e.motion).find((x) => x.type === 'draw' || x.type === 'print');
+  if (!m) return null;
+  const { p } = entered({ ...m, dur: num(m.dur, m.type === 'print' ? 0.5 : 0.55), ease: m.ease || (m.type === 'draw' ? 'inOutSine' : 'linear') }, t, index * stagger);
+  return { kind: m.type, p: clamp01(p), shift: num(m.shift, 110) };
 }
 
 /**

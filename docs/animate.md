@@ -94,6 +94,8 @@ All take `turns` (whole cycles per loop) and `phase` (0..1).
 | `slide` | slides in and fades | `from` (`down`, `up`, `left`, `right`), `distance` (px, 60) |
 | `wipe` | is uncovered from one side | `from` (`left`, `right`, `up`, `down`) |
 | `typewriter` | text is typed, with a caret | `cursor` (a character, `false`, or `"stay"`), `dur` |
+| `draw` | a drawing (a prop) is drawn on: its hand-inked lines in order, then the colour fills | `delay`, `dur` (0.55), `ease` |
+| `print` | a riso print run: each ink plate lands in turn, sliding into register, the key line last | `delay`, `dur` (0.5), `shift` (px out of register at the start, 110) |
 
 With `"out": true` an entrance leaves the same way at the end of the loop. A fitted headline (`fit: "box"`) keeps
 the size of its finished text while it is typed.

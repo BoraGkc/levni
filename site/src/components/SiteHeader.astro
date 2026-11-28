@@ -8,7 +8,7 @@ type Item = [title: string, desc: string, href: string];
 type Group = { id: string; label: string; match: string[]; items: Item[]; feature: { kicker: string; title: string; text: string; href: string; cta: string } };
 const groups: Group[] = [
   {
-    id: 'make', label: 'Make', match: ['/make', '/features', '/gallery', '/library', '/banner', '/tools', '/motion'],
+    id: 'make', label: 'Make', match: ['/make', '/features', '/gallery', '/library', '/banner', '/tools', '/motion', '/shots', '/you', '/pen', '/hub'],
     items: [
       ['Free makers', 'Every maker on one page', '/make/'],
       ['Illustrations and covers', 'Scenes, styles, the critic', '/make/blog-covers-og-images/'],
@@ -19,6 +19,10 @@ const groups: Group[] = [
       ['3D and pixel icons', 'Soft 3D, extruded, pixel grids', '/make/3d-icons/'],
       ['README banner', 'A banner from a GitHub link, still or moving', '/banner/'],
       ['Free tools', 'Gradients, patterns, waves, OG images', '/tools/'],
+      ['Levni Hub', 'Fork, remix and compare designs', '/hub/'],
+      ['Levni Pen', 'A live playground for design in JSON', '/pen/'],
+      ['Your year in code', 'A moving card from your GitHub', '/you/'],
+      ['Levni Shots', 'Ready-made motion with your words', '/shots/'],
       ['Motion catalogue', 'Every animation preset, with its JSON', '/motion/'],
       ['Gallery', 'Every image with its scene', '/gallery/'],
       ['Library', '1,600+ open drawings', '/library/'],

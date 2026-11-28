@@ -1,0 +1,12 @@
+{
+  "format": "square",
+  "fps": 20,
+  "width": 540,
+  "transitionSeconds": 0.5,
+  "clips": [
+    { "shot": "logo-sting", "fields": { "title": "Lale Studio", "subtitle": "Branding · type · print", "mark": "tulip" }, "seconds": 2.6 },
+    { "shot": "mark-print", "fields": { "title": "Every ink, one plate at a time.", "mark": "lighthouse", "kicker": "Riso" }, "seconds": 2.4, "transition": "wipe" },
+    { "shot": "list-stagger", "fields": { "title": "This week", "kicker": "Open studio", "items": ["Prints", "Posters", "Stickers"], "mark": "sparkle" }, "seconds": 2.6, "transition": "push" },
+    { "shot": "cta-pop", "fields": { "title": "Come by Friday", "subtitle": "19:00, free entry.", "cta": "levni.dev", "mark": "megaphone" }, "seconds": 2.4, "transition": "iris" }
+  ]
+}

@@ -25,6 +25,12 @@ export { renderKit, expandKit, brandFromHtml, brandFromUrl } from './brandkit.mj
 export { EASE, MOTIONS } from './motion.mjs';
 export { bannerScene, pickMark, repoTerms, hashSeed, BANNER_SIZE, BANNER_THEMES } from './banner.mjs';
 export { encodeGif } from './gif.mjs';
+export { separate, findPlates } from './separate.mjs';
+export { shotScene, SHOTS } from './shots.mjs';
+export { stampPng, readStamp, remix } from './stamp.mjs';
+export { renderReel, reelFrames, TRANSITIONS } from './reel.mjs';
+export { sceneDiff } from './diff.mjs';
+export { youStats, youScene, youTerms, YOU_THEMES, YOU_LOOKS } from './you.mjs';
 export { renderBoard } from './board.mjs';
 export { expandBrand } from './board.mjs';
 
@@ -32,12 +38,18 @@ import { writeFileSync } from 'node:fs';
 import { compose } from './compose.mjs';
 import { critique } from './critic.mjs';
 import { toPng, toWebp } from './export.mjs';
+import { stampPng } from './stamp.mjs';
 
 // Compose a scene and write it as .png, .webp or .svg. Returns the critic's notes.
 export async function render(scene, out, opts = {}) {
   const { svg, used, canvas } = await compose(scene);
   if (/\.svg$/i.test(out)) writeFileSync(out, svg);
   else if (/\.webp$/i.test(out)) await toWebp(svg, out, { ...opts.webp, screen: scene.screen, lens: scene.lens, t: scene.t });
-  else await toPng(svg, out, { preview: !!opts.preview, screen: scene.screen, lens: scene.lens, t: scene.t });
+  else {
+    // the PNG carries its scene (stamp.mjs): it opens again in the editor and shows it was drawn, not generated
+    const { png } = await toPng(svg, null, { screen: scene.screen, lens: scene.lens, t: scene.t });
+    writeFileSync(out, opts.stamp === false ? png : stampPng(png, scene));
+    if (opts.preview) await toPng(png, out, { preview: true });
+  }
   return { notes: critique(used, canvas), svg };
 }

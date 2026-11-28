@@ -52,6 +52,13 @@ export function pickMark(terms, index, { limit = 12 } = {}) {
 export const repoTerms = ({ topics = [], name = '', description = '', language = '' }) =>
   [...topics.flatMap((t) => [t, ...t.split('-')]), ...words(name.replace(/[-_.]/g, ' ')), ...words(description), String(language).toLowerCase()].filter(Boolean);
 
+// GitHub's repo JSON (GET /repos/{owner}/{name}) -> the fields bannerScene takes; `index` is the Folio index for the mark
+export function repoBanner(gh, index, { theme, mark, motion = false } = {}) {
+  const repo = { owner: gh.owner?.login || String(gh.full_name || '').split('/')[0], name: gh.name || String(gh.full_name || '').split('/')[1] || 'repo', description: gh.description || '', stars: gh.stargazers_count, language: gh.language || '', topics: gh.topics || [] };
+  const picked = mark || pickMark(repoTerms(repo), index)[0];
+  return bannerScene({ ...repo, mark: picked, theme, motion });
+}
+
 export const FALLBACK_MARKS = ['rocket', 'lightbulb', 'toolbox', 'compass', 'paper-plane', 'key'];
 
 // a stable number from a string, for the seed
