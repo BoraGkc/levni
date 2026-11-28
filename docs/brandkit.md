@@ -57,7 +57,7 @@ out-dir/
   readme-banner.png         1280 x 640
   board.png                 the nine-tile brand board (docs/board.md)
   posters/                  4 (or 8) posters and series.png (docs/poster.md)
-  loop.webp                 12-frame loop of the cover, 600 px
+  loop.webp                 30-frame loop of the cover, 600 px: the name types itself, the mark pops in and floats
   brand.json                the resolved brand: name, tagline, mark, inks, words, seed
   kit.json                  every file with bytes, pixel size and the scene that drew it
   index.html                one static page that shows the whole kit in the brand's own inks

@@ -110,3 +110,10 @@ try {
 } finally {
   rmSync(dir, { recursive: true, force: true });
 }
+
+// camera "right" frames the drawing to the right; it never mirrors it (a flipped drawing reverses any writing on it)
+{
+  const { expandStoryboard } = await import('../src/storyboard.mjs');
+  const shots = expandStoryboard({ shots: [{ title: 'a', prop: 'rocket', camera: 'right' }] });
+  assert.ok(!shots[0].scene.elements.some((e) => e.flip), 'camera right must not flip the prop');
+}

@@ -384,7 +384,9 @@ function heroScene(brand, style, [W, H], o = {}) {
   const live = (cx, cy, r, color) => (o.moving
     ? { type: 'meshgrad', x: cx, y: cy, r, shape: 'circle', colors: [color, 'tone-mustard', 'paper', color], base: color, drift: 0.2, grain: 0.25 }
     : { type: 'disc', x: cx, y: cy, r, color });
-  const markEl = (cx, cy, r, disc) => ({ type: 'prop', name: mark, fit: true, x: cx, y: cy, size: r * 1.15, ...(o.mono === false ? {} : { recolor: MONO_TO(readable(style, disc, 'blue', 'paper')) }) });
+  // o.animate (the kit's loop only): the name types itself, the mark pops in and floats, the tagline slides in
+  const mo = (m) => (o.animate ? { motion: m } : {});
+  const markEl = (cx, cy, r, disc) => ({ type: 'prop', name: mark, fit: true, x: cx, y: cy, size: r * 1.15, ...(o.mono === false ? {} : { recolor: MONO_TO(readable(style, disc, 'blue', 'paper')) }), ...mo([{ type: 'pop', delay: 0.06, dur: 0.16 }, { type: 'float', amp: Math.max(3, r * 0.05) }]) });
   if (landscape) {
     const split = Math.round(W * 0.64), m = Math.round(W * 0.07), colW = split - m - Math.round(W * 0.06);
     const cx = split + (W - split) / 2, cy = H / 2, r = Math.min((W - split) * 0.42, H * 0.3);
@@ -396,9 +398,9 @@ function heroScene(brand, style, [W, H], o = {}) {
     const tagLines = wrapLines(tagline, 30, 3), tagSize = Math.round(H * 0.052), lead = 1.3;
     const g = Math.round(H * 0.075), tagH = tagLines.length ? Math.round(tagLines.length * tagSize * lead) : 0;
     const block = nm.h + (tagH ? g + tagH : 0), top = Math.round((H - block) / 2) + 24;
-    els.push({ type: 'block', x: m, y: Math.round(top - H * 0.073), w: Math.round(W * 0.053), h: Math.round(H * 0.014), color: o.bar ?? 'coral' });
-    els.push({ type: 'type', text: nm.text, x: m, y: top, w: colW, size: nm.size, font: 'black', leading: 1.08, color: txt });
-    if (tagLines.length) els.push({ type: 'type', text: tagLines.join('\n'), x: m, y: top + nm.h + g, size: tagSize, leading: lead, weight: 500, color: txt });
+    els.push({ type: 'block', x: m, y: Math.round(top - H * 0.073), w: Math.round(W * 0.053), h: Math.round(H * 0.014), color: o.bar ?? 'coral', ...mo({ type: 'wipe', delay: 0.02, dur: 0.1 }) });
+    els.push({ type: 'type', text: nm.text, x: m, y: top, w: colW, size: nm.size, font: 'black', leading: 1.08, color: txt, ...mo({ type: 'typewriter', delay: 0.1, dur: 0.28, cursor: '_' }) });
+    if (tagLines.length) els.push({ type: 'type', text: tagLines.join('\n'), x: m, y: top + nm.h + g, size: tagSize, leading: lead, weight: 500, color: txt, ...mo({ type: 'slide', from: 'down', distance: Math.round(H * 0.04), delay: 0.44, dur: 0.14 }) });
   } else {
     const tall = H / W > 1.5;
     const disc = apart(style, ground, 'mustard', 'paper', 'coral');
@@ -491,7 +493,7 @@ export function expandKit(spec = {}) {
     const list = expandPosters(pspec);
     push('posters', 'posters', list.map((p, i) => ({ file: `posters/poster-${String(i + 1).padStart(2, '0')}-${p.template}.png`, width: 1200, height: 1600 })).concat([{ file: 'posters/series.png' }]), { spec: pspec, scenes: list });
   }
-  push('loop', 'loop', [{ file: 'loop.webp', width: 600, height: 338 }], { scene: heroScene(brand, style, [600, 338], { ground: 'paper', panel: 'blue', seedOffset: 21, moving: true }), note: 'animated loop of the cover, drawn at 600 px; skipped when nothing in it moves' });
+  push('loop', 'loop', [{ file: 'loop.webp', width: 600, height: 338 }], { scene: heroScene(brand, style, [600, 338], { ground: 'paper', panel: 'blue', seedOffset: 21, moving: true, animate: true }), note: 'animated loop of the cover, drawn at 600 px; skipped when nothing in it moves' });
   return { brand, assets };
 }
 
@@ -623,9 +625,9 @@ export async function renderKit(spec, outDir) {
     } else if (a.name === 'loop') {
       const scene = a.scene;
       try {
-        const r = await animate(scene, at('loop.webp'), { frames: 12, fps: 10, quality: 78 });
+        const r = await animate(scene, at('loop.webp'), { frames: 30, fps: 12, quality: 78 });
         if (!r.moving) { unlinkSync(at('loop.webp')); (notes.loop ||= []).push('skipped: the cover has nothing that follows t'); }
-        else await log('loop.webp', 'loop', { scene, animate: { frames: 12, fps: 10 } }, r.width, r.height);
+        else await log('loop.webp', 'loop', { scene, animate: { frames: 30, fps: 12 } }, r.width, r.height);
       } catch (e) { (notes.loop ||= []).push(`skipped: ${e.message}`); }
     } else {
       const webp = a.files[0].file.endsWith('.webp');

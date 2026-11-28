@@ -60,6 +60,11 @@ for (const motion of [{ type: 'float', amp: NaN, turns: -3, phase: 'x' }, { type
   const { svg } = await compose({ ...scene({ motion }), t: 0.5, stagger: 'x', camera: { zoom: ['a', NaN] } });
   assert.ok(!/NaN|undefined|Infinity/.test(svg), `no NaN for ${JSON.stringify(motion)}`);
 }
+// a seal's centre drawing moves with the seal: before a pop begins neither is drawn
+const sealScene = (t) => compose({ seed: 2, t, elements: [{ type: 'seal', x: 600, y: 336, size: 300, text: 'OPEN SOURCE', prop: 'rocket', motion: { type: 'pop', delay: 0.5, dur: 0.2 } }] });
+const hidden = (await sealScene(0.1)).svg, shown = (await sealScene(0.9)).svg, plain = (await compose({ seed: 2, elements: [{ type: 'seal', x: 600, y: 336, size: 300, text: 'OPEN SOURCE', prop: 'rocket' }] })).svg;
+assert.ok(hidden.length < shown.length * 0.5, 'seal and its centre prop are both hidden before the pop');
+assert.equal(shown, plain, 'and both are back, untouched, once it has arrived');
 // the banner: a still by default, a loop with motion
 const repo = { owner: 'levni-dev', name: 'levni', description: 'Design engine for agents.', mark: 'rocket' };
 assert.ok(!JSON.stringify(bannerScene(repo)).includes('motion'));

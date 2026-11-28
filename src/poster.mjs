@@ -43,6 +43,8 @@ const code = (name, i) => {
 };
 // split a word for a two-weight kicker: SMART**CONTRACTS**
 const kicker = (a, b) => `+ ${a}**${b}**`;
+// a name shortened for a one-line kicker: whole words only, so nothing is cut mid-word ("YAVAŞ SAYFA", not "YAVAŞ SAYF")
+const brief = (s, n) => (s.length <= n ? s : s.slice(0, n + 1).replace(/\s+\S*$/, '') || s.slice(0, n));
 
 function scenes(b) {
   const k = brandInks(b.inks);
@@ -64,7 +66,7 @@ function scenes(b) {
       ...(mark ? [{ type: 'amtone', source: 'prop', prop: mark, x: 560, y: 600, size: 760, cell: 10, angle: 15, colors: [k.ink] }] : []),
       { type: 'block', x: 0, y: 1150, w: W, h: 450, color: k.a2 },
       T(wrapTag(tag || name, 40), 70, 1205, { size: 22, leading: 1.35, color: k.paper }),
-      T(kicker(name.toUpperCase().slice(0, 10), word(i).slice(0, 10)), 70, 1300, { size: 40, weight: 300, boldFont: 'mono', boldWeight: 800, color: k.paper }),
+      T(kicker(brief(name.toUpperCase(), 16), word(i).slice(0, 10)), 70, 1300, { size: 40, weight: 300, boldFont: 'mono', boldWeight: 800, color: k.paper }),
       T(`${word(i + 1)}.`, 70, 1380, { w: 840, font: 'pixel', tracking: -0.04, color: k.paper }),
       T(code(name, i), 1130, 1535, { size: 20, font: 'mono', weight: 800, align: 'right', color: k.ink }),
       T('+', 1130, 1200, { size: 34, font: 'mono', weight: 800, align: 'right', color: k.paper }),
