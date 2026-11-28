@@ -126,7 +126,7 @@ export const ASSETS = {
 
   // Sun with rays; rays rotate slowly with t.
   sunburst(e, { pen, r, c, t }) {
-    const rr = e.size / 2, n = e.rays ?? 14, spin = t * ((Math.PI * 2) / n);
+    const rr = e.size / 2, n = e.rays ?? 14, spin = t * ((Math.PI * 4) / n); // two ray steps per loop: long and short rays alternate, so the loop closes on itself
     let s = pen.shape(ellipse(e.x, e.y, rr * 0.55, rr * 0.55, 16), { fill: c(e.color, '#F2C230'), stroke: e.outline ? c(e.outline) : null, w: 6, offset: 0 });
     for (let k = 0; k < n; k++) {
       const a = (k / n) * Math.PI * 2 + spin, l0 = rr * 0.68, l1 = rr * (k % 2 ? 0.9 : 1);
@@ -169,7 +169,7 @@ export const ASSETS = {
 
   // Rose curve r = cos(k θ): flowers, emblems, ornaments.
   rose(e, { pen, c, t }) {
-    const k = e.petals ?? 5, rr = e.size / 2, rot = t * Math.PI * 0.4;
+    const k = e.petals ?? 5, rr = e.size / 2, rot = (t * Math.PI * 2) / (k % 2 ? k : 2 * k); // one petal step per loop, so the last frame meets the first
     const pts = Array.from({ length: 220 }, (_, i) => { const th = (i / 220) * Math.PI * (k % 2 ? 1 : 2); const q = rr * Math.cos(k * th); return [e.x + q * Math.cos(th + rot), e.y + q * Math.sin(th + rot)]; });
     return { svg: pen.shape(pts, { fill: c(e.fill || 'coral'), stroke: c(e.color, '#0A3FB0'), w: e.weight ?? 6, offset: 3, amp: 0.4 }) + pen.shape(ellipse(e.x, e.y, rr * 0.16, rr * 0.16, 10), { fill: c(e.center || 'mustard'), stroke: c('ink'), w: 5, offset: 0 }), bbox: [e.x - rr, e.y - rr, rr * 2, rr * 2] };
   },

@@ -60,6 +60,23 @@ export const TOOLS = [
     inputSchema: { type: 'object', properties: { scene }, required: ['scene'] },
   },
   {
+    name: 'render_animation',
+    description: 'Draw a scene as a short loop and write it as an animated .gif or .webp. The scene\'s `t` runs 0..1 over the frames: clouds with `drift` move, trees sway, flags wave, confetti falls, flowfield and halftone shift, meshgrad blobs breathe, soft3d / extrude with `spin` turn, glyphfill globes rotate. Frame N+1 after the last is the first, so it loops. Returns the critic\'s notes (it says so when nothing in the scene moves) and a strip of four frames to look at. GIF plays in GitHub READMEs, chat and email; WebP is several times smaller for web pages.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        scene,
+        out: { type: 'string', description: 'File path to write, relative to the server\'s working directory. Must end in .gif or .webp.' },
+        frames: { type: 'integer', description: 'Frames in the loop (default 24, max 240). Each takes about as long as one render_scene.' },
+        fps: { type: 'integer', description: 'Frames per second (default 12).' },
+        boil: { type: 'integer', description: 'Hand-drawn shimmer: this many crayon textures take turns (0 = steady, 2..8). Makes GIFs about twice as large.' },
+        width: { type: 'integer', description: 'Output width in px (default: the canvas width). 800 is a good README size.' },
+        preview: { type: 'boolean', description: 'Return a strip of four frames as an image (default true).' },
+      },
+      required: ['scene', 'out'],
+    },
+  },
+  {
     name: 'show_props',
     description: 'Contact image of up to 12 props with every variant numbered, to choose a drawing by eye.',
     inputSchema: {
@@ -131,8 +148,8 @@ async function call(name, args = {}) {
 
   if (name === 'render_scene' || name === 'critique_scene') {
     const scene = asScene(args.scene);
-    const { svg, used } = await compose(scene);
-    const notes = critique(used);
+    const { svg, used, canvas } = await compose(scene);
+    const notes = critique(used, canvas); // og, square, story and custom sizes are measured against their own canvas
     const out = [text(notesText(notes))];
     if (name === 'critique_scene') return out;
     if (args.out) {
@@ -146,6 +163,18 @@ async function call(name, args = {}) {
       out.push(text(`wrote ${file}`));
     }
     if (args.preview !== false) out.push(image(await preview(svg, 560, scene.screen)));
+    return out;
+  }
+
+  if (name === 'render_animation') {
+    const scene = asScene(args.scene);
+    const file = resolve(String(args.out || ''));
+    if (!['.gif', '.webp'].includes(extname(file).toLowerCase())) throw new Error('out must end in .gif or .webp');
+    mkdirSync(dirname(file), { recursive: true });
+    const { animate, frameStrip } = await import('./animate.mjs');
+    const r = await animate(scene, file, { frames: args.frames, fps: args.fps, boil: args.boil, width: args.width });
+    const out = [text(notesText(r.notes)), text(`wrote ${file}: ${r.frames} frames, ${r.width} x ${r.height}, ${Math.round(r.bytes / 1024)} KB`)];
+    if (args.preview !== false) out.push(image(await frameStrip(r.stills)));
     return out;
   }
 

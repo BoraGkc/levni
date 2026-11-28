@@ -27,7 +27,7 @@ assert.equal(init.result.serverInfo.name, 'levni');
 child.stdin.write(`${JSON.stringify({ jsonrpc: '2.0', method: 'notifications/initialized' })}\n`);
 
 const names = (await rpc('tools/list')).result.tools.map((t) => t.name);
-assert.deepEqual(names, ['scene_guide', 'list_props', 'render_scene', 'critique_scene', 'show_props', 'render_board', 'render_poster']);
+assert.deepEqual(names, ['scene_guide', 'list_props', 'render_scene', 'critique_scene', 'render_animation', 'show_props', 'render_board', 'render_poster']);
 
 assert.match((await tool('scene_guide')).content[0].text, /# Scene format/);
 assert.match((await tool('list_props', { query: 'cat' })).content[0].text, /^cat \(/m);
@@ -63,7 +63,13 @@ const sheet = await tool('show_props', { names: ['apple', 'no-such-prop'] });
 assert.ok(!sheet.isError, sheet.content[0].text);
 assert.match(sheet.content[0].text, /Unknown: no-such-prop/);
 assert.equal((await tool('render_scene', { scene: '{oops' })).isError, true);
+// render_animation writes a looping file and returns notes, a summary and a frame strip
+const anim = await tool('render_animation', { scene: { seed: 2, elements: [{ type: 'cloud', x: 400, y: 300, size: 240, drift: 40 }] }, out: join(dir, 'loop.gif'), frames: 3, width: 240 });
+assert.match(anim.content[1].text, /3 frames, 240 x/);
+assert.equal(anim.content[2].type, 'image');
+assert.equal((await tool('render_animation', { scene: { elements: [] }, out: join(dir, 'loop.png') })).isError, true);
+
 assert.equal((await rpc('nope')).error.code, -32601);
 
 child.kill();
-console.log('mcp: handshake and 7 tools ok');
+console.log('mcp: handshake and 8 tools ok');

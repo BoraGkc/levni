@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Levni CLI.
 //   levni render <scene.json> <out.png|out.webp|out.svg> [--preview] [--format cover|og|square|story|youtube]
+//   levni animate <scene.json> <out.gif|out.webp> [--frames 24] [--fps 12] [--boil 3] [--width 800] [--strip frames.png]
 //   levni sheet <out.png> [prop ...] [--recolor coral=blue,mustard=tone]
 //   levni board <spec.json> <out.png>
 //   levni list [query]
@@ -16,13 +17,17 @@ import { render, compose, loadProps, findProp, addPropDir, LIBRARY_DIR, validate
 const [cmd, ...rest] = process.argv.slice(2);
 const flag = (name) => rest.includes(`--${name}`);
 const opt = (name) => { const i = rest.indexOf(`--${name}`); return i >= 0 ? rest[i + 1] : undefined; };
-const positional = rest.filter((a, i) => !a.startsWith('--') && !(i > 0 && ['--recolor', '--dir', '--sheet', '--brief', '--model', '--format'].includes(rest[i - 1])));
+const positional = rest.filter((a, i) => !a.startsWith('--') && !(i > 0 && ['--recolor', '--dir', '--sheet', '--brief', '--model', '--format', '--frames', '--fps', '--boil', '--width', '--strip', '--colours'].includes(rest[i - 1])));
 
 const USAGE = `levni: hand-inked illustrations from JSON scenes
 
   levni render <scene.json> <out.png|out.webp|out.svg> [--preview] [--format cover|og|square|story|youtube]
       Draw a scene. Prints the layout critic's notes. --preview also writes <out>.prev.jpg (560 px).
       --format recomposes a 1200x673 scene for another canvas (sets "format" and "reflow": see docs/scene.md).
+  levni animate <scene.json> <out.gif|out.webp> [--frames 24] [--fps 12] [--boil 3] [--width 800] [--strip frames.png]
+      Draw a scene as a loop: the scene's \`t\` runs 0..1 (clouds drift, flags wave, mesh gradients breathe, soft 3D spins).
+      --boil N lets N crayon textures take turns for a hand-drawn shimmer. --strip also writes a few frames side by side.
+      docs/animate.md
   levni sheet <out.png> [prop ...] [--recolor coral=blue,mustard=tone]
       Contact sheet of props (all when none named): every variant on paper and on blue.
   levni board <spec.json> <out.png>
@@ -37,7 +42,7 @@ const USAGE = `levni: hand-inked illustrations from JSON scenes
       Default folder: the library in this checkout. --sheet draws the imported props for a look.
   levni mcp
       Run Levni as an MCP server over stdio (tools: scene_guide, list_props, render_scene,
-      critique_scene, show_props). Add it to an MCP client as: npx levni mcp
+      critique_scene, render_animation, show_props, render_board, render_poster). Add it to an MCP client as: npx levni mcp
   levni check [prop ...]
       Measure props without looking at them (for agents that cannot see images): how much of the
       box each variant fills, its centre, colours, and what to fix. All props when none named.
@@ -62,6 +67,17 @@ async function main() {
     const { notes } = await render(scene, out, { preview: flag('preview') });
     console.log(out);
     console.log(notes.length ? notes.map((n) => `- ${n}`).join('\n') : '- critic: no layout problems found');
+  } else if (cmd === 'animate') {
+    const [file, out] = positional;
+    if (!file || !/\.(gif|webp)$/i.test(out || '')) throw new Error('usage: levni animate <scene.json> <out.gif|out.webp> [--frames 24] [--fps 12] [--boil 3] [--width 800]');
+    const scene = JSON.parse(readFileSync(file, 'utf8'));
+    if (opt('format')) Object.assign(scene, { format: opt('format'), reflow: true });
+    const { animate, frameStrip } = await import('../src/animate.mjs');
+    const o = { frames: opt('frames'), fps: opt('fps'), boil: opt('boil'), width: opt('width') && Number(opt('width')), colours: opt('colours') };
+    const r = await animate(scene, out, o);
+    console.log(`${out}  ${r.frames} frames, ${r.width} x ${r.height}, ${Math.round(r.bytes / 1024)} KB`);
+    if (opt('strip')) { writeFileSync(opt('strip'), await frameStrip(r.stills)); console.log(opt('strip')); }
+    console.log(r.notes.length ? r.notes.map((n) => `- ${n}`).join('\n') : '- critic: no layout problems found');
   } else if (cmd === 'sheet') {
     const [out, ...names] = positional;
     if (!out) throw new Error('usage: levni sheet <out.png> [prop ...]');

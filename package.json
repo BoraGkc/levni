@@ -22,6 +22,8 @@
     "branding",
     "dither",
     "typography",
+    "animation",
+    "gif",
     "mcp-server"
   ],
   "main": "./src/index.mjs",
@@ -34,6 +36,7 @@
     "./poster": "./src/poster.mjs",
     "./board": "./src/board.mjs",
     "./banner": "./src/banner.mjs",
+    "./animate": "./src/animate.mjs",
     "./browser": "./src/browser.mjs",
     "./vite": "./src/browser/vite.mjs"
   },
@@ -45,6 +48,7 @@
     "README.md",
     "adapters/",
     "bin/",
+    "docs/animate.md",
     "docs/board.md",
     "docs/poster.md",
     "docs/ghost.md",

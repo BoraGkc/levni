@@ -1,0 +1,79 @@
+// Animation renderer: one scene, drawn at N moments of `t` (0..1), joined into a looping GIF or animated WebP.
+// The scene format already carries time (`t`: trees sway, clouds drift, meshgrad blobs loop, soft3d spins) and the
+// crayon filter's own seed (`boil`); this module is the loop that steps them. Same scene + seed + t = same frame.
+//   import { animate } from '@levni/levni';
+//   await animate(scene, 'hero.gif', { frames: 24, fps: 12, boil: 3 });
+import { writeFileSync } from 'node:fs';
+import sharp from 'sharp';
+import { compose } from './compose.mjs';
+import { critique } from './critic.mjs';
+import { rasterize } from './raster.mjs';
+import { screenRaster } from './dither.mjs';
+
+const clampInt = (v, d, lo, hi) => { const n = Math.round(Number(v)); return Number.isFinite(n) ? Math.min(hi, Math.max(lo, n)) : d; };
+
+// The plan for a loop: frame i of `frames` is drawn at t = i / frames, so the frame after the last one is the first.
+// `boil` textures take turns, each held for `hold` frames (about six changes a second, like animation drawn on twos).
+export function framePlan(spec, { frames = 24, fps = 12, boil = 0 } = {}) {
+  const n = clampInt(frames, 24, 1, 240), rate = clampInt(fps, 12, 1, 50), b = clampInt(boil, 0, 0, 8);
+  const hold = Math.max(1, Math.round(rate / 6));
+  const base = spec.boil ?? spec.seed ?? 1;
+  return Array.from({ length: n }, (_, i) => ({ t: i / n, ...(b > 1 ? { boil: base + (Math.floor(i / hold) % b) } : {}) }));
+}
+
+/**
+ * Draw every frame. Returns { frames: [PNG buffer], width, height, delay (ms), notes, moving }.
+ * opts: frames (24), fps (12), boil (0: steady paper; 2..8: that many crayon textures take turns), width (px, scales down).
+ * `moving` is false when no frame differs from the first: the scene has nothing that follows `t` and boil is off.
+ */
+export async function renderFrames(spec, opts = {}) {
+  const plan = framePlan(spec, opts);
+  const rate = clampInt(opts.fps, 12, 1, 50);
+  const cache = new Map(); // identical SVG -> one raster (held boil frames, still scenes)
+  const frames = [];
+  let notes = [], canvas = null;
+  for (const [i, step] of plan.entries()) {
+    const { svg, used, canvas: cv } = await compose({ ...spec, ...step });
+    if (i === 0) { notes = critique(used, cv); canvas = cv; }
+    if (!cache.has(svg)) {
+      let png = await rasterize(svg);
+      if (spec.screen) png = await screenRaster(png, spec.screen);
+      if (opts.width && opts.width < cv.w) png = await sharp(png).resize(Math.round(opts.width)).png().toBuffer();
+      cache.set(svg, png);
+    }
+    frames.push(cache.get(svg));
+  }
+  const moving = cache.size > 1;
+  if (!moving && plan.length > 1) notes = [...notes, 'animation: every frame is the same. Nothing in this scene follows `t`; add a moving element (cloud with drift, flag, confetti, flowfield, meshgrad, soft3d with spin) or set boil'];
+  const meta = await sharp(frames[0]).metadata();
+  return { frames, width: meta.width, height: meta.height, delay: Math.round(1000 / rate), notes, moving, distinct: cache.size };
+}
+
+/**
+ * Compose a scene over time and write a looping .gif or .webp. Returns { notes, bytes, frames, width, height, moving, buffer, stills }
+ * (`stills`: the frames as PNG buffers, e.g. for frameStrip).
+ * opts: frames, fps, boil, width (see renderFrames); loop (0 = forever); colours (GIF palette size, 2..256, default 64).
+ */
+export async function animate(spec, out, opts = {}) {
+  const ext = /\.(gif|webp)$/i.exec(String(out || ''))?.[1]?.toLowerCase();
+  if (out && !ext) throw new Error('animate: out must end in .gif or .webp');
+  const r = await renderFrames(spec, opts);
+  const delay = r.frames.map(() => r.delay);
+  const loop = clampInt(opts.loop, 0, 0, 65535);
+  const joined = sharp(r.frames, { join: { animated: true } });
+  const buf = (ext ?? opts.format) === 'webp'
+    ? await joined.webp({ quality: clampInt(opts.quality, 80, 1, 100), effort: 4, smartSubsample: true, delay, loop }).toBuffer()
+    : await joined.gif({ colours: clampInt(opts.colours ?? opts.colors, 64, 2, 256), effort: 7, dither: 0.6, delay, loop }).toBuffer();
+  if (out) writeFileSync(out, buf);
+  return { notes: r.notes, bytes: buf.length, frames: r.frames.length, distinct: r.distinct, width: r.width, height: r.height, moving: r.moving, buffer: buf, stills: r.frames };
+}
+
+// A strip of evenly spaced frames in one PNG: how an agent (or a README) looks at a loop without playing it.
+export async function frameStrip(frames, { count = 4, width = 280 } = {}) {
+  const n = Math.min(count, frames.length);
+  const picks = Array.from({ length: n }, (_, k) => frames[Math.floor((k * frames.length) / n)]);
+  const thumbs = await Promise.all(picks.map((f) => sharp(f).resize(width).png().toBuffer()));
+  const h = (await sharp(thumbs[0]).metadata()).height, gap = 8;
+  return sharp({ create: { width: n * width + (n + 1) * gap, height: h + gap * 2, channels: 3, background: '#E9E6DE' } })
+    .composite(thumbs.map((input, k) => ({ input, left: gap + k * (width + gap), top: gap }))).png({ compressionLevel: 9, palette: true }).toBuffer();
+}

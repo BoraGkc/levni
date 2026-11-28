@@ -20,8 +20,8 @@ A machine-readable outline is in [`scene.schema.json`](scene.schema.json).
 | `clip` | `[x, y, w, h]` | none | everything stays inside this hand-drawn card |
 | `hand` | boolean | `true` | `false` draws plain SVG strokes instead of pressure-brush ink |
 | `plateShift` | number | `3.2` | riso misregistration: how far each ink colour's plate drifts |
-| `boil` | integer | `seed` | seed of the crayon filter only (animate it for a hand-drawn shimmer) |
-| `t` | 0..1 | `0` | animation time; trees sway, clouds drift, flags wave |
+| `boil` | integer | `seed` | seed of the crayon filter only; `levni animate --boil 3` steps it for a hand-drawn shimmer ([animate.md](animate.md)) |
+| `t` | 0..1 | `0` | animation time; trees sway, clouds drift, flags wave. `levni animate scene.json loop.gif` runs it 0..1 and writes a looping GIF or WebP ([animate.md](animate.md)) |
 | `locale` | string | `en` | locale used to upper-case `label` text (`tr` gives dotted İ) |
 | `style` | string or object | `riso` | style pack: `riso` or `miniature`, or your own inks as `{ "blue": "#123456", "coral": "#FF8800" }` (house colour names: paper, white, ink, blue, coral, green, mustard, dark, tone, tone-coral, tone-green, tone-mustard; the rest keep the house hex). Recolours every prop, panel and texture. |
 | `finish` | string | `crayon` | `crayon`: hand-inked lines, riso plates, paper grain. `soft`: clean edges and a fine film grain, for the ribbon look. Both finishes are applied to the pixels by `rasterize()` (about 0.15 s for a crayon cover); `LEVNI_RASTER=rsvg` hands the filter back to the SVG renderer |

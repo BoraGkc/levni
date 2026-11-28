@@ -15,6 +15,7 @@ const tools: [string, string, string, string][] = [
   ['list_props', 'query (words in English or Turkish; old names of renamed drawings match too), category (one shelf), limit (default 40, up to 500).', 'Matching drawings with their name, variant count, shelf, tags and what each variant shows, plus the line to paste into a scene. The agent picks real names instead of guessing.', 'Search'],
   ['show_props', 'names: up to 12 drawing names from list_props.', 'A contact sheet image of up to 18 variants, each labelled “name number”, so the agent can choose a variant by eye. Unknown names are reported, not fatal.', 'Choose by eye'],
   ['render_scene', 'scene (the JSON), out (optional .png, .webp or .svg path), preview (default true).', 'The critic’s notes as text, a 560 px preview image, and with out the full-size file. The preview includes the scene’s screen print pass, so a gameboy or blueprint scene is previewed as it will be saved.', 'Draw and check'],
+  ['render_animation', 'scene (the JSON), out (a .gif or .webp path), frames (default 24), fps (default 12), boil (2 to 8 crayon textures take turns for a hand-drawn shimmer), width (px), preview (default true).', 'The critic’s notes for the first frame, a line with the frame count, size and file weight, and a strip of four frames, since most clients cannot play a loop. The scene’s t runs 0 to 1: clouds drift, flags wave, mesh gradients breathe, ASCII globes and soft 3D turn. If nothing in the scene moves, the notes say so.', 'Animate'],
   ['critique_scene', 'scene (the JSON).', 'Only the critic’s notes: elements off the canvas, accidental crops, lopsided weight, no focal point, or “no layout problems found”. No image, so it is quick and cheap.', 'Iterate'],
 ];
 const prompts: [string, string][] = [
@@ -89,7 +90,7 @@ const jsonld = [
     <ol class="prompts">{prompts.map(([t, p]) => (<li><h3>{t}</h3><p>{p}</p></li>))}</ol>
 
     <h2 id="tools">What the agent can do</h2>
-    <p>Seven tools, <code>render_poster</code> and <code>render_board</code> among them. Each takes plain JSON and returns text, an image or both, so a client that can show images lets the agent look at its own work. Nothing leaves your machine.</p>
+    <p>Eight tools, <code>render_poster</code>, <code>render_board</code> and <code>render_animation</code> among them. Each takes plain JSON and returns text, an image or both, so a client that can show images lets the agent look at its own work. Nothing leaves your machine.</p>
     <ul class="tool-list">{tools.map(([n, input, back, tag]) => (
       <li>
         <h3><code>{n}</code> <span class="tag">{tag}</span></h3>
@@ -97,7 +98,7 @@ const jsonld = [
         <p><strong>Comes back.</strong> {back}</p>
       </li>
     ))}</ul>
-    <p class="small">With Ghost credentials in the environment, three more tools appear (<a href="#ghost">below</a>). Agents without MCP use the same features through the <code>levni</code> CLI: <code>levni render</code>, <code>levni board</code> and <code>levni poster</code>.</p>
+    <p class="small">With Ghost credentials in the environment, three more tools appear (<a href="#ghost">below</a>). Agents without MCP use the same features through the <code>levni</code> CLI: <code>levni render</code>, <code>levni animate</code>, <code>levni board</code> and <code>levni poster</code>.</p>
 
     <h2 id="session">How a session goes</h2>
     <ol class="session">
