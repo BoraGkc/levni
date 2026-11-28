@@ -171,6 +171,8 @@ import Base from '../../layouts/Base.astro';
   .hd-cols { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 24px; margin: 28px 0 64px; }
   .hd-cols h2 { font-size: 1.3rem; margin: 0 0 10px; }
   .hd-list, .hd-chain { margin: 0; padding-left: 20px; font: 13px/1.6 var(--mono); }
-  .hd-list .ad { color: #1E783F; } .hd-list .rm { color: #C0392B; } .hd-list .ch { color: var(--ink); }
+  /* the change rows are built in the browser */
+  .hd-list :global(li) { padding: 2px 0; }
+  .hd-list :global(.ad) { color: #1E783F; } .hd-list :global(.rm) { color: #C0392B; } .hd-list :global(.ch) { color: var(--ink); }
   @media (max-width: 760px) { .hd-in, .hd-view[data-v='side'], .hd-cols { grid-template-columns: minmax(0, 1fr); } }
 </style>

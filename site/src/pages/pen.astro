@@ -23,7 +23,7 @@ const shotIds = SHOTS.map((s) => s.id);
       <a class="pn-logo" href="/pen/">Levni Pen</a>
       <label class="pn-sel"><span>Start from</span>
         <select id="pn-start">
-          <option value="">Choose…</option>
+          <option value="">A shot or an example…</option>
           <optgroup label="Shots">{shotIds.map((id) => <option value={`shot:${id}`}>{id}</option>)}</optgroup>
           <optgroup label="Examples" id="pn-examples"></optgroup>
         </select>
@@ -46,16 +46,24 @@ const shotIds = SHOTS.map((s) => s.id);
           <button type="button" class="pn-btn" id="pn-play" aria-pressed="false">Play</button>
           <label class="pn-range"><span>t</span><input id="pn-t" type="range" min="0" max="1" step="0.01" value="0.6" /><output id="pn-tv">0.60</output></label>
         </div>
-        <ul class="pn-notes" id="pn-notes"></ul>
-        <p class="pn-credits" id="pn-credits"></p>
+        <div class="pn-crit">
+          <p class="pn-h">Critic</p>
+          <ul class="pn-notes" id="pn-notes"></ul>
+          <p class="pn-credits" id="pn-credits"></p>
+        </div>
+        <p class="pn-tip">Try: change any <code>"size"</code>, set <code>"background"</code> to <code>"ink"</code>, or give an element <code>{'"motion": {"type": "wiggle"}'}</code>.</p>
       </section>
     </div>
     <div class="wrap pn-about">
+      <div>
       <h1>Levni Pen</h1>
       <p>A live playground for design in JSON. Change a number on the left and the hand-inked drawing on the right redraws. Drag <code>t</code> to scrub the motion, press Play to watch the loop. The <a href="/docs/scenes/">scene docs</a> list every field, the <a href="/motion/">motion catalogue</a> every preset, <a href="/shots/">Levni Shots</a> the ready-made pieces.</p>
       <p>The same JSON renders on your machine with <code>npx @levni/levni render scene.json out.png</code>, or from your agent: <code>claude mcp add levni -- npx -y @levni/levni mcp</code>.</p>
+      </div>
+      <div>
       <h2>Questions</h2>
       <dl>{faq.map(({ q, a }) => (<><dt>{q}</dt><dd>{a}</dd></>))}</dl>
+      </div>
     </div>
   </div>
 </Base>
@@ -97,7 +105,7 @@ const shotIds = SHOTS.map((s) => s.id);
       if (url) URL.revokeObjectURL(url);
       url = URL.createObjectURL(blob); img.src = url;
       const notes = [...(missing.length ? [`no drawing called ${missing.join(', ')}: search the library`] : []), ...critique(used, canvas)];
-      $('pn-notes').replaceChildren(...notes.map((n) => Object.assign(document.createElement('li'), { textContent: n })));
+      $('pn-notes').replaceChildren(...(notes.length ? notes : ['No notes: everything sits inside the canvas and reads clearly.']).map((n) => Object.assign(document.createElement('li'), { textContent: n })));
       const chain = (scene.credits || []).filter((c: any) => c.by).map((c: any) => c.by);
       $('pn-credits').textContent = chain.length ? `Remix chain: ${chain.join(' → ')}` : '';
     } catch (e) { err.textContent = `Could not draw: ${(e as Error).message}`; }
@@ -162,7 +170,8 @@ const shotIds = SHOTS.map((s) => s.id);
   });
 
   (async () => {
-    const h = new URLSearchParams(location.hash.slice(1)).get('s');
+    const hp = new URLSearchParams(location.hash.slice(1)), h = hp.get('s'), shot = hp.get('shot');
+    if (shot) { try { load(shotScene(shot, {}), `levni.dev/shots/#${shot}`); return; } catch { err.textContent = `No shot called ${shot}; here is a starter.`; } }
     if (h) { try { load(JSON.parse(await unpack(h))); return; } catch { err.textContent = 'That link is broken; here is a starter.'; } }
     try { const saved = localStorage.getItem('levni-pen'); if (saved) { load(JSON.parse(saved)); return; } } catch {}
     load(shotScene('typed-headline', { title: 'Hello, Pen', subtitle: 'Change me on the left.', mark: 'pencil' }));
@@ -191,10 +200,14 @@ const shotIds = SHOTS.map((s) => s.id);
   .pn-time .pn-btn { background: var(--indigo); color: #fff; }
   .pn-range { flex: 1; display: flex; align-items: center; gap: 8px; font: 600 12px/1 var(--mono); }
   .pn-range input { flex: 1; accent-color: var(--indigo); }
+  .pn-crit { background: #fff; box-shadow: 0 0 0 1px var(--rule); padding: 14px 16px; display: grid; gap: 8px; }
+  .pn-h { margin: 0; font: 600 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; }
   .pn-notes { margin: 0; padding-left: 18px; font-size: 14px; color: var(--ink-soft); }
+  .pn-tip { margin: 0; font-size: 14px; color: var(--ink-soft); }
   .pn-credits { margin: 0; font: 600 12px/1.4 var(--mono); color: var(--accent-text); }
-  .pn-about { max-width: 760px; margin: clamp(40px, 6vw, 72px) auto clamp(48px, 7vw, 80px) 0; }
+  .pn-about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 5vw, 64px); margin-block: clamp(40px, 6vw, 72px) clamp(48px, 7vw, 80px); }
+  .pn-about h1, .pn-about h2 { margin-top: 0; }
   .pn-about dt { font-weight: 700; margin-top: 14px; }
   .pn-about dd { margin: 6px 0 0; color: var(--ink-soft); }
-  @media (max-width: 860px) { .pn-main { grid-template-columns: minmax(0, 1fr); } .pn-code textarea { min-height: 300px; } }
+  @media (max-width: 860px) { .pn-main, .pn-about { grid-template-columns: minmax(0, 1fr); } .pn-view { order: -1; } .pn-code textarea { min-height: 300px; } }
 </style>

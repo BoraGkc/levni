@@ -56,6 +56,7 @@ const jsonld = [
                 <div class="mc-actions">
                   <button type="button" class="mc-copy" data-copy={cli(e)}>Copy command</button>
                   <button type="button" class="mc-copy" data-copy={full(e.scene)}>Copy scene</button>
+                  <a class="mc-copy" href={`/pen/#shot=${e.id}`}>Open in the Pen</a>
                 </div>
               </div>
             </li>
@@ -140,7 +141,7 @@ const jsonld = [
   .mc-body p { margin: 0; font-size: 14px; color: var(--ink-soft); line-height: 1.45; }
   .mc-body pre { margin: 2px 0 0; padding: 10px 12px; background: var(--indigo-deep); color: #fff; font: 12px/1.5 var(--mono); white-space: pre-wrap; word-break: break-word; max-height: 7.5em; overflow: auto; }
   .mc-actions { display: flex; gap: 8px; flex-wrap: wrap; }
-  .mc-copy { font: 600 11px/1 var(--mono); letter-spacing: .05em; text-transform: uppercase; padding: 9px 10px; border: 0; background: var(--paper); color: var(--ink); box-shadow: 0 0 0 1px var(--rule); cursor: pointer; }
+  .mc-copy { text-decoration: none; font: 600 11px/1 var(--mono); letter-spacing: .05em; text-transform: uppercase; padding: 9px 10px; border: 0; background: var(--paper); color: var(--ink); box-shadow: 0 0 0 1px var(--rule); cursor: pointer; }
   .mc-copy:hover, .mc-copy:focus-visible { box-shadow: 0 0 0 2px var(--ink); }
   .mc-about { max-width: 760px; margin: clamp(48px, 7vw, 80px) auto clamp(48px, 7vw, 80px) 0; }
   .mc-about p { color: var(--ink-soft); }
