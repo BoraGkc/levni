@@ -1,0 +1,23 @@
+[
+ {
+  "id": "01",
+  "title": "Drawn, not generated.",
+  "subtitle": "An open drawing library, a design engine that draws on your own machine, and the things nobody has drawn yet.",
+  "date": "Winter 2026",
+  "pages": 8,
+  "source": "examples/zine-01.json",
+  "pdfKB": 1093,
+  "foldKB": 398,
+  "fold": true,
+  "titles": [
+   "Drawn, not generated.",
+   "Why a zine?",
+   "Twelve of 1,628",
+   "Nobody has drawn these yet",
+   "A picture is a file",
+   "Same JSON, now it moves",
+   "Fold this zine",
+   "Thanks for reading"
+  ]
+ }
+]

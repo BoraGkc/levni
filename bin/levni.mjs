@@ -7,6 +7,7 @@
 //   levni print <scene.json> <out-dir>
 //   levni shot <name> <out> [--title …]   (levni shot --list)
 //   levni reel <reel.json> <out.mp4>
+//   levni zine <zine.json> <out-dir>   (pages, zine.pdf, fold.pdf)
 //   levni desk [dir] [--port 4747]   (local panel for a folder of scenes)
 //   levni open | remix <image.png> …
 //   levni sheet <out.png> [prop ...] [--recolor coral=blue,mustard=tone]
@@ -47,6 +48,7 @@ const USAGE = `levni: hand-inked illustrations from JSON scenes
               [--mark name] [--still]
       A README banner for a GitHub repo (read from the GitHub API, GITHUB_TOKEN if set): moving unless --still or .png.
   levni reel <reel.json> <out.mp4|out.gif|out.webp>
+  levni zine <zine.json> <out-dir>   a zine: page images, zine.pdf and an 8-page fold-up on one A4 sheet
   levni desk [dir] [--port 4747] [--no-open]   a local panel: every scene in the folder, drawn and watched
       Shots or scenes one after another with transitions (cut, fade, wipe, slide, push, iris): { format, fps,
       transition, clips: [{ shot, fields, seconds, transition } | { scene, seconds }] }. docs/reel.md
@@ -148,6 +150,13 @@ async function main() {
     if (still) await render(scene, out);
     else { const { animate } = await import('../src/animate.mjs'); await animate(scene, out, { frames: 36, fps: 12, width: 800 }); }
     console.log(`${out}  ${gh.full_name || gh.name}, mark ${scene.elements.find((e) => e.type === 'prop')?.name}`);
+  } else if (cmd === 'zine') {
+    const [file, out] = positional;
+    if (!file || !out) throw new Error('usage: levni zine <zine.json> <out-dir>');
+    const { renderZine } = await import('../src/zine.mjs');
+    const r = await renderZine(JSON.parse(readFileSync(file, 'utf8')), out, { onPage: (k, n) => process.stdout.write(`\rpage ${k}/${n}`) });
+    console.log(`\r${out}  ${r.pages} pages: ${r.files.map((f) => f.split('/').pop()).filter((f) => !/^p\d/.test(f)).join(', ')}`);
+    console.log(r.notes.length ? r.notes.map((n) => `- ${n}`).join('\n') : '- critic: no layout problems found');
   } else if (cmd === 'desk') {
     const { startDesk } = await import('../src/desk.mjs');
     const d = await startDesk({ dir: positional[0] || '.', port: opt('port') && Number(opt('port')), log: (m) => console.log(`- ${m}`) });

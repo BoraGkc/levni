@@ -24,6 +24,7 @@ export const DOC_GROUPS: DocGroup[] = [
       { href: '/docs/shots/', title: 'Shots', blurb: 'Ready-made motion with your words, drawing and inks.' },
       { href: '/docs/reel/', title: 'Reel', blurb: 'Shots joined with transitions into one video.' },
       { href: '/docs/desk/', title: 'Desk', blurb: 'A local panel that draws and watches a folder of scenes.' },
+      { href: '/docs/zine/', title: 'Zine', blurb: 'A magazine, a PDF and a fold-up sheet from one file.' },
       { href: '/docs/stamp/', title: 'Stamp and remix', blurb: 'Every PNG carries its scene and who made it.' },
       { href: '/docs/readme-action/', title: 'README Action', blurb: 'A moving banner on every release.' },
       { href: '/docs/animation/', title: 'Animation', blurb: 'Loop any scene as GIF, WebP or MP4: motion, stagger, camera, moving README banners.' },

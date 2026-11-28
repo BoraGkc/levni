@@ -1,0 +1,184 @@
+{
+ "name": "LEVNI ZINE",
+ "issue": "01",
+ "date": "Winter 2026",
+ "seed": 11,
+ "pages": [
+  {
+   "kind": "cover",
+   "title": "Drawn, not generated.",
+   "subtitle": "An open drawing library, a design engine that draws on your own machine, and the things nobody has drawn yet.",
+   "mark": "tulip"
+  },
+  {
+   "kind": "text",
+   "kicker": "Editor's note",
+   "title": "Why a zine?",
+   "body": "Levni draws pictures from a few lines of JSON, on your own machine. No image model, no credits, no cloud. Everything it draws comes from an open library of hand-inked objects that anyone can add to.\nA zine felt right for that: cheap, printable, passed by hand. Print it at home or on a riso, fold it, give it away. Every page here was drawn by Levni from a scene file you can open and change.",
+   "quote": "Post-AI, not anti-AI. We just draw, and leave the source open.",
+   "mark": "pencil"
+  },
+  {
+   "kind": "grid",
+   "kicker": "From the Folio",
+   "title": "Twelve of 1,628",
+   "props": [
+    "tea-glass",
+    "simit",
+    "cezve",
+    "nazar-bead",
+    "ferry",
+    "seagull",
+    "pomegranate",
+    "tulip",
+    "easel",
+    "palette",
+    "vinyl",
+    "headphones"
+   ],
+   "cols": 3
+  },
+  {
+   "kind": "list",
+   "kicker": "Wanted",
+   "title": "Nobody has drawn these yet",
+   "items": [
+    "whisk",
+    "grater",
+    "ladle",
+    "colander",
+    "toaster",
+    "spatula",
+    "oven mitt",
+    "apron",
+    "drum",
+    "accordion",
+    "harp",
+    "trumpet",
+    "saxophone",
+    "ukulele",
+    "violin",
+    "flute",
+    "cello",
+    "fern",
+    "acorn",
+    "pinecone",
+    "seashell",
+    "bee",
+    "snail",
+    "hedgehog",
+    "fox",
+    "owl",
+    "whale",
+    "octopus",
+    "turtle",
+    "frog",
+    "brayer",
+    "squeegee",
+    "paint tube",
+    "stapler",
+    "sketchbook",
+    "backgammon",
+    "samovar",
+    "ney",
+    "baglama"
+   ],
+   "cols": 3,
+   "size": 23,
+   "body": "Pick one, draw it as paths in a 0–100 box and open a pull request. Your name stays on it. The whole list: levni.dev/commons"
+  },
+  {
+   "kind": "code",
+   "kicker": "How it works",
+   "title": "A picture is a file",
+   "code": "{\n  \"background\": \"paper\",\n  \"elements\": [\n    { \"type\": \"disc\", \"x\": 600,\n      \"y\": 330, \"r\": 170,\n      \"color\": \"mustard\" },\n    { \"type\": \"prop\",\n      \"name\": \"tulip\",\n      \"x\": 600, \"y\": 320,\n      \"size\": 300,\n      \"motion\": { \"type\": \"float\" } }\n  ]\n}",
+   "body": "npx @levni/levni render scene.json out.png draws it. The same file moves with one motion line, prints as riso plates, and opens in the Pen at levni.dev/pen to change in your browser."
+  },
+  {
+   "kind": "scene",
+   "caption": "Page six is a plain scene: a panel, a sun, a rocket, a crowd. Same engine, same file format.",
+   "scene": {
+    "elements": [
+     {
+      "type": "panel",
+      "x": 0,
+      "y": 0,
+      "w": 874,
+      "h": 1240,
+      "color": "blue"
+     },
+     {
+      "type": "confetti",
+      "x": 0,
+      "y": 0,
+      "w": 874,
+      "h": 760,
+      "kind": "stars",
+      "colors": [
+       "paper",
+       "mustard"
+      ]
+     },
+     {
+      "type": "disc",
+      "x": 437,
+      "y": 420,
+      "r": 230,
+      "color": "coral"
+     },
+     {
+      "type": "prop",
+      "name": "rocket",
+      "x": 437,
+      "y": 400,
+      "size": 360,
+      "shadow": true
+     },
+     {
+      "type": "crowd",
+      "x": 40,
+      "y": 900,
+      "w": 794,
+      "rows": 2,
+      "size": 120,
+      "color": "paper",
+      "highlight": "mustard",
+      "share": 0.12
+     },
+     {
+      "type": "type",
+      "text": "SAME JSON.\nNOW IT MOVES.",
+      "x": 64,
+      "y": 96,
+      "size": 44,
+      "font": "black",
+      "color": "paper",
+      "leading": 0.98
+     }
+    ]
+   },
+   "title": "Same JSON, now it moves"
+  },
+  {
+   "kind": "text",
+   "kicker": "Make your own",
+   "title": "Fold this zine",
+   "size": 24,
+   "body": "1. Print fold.pdf on one A4 sheet.\n2. Fold it in half the long way, then open it.\n3. Fold it in half the short way, twice, and open it again: eight panels.\n4. Fold it in half the short way and cut along the red line, from the fold to the middle.\n5. Open it, fold it the long way, and push the ends together so the cut opens into a diamond. Flatten it into a booklet.\n6. To make your own: npx @levni/levni zine zine.json out/",
+   "mark": "scissors"
+  },
+  {
+   "kind": "back",
+   "lines": [
+    "Levni Zine No. 01 · Winter 2026",
+    "Made with Levni, an MIT design engine. Drawings CC BY 4.0, fonts OFL.",
+    "Every page is a scene file in the repo: examples/zine-01.json.",
+    "Send something for No. 02: a picture and its scene, as a Showcase issue on GitHub."
+   ],
+   "mark": "pencil",
+   "sign": "levni.dev",
+   "kicker": "Colophon",
+   "title": "Thanks for reading"
+  }
+ ]
+}

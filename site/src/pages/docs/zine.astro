@@ -1,0 +1,23 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { readDoc, render, resetIds } from '../../components/docs/md';
+
+resetIds();
+const { intro, sections } = readDoc('zine.md');
+const fig = '';
+const head = render(intro.replace(/^!\[[^\]]*\]\([^)]*\)\n+/m, 'FIGUREHERE\n\n'));
+head.html = head.html.replace('<p>FIGUREHERE</p>', fig);
+const parts = sections.map((s) => render(s.md, { title: s.title, id: s.id }));
+const toc = parts.flatMap((p) => p.toc);
+---
+<Docs
+  title="Levni Zine: a magazine from one JSON file"
+  description="levni zine turns one JSON file into a small magazine: page images, a PDF, and an eight-page fold-up zine on one A4 sheet, with cover, text, grid, list, code, scene and back page templates."
+  toc={toc}
+>
+  <p class="eyebrow">Animate and export</p>
+  <h1>Zine</h1>
+  <p class="callout"><strong>New in Levni 0.6.0</strong> <code>levni zine</code> needs 0.6.0 or newer.</p>
+  <Fragment set:html={head.html} />
+  {parts.map((p) => <Fragment set:html={p.html} />)}
+</Docs>
