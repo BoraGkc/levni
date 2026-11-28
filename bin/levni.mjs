@@ -5,6 +5,7 @@
 //   levni storyboard <spec.json> <out.png> [--frames-dir dir]
 //   levni brand <brand.json | url> <out-dir>
 //   levni print <scene.json> <out-dir>
+//   levni shot <name> <out> [--title …]   (levni shot --list)
 //   levni sheet <out.png> [prop ...] [--recolor coral=blue,mustard=tone]
 //   levni board <spec.json> <out.png>
 //   levni list [query]
@@ -20,7 +21,7 @@ import { render, compose, loadProps, findProp, addPropDir, LIBRARY_DIR, validate
 const [cmd, ...rest] = process.argv.slice(2);
 const flag = (name) => rest.includes(`--${name}`);
 const opt = (name) => { const i = rest.indexOf(`--${name}`); return i >= 0 ? rest[i + 1] : undefined; };
-const positional = rest.filter((a, i) => !a.startsWith('--') && !(i > 0 && ['--recolor', '--dir', '--sheet', '--brief', '--model', '--format', '--frames', '--fps', '--boil', '--width', '--strip', '--colours', '--frames-dir', '--sprite', '--columns', '--crf', '--loops', '--tile', '--posters', '--only', '--scale', '--plates', '--halftone', '--shift', '--paper'].includes(rest[i - 1])));
+const positional = rest.filter((a, i) => !a.startsWith('--') && !(i > 0 && ['--recolor', '--dir', '--sheet', '--brief', '--model', '--format', '--frames', '--fps', '--boil', '--width', '--strip', '--colours', '--frames-dir', '--sprite', '--columns', '--crf', '--loops', '--tile', '--posters', '--only', '--scale', '--plates', '--halftone', '--shift', '--paper', '--title', '--subtitle', '--kicker', '--mark', '--inks', '--items', '--values', '--cta', '--seed'].includes(rest[i - 1])));
 
 const USAGE = `levni: hand-inked illustrations from JSON scenes
 
@@ -36,6 +37,9 @@ const USAGE = `levni: hand-inked illustrations from JSON scenes
       Elements move with "motion": float, sway, pulse, spin, pop, fade, slide, wipe, typewriter; the scene with "camera".
       .mp4 needs ffmpeg on the PATH. --frames-dir writes frame-0001.png… and frames.json; --sprite writes a sprite sheet
       and its atlas JSON. docs/animate.md, docs/export.md
+  levni shot <name> <out.gif|out.webp|out.mp4|out.png|out.json> [--title ..] [--subtitle ..] [--kicker ..] [--mark rocket]
+             [--inks "#1F3A5F,#E4572E"] [--format square|story|youtube|…] [--items "a,b,c"] [--values "3,5,8"]
+      A ready-made motion shot with your words, drawing and inks. levni shot --list shows them all. docs/shots.md
   levni print <scene.json> <out-dir> [--scale 3] [--plates 4] [--halftone 4] [--paper #F4F2EC] [--shift 3]
       Riso plates: one grayscale PNG per ink (black = full ink; lightest ink first, the key line last), proof.png
       (the plates multiplied back on the paper), sheet.png and print.json. Ready for a stencil printer. docs/print.md
@@ -61,7 +65,7 @@ const USAGE = `levni: hand-inked illustrations from JSON scenes
   levni mcp
       Run Levni as an MCP server over stdio (tools: scene_guide, list_props, render_scene,
       critique_scene, render_animation, show_props, render_board, render_poster, render_storyboard,
-      render_brand_kit, render_print). Add it to an MCP client as: npx levni mcp
+      render_brand_kit, render_print, render_shot). Add it to an MCP client as: npx levni mcp
   levni check [prop ...]
       Measure props without looking at them (for agents that cannot see images): how much of the
       box each variant fills, its centre, colours, and what to fix. All props when none named.
@@ -112,6 +116,22 @@ async function main() {
     console.log(`${out}  ${r.frames} frames, ${r.width} x ${r.height}, ${Math.round(r.bytes / 1024)} KB`);
     if (opt('strip')) { writeFileSync(opt('strip'), await frameStrip(r.stills)); console.log(opt('strip')); }
     console.log(r.notes.length ? r.notes.map((n) => `- ${n}`).join('\n') : '- critic: no layout problems found');
+  } else if (cmd === 'shot') {
+    const { shotScene, SHOTS } = await import('../src/shots.mjs');
+    const [name, out] = positional;
+    if (flag('list') || !name) { for (const s of SHOTS) console.log(`${s.id.padEnd(16)} ${s.group.padEnd(6)} ${s.text}`); return; }
+    if (!out) throw new Error('usage: levni shot <name> <out.gif|out.webp|out.mp4|out.png|out.json> [--title …] (levni shot --list)');
+    const list = (k) => (opt(k) ? opt(k).split(',').map((x) => x.trim()).filter(Boolean) : undefined);
+    const scene = shotScene(name, { title: opt('title'), subtitle: opt('subtitle'), kicker: opt('kicker'), mark: opt('mark'), cta: opt('cta'), inks: list('inks'), items: list('items'), values: list('values'), format: opt('format'), seed: opt('seed') && Number(opt('seed')) });
+    if (/\.json$/i.test(out)) { writeFileSync(out, JSON.stringify(scene, null, 2) + '\n'); console.log(out); return; }
+    if (/\.(png|svg)$/i.test(out) || flag('still')) { // a still: the finished picture, mid-loop
+      const { notes } = await render({ ...scene, t: 0.62 }, out); console.log(out); if (notes.length) console.log(notes.map((n) => `- ${n}`).join('\n')); return;
+    }
+    const o = { frames: opt('frames') ? Number(opt('frames')) : 36, fps: opt('fps') ? Number(opt('fps')) : 12, width: opt('width') ? Number(opt('width')) : undefined };
+    if (/\.mp4$/i.test(out)) { const { toMp4 } = await import('../src/sequence.mjs'); await toMp4(scene, out, o); console.log(out); return; }
+    const { animate } = await import('../src/animate.mjs');
+    const r = await animate(scene, out, o);
+    console.log(`${out}  ${name}, ${r.frames} frames, ${r.width} x ${r.height}, ${Math.round(r.bytes / 1024)} KB`);
   } else if (cmd === 'print') {
     const [file, dir] = positional;
     if (!file || !dir) throw new Error('usage: levni print <scene.json> <out-dir> [--scale 3] [--plates 4] [--halftone 4]');

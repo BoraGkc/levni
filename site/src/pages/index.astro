@@ -160,6 +160,7 @@ const tools = [
   ['render_animation', 'a scene as a looping GIF or WebP, with a strip of frames to look at'],
   ['render_storyboard', 'a shot list as a numbered sheet with timecodes'],
   ['render_print', 'riso plates for a real print run, one image per ink'],
+  ['render_shot', 'a ready-made motion shot with your words, drawing and inks'],
   ['critique_scene', 'only the notes, for quick iterations'],
   ['scene_guide', 'every element type, colour and style pack'],
 ];
@@ -339,6 +340,7 @@ npx @levni/levni board brand.json board.png`}</code></pre>
         <pre class="mb-code"><code>npx @levni/levni animate scene.json loop.gif</code></pre>
         <ul class="mb-links">
           <li><a href="/banner/">Make a moving README banner</a></li>
+          <li><a href="/shots/">Levni Shots: 25 ready-made loops, your words</a></li>
           <li><a href="/motion/">Motion catalogue: every preset, with its JSON</a></li>
           <li><a href="/docs/animation/">Animation guide</a></li>
           <li><a href="/tools/">Free tools: gradients, patterns, waves, OG images</a></li>
@@ -433,7 +435,7 @@ npx @levni/levni board brand.json board.png`}</code></pre>
   <section id="agents" class="agents wrap" aria-labelledby="agents-title">
     <div class="agents-text">
       <h2 id="agents-title">Give your agent an illustrator.</h2>
-      <p>One MCP server, eleven tools (three more for Ghost). The agent searches the library, writes the scene, a brand kit or a loop, reads the critic and saves the file, without a person in the loop until the picture is right.</p>
+      <p>One MCP server, twelve tools (three more for Ghost). The agent searches the library, writes the scene, a brand kit or a loop, reads the critic and saves the file, without a person in the loop until the picture is right.</p>
       <dl class="tools">
         {tools.map(([name, what]) => (<><dt><code>{name}</code></dt><dd>{what}</dd></>))}
       </dl>

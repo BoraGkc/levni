@@ -45,6 +45,7 @@
     "./brandkit": "./src/brandkit.mjs",
     "./gif": "./src/gif.mjs",
     "./separate": "./src/separate.mjs",
+    "./shots": "./src/shots.mjs",
     "./browser": "./src/browser.mjs",
     "./vite": "./src/browser/vite.mjs",
     "./adapters/ghost": "./adapters/ghost/index.mjs"
@@ -62,6 +63,7 @@
     "docs/storyboard.md",
     "docs/brandkit.md",
     "docs/print.md",
+    "docs/shots.md",
     "docs/board.md",
     "docs/poster.md",
     "docs/ghost.md",
