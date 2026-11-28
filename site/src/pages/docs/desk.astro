@@ -1,0 +1,23 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { readDoc, render, resetIds } from '../../components/docs/md';
+
+resetIds();
+const { intro, sections } = readDoc('desk.md');
+const fig = '';
+const head = render(intro.replace(/^!\[[^\]]*\]\([^)]*\)\n+/m, 'FIGUREHERE\n\n'));
+head.html = head.html.replace('<p>FIGUREHERE</p>', fig);
+const parts = sections.map((s) => render(s.md, { title: s.title, id: s.id }));
+const toc = parts.flatMap((p) => p.toc);
+---
+<Docs
+  title="Levni Desk: a local panel for your scenes"
+  description="levni desk opens a local panel for a folder of Levni scenes: live drawings that redraw when a file changes, motion scrubbing, critic notes, git history and PNG, GIF or WebP exports next to each scene."
+  toc={toc}
+>
+  <p class="eyebrow">Animate and export</p>
+  <h1>Desk</h1>
+  <p class="callout"><strong>New in Levni 0.5.0</strong> <code>levni desk</code> needs 0.5.0 or newer.</p>
+  <Fragment set:html={head.html} />
+  {parts.map((p) => <Fragment set:html={p.html} />)}
+</Docs>

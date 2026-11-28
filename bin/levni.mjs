@@ -7,6 +7,7 @@
 //   levni print <scene.json> <out-dir>
 //   levni shot <name> <out> [--title …]   (levni shot --list)
 //   levni reel <reel.json> <out.mp4>
+//   levni desk [dir] [--port 4747]   (local panel for a folder of scenes)
 //   levni open | remix <image.png> …
 //   levni sheet <out.png> [prop ...] [--recolor coral=blue,mustard=tone]
 //   levni board <spec.json> <out.png>
@@ -23,7 +24,7 @@ import { render, compose, loadProps, findProp, addPropDir, LIBRARY_DIR, validate
 const [cmd, ...rest] = process.argv.slice(2);
 const flag = (name) => rest.includes(`--${name}`);
 const opt = (name) => { const i = rest.indexOf(`--${name}`); return i >= 0 ? rest[i + 1] : undefined; };
-const positional = rest.filter((a, i) => !a.startsWith('--') && !(i > 0 && ['--recolor', '--dir', '--sheet', '--brief', '--model', '--format', '--frames', '--fps', '--boil', '--width', '--strip', '--colours', '--frames-dir', '--sprite', '--columns', '--crf', '--loops', '--tile', '--posters', '--only', '--scale', '--plates', '--halftone', '--shift', '--paper', '--title', '--subtitle', '--kicker', '--mark', '--inks', '--items', '--values', '--cta', '--seed', '--by', '--from', '--repo', '--repo-json', '--theme'].includes(rest[i - 1])));
+const positional = rest.filter((a, i) => !a.startsWith('--') && !(i > 0 && ['--recolor', '--port', '--dir', '--sheet', '--brief', '--model', '--format', '--frames', '--fps', '--boil', '--width', '--strip', '--colours', '--frames-dir', '--sprite', '--columns', '--crf', '--loops', '--tile', '--posters', '--only', '--scale', '--plates', '--halftone', '--shift', '--paper', '--title', '--subtitle', '--kicker', '--mark', '--inks', '--items', '--values', '--cta', '--seed', '--by', '--from', '--repo', '--repo-json', '--theme'].includes(rest[i - 1])));
 
 const USAGE = `levni: hand-inked illustrations from JSON scenes
 
@@ -46,6 +47,7 @@ const USAGE = `levni: hand-inked illustrations from JSON scenes
               [--mark name] [--still]
       A README banner for a GitHub repo (read from the GitHub API, GITHUB_TOKEN if set): moving unless --still or .png.
   levni reel <reel.json> <out.mp4|out.gif|out.webp>
+  levni desk [dir] [--port 4747] [--no-open]   a local panel: every scene in the folder, drawn and watched
       Shots or scenes one after another with transitions (cut, fade, wipe, slide, push, iris): { format, fps,
       transition, clips: [{ shot, fields, seconds, transition } | { scene, seconds }] }. docs/reel.md
   levni open <image.png> [scene.json]
@@ -146,6 +148,13 @@ async function main() {
     if (still) await render(scene, out);
     else { const { animate } = await import('../src/animate.mjs'); await animate(scene, out, { frames: 36, fps: 12, width: 800 }); }
     console.log(`${out}  ${gh.full_name || gh.name}, mark ${scene.elements.find((e) => e.type === 'prop')?.name}`);
+  } else if (cmd === 'desk') {
+    const { startDesk } = await import('../src/desk.mjs');
+    const d = await startDesk({ dir: positional[0] || '.', port: opt('port') && Number(opt('port')), log: (m) => console.log(`- ${m}`) });
+    console.log(`Levni Desk: ${d.url}  (${resolve(positional[0] || '.')})`);
+    console.log('Watching the folder; Ctrl+C to stop.');
+    if (!flag('no-open')) { const { spawn } = await import('node:child_process'); const o = process.platform === 'darwin' ? 'open' : process.platform === 'win32' ? 'explorer' : 'xdg-open'; spawn(o, [d.url], { stdio: 'ignore', detached: true }).on('error', () => {}).unref(); }
+    await new Promise(() => {});
   } else if (cmd === 'reel') {
     const [file, out] = positional;
     if (!file || !out) throw new Error('usage: levni reel <reel.json> <out.mp4|out.gif|out.webp>');

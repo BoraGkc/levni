@@ -240,6 +240,7 @@ The assistant shows you the preview and applies after you say yes. Drafts only: 
 | `levni animate <scene.json> <out.gif\|out.webp\|out.mp4>` | draw a scene as a loop: clouds drift, flags wave, gradients breathe, 3D spins, and any element with `motion` moves (`--frames`, `--fps`, `--boil`, `--width`, `--strip`, `--frames-dir`, `--sprite`) ([docs](docs/animate.md), [export](docs/export.md)) |
 | `levni brand <brand.json\|url> <out-dir>` | a whole brand kit in one folder (`--posters 8`, `--only a,b`) ([docs](docs/brandkit.md)) |
 | `levni reel <reel.json> <out.mp4>` | shots or scenes joined with transitions ([docs](docs/reel.md)) |
+| `levni desk [dir]` | a local panel: every scene in the folder drawn, watched and exported ([docs](docs/desk.md)) |
 | `levni banner <out.gif> --repo owner/name` | a README banner for a GitHub repo; also [a GitHub Action](docs/readme-action.md) |
 | `levni open` / `levni remix <image.png>` | every Levni PNG carries its scene: get it back, add your name to its remix chain ([docs](docs/stamp.md)) |
 | `levni shot <name> <out>` | 25 ready-made motion shots with your `--title`, `--mark`, `--inks` and `--format`; `levni shot --list` ([docs](docs/shots.md)) |
