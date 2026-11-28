@@ -285,6 +285,8 @@ When a frame is wrong, fix the scene and not the file. Because each frame is a p
 
 ## What to do next
 
+Browse the [motion catalogue](/motion/): every preset, camera move, easing curve and self-moving element as its own loop, with the snippet to copy.
+
 Make a [README banner that moves](/blog/animated-readme-banner/) with the same engine. To build the still picture first, read [how to make blog covers from JSON](/blog/generate-blog-covers-claude-code/) or try [mesh gradient backgrounds](/blog/mesh-gradient-backgrounds/), which drift on their own. Open [the editor](/editor/) to place elements by hand, or browse [the free tools](/tools/) and the [Levni library](/library/) for drawings.
 
 **Reference and examples.** Read the [animation reference](/docs/animation/) (loops, entrances, camera, sizes) and the [export reference](/docs/export/) (frames, sprite sheets, MP4); see finished work on [the features page](/features/) and in [the gallery](/gallery/).
