@@ -1,7 +1,7 @@
 // README banners: mark picking from repo words, and a scene that composes on the 1280 × 640 canvas.
 import assert from 'node:assert/strict';
 import { compose, loadProps } from '../src/index.mjs';
-import { bannerScene, pickMark, repoTerms, hashSeed, BANNER_THEMES } from '../src/banner.mjs';
+import { bannerScene, pickMark, repoTerms, hashSeed, BANNER_THEMES, repoBanner } from '../src/banner.mjs';
 
 const index = Object.values(loadProps());
 
@@ -30,3 +30,11 @@ for (const theme of Object.keys(BANNER_THEMES)) {
   assert.match(svg, /width="1280" height="640"/);
 }
 console.log('banner ok');
+
+// a repo straight from the GitHub API: owner, name, stars, a mark from its topics, motion on request
+const gh = { full_name: 'acme/rocket-launcher', name: 'rocket-launcher', owner: { login: 'acme' }, description: 'Launch things', stargazers_count: 1200, language: 'Go', topics: ['rocket'] };
+const rb = repoBanner(gh, index, { motion: true });
+assert.equal(rb.elements.find((e) => e.type === 'prop').name, 'rocket');
+assert.ok(JSON.stringify(rb).includes('ACME /') && JSON.stringify(rb).includes('motion'));
+assert.ok(!JSON.stringify(repoBanner(gh, index)).includes('motion'));
+console.log('repoBanner ok');

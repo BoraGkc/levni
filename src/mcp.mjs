@@ -173,6 +173,19 @@ export const TOOLS = [
       },
     },
   },
+  {
+    name: 'render_reel',
+    description: 'Join shots or scenes into one short video or loop with transitions. reel: { format?, fps? (24), width?, inks?, transition? (cut, fade, wipe, slide, push, iris; default fade), transitionSeconds? (0.4), clips: [{ shot, fields?, seconds?, transition? } | { scene, seconds? }] }. Each clip plays its own motion once over its seconds. Writes .mp4 (needs ffmpeg), .gif or .webp and returns one frame from each clip.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        reel: { type: 'object', description: 'The reel spec.' },
+        out: { type: 'string', description: 'File to write: .mp4, .gif or .webp, relative to the server\'s working directory.' },
+        preview: { type: 'boolean', description: 'Return a strip of frames (default true).' },
+      },
+      required: ['reel', 'out'],
+    },
+  },
 ];
 
 const text = (t) => ({ type: 'text', text: t });
@@ -236,6 +249,21 @@ async function call(name, args = {}) {
     const r = await animate(scene, file, { frames: args.frames, fps: args.fps, boil: args.boil, width: args.width });
     const out = [text(notesText(r.notes)), text(`wrote ${file}: ${r.frames} frames, ${r.width} x ${r.height}, ${Math.round(r.bytes / 1024)} KB`)];
     if (args.preview !== false) out.push(image(await frameStrip(r.stills)));
+    return out;
+  }
+
+  if (name === 'render_reel') {
+    const { renderReel, reelFrames } = await import('./reel.mjs');
+    const reel = asScene(args.reel), file = resolve(String(args.out || ''));
+    mkdirSync(dirname(file), { recursive: true });
+    const r = await renderReel(reel, file);
+    const out = [text(`wrote ${file}: ${r.seconds} s, ${r.frames} frames at ${r.fps} fps, ${r.width} x ${r.height}`)];
+    if (args.preview !== false) {
+      const f = await reelFrames({ ...reel, width: 240, fps: 4 });
+      const picks = [0.15, 0.4, 0.65, 0.9].map((p) => f.frames[Math.floor(p * (f.frames.length - 1))]);
+      const cells = await Promise.all(picks.map((d) => sharp(d, { raw: { width: f.width, height: f.height, channels: 4 } }).png().toBuffer()));
+      out.push(image(await sharp({ create: { width: 4 * f.width, height: f.height, channels: 3, background: '#E9E6DE' } }).composite(cells.map((input, k) => ({ input, left: k * f.width, top: 0 }))).png().toBuffer()));
+    }
     return out;
   }
 

@@ -1,0 +1,54 @@
+name: Levni README banner
+description: Draw a README banner for this repo with Levni (a moving GIF or a still PNG) and commit it when it changes. No image model, no API key.
+author: Levni-Dev
+branding:
+  icon: image
+  color: purple
+inputs:
+  path:
+    description: Where to write the banner, relative to the repo root. .gif moves, .png is still.
+    default: .github/levni-banner.gif
+  theme:
+    description: riso, coral, green or night.
+    default: riso
+  mark:
+    description: A drawing from the Levni Folio by name. Empty picks one from the repo's topics, name and description.
+    default: ''
+  commit:
+    description: 'Commit and push the banner when it changed (needs permissions contents: write).'
+    default: 'true'
+  message:
+    description: Commit message.
+    default: 'docs: refresh the Levni README banner'
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 22
+    - name: Install Levni
+      shell: bash
+      run: cd "$GITHUB_ACTION_PATH/.." && npm ci --omit=dev --no-audit --no-fund --loglevel=error
+    - name: Draw the banner
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+        OUT: ${{ inputs.path }}
+        THEME: ${{ inputs.theme }}
+        MARK: ${{ inputs.mark }}
+      run: |
+        mkdir -p "$(dirname "$OUT")"
+        node "$GITHUB_ACTION_PATH/../bin/levni.mjs" banner "$OUT" --repo "$GITHUB_REPOSITORY" --theme "$THEME" ${MARK:+--mark "$MARK"}
+    - name: Commit it
+      if: inputs.commit == 'true'
+      shell: bash
+      env:
+        OUT: ${{ inputs.path }}
+        MSG: ${{ inputs.message }}
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add "$OUT"
+        if git diff --cached --quiet; then echo "Banner unchanged."; exit 0; fi
+        git commit -m "$MSG"
+        git push

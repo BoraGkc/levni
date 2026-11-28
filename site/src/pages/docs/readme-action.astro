@@ -1,0 +1,23 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { readDoc, render, resetIds } from '../../components/docs/md';
+
+resetIds();
+const { intro, sections } = readDoc('readme-action.md');
+const fig = '';
+const head = render(intro.replace(/^!\[[^\]]*\]\([^)]*\)\n+/m, 'FIGUREHERE\n\n'));
+head.html = head.html.replace('<p>FIGUREHERE</p>', fig);
+const parts = sections.map((s) => render(s.md, { title: s.title, id: s.id }));
+const toc = parts.flatMap((p) => p.toc);
+---
+<Docs
+  title="Levni README banner GitHub Action"
+  description="A GitHub Action that draws a moving README banner for your repo with Levni and commits it on every release. No image model, no API key."
+  toc={toc}
+>
+  <p class="eyebrow">Animate and export</p>
+  <h1>README banner Action</h1>
+  <p class="callout"><strong>New in Levni 0.5.0</strong> The Action runs Levni from this repository; nothing to install.</p>
+  <Fragment set:html={head.html} />
+  {parts.map((p) => <Fragment set:html={p.html} />)}
+</Docs>
