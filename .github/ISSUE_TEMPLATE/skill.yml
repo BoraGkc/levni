@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        A skill is plain writing, not code. A good one answers four questions. Rough ideas are welcome. See the [post on design skills](https://levni.dev/blog/open-source-design-skills/) for examples.
+        A skill is plain writing, not code. A good one answers four questions. Rough ideas are welcome. See the two skills in [levni-skills](https://github.com/Levni-Dev/levni-skills) for examples.
   - type: input
     id: name
     attributes:
