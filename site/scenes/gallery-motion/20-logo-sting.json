@@ -1,0 +1,73 @@
+{
+ "seed": 20,
+ "background": "#4B2FD6",
+ "elements": [
+  {
+   "type": "disc",
+   "x": 600,
+   "y": 270,
+   "r": 150,
+   "color": "#D6E521",
+   "motion": {
+    "type": "pop",
+    "delay": 0.04,
+    "dur": 0.16
+   }
+  },
+  {
+   "type": "prop",
+   "name": "tulip",
+   "x": 600,
+   "y": 265,
+   "size": 230,
+   "motion": [
+    {
+     "type": "pop",
+     "delay": 0.12,
+     "dur": 0.16
+    },
+    {
+     "type": "sway",
+     "amp": 5
+    }
+   ]
+  },
+  {
+   "type": "type",
+   "text": "Lale Studio",
+   "x": 600,
+   "y": 520,
+   "size": 90,
+   "font": "black",
+   "align": "center",
+   "color": "paper",
+   "motion": {
+    "type": "typewriter",
+    "delay": 0.3,
+    "dur": 0.22,
+    "cursor": "_"
+   }
+  },
+  {
+   "type": "type",
+   "text": "BRANDING · TYPE · PRINT",
+   "x": 600,
+   "y": 650,
+   "size": 20,
+   "font": "mono",
+   "weight": 700,
+   "tracking": 0.06,
+   "color": "#D6E521",
+   "align": "center",
+   "motion": {
+    "type": "fade",
+    "delay": 0.6,
+    "dur": 0.1
+   }
+  }
+ ],
+ "_meta": {
+  "title": "a logo sting",
+  "alt": "On indigo: a lime disc and a tulip pop in, the name Lale Studio types itself below, then branding, type, print fades in"
+ }
+}

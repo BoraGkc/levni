@@ -1,0 +1,72 @@
+{
+ "seed": 30,
+ "background": "blue",
+ "stagger": 0.1,
+ "elements": [
+  {
+   "type": "seal",
+   "x": 250,
+   "y": 260,
+   "size": 320,
+   "edge": "zigzag",
+   "fill": "mustard",
+   "top": "fresh batch",
+   "bottom": "no. 07",
+   "prop": "coffee-cup",
+   "rot": -10,
+   "motion": {
+    "type": "wiggle",
+    "amp": 6
+   }
+  },
+  {
+   "type": "seal",
+   "x": 610,
+   "y": 210,
+   "size": 280,
+   "edge": "perforated",
+   "fill": "paper",
+   "text": "open source",
+   "word": "MIT",
+   "sub": "free",
+   "rot": 7,
+   "motion": {
+    "type": "wiggle",
+    "amp": 6
+   }
+  },
+  {
+   "type": "seal",
+   "x": 940,
+   "y": 300,
+   "size": 340,
+   "edge": "scallop",
+   "fill": "coral",
+   "top": "approved",
+   "bottom": "by us",
+   "prop": "star",
+   "rot": 12,
+   "textColor": "paper",
+   "color": "ink",
+   "motion": {
+    "type": "spin"
+   }
+  },
+  {
+   "type": "stub",
+   "x": 330,
+   "y": 470,
+   "w": 380,
+   "h": 140,
+   "text": "ADMIT ONE",
+   "motion": {
+    "type": "wiggle",
+    "amp": 4
+   }
+  }
+ ],
+ "_meta": {
+  "title": "a sticker sheet",
+  "alt": "Stickers on blue: a zigzag coffee seal and an MIT seal wiggle out of step, a coral approved seal spins, a ticket shakes"
+ }
+}

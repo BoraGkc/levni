@@ -1,0 +1,114 @@
+{
+ "format": "square",
+ "seed": 27,
+ "background": "green",
+ "elements": [
+  {
+   "type": "type",
+   "text": "THIS YEAR",
+   "x": 90,
+   "y": 140,
+   "size": 30,
+   "font": "mono",
+   "weight": 700,
+   "tracking": 0.06,
+   "color": "paper"
+  },
+  {
+   "type": "type",
+   "text": "12,480",
+   "x": 86,
+   "y": 260,
+   "w": 900,
+   "h": 300,
+   "fit": "box",
+   "font": "black",
+   "color": "paper",
+   "motion": {
+    "type": "typewriter",
+    "delay": 0.06,
+    "dur": 0.3,
+    "cursor": "_"
+   }
+  },
+  {
+   "type": "type",
+   "text": "trees planted by readers",
+   "x": 90,
+   "y": 650,
+   "size": 46,
+   "color": "paper",
+   "motion": {
+    "type": "slide",
+    "from": "down",
+    "distance": 40,
+    "delay": 0.4,
+    "dur": 0.16
+   }
+  },
+  {
+   "type": "prop",
+   "name": "tree",
+   "x": 180,
+   "y": 900,
+   "size": 230,
+   "motion": {
+    "type": "sway",
+    "amp": 6,
+    "phase": 0.0
+   }
+  },
+  {
+   "type": "prop",
+   "name": "tree",
+   "x": 360,
+   "y": 900,
+   "size": 230,
+   "motion": {
+    "type": "sway",
+    "amp": 6,
+    "phase": 0.15
+   }
+  },
+  {
+   "type": "prop",
+   "name": "tree",
+   "x": 540,
+   "y": 900,
+   "size": 230,
+   "motion": {
+    "type": "sway",
+    "amp": 6,
+    "phase": 0.3
+   }
+  },
+  {
+   "type": "prop",
+   "name": "tree",
+   "x": 720,
+   "y": 900,
+   "size": 230,
+   "motion": {
+    "type": "sway",
+    "amp": 6,
+    "phase": 0.44999999999999996
+   }
+  },
+  {
+   "type": "prop",
+   "name": "tree",
+   "x": 900,
+   "y": 900,
+   "size": 230,
+   "motion": {
+    "type": "sway",
+    "amp": 6,
+    "phase": 0.6
+   }
+  }
+ ],
+ "_meta": {
+  "title": "a stat card",
+  "alt": "A green square: 12,480 types itself, trees planted by readers slides in, five trees sway out of step along the bottom"
+ }
+}

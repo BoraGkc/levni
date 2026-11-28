@@ -1,0 +1,128 @@
+{
+ "seed": 24,
+ "background": "#14122B",
+ "stagger": 0.13,
+ "elements": [
+  {
+   "type": "disc",
+   "x": 950,
+   "y": 180,
+   "r": 90,
+   "color": "paper"
+  },
+  {
+   "type": "prop",
+   "name": "moon",
+   "x": 950,
+   "y": 180,
+   "size": 150,
+   "motion": {
+    "type": "float",
+    "amp": 6
+   }
+  },
+  {
+   "type": "prop",
+   "name": "star",
+   "x": 150,
+   "y": 120,
+   "size": 90,
+   "motion": {
+    "type": "blink",
+    "amp": 0.8,
+    "turns": 2
+   }
+  },
+  {
+   "type": "prop",
+   "name": "star",
+   "x": 420,
+   "y": 90,
+   "size": 66,
+   "motion": {
+    "type": "blink",
+    "amp": 0.8,
+    "turns": 2
+   }
+  },
+  {
+   "type": "prop",
+   "name": "star",
+   "x": 640,
+   "y": 210,
+   "size": 80,
+   "motion": {
+    "type": "blink",
+    "amp": 0.8,
+    "turns": 2
+   }
+  },
+  {
+   "type": "prop",
+   "name": "star",
+   "x": 300,
+   "y": 300,
+   "size": 60,
+   "motion": {
+    "type": "blink",
+    "amp": 0.8,
+    "turns": 2
+   }
+  },
+  {
+   "type": "prop",
+   "name": "star",
+   "x": 780,
+   "y": 330,
+   "size": 56,
+   "motion": {
+    "type": "blink",
+    "amp": 0.8,
+    "turns": 2
+   }
+  },
+  {
+   "type": "prop",
+   "name": "star",
+   "x": 1120,
+   "y": 380,
+   "size": 70,
+   "motion": {
+    "type": "blink",
+    "amp": 0.8,
+    "turns": 2
+   }
+  },
+  {
+   "type": "prop",
+   "name": "star",
+   "x": 520,
+   "y": 420,
+   "size": 52,
+   "motion": {
+    "type": "blink",
+    "amp": 0.8,
+    "turns": 2
+   }
+  },
+  {
+   "type": "hills",
+   "base": 673,
+   "height": 180,
+   "color": "blue"
+  },
+  {
+   "type": "type",
+   "text": "Good night.",
+   "x": 80,
+   "y": 560,
+   "size": 56,
+   "font": "black",
+   "color": "paper"
+  }
+ ],
+ "_meta": {
+  "title": "a night sky",
+  "alt": "A night scene: stars blink out of step, a moon floats, blue hills below and the words Good night"
+ }
+}

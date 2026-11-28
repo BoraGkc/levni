@@ -1,0 +1,87 @@
+{
+ "seed": 23,
+ "background": "paper",
+ "camera": {
+  "zoom": 1.1,
+  "x": [
+   0,
+   30
+  ]
+ },
+ "elements": [
+  {
+   "type": "panel",
+   "x": 520,
+   "y": 60,
+   "w": 620,
+   "h": 553,
+   "color": "blue"
+  },
+  {
+   "type": "sunburst",
+   "x": 830,
+   "y": 336,
+   "size": 520,
+   "color": "tone"
+  },
+  {
+   "type": "prop",
+   "name": "lightbulb",
+   "x": 830,
+   "y": 330,
+   "size": 340,
+   "shadow": true,
+   "motion": {
+    "type": "float",
+    "amp": 12
+   }
+  },
+  {
+   "type": "prop",
+   "name": "star",
+   "x": 640,
+   "y": 160,
+   "size": 90,
+   "motion": {
+    "type": "spin"
+   }
+  },
+  {
+   "type": "prop",
+   "name": "star",
+   "x": 1040,
+   "y": 520,
+   "size": 70,
+   "motion": {
+    "type": "spin",
+    "reverse": true
+   }
+  },
+  {
+   "type": "type",
+   "text": "Ideas that\nlast",
+   "x": 76,
+   "y": 240,
+   "w": 400,
+   "h": 230,
+   "fit": "box",
+   "font": "black",
+   "color": "ink"
+  },
+  {
+   "type": "type",
+   "text": "ESSAY · 6 MIN",
+   "x": 80,
+   "y": 540,
+   "size": 20,
+   "font": "mono",
+   "weight": 700,
+   "tracking": 0.06,
+   "color": "blue"
+  }
+ ],
+ "_meta": {
+  "title": "a blog cover that moves",
+  "alt": "A blog cover: a lightbulb floats on a blue panel under turning rays, two stars spin, the view drifts and pushes in, Ideas that last"
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "format": "square",
+ "seed": 13,
+ "background": "coral",
+ "elements": [
+  {
+   "type": "confetti",
+   "kind": "stars",
+   "x": 0,
+   "y": 0,
+   "w": 1080,
+   "h": 1080,
+   "spacing": 120,
+   "colors": [
+    "paper",
+    "mustard"
+   ]
+  },
+  {
+   "type": "seal",
+   "x": 540,
+   "y": 520,
+   "size": 640,
+   "edge": "scallop",
+   "fill": "mustard",
+   "top": "this week only",
+   "bottom": "while it lasts",
+   "word": "-40%",
+   "motion": [
+    {
+     "type": "pulse",
+     "amp": 0.09,
+     "turns": 2
+    },
+    {
+     "type": "sway",
+     "amp": 4
+    }
+   ]
+  },
+  {
+   "type": "type",
+   "text": "Winter sale",
+   "x": 540,
+   "y": 960,
+   "size": 64,
+   "font": "black",
+   "align": "center",
+   "color": "paper"
+  }
+ ],
+ "_meta": {
+  "title": "a sale sticker",
+  "alt": "A coral square: a mustard scalloped seal reading minus 40 percent, this week only, pulses and rocks while stars fall behind it"
+ }
+}

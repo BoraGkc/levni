@@ -1,0 +1,11 @@
+{
+  "format": "square",
+  "finish": "soft",
+  "seed": 29,
+  "background": "#FFE3DE",
+  "elements": [
+    {"type":"meshgrad","x":540,"y":520,"r":360,"colors":["#FFB5A3","#FFD9A0","#FFE3DE"],"grain":0.08},
+    {"type":"extrude3d","name":"trophy","x":540,"y":500,"size":520,"depth":0.22,"spin":1},
+    {"type":"type","text":"Winner","x":540,"y":960,"size":70,"font":"black","align":"center","color":"ink"}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "youtube",
+  "seed": 19,
+  "background": "coral",
+  "elements": [
+    {"type":"waves","x":0,"y":520,"w":1280,"h":200,"gap":26,"color":"paper","motion":{"type":"drift","amp":30}},
+    {"type":"disc","x":320,"y":330,"r":210,"color":"paper"},
+    {"type":"prop","name":"headphones","x":320,"y":320,"size":300,"motion":{"type":"pulse","amp":0.06,"turns":4}},
+    {"type":"type","text":"THE PODCAST · EP 4","x":640,"y":190,"size":20,"font":"mono","weight":700,"tracking":0.06,"color":"paper"},
+    {"type":"type","text":"Taste is\na skill","x":636,"y":260,"w":560,"h":230,"fit":"box","font":"black","color":"ink"}
+  ]
+}

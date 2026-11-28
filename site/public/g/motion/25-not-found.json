@@ -1,0 +1,11 @@
+{
+  "seed": 25,
+  "background": "mustard",
+  "elements": [
+    {"type":"type","text":"404","x":70,"y":150,"w":520,"h":240,"fit":"box","font":"black","color":"ink"},
+    {"type":"type","text":"This page wandered off.","x":76,"y":440,"size":36,"color":"ink"},
+    {"type":"type","text":"← BACK HOME","x":80,"y":540,"size":20,"font":"mono","weight":700,"tracking":0.06,"color":"blue"},
+    {"type":"disc","x":870,"y":336,"r":220,"color":"paper"},
+    {"type":"prop","name":"compass","x":870,"y":330,"size":300,"shadow":true,"motion":{"type":"wiggle","amp":12,"turns":3}}
+  ]
+}

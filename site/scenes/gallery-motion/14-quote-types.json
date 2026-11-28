@@ -1,0 +1,69 @@
+{
+ "seed": 14,
+ "background": "#F6EFE3",
+ "elements": [
+  {
+   "type": "block",
+   "x": 80,
+   "y": 120,
+   "w": 70,
+   "h": 10,
+   "color": "coral"
+  },
+  {
+   "type": "type",
+   "text": "“Make the thing\nyou wish existed.”",
+   "x": 76,
+   "y": 210,
+   "w": 780,
+   "h": 250,
+   "fit": "box",
+   "font": "serif",
+   "color": "ink",
+   "motion": {
+    "type": "typewriter",
+    "delay": 0.06,
+    "dur": 0.4,
+    "cursor": "_"
+   }
+  },
+  {
+   "type": "type",
+   "text": "— A NOTE ON THE STUDIO WALL",
+   "x": 80,
+   "y": 560,
+   "size": 20,
+   "font": "mono",
+   "weight": 700,
+   "tracking": 0.06,
+   "color": "blue",
+   "motion": {
+    "type": "fade",
+    "delay": 0.55,
+    "dur": 0.1
+   }
+  },
+  {
+   "type": "disc",
+   "x": 1010,
+   "y": 330,
+   "r": 140,
+   "color": "blue"
+  },
+  {
+   "type": "prop",
+   "name": "pencil",
+   "x": 1010,
+   "y": 330,
+   "size": 200,
+   "motion": {
+    "type": "wiggle",
+    "amp": 6
+   }
+  }
+ ],
+ "_meta": {
+  "title": "a quote that types itself",
+  "alt": "A cream quote card: Make the thing you wish existed types itself in serif, a pencil wiggles on a blue disc"
+ }
+}

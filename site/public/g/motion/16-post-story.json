@@ -1,0 +1,12 @@
+{
+  "format": "story",
+  "seed": 16,
+  "finish": "soft",
+  "background": "#14122B",
+  "elements": [
+    {"type":"meshgrad","x":0,"y":0,"w":1080,"h":1920,"base":"#1B1745","drift":0.18,"colors":["#FF7A59","#7A5CFF","#38D6E8","#FF4FA3"],"grain":0.08},
+    {"type":"type","text":"NEW ON THE BLOG","x":90,"y":260,"size":34,"font":"mono","weight":700,"tracking":0.06,"color":"paper"},
+    {"type":"type","text":"How we\nship weekly","x":84,"y":700,"w":900,"h":480,"fit":"box","font":"black","color":"paper","motion":{"type":"typewriter","delay":0.08,"dur":0.3,"cursor":"_"}},
+    {"type":"type","text":"Swipe up to read →","x":90,"y":1640,"size":44,"color":"paper","motion":{"type":"float","amp":10,"turns":2}}
+  ]
+}
