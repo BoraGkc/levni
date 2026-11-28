@@ -51,6 +51,9 @@ const link = (href: string) => {
   if (href === 'storyboard.md') return '/docs/storyboards/';
   if (href === 'print.md') return '/docs/print/';
   if (href === 'shots.md') return '/docs/shots/';
+  if (href === 'reel.md') return '/docs/reel/';
+  if (href === 'stamp.md') return '/docs/stamp/';
+  if (href === 'readme-action.md') return '/docs/readme-action/';
   return href;
 };
 

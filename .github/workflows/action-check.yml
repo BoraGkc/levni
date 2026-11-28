@@ -1,0 +1,20 @@
+# Runs the README banner Action on this repo without committing, to check it works end to end.
+name: Banner Action check
+on:
+  workflow_dispatch:
+  pull_request:
+    paths: ['action/**', 'src/banner.mjs', 'bin/levni.mjs']
+permissions:
+  contents: read
+jobs:
+  banner:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: ./action
+        with:
+          path: out/levni-banner.gif
+          commit: 'false'
+      - run: test -s out/levni-banner.gif && ls -la out/

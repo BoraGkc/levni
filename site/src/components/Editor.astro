@@ -62,6 +62,8 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
       <button type="button" class="lv-menu" data-out="json"><b>Scene JSON</b><span>Render it again with npx @levni/levni</span></button>
       <button type="button" class="lv-menu" data-out="all-png" data-multi hidden><b>All pages, PNG</b><span>One image per page</span></button>
       <button type="button" class="lv-menu" data-out="all-json" data-multi hidden><b>All pages, JSON</b><span>Every page as a scene</span></button>
+      <label class="lv-credit">Your name in the remix chain <input id="credit-name" type="text" maxlength="60" autocomplete="name" placeholder="optional" /></label>
+      <p class="lv-credit-note">PNGs carry their scene: drop one back on the canvas to open it again.</p>
       <a class="lv-menu lv-menu-cta" href="/mcp/"><b>Make the next one from a prompt</b><span>Levni in Claude or Codex, on the plan you already have</span></a>
     </div>
     <div class="lv-pop lv-pop-sm" id="pop-color" hidden></div>
@@ -173,7 +175,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
 
 <script type="application/json" id="lv-gallery" set:html={JSON.stringify(tplGroups)}></script>
 <script>
-  import { compose, critique, registerProps, registerFont, registerFile, fontsFor, toBlob, COLORS, STYLES } from '../../../src/browser.mjs';
+  import { compose, critique, registerProps, registerFont, registerFile, fontsFor, toBlob, COLORS, STYLES, stampPng, readStamp, remix } from '../../../src/browser.mjs';
   import CATS from '../data/categories.json';
   import { DRAW_STYLES, drawingName, styleOf, likeDrawing, contrast, luminance } from '../lib/draw-styles';
   import { SPEC, SHAPES, SHAPE_CATS, type Field } from '../lib/element-spec';
@@ -730,6 +732,23 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     say(`Added ${layerName(cur())}. Drag it into place.`);
   }
   const dropEl = $('drop');
+  // a file dropped on the canvas: a Levni PNG opens with its scene and remix chain, a .json opens as a scene
+  stage.addEventListener('dragover', (ev) => { if (ev.dataTransfer?.types.includes('Files')) { ev.preventDefault(); ev.dataTransfer.dropEffect = 'copy'; } });
+  stage.addEventListener('drop', async (ev) => {
+    const file = ev.dataTransfer?.files?.[0];
+    if (!file) return;
+    ev.preventDefault();
+    try {
+      const bytes = new Uint8Array(await file.arrayBuffer());
+      const st = /png$/i.test(file.type) || /\.png$/i.test(file.name) ? readStamp(bytes) : null;
+      const doc = st ? remix(st.scene, { from: file.name }) : /json/i.test(file.type) || /\.json$/i.test(file.name) ? JSON.parse(new TextDecoder().decode(bytes)) : null;
+      if (!doc) { say('That file has no Levni scene inside. PNGs from Levni 0.5 and newer do.'); return; }
+      past.push(snap()); future.length = 0; histUI();
+      loadDoc(doc); cv = { w: sizeOf(scene)[0], h: sizeOf(scene)[1] }; layoutStage(); refresh();
+      const chain = (scene.credits || []).filter((c: any) => c.by).map((c: any) => c.by);
+      say(st ? `Opened ${file.name}${chain.length ? `: remixed by ${chain.join(' → ')}` : ''}. It is yours to change.` : `Opened ${file.name}.`);
+    } catch { say('Could not open that file.'); }
+  });
   stage.addEventListener('dragover', (ev) => { if (ev.dataTransfer?.types.includes('application/x-levni')) { ev.preventDefault(); ev.dataTransfer.dropEffect = 'copy'; dropEl.hidden = false; } });
   stage.addEventListener('dragleave', (ev) => { if (!stage.contains(ev.relatedTarget as Node)) dropEl.hidden = true; });
   stage.addEventListener('drop', (ev) => {
@@ -1712,11 +1731,17 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   const unb64u = (s: string) => Uint8Array.from(atob(s.replace(/-/g, '+').replace(/_/g, '/')), (c) => c.charCodeAt(0));
   const pack = async (t: string) => b64u(new Uint8Array(await new Response(new Blob([t]).stream().pipeThrough(new CompressionStream('deflate-raw'))).arrayBuffer()));
   const unpack = async (s: string) => new Response(new Blob([unb64u(s)]).stream().pipeThrough(new DecompressionStream('deflate-raw'))).text();
+  const creditEl = $<HTMLInputElement>('credit-name');
+  try { creditEl.value = localStorage.getItem('levni-name') || ''; } catch {}
+  creditEl.addEventListener('change', () => { try { localStorage.setItem('levni-name', creditEl.value.trim()); } catch {} });
   $('pop-export').addEventListener('click', async (ev) => {
     const out = (ev.target as HTMLElement).closest('button')?.dataset.out;
     if (!out) return;
     closePops();
-    if (out === 'png' || out === 'png2') { say('Preparing the PNG…'); save(await toBlob(lastSvg, { scale: out === 'png2' ? 2 : 1 }), 'levni.png'); say('PNG downloaded. Next time, ask your agent: Levni runs free in Claude and Codex (levni.dev/mcp).'); }
+    // every PNG carries its scene and remix chain (stamp.mjs); a name, when given, is added to the chain
+    const signed = (sc: any) => { const by = creditEl.value.trim(); return by && !(sc.credits || []).some((c: any) => c.by === by) ? remix(sc, { by }) : sc; };
+    const stamped = async (blob: Blob, sc: any) => new Blob([stampPng(new Uint8Array(await blob.arrayBuffer()), signed(sc))], { type: 'image/png' });
+    if (out === 'png' || out === 'png2') { say('Preparing the PNG…'); save(await stamped(await toBlob(lastSvg, { scale: out === 'png2' ? 2 : 1 }), visible(scene)), 'levni.png'); say('PNG downloaded. Next time, ask your agent: Levni runs free in Claude and Codex (levni.dev/mcp).'); }
     if (out === 'svg') save(new Blob([lastSvg], { type: 'image/svg+xml' }), 'levni.svg');
     if (out === 'json') save(new Blob([JSON.stringify(visible(scene), null, 2)], { type: 'application/json' }), 'scene.json');
     if (out === 'all-png') {
@@ -1725,7 +1750,7 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
         say(`Preparing page ${i + 1} of ${pages.length}…`);
         const vis = visible(pages[i]);
         await ensureAssets(vis);
-        save(await toBlob((await compose(vis)).svg, { scale: 1 }), `levni-${String(i + 1).padStart(2, '0')}.png`);
+        save(await stamped(await toBlob((await compose(vis)).svg, { scale: 1 }), vis), `levni-${String(i + 1).padStart(2, '0')}.png`);
         await new Promise((r) => setTimeout(r, 350)); // browsers drop downloads that come too close together
       }
       say(`${pages.length} PNGs downloaded.`);
@@ -1819,7 +1844,9 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
     const tpl = new URLSearchParams(location.search).get('tpl');
     const tplLoad = tpl && exampleFiles[`../../../examples/${tpl}.json`];
     const srcParam = new URLSearchParams(location.search).get('src'); // a gallery scene, e.g. /g/stickers/01-seal-sheet.json
+    const remixParam = new URLSearchParams(location.search).get('remix'); // a gallery scene to remix: its chain gets a link back to it
     if (EMBED && srcParam && /^\/g\/[a-z0-9-]+\/[a-z0-9-]+\.json$/.test(srcParam)) { try { loadDoc(await (await fetch(srcParam)).json()); } catch {} }
+    else if (remixParam && /^\/g\/[a-z0-9-]+\/[a-z0-9-]+\.json$/.test(remixParam)) { try { loadDoc(remix(await (await fetch(remixParam)).json(), { from: `levni.dev${remixParam}` })); say('Remixing a gallery piece. Download a PNG to add your name to its chain.'); } catch {} }
     else if (EMBED && tplLoad) { try { loadDoc(structuredClone(await tplLoad())); } catch {} }
     else if (h) { try { loadDoc(JSON.parse(await unpack(h))); } catch { say('That share link is broken; here is the starter scene.'); } }
     else if (!EMBED) { try { const saved = localStorage.getItem('levni-editor'); if (saved) loadDoc(JSON.parse(saved)); } catch {} }
@@ -1917,6 +1944,9 @@ const rail: [string, string][] = [['templates', 'Templates'], ['drawings', 'Draw
   .lv-cb-l { font-size: 13px; }
   .lv-ctx .lv-cb-color .lv-cb-l { display: none; }
   .lv-ctx:has(.lv-ctx-t) .lv-cb-color .lv-cb-l { display: inline; }
+  .lv-credit { display: grid; gap: 4px; padding: 8px 10px 2px; font: 600 11px/1.3 var(--mono, monospace); letter-spacing: .04em; text-transform: uppercase; }
+  .lv-credit input { font: 400 14px/1.3 inherit; text-transform: none; letter-spacing: 0; padding: 7px 8px; border: 1px solid var(--rule, #ccc); background: #fff; }
+  .lv-credit-note { margin: 0; padding: 2px 10px 8px; font-size: 12px; color: var(--ink-soft, #555); }
   .lv-menu { display: grid; gap: 2px; width: 100%; text-align: left; padding: 9px 10px; border: 0; border-radius: 0; background: transparent; cursor: pointer; }
   .lv-menu:hover { background: var(--soft); }
   .lv-menu b { font-size: 14px; }

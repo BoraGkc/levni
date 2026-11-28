@@ -12,6 +12,8 @@ Install for Claude Code: `claude mcp add levni -- npx -y @levni/levni mcp`. npm:
 - [Elements](https://levni.dev/docs/elements/): every element type a scene can use
 - [CLI](https://levni.dev/docs/cli/) and [Node API](https://levni.dev/docs/api/)
 - [Levni Skills](https://github.com/Levni-Dev/levni-skills): agent skills for art direction and motion, with sixteen recipe cards (`npx skills add Levni-Dev/levni-skills`)
+- [Your year in code](https://levni.dev/you/): a moving card from a GitHub profile
+- [Reel](https://levni.dev/docs/reel/), [Stamp and remix](https://levni.dev/docs/stamp/), [README banner Action](https://levni.dev/docs/readme-action/)
 - [Levni Shots](https://levni.dev/shots/): 25 ready-made motion shots that take your title, drawing and inks, every format ([guide](https://levni.dev/docs/shots/))
 - [Print](https://levni.dev/docs/print/): split a scene into riso plates, one grayscale image per ink, ready for a stencil printer
 - [Motion catalogue](https://levni.dev/motion/): every animation preset, camera move, easing and self-moving element as a small loop with its JSON

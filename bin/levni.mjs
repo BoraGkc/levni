@@ -6,6 +6,8 @@
 //   levni brand <brand.json | url> <out-dir>
 //   levni print <scene.json> <out-dir>
 //   levni shot <name> <out> [--title …]   (levni shot --list)
+//   levni reel <reel.json> <out.mp4>
+//   levni open | remix <image.png> …
 //   levni sheet <out.png> [prop ...] [--recolor coral=blue,mustard=tone]
 //   levni board <spec.json> <out.png>
 //   levni list [query]
@@ -21,7 +23,7 @@ import { render, compose, loadProps, findProp, addPropDir, LIBRARY_DIR, validate
 const [cmd, ...rest] = process.argv.slice(2);
 const flag = (name) => rest.includes(`--${name}`);
 const opt = (name) => { const i = rest.indexOf(`--${name}`); return i >= 0 ? rest[i + 1] : undefined; };
-const positional = rest.filter((a, i) => !a.startsWith('--') && !(i > 0 && ['--recolor', '--dir', '--sheet', '--brief', '--model', '--format', '--frames', '--fps', '--boil', '--width', '--strip', '--colours', '--frames-dir', '--sprite', '--columns', '--crf', '--loops', '--tile', '--posters', '--only', '--scale', '--plates', '--halftone', '--shift', '--paper', '--title', '--subtitle', '--kicker', '--mark', '--inks', '--items', '--values', '--cta', '--seed'].includes(rest[i - 1])));
+const positional = rest.filter((a, i) => !a.startsWith('--') && !(i > 0 && ['--recolor', '--dir', '--sheet', '--brief', '--model', '--format', '--frames', '--fps', '--boil', '--width', '--strip', '--colours', '--frames-dir', '--sprite', '--columns', '--crf', '--loops', '--tile', '--posters', '--only', '--scale', '--plates', '--halftone', '--shift', '--paper', '--title', '--subtitle', '--kicker', '--mark', '--inks', '--items', '--values', '--cta', '--seed', '--by', '--from', '--repo', '--repo-json', '--theme'].includes(rest[i - 1])));
 
 const USAGE = `levni: hand-inked illustrations from JSON scenes
 
@@ -40,6 +42,16 @@ const USAGE = `levni: hand-inked illustrations from JSON scenes
   levni shot <name> <out.gif|out.webp|out.mp4|out.png|out.json> [--title ..] [--subtitle ..] [--kicker ..] [--mark rocket]
              [--inks "#1F3A5F,#E4572E"] [--format square|story|youtube|…] [--items "a,b,c"] [--values "3,5,8"]
       A ready-made motion shot with your words, drawing and inks. levni shot --list shows them all. docs/shots.md
+  levni banner <out.gif|out.png|out.webp> [--repo owner/name | --repo-json repo.json] [--theme riso|coral|green|night]
+              [--mark name] [--still]
+      A README banner for a GitHub repo (read from the GitHub API, GITHUB_TOKEN if set): moving unless --still or .png.
+  levni reel <reel.json> <out.mp4|out.gif|out.webp>
+      Shots or scenes one after another with transitions (cut, fade, wipe, slide, push, iris): { format, fps,
+      transition, clips: [{ shot, fields, seconds, transition } | { scene, seconds }] }. docs/reel.md
+  levni open <image.png> [scene.json]
+      Every PNG Levni writes carries its scene. This prints it, or writes it to scene.json, with its remix credits.
+  levni remix <image.png|scene.json> <out.png|out.json> [--by "Your name"] [--from url]
+      Add your name to the remix chain and write the picture (stamped) or the scene. docs/stamp.md
   levni print <scene.json> <out-dir> [--scale 3] [--plates 4] [--halftone 4] [--paper #F4F2EC] [--shift 3]
       Riso plates: one grayscale PNG per ink (black = full ink; lightest ink first, the key line last), proof.png
       (the plates multiplied back on the paper), sheet.png and print.json. Ready for a stencil printer. docs/print.md
@@ -65,7 +77,7 @@ const USAGE = `levni: hand-inked illustrations from JSON scenes
   levni mcp
       Run Levni as an MCP server over stdio (tools: scene_guide, list_props, render_scene,
       critique_scene, render_animation, show_props, render_board, render_poster, render_storyboard,
-      render_brand_kit, render_print, render_shot). Add it to an MCP client as: npx levni mcp
+      render_brand_kit, render_print, render_shot, render_reel). Add it to an MCP client as: npx levni mcp
   levni check [prop ...]
       Measure props without looking at them (for agents that cannot see images): how much of the
       box each variant fills, its centre, colours, and what to fix. All props when none named.
@@ -116,6 +128,43 @@ async function main() {
     console.log(`${out}  ${r.frames} frames, ${r.width} x ${r.height}, ${Math.round(r.bytes / 1024)} KB`);
     if (opt('strip')) { writeFileSync(opt('strip'), await frameStrip(r.stills)); console.log(opt('strip')); }
     console.log(r.notes.length ? r.notes.map((n) => `- ${n}`).join('\n') : '- critic: no layout problems found');
+  } else if (cmd === 'banner') {
+    const [out] = positional;
+    if (!out) throw new Error('usage: levni banner <out.gif|out.png> --repo owner/name');
+    let gh;
+    if (opt('repo-json')) gh = JSON.parse(readFileSync(opt('repo-json'), 'utf8'));
+    else {
+      const repo = opt('repo') || process.env.GITHUB_REPOSITORY;
+      if (!/^[\w.-]+\/[\w.-]+$/.test(repo || '')) throw new Error('banner: pass --repo owner/name (or run inside GitHub Actions)');
+      const res = await fetch(`https://api.github.com/repos/${repo}`, { headers: { accept: 'application/vnd.github+json', 'user-agent': 'levni-banner', ...(process.env.GITHUB_TOKEN ? { authorization: `Bearer ${process.env.GITHUB_TOKEN}` } : {}) } });
+      if (!res.ok) throw new Error(`banner: GitHub answered ${res.status} for ${repo}`);
+      gh = await res.json();
+    }
+    const { repoBanner } = await import('../src/banner.mjs');
+    const still = flag('still') || /\.(png|svg)$/i.test(out);
+    const scene = repoBanner(gh, Object.values(loadProps()), { theme: opt('theme'), mark: opt('mark'), motion: !still });
+    if (still) await render(scene, out);
+    else { const { animate } = await import('../src/animate.mjs'); await animate(scene, out, { frames: 36, fps: 12, width: 800 }); }
+    console.log(`${out}  ${gh.full_name || gh.name}, mark ${scene.elements.find((e) => e.type === 'prop')?.name}`);
+  } else if (cmd === 'reel') {
+    const [file, out] = positional;
+    if (!file || !out) throw new Error('usage: levni reel <reel.json> <out.mp4|out.gif|out.webp>');
+    const { renderReel } = await import('../src/reel.mjs');
+    const r = await renderReel(JSON.parse(readFileSync(file, 'utf8')), out, { onClip: (k, n) => process.stderr.write(`clip ${k}/${n}\r`) });
+    console.log(`${out}  ${r.seconds} s, ${r.frames} frames at ${r.fps} fps, ${r.width} x ${r.height}${r.bytes ? `, ${Math.round(r.bytes / 1024)} KB` : ''}`);
+  } else if (cmd === 'open' || cmd === 'remix') {
+    const { readStamp, remix } = await import('../src/stamp.mjs');
+    const [src, out] = positional;
+    if (!src) throw new Error(`usage: levni ${cmd} <image.png|scene.json> [out]`);
+    const raw = readFileSync(src);
+    const scene = /\.json$/i.test(src) ? JSON.parse(raw.toString('utf8')) : readStamp(raw)?.scene;
+    if (!scene) throw new Error(`${src} carries no Levni scene (only PNGs written by Levni 0.5 or newer do)`);
+    const next = cmd === 'remix' ? remix(scene, { by: opt('by'), from: opt('from') || (/\.json$/i.test(src) ? undefined : src.split('/').pop()) }) : scene;
+    if (!out) { console.log(JSON.stringify(next, null, 2)); return; }
+    if (/\.json$/i.test(out)) writeFileSync(out, JSON.stringify(next, null, 2) + '\n');
+    else await render(next, out);
+    console.log(out);
+    for (const c of next.credits || []) console.log(`- ${c.at || ''} ${c.by || 'someone'}${c.from ? ` from ${c.from}` : ''}`);
   } else if (cmd === 'shot') {
     const { shotScene, SHOTS } = await import('../src/shots.mjs');
     const [name, out] = positional;

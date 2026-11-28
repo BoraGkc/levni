@@ -16,6 +16,8 @@ export { findProp, expandProp, loadProps } from './props.mjs';
 export { FORMATS, resolveCanvas } from './formats.mjs';
 export { STYLES, applyStyle } from './styles.mjs';
 export { FONTS } from './type.mjs';
+export { stampPng, readStamp, remix } from './stamp.mjs';
+export { youStats, youScene, youTerms, YOU_THEMES } from './you.mjs';
 export { bannerScene, pickMark, repoTerms, hashSeed, BANNER_SIZE, BANNER_THEMES, FALLBACK_MARKS } from './banner.mjs';
 
 // Add Folio drawings (the parsed JSON of library/props/<name>.json) so `prop` elements can use them.

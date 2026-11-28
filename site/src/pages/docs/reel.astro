@@ -1,0 +1,23 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { readDoc, render, resetIds } from '../../components/docs/md';
+
+resetIds();
+const { intro, sections } = readDoc('reel.md');
+const fig = '';
+const head = render(intro.replace(/^!\[[^\]]*\]\([^)]*\)\n+/m, 'FIGUREHERE\n\n'));
+head.html = head.html.replace('<p>FIGUREHERE</p>', fig);
+const parts = sections.map((s) => render(s.md, { title: s.title, id: s.id }));
+const toc = parts.flatMap((p) => p.toc);
+---
+<Docs
+  title="Levni reel: shots joined with transitions"
+  description="Join Levni shots or scenes into one MP4, GIF or WebP with cut, fade, wipe, slide, push and iris transitions, from levni reel or the render_reel MCP tool."
+  toc={toc}
+>
+  <p class="eyebrow">Animate and export</p>
+  <h1>Reel</h1>
+  <p class="callout"><strong>New in Levni 0.5.0</strong> <code>levni reel</code> needs 0.5.0 or newer.</p>
+  <Fragment set:html={head.html} />
+  {parts.map((p) => <Fragment set:html={p.html} />)}
+</Docs>

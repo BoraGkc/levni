@@ -63,10 +63,12 @@ const DEFS = [
       P(f.mark || 'sparkle', L.land ? L.W * 0.8 : L.W * 0.82, L.land ? L.H * 0.3 : L.H * 0.16, L.m * 0.2, { motion: [POP(0.12), { type: 'spin' }] })] };
   }],
   ['cta-pop', 'text', 'A headline, then a button that pops in and pulses.', { title: 'Try it free', subtitle: 'No sign-up, no card.', cta: 'Get started →' }, (L, f) => {
-    const bw = L.m * (L.land ? 0.42 : 0.6), bh = L.sub * 2.4, bx = L.tx.x, by = Math.min(L.tx.y + L.tx.h + L.sub * 3.4, L.H * 0.93 - bh);
+    // on square and tall canvases the words sit a little higher, so the button has room under the subtitle
+    const tx = L.land ? L.tx : { ...L.tx, y: L.H * (L.tall ? 0.52 : 0.56), h: L.H * (L.tall ? 0.1 : 0.12) };
+    const bw = L.m * (L.land ? 0.42 : 0.6), bh = L.sub * 2.4, bx = tx.x, by = Math.min(tx.y + tx.h + L.sub * 3.4, L.H * 0.95 - bh);
     return { background: 'coral', elements: [
       D(L.art.x, L.art.y, L.art.s * 0.46, 'mustard'), P(f.mark, L.art.x, L.art.y, L.art.s * 0.72, { shadow: true, motion: { type: 'float', amp: L.m * 0.012 } }),
-      ...words(L, f, 'paper'),
+      ...words(L, f, 'paper', { tx }),
       { type: 'block', x: r1(bx), y: r1(by), w: r1(bw), h: r1(bh), color: 'ink', motion: [POP(0.5, 0.12), { type: 'pulse', amp: 0.03, turns: 3 }] },
       T(f.cta || 'Get started →', bx + bw / 2, by + bh * 0.3, { size: r1(L.sub * 0.95), font: 'mono', weight: 700, align: 'center', color: 'paper', motion: FADE(0.56) })] };
   }],
