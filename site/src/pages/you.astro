@@ -3,6 +3,7 @@
 // visitor's browser and Levni draws the card there; nothing is sent to us or stored.
 import Base from '../layouts/Base.astro';
 import { SITE } from '../site';
+import { YOU_LOOKS } from '../../../src/you.mjs';
 
 const faq = [
   { q: 'What does it read?', a: 'Only public numbers from the GitHub API, in your browser: your name, followers, public repos, their stars, topics and languages. Nothing is sent to us and nothing is stored.' },
@@ -32,15 +33,14 @@ const jsonld = [
     <div class="yo-grid" id="yo-out" hidden>
       <figure class="yo-preview"><img id="yo-img" alt="" width="1080" height="1080" /></figure>
       <div class="yo-side">
-        <p class="yo-h">Colours</p>
+        <p class="yo-h">Style</p>
         <div class="yo-chips" id="yo-themes">
-          <button type="button" data-theme="indigo" aria-pressed="true">Indigo</button>
-          <button type="button" data-theme="ink" aria-pressed="false">Night</button>
-          <button type="button" data-theme="paper" aria-pressed="false">Paper</button>
-          <button type="button" data-theme="coral" aria-pressed="false">Coral</button>
+          {YOU_LOOKS.map((l, i) => <button type="button" data-theme={l.id} aria-pressed={i === 1 ? 'true' : 'false'}>{l.label}</button>)}
         </div>
         <p class="yo-h">Drawing</p>
         <div class="yo-chips" id="yo-marks"></div>
+        <label class="yo-search"><span class="sr">Search drawings</span><input id="yo-q" type="search" autocomplete="off" placeholder="Search 1,600 drawings: cat, guitar, kahve…" /></label>
+        <p class="yo-small"><a href="/library/">Discover the whole library →</a> Every drawing is free to use, CC BY 4.0.</p>
         <div class="yo-actions">
           <button type="button" class="yo-go" id="yo-gif">Animated GIF</button>
           <button type="button" class="yo-ghost" id="yo-png">PNG</button>
@@ -49,6 +49,23 @@ const jsonld = [
         <p class="yo-small">The PNG carries its scene: drop it on the <a href="/editor/">editor</a> to change anything. Make one for a repo with the <a href="/banner/">banner maker</a>.</p>
       </div>
     </div>
+
+    <section class="yo-cta" aria-labelledby="yo-cta-h">
+      <h2 id="yo-cta-h">Make the next one with your agent</h2>
+      <div class="yo-cta-grid">
+        <div class="yo-cta-card">
+          <p class="yo-h">Add Levni to Claude, Codex or Cursor</p>
+          <pre><code id="yo-mcp">claude mcp add levni -- npx -y @levni/levni mcp</code></pre>
+          <button type="button" class="yo-ghost" id="yo-mcp-copy">Copy</button>
+          <p class="yo-small">Then ask: “Make my GitHub card in the night style and a moving banner for my top repo.” <a href="/mcp/">MCP setup →</a></p>
+        </div>
+        <div class="yo-cta-card">
+          <p class="yo-h">Join the Folio crew</p>
+          <p>Draw one object for the open library and your name stays on it. Illustrators, type nerds, riso printers and agent tinkerers welcome.</p>
+          <p class="yo-cta-links"><a class="yo-go" href="/join/">Join the crew</a> <a class="yo-ghost" href="https://github.com/Levni-Dev/levni">Star on GitHub</a></p>
+        </div>
+      </div>
+    </section>
 
     <section class="yo-about">
       <h2>Questions</h2>
@@ -66,7 +83,7 @@ const jsonld = [
   const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
   const status = $('yo-status'), img = $<HTMLImageElement>('yo-img'), out = $('yo-out'), input = $<HTMLInputElement>('yo-user');
   const say = (t: string) => (status.textContent = t);
-  let stats: any = null, mark = 'rocket', theme = 'indigo', candidates: string[] = [], scene: any = null, still = '', token = 0;
+  let stats: any = null, mark = 'rocket', theme = 'clean', candidates: string[] = [], scene: any = null, still = '', token = 0;
   let index: any[] = [];
 
   const fonts = new Set<string>(), props = new Set<string>();
@@ -85,17 +102,35 @@ const jsonld = [
   async function draw() {
     if (!stats) return;
     const my = ++token;
+    img.style.opacity = '0.55'; // crayon looks take a few seconds in the browser: show that it is working
     if (!(await ensureProp(mark))) { mark = 'rocket'; await ensureProp(mark); }
-    scene = youScene(stats, { mark, theme });
+    scene = youScene(stats, { mark, look: theme });
     await ensureFonts(fontsFor(scene));
     const blob = await toBlob((await compose({ ...scene, t: 0.95 })).svg);
     if (my !== token) return;
     if (still) URL.revokeObjectURL(still);
     still = URL.createObjectURL(blob);
     img.src = still;
+    img.style.opacity = '';
     img.alt = `A square card for @${stats.login}: ${stats.stars} stars, ${stats.repos} repos, ${stats.followers} followers, top repos as bars, and a ${mark.replace(/-/g, ' ')} drawing`;
     out.hidden = false;
   }
+  // search the Folio for any drawing; the first hits become the chips, the top hit is drawn at once
+  let qT = 0;
+  $<HTMLInputElement>('yo-q').addEventListener('input', (e) => {
+    clearTimeout(qT);
+    const q = (e.target as HTMLInputElement).value.trim();
+    qT = window.setTimeout(async () => {
+      if (!q) return;
+      const found = pickMark([q], await getIndex(), { limit: 8 });
+      if (!found.length) { say(`No drawing for “${q}”. Try another word, in English or Turkish.`); return; }
+      candidates = found; mark = found[0]; renderMarks(); draw();
+    }, 250);
+  });
+  $('yo-mcp-copy').addEventListener('click', async (e) => {
+    await navigator.clipboard.writeText($('yo-mcp').textContent || '');
+    const b = e.currentTarget as HTMLElement, t = b.textContent; b.textContent = 'Copied'; setTimeout(() => (b.textContent = t), 1400);
+  });
   function renderMarks() {
     $('yo-marks').replaceChildren(...candidates.map((n) => {
       const b = document.createElement('button'); b.type = 'button'; b.textContent = n.replace(/-/g, ' '); b.setAttribute('aria-pressed', String(n === mark));
@@ -117,7 +152,7 @@ const jsonld = [
       mark = candidates[0];
       renderMarks();
       await draw();
-      history.replaceState(null, '', `#u=${encodeURIComponent(login)}`);
+      history.replaceState(null, '', `#u=${encodeURIComponent(login)}&look=${theme}`);
       say(`@${login}: ${stats.repos} repos, ${stats.stars} stars.`);
     } catch { say('Could not reach GitHub. Check the connection and try again.'); }
   }
@@ -126,6 +161,7 @@ const jsonld = [
   $('yo-themes').addEventListener('click', (e) => {
     const b = (e.target as HTMLElement).closest('button'); if (!b) return;
     theme = b.dataset.theme!; $('yo-themes').querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(x === b))); draw();
+    if (stats) history.replaceState(null, '', `#u=${encodeURIComponent(stats.login)}&look=${theme}`);
   });
   const save = (blob: Blob, file: string) => { const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = file; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000); };
   $('yo-png').addEventListener('click', async () => {
@@ -146,10 +182,11 @@ const jsonld = [
   });
   $('yo-link').addEventListener('click', async (e) => {
     if (!stats) return;
-    await navigator.clipboard.writeText(`${location.origin}/you/#u=${stats.login}`);
+    await navigator.clipboard.writeText(`${location.origin}/you/#u=${stats.login}&look=${theme}`);
     const b = e.currentTarget as HTMLElement, t = b.textContent; b.textContent = 'Copied'; setTimeout(() => (b.textContent = t), 1400);
   });
-  const fromHash = new URLSearchParams(location.hash.slice(1)).get('u');
+  const hp = new URLSearchParams(location.hash.slice(1)), fromHash = hp.get('u'), lookHash = hp.get('look');
+  if (lookHash && document.querySelector(`#yo-themes [data-theme="${lookHash}"]`)) { theme = lookHash; $('yo-themes').querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String((x as HTMLElement).dataset.theme === theme))); }
   if (fromHash) { input.value = fromHash; load(fromHash); }
 </script>
 
@@ -175,6 +212,18 @@ const jsonld = [
   .yo-chips button[aria-pressed='true'] { box-shadow: 0 0 0 2px var(--indigo); background: var(--paper); }
   .yo-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
   .yo-small { font-size: 14px; color: var(--ink-soft); }
+  .yo-search input { width: 100%; font: 15px/1.3 var(--mono); padding: 10px 12px; border: 0; box-shadow: 0 0 0 1px var(--rule); background: #fff; color: var(--ink); }
+  .yo-search input:focus-visible { outline: 3px solid var(--lime); outline-offset: 2px; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .yo-cta { margin-top: clamp(40px, 6vw, 64px); }
+  .yo-cta h2 { margin: 0 0 16px; }
+  .yo-cta-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .yo-cta-card { background: #fff; box-shadow: 0 0 0 1px var(--rule); padding: 20px; display: grid; gap: 10px; align-content: start; }
+  .yo-cta-card pre { margin: 0; padding: 12px; background: var(--indigo-deep); color: #fff; font: 13px/1.5 var(--mono); overflow-x: auto; }
+  .yo-cta-card .yo-ghost { justify-self: start; }
+  .yo-cta-links { display: flex; gap: 10px; flex-wrap: wrap; }
+  .yo-cta-links a { text-decoration: none; display: inline-block; }
+  @media (max-width: 720px) { .yo-cta-grid { grid-template-columns: minmax(0, 1fr); } }
   .yo-about { max-width: 760px; margin: clamp(48px, 7vw, 80px) 0; }
   .yo-about dt { font-weight: 700; margin-top: 16px; }
   .yo-about dd { margin: 6px 0 0; color: var(--ink-soft); }

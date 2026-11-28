@@ -28,7 +28,7 @@ export { separate, findPlates } from './separate.mjs';
 export { shotScene, SHOTS } from './shots.mjs';
 export { stampPng, readStamp, remix } from './stamp.mjs';
 export { renderReel, reelFrames, TRANSITIONS } from './reel.mjs';
-export { youStats, youScene, youTerms, YOU_THEMES } from './you.mjs';
+export { youStats, youScene, youTerms, YOU_THEMES, YOU_LOOKS } from './you.mjs';
 export { renderBoard } from './board.mjs';
 export { expandBrand } from './board.mjs';
 
