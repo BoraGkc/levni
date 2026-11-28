@@ -8,8 +8,9 @@ import { DRAW_STYLES } from '../../lib/draw-styles';
 const S = {
   blog: 'lighthouse', readme: 'rocket', notion: 'coffee-cup', empty: 'inbox', slide: 'person-laptop', welcome: 'potted-plant',
 };
-const img = (name: string, alt: string, cls = '') => ({ name, alt, cls });
-const description = `Levni drawings on a blog cover, a README, a Notion page, an empty state, a slide and a welcome card. Switch the style and every one redraws: ink, 3D, ASCII, dots, dot lines, echo. All ${SITE.props.toLocaleString('en')} drawings are free under CC BY 4.0.`;
+// echo stacks its copies upward, so it does not fit the small frames here; the other five styles do
+const LOOKS = DRAW_STYLES.filter((d) => d.id !== 'echo');
+const description = `Levni drawings on a blog cover, a README, a Notion page, an empty state, a slide and a welcome card. Switch the style and every one redraws: ink, 3D, ASCII, dot matrix or dot lines. All ${SITE.props.toLocaleString('en')} drawings are free under CC BY 4.0.`;
 ---
 <Base title="Drawings in use" description={description}>
   <section class="wrap iu-head">
@@ -20,7 +21,7 @@ const description = `Levni drawings on a blog cover, a README, a Notion page, an
 
   <div class="iu-bar wrap" role="toolbar" aria-label="Draw them as">
     <span class="bar-l">Draw them as</span>
-    {DRAW_STYLES.map((d) => <button type="button" data-look={d.id} aria-pressed={d.id === 'ink' ? 'true' : 'false'}>{d.label}</button>)}
+    {LOOKS.map((d) => <button type="button" data-look={d.id} aria-pressed={d.id === 'ink' ? 'true' : 'false'}>{d.label}</button>)}
     <label class="bar-ink"><input type="color" id="iu-ink" value="#14181F" /><span>Ink</span></label>
   </div>
 
