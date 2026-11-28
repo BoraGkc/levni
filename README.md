@@ -31,7 +31,7 @@ No image model, no API key, $0 per image; code MIT, drawings CC BY 4.0. About 0.
 
 ![A README banner drawing itself: the name is typed, a tulip pops in and floats, the description slides in](docs/img/banner-motion.gif)
 
-<sub>New in 0.5: any scene loops as a GIF, WebP or MP4. This banner is 36 frames and about 0.25 MB. Make yours at [levni.dev/banner](https://levni.dev/banner/).</sub>
+<sub>New in 0.5: any scene loops as a GIF, WebP or MP4. Every preset, with its JSON: [levni.dev/motion](https://levni.dev/motion/). This banner is 36 frames and about 0.25 MB. Make yours at [levni.dev/banner](https://levni.dev/banner/).</sub>
 
 | make | one line to start |
 | --- | --- |

@@ -56,6 +56,8 @@ elements above, or set `boil` to make a still drawing shimmer.
 
 ## Motion on any element
 
+Every preset below has its own small loop and the JSON that makes it in the [motion catalogue](https://levni.dev/motion/).
+
 The elements above move on their own. Everything else (a prop, a panel, type, a label, a chart) moves when you give it
 `motion`. A name, an object, or a list:
 

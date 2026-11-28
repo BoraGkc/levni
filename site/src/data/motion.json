@@ -1,0 +1,2296 @@
+[
+ {
+  "id": "float",
+  "group": "loops",
+  "title": "float",
+  "text": "Rises and falls.",
+  "snippet": {
+   "motion": {
+    "type": "float",
+    "amp": 22
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 3,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#F3F1EA",
+   "elements": [
+    {
+     "type": "type",
+     "text": "\"motion\": \"float\"",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 320,
+     "y": 210,
+     "r": 120,
+     "color": "mustard"
+    },
+    {
+     "type": "prop",
+     "name": "rocket",
+     "x": 320,
+     "y": 210,
+     "size": 190,
+     "shadow": true,
+     "motion": {
+      "type": "float",
+      "amp": 22
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "drift",
+  "group": "loops",
+  "title": "drift",
+  "text": "Slides left and right.",
+  "snippet": {
+   "motion": {
+    "type": "drift",
+    "amp": 60
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 4,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#E8E2FF",
+   "elements": [
+    {
+     "type": "type",
+     "text": "\"motion\": \"drift\"",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 320,
+     "y": 210,
+     "r": 120,
+     "color": "blue"
+    },
+    {
+     "type": "prop",
+     "name": "sailboat",
+     "x": 320,
+     "y": 210,
+     "size": 190,
+     "shadow": true,
+     "motion": {
+      "type": "drift",
+      "amp": 60
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "orbit",
+  "group": "loops",
+  "title": "orbit",
+  "text": "Moves on a small circle.",
+  "snippet": {
+   "motion": {
+    "type": "orbit",
+    "amp": 26
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 5,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#FFF1D6",
+   "elements": [
+    {
+     "type": "type",
+     "text": "\"motion\": \"orbit\"",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 320,
+     "y": 210,
+     "r": 120,
+     "color": "coral"
+    },
+    {
+     "type": "prop",
+     "name": "bird",
+     "x": 320,
+     "y": 210,
+     "size": 190,
+     "shadow": true,
+     "motion": {
+      "type": "orbit",
+      "amp": 26
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "sway",
+  "group": "loops",
+  "title": "sway",
+  "text": "Rocks about its base.",
+  "snippet": {
+   "motion": {
+    "type": "sway",
+    "amp": 16
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 6,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#E2F2EA",
+   "elements": [
+    {
+     "type": "type",
+     "text": "\"motion\": \"sway\"",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 320,
+     "y": 210,
+     "r": 120,
+     "color": "green"
+    },
+    {
+     "type": "prop",
+     "name": "tulip",
+     "x": 320,
+     "y": 210,
+     "size": 190,
+     "shadow": true,
+     "motion": {
+      "type": "sway",
+      "amp": 16
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "wiggle",
+  "group": "loops",
+  "title": "wiggle",
+  "text": "Shakes, four times a loop.",
+  "snippet": {
+   "motion": {
+    "type": "wiggle",
+    "amp": 15
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 7,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#FFE3DE",
+   "elements": [
+    {
+     "type": "type",
+     "text": "\"motion\": \"wiggle\"",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 320,
+     "y": 210,
+     "r": 120,
+     "color": "mustard"
+    },
+    {
+     "type": "prop",
+     "name": "bell",
+     "x": 320,
+     "y": 210,
+     "size": 190,
+     "shadow": true,
+     "motion": {
+      "type": "wiggle",
+      "amp": 15
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "pulse",
+  "group": "loops",
+  "title": "pulse",
+  "text": "Breathes in size.",
+  "snippet": {
+   "motion": {
+    "type": "pulse",
+    "amp": 0.22
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 8,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#DDEBFF",
+   "elements": [
+    {
+     "type": "type",
+     "text": "\"motion\": \"pulse\"",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 320,
+     "y": 210,
+     "r": 120,
+     "color": "coral"
+    },
+    {
+     "type": "prop",
+     "name": "heart",
+     "x": 320,
+     "y": 210,
+     "size": 190,
+     "shadow": true,
+     "motion": {
+      "type": "pulse",
+      "amp": 0.22
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "spin",
+  "group": "loops",
+  "title": "spin",
+  "text": "Turns once a loop.",
+  "snippet": {
+   "motion": {
+    "type": "spin"
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 9,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#F3F1EA",
+   "elements": [
+    {
+     "type": "type",
+     "text": "\"motion\": \"spin\"",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 320,
+     "y": 210,
+     "r": 120,
+     "color": "blue"
+    },
+    {
+     "type": "prop",
+     "name": "compass",
+     "x": 320,
+     "y": 210,
+     "size": 190,
+     "shadow": true,
+     "motion": {
+      "type": "spin"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "blink",
+  "group": "loops",
+  "title": "blink",
+  "text": "Fades and returns.",
+  "snippet": {
+   "motion": {
+    "type": "blink",
+    "amp": 0.85,
+    "turns": 2
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 10,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#E8E2FF",
+   "elements": [
+    {
+     "type": "type",
+     "text": "\"motion\": \"blink\"",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 320,
+     "y": 210,
+     "r": 120,
+     "color": "mustard"
+    },
+    {
+     "type": "prop",
+     "name": "lightbulb",
+     "x": 320,
+     "y": 210,
+     "size": 190,
+     "shadow": true,
+     "motion": {
+      "type": "blink",
+      "amp": 0.85,
+      "turns": 2
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "pop",
+  "group": "entrances",
+  "title": "pop",
+  "text": "Grows from nothing with a small overshoot.",
+  "snippet": {
+   "motion": {
+    "type": "pop",
+    "delay": 0.1,
+    "dur": 0.3
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 5,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#FFF1D6",
+   "elements": [
+    {
+     "type": "type",
+     "text": "\"type\": \"pop\"",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 320,
+     "y": 210,
+     "r": 120,
+     "color": "coral"
+    },
+    {
+     "type": "prop",
+     "name": "gift",
+     "x": 320,
+     "y": 210,
+     "size": 190,
+     "shadow": true,
+     "motion": {
+      "type": "pop",
+      "delay": 0.1,
+      "dur": 0.3,
+      "out": true,
+      "outDelay": 0.08
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "fade",
+  "group": "entrances",
+  "title": "fade",
+  "text": "Fades in.",
+  "snippet": {
+   "motion": {
+    "type": "fade",
+    "delay": 0.1,
+    "dur": 0.35
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 6,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#E2F2EA",
+   "elements": [
+    {
+     "type": "type",
+     "text": "\"type\": \"fade\"",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 320,
+     "y": 210,
+     "r": 120,
+     "color": "blue"
+    },
+    {
+     "type": "prop",
+     "name": "moon",
+     "x": 320,
+     "y": 210,
+     "size": 190,
+     "shadow": true,
+     "motion": {
+      "type": "fade",
+      "delay": 0.1,
+      "dur": 0.35,
+      "out": true,
+      "outDelay": 0.08
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "slide-up",
+  "group": "entrances",
+  "title": "slide up",
+  "text": "Slides in from below.",
+  "snippet": {
+   "motion": {
+    "type": "slide",
+    "from": "down",
+    "distance": 90,
+    "delay": 0.1,
+    "dur": 0.3
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 7,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#FFE3DE",
+   "elements": [
+    {
+     "type": "type",
+     "text": "\"type\": \"slide\"",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 320,
+     "y": 210,
+     "r": 120,
+     "color": "mustard"
+    },
+    {
+     "type": "prop",
+     "name": "trophy",
+     "x": 320,
+     "y": 210,
+     "size": 190,
+     "shadow": true,
+     "motion": {
+      "type": "slide",
+      "from": "down",
+      "distance": 90,
+      "delay": 0.1,
+      "dur": 0.3,
+      "out": true,
+      "outDelay": 0.08
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "slide-left",
+  "group": "entrances",
+  "title": "slide left",
+  "text": "Slides in from the left.",
+  "snippet": {
+   "motion": {
+    "type": "slide",
+    "from": "left",
+    "distance": 160,
+    "delay": 0.1,
+    "dur": 0.3
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 8,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#DDEBFF",
+   "elements": [
+    {
+     "type": "type",
+     "text": "\"type\": \"slide\"",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 320,
+     "y": 210,
+     "r": 120,
+     "color": "green"
+    },
+    {
+     "type": "prop",
+     "name": "bicycle",
+     "x": 320,
+     "y": 210,
+     "size": 190,
+     "shadow": true,
+     "motion": {
+      "type": "slide",
+      "from": "left",
+      "distance": 160,
+      "delay": 0.1,
+      "dur": 0.3,
+      "out": true,
+      "outDelay": 0.08
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "wipe",
+  "group": "entrances",
+  "title": "wipe",
+  "text": "Is uncovered from one side.",
+  "snippet": {
+   "motion": {
+    "type": "wipe",
+    "from": "left",
+    "delay": 0.1,
+    "dur": 0.4
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 9,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#F3F1EA",
+   "elements": [
+    {
+     "type": "type",
+     "text": "\"type\": \"wipe\"",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 320,
+     "y": 210,
+     "r": 120,
+     "color": "blue"
+    },
+    {
+     "type": "prop",
+     "name": "lighthouse",
+     "x": 320,
+     "y": 210,
+     "size": 190,
+     "shadow": true,
+     "motion": {
+      "type": "wipe",
+      "from": "left",
+      "delay": 0.1,
+      "dur": 0.4,
+      "out": true,
+      "outDelay": 0.08
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "typewriter",
+  "group": "entrances",
+  "title": "typewriter",
+  "text": "Text is typed, with a caret.",
+  "snippet": {
+   "motion": {
+    "type": "typewriter",
+    "delay": 0.08,
+    "dur": 0.45,
+    "cursor": "_"
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 8,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#DDEBFF",
+   "elements": [
+    {
+     "type": "type",
+     "text": "\"type\": \"typewriter\"",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "Hello, world.",
+     "x": 40,
+     "y": 150,
+     "w": 560,
+     "h": 120,
+     "fit": "box",
+     "font": "black",
+     "color": "ink",
+     "motion": {
+      "type": "typewriter",
+      "delay": 0.08,
+      "dur": 0.45,
+      "cursor": "_"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "pop-float",
+  "group": "combos",
+  "title": "pop + float",
+  "text": "An entrance, then a loop: arrives, then keeps moving.",
+  "snippet": {
+   "motion": [
+    "pop",
+    {
+     "type": "float",
+     "amp": 14
+    }
+   ]
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 3,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#F3F1EA",
+   "elements": [
+    {
+     "type": "type",
+     "text": "[\"pop\", \"float\"]",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 320,
+     "y": 210,
+     "r": 120,
+     "color": "blue"
+    },
+    {
+     "type": "prop",
+     "name": "rocket",
+     "x": 320,
+     "y": 210,
+     "size": 190,
+     "shadow": true,
+     "motion": [
+      {
+       "type": "pop",
+       "delay": 0.05,
+       "dur": 0.25
+      },
+      {
+       "type": "float",
+       "amp": 14
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": "headline",
+  "group": "combos",
+  "title": "headline",
+  "text": "The title types itself, the line under it slides in.",
+  "snippet": {
+   "motion": {
+    "type": "typewriter"
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 4,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#E8E2FF",
+   "elements": [
+    {
+     "type": "type",
+     "text": "typewriter + slide",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "Launch day",
+     "x": 40,
+     "y": 130,
+     "w": 560,
+     "h": 110,
+     "fit": "box",
+     "font": "black",
+     "color": "ink",
+     "motion": {
+      "type": "typewriter",
+      "delay": 0.05,
+      "dur": 0.35,
+      "cursor": "_"
+     }
+    },
+    {
+     "type": "type",
+     "text": "Version 2 is out. Read what changed.",
+     "x": 44,
+     "y": 300,
+     "size": 24,
+     "color": "ink",
+     "motion": {
+      "type": "slide",
+      "from": "down",
+      "distance": 30,
+      "delay": 0.5,
+      "dur": 0.18
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "stagger-in",
+  "group": "combos",
+  "title": "stagger in",
+  "text": "Each element arrives a little after the one before.",
+  "snippet": {
+   "stagger": 0.08,
+   "motion": "pop"
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 5,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#FFF1D6",
+   "elements": [
+    {
+     "type": "type",
+     "text": "\"stagger\": 0.08",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "prop",
+     "name": "coffee-cup",
+     "x": 80,
+     "y": 210,
+     "size": 100,
+     "shadow": true,
+     "motion": {
+      "type": "pop",
+      "delay": 0.05,
+      "dur": 0.18,
+      "out": true,
+      "outDelay": 0.06
+     }
+    },
+    {
+     "type": "prop",
+     "name": "camera",
+     "x": 200,
+     "y": 210,
+     "size": 100,
+     "shadow": true,
+     "motion": {
+      "type": "pop",
+      "delay": 0.05,
+      "dur": 0.18,
+      "out": true,
+      "outDelay": 0.06
+     }
+    },
+    {
+     "type": "prop",
+     "name": "headphones",
+     "x": 320,
+     "y": 210,
+     "size": 100,
+     "shadow": true,
+     "motion": {
+      "type": "pop",
+      "delay": 0.05,
+      "dur": 0.18,
+      "out": true,
+      "outDelay": 0.06
+     }
+    },
+    {
+     "type": "prop",
+     "name": "pizza-slice",
+     "x": 440,
+     "y": 210,
+     "size": 100,
+     "shadow": true,
+     "motion": {
+      "type": "pop",
+      "delay": 0.05,
+      "dur": 0.18,
+      "out": true,
+      "outDelay": 0.06
+     }
+    },
+    {
+     "type": "prop",
+     "name": "umbrella",
+     "x": 560,
+     "y": 210,
+     "size": 100,
+     "shadow": true,
+     "motion": {
+      "type": "pop",
+      "delay": 0.05,
+      "dur": 0.18,
+      "out": true,
+      "outDelay": 0.06
+     }
+    }
+   ],
+   "stagger": 0.08
+  }
+ },
+ {
+  "id": "stagger-wave",
+  "group": "combos",
+  "title": "stagger wave",
+  "text": "The same loop out of step: a wave along a row.",
+  "snippet": {
+   "stagger": 0.1,
+   "motion": {
+    "type": "float"
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 6,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#E2F2EA",
+   "elements": [
+    {
+     "type": "type",
+     "text": "\"stagger\": 0.1 + float",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "prop",
+     "name": "coffee-cup",
+     "x": 80,
+     "y": 210,
+     "size": 100,
+     "shadow": true,
+     "motion": {
+      "type": "float",
+      "amp": 20
+     }
+    },
+    {
+     "type": "prop",
+     "name": "camera",
+     "x": 200,
+     "y": 210,
+     "size": 100,
+     "shadow": true,
+     "motion": {
+      "type": "float",
+      "amp": 20
+     }
+    },
+    {
+     "type": "prop",
+     "name": "headphones",
+     "x": 320,
+     "y": 210,
+     "size": 100,
+     "shadow": true,
+     "motion": {
+      "type": "float",
+      "amp": 20
+     }
+    },
+    {
+     "type": "prop",
+     "name": "pizza-slice",
+     "x": 440,
+     "y": 210,
+     "size": 100,
+     "shadow": true,
+     "motion": {
+      "type": "float",
+      "amp": 20
+     }
+    },
+    {
+     "type": "prop",
+     "name": "umbrella",
+     "x": 560,
+     "y": 210,
+     "size": 100,
+     "shadow": true,
+     "motion": {
+      "type": "float",
+      "amp": 20
+     }
+    }
+   ],
+   "stagger": 0.1
+  }
+ },
+ {
+  "id": "in-and-out",
+  "group": "combos",
+  "title": "in and out",
+  "text": "With \"out\": true an entrance leaves the same way, so the loop restarts cleanly.",
+  "snippet": {
+   "motion": {
+    "type": "slide",
+    "out": true
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 7,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#FFE3DE",
+   "elements": [
+    {
+     "type": "type",
+     "text": "\"out\": true",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 320,
+     "y": 210,
+     "r": 120,
+     "color": "coral"
+    },
+    {
+     "type": "prop",
+     "name": "envelope",
+     "x": 320,
+     "y": 210,
+     "size": 190,
+     "shadow": true,
+     "motion": {
+      "type": "slide",
+      "from": "left",
+      "distance": 200,
+      "delay": 0.05,
+      "dur": 0.22,
+      "out": true,
+      "outDelay": 0.05
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "camera-zoom",
+  "group": "camera",
+  "title": "zoom",
+  "text": "Pushes in and comes back within the loop.",
+  "snippet": {
+   "camera": {
+    "zoom": 1.25
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 3,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#F3F1EA",
+   "elements": [
+    {
+     "type": "panel",
+     "x": -20,
+     "y": 250,
+     "w": 700,
+     "h": 200,
+     "color": "green"
+    },
+    {
+     "type": "cloud",
+     "x": 160,
+     "y": 110,
+     "size": 120
+    },
+    {
+     "type": "cloud",
+     "x": 470,
+     "y": 80,
+     "size": 90
+    },
+    {
+     "type": "prop",
+     "name": "house",
+     "x": 200,
+     "y": 240,
+     "size": 170,
+     "shadow": true
+    },
+    {
+     "type": "prop",
+     "name": "tree",
+     "x": 360,
+     "y": 250,
+     "size": 150,
+     "shadow": true
+    },
+    {
+     "type": "prop",
+     "name": "lighthouse",
+     "x": 500,
+     "y": 220,
+     "size": 190,
+     "shadow": true
+    }
+   ],
+   "camera": {
+    "zoom": 1.25
+   }
+  }
+ },
+ {
+  "id": "camera-pan",
+  "group": "camera",
+  "title": "pan",
+  "text": "Moves sideways and comes back.",
+  "snippet": {
+   "camera": {
+    "x": [
+     -60,
+     60
+    ],
+    "zoom": 1.15
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 4,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#E8E2FF",
+   "elements": [
+    {
+     "type": "panel",
+     "x": -20,
+     "y": 250,
+     "w": 700,
+     "h": 200,
+     "color": "green"
+    },
+    {
+     "type": "cloud",
+     "x": 160,
+     "y": 110,
+     "size": 120
+    },
+    {
+     "type": "cloud",
+     "x": 470,
+     "y": 80,
+     "size": 90
+    },
+    {
+     "type": "prop",
+     "name": "house",
+     "x": 200,
+     "y": 240,
+     "size": 170,
+     "shadow": true
+    },
+    {
+     "type": "prop",
+     "name": "tree",
+     "x": 360,
+     "y": 250,
+     "size": 150,
+     "shadow": true
+    },
+    {
+     "type": "prop",
+     "name": "lighthouse",
+     "x": 500,
+     "y": 220,
+     "size": 190,
+     "shadow": true
+    }
+   ],
+   "camera": {
+    "x": [
+     -60,
+     60
+    ],
+    "zoom": 1.15
+   }
+  }
+ },
+ {
+  "id": "camera-once",
+  "group": "camera",
+  "title": "zoom once",
+  "text": "One way only, for an intro: starts wide, ends close.",
+  "snippet": {
+   "camera": {
+    "zoom": [
+     1,
+     1.35
+    ],
+    "y": [
+     0,
+     -30
+    ],
+    "once": true
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 5,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#FFF1D6",
+   "elements": [
+    {
+     "type": "panel",
+     "x": -20,
+     "y": 250,
+     "w": 700,
+     "h": 200,
+     "color": "green"
+    },
+    {
+     "type": "cloud",
+     "x": 160,
+     "y": 110,
+     "size": 120
+    },
+    {
+     "type": "cloud",
+     "x": 470,
+     "y": 80,
+     "size": 90
+    },
+    {
+     "type": "prop",
+     "name": "house",
+     "x": 200,
+     "y": 240,
+     "size": 170,
+     "shadow": true
+    },
+    {
+     "type": "prop",
+     "name": "tree",
+     "x": 360,
+     "y": 250,
+     "size": 150,
+     "shadow": true
+    },
+    {
+     "type": "prop",
+     "name": "lighthouse",
+     "x": 500,
+     "y": 220,
+     "size": 190,
+     "shadow": true
+    }
+   ],
+   "camera": {
+    "zoom": [
+     1,
+     1.35
+    ],
+    "y": [
+     0,
+     -30
+    ],
+    "once": true
+   }
+  }
+ },
+ {
+  "id": "easing",
+  "group": "easing",
+  "title": "easing",
+  "text": "The same slide, six curves. Pick one with \"ease\".",
+  "snippet": {
+   "motion": {
+    "type": "slide",
+    "ease": "outBack"
+   }
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 3,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#F3F1EA",
+   "elements": [
+    {
+     "type": "type",
+     "text": "\"ease\": …",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "type",
+     "text": "linear",
+     "x": 30,
+     "y": 98,
+     "size": 15,
+     "font": "mono",
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 480,
+     "y": 92,
+     "r": 15,
+     "color": "blue",
+     "motion": {
+      "type": "slide",
+      "from": "left",
+      "distance": 300,
+      "delay": 0.1,
+      "dur": 0.5,
+      "ease": "linear",
+      "out": true,
+      "outDelay": 0.05
+     }
+    },
+    {
+     "type": "type",
+     "text": "outCubic",
+     "x": 30,
+     "y": 148,
+     "size": 15,
+     "font": "mono",
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 480,
+     "y": 142,
+     "r": 15,
+     "color": "coral",
+     "motion": {
+      "type": "slide",
+      "from": "left",
+      "distance": 300,
+      "delay": 0.1,
+      "dur": 0.5,
+      "ease": "outCubic",
+      "out": true,
+      "outDelay": 0.05
+     }
+    },
+    {
+     "type": "type",
+     "text": "inOutCubic",
+     "x": 30,
+     "y": 198,
+     "size": 15,
+     "font": "mono",
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 480,
+     "y": 192,
+     "r": 15,
+     "color": "green",
+     "motion": {
+      "type": "slide",
+      "from": "left",
+      "distance": 300,
+      "delay": 0.1,
+      "dur": 0.5,
+      "ease": "inOutCubic",
+      "out": true,
+      "outDelay": 0.05
+     }
+    },
+    {
+     "type": "type",
+     "text": "outBack",
+     "x": 30,
+     "y": 248,
+     "size": 15,
+     "font": "mono",
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 480,
+     "y": 242,
+     "r": 15,
+     "color": "mustard",
+     "motion": {
+      "type": "slide",
+      "from": "left",
+      "distance": 300,
+      "delay": 0.1,
+      "dur": 0.5,
+      "ease": "outBack",
+      "out": true,
+      "outDelay": 0.05
+     }
+    },
+    {
+     "type": "type",
+     "text": "outElastic",
+     "x": 30,
+     "y": 298,
+     "size": 15,
+     "font": "mono",
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 480,
+     "y": 292,
+     "r": 15,
+     "color": "blue",
+     "motion": {
+      "type": "slide",
+      "from": "left",
+      "distance": 300,
+      "delay": 0.1,
+      "dur": 0.5,
+      "ease": "outElastic",
+      "out": true,
+      "outDelay": 0.05
+     }
+    },
+    {
+     "type": "type",
+     "text": "outBounce",
+     "x": 30,
+     "y": 348,
+     "size": 15,
+     "font": "mono",
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 480,
+     "y": 342,
+     "r": 15,
+     "color": "coral",
+     "motion": {
+      "type": "slide",
+      "from": "left",
+      "distance": 300,
+      "delay": 0.1,
+      "dur": 0.5,
+      "ease": "outBounce",
+      "out": true,
+      "outDelay": 0.05
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "cloud",
+  "group": "movers",
+  "title": "clouds drift",
+  "text": "A cloud with \"drift\" slides and comes back.",
+  "snippet": {
+   "type": "cloud",
+   "x": 320,
+   "y": 200,
+   "size": 230,
+   "drift": 150
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 3,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#F3F1EA",
+   "elements": [
+    {
+     "type": "type",
+     "text": "cloud",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "cloud",
+     "x": 320,
+     "y": 200,
+     "size": 230,
+     "drift": 150
+    }
+   ]
+  }
+ },
+ {
+  "id": "flag",
+  "group": "movers",
+  "title": "flag",
+  "text": "One wave travels along it.",
+  "snippet": {
+   "type": "flag",
+   "x": 230,
+   "y": 110,
+   "w": 220,
+   "h": 130,
+   "canton": "blue"
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 4,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#E8E2FF",
+   "elements": [
+    {
+     "type": "type",
+     "text": "flag",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "flag",
+     "x": 230,
+     "y": 110,
+     "w": 220,
+     "h": 130,
+     "canton": "blue"
+    }
+   ]
+  }
+ },
+ {
+  "id": "confetti",
+  "group": "movers",
+  "title": "confetti",
+  "text": "One full fall per loop.",
+  "snippet": {
+   "type": "confetti",
+   "x": 0,
+   "y": 0,
+   "w": 640,
+   "h": 400,
+   "spacing": 40
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 5,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#FFF1D6",
+   "elements": [
+    {
+     "type": "type",
+     "text": "confetti",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "confetti",
+     "x": 0,
+     "y": 0,
+     "w": 640,
+     "h": 400,
+     "spacing": 40
+    }
+   ]
+  }
+ },
+ {
+  "id": "rain",
+  "group": "movers",
+  "title": "rain",
+  "text": "The same element as rain.",
+  "snippet": {
+   "type": "confetti",
+   "kind": "rain",
+   "x": 0,
+   "y": 0,
+   "w": 640,
+   "h": 400,
+   "spacing": 30,
+   "colors": [
+    "blue"
+   ]
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 6,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#E2F2EA",
+   "elements": [
+    {
+     "type": "type",
+     "text": "rain",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "confetti",
+     "kind": "rain",
+     "x": 0,
+     "y": 0,
+     "w": 640,
+     "h": 400,
+     "spacing": 30,
+     "colors": [
+      "blue"
+     ]
+    }
+   ],
+   "_opt": {
+    "frames": 18
+   }
+  }
+ },
+ {
+  "id": "sunburst",
+  "group": "movers",
+  "title": "sunburst",
+  "text": "The rays turn.",
+  "snippet": {
+   "type": "sunburst",
+   "x": 320,
+   "y": 210,
+   "size": 280,
+   "color": "mustard"
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 7,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#FFE3DE",
+   "elements": [
+    {
+     "type": "type",
+     "text": "sunburst",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "sunburst",
+     "x": 320,
+     "y": 210,
+     "size": 280,
+     "color": "mustard"
+    }
+   ]
+  }
+ },
+ {
+  "id": "rose",
+  "group": "movers",
+  "title": "rose",
+  "text": "Turns one petal a loop.",
+  "snippet": {
+   "type": "rose",
+   "x": 320,
+   "y": 210,
+   "size": 260,
+   "petals": 5
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 8,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#DDEBFF",
+   "elements": [
+    {
+     "type": "type",
+     "text": "rose",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "rose",
+     "x": 320,
+     "y": 210,
+     "size": 260,
+     "petals": 5
+    }
+   ]
+  }
+ },
+ {
+  "id": "flowfield",
+  "group": "movers",
+  "title": "flowfield",
+  "text": "The field shifts in a small circle.",
+  "snippet": {
+   "type": "flowfield",
+   "x": 20,
+   "y": 60,
+   "w": 600,
+   "h": 320,
+   "colors": [
+    "blue",
+    "coral"
+   ]
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 9,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#F3F1EA",
+   "elements": [
+    {
+     "type": "type",
+     "text": "flowfield",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "flowfield",
+     "x": 20,
+     "y": 60,
+     "w": 600,
+     "h": 320,
+     "colors": [
+      "blue",
+      "coral"
+     ]
+    }
+   ]
+  },
+  "kb": 286
+ },
+ {
+  "id": "halftone",
+  "group": "movers",
+  "title": "halftone",
+  "text": "The dots breathe.",
+  "snippet": {
+   "type": "halftone",
+   "x": 20,
+   "y": 60,
+   "w": 600,
+   "h": 320,
+   "color": "coral",
+   "mode": "radial"
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 10,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#E8E2FF",
+   "elements": [
+    {
+     "type": "type",
+     "text": "halftone",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "halftone",
+     "x": 20,
+     "y": 60,
+     "w": 600,
+     "h": 320,
+     "color": "coral",
+     "mode": "radial"
+    }
+   ],
+   "_opt": {
+    "frames": 18
+   }
+  }
+ },
+ {
+  "id": "meshgrad",
+  "group": "movers",
+  "title": "mesh gradient",
+  "text": "Each blob moves on its own circle.",
+  "snippet": {
+   "type": "meshgrad",
+   "x": 0,
+   "y": 0,
+   "w": 640,
+   "h": 400,
+   "drift": 0.2,
+   "colors": [
+    "#FF7A59",
+    "#7A5CFF",
+    "#38D6E8",
+    "#FF4FA3"
+   ],
+   "base": "#1B1745"
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 11,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#1B1745",
+   "elements": [
+    {
+     "type": "type",
+     "text": "meshgrad",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "paper"
+    },
+    {
+     "type": "meshgrad",
+     "x": 0,
+     "y": 0,
+     "w": 640,
+     "h": 400,
+     "drift": 0.2,
+     "colors": [
+      "#FF7A59",
+      "#7A5CFF",
+      "#38D6E8",
+      "#FF4FA3"
+     ],
+     "base": "#1B1745"
+    }
+   ],
+   "_opt": {
+    "quality": 94,
+    "cap": 520000,
+    "frames": 24
+   }
+  }
+ },
+ {
+  "id": "globe",
+  "group": "movers",
+  "title": "ASCII globe",
+  "text": "A glyph sphere turns once.",
+  "snippet": {
+   "type": "glyphfill",
+   "shape": "sphere",
+   "x": 320,
+   "y": 215,
+   "size": 300,
+   "cell": 8,
+   "color": "ink",
+   "accent": "coral",
+   "land": 0.42
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 12,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#E2F2EA",
+   "elements": [
+    {
+     "type": "type",
+     "text": "globe",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "glyphfill",
+     "shape": "sphere",
+     "x": 320,
+     "y": 215,
+     "size": 300,
+     "cell": 8,
+     "color": "ink",
+     "accent": "coral",
+     "land": 0.42
+    }
+   ]
+  }
+ },
+ {
+  "id": "extrude3d",
+  "group": "movers",
+  "title": "3D turn",
+  "text": "A drawing as a 3D object, \"spin\": 1.",
+  "snippet": {
+   "type": "extrude3d",
+   "name": "rocket",
+   "x": 320,
+   "y": 215,
+   "size": 240,
+   "depth": 0.2,
+   "spin": 1
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 13,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#FFE3DE",
+   "elements": [
+    {
+     "type": "type",
+     "text": "extrude3d",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "extrude3d",
+     "name": "rocket",
+     "x": 320,
+     "y": 215,
+     "size": 240,
+     "depth": 0.2,
+     "spin": 1
+    }
+   ]
+  }
+ },
+ {
+  "id": "ribbon",
+  "group": "movers",
+  "title": "ribbon",
+  "text": "The twist travels along the band.",
+  "snippet": {
+   "type": "ribbon",
+   "circle": [
+    320,
+    215,
+    130
+   ],
+   "width": 70,
+   "colors": [
+    "#4B2FD6",
+    "#FF3A44",
+    "#D6E521"
+   ],
+   "twists": 2,
+   "closed": true
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 14,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#DDEBFF",
+   "elements": [
+    {
+     "type": "type",
+     "text": "ribbon",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "ribbon",
+     "circle": [
+      320,
+      215,
+      130
+     ],
+     "width": 70,
+     "colors": [
+      "#4B2FD6",
+      "#FF3A44",
+      "#D6E521"
+     ],
+     "twists": 2,
+     "closed": true
+    }
+   ]
+  }
+ },
+ {
+  "id": "spiro",
+  "group": "movers",
+  "title": "spiro draw-on",
+  "text": "Draws itself in once.",
+  "snippet": {
+   "type": "spiro",
+   "x": 320,
+   "y": 215,
+   "size": 280,
+   "animate": true
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 15,
+   "finish": "soft",
+   "grain": 0.01,
+   "background": "#F3F1EA",
+   "elements": [
+    {
+     "type": "type",
+     "text": "spiro",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "spiro",
+     "x": 320,
+     "y": 215,
+     "size": 280,
+     "animate": true
+    }
+   ]
+  }
+ },
+ {
+  "id": "boil",
+  "group": "boil",
+  "title": "boil",
+  "text": "A still drawing that shimmers: crayon textures take turns.",
+  "snippet": {
+   "boil": 3
+  },
+  "scene": {
+   "canvas": [
+    640,
+    400
+   ],
+   "seed": 9,
+   "background": "paper",
+   "elements": [
+    {
+     "type": "type",
+     "text": "--boil 3",
+     "x": 30,
+     "y": 44,
+     "size": 15,
+     "font": "mono",
+     "weight": 700,
+     "tracking": 0.06,
+     "color": "ink"
+    },
+    {
+     "type": "disc",
+     "x": 320,
+     "y": 210,
+     "r": 120,
+     "color": "mustard"
+    },
+    {
+     "type": "prop",
+     "name": "cat",
+     "x": 320,
+     "y": 210,
+     "size": 190,
+     "shadow": true
+    }
+   ],
+   "_boil": 3
+  }
+ }
+]
